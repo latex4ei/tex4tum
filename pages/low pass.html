@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- title, description, favicon -->
+    <title>Tex4Tum</title>
+    <meta name="description" content="Interactive online knowledge base for engineers" />
+    <link rel="shortcut icon" href="./res/favicon.ico"/>	
+	
+	<!-- load style sheet -->
+	<link rel="stylesheet" type="text/css" href="./res/latex4ei.css"/>
+	<link rel="stylesheet" type="text/css" href="./res/header.css"/>
+	<script src="./res/latex4ei.js"></script>
+	<script src="./res/perfect-autocompl.js"></script>
+
+	<!-- Math -->
+<!-- 	<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML-full"></script>
+	<script type="text/x-mathjax-config">
+	  MathJax.Hub.Config({tex2jax: {inlineMath: [["$","$"]]}});
+	</script> -->
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/katex.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/katex.min.js"></script>
+	<script type="text/javascript">
+		window.onload = function() {
+  			renderMath();
+
+  			var opts = {
+			data: acData,
+			numResults: 10,
+			searchPath: '/search?q=',
+			directPath: '.',
+			container: document.getElementsByClassName('search-container')[0]
+			};	
+			autocomplete(opts);
+		};
+	</script>
+
+
+
+	<!-- syntax -->
+<!-- 	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/styles/default.min.css">
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script> -->
+
+</head>
+
+<body>
+    <style>
+
+</style>
+
+
+<header>
+
+<a id="logo" href="index.html"><img src="./img/Logo-inv.png"></a>
+
+
+<div id="search" class="search-container">
+    <input type="search" class="search-input" results=0 placeholder="Search (fuzzy)" tabindex="1">
+    <div class="ac-results-wrapper"></div>
+</div>
+
+
+<!-- <ul>  
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#about">About</a></li>
+</ul> -->
+
+
+
+
+
+<div id="options" class="dropdown">
+  <a href="">Options</a>
+  <div class="dropdown-content">
+	<fieldset >
+			<legend>Display Options</legend>
+			<input id="checkbox_definition" name="disp_opt" type="checkbox" checked="checked" onchange="changeOption(this)">Definitions <br>
+			<input id="checkbox_example" name="disp_opt" type="checkbox" checked="checked" onchange="changeOption(this)">Examples <br>
+            <input id="checkbox_legend" name="disp_opt" type="checkbox" checked="checked" onchange="changeOption(this)">Legends <br>
+	</fieldset>
+  </div>
+</div>
+
+</header>
+
+
+
+            <main class="container">
+<!-- Basics -->
+<!--    -->
+<!-- \newcommand{\diff}{\mathop{}\!\mathrm{\vphantom( d}} -->
+
+<!-- SI Units -->
+<!-- KaTeX Tweaks -->
+
+<script type="text/javascript">
+var RC_obj;
+var RC_graph;
+
+function RC_loadSVG(){
+    switch(document.getElementById("Filter_Select").selectedIndex){
+        case 0: replaceSVG("RC_obj", "./img/rc.svg"); break;
+        case 1: replaceSVG("RC_obj", "./img/rl.svg"); break;
+    }  
+}
+
+function RC_calcFrequency() {
+ RC_obj  = document.getElementById("RC_obj").contentDocument;
+ var X1 = getValue( RC_obj.getElementById("X1_val").textContent );
+ var R1 = getValue( RC_obj.getElementById("R1_val").textContent );
+ var F1 = document.getElementById("F1_val");
+ var tau = document.getElementById("RC_tau_val");
+ var freq = 1/(2 * Math.PI * X1 * R1);
+ F1.textContent=freq.toPrecision(3)+" Hz";
+ tau.textContent=(R1 * X1 * 1000).toPrecision(3)+" ms";
+}
+
+
+function RC_calcAmplitude(){
+    var amp = getValue(RC_obj.getElementById("U1_val").textContent);
+    document.getElementById("A1_val").textContent = (amp*Math.SQRT1_2).toPrecision(3)+" V";
+}
+
+function RC_updateGraph(){
+ var X1 = getValue( RC_obj.getElementById("X1_val").textContent );
+ var R1 = getValue( RC_obj.getElementById("R1_val").textContent );
+ var tau = X1 * R1 * 1000;
+    RC_graph.getElementById("1tau").textContent = (tau).toPrecision(2);
+    RC_graph.getElementById("2tau").textContent = (2*tau).toPrecision(2);
+    RC_graph.getElementById("3tau").textContent = (3*tau).toPrecision(2);
+    RC_graph.getElementById("4tau").textContent = (4*tau).toPrecision(2);
+ var amp = getValue(RC_obj.getElementById("U1_val").textContent);
+    RC_graph.getElementById("Vmax").textContent = amp;
+    RC_graph.getElementById("Vtau").textContent = (amp * (1 - 1/Math.E)).toPrecision(3);
+}
+
+function syncValues(id, value){
+    RC_calcFrequency();
+    RC_calcAmplitude();
+    RC_updateGraph();
+}
+</script>
+<h1 id="low-pass-filter">Low Pass Filter</h1>
+<p>Click on the values to change them! E.g. change &quot;10k&quot; to &quot;20k&quot;. All equations and figures in the step response will adjust immediately!</p>
+<p><select id="Filter_Select" onchange="RC_loadSVG()">
+<option value="RC">RC</option>
+<option value="LR">LR</option>
+</select></p>
+<figure>
+<object class="fig" style="width: 18em" id="RC_obj" data="./img/rc.svg" type="image/svg+xml">
+</object>
+<figcaption>
+Circuit of low-pass filter
+</figcaption>
+</figure>
+<script>
+RC_el = document.getElementById("RC_obj");
+RC_el.addEventListener("load",function(){
+    RC_obj = RC_el.contentDocument;  // get inner DOM
+}, false);
+</script>
+<p>Cut-Off Frequency: <span class="LaTeX">$f_c = \frac{1}{2\pi R C} =$</span> <tspan id="F1_val">159 Hz</tspan><br>
+Time-Constant <tspan title="Time Constant"><span class="LaTeX">$\tau$</span></tspan> <span class="LaTeX">$= RC = \frac{1}{2\pi f_C} =$</span> <tspan id="RC_tau_val">6.28ms</tspan><br>
+Amplitude at <tspan title="Cut-Off Frequency"><span class="LaTeX">$f_c$</span></tspan> is <span class="LaTeX">$U(f_c)=\frac{U(0)}{\sqrt{2}} =$</span> <tspan id="A1_val">3.54 V</tspan><br>
+Dynamic: <span class="LaTeX">$I_C = C \cdot \dot U_C$</span></p>
+<h2 id="filter-response">Filter Response:</h2>
+<p><select id="Response_Select" onchange="RC_updateGraph()">
+<option value="SR">Step Response</option>
+<option value="FR">Frequency Response</option>
+</select></p>
+<figure>
+<object class="fig" style="width: 26em" id="RC_graph" data="img/rc_graph3.svg" type="image/svg+xml">
+</object>
+</figure>
+<script>
+RC_graph_el = document.getElementById("RC_graph");
+RC_graph_el.addEventListener("load",function(){
+    RC_graph = RC_graph_el.contentDocument;  // get inner DOM
+}, false);
+</script>
+<p><span class="LaTeX">$V_{\mathrm{out}} = V_{\mathrm{max}} \left( 1 - \exp( - t/\tau) \right)$</span><br>
+<span class="LaTeX">$V_{\mathrm{out}}$</span> will reach <span class="LaTeX">$V_{\mathrm{max}}$</span> after 3 to <span class="LaTeX">$4 \tau$</span>.</p>
+
+</main>
+
+    
+</body>

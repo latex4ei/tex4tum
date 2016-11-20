@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- title, description, favicon -->
+    <title>Tex4Tum</title>
+    <meta name="description" content="Interactive online knowledge base for engineers" />
+    <link rel="shortcut icon" href="./res/favicon.ico"/>	
+	
+	<!-- load style sheet -->
+	<link rel="stylesheet" type="text/css" href="./res/latex4ei.css"/>
+	<link rel="stylesheet" type="text/css" href="./res/header.css"/>
+	<script src="./res/latex4ei.js"></script>
+	<script src="./res/perfect-autocompl.js"></script>
+
+	<!-- Math -->
+<!-- 	<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML-full"></script>
+	<script type="text/x-mathjax-config">
+	  MathJax.Hub.Config({tex2jax: {inlineMath: [["$","$"]]}});
+	</script> -->
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/katex.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/katex.min.js"></script>
+	<script type="text/javascript">
+		window.onload = function() {
+  			renderMath();
+
+  			var opts = {
+			data: acData,
+			numResults: 10,
+			searchPath: '/search?q=',
+			directPath: '.',
+			container: document.getElementsByClassName('search-container')[0]
+			};	
+			autocomplete(opts);
+		};
+	</script>
+
+
+
+	<!-- syntax -->
+<!-- 	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/styles/default.min.css">
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script> -->
+
+</head>
+
+<body>
+    <style>
+
+</style>
+
+
+<header>
+
+<a id="logo" href="index.html"><img src="./img/Logo-inv.png"></a>
+
+
+<div id="search" class="search-container">
+    <input type="search" class="search-input" results=0 placeholder="Search (fuzzy)" tabindex="1">
+    <div class="ac-results-wrapper"></div>
+</div>
+
+
+<!-- <ul>  
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#about">About</a></li>
+</ul> -->
+
+
+
+
+
+<div id="options" class="dropdown">
+  <a href="">Options</a>
+  <div class="dropdown-content">
+	<fieldset >
+			<legend>Display Options</legend>
+			<input id="checkbox_definition" name="disp_opt" type="checkbox" checked="checked" onchange="changeOption(this)">Definitions <br>
+			<input id="checkbox_example" name="disp_opt" type="checkbox" checked="checked" onchange="changeOption(this)">Examples <br>
+            <input id="checkbox_legend" name="disp_opt" type="checkbox" checked="checked" onchange="changeOption(this)">Legends <br>
+	</fieldset>
+  </div>
+</div>
+
+</header>
+
+
+
+            <main class="container">
+<!-- Basics -->
+<!--    -->
+<!-- \newcommand{\diff}{\mathop{}\!\mathrm{\vphantom( d}} -->
+
+<!-- SI Units -->
+<!-- KaTeX Tweaks -->
+
+<h1 id="physical-constants">Physical Constants</h1>
+<table>
+<thead>
+<tr class="header">
+<th>Constant</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Lichtgeschwindigkeit</td>
+<td><span class="LaTeX">$\mathrm{c}_0 \equiv \frac{1}{\sqrt{\varepsilon_0 \mu_0}} := {299 792 458\,{\text{m}{\,}}{/}{\text{s}{\,}}}$</span></td>
+</tr>
+<tr class="even">
+<td>Elementarladung</td>
+<td><span class="LaTeX">$\mathrm{e} \approx {1.602 177e-19\,{\text{C}{\,}}}$</span></td>
+</tr>
+<tr class="odd">
+<td><span style="font-variant: small-caps;">Planck</span>-Konst.</td>
+<td><span class="LaTeX">$h \approx {6,626 069 57e-34\,{\text{J}{\,}}{\text{s}{\,}}}$</span></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><span class="LaTeX">$\hbar \equiv \frac{h}{2 \pi} \approx {1.05457e-34\,{\text{J}{\,}}{\text{s}{\,}}}$</span></td>
+</tr>
+<tr class="odd">
+<td>Elektr. Feldkonst.</td>
+<td><span class="LaTeX">$\varepsilon_0 = {8.854 188e-12\,{\text{F}{\,}}{/}{\text{m}{\,}}}$</span></td>
+</tr>
+<tr class="even">
+<td>Magn. Feldkonst.</td>
+<td><span class="LaTeX">$\mu_0 := 4\pi \times {e-7\,{\text{H}{\,}}{/}{\text{m}{\,}}}$</span></td>
+</tr>
+<tr class="odd">
+<td><span style="font-variant: small-caps;">Avogadro</span>-Konst.</td>
+<td><span class="LaTeX">$N_{{\rm}A} \approx {6.022 141e23\,{/}\mole}$</span></td>
+</tr>
+<tr class="even">
+<td>Atomare Masse</td>
+<td><span class="LaTeX">$\mathrm{u} \approx {1.660 539e-27\,{\text{kg}{\,}}}$</span></td>
+</tr>
+<tr class="odd">
+<td>Elektronenmasse</td>
+<td><span class="LaTeX">$m_e \approx {9,109 383e-31\,{\text{kg}{\,}}}$</span></td>
+</tr>
+<tr class="even">
+<td>Protonenmasse</td>
+<td><span class="LaTeX">$m_p \approx {1,674 927e-27\,{\text{kg}{\,}}}$</span></td>
+</tr>
+<tr class="odd">
+<td>Neutronenmasse</td>
+<td><span class="LaTeX">$m_n \approx {1,672 622e-27\,{\text{kg}{\,}}}$</span></td>
+</tr>
+<tr class="even">
+<td>Gravitationskonst.</td>
+<td><span class="LaTeX">$\mathrm{G} \approx {6,673 84e-11\,{\text{kg}{\,}}{/}{\text{s}{\,}}{^{2}}}$</span></td>
+</tr>
+<tr class="odd">
+<td><span style="font-variant: small-caps;">Boltzmann</span>-Konst.</td>
+<td><span class="LaTeX">$k_{{\rm}B} \approx {1.380 655e-23\,{\text{J}{\,}}{/}{\text{K}{\,}}}$</span></td>
+</tr>
+</tbody>
+</table>
+
+</main>
+
+    
+</body>

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- title, description, favicon -->
+    <title>Tex4Tum</title>
+    <meta name="description" content="Interactive online knowledge base for engineers" />
+    <link rel="shortcut icon" href="./res/favicon.ico"/>	
+	
+	<!-- load style sheet -->
+	<link rel="stylesheet" type="text/css" href="./res/latex4ei.css"/>
+	<link rel="stylesheet" type="text/css" href="./res/header.css"/>
+	<script src="./res/latex4ei.js"></script>
+	<script src="./res/perfect-autocompl.js"></script>
+
+	<!-- Math -->
+<!-- 	<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML-full"></script>
+	<script type="text/x-mathjax-config">
+	  MathJax.Hub.Config({tex2jax: {inlineMath: [["$","$"]]}});
+	</script> -->
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/katex.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/katex.min.js"></script>
+	<script type="text/javascript">
+		window.onload = function() {
+  			renderMath();
+
+  			var opts = {
+			data: acData,
+			numResults: 10,
+			searchPath: '/search?q=',
+			directPath: '.',
+			container: document.getElementsByClassName('search-container')[0]
+			};	
+			autocomplete(opts);
+		};
+	</script>
+
+
+
+	<!-- syntax -->
+<!-- 	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/styles/default.min.css">
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script> -->
+
+</head>
+
+<body>
+    <style>
+
+</style>
+
+
+<header>
+
+<a id="logo" href="index.html"><img src="./img/Logo-inv.png"></a>
+
+
+<div id="search" class="search-container">
+    <input type="search" class="search-input" results=0 placeholder="Search (fuzzy)" tabindex="1">
+    <div class="ac-results-wrapper"></div>
+</div>
+
+
+<!-- <ul>  
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#about">About</a></li>
+</ul> -->
+
+
+
+
+
+<div id="options" class="dropdown">
+  <a href="">Options</a>
+  <div class="dropdown-content">
+	<fieldset >
+			<legend>Display Options</legend>
+			<input id="checkbox_definition" name="disp_opt" type="checkbox" checked="checked" onchange="changeOption(this)">Definitions <br>
+			<input id="checkbox_example" name="disp_opt" type="checkbox" checked="checked" onchange="changeOption(this)">Examples <br>
+            <input id="checkbox_legend" name="disp_opt" type="checkbox" checked="checked" onchange="changeOption(this)">Legends <br>
+	</fieldset>
+  </div>
+</div>
+
+</header>
+
+
+
+            <main class="container">
+<!-- Basics -->
+<!--    -->
+<!-- \newcommand{\diff}{\mathop{}\!\mathrm{\vphantom( d}} -->
+
+<!-- SI Units -->
+<!-- KaTeX Tweaks -->
+
+<h1 id="number-converter">Number Converter</h1>
+<p>Type in number: <input id="number-input" oninput="calculateNumber(this)" placeholder="Number" value="0xFF"> <br>
+C/Ada Notation: <code>0x..</code> / <code>16#..</code> (hex), <code>0b..</code> / <code>2#..</code> (bin)</p>
+<table>
+<thead>
+<tr class="header">
+<th>Result</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Decimal</td>
+<td><span id="dec_result">255</span></td>
+</tr>
+<tr class="even">
+<td>Hexadecimal</td>
+<td><span id="hex_result">0xFF</span></td>
+</tr>
+<tr class="odd">
+<td>Octal</td>
+<td><span id="oct_result">0377</span></td>
+</tr>
+<tr class="even">
+<td>Binary</td>
+<td><span id="bin_result">0b11111111</span></td>
+</tr>
+</tbody>
+</table>
+32bit Integer Little Endian:
+<div id="int_32_l">
+
+</div>
+32bit Integer Big Endian:
+<div id="int_32_b">
+
+</div>
+<h2 id="data-types">Data Types</h2>
+<p><code>int</code>, <code>short</code>, and <code>word</code> depend on the architecture.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Type</th>
+<th style="text-align: right;">Limit Min</th>
+<th></th>
+<th style="text-align: left;">Limit Max</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>U8, Char</td>
+<td style="text-align: right;">0</td>
+<td>..</td>
+<td style="text-align: left;"><span class="LaTeX">$255 = 2^8 - 1$</span></td>
+</tr>
+<tr class="even">
+<td>U16</td>
+<td style="text-align: right;">0</td>
+<td>..</td>
+<td style="text-align: left;"><span class="LaTeX">$65353 = 2^{16} -1$</span></td>
+</tr>
+<tr class="odd">
+<td>U32</td>
+<td style="text-align: right;">0</td>
+<td>..</td>
+<td style="text-align: left;"><span class="LaTeX">$4\,294\,967\,295$</span></td>
+</tr>
+<tr class="even">
+<td>U64</td>
+<td style="text-align: right;">0</td>
+<td>..</td>
+<td style="text-align: left;"><span class="LaTeX">$18\;446\;744\;073\;709\;551\;615$</span></td>
+</tr>
+<tr class="odd">
+<td>U<span class="LaTeX">$x$</span></td>
+<td style="text-align: right;">0</td>
+<td>..</td>
+<td style="text-align: left;"><span class="LaTeX">$2^x - 1$</span></td>
+</tr>
+<tr class="even">
+<td>I8</td>
+<td style="text-align: right;">-128</td>
+<td>..</td>
+<td style="text-align: left;">127</td>
+</tr>
+<tr class="odd">
+<td>I16</td>
+<td style="text-align: right;">−32768</td>
+<td>..</td>
+<td style="text-align: left;">32767</td>
+</tr>
+<tr class="even">
+<td>I32</td>
+<td style="text-align: right;">-2 147 483 648</td>
+<td>..</td>
+<td style="text-align: left;">2.147.483.647</td>
+</tr>
+<tr class="odd">
+<td>I<span class="LaTeX">$x$</span></td>
+<td style="text-align: right;"><span class="LaTeX">$-2^{(x-1)}$</span></td>
+<td>..</td>
+<td style="text-align: left;"><span class="LaTeX">$2^{(x-1)} - 1$</span></td>
+</tr>
+</tbody>
+</table>
+<h2 id="complement">2-Complement</h2>
+<script type="text/javascript">
+    function calculateNumber(e){
+
+        var dec_rx = new RegExp(/^(?:(\d+)|^10#(\d+)#?)(?:\s*(<<|>>)\s*(\d+))?$/i);
+        var hex_rx = new RegExp(/^0x([0-9A-F]+)$|^(?:16)?#([0-9A-F]+)#?$/i);
+        var oct_rx = new RegExp(/^0([0-7]+)$|^8#([0-7]+)#?$/i);
+        var bin_rx = new RegExp(/^0b([01]+)$|^2#([01]+)#?$/i);
+
+        var num = NaN;
+        var exp = 0;
+        var rx_match;
+
+        var dec_el = document.getElementById("dec_result");
+        var hex_el = document.getElementById("hex_result");
+        var oct_el = document.getElementById("oct_result");
+        var bin_el = document.getElementById("bin_result");
+
+        if ( dec_rx.test(e.value.trim()) ){
+            rx_match = dec_rx.exec( e.value.trim() );
+            if(rx_match[1]){num = parseInt( rx_match[1] ); }
+            else if(rx_match[2]){ num = parseInt( rx_match[2] ); }
+            if(rx_match[4]){
+                if(rx_match[3] == "<<"){ exp = parseInt( rx_match[4] ); }
+                else if(rx_match[3] == ">>"){ exp = -parseInt( rx_match[4] ); }
+                num = Math.floor( num * Math.pow(2, exp ) );
+            }       
+        }
+        if ( hex_rx.test(e.value.trim()) ){
+            rx_match = hex_rx.exec( e.value.trim() );
+            if(rx_match[1]){ num = parseInt( rx_match[1], 16 ); }
+            else if(rx_match[2]){ num = parseInt( rx_match[2], 16 ); }
+        }
+        if ( oct_rx.test(e.value.trim()) ){
+            rx_match = oct_rx.exec( e.value.trim() );
+            if(rx_match[1]){ num = parseInt( rx_match[1], 8 ); }
+            else if(rx_match[2]){ num = parseInt( rx_match[2], 8 ); }
+        }
+        if ( bin_rx.test(e.value.trim()) ){
+            rx_match = bin_rx.exec( e.value.trim() );
+            if(rx_match[1]){ num = parseInt( rx_match[1], 2 ); }
+            else if(rx_match[2]){ num = parseInt( rx_match[2], 2 ); }
+        }
+        dec_el.textContent = num.toString(10);
+        hex_el.textContent = '0x' + num.toString(16).toUpperCase();
+        oct_el.textContent = '0' + num.toString(8);
+        bin_el.textContent = '0b' + num.toString(2);
+
+    }
+
+</script>
+
+</main>
+
+    
+</body>

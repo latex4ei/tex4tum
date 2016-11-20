@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Interactive Content</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+
+<link rel="stylesheet" href="../latex4ei.css">
+<script type="text/javascript" src="../latex4ei.js"></script>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML-full"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]}});
+</script>
+
+
+</head>
+<body>
+	<main class="container">
+
+		<h1>Physics</h1>
+
+		<section>
+			<h2>Physical constants</h2>	
+			<table>
+				<tr><td>		Lichtgeschwindigkeit </td><td> $\mathrm{c}_0 \equiv \frac{1}{\sqrt{\varepsilon_0 \mu_0}} := \SI{299 792 458}{\meter\per\second}$</td></tr>
+				<tr><td>Elementarladung </td><td> $\mathrm{e}  \approx \SI{1.602 177e-19}{\coulomb}$</td></tr>
+				<tr><td><span style="font-variant: small-caps">Planck</span>-Konst. </td><td> $h \approx \SI{6,626 069 57e-34}{\joule\second}$</td></tr>
+				<tr><td></td><td> $\hbar \equiv \frac{h}{2 \pi} \approx \SI{1.05457e-34}{\joule\second}$ </td></tr>
+				<tr><td>Elektr. Feldkonst. </td><td> $\varepsilon_0 = \SI{8.854 188e-12}{\farad\per\meter}$</td></tr>
+				<tr><td>Magn. Feldkonst. </td><td> $\mu_0 := 4\pi \times \SI{e-7}{\henry\per\meter}$</td></tr>
+				<tr><td><span style="font-variant: small-caps">Avogadro</span>-Konst. </td><td> $N_{\ir A} \approx \SI{6.022 141e23}{\per\mole}$</td></tr>
+				<tr><td>% <span style="font-variant: small-caps">Farraday</span>-Konst. </td><td> $\mathrm{F} := N_{\ir A} \cdot \mathrm{e} = \SI{96485}{\coulomb\per\mole}$</td></tr>
+				<tr><td>Atomare Masse </td><td> $\mathrm{u} \approx \SI{1.660 539e-27}{\kilogram}$</td></tr>
+				<tr><td>Elektronenmasse </td><td> $m_e \approx \SI{9,109 383e-31}{\kilogram}$</td></tr>
+				<tr><td>Protonenmasse </td><td> $m_p \approx \SI{1,674 927e-27}{\kilogram}$</td></tr>
+				<tr><td>Neutronenmasse </td><td> $m_n \approx \SI{1,672 622e-27}{\kilogram}$</td></tr>
+				<tr><td>%Feinstruktur </td><td> $\alpha^{-1} \approx 137,035 999$</td></tr>
+				<tr><td>Gravitationskonst. </td><td> $\mathrm{G} \approx \SI{6,673 84e-11}{\kilogram\per\second\squared}$</td></tr>
+				<tr><td><span style="font-variant: small-caps">Boltzmann</span>-Konst. </td><td> $k_{\ir B} \approx \SI{1.380 655e-23}{\joule\per\kelvin}$</td></tr>
+			</table>					
+		</section>
+
+		<section>
+			<h2>Standard Units</h2>	
+			<table>
+			<thead>
+				<tr><td><b>Größe</b> </td><td> <b>Definition</b> </td><td> <b>Einheit</b> </td><td> <b>SI-Notation</b> </td></tr>
+			</thead>
+			<tbody>
+				<tr><td><tr><td><tr><td>Frequenz </td><td> $f = \frac{c}{\lambda}$ </td><td> Hertz </td><td> $\si{\hertz} = \si{ \per \second}$</td></tr>
+				<tr><td>Kraft </td><td> $ \vec F := m \cdot \vec a $ </td><td> Newton </td><td> $\si{\newton} = \si{\kilogram \meter \per \second \squared}$</td></tr>
+				<tr><td>Druck </td><td> $p := \frac{\vec F_\perp}{A}$ </td><td> Pascal </td><td> $\si{\pascal} = \si{\newton \per \meter \squared} = \si{\kilogram \per \meter \second \squared}$</td></tr>
+				<tr><td>${}^{\textstyle \text{Arbeit,}}_{\textstyle \text{Energie}}$ </td><td> $W := \int \vec F \diff \vec s$ </td><td> Joule </td><td> $\si{\joule} = \si{\newton\meter} = \si{\kilogram\meter \squared \per \second \squared}$ </td></tr>
+				<tr><td>Leistung </td><td> $P := \frac{\mathrm dW}{\mathrm dt}$ </td><td> Watt </td><td> $\si{\watt} = \si{\joule \per \second} = \si{\kilogram\meter \squared \per \second \cubed}$</td></tr>
+				<tr><td><tr><td>Spannung </td><td> $U := \frac{W}{Q}$ </td><td> Volt </td><td> $\si{\volt} = \si{\watt \per \ampere} = \si{\kilogram\meter  \squared \per \ampere\second \cubed}$</td></tr>
+				<tr><td>Ladung </td><td> $Q:= \int I \diff t$ </td><td> Coulomb </td><td> $\si{\coulomb} = \si{\ampere\second}$</td></tr>
+				<tr><td>Resistivität </td><td> $R := \frac{\diff U}{\diff I}$ </td><td> Ohm </td><td> $\si{\ohm} = \si{\volt \per \ampere} = \si{\kilogram\meter  \squared \per \ampere  \squared\second \cubed}$</td></tr>
+				<tr><td>Kapazität </td><td> $C:= \frac{\diff Q}{\diff U}$ </td><td> Farad </td><td> $\si{\farad} = \si{\coulomb \per \volt} = \si{\ampere  \squared  \second \tothe{4}\per \kilogram\meter \squared}$</td></tr>
+				<tr><td>Induktivität </td><td> $L := \frac{\diff \Phi}{\diff I}$ </td><td> Henry </td><td> $\si{\henry} = \si{\volt\second \per\ampere} = \si{\kilogram\meter  \squared \per \ampere  \squared \second  \squared}$</td></tr>
+				<tr><td>${}^{\text{Magnetischer}}_{\textstyle \text{Fluss}}$ </td><td> $\Phi_{\ir M} := \int \vec B \diff \vec A$ </td><td> Weber </td><td> $\si{\weber} = \si{\volt\second} = \si{\kilogram\meter \squared \per \ampere\second \squared}$</td></tr>
+				<tr><td>${}^{\text{Magnetische}}_{\textstyle \text{Flussdichte}}$ </td><td> $\vec B := \mu_0 \vec H$ </td><td> Tesla </td><td> $\si{\tesla} = \si{\weber \per \meter  \squared} = \si{\kilogram \per \ampere\second \squared}$</td></tr>
+				</table>
+					<table>
+				<tr><td>	$\SI{1}{in} = \SI{2.54}{\centi\meter}$ </td><td> $\SI{1}{ft} = \SI{30.5}{\centi\meter}$ </td><td> $\si{\joule} \cdot e = \si{\electronvolt}$ </td></tr>
+				<tr><td>$\SI{1}{bar} = \SI{e5}{\pascal}$ </td><td> $\SI{1}{\angstrom} = \SI{e-10}{\meter}$ </td><td> $\SI{1}{\liter} = \SI{e-3}{\meter^3}$</td></tr>
+			</tbody>
+			</table>
+		</section>
+
+
+		<section>
+			<h2>Machanic Equations</h2>	
+			<table>
+			<thead>
+				<tr><td><b> Mechanik</b> </td><td>  Translation </td><td> { Rotation} (Radius $r$) </td></tr>
+			</thead>
+			<tbody>
+				<tr><td>Strecke/Winkel </td><td>  $\vec x$ </td><td>  $\vec \varphi =  \frac{\vec x}{r}$</td></tr>
+				<tr><td>Geschwindigkeit </td><td>  $\vec v = \dot{\vec x}$ </td><td>  $\vec \omega = \dot{\vec \varphi} = \frac{\vec v}{r}$ </td></tr>
+				<tr><td>Beschleunigung </td><td>  $\vec a = \dot{\vec v} = \ddot{\vec x}$ </td><td>  $\vec \alpha = \dot{\vec \omega} = \ddot{\vec \varphi} = \frac{\vec a}{r}$ </td></tr>
+				<tr><td>Masse/Trägh. </td><td>  $m$ </td><td>  $\Theta = \int_V \vec r^2_\perp \diff m$ </td></tr>
+				<tr><td>Impuls/Drall </td><td>  $\vec p =m \vec v$ </td><td>  $\vec L = \ma \Theta \vec \omega = \vec r \times \vec p$ </td></tr>
+				<tr><td>Kraft/Moment </td><td>  $\vec F = \dot{\vec p} = m \vec a$ </td><td>   $\vec M = \dot{\vec L} = \ma \Theta \vec \alpha = \vec r \times \vec F$ </td></tr>
+				<tr><td>Energie </td><td>  $E_{\ir kin}=\frac12mv^2$ </td><td>  $E_{\ir rot}=\frac12 \Theta \omega ^2$</td></tr>
+				<tr><td>Leistung </td><td>  $P = \vec F \bdot \vec v$ </td><td>  $P = \vec M \bdot \vec \omega$</td></tr>
+			</tbody>
+			</table>
+		</section>
+
+	</main>
+</body>
+</html>

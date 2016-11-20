@@ -1,0 +1,6 @@
+# Sampling
+
+
+$\sinc(x)$
+
+

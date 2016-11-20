@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- title, description, favicon -->
+    <title>Tex4Tum</title>
+    <meta name="description" content="Interactive online knowledge base for engineers" />
+    <link rel="shortcut icon" href="./res/favicon.ico"/>	
+	
+	<!-- load style sheet -->
+	<link rel="stylesheet" type="text/css" href="./res/latex4ei.css"/>
+	<link rel="stylesheet" type="text/css" href="./res/header.css"/>
+	<script src="./res/latex4ei.js"></script>
+	<script src="./res/perfect-autocompl.js"></script>
+
+	<!-- Math -->
+<!-- 	<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML-full"></script>
+	<script type="text/x-mathjax-config">
+	  MathJax.Hub.Config({tex2jax: {inlineMath: [["$","$"]]}});
+	</script> -->
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/katex.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/katex.min.js"></script>
+	<script type="text/javascript">
+		window.onload = function() {
+  			renderMath();
+
+  			var opts = {
+			data: acData,
+			numResults: 10,
+			searchPath: '/search?q=',
+			directPath: '.',
+			container: document.getElementsByClassName('search-container')[0]
+			};	
+			autocomplete(opts);
+		};
+	</script>
+
+
+
+	<!-- syntax -->
+<!-- 	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/styles/default.min.css">
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script> -->
+
+</head>
+
+<body>
+    <style>
+
+</style>
+
+
+<header>
+
+<a id="logo" href="index.html"><img src="./img/Logo-inv.png"></a>
+
+
+<div id="search" class="search-container">
+    <input type="search" class="search-input" results=0 placeholder="Search (fuzzy)" tabindex="1">
+    <div class="ac-results-wrapper"></div>
+</div>
+
+
+<!-- <ul>  
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#about">About</a></li>
+</ul> -->
+
+
+
+
+
+<div id="options" class="dropdown">
+  <a href="">Options</a>
+  <div class="dropdown-content">
+	<fieldset >
+			<legend>Display Options</legend>
+			<input id="checkbox_definition" name="disp_opt" type="checkbox" checked="checked" onchange="changeOption(this)">Definitions <br>
+			<input id="checkbox_example" name="disp_opt" type="checkbox" checked="checked" onchange="changeOption(this)">Examples <br>
+            <input id="checkbox_legend" name="disp_opt" type="checkbox" checked="checked" onchange="changeOption(this)">Legends <br>
+	</fieldset>
+  </div>
+</div>
+
+</header>
+
+
+
+            <main class="container">
+<!-- Basics -->
+<!--    -->
+<!-- \newcommand{\diff}{\mathop{}\!\mathrm{\vphantom( d}} -->
+
+<!-- SI Units -->
+<!-- KaTeX Tweaks -->
+
+<h1 id="trigonometry">Trigonometry</h1>
+<!-- -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+$x$                       $0$                     $\pi / 6$                 $\pi / 4$                 $\pi / 3$                 $\frac{1}{2}\pi$          $\pi$                      $1\frac{1}{2}\pi$          $2 \pi$ 
+$\scriptstyle{ \varphi }$ $\scriptstyle{0^\circ}$ $\scriptstyle{30^\circ}$  $\scriptstyle{45^\circ}$  $\scriptstyle{60^\circ}$  $\scriptstyle{90^\circ}$  $\scriptstyle{180^\circ}$  $\scriptstyle{270^\circ}$  $\scriptstyle{360^\circ}$ 
+------------------------- ----------------------- ------------------------- ------------------------- ------------------------- ------------------------  -------------------------  -------------------------  -------------------------
+$\sin$                      $0$                      $\frac{1}{2}$             $\frac{1}{\sqrt{2}}$      $\frac{\sqrt 3}{2}$       $1$                       $0$                        $-1$                       $0$ 
+
+$\cos$                      $1$                      $\frac{\sqrt 3}{2}$       $\frac{1}{\sqrt 2}$       $\frac{1}{2}$             $0$                       $-1$                       $0$                        $1$ 
+
+$\tan$                      $0$                      $\frac{\sqrt{3}}{3}$      $1$                       $\sqrt{3}$                $\pm \infty$              $0$                        $\mp \infty$               $0$
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------     
+ -->
+<table>
+<thead>
+<tr class="header">
+<th>Properties</th>
+<th>Equation a Test</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Symmetry</td>
+<td><span class="LaTeX">$\sin(-x)=-\sin(x)$</span> <span class="LaTeX">$\cos (-x) = \cos (x)$</span></td>
+</tr>
+<tr class="even">
+<td>Complex</td>
+<td><span class="LaTeX">$e^{{\text{i}}x}=\cos(x)+{\text{i}}\sin(x)$</span> <span class="LaTeX">$e^{-{\text{i}}x}=\sin(x)-{\text{i}}\cos(x)$</span></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr class="header">
+<th><span class="LaTeX">$x$</span> <br> <span class="LaTeX">$\scriptstyle{ \varphi }$</span></th>
+<th><span class="LaTeX">$0$</span> <br> <span class="LaTeX">$\scriptstyle{0^\circ}$</span></th>
+<th><span class="LaTeX">$\pi / 6$</span> <br> <span class="LaTeX">$\scriptstyle{30^\circ}$</span></th>
+<th><span class="LaTeX">$\pi / 4$</span> <br> <span class="LaTeX">$\scriptstyle{45^\circ}$</span></th>
+<th><span class="LaTeX">$\pi / 3$</span> <br> <span class="LaTeX">$\scriptstyle{60^\circ}$</span></th>
+<th><span class="LaTeX">$\frac{1}{2}\pi$</span> <br> <span class="LaTeX">$\scriptstyle{90^\circ}$</span></th>
+<th><span class="LaTeX">$\pi$</span> <br> <span class="LaTeX">$\scriptstyle{180^\circ}$</span></th>
+<th><span class="LaTeX">$1\frac{1}{2}\pi$</span> <br> <span class="LaTeX">$\scriptstyle{270^\circ}$</span></th>
+<th><span class="LaTeX">$2 \pi$</span> <br> <span class="LaTeX">$\scriptstyle{360^\circ}$</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="LaTeX">$\sin$</span></td>
+<td><span class="LaTeX">$0$</span></td>
+<td><span class="LaTeX">$\frac{1}{2}$</span></td>
+<td><span class="LaTeX">$\frac{1}{\sqrt{2}}$</span></td>
+<td><span class="LaTeX">$\frac{\sqrt 3}{2}$</span></td>
+<td><span class="LaTeX">$1$</span></td>
+<td><span class="LaTeX">$0$</span></td>
+<td><span class="LaTeX">$-1$</span></td>
+<td><span class="LaTeX">$0$</span></td>
+</tr>
+<tr class="even">
+<td><span class="LaTeX">$\cos$</span></td>
+<td><span class="LaTeX">$1$</span></td>
+<td><span class="LaTeX">$\frac{\sqrt 3}{2}$</span></td>
+<td><span class="LaTeX">$\frac{1}{\sqrt 2}$</span></td>
+<td><span class="LaTeX">$\frac{1}{2}$</span></td>
+<td><span class="LaTeX">$0$</span></td>
+<td><span class="LaTeX">$-1$</span></td>
+<td><span class="LaTeX">$0$</span></td>
+<td><span class="LaTeX">$1$</span></td>
+</tr>
+<tr class="odd">
+<td><span class="LaTeX">$\tan$</span></td>
+<td><span class="LaTeX">$0$</span></td>
+<td><span class="LaTeX">$\frac{\sqrt{3}}{3}$</span></td>
+<td><span class="LaTeX">$1$</span></td>
+<td><span class="LaTeX">$\sqrt{3}$</span></td>
+<td><span class="LaTeX">$\pm \infty$</span></td>
+<td><span class="LaTeX">$0$</span></td>
+<td><span class="LaTeX">$\mp \infty$</span></td>
+<td><span class="LaTeX">$0$</span></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr class="header">
+<th>Addition</th>
+<th>Integrals</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="LaTeX">$\cos (x - \frac{\pi}{2}) = \sin x$</span></td>
+<td><span class="LaTeX">$\int x \cos(x) {\,\text{d}}x = \cos(x) + x \sin(x)$</span></td>
+</tr>
+<tr class="even">
+<td><span class="LaTeX">$\sin (x + \frac{\pi}{2}) = \cos x$</span></td>
+<td><span class="LaTeX">$\int x \sin(x) {\,\text{d}}x = \sin(x) - x \cos(x)$</span></td>
+</tr>
+<tr class="odd">
+<td>$2x = 2 x x $</td>
+<td><span class="LaTeX">$\int \sin^2(x) {\,\text{d}}x = \frac12 \bigl(x - \sin(x)\cos(x) \bigr)$</span></td>
+</tr>
+<tr class="even">
+<td><span class="LaTeX">$\cos 2x = 2\cos^2 x - 1$</span></td>
+<td><span class="LaTeX">$\int \cos^2(x) {\,\text{d}}x = \frac12 \bigl(x + \sin(x)\cos(x) \bigr)$</span></td>
+</tr>
+<tr class="odd">
+<td><span class="LaTeX">$\sin(x) = \tan(x)\cos(x)$</span></td>
+<td><span class="LaTeX">$\int \cos(x)\sin(x) = -\frac12 \cos^2(x)$</span></td>
+</tr>
+</tbody>
+</table>
+
+</main>
+
+    
+</body>

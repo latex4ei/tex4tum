@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- title, description, favicon -->
+    <title>Tex4Tum</title>
+    <meta name="description" content="Interactive online knowledge base for engineers" />
+    <link rel="shortcut icon" href="./res/favicon.ico"/>	
+	
+	<!-- load style sheet -->
+	<link rel="stylesheet" type="text/css" href="./res/latex4ei.css"/>
+	<link rel="stylesheet" type="text/css" href="./res/header.css"/>
+	<script src="./res/latex4ei.js"></script>
+	<script src="./res/perfect-autocompl.js"></script>
+
+	<!-- Math -->
+<!-- 	<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML-full"></script>
+	<script type="text/x-mathjax-config">
+	  MathJax.Hub.Config({tex2jax: {inlineMath: [["$","$"]]}});
+	</script> -->
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/katex.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/katex.min.js"></script>
+	<script type="text/javascript">
+		window.onload = function() {
+  			renderMath();
+
+  			var opts = {
+			data: acData,
+			numResults: 10,
+			searchPath: '/search?q=',
+			directPath: '.',
+			container: document.getElementsByClassName('search-container')[0]
+			};	
+			autocomplete(opts);
+		};
+	</script>
+
+
+
+	<!-- syntax -->
+<!-- 	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/styles/default.min.css">
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script> -->
+
+</head>
+
+<body>
+    <style>
+
+</style>
+
+
+<header>
+
+<a id="logo" href="index.html"><img src="./img/Logo-inv.png"></a>
+
+
+<div id="search" class="search-container">
+    <input type="search" class="search-input" results=0 placeholder="Search (fuzzy)" tabindex="1">
+    <div class="ac-results-wrapper"></div>
+</div>
+
+
+<!-- <ul>  
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#about">About</a></li>
+</ul> -->
+
+
+
+
+
+<div id="options" class="dropdown">
+  <a href="">Options</a>
+  <div class="dropdown-content">
+	<fieldset >
+			<legend>Display Options</legend>
+			<input id="checkbox_definition" name="disp_opt" type="checkbox" checked="checked" onchange="changeOption(this)">Definitions <br>
+			<input id="checkbox_example" name="disp_opt" type="checkbox" checked="checked" onchange="changeOption(this)">Examples <br>
+            <input id="checkbox_legend" name="disp_opt" type="checkbox" checked="checked" onchange="changeOption(this)">Legends <br>
+	</fieldset>
+  </div>
+</div>
+
+</header>
+
+
+
+            <main class="container">
+<!-- Basics -->
+<!--    -->
+<!-- \newcommand{\diff}{\mathop{}\!\mathrm{\vphantom( d}} -->
+
+<!-- SI Units -->
+<!-- KaTeX Tweaks -->
+
+<h1 id="diode">Diode</h1>
+<div class="definition">
+<p>A diode is a two-terminal electronic component that conducts primarily in one direction.</p>
+</div>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Diode</th>
+<th style="text-align: left;"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Symbol</td>
+<td style="text-align: left;"><img src="./img/diode_symbol.svg" style="width: 3em;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Properties</td>
+<td style="text-align: left;">passive</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Equations</td>
+<td style="text-align: left;"><span class="LaTeX">$u_D = u_T \cdot \ln \left(\frac{i_D}{I_S} + 1 \right)$</span> <br> <span class="LaTeX">$i_D = I_S \cdot \left( \exp \left(\frac{u_D}{U_T}\right) -1 \right)$</span></td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Thi</td>
+<td style="text-align: left;">is a</td>
+<td style="text-align: left;">test</td>
+</tr>
+</tbody>
+</table>
+<h2 id="shottky-diode">Shottky Diode</h2>
+<p><span class="LaTeX">$I=I_\mathrm{S} \left( e^\frac{V_\text{D}}{n V_\text{T}} - 1 \right)$</span></p>
+<h2 id="zener-diode">Zener Diode</h2>
+<h2 id="light-emitting-diode">Light Emitting Diode</h2>
+
+</main>
+
+    
+</body>

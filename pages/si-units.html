@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- title, description, favicon -->
+    <title>Tex4Tum</title>
+    <meta name="description" content="Interactive online knowledge base for engineers" />
+    <link rel="shortcut icon" href="./res/favicon.ico"/>	
+	
+	<!-- load style sheet -->
+	<link rel="stylesheet" type="text/css" href="./res/latex4ei.css"/>
+	<link rel="stylesheet" type="text/css" href="./res/header.css"/>
+	<script src="./res/latex4ei.js"></script>
+	<script src="./res/perfect-autocompl.js"></script>
+
+	<!-- Math -->
+<!-- 	<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML-full"></script>
+	<script type="text/x-mathjax-config">
+	  MathJax.Hub.Config({tex2jax: {inlineMath: [["$","$"]]}});
+	</script> -->
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/katex.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/katex.min.js"></script>
+	<script type="text/javascript">
+		window.onload = function() {
+  			renderMath();
+
+  			var opts = {
+			data: acData,
+			numResults: 10,
+			searchPath: '/search?q=',
+			directPath: '.',
+			container: document.getElementsByClassName('search-container')[0]
+			};	
+			autocomplete(opts);
+		};
+	</script>
+
+
+
+	<!-- syntax -->
+<!-- 	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/styles/default.min.css">
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script> -->
+
+</head>
+
+<body>
+    <style>
+
+</style>
+
+
+<header>
+
+<a id="logo" href="index.html"><img src="./img/Logo-inv.png"></a>
+
+
+<div id="search" class="search-container">
+    <input type="search" class="search-input" results=0 placeholder="Search (fuzzy)" tabindex="1">
+    <div class="ac-results-wrapper"></div>
+</div>
+
+
+<!-- <ul>  
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#about">About</a></li>
+</ul> -->
+
+
+
+
+
+<div id="options" class="dropdown">
+  <a href="">Options</a>
+  <div class="dropdown-content">
+	<fieldset >
+			<legend>Display Options</legend>
+			<input id="checkbox_definition" name="disp_opt" type="checkbox" checked="checked" onchange="changeOption(this)">Definitions <br>
+			<input id="checkbox_example" name="disp_opt" type="checkbox" checked="checked" onchange="changeOption(this)">Examples <br>
+            <input id="checkbox_legend" name="disp_opt" type="checkbox" checked="checked" onchange="changeOption(this)">Legends <br>
+	</fieldset>
+  </div>
+</div>
+
+</header>
+
+
+
+            <main class="container">
+<!-- Basics -->
+<!--    -->
+<!-- \newcommand{\diff}{\mathop{}\!\mathrm{\vphantom( d}} -->
+
+<!-- SI Units -->
+<!-- KaTeX Tweaks -->
+
+<h1 id="si-units">SI Units</h1>
+<p>The System of International Units is a dimension system that is based on 7 base units.</p>
+<table>
+<thead>
+<tr class="header">
+<th><strong>Größe</strong></th>
+<th><strong>Definition</strong></th>
+<th><strong>Einheit</strong></th>
+<th><strong>SI-Notation</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Frequenz</td>
+<td><span class="LaTeX">$f = \frac{c}{\lambda}$</span></td>
+<td>Hertz</td>
+<td><span class="LaTeX">${{\text{Hz}{\,}}} = { {/}{\text{s}{\,}}}$</span></td>
+</tr>
+<tr class="even">
+<td>Kraft</td>
+<td><span class="LaTeX">$\vec F := m \cdot \vec a$</span></td>
+<td>Newton</td>
+<td><span class="LaTeX">${{\text{N}{\,}}} = {{\text{kg}{\,}}{\text{m}{\,}}{/}{\text{s}{\,}}{^{2}}}$</span></td>
+</tr>
+<tr class="odd">
+<td>Druck</td>
+<td><span class="LaTeX">$p := \frac{\vec F_\perp}{A}$</span></td>
+<td>Pascal</td>
+<td><span class="LaTeX">${{\text{Pa}{\,}}} = {{\text{N}{\,}}{/}{\text{m}{\,}}{^{2}}} = {{\text{kg}{\,}}{/}{\text{m}{\,}}{\text{s}{\,}}{^{2}}}$</span></td>
+</tr>
+<tr class="even">
+<td><span class="LaTeX">${}^{\textstyle \text{Arbeit,}}_{\textstyle \text{Energie}}$</span></td>
+<td><span class="LaTeX">$W := \int \vec F {\,\text{d}}\vec s$</span></td>
+<td>Joule</td>
+<td><span class="LaTeX">${{\text{J}{\,}}} = {{\text{N}{\,}}{\text{m}{\,}}} = {{\text{kg}{\,}}{\text{m}{\,}}{^{2}}{/}{\text{s}{\,}}{^{2}}}$</span></td>
+</tr>
+<tr class="odd">
+<td>Leistung</td>
+<td><span class="LaTeX">$P := \frac{\mathrm dW}{\mathrm dt}$</span></td>
+<td>Watt</td>
+<td><span class="LaTeX">${{\text{W}{\,}}} = {{\text{J}{\,}}{/}{\text{s}{\,}}} = {{\text{kg}{\,}}{\text{m}{\,}}{^{2}}{/}{\text{s}{\,}}{^{3}}}$</span></td>
+</tr>
+<tr class="even">
+<td>Spannung</td>
+<td><span class="LaTeX">$U := \frac{W}{Q}$</span></td>
+<td>Volt</td>
+<td><span class="LaTeX">${{\text{V}{\,}}} = {{\text{W}{\,}}{/}{\text{A}{\,}}} = {{\text{kg}{\,}}{\text{m}{\,}}{^{2}}{/}{\text{A}{\,}}{\text{s}{\,}}{^{3}}}$</span></td>
+</tr>
+<tr class="odd">
+<td>Ladung</td>
+<td><span class="LaTeX">$Q:= \int I {\,\text{d}}t$</span></td>
+<td>Coulomb</td>
+<td><span class="LaTeX">${{\text{C}{\,}}} = {{\text{A}{\,}}{\text{s}{\,}}}$</span></td>
+</tr>
+<tr class="even">
+<td>Resistivität</td>
+<td><span class="LaTeX">$R := \frac{{\,\text{d}}U}{{\,\text{d}}I}$</span></td>
+<td>Ohm</td>
+<td><span class="LaTeX">${{\Omega{\,}}} = {{\text{V}{\,}}{/}{\text{A}{\,}}} = {{\text{kg}{\,}}{\text{m}{\,}}{^{2}}{/}{\text{A}{\,}}{^{2}}{\text{s}{\,}}{^{3}}}$</span></td>
+</tr>
+<tr class="odd">
+<td>Kapazität</td>
+<td><span class="LaTeX">$C:= \frac{{\,\text{d}}Q}{{\,\text{d}}U}$</span></td>
+<td>Farad</td>
+<td><span class="LaTeX">${{\text{F}{\,}}} = {{\text{C}{\,}}{/}{\text{V}{\,}}} = {{\text{A}{\,}}{^{2}}{\text{s}{\,}}{^{4}}{/}{\text{kg}{\,}}{\text{m}{\,}}{^{2}}}$</span></td>
+</tr>
+<tr class="even">
+<td>Induktivität</td>
+<td><span class="LaTeX">$L := \frac{{\,\text{d}}\Phi}{{\,\text{d}}I}$</span></td>
+<td>Henry</td>
+<td><span class="LaTeX">${{\text{H}{\,}}} = {{\text{V}{\,}}{\text{s}{\,}}{/}{\text{A}{\,}}} = {{\text{kg}{\,}}{\text{m}{\,}}{^{2}}{/}{\text{A}{\,}}{^{2}}{\text{s}{\,}}{^{2}}}$</span></td>
+</tr>
+<tr class="odd">
+<td><span class="LaTeX">${}^{\text{Magnetischer}}_{\textstyle \text{Fluss}}$</span></td>
+<td><span class="LaTeX">$\Phi_{\mathrm M} := \int \vec B {\,\text{d}}\vec A$</span></td>
+<td>Weber</td>
+<td><span class="LaTeX">${{\text{Wb}{\,}}} = {{\text{V}{\,}}{\text{s}{\,}}} = {{\text{kg}{\,}}{\text{m}{\,}}{^{2}}{/}{\text{A}{\,}}{\text{s}{\,}}{^{2}}}$</span></td>
+</tr>
+<tr class="even">
+<td><span class="LaTeX">${}^{\text{Magnetische}}_{\textstyle \text{Flussdichte}}$</span></td>
+<td><span class="LaTeX">$\vec B := \mu_0 \vec H$</span></td>
+<td>Tesla</td>
+<td><span class="LaTeX">${{\text{T}{\,}}} = {{\text{Wb}{\,}}{/}{\text{m}{\,}}{^{2}}} = {{\text{kg}{\,}}{/}{\text{A}{\,}}{\text{s}{\,}}{^{2}}}$</span></td>
+</tr>
+</tbody>
+</table>
+<h2 id="prefix">Prefix</h2>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;"><span class="LaTeX">$10^{\pm}$</span></th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>6</th>
+<th>9</th>
+<th>12</th>
+<th>15</th>
+<th>18</th>
+<th>21</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">+</td>
+<td>da</td>
+<td>h</td>
+<td>k</td>
+<td>M</td>
+<td>G</td>
+<td>T</td>
+<td>P</td>
+<td>E</td>
+<td>Z</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">-</td>
+<td>d</td>
+<td>c</td>
+<td>m</td>
+<td>μ</td>
+<td>n</td>
+<td>p</td>
+<td>f</td>
+<td>a</td>
+<td>z</td>
+</tr>
+</tbody>
+</table>
+
+</main>
+
+    
+</body>

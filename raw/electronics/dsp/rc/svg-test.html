@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Inkscape Output</title>
+
+
+    <style type="text/css">
+
+    	path {
+
+    	}
+
+    	line {
+    		stroke:#000;
+    		stroke-width: 1.0;
+    	}
+
+    	.wire {
+     		stroke:#000;
+    		stroke-width: 0.05em;
+    		fill:none;   		
+    	}
+
+    	.symbol {
+     		stroke:#000;
+    		stroke-width: 2;
+    		fill:none;   		
+    	}
+
+    	.thick {
+    		stroke:#000;
+    		stroke-width: 5;
+    		fill:none;
+    	}
+
+
+    </style>
+
+
+
+
+
+</head>
+<body>
+
+
+<!-- path: m: move relative to X Y, M: move absolute to X Y, L: draw to X Y, H: draw to X, V: draw to Y -->
+
+<svg height="100mm" width="100mm" viewBox="0 0 200 200">
+
+
+	 <script type="text/javascript">
+	  <![CDATA[
+
+	  	function getValue(str){
+	  		var prescale = 1;
+	  		var value = str.slice(0,-1);
+			switch( str.slice(-1) ){
+				case 'G': prescale = 1000000000; break;
+				case 'M': prescale = 1000000; break;
+				case 'k': prescale = 1000; break;
+				case 'm': prescale = 0.001; break;
+				case 'u': prescale = 0.000001; break;
+				case 'n': prescale = 0.000000001; break;
+				default: value = str;
+			}
+			return ( Number(value) * prescale );
+	  	}
+
+	    window.onload = function() {
+	     var buttton = document.getElementById("calc");
+	     var C1 = document.getElementById("C1").textContent;
+	     var R1 = document.getElementById("R1").textContent;
+	     var F1 = document.getElementById("F1");
+	     buttton.onclick = function() {
+	     	var freq = 1/(2 * Math.PI * getValue(C1) * getValue(R1));
+	       	F1.textContent=freq;
+	     }
+	    }
+	   ]]>
+	 </script>
+
+
+	<line x1="10" x2="0" y1="10" y2="20"></line>
+
+
+	<path id="resistor" class="symbol" d="m 30 30 v 10 h 60 v -20 h -60 z"/>
+
+	<path id="capacitor" class="thick" d="M2 2 h 40 m -40 15 h 40"/>
+
+
+	
+
+    <foreignObject x="60" y="50" width="40" height="20">
+        <body xmlns="http://www.w3.org/1999/xhtml">
+            <text id="C1" x="10" y="10" width="200" contentEditable="true" style="font-family:sans-serif">100n</text>
+            <text id="R1" x="10" y="10" width="200" contentEditable="true" style="font-family:sans-serif">10k</text>
+        </body>
+    </foreignObject>
+
+
+
+</svg>
+
+<text id="F1">Frequency</text>
+<text id="calc">Calculate!</text>
+
+
+</body>
+</html>

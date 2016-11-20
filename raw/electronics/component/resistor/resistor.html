@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Interactive Content</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="../latex4ei.css">
+<script type="text/javascript" src="../latex4ei.js"></script>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML-full"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]}});
+</script>
+
+
+	 <script type="text/javascript">
+		function R_calcResistor(){
+			var select = document.getElementById("R_band1");
+			var R_bands = document.getElementById("R_bands").contentDocument;
+			switch(select.selectedIndex){
+				case 0: select.setAttribute("background-color", "black"); break;
+				case 1: select.setAttribute("background-color", "green"); break;
+			}
+		}	 
+	 </script>
+
+
+	 $\newcommand{\ma}[1]{\boldsymbol #1}$
+	 $\newcommand{\ir}{\rm}$
+	 $\newcommand{\i}{\mathrm{i}}$
+	 $\DeclareMathOperator{\Sp}{Sp}$
+	 $\DeclareMathOperator{\diff}{d}$
+
+</head>
+<body>
+	<main class="container">
+
+		<h2 title="test">Resistors</h2>
+		Low Pass Filter First Order
+
+		Select Colors:<br>
+
+		<select id="R_band1" onchange="R_calcResistor()">
+		  <option style="background-color: black"value="black">black</option>
+		  <option style="background-color: brown"value="brown">brown</option>
+		  <option style="background-color: red"value="red">red</option>
+		  <option style="background-color: orange"value="orange">orange</option>
+		  <option style="background-color: yellow"value="yellow">yellow</option>
+		  <option style="background-color: green"value="green">green</option>
+		  <option style="background-color: blue"value="blue">blue</option>
+		  <option style="background-color: violet"value="violet">violet</option>
+		  <option style="background-color: grey"value="grey">grey</option>
+		  <option style="background-color: white"value="white">white</option>
+		</select>
+		<select id="R_band2" onchange="RC_loadSVG()">
+		  <option style="background-color: black"value="black">black</option>
+		  <option style="background-color: brown"value="brown">brown</option>
+		  <option style="background-color: red"value="red">red</option>
+		  <option style="background-color: orange"value="orange">orange</option>
+		  <option style="background-color: yellow"value="yellow">yellow</option>
+		  <option style="background-color: green"value="green">green</option>
+		  <option style="background-color: blue"value="blue">blue</option>
+		  <option style="background-color: violet"value="violet">violet</option>
+		  <option style="background-color: grey"value="grey">grey</option>
+		  <option style="background-color: white"value="white">white</option>
+		</select>
+		<select id="R_band3" onchange="RC_loadSVG()">
+		  <option style="background-color: black"value="black">black</option>
+		  <option style="background-color: brown"value="brown">brown</option>
+		  <option style="background-color: red"value="red">red</option>
+		  <option style="background-color: orange"value="orange">orange</option>
+		  <option style="background-color: yellow"value="yellow">yellow</option>
+		  <option style="background-color: green"value="green">green</option>
+		  <option style="background-color: blue"value="blue">blue</option>
+		  <option style="background-color: violet"value="violet">violet</option>
+		  <option style="background-color: grey"value="grey">grey</option>
+		  <option style="background-color: white"value="white">white</option>
+		</select>
+
+		<select id="R_band4" onchange="RC_loadSVG()">
+		  <option style="background-color: black"value="black">black</option>
+		  <option style="background-color: brown"value="brown">brown</option>
+		  <option style="background-color: red"value="red">red</option>
+		  <option style="background-color: orange"value="orange">orange</option>
+		  <option style="background-color: yellow"value="yellow">yellow</option>
+		  <option style="background-color: green"value="green">green</option>
+		  <option style="background-color: blue"value="blue">blue</option>
+		  <option style="background-color: violet"value="violet">violet</option>
+		  <option style="background-color: grey"value="grey">grey</option>
+		  <option style="background-color: white"value="white">white</option>
+		</select>
+
+		<figure>
+			<object id="R_bands" data="R_bands.svg" type="image/svg+xml"></object>
+		</figure>
+
+
+
+
+		<h2>Voltage Divider</h2>
+		<figure>
+			<object id="R_divider" data="rc.svg" type="image/svg+xml"></object>
+		</figure>
+
+		$R_{eq} = \frac{R1}{R1 + R2}$ 
+
+	</main>
+</body>
+</html>

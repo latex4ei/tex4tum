@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- title, description, favicon -->
+    <title>Tex4Tum</title>
+    <meta name="description" content="Interactive online knowledge base for engineers" />
+    <link rel="shortcut icon" href="./res/favicon.ico"/>	
+	
+	<!-- load style sheet -->
+	<link rel="stylesheet" type="text/css" href="./res/latex4ei.css"/>
+	<link rel="stylesheet" type="text/css" href="./res/header.css"/>
+	<script src="./res/latex4ei.js"></script>
+	<script src="./res/perfect-autocompl.js"></script>
+
+	<!-- Math -->
+<!-- 	<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML-full"></script>
+	<script type="text/x-mathjax-config">
+	  MathJax.Hub.Config({tex2jax: {inlineMath: [["$","$"]]}});
+	</script> -->
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/katex.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/katex.min.js"></script>
+	<script type="text/javascript">
+		window.onload = function() {
+  			renderMath();
+
+  			var opts = {
+			data: acData,
+			numResults: 10,
+			searchPath: '/search?q=',
+			directPath: '.',
+			container: document.getElementsByClassName('search-container')[0]
+			};	
+			autocomplete(opts);
+		};
+	</script>
+
+
+
+	<!-- syntax -->
+<!-- 	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/styles/default.min.css">
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script> -->
+
+</head>
+
+<body>
+    <style>
+
+</style>
+
+
+<header>
+
+<a id="logo" href="index.html"><img src="./img/Logo-inv.png"></a>
+
+
+<div id="search" class="search-container">
+    <input type="search" class="search-input" results=0 placeholder="Search (fuzzy)" tabindex="1">
+    <div class="ac-results-wrapper"></div>
+</div>
+
+
+<!-- <ul>  
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#about">About</a></li>
+</ul> -->
+
+
+
+
+
+<div id="options" class="dropdown">
+  <a href="">Options</a>
+  <div class="dropdown-content">
+	<fieldset >
+			<legend>Display Options</legend>
+			<input id="checkbox_definition" name="disp_opt" type="checkbox" checked="checked" onchange="changeOption(this)">Definitions <br>
+			<input id="checkbox_example" name="disp_opt" type="checkbox" checked="checked" onchange="changeOption(this)">Examples <br>
+            <input id="checkbox_legend" name="disp_opt" type="checkbox" checked="checked" onchange="changeOption(this)">Legends <br>
+	</fieldset>
+  </div>
+</div>
+
+</header>
+
+
+
+            <main class="container">
+<!-- Basics -->
+<!--    -->
+<!-- \newcommand{\diff}{\mathop{}\!\mathrm{\vphantom( d}} -->
+
+<!-- SI Units -->
+<!-- KaTeX Tweaks -->
+
+<h1 id="frequency-analysis">Frequency Analysis</h1>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th>Continious</th>
+<th>Discrete</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Real</strong></td>
+<td>Fourier</td>
+<td>Fourier</td>
+</tr>
+<tr class="even">
+<td><strong>Complex</strong></td>
+<td>Laplace</td>
+<td>Z-Transform</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr class="header">
+<th>Properties</th>
+<th style="text-align: right;"></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Linearity</td>
+<td style="text-align: right;"><span class="LaTeX">$\alpha f(t) + \beta g(t)$</span></td>
+<td><span class="LaTeX">${\ \circ\:\!\!\!\!\!-\!\!\!\!\!\bullet\ }\ \alpha F(s) + \beta G(s)$</span></td>
+</tr>
+<tr class="even">
+<td>Shift Time</td>
+<td style="text-align: right;"><span class="LaTeX">$x(t - \tau)$</span></td>
+<td><span class="LaTeX">${\ \circ\:\!\!\!\!\!-\!\!\!\!\!\bullet\ }\ e^{-s \tau} X(x)$</span></td>
+</tr>
+<tr class="odd">
+<td>Shift Frequency</td>
+<td style="text-align: right;"><span class="LaTeX">$e^{\tau t}$</span></td>
+<td><span class="LaTeX">${\ \circ\:\!\!\!\!\!-\!\!\!\!\!\bullet\ }\ X(s - \tau)$</span></td>
+</tr>
+<tr class="even">
+<td>Stauchung</td>
+<td style="text-align: right;"><span class="LaTeX">$f(ct)$</span></td>
+<td><span class="LaTeX">${\ \circ\:\!\!\!\!\!-\!\!\!\!\!\bullet\ }\ \frac{1}{{\left\vert{c}\right\vert}} F\bigl(\frac{s}{c}\bigr)$</span></td>
+</tr>
+<tr class="odd">
+<td>Ableitung</td>
+<td style="text-align: right;"><span class="LaTeX">$f^{(n)}(t)$</span></td>
+<td><span class="LaTeX">${\ \circ\:\!\!\!\!\!-\!\!\!\!\!\bullet\ }\ s^n F(s)$</span></td>
+</tr>
+<tr class="even">
+<td>Integral</td>
+<td style="text-align: right;"><span class="LaTeX">$\int_{-\infty}^t \tau {\,\text{d}}\tau$</span></td>
+<td><span class="LaTeX">${\ \circ\:\!\!\!\!\!-\!\!\!\!\!\bullet\ }\ \frac{1}{s} X(s)$</span></td>
+</tr>
+<tr class="odd">
+<td>Faltung</td>
+<td style="text-align: right;"><span class="LaTeX">$(f * g)(t)$</span></td>
+<td><span class="LaTeX">${\ \circ\:\!\!\!\!\!-\!\!\!\!\!\bullet\ }\ F(s) \cdot G(s)$</span></td>
+</tr>
+</tbody>
+</table>
+<div class="legend">
+<p>timefunctions <span class="LaTeX">$f,g$</span>, frequency functions <span class="LaTeX">$X,F,G$</span>, complex number <span class="LaTeX">${{\mathbf{s}}}$</span>, time <span class="LaTeX">$t$</span>, time shift <span class="LaTeX">$\tau$</span>, constant <span class="LaTeX">$c$</span></p>
+</div>
+<h2 id="fourierreihe">Fourierreihe</h2>
+<p>Approximation einer <em>periodischen</em> Funktion <span class="LaTeX">$f(t)$</span> durch Überlagerung gewichteter Sinus und Cosinus einer Grundfrequenz <span class="LaTeX">$\omega_0 = \frac{1}{T}$</span> und deren Oberschwingungen <span class="LaTeX">$2\omega_0, 3\omega_0, ...$</span></p>
+<div class="emphbox">
+<p><span class="LaTeX">$F(x) = \sum\limits_{k=-\infty}^\infty c_k e^{{\text{i}}k \omega_0 x} \qquad c_k = \frac{1}{T} \int\limits_{-\frac{T}{2}}^{\frac{T}{2}} f(x) e^{{\text{i}}k \omega_0 x} {\,\text{d}}x$</span></p>
+</div>
+<h2 id="fouriertransformation-ft">Fouriertransformation (FT)</h2>
+<div class="emphbox">
+<p><span class="LaTeX">$\displaystyle \underset{\text{Zeitbereich}}{ f(t)} {{\ \circ\:\!\!\!\!\!-\!\!\!\!\!\bullet\ }}\underset{\text{Frequenzspektrum}}{ F(\omega)} := \int\limits_{-\infty}^\infty f(t) \exp(-{\text{i}}\omega t) {\,\text{d}}t$</span></p>
+</div>
+<p>Anmerkung: Es gibt unterschiedliche Normungen (<span class="LaTeX">$1, \frac{1}{\sqrt{2\pi}}$</span>)</p>
+<h2 id="laplaceransformation-lt-mathbfs-alpha-omegatexti">Laplaceransformation (LT) <span class="LaTeX">${{\mathbf{s}}} = \alpha + \omega{\text{i}}$</span></h2>
+LT ist Verallgemeinerung der FT mit Dämpfungsfaktor <span class="LaTeX">$\alpha$</span>
+<div class="emphbox">
+<p><span class="LaTeX">$\displaystyle \underset{\text{Zeitbereich}}{ f(t)} {{\ \circ\:\!\!\!\!\!-\!\!\!\!\!\bullet\ }}\underset{\text{Frequenzspektrum}}{ F({{\mathbf{s}}}) = \mathcal L\left(f(t)\right)} := \int\limits_{0}^\infty f(t) \exp(- {{\mathbf{s}}} t) {\,\text{d}}t$</span></p>
+</div>
+<h2 id="z-transform-zt">Z-Transform (ZT)</h2>
+
+</main>
+
+    
+</body>

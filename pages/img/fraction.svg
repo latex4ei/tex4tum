@@ -1,0 +1,140 @@
+<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="100mm" width="100mm" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 55 300 300" xmlns:dc="http://purl.org/dc/elements/1.1/" onload="svgloaded()">
+	<defs>
+		<marker id="Arrow1Sstart" refY="0.0" refX="0.0" style="overflow:visible" orient="auto">
+			<path style="stroke:#000;stroke-width:1pt;fill-rule:evenodd" transform="scale(.2) translate(6)" d="m0 0l5-5-17.5 5 17.5 5-5-5z"/>
+		</marker>
+		<marker id="a" refY="0.0" refX="0.0" style="overflow:visible" orient="auto">
+			<path style="stroke-linejoin:round;stroke:#000;stroke-width:.625;fill-rule:evenodd" transform="scale(.6) rotate(180) translate(0)" d="m8.7186 4.0337l-10.926-4.0177 10.926-4.0177c-1.7455 2.3721-1.7355 5.6174 0 8.0354z"/>
+		</marker>
+		<marker id="Arrow2Mend" refY="0.0" refX="0.0" style="overflow:visible" orient="auto">
+			<path style="stroke-linejoin:round;fill-rule:evenodd;stroke:#025;stroke-width:.625;fill:#025" transform="scale(.6) rotate(180) translate(0)" d="m8.7186 4.0337l-10.926-4.0177 10.926-4.0177c-1.7455 2.3721-1.7355 5.6174 0 8.0354z"/>
+		</marker>
+	</defs>
+	<script src="./MathJax/MathJax.js?config=TeX-AMS_HTML-full" type="text/javascript"/>
+	<script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [[&quot;$&quot;,&quot;$&quot;],[&quot;\\(&quot;,&quot;\\)&quot;]]}});</script>
+	<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"/>
+	<rect style="fill:#82d4ff" height="131.85" width="298.74" y="222.48" x="-.0000026296"/>
+	<rect id="anchor" y="220.66" width="1.7967" x="141.72" height="1.7551"/>
+	<path id="ray" d="m141.96 218v-75.36-75.355" style="stroke:#000;stroke-width:8.7057;marker-mid:url(#Arrow1Sstart);fill:none" onmousedown="rotateLine(this.id)"/>
+	<path id="pass" style="stroke:#052;stroke-width:4.2762;marker-end:url(#a);fill:none" onmousedown="rotateLine(this.id)" d="m141.73 217.73v-145.46"/>
+	<text id="n1_val" style="font-size:24px" space="preserve" onclick="askValue(this.id)" y="209.86768" x="245.82343">1.2</text>
+	<text id="n2_val" style="font-size:24px" space="preserve" onclick="askValue(this.id)" y="251.89607" x="244.11113">1.5</text>
+	<text style="font-size:24px" space="preserve" y="85.252937" x="3.4076719"><tspan>α = </tspan><tspan id="alpha" onclick="askValue(this.id)">30</tspan></text>
+	<path id="frac" d="m141.93 218.15v-127.92" style="stroke-dasharray:4.0102, 8.0204;stroke:#025;stroke-width:4.0102;marker-end:url(#Arrow2Mend);fill:none" onmousedown="rotateLine(this.id)"/>
+	<script type="text/javascript">
+var dragX, dragY;
+var pt;
+var svg_fraction;
+var ray_line, frac_line, pass_line, rotor, alpha_text
+var alpha = -30;
+
+
+function getValue(str){
+	return Number(str);
+}
+
+function askValue(clicked_id){
+	var el = document.getElementById(clicked_id); 
+	var newval = prompt("Please enter new Value", el.textContent);
+	if( isNaN( Number(newval) ) || newval == null || newval == '' ){
+		el.textContent = "NaN";
+	} else {
+		el.textContent = Number(newval);
+	}
+	syncValues(clicked_id, newval);
+}
+
+function syncValues(id, value){
+    switch(id){
+        case "alpha": alpha = -value;
+    }
+    calcFraction();
+}
+
+function svgloaded(){
+    svg_fraction = document.childNodes[0];
+    pt = svg_fraction.createSVGPoint();
+    hitpoint = svg_fraction.getElementById("anchor");
+    ray_line = svg_fraction.getElementById("ray");
+    frac_line = svg_fraction.getElementById("frac");
+    pass_line = svg_fraction.getElementById("pass");
+    alpha_text = svg_fraction.getElementById("alpha");
+    syncValues("none", 0);
+}
+
+function rotateToMouse(rotor, anchor){
+    // coordinates within svg
+    pt.x = anchor.x.animVal.value;
+    pt.y = anchor.y.animVal.value;
+    
+    // transform to screen corrdinates
+    var matrix = anchor.getScreenCTM();
+    pt = pt.matrixTransform(matrix);
+    var angle = getMouseAngleTo(pt.x, pt.y);
+    
+	// update angle:
+	alpha = angle;
+    alpha_text.textContent = Math.round(-angle);
+
+    // rotate
+    calcFraction();
+}
+
+
+function dragLine(){    
+    rotateToMouse(ray_line, hitpoint);
+}
+
+function rotateToAnchor(rotor, anchor, angle){
+    rotor.setAttribute('transform', "rotate("+angle+" "+anchor.x.animVal.value+" "+anchor.y.animVal.value+")");
+}
+
+function rotateLine(id) {
+    document.addEventListener('mousemove',dragLine,false);
+    document.addEventListener('touchmove',dragLine,false);
+
+    document.addEventListener('mouseup',function(){
+                document.removeEventListener('mousemove',dragLine,false);
+                calcFraction();
+            },false);
+    document.addEventListener('touchend',function(){
+                document.removeEventListener('touchmove',dragLine,false);
+                calcFraction();
+            },false);
+}
+
+
+function getMouseAngleTo(x, y){
+    //get the vector representing the mouse's position relative to the point...
+    var vx = event.pageX - x;
+    var vy = event.pageY - y;
+
+    //use atan2 to get the angle; Atan2 returns radians
+    var angleRadians=Math.atan2(vx, -vy);   // -vy because on screen y is inverted
+    return (angleRadians * (360 / (2 * Math.PI)));
+}
+
+
+
+function calcFraction(){
+    var n1 = getValue( svg_fraction.getElementById("n1_val").textContent );
+    var n2 = getValue( svg_fraction.getElementById("n2_val").textContent );
+
+    // in or outside of density?
+    var frac_angle = 0;
+    if( Math.abs(alpha) > 90 ){ 
+        frac_angle = -Math.asin(Math.sin(alpha*Math.PI/180) * n2 / n1)*180/Math.PI;
+    } else {
+        frac_angle = Math.asin(Math.sin(alpha*Math.PI/180) * n1 / n2)*180/Math.PI+180;
+    }
+    
+    // total reflection?
+    if (isNaN(frac_angle) ){ frac_angle = -alpha}
+
+    rotateToAnchor(ray_line, hitpoint, alpha);
+    rotateToAnchor(frac_line, hitpoint, -alpha);
+    rotateToAnchor(pass_line, hitpoint, frac_angle);
+}
+</script>
+
+</svg>

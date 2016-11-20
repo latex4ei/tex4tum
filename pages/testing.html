@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- title, description, favicon -->
+    <title>Tex4Tum</title>
+    <meta name="description" content="Interactive online knowledge base for engineers" />
+    <link rel="shortcut icon" href="./res/favicon.ico"/>	
+	
+	<!-- load style sheet -->
+	<link rel="stylesheet" type="text/css" href="./res/latex4ei.css"/>
+	<link rel="stylesheet" type="text/css" href="./res/header.css"/>
+	<script src="./res/latex4ei.js"></script>
+	<script src="./res/perfect-autocompl.js"></script>
+
+	<!-- Math -->
+<!-- 	<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML-full"></script>
+	<script type="text/x-mathjax-config">
+	  MathJax.Hub.Config({tex2jax: {inlineMath: [["$","$"]]}});
+	</script> -->
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/katex.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/katex.min.js"></script>
+	<script type="text/javascript">
+		window.onload = function() {
+  			renderMath();
+
+  			var opts = {
+			data: acData,
+			numResults: 10,
+			searchPath: '/search?q=',
+			directPath: '.',
+			container: document.getElementsByClassName('search-container')[0]
+			};	
+			autocomplete(opts);
+		};
+	</script>
+
+
+
+	<!-- syntax -->
+<!-- 	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/styles/default.min.css">
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script> -->
+
+</head>
+
+<body>
+    <style>
+
+</style>
+
+
+<header>
+
+<a id="logo" href="index.html"><img src="./img/Logo-inv.png"></a>
+
+
+<div id="search" class="search-container">
+    <input type="search" class="search-input" results=0 placeholder="Search (fuzzy)" tabindex="1">
+    <div class="ac-results-wrapper"></div>
+</div>
+
+
+<!-- <ul>  
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#about">About</a></li>
+</ul> -->
+
+
+
+
+
+<div id="options" class="dropdown">
+  <a href="">Options</a>
+  <div class="dropdown-content">
+	<fieldset >
+			<legend>Display Options</legend>
+			<input id="checkbox_definition" name="disp_opt" type="checkbox" checked="checked" onchange="changeOption(this)">Definitions <br>
+			<input id="checkbox_example" name="disp_opt" type="checkbox" checked="checked" onchange="changeOption(this)">Examples <br>
+            <input id="checkbox_legend" name="disp_opt" type="checkbox" checked="checked" onchange="changeOption(this)">Legends <br>
+	</fieldset>
+  </div>
+</div>
+
+</header>
+
+
+
+            <main class="container">
+<!-- Basics -->
+<!--    -->
+<!-- \newcommand{\diff}{\mathop{}\!\mathrm{\vphantom( d}} -->
+
+<!-- SI Units -->
+<!-- KaTeX Tweaks -->
+
+<h1 id="hypothesis-testing">Hypothesis Testing</h1>
+<table>
+<thead>
+<tr class="header">
+<th>Decision ╲ Reality</th>
+<th><span class="LaTeX">$H_1$</span> false (<span class="LaTeX">$H_0$</span> true)</th>
+<th><span class="LaTeX">$H_1$</span> true (<span class="LaTeX">$H_0$</span> false)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="LaTeX">$H_1$</span> rejected</td>
+<td><strong>T</strong>rue <strong>N</strong>egative</td>
+<td><strong>F</strong>alse <strong>N</strong>egative (Type 2)</td>
+</tr>
+<tr class="even">
+<td>(<span class="LaTeX">$H_0$</span> accepted)</td>
+<td><span class="LaTeX">${\mathrm{P}}= 1-\alpha$</span></td>
+<td><span class="LaTeX">${\mathrm{P}}= \beta$</span></td>
+</tr>
+<tr class="odd">
+<td><span class="LaTeX">$H_1$</span> accepted</td>
+<td><strong>F</strong>alse <strong>P</strong>ositive (Type 1)</td>
+<td><strong>T</strong>rue <strong>P</strong>ositive</td>
+</tr>
+<tr class="even">
+<td>(<span class="LaTeX">$H_0$</span> rejected)</td>
+<td><span class="LaTeX">${\mathrm{P}}= \alpha$</span></td>
+<td><span class="LaTeX">${\mathrm{P}}= 1-\beta$</span></td>
+</tr>
+</tbody>
+</table>
+
+</main>
+
+    
+</body>

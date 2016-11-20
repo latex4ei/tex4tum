@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- title, description, favicon -->
+    <title>Tex4Tum</title>
+    <meta name="description" content="Interactive online knowledge base for engineers" />
+    <link rel="shortcut icon" href="./res/favicon.ico"/>	
+	
+	<!-- load style sheet -->
+	<link rel="stylesheet" type="text/css" href="./res/latex4ei.css"/>
+	<link rel="stylesheet" type="text/css" href="./res/header.css"/>
+	<script src="./res/latex4ei.js"></script>
+	<script src="./res/perfect-autocompl.js"></script>
+
+	<!-- Math -->
+<!-- 	<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML-full"></script>
+	<script type="text/x-mathjax-config">
+	  MathJax.Hub.Config({tex2jax: {inlineMath: [["$","$"]]}});
+	</script> -->
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/katex.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/katex.min.js"></script>
+	<script type="text/javascript">
+		window.onload = function() {
+  			renderMath();
+
+  			var opts = {
+			data: acData,
+			numResults: 10,
+			searchPath: '/search?q=',
+			directPath: '.',
+			container: document.getElementsByClassName('search-container')[0]
+			};	
+			autocomplete(opts);
+		};
+	</script>
+
+
+
+	<!-- syntax -->
+<!-- 	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/styles/default.min.css">
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script> -->
+
+</head>
+
+<body>
+    <style>
+
+</style>
+
+
+<header>
+
+<a id="logo" href="index.html"><img src="./img/Logo-inv.png"></a>
+
+
+<div id="search" class="search-container">
+    <input type="search" class="search-input" results=0 placeholder="Search (fuzzy)" tabindex="1">
+    <div class="ac-results-wrapper"></div>
+</div>
+
+
+<!-- <ul>  
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#about">About</a></li>
+</ul> -->
+
+
+
+
+
+<div id="options" class="dropdown">
+  <a href="">Options</a>
+  <div class="dropdown-content">
+	<fieldset >
+			<legend>Display Options</legend>
+			<input id="checkbox_definition" name="disp_opt" type="checkbox" checked="checked" onchange="changeOption(this)">Definitions <br>
+			<input id="checkbox_example" name="disp_opt" type="checkbox" checked="checked" onchange="changeOption(this)">Examples <br>
+            <input id="checkbox_legend" name="disp_opt" type="checkbox" checked="checked" onchange="changeOption(this)">Legends <br>
+	</fieldset>
+  </div>
+</div>
+
+</header>
+
+
+
+            <main class="container">
+<!-- Basics -->
+<!--    -->
+<!-- \newcommand{\diff}{\mathop{}\!\mathrm{\vphantom( d}} -->
+
+<!-- SI Units -->
+<!-- KaTeX Tweaks -->
+
+<h1 id="vector-space">Vector Space</h1>
+<p>A vector space <span class="LaTeX">$(V,+,\cdot)$</span> over Körper <span class="LaTeX">$(\operatorname{\mathbb K},+,\cdot),\ \vec v \in \operatorname{\mathbb K}^n$</span></p>
+<p><strong>Linear Unabhängig:</strong> Vektoren heißen linear unabhängig, wenn aus:</p>
+<p><span class="LaTeX">$\alpha_1 \vec v_1 + \alpha_2 \vec v_2 + \ldots + \alpha_n \vec v_n = \vec 0$</span> folgt, dass alle <span class="LaTeX">$\alpha_i = 0$</span></p>
+<p><strong>Basis</strong> <span class="LaTeX">${\mathbf{B}}=\eset{\vec b_1, \vec b_2, ...}$</span>: <span class="LaTeX">$n$</span> Vektoren, linear unabhängig, erzeugen <span class="LaTeX">$V$</span></p>
+<p><strong>Betrag (Norm):</strong> <span class="LaTeX">${\left\lVert{\vec a}\right\rVert} = \sqrt{\vec a \cdot \vec a} = \sqrt{a_1^2+a_2^2+\ldots +a_n^2}$</span></p>
+<p><strong>Skalarprodukt:</strong> <span class="LaTeX">$\vec v \cdot \vec w = \vec v^\top\!\! \cdot \vec w = \sum v_i w_i = {\left\lVert{\vec a}\right\rVert}{\left\lVert{\vec b}\right\rVert} \cos(\measuredangle \vec a,\vec b)$</span></p>
+<p><span class="LaTeX">$\sprod{\vec v}{\vec w}_{{\mathbf{A}}} = \vec v^\top {\mathbf{A}} \vec w$</span> (quadr., symm., pos. definite Matrix <span class="LaTeX">${\mathbf{A}}$</span>)</p>
+
+</main>
+
+    
+</body>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- title, description, favicon -->
+    <title>Tex4Tum</title>
+    <meta name="description" content="Interactive online knowledge base for engineers" />
+    <link rel="shortcut icon" href="./res/favicon.ico"/>	
+	
+	<!-- load style sheet -->
+	<link rel="stylesheet" type="text/css" href="./res/latex4ei.css"/>
+	<link rel="stylesheet" type="text/css" href="./res/header.css"/>
+	<script src="./res/latex4ei.js"></script>
+	<script src="./res/perfect-autocompl.js"></script>
+
+	<!-- Math -->
+<!-- 	<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML-full"></script>
+	<script type="text/x-mathjax-config">
+	  MathJax.Hub.Config({tex2jax: {inlineMath: [["$","$"]]}});
+	</script> -->
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/katex.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/katex.min.js"></script>
+	<script type="text/javascript">
+		window.onload = function() {
+  			renderMath();
+
+  			var opts = {
+			data: acData,
+			numResults: 10,
+			searchPath: '/search?q=',
+			directPath: '.',
+			container: document.getElementsByClassName('search-container')[0]
+			};	
+			autocomplete(opts);
+		};
+	</script>
+
+
+
+	<!-- syntax -->
+<!-- 	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/styles/default.min.css">
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script> -->
+
+</head>
+
+<body>
+    <style>
+
+</style>
+
+
+<header>
+
+<a id="logo" href="index.html"><img src="./img/Logo-inv.png"></a>
+
+
+<div id="search" class="search-container">
+    <input type="search" class="search-input" results=0 placeholder="Search (fuzzy)" tabindex="1">
+    <div class="ac-results-wrapper"></div>
+</div>
+
+
+<!-- <ul>  
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#about">About</a></li>
+</ul> -->
+
+
+
+
+
+<div id="options" class="dropdown">
+  <a href="">Options</a>
+  <div class="dropdown-content">
+	<fieldset >
+			<legend>Display Options</legend>
+			<input id="checkbox_definition" name="disp_opt" type="checkbox" checked="checked" onchange="changeOption(this)">Definitions <br>
+			<input id="checkbox_example" name="disp_opt" type="checkbox" checked="checked" onchange="changeOption(this)">Examples <br>
+            <input id="checkbox_legend" name="disp_opt" type="checkbox" checked="checked" onchange="changeOption(this)">Legends <br>
+	</fieldset>
+  </div>
+</div>
+
+</header>
+
+
+
+            <main class="container">
+<!-- Basics -->
+<!--    -->
+<!-- \newcommand{\diff}{\mathop{}\!\mathrm{\vphantom( d}} -->
+
+<!-- SI Units -->
+<!-- KaTeX Tweaks -->
+
+<h1 id="kalman-filter">Kalman Filter</h1>
+<p>The Kalman Filter is a linear quadratic estimator used to estimate the state of a system by combining sensor measurements and a (physical) process model of the system. It works optimal if measurements and process variations have white gaussian noise.</p>
+<h2 id="working-principle">Working Principle</h2>
+<p>The Kalman Filter averages a prediction of a system's state with a new measurement using a weighted average. The purpose of the weights is that estimated values with smaller uncertainty are &quot;trusted&quot; more. The result of the weighted average is a new state estimate that lies between the predicted and measured state, and has a smaller estimated uncertainty than either alone.</p>
+<h2 id="requirements">Requirements</h2>
+<ul>
+<li>system's process model</li>
+<li>control inputs to that process</li>
+<li>multiple sequential measurements (e.g. from sensors)</li>
+</ul>
+<p>Facts:</p>
+<ul>
+<li>the certainty of the measurements is expressed in the gains</li>
+<li>if values of <span class="LaTeX">${\mathbf{Q}}$</span> are larger than values of <span class="LaTeX">${\mathbf{R}}$</span>, the filter trusts more the process, less the measurements</li>
+</ul>
+<h2 id="calculations">Calculations</h2>
+<h3 id="state-space">State Space</h3>
+<p><span class="LaTeX">$\vec{x}_{n} = {\mathbf{G}}_n \vec{x}_{n-1} + {\mathbf{B}} \vec{u}_n + \vec{v}_n$</span> <br>
+<span class="LaTeX">$\vec{y}_{n} = {\mathbf{H}}_{n} \vec{x}_{n-1} + \vec{w}_{n}$</span></p>
+<div class="legend">
+<p><span class="LaTeX">$k$</span> states <span class="LaTeX">$\vec x$</span>, transition matrix <span class="LaTeX">${\mathbf{G}}$</span>, gaussian process noise <span class="LaTeX">$\vec v_n$</span>, input <span class="LaTeX">$\vec u$</span>,
+<span class="LaTeX">$l$</span> measurements <span class="LaTeX">$\vec y$</span>, measurement model <span class="LaTeX">${\mathbf{H}}$</span>, gaussian measurement noise <span class="LaTeX">$\vec w_n$</span>,
+time point <span class="LaTeX">$n$</span></p>
+</div>
+<h3 id="step-prediction">1. Step: Prediction</h3>
+<p>calculate the next state based on the old state and the dynamic model (e.g. physical laws)</p>
+<p><span class="LaTeX">$\hat {\vec x}_{n|n-1} = {\mathbf{G}}_n \hat{\vec x}_{n-1|n-1}$</span></p>
+<p>calculate a new process covariance (how certain is the model?)
+<span class="LaTeX">${\mathbf{C}}_{\vec x_{n|n-1}} = {\mathbf{G}}_n {\mathbf{C}}_{\vec x_{n-1|n-1}} {\mathbf{G}}_n^\top + {\mathbf{C}}_{\vec v}$</span></p>
+<h3 id="step-update">2. Step: Update</h3>
+<p>calculate Innovation (real measurements minus predicted measurements)
+<span class="LaTeX">$\Delta \vec y_n = \vec y_n - \hat{\vec y}_{n|n-1} =\vec y_n - {\mathbf{H}}_{n} \hat{\vec x}_{n|n-1}$</span></p>
+<p>Innovation Covariance: <span class="LaTeX">${\mathbf{S}} = {\mathbf{H}}_{n} {\mathbf{C}}_{\vec x_{n|n-1}} {\mathbf{H}}_{n}^\top + {\mathbf{C}}_{\vec w_{n}}$</span></p>
+<p>With optimal <strong>Kalman-gain</strong> (prediction for <span class="LaTeX">$\vec x_n$</span> based on <span class="LaTeX">$\Delta y_n$</span>):</p>
+<p><span class="LaTeX">${\mathbf{K}}_n = {\mathbf{C}}_{\vec x_{n|n-1}} {\mathbf{H}}_{n}^\top {{\mathbf{S}}}^{-1}$</span></p>
+<p>with <span class="LaTeX">$K_{ij} \in [0.0; 1.0]$</span> where 0.0 means the filter fully trusts the prediction and 1.0 means the filter fully trusts the measurement.</p>
+<p>calculate the new state from <span class="LaTeX">$l$</span> measurements
+<span class="LaTeX">$\hat{\vec x}_{n|n} = \hat{\vec x}_{n|n-1} + {\mathbf{K}}_n \Delta \vec y_n$</span></p>
+<p><span class="LaTeX">${\mathbf{C}}_{\vec x_{n|n}} = {\mathbf{C}}_{\vec x_{n|n-1}} + {\mathbf{K}}_n {\mathbf{H}}_{n} {\mathbf{C}}_{\vec x_{n|n-1}}$</span></p>
+<h2 id="extended-kalman-filter">Extended Kalman Filter</h2>
+<p>The Extended Kalman Filter (EKF) uses non-linear dynamic models. For covariance the Jacobi-Matrix of the model is used.</p>
+<h2 id="sensor-fusion">Sensor Fusion</h2>
+<p>If <span class="LaTeX">$i$</span> sensors measure the same state <span class="LaTeX">$x_j$</span>, this can be expressed in the measurement matrix <span class="LaTeX">${\mathbf{H}}$</span>. The column <span class="LaTeX">$j$</span> will have <span class="LaTeX">$i$</span> rows with entries.</p>
+<h2 id="example">Example</h2>
+<div class="example">
+<p>Kalman Filter for Gyroscope and Accelerometer:</p>
+<p>state <span class="LaTeX">$\vec x$</span> are the orientation angles roll and pitch and the bias angle</p>
+<div>
+
+
+
+
+
+</main>
+
+    
+</body>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- title, description, favicon -->
+    <title>Tex4Tum</title>
+    <meta name="description" content="Interactive online knowledge base for engineers" />
+    <link rel="shortcut icon" href="./res/favicon.ico"/>	
+	
+	<!-- load style sheet -->
+	<link rel="stylesheet" type="text/css" href="./res/latex4ei.css"/>
+	<link rel="stylesheet" type="text/css" href="./res/header.css"/>
+	<script src="./res/latex4ei.js"></script>
+	<script src="./res/perfect-autocompl.js"></script>
+
+	<!-- Math -->
+<!-- 	<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML-full"></script>
+	<script type="text/x-mathjax-config">
+	  MathJax.Hub.Config({tex2jax: {inlineMath: [["$","$"]]}});
+	</script> -->
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/katex.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/katex.min.js"></script>
+	<script type="text/javascript">
+		window.onload = function() {
+  			renderMath();
+
+  			var opts = {
+			data: acData,
+			numResults: 10,
+			searchPath: '/search?q=',
+			directPath: '.',
+			container: document.getElementsByClassName('search-container')[0]
+			};	
+			autocomplete(opts);
+		};
+	</script>
+
+
+
+	<!-- syntax -->
+<!-- 	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/styles/default.min.css">
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script> -->
+
+</head>
+
+<body>
+    <style>
+
+</style>
+
+
+<header>
+
+<a id="logo" href="index.html"><img src="./img/Logo-inv.png"></a>
+
+
+<div id="search" class="search-container">
+    <input type="search" class="search-input" results=0 placeholder="Search (fuzzy)" tabindex="1">
+    <div class="ac-results-wrapper"></div>
+</div>
+
+
+<!-- <ul>  
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#about">About</a></li>
+</ul> -->
+
+
+
+
+
+<div id="options" class="dropdown">
+  <a href="">Options</a>
+  <div class="dropdown-content">
+	<fieldset >
+			<legend>Display Options</legend>
+			<input id="checkbox_definition" name="disp_opt" type="checkbox" checked="checked" onchange="changeOption(this)">Definitions <br>
+			<input id="checkbox_example" name="disp_opt" type="checkbox" checked="checked" onchange="changeOption(this)">Examples <br>
+            <input id="checkbox_legend" name="disp_opt" type="checkbox" checked="checked" onchange="changeOption(this)">Legends <br>
+	</fieldset>
+  </div>
+</div>
+
+</header>
+
+
+
+            <main class="container">
+<!-- Basics -->
+<!--    -->
+<!-- \newcommand{\diff}{\mathop{}\!\mathrm{\vphantom( d}} -->
+
+<!-- SI Units -->
+<!-- KaTeX Tweaks -->
+
+<h1 id="interactive-cheat-sheets">Interactive Cheat Sheets</h1>
+<p>This is a showcase to demonstrate how learning materials could be made interactive, fast accessible, and neat.</p>
+<h2 id="features">Features</h2>
+<h3 id="control-the-focus">Control the Focus</h3>
+Read only the content you really need. Use the options in the top right corner to change the visibility of the following content:<br>
+<div class="definition">
+Definition: The square root is the math function <span class="LaTeX">$\sqrt{\cdot}$</span>.<br>
+</div>
+<div class="example">
+Example: <span class="LaTeX">$\sqrt{ x^4 } = x^2$</span><br>
+<div class="legend">
+Legend: where x is an arbitrary value
+</div>
+</div>
+<p>Furthermore, abbreviations do not need explanations anymore. If you do not know it just move the mouse over it: <abbr title="Scalable Vector Graphics
+" >SVG</abbr></p>
+<h3 id="interactive-math">Interactive Math</h3>
+<p>Directly calculate an equation while reading. Click on the values of R and C in the text to change them!</p>
+<p>A RC low-pass filter with Resistance R = <span id="R_val" onclick="askValue(this.id)">10k</span>Ω and Capacitance C = <span id="C_val" onclick="askValue(this.id)">100n</span>F has a Cut-Off Frequency <span class="LaTeX">$f_c = \frac{1}{2\pi R C} =$</span> <tspan id="F_val">159 Hz</tspan><br></p>
+<p>Even more complex equations such as
+<span class="LaTeX">$\int \sqrt{x^2} {\,\text{d}}x = \frac{1}{3} x^3$</span>
+are rendered beautifully with <a href="https://khan.github.io/KaTeX/">KaTex</a>).</p>
+<h3 id="interactive-diagrams">Interactive Diagrams</h3>
+<p>Play with diagrams for better understanding. Click and drag the black ray with the mouse or change any value in the diagram.</p>
+<object class="fig" style="width: 18em" id="obj_fraction" data="img/fraction.svg" type="image/svg+xml">
+</object>
+<h3 id="fast-fuzzy-search">Fast Fuzzy Search</h3>
+<p>Find an answer blazingly fast. The fuzzy search in the top bar displays results immediately without slow sever communication. Just hit <code>tab</code> to focus the search, then type e.g. &quot;did&quot; to search for &quot;Diode&quot;.</p>
+<h2 id="demo-pages">Demo Pages</h2>
+<ul>
+<li><a href="low%20pass.html">Full Low-Pass Filter</a> (Interactive Math)</li>
+<li><a href="maxwell.html">Maxwell Equations</a> (Math Showcase)</li>
+<li><a href="numbers.html">Number Converter</a> (Fast interactions)</li>
+<li><a href="op-amp.html">Op-Amps</a> (<abbr title="Scalable Vector Graphics
+" >SVG</abbr> diagrams)</li>
+<li><a href="optic.html">Optics</a> (Interactive Graph)</li>
+</ul>
+<h2 id="table-of-contents">Table of Contents</h2>
+<h3 id="math"><a href="math.html">Math</a></h3>
+<ul>
+<li><a href="algebra.html"><strong>Algebra</strong></a>: <a href="complex%20number.html">Complex Numbers</a> • <a href="vector.html">Vectors</a> • <a href="matrix.html">Matrices</a></li>
+<li><a href="analysis.html"><strong>Analysis</strong></a>: <a href="integral.html">Integral</a> • <a href="frequency%20analysis.html">Frequency Analysis</a></li>
+<li><a href="statistics.html"><strong>Statistics</strong></a>: <a href="normal%20distribution.html">Normal Distribution</a> • <a href="probability.html">Probability Theory</a> • <a href="testing.html">Testing</a></li>
+<li><a href="geometry.html"><strong>Geometry</strong></a>: <a href="trigonometry.html">Trigonometry</a></li>
+</ul>
+<h3 id="electronics"><a href="electronics.html">Electronics</a></h3>
+<ul>
+<li><a href="component.html"><strong>Components</strong></a>: <a href="capacitor.html">Capacitor</a> • <a href="diode.html">Diode</a> • <a href="resistor.html">Resistor</a> • <a href="op-amp.html">Op-Amp</a></li>
+<li><a href="bus.html"><strong>Buses</strong></a>: <a href="i2c.html">I2C</a> • <a href="spi.html">SPI</a> • <a href="usb.html">USB</a> • <a href="usart.html">USART</a></li>
+</ul>
+<h3 id="information-theory"><a href="it.html">Information Theory</a></h3>
+<ul>
+<li><a href="complexity%20theory.html">Complexity Theory</a> • <a href="numbers.html">Numbers</a></li>
+<li><a href="language.html"><strong>Languages</strong></a>: <a href="c.html">C</a> • <a href="ada.html">Ada</a> • <a href="bash.html">Bash</a> • <a href="matlab.html">Matlab</a></li>
+</ul>
+<h3 id="physics"><a href="physics.html">Physics</a></h3>
+<ul>
+<li><a href="si-units.html">SI-Units</a> • <a href="constants.html">Physical Constants</a></li>
+<li><a href="mechanics.html"><strong>Mechanics</strong></a>: <a href="motion.html">Motion</a></li>
+<li><a href="electromagnetism.html"><strong>Electromagnetism</strong></a>: <a href="kirchoff.html">Kirchoff</a> • <a href="maxwell.html">Maxwell</a></li>
+</ul>
+<h2 id="todo">ToDo</h2>
+<ul>
+<li>Full responsive design</li>
+<li>remember options with cookies</li>
+<li>consistent <abbr title="JavaScript
+" >JS</abbr> framework for interactive content</li>
+<li>Improved search: Sorting results, reaction to no results</li>
+<li>More content</li>
+</ul>
+<script type="text/javascript">
+function RC_calcFrequency() {
+ var C1 = getValue( document.getElementById("C_val").textContent );
+ var R1 = getValue( document.getElementById("R_val").textContent );
+ var F1 = document.getElementById("F_val");
+ var freq = 1/(2 * Math.PI * C1 * R1);
+ F1.textContent=freq.toPrecision(3)+" Hz";
+ tau.textContent=(R1 * C1 * 1000).toPrecision(3)+" ms";
+}
+
+function syncValues(id, value){
+    RC_calcFrequency();
+}
+</script>
+
+</main>
+
+    
+</body>

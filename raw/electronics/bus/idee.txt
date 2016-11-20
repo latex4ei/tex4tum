@@ -1,0 +1,12 @@
+
+Welche?
+SPI
+I2C
+Ethernet
+
+
+
+wie?
+Interaktives Timing Diagram
+Namen der Signale
+

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- title, description, favicon -->
+    <title>Tex4Tum</title>
+    <meta name="description" content="Interactive online knowledge base for engineers" />
+    <link rel="shortcut icon" href="./favicon.ico"/>	
+	
+	<!-- load style sheet -->
+	<link rel="stylesheet" type="text/css" href="../../latex4ei.css"/>
+	<script src="../../latex4ei.js"></script>
+	<script src="../../../html/perfect-autocompl.js"></script>
+
+	<!-- Math -->
+<!-- 	<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML-full"></script>
+	<script type="text/x-mathjax-config">
+	  MathJax.Hub.Config({tex2jax: {inlineMath: [["$","$"]]}});
+	</script> -->
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/katex.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/katex.min.js"></script>
+	<script type="text/javascript">
+		window.onload = function() {
+  			renderMath();
+
+  			var opts = {
+			data: acData,
+			numResults: 10,
+			searchPath: '/search?q=',
+			directPath: '/home/emu/Dropbox/Privat/Bilder/animatedSVG/engineering/root',
+			container: document.getElementsByClassName('search-container')[0]
+			};	
+			autocomplete(opts);
+		};
+	</script>
+
+
+
+	<!-- syntax -->
+<!-- 	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/styles/default.min.css">
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script> -->
+
+</head>
+
+<body>
+    <style>
+.dropdown {
+    position: relative;
+    display: inline-block;
+    align-content: right;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 15em;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    right: 0;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+#logo {  }
+#search { height: 2em; margin-right: auto; min-width: 15em; text-align: baseline; }
+#options { }
+
+
+
+header a {
+    display: flex;
+	align-items: center;
+    vertical-align: middle;
+    color: white;
+    text-align: center;
+    height: 2em;
+    padding: 0em 0.5em;
+    text-decoration: none;
+}
+header a:hover {
+    background-color: #111;
+}
+
+header img {
+    max-width:100%;
+    max-height:100%;
+    height: 2em;
+    width: auto;
+}
+
+.search-input {
+    z-index: 10;
+    border-radius: 1em;
+    background-color: #ffffff;
+    border: 0.2em solid #003359;
+
+    width: 100%;
+    display: block;
+    height: 2em;
+    vertical-align: baseline;
+    padding-left: 0.5rem;
+    margin: 0;
+}
+.ac-results-wrapper {
+    position: absolute;
+    width: 19.6rem;
+    font-size: 80%;
+    border: 1px solid #BABDC0;
+    border-width: 0 1px 1px 1px;
+    border-bottom: 1px solid #BABDC0;
+    background-color: #ffffff;
+    z-index: 11;
+}
+.ac-results-wrapper a {
+    display: none;
+    height: 30px;
+    color: #009EDA;
+    vertical-align:middle;
+    line-height:30px;
+    padding-left: 5px;
+    text-decoration: none;
+    text-align: left;
+    width: 100%;
+}
+.ac-results-wrapper {
+    
+}
+.ac-results-wrapper a:hover {
+    background-color: #009EDA;
+    color: white;
+}
+.ac-results-wrapper a:focus {
+    background-color: #009EDA;
+    color: white;
+}
+.ac-results-wrapper i {
+    float: right;
+    padding-right: 5px;
+    color: #BABDC0;
+}
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+</style>
+
+
+<header>
+
+<a href="#home">TEB</a>
+
+<a id="logo"><img src="./Logo.png"></a>
+
+
+<div id="search" class="search-container">
+    <input type="search" class="search-input" results=0 placeholder="Search (fuzzy)" tabindex="1">
+    <div class="ac-results-wrapper"></div>
+</div>
+
+
+<!-- <ul>  
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#about">About</a></li>
+</ul> -->
+
+
+
+
+
+<div id="options" class="dropdown">
+  <a href="">Options</a>
+  <div class="dropdown-content">
+	<fieldset >
+			<legend>Display Options</legend>
+			<input id="checkbox_definition" name="disp_opt" type="checkbox" checked="checked" onchange="changeOption(this)">Definitions <br>
+			<input id="checkbox_example" name="disp_opt" type="checkbox" checked="checked" onchange="changeOption(this)">Examples <br>
+	</fieldset>
+  </div>
+</div>
+
+</header>
+
+
+
+            <main class="container">
+<!-- Basics -->
+<!--    -->
+<!-- \newcommand{\diff}{\mathop{}\!\mathrm{\vphantom( d}} -->
+<!-- SI Units -->
+<!-- KaTeX Tweaks -->
+<h1 id="normal-distribution">Normal Distribution</h1>
+<table>
+<thead>
+<tr class="header">
+<th>Parameters</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Notation</td>
+<td><span class="LaTeX">$\mathcal N(μ, σ^2), μ ∈ \operatorname{\mathbb R}, σ &gt; 0$</span></td>
+</tr>
+<tr class="even">
+<td>Mean</td>
+<td><span class="LaTeX">$μ$</span></td>
+</tr>
+<tr class="odd">
+<td>Variance</td>
+<td><span class="LaTeX">$σ^2$</span></td>
+</tr>
+<tr class="even">
+<td>PDF</td>
+<td><span class="LaTeX">$f_X (x) = \frac{1}{\sqrt{2 \pi \sigma^2}} e^{-\frac{(x-\mu)^2}{2 \sigma^2}}$</span>, <span class="LaTeX">$x ∈ \operatorname{\mathbb R}$</span></td>
+</tr>
+</tbody>
+</table>
+
+</main>
+
+    
+</body>

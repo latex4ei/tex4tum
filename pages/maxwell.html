@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- title, description, favicon -->
+    <title>Tex4Tum</title>
+    <meta name="description" content="Interactive online knowledge base for engineers" />
+    <link rel="shortcut icon" href="./res/favicon.ico"/>	
+	
+	<!-- load style sheet -->
+	<link rel="stylesheet" type="text/css" href="./res/latex4ei.css"/>
+	<link rel="stylesheet" type="text/css" href="./res/header.css"/>
+	<script src="./res/latex4ei.js"></script>
+	<script src="./res/perfect-autocompl.js"></script>
+
+	<!-- Math -->
+<!-- 	<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML-full"></script>
+	<script type="text/x-mathjax-config">
+	  MathJax.Hub.Config({tex2jax: {inlineMath: [["$","$"]]}});
+	</script> -->
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/katex.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/katex.min.js"></script>
+	<script type="text/javascript">
+		window.onload = function() {
+  			renderMath();
+
+  			var opts = {
+			data: acData,
+			numResults: 10,
+			searchPath: '/search?q=',
+			directPath: '.',
+			container: document.getElementsByClassName('search-container')[0]
+			};	
+			autocomplete(opts);
+		};
+	</script>
+
+
+
+	<!-- syntax -->
+<!-- 	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/styles/default.min.css">
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script> -->
+
+</head>
+
+<body>
+    <style>
+
+</style>
+
+
+<header>
+
+<a id="logo" href="index.html"><img src="./img/Logo-inv.png"></a>
+
+
+<div id="search" class="search-container">
+    <input type="search" class="search-input" results=0 placeholder="Search (fuzzy)" tabindex="1">
+    <div class="ac-results-wrapper"></div>
+</div>
+
+
+<!-- <ul>  
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#about">About</a></li>
+</ul> -->
+
+
+
+
+
+<div id="options" class="dropdown">
+  <a href="">Options</a>
+  <div class="dropdown-content">
+	<fieldset >
+			<legend>Display Options</legend>
+			<input id="checkbox_definition" name="disp_opt" type="checkbox" checked="checked" onchange="changeOption(this)">Definitions <br>
+			<input id="checkbox_example" name="disp_opt" type="checkbox" checked="checked" onchange="changeOption(this)">Examples <br>
+            <input id="checkbox_legend" name="disp_opt" type="checkbox" checked="checked" onchange="changeOption(this)">Legends <br>
+	</fieldset>
+  </div>
+</div>
+
+</header>
+
+
+
+            <main class="container">
+<!-- Basics -->
+<!--    -->
+<!-- \newcommand{\diff}{\mathop{}\!\mathrm{\vphantom( d}} -->
+
+<!-- SI Units -->
+<!-- KaTeX Tweaks -->
+
+<h1 id="maxwell-equations">Maxwell Equations</h1>
+<div class="definition">
+<p>The Maxwell Equations are 4 fundamental equations that describe the relation between the quantities of electromagnetism.</p>
+</div>
+<table>
+<thead>
+<tr class="header">
+<th>Name</th>
+<th>Integral Version</th>
+<th>Differential Version</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Gauss's law:</td>
+<td><span class="LaTeX">$${\iint}_{\partial \Omega} \vec E \cdot {\,\text{d}}A = \frac{1}{\epsilon_0} \iiint_{\Omega} \rho {\,\text{d}}V$$</span></td>
+<td><span class="LaTeX">$${\text{div}}\vec D = \varrho$$</span></td>
+</tr>
+<tr class="even">
+<td>Faraday's law of induction</td>
+<td><span class="LaTeX">$$\oint_{\partial A} \vec E \cdot {\,\text{d}}\vec s = - \iint_{A} \frac{\partial \vec B}{\partial t} \cdot {\,\text{d}}\vec A$$</span></td>
+<td><span class="LaTeX">$${\text{rot}}\vec E + \frac{\partial \vec B}{\partial t} = 0$$</span></td>
+</tr>
+<tr class="odd">
+<td>Gauss's law for magnetism</td>
+<td><span class="LaTeX">$${\iint}_{\partial \Omega} \vec B \cdot {\,\text{d}}A = 0$$</span></td>
+<td><span class="LaTeX">$${\text{div}}\vec B = 0$$</span></td>
+</tr>
+<tr class="even">
+<td>Ampère's law</td>
+<td><span class="LaTeX">$$\oint_{\partial A} \vec H \cdot {\,\text{d}}\vec s = \iint_{A} \vec j \cdot {\,\text{d}}\vec A + \iint_{A} \frac{\partial \vec D}{\partial t} \cdot {\,\text{d}}\vec A$$</span></td>
+<td><span class="LaTeX">$${\text{rot}}\vec H = \vec j + \frac{\partial \vec D}{\partial t}$$</span></td>
+</tr>
+</tbody>
+</table>
+
+</main>
+
+    
+</body>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Interactive Content</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="../../latex4ei.css">
+<script type="text/javascript" src="../../latex4ei.js"></script>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML-full"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]}});
+</script>
+
+
+	 <script type="text/javascript">
+	function OP_calcNonInv() {
+		OP_obj  = document.getElementById("OPAMP_nonInv").contentDocument;
+		var Vin = getValue( OP_obj.getElementById("Vin_val").textContent );
+		var R1 = getValue( OP_obj.getElementById("R1_val").textContent );
+		var R2 = getValue( OP_obj.getElementById("R2_val").textContent );
+		var Vout_e = OP_obj.getElementById("Vout_val");
+		OP_obj.getElementById("Vout_val").textContent=(Vin * (1 + R2/R1)).toPrecision(2)+"V";
+	}
+
+	function syncValues(){
+		OP_calcNonInv();
+	}
+
+
+	 </script>
+
+
+	$\newcommand{\ma}[1]{\boldsymbol #1}$
+	$\newcommand{\ir}{\rm}$
+	$\newcommand{\i}{\mathrm{i}}$
+	$\DeclareMathOperator{\Sp}{Sp}$
+	$\DeclareMathOperator{\diff}{d}$
+
+</head>
+<body>
+	<main class="container">
+
+		<h1>Op-Amp Circuits</h1>
+		<details>
+			<summary>Op-Amp Definition</summary>
+			<p class="definition">An operational amplifier (short op-amp) is a DC-coupled high-gain electronic voltage amplifier with a differential input and a single-ended output.</p>
+		</details>
+		All amplifier circuits have the feedback to the negative input! <br>
+		An Op-Amp does not draw current from the input!
+
+
+		<h2>Voltage Follower/Buffer</h2>
+		<figure>
+			<object width="480px" id="OPAMP_Follower" data="follower.svg" type="image/svg+xml"></object>
+		</figure>
+		$$V_{\ir out} = V_{\ir in}$$
+		Provides current at the output without loading the input.
+
+
+		<h2>Non-Inverting Amplifier</h2>
+		<figure>
+			<object width="480px" id="OPAMP_nonInv" data="non-inv.svg" type="image/svg+xml"></object>
+		</figure>
+		$$V_{\ir out} = \left(1 + \frac{R_2}{R_1} \right) V_{\ir in}$$
+
+		<h2>Inverting Amplifier</h2>
+		<figure>
+			<object width="480px" id="OPAMP_Inv" data="inv.svg" type="image/svg+xml"></object>
+		</figure>
+		$$V_{\ir out} = -\frac{R_2}{R_1} V_{\ir in}$$
+
+
+
+		<h2>Differential Amplifier</h2>
+		<figure>
+			<object width="480px" id="OPAMP_Diff" data="diff.svg" type="image/svg+xml"></object>
+		</figure>
+		$V_{\ir out} = \frac{R_2}{R_1}\left(- V_1 + V_2 \frac{R_4}{R_4 + R_3}\right) + \frac{R_4}{R_4 + R_3} V_2$ 
+
+
+		<h2>Schmitt-Trigger</h2>
+		<figure>
+			<object width="480px" id="OPAMP_Schmitt" data="schmitt.svg" type="image/svg+xml"></object>
+		</figure>
+		Offset: $V_{\ir ref} \frac{R_2}{R_1 + R_2}$<br>
+		$V^{+} = (V_{in} - V_{out}) \frac{R_4}{R_3 + R_4}$<br>
+		Bias: $\Delta V$
+
+	</main>
+</body>
+</html>

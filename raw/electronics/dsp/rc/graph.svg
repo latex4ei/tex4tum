@@ -1,0 +1,13 @@
+<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="75.77mm" width="108.56mm" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 384.67 268.48" xmlns:dc="http://purl.org/dc/elements/1.1/">
+	<script xlink:href="./latex4ei.js"/>
+	<path style="fill-rule:evenodd;stroke:#808080;stroke-linecap:square;stroke-miterlimit:7.7;stroke-width:4.6984;fill:#fff" d="m16.173 252.29v-233.63"/>
+	<text id="y_label" style="font-size:30px" space="preserve" onclick="askValue(this.id)" y="231.5562" x="354.74564">t</text>
+	<path style="fill-rule:evenodd;stroke:#808080;stroke-linecap:square;stroke-miterlimit:7.7;stroke-width:4.0088;fill:#fff" d="m299.64 266.47v-27.63"/>
+	<path style="fill-rule:evenodd;stroke:#808080;stroke-linecap:square;stroke-miterlimit:7.7;stroke-width:3.772;fill:#fff" d="m16.173 252.29h351.34"/>
+	<text y="22.763672" x="42.465752" style="font-size:30px" space="preserve">U(t)</text>
+	<path id="y2_line" style="stroke:#000;stroke-width:7.087;stroke-linecap:round;fill:none" d="m16.173 252.29 10-5 10-5 10-5 10-5 10-5 10-5 10-5 9.999-5 9.988-5 10-5 10-5 10-5 10-5 10-5 10-5 10-5 10-5 10-5 10-5 10-5 10-5 10-5 10-5 10-5 10-5 10-5 10-5 10-5"/>
+	<path style="fill:#808080" d="m359.81 259.13 24.86-6.84-24.67-7.36z"/>
+	<path style="fill:#808080" d="m23.287 25.712-6.84-24.86-7.3604 24.67z"/>
+	<path style="fill-rule:evenodd;stroke:#808080;stroke-linecap:square;stroke-miterlimit:7.7;stroke-width:4.0088;fill:#fff" d="m172.08 265.75v-27.63"/>
+	<path style="fill-rule:evenodd;stroke:#808080;stroke-linecap:square;stroke-miterlimit:7.7;stroke-width:4.0088;fill:#fff" d="m1.9986 68.045h27.62"/>
+</svg>

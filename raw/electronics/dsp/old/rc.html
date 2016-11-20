@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Interactive Content</title>
+
+<script type="text/javascript" src="./MathJax/MathJax.js?config=TeX-AMS_HTML-full"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]}});
+</script>
+
+    <style type="text/css">
+		body{
+			font-size: 1.5em;
+			text-align: left;
+		}
+
+
+    </style>
+
+	 <script type="text/javascript">
+	  	function getValue(str){
+	  		var prescale = 1;
+	  		var value = str.slice(0,-1);
+			switch( str.slice(-1) ){
+				case 'G': prescale = 1e9; break;
+				case 'M': prescale = 1e6; break;
+				case 'k': prescale = 1e3; break;
+				case 'm': prescale = 1e-3; break;
+				case 'u': prescale = 1e-6; break;
+				case 'n': prescale = 1e-9; break;
+				case 'p': prescale = 1e-12; break;
+				default: value = str;
+			}
+			return ( Number(value) * prescale );
+	  	}
+
+	    function button_calc() {
+	     var C1 = document.getElementById("var_C").textContent;
+	     var R1 = document.getElementById("var_R").textContent;
+	     var F1 = document.getElementById("var_F");
+	     var freq = 1/(2 * Math.PI * getValue(C1) * getValue(R1));
+	     F1.textContent=freq.toPrecision(3)+" Hz";
+	    }
+
+	    window.onload = function() {
+	    	var buttton = document.getElementById("button");
+	    	buttton.onclick = function(){ button_calc() };
+	    }
+
+
+	 </script>
+
+</head>
+<body>
+
+<h2>Interactive Content</h2>
+<p>Change numbers, click on "Cut-Off Frequency" to calculate.</p>
+
+<p>This is $x_1 + x_4 = \sqrt{15}$ and so on</p>
+
+
+
+<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="150mm" width="150mm" viewBox="0 20 200 200" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+
+	<g transform="translate(0 -911)">
+		<g transform="matrix(-1 0 0 -1 203.74 1016.9)">
+			<rect style="stroke-width:.70866;color:#000000;stroke-dashoffset:1.76;stroke:#000;stroke-linecap:square;stroke-miterlimit:10;fill:none" height="7.0866" width="21.26" y="56.699" x="148.82"/>
+			<path style="fill-rule:evenodd;stroke:#000;stroke-linecap:square;stroke-miterlimit:7.7;stroke-width:.70866;fill:#fff" d="m148.82 60.236-49.606.0061"/>
+			<path style="fill-rule:evenodd;stroke:#000;stroke-linecap:square;stroke-miterlimit:7.7;stroke-width:.70866;fill:#fff" d="m187.8 60.242-17.717-.0061"/>
+		</g>
+		<g transform="matrix(0 1 -1 0 168.31 825.59)">
+			<path style="fill-rule:evenodd;stroke:#000;stroke-linecap:square;stroke-miterlimit:7.7;stroke-width:.70866;fill:#fff" d="m155.91 92.126h-24.803"/>
+			<path style="fill-rule:evenodd;stroke:#000;stroke-linecap:square;stroke-miterlimit:7.7;stroke-width:.70866;fill:#fff" d="m184.25 92.126h-21.26"/>
+			<rect style="stroke-width:.70866;color:#000000;stroke:#000;stroke-linecap:square;stroke-miterlimit:7.7" height="14.173" width="1.4173" y="85.039" x="161.57"/>
+			<rect style="stroke-width:.70866;color:#000000;stroke:#000;stroke-linecap:square;stroke-miterlimit:7.7" height="14.173" width="1.4173" y="85.039" x="155.91"/>
+		</g>
+		<g transform="translate(44.3 836)" onclick="; InkWeb.setAtt({el:[&apos;g4200-3-7-8-75&apos;], att:&apos;fill stroke stroke-width&apos;, val:&apos;red black 5px&apos;})">
+			<rect style="stroke-width:.709;color:#000000;stroke:#000;stroke-linecap:square;stroke-miterlimit:7.7" transform="rotate(90)" height="14.2" width="1.42" y="-39" x="174"/>
+		</g>
+		<path d="m78 957c0 0.979-0.794 1.77-1.77 1.77-0.979 0-1.77-0.793-1.77-1.77 0-0.978 0.793-1.77 1.77-1.77 0.978 0 1.77 0.793 1.77 1.77" style="fill-rule:evenodd"/>
+		<g style="stroke:#000;stroke-linecap:square;stroke-miterlimit:7.7;stroke-width:11.802;fill:none" transform="matrix(.060046 0 0 .060046 -99.566 1376.2)">
+			<path style="stroke:#000;stroke-linecap:square;stroke-miterlimit:7.7;stroke-width:11.802;fill:none" d="m1923.7-6986.6c0 16.29-13.21 29.5-29.51 29.5-16.29 0-29.5-13.21-29.5-29.5s13.21-29.51 29.5-29.51c16.3 0 29.51 13.22 29.51 29.51z"/>
+		</g>
+		<g style="stroke:#000;stroke-linecap:square;stroke-miterlimit:7.7;stroke-width:11.802;fill:none" transform="matrix(.060046 0 0 .060046 -7.4398 1376.2)">
+			<path style="stroke:#000;stroke-linecap:square;stroke-miterlimit:7.7;stroke-width:11.802;fill:none" d="m1923.7-6986.6c0 16.29-13.21 29.5-29.51 29.5-16.29 0-29.5-13.21-29.5-29.5s13.21-29.51 29.5-29.51c16.3 0 29.51 13.22 29.51 29.51z"/>
+		</g>
+
+    <foreignObject y="932.83466" x="31.889763" width="100" height="30">
+        <body xmlns="http://www.w3.org/1999/xhtml">
+
+
+        <text style="letter-spacing:0px;fill:#000000" xml:space="preserve"><tspan id="var_R" contentEditable="true" style="font-size:10px">10k</tspan></text>
+        <!-- <text id="C1" contentEditable="true" style="font-family:sans-serif">100n</text>
+	-->
+
+        </body>
+    </foreignObject>
+
+    <foreignObject y="975.5827" x="90.125984" width="100" height="30">
+		<text style="letter-spacing:0px;fill:#000000" y="988.5827" x="200" xml:space="preserve"><tspan id="var_C" contentEditable="true" y="988.5827" x="92.125984" style="font-size:10px">100n</tspan></text>
+    </foreignObject>
+
+
+		<text id="button" on-click="button_calc" style="letter-spacing:0px;word-spacing:0px;line-height:125%;fill:#000000" y="1038.189" x="0" xml:space="preserve"><tspan y="1038.189" x="0" style="font-size:10px">Cut-Off Frequency:</tspan></text>
+		<text  style="letter-spacing:0px;word-spacing:0px;line-height:125%;fill:#000000" y="1038.189" x="99.212601" xml:space="preserve"><tspan id="var_F" id="bla" y="1038.189" x="99.212601" style="font-size:10px">159 Hz</tspan></text>
+
+
+	</g>
+</svg>
+
+
+Cut-Off Frequency: $f_c = \frac{1}{2\pi R C} =$ <div id="fc">159 Hz</div>
+
+</body>
+</html>

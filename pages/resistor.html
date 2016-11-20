@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- title, description, favicon -->
+    <title>Tex4Tum</title>
+    <meta name="description" content="Interactive online knowledge base for engineers" />
+    <link rel="shortcut icon" href="./res/favicon.ico"/>	
+	
+	<!-- load style sheet -->
+	<link rel="stylesheet" type="text/css" href="./res/latex4ei.css"/>
+	<link rel="stylesheet" type="text/css" href="./res/header.css"/>
+	<script src="./res/latex4ei.js"></script>
+	<script src="./res/perfect-autocompl.js"></script>
+
+	<!-- Math -->
+<!-- 	<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML-full"></script>
+	<script type="text/x-mathjax-config">
+	  MathJax.Hub.Config({tex2jax: {inlineMath: [["$","$"]]}});
+	</script> -->
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/katex.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/katex.min.js"></script>
+	<script type="text/javascript">
+		window.onload = function() {
+  			renderMath();
+
+  			var opts = {
+			data: acData,
+			numResults: 10,
+			searchPath: '/search?q=',
+			directPath: '.',
+			container: document.getElementsByClassName('search-container')[0]
+			};	
+			autocomplete(opts);
+		};
+	</script>
+
+
+
+	<!-- syntax -->
+<!-- 	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/styles/default.min.css">
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script> -->
+
+</head>
+
+<body>
+    <style>
+
+</style>
+
+
+<header>
+
+<a id="logo" href="index.html"><img src="./img/Logo-inv.png"></a>
+
+
+<div id="search" class="search-container">
+    <input type="search" class="search-input" results=0 placeholder="Search (fuzzy)" tabindex="1">
+    <div class="ac-results-wrapper"></div>
+</div>
+
+
+<!-- <ul>  
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#about">About</a></li>
+</ul> -->
+
+
+
+
+
+<div id="options" class="dropdown">
+  <a href="">Options</a>
+  <div class="dropdown-content">
+	<fieldset >
+			<legend>Display Options</legend>
+			<input id="checkbox_definition" name="disp_opt" type="checkbox" checked="checked" onchange="changeOption(this)">Definitions <br>
+			<input id="checkbox_example" name="disp_opt" type="checkbox" checked="checked" onchange="changeOption(this)">Examples <br>
+            <input id="checkbox_legend" name="disp_opt" type="checkbox" checked="checked" onchange="changeOption(this)">Legends <br>
+	</fieldset>
+  </div>
+</div>
+
+</header>
+
+
+
+            <main class="container">
+<!-- Basics -->
+<!--    -->
+<!-- \newcommand{\diff}{\mathop{}\!\mathrm{\vphantom( d}} -->
+
+<!-- SI Units -->
+<!-- KaTeX Tweaks -->
+
+<h1 id="resistor">Resistor</h1>
+<p>A resistor is a electrical component.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Resistor</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Symbol</td>
+<td><img src="resistor/Resistor_symbol_IEC.svg" alt="Resistor" /></td>
+</tr>
+<tr class="even">
+<td>Properies</td>
+<td>linear, passive</td>
+</tr>
+<tr class="odd">
+<td>Equation</td>
+<td><span class="LaTeX">$U = R · I$</span></td>
+</tr>
+</tbody>
+</table>
+<h2 id="color-codes">Color Codes</h2>
+<p><select id="R_band1" onchange="R_calcResistor()">
+<option style="background-color: black"value="black">black</option>
+<option style="background-color: brown"value="brown">brown</option>
+<option style="background-color: red"value="red">red</option>
+<option style="background-color: orange"value="orange">orange</option>
+<option style="background-color: yellow"value="yellow">yellow</option>
+<option style="background-color: green"value="green">green</option>
+<option style="background-color: blue"value="blue">blue</option>
+<option style="background-color: violet"value="violet">violet</option>
+<option style="background-color: grey"value="grey">grey</option>
+<option style="background-color: white"value="white">white</option>
+</select>
+<select id="R_band2" onchange="RC_loadSVG()">
+<option style="background-color: black"value="black">black</option>
+<option style="background-color: brown"value="brown">brown</option>
+<option style="background-color: red"value="red">red</option>
+<option style="background-color: orange"value="orange">orange</option>
+<option style="background-color: yellow"value="yellow">yellow</option>
+<option style="background-color: green"value="green">green</option>
+<option style="background-color: blue"value="blue">blue</option>
+<option style="background-color: violet"value="violet">violet</option>
+<option style="background-color: grey"value="grey">grey</option>
+<option style="background-color: white"value="white">white</option>
+</select>
+<select id="R_band3" onchange="RC_loadSVG()">
+<option style="background-color: black"value="black">black</option>
+<option style="background-color: brown"value="brown">brown</option>
+<option style="background-color: red"value="red">red</option>
+<option style="background-color: orange"value="orange">orange</option>
+<option style="background-color: yellow"value="yellow">yellow</option>
+<option style="background-color: green"value="green">green</option>
+<option style="background-color: blue"value="blue">blue</option>
+<option style="background-color: violet"value="violet">violet</option>
+<option style="background-color: grey"value="grey">grey</option>
+<option style="background-color: white"value="white">white</option>
+</select></p>
+<p><select id="R_band4" onchange="RC_loadSVG()">
+<option style="background-color: black"value="black">black</option>
+<option style="background-color: brown"value="brown">brown</option>
+<option style="background-color: red"value="red">red</option>
+<option style="background-color: orange"value="orange">orange</option>
+<option style="background-color: yellow"value="yellow">yellow</option>
+<option style="background-color: green"value="green">green</option>
+<option style="background-color: blue"value="blue">blue</option>
+<option style="background-color: violet"value="violet">violet</option>
+<option style="background-color: grey"value="grey">grey</option>
+<option style="background-color: white"value="white">white</option>
+</select></p>
+
+</main>
+
+    
+</body>

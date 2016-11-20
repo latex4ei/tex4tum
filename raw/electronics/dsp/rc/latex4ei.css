@@ -1,0 +1,97 @@
+/* Style Sheet Template
+*/
+
+/* Reference:
+* order: top, right bottom, left;
+* units: em, ex, %, px, cm, mm, in, pt, pc;
+*	new-units: vh, vw, vmin, vmax;
+*/
+
+
+/* entire site settings */
+html {
+	font-family: serif;		/* serif, sans-serif */
+	font-size: 1.5em;		/* small, medium, large */
+	line-height: 200%;		/* standard line spread */
+
+	min-height: 100%;
+}
+
+body {
+	background:#FFF; 
+	padding: 0;
+	margin: 0;
+}
+
+
+/* remove browser adjustings 
+* works on CH, FF, SF, AD*/
+input, select, textarea, button{
+	font-family:inherit;
+	font-size: inherit;
+}
+
+
+/* layout settings 
+* ------------------------------------ */
+
+
+	.container{
+		max-width: 32em;
+		min-width: 24em;
+		width: auto;
+		margin: auto;
+
+		padding-left: 0.5em;
+		padding-right: 0.5em;		
+	}
+
+
+/* style settings
+* ------------------------------------------- */
+
+/* Headings */
+h1 { font-size:2em; font-weight:bold }
+h2 { font-size:1.5em }
+
+
+/* Tables 
+* th: table header, td: table data */
+table{
+	border-collapse: collapse;
+}
+
+td, th {
+	text-align: left;
+	padding-left: 0.5em;
+	padding-right: 0.5em;
+}
+
+/*
+td:first-child { padding-left: 0em; }
+td:last-child { padding-right: 0em; }
+*/
+
+thead {
+	border-top: 1px solid #999;	
+	border-bottom: 1px solid #999;
+	background-color: #EEE;
+}
+
+tbody {
+	border-bottom: 1px solid #999;
+	background-color: #FBFBFB;
+}
+
+
+/* Figures */
+figure {
+	display: block;
+	text-align: center;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+
+
+/* References */

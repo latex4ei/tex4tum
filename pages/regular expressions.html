@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- title, description, favicon -->
+    <title>Tex4Tum</title>
+    <meta name="description" content="Interactive online knowledge base for engineers" />
+    <link rel="shortcut icon" href="./res/favicon.ico"/>	
+	
+	<!-- load style sheet -->
+	<link rel="stylesheet" type="text/css" href="./res/latex4ei.css"/>
+	<link rel="stylesheet" type="text/css" href="./res/header.css"/>
+	<script src="./res/latex4ei.js"></script>
+	<script src="./res/perfect-autocompl.js"></script>
+
+	<!-- Math -->
+<!-- 	<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML-full"></script>
+	<script type="text/x-mathjax-config">
+	  MathJax.Hub.Config({tex2jax: {inlineMath: [["$","$"]]}});
+	</script> -->
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/katex.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/katex.min.js"></script>
+	<script type="text/javascript">
+		window.onload = function() {
+  			renderMath();
+
+  			var opts = {
+			data: acData,
+			numResults: 10,
+			searchPath: '/search?q=',
+			directPath: '.',
+			container: document.getElementsByClassName('search-container')[0]
+			};	
+			autocomplete(opts);
+		};
+	</script>
+
+
+
+	<!-- syntax -->
+<!-- 	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/styles/default.min.css">
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script> -->
+
+</head>
+
+<body>
+    <style>
+
+</style>
+
+
+<header>
+
+<a id="logo" href="index.html"><img src="./img/Logo-inv.png"></a>
+
+
+<div id="search" class="search-container">
+    <input type="search" class="search-input" results=0 placeholder="Search (fuzzy)" tabindex="1">
+    <div class="ac-results-wrapper"></div>
+</div>
+
+
+<!-- <ul>  
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#about">About</a></li>
+</ul> -->
+
+
+
+
+
+<div id="options" class="dropdown">
+  <a href="">Options</a>
+  <div class="dropdown-content">
+	<fieldset >
+			<legend>Display Options</legend>
+			<input id="checkbox_definition" name="disp_opt" type="checkbox" checked="checked" onchange="changeOption(this)">Definitions <br>
+			<input id="checkbox_example" name="disp_opt" type="checkbox" checked="checked" onchange="changeOption(this)">Examples <br>
+            <input id="checkbox_legend" name="disp_opt" type="checkbox" checked="checked" onchange="changeOption(this)">Legends <br>
+	</fieldset>
+  </div>
+</div>
+
+</header>
+
+
+
+            <main class="container">
+<!-- Basics -->
+<!--    -->
+<!-- \newcommand{\diff}{\mathop{}\!\mathrm{\vphantom( d}} -->
+
+<!-- SI Units -->
+<!-- KaTeX Tweaks -->
+
+<h1 id="regular-expressions">Regular Expressions</h1>
+<p>A regular expression is a character sequence that specifies a pattern of a string. It can be used to find and replace strings.</p>
+<table>
+<thead>
+<tr class="header">
+<th>String</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>\^</code></td>
+<td>Start of string, or start of line in multi-line pattern</td>
+</tr>
+<tr class="even">
+<td><code>\A</code></td>
+<td>Start of string</td>
+</tr>
+<tr class="odd">
+<td><code>\$</code></td>
+<td>End of string, or end of line in multi-line pattern</td>
+</tr>
+<tr class="even">
+<td><code>\Z</code></td>
+<td>End of string</td>
+</tr>
+<tr class="odd">
+<td><code>\\b</code></td>
+<td>Word boundary</td>
+</tr>
+<tr class="even">
+<td><code>\B</code></td>
+<td>Not word boundary</td>
+</tr>
+<tr class="odd">
+<td><code>\&lt;</code></td>
+<td>Start of word</td>
+</tr>
+<tr class="even">
+<td><code>\&gt;</code></td>
+<td>End of word</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr class="header">
+<th>Character</th>
+<th>Class</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>\c</code></td>
+<td>Control character</td>
+</tr>
+<tr class="even">
+<td><code>\s</code></td>
+<td>White space, same as <code>[ \t\n\r\f\v]</code></td>
+</tr>
+<tr class="odd">
+<td><code>\S</code></td>
+<td>Not white space</td>
+</tr>
+<tr class="even">
+<td><code>\d</code></td>
+<td>Digit, same as <code>[0-9]</code></td>
+</tr>
+<tr class="odd">
+<td><code>\D</code></td>
+<td>Not digit</td>
+</tr>
+<tr class="even">
+<td><code>\w</code></td>
+<td>Word, same as <code>[a-zA-Z_]</code></td>
+</tr>
+<tr class="odd">
+<td><code>\W</code></td>
+<td>Not word</td>
+</tr>
+<tr class="even">
+<td><code>\x</code></td>
+<td>Hexade­cimal digit</td>
+</tr>
+<tr class="odd">
+<td><code>\O</code></td>
+<td>Octal digit</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr class="header">
+<th>Character</th>
+<th>Class</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>.</code></td>
+<td>any character</td>
+</tr>
+<tr class="even">
+<td><code>\n</code></td>
+<td>Newline</td>
+</tr>
+<tr class="odd">
+<td><code>\t</code></td>
+<td>tab</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr class="header">
+<th>Quantifiers</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>?</td>
+<td>0 or 1</td>
+</tr>
+<tr class="even">
+<td>*</td>
+<td>0 or more</td>
+</tr>
+<tr class="odd">
+<td>+</td>
+<td>1 or more</td>
+</tr>
+<tr class="even">
+<td>{3}</td>
+<td>Exactly 3</td>
+</tr>
+<tr class="odd">
+<td>{3,}</td>
+<td>3 or more</td>
+</tr>
+<tr class="even">
+<td>{3,5}</td>
+<td>3, 4 or 5</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr class="header">
+<th>Groups</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>(...)</td>
+<td>Active Group</td>
+</tr>
+<tr class="even">
+<td>(?:…)</td>
+<td>Passive (non-c­apt­uring) group</td>
+</tr>
+<tr class="odd">
+<td>(?=...)</td>
+<td>look-ahead (passive)</td>
+</tr>
+<tr class="even">
+<td>(?!...)</td>
+<td>negative look-ahead (passive)</td>
+</tr>
+<tr class="odd">
+<td>(?&lt;=...)</td>
+<td>look-behind (passive)</td>
+</tr>
+<tr class="even">
+<td>(?!=...)</td>
+<td>negative look-behind (passive)</td>
+</tr>
+<tr class="odd">
+<td>(?&gt;...)</td>
+<td>once (active)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="examples">Examples</h2>
+<p>Find a date: <code>\d{4}-\d{2}-\d{2}</code></p>
+<h2 id="applet">Applet</h2>
+<script type="text/javascript">
+    
+function applyRegex(e){
+    if (!e.value){
+        res_el.textContent = " ";
+        return;
+    }
+
+    var rx = new RegExp(e.value.trim(), 'gi');
+
+
+    var search_string = document.getElementById("search-space").value;
+    var res_el = document.getElementById("regex-result");
+
+    var matches = search_string.match(rx);
+
+    var result_string = "";
+    if (matches){
+        for (var i = 0; i < matches.length; i++) {
+            result_string += matches[i];
+            if (i != matches.length - 1){ result_string += ", "; }
+        }       
+    }
+    res_el.textContent = result_string;
+}
+
+
+</script>
+<textarea id="search-space" cols="35" rows="4" placeholder="Paste your text here.">
+This is a text (a short one) to demonstrate a RegEx for inner paranthesis.
+</textarea>
+<p>Your RegEx: <input id="regex-input" oninput="applyRegex(this)" placeholder="RegEx, e.g. \d\s." value="\([^)]*\)"></p>
+<p>Found Matches: <span id="regex-result"></span></p>
+
+</main>
+
+    
+</body>
