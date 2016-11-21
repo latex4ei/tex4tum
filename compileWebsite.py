@@ -1,7 +1,8 @@
+# -*- coding: utf-8 -*-
 
 #############################################################################
 # 					O W N    F U N C T I O N S								#
-############################################################################# 
+#############################################################################
 
 
 # creates global log object
@@ -28,7 +29,7 @@ def setupLogging(self, level):
 
 
 
-def readInputFile( fileName ): 
+def readInputFile( fileName ):
     sourceFile = open(fileName,'r')   # Open file as file object and read to string
     sourceText = sourceFile.read()    # Read file object to string
     sourceFile.close()                # Close file object
@@ -41,11 +42,11 @@ def writeOutputFile( fileName, text ):
     outputFile.close()                 # Close file object
 
 
-mapping = { 
-    '<':'\lt', '>':'\gt', 
+mapping = {
+    '<':'\lt', '>':'\gt',
     'α':r'\alpha', 'Α':r'\Alpha', 'β':r'\beta',
     'γ':r'\gamma', 'Γ':r'\alpha', 'δ':r'\dlpha', 'Δ':r'\Delta',
-    'ε':r'\epsilon', 'ζ':r'\zeta', 'η':r'\eta', 
+    'ε':r'\epsilon', 'ζ':r'\zeta', 'η':r'\eta',
     'θ':r'\theta', 'Θ':r'\Theta',
     'κ':r'\kappa', 'λ':r'\lambda', 'Λ':r'\Lambda',
     'μ':r'\mu', 'ν':r'\nu', 'ξ':r'\xi', 'Ξ':r'\Xi',
@@ -70,7 +71,7 @@ def inlineSvg( text, dirname ):
     matches = re.findall('(<img src="([^"]+?\.svg)"[^<]*>)', text)
     for match in matches:
         block = match[0]
-        imageCode = readInputFile( dirname + '/' + match[1] )  
+        imageCode = readInputFile( dirname + '/' + match[1] )
         text = text.replace(match[0], imageCode)
     return text
 
@@ -120,20 +121,20 @@ def translateFile( root, file ):
     mainMd = escapeKaTeX(mainMd)
 
     # translate with pandoc
-    mainHtml = Popen(['pandoc', '--wrap=preserve', 
+    mainHtml = Popen(['pandoc', '--wrap=preserve',
                                 '--columns=300',
-                                '--latexmathml', 
+                                '--latexmathml',
                                 '-f',
-                                'markdown+latex_macros+implicit_figures', 
+                                'markdown+latex_macros+implicit_figures',
                                 '-t',
-                                'html5'], stdin=PIPE, stdout=PIPE).communicate(mainMd.encode('utf8'))[0].decode("utf-8", "strict") 
+                                'html5'], stdin=PIPE, stdout=PIPE).communicate(mainMd.encode('utf8'))[0].decode("utf-8", "strict")
 
     # main
     mainText = '<main class="container">\n' + mainHtml + '\n</main>'
     mainIndent = "        "
-    mainText = mainIndent + re.sub('\n^[ \t]*', '\n'+mainIndent, mainText, re.MULTILINE) 
+    mainText = mainIndent + re.sub('\n^[ \t]*', '\n'+mainIndent, mainText, re.MULTILINE)
     fullHtml = fullHtml.replace('<main></main>', mainText)
-    
+
     # head
     headText = readInputFile("./parser_util/head.html")
     fullHtml = fullHtml.replace('<head></head>', headText)
@@ -184,5 +185,3 @@ if len(args) == 0:
                 translateFile(root, file)
 
     sys.exit(0)
-
-

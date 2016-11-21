@@ -7,9 +7,9 @@ TeX4TUM is an online library of small articles of the topics:
 * electrical engineering
 * information theory
 
-Check out the demo: emareg.de/tex4tum
+Check out the demo: [emareg.de/tex4tum](http://emareg.de/tex4tum)
 
-The articles are based on the cheat sheets from www.latex4ei.de
+The articles are based on the cheat sheets from [www.latex4ei.de](http://www.latex4ei.de)
 
 ## Features
 * Interactive Content: Display only the categories you need
@@ -19,7 +19,7 @@ The articles are based on the cheat sheets from www.latex4ei.de
 * Abbreviations: Hover your mouse over an abbreviation to see the full name
 
 
-## Future Plans 
+## Future Plans
 * Full responsive design
 * TOC and centered search on start page
 * consistent JS framework for interactive content
