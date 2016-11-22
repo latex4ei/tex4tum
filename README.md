@@ -1,4 +1,6 @@
 # tex4tum
+[![Build Status](https://travis-ci.org/latex4ei/tex4tum.svg?branch=master)](https://travis-ci.org/latex4ei/tex4tum)
+
 **Interactive Knowledge Platform**
 
 TeX4TUM is an online library of small articles of the topics:
@@ -34,6 +36,15 @@ The articles are based on the cheat sheets from [www.latex4ei.de](http://www.lat
 ## Building
 to parse all markdown files, simply run
 ```bash
-python compileWebsite.py
+python3 compileWebsite.py
 ```
-dependency: the program "pandoc" is required
+
+**Dependecies:**
+
+- python3
+- pandoc
+
+to install the dependencies just run
+```bash
+sudo apt-get install python3 pandoc
+```
