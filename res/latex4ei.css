@@ -1,0 +1,277 @@
+/* Style Sheet Template
+*/
+
+/* Reference:
+* order: top, right bottom, left;
+* units: em, ex, %, px, cm, mm, in, pt, pc;
+*	new-units: vh, vw, vmin, vmax;
+*/
+
+/* TUM Colors
+blue: #0065BD;
+blue2: #005293; blue3: #003359; gray: #808080;
+green: #A2AD00; orange: #E37222; lightblue: #98C6EA;
+*/
+
+
+
+/* entire site settings */
+html {
+	font-family: serif;		/* serif, sans-serif */
+	/* font-size: 1.5em;		/* small, medium, large */
+	line-height: 170%;		/* standard line spread */
+	min-height: 100%;
+}
+
+body {
+	background:#FFF; 
+	padding: 0;
+	margin: 0;
+}
+
+
+/* remove browser adjustings 
+* works on CH, FF, SF, AD*/
+input, select, textarea, button{
+	font-family:inherit;
+	font-size: inherit;
+}
+
+
+/* layout settings 
+* ------------------------------------ */
+
+	.fig{
+		max-width: 100%;  /* not larger than parent */
+
+	}
+
+	.container{
+		max-width: 100vw;  /* scale with viewport */
+		min-width: 20em;
+		width: 36em;     /* width if possible */
+		margin: auto;
+		
+	}
+
+
+	.sc{
+		font-variant: small-caps;
+	}
+
+header { 
+	display: flex;
+	align-items: middle;
+	background: #003359;
+	margin: 0;
+	width: 100%;
+	min-width: 20em;
+	padding: 0;
+}
+
+main {
+		padding-left: 0.5em;
+		padding-right: 0.5em;	
+	clear: both;
+}
+
+/* style settings
+* ------------------------------------------- */
+
+section {
+	background-color: #FAFAFA;
+	border: 1px solid #999;
+	margin-left: -0.5em;
+	margin-right: -0.5em;
+	padding: 0.5em;
+}
+
+
+/* Headings */
+h1 { font-family: sans-serif; font-size:2em; font-weight:bold }
+h2 { font-family: sans-serif; font-size:1.5em; margin-top: 1.5em; margin-bottom: 0.2em  }
+h3 { font-family: sans-serif; font-size:1.1em; margin-bottom: 0em  }
+
+p { margin-top: 0em}
+
+/* Tables 
+* th: table header, td: table data */
+table{
+	border-collapse: collapse;
+	margin: 1em 0em;
+}
+
+td, th {
+	text-align: left;
+	vertical-align: baseline;
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
+td img {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+tr:nth-child(even){ background-color: #F0F0F0; }
+
+
+td:first-child,th:first-child { padding-left: 0em; }
+td:last-child,th:last-child { padding-right: 0em; }
+
+
+thead {
+	border-top: 1px solid #999;	
+	background-color: #64a0c8;
+}
+
+tbody {
+	border-top: 1px solid #999;
+	border-bottom: 1px solid #999;
+	background-color: #FBFBFB;
+}
+
+
+/* Figures */
+figure {
+	display: block;
+	text-align: center;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+img {
+	display: block;
+	width: 100%;
+}
+
+
+text {
+	font-size: 5em;
+}
+
+/*Code*/
+pre {
+  border-left: 0.3rem solid #A2AD00;
+  font-family: "Menlo", "Consolas", "Bitstream Vera Sans Mono", "DejaVu Sans Mono", "Monaco", monospace;
+  line-height: 1.5rem;
+  /*padding: 0.5rem 0rem;*/
+  margin: 0;
+}
+pre > code {
+  background: transparent;
+  background: #f4f5f6;
+  /*width: 100%;*/
+  border-radius: 0.4rem;
+  display: block;
+  padding: 0.5rem 1.0rem;
+  white-space: pre;
+}
+
+table.sourceCode > tbody{
+	border: None;
+	background: transparent;
+}
+td.lineNumbers{
+	border: None;
+	background: transparent;
+}
+td.lineNumbers > pre{
+	border: None;
+	background: transparent;
+}
+
+
+/*Input*/
+input[type='email'],
+input[type='number'],
+input[type='password'],
+/*input[type='search'],*/
+input[type='tel'],
+input[type='text'],
+input[type='url'],
+textarea,
+select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  /*background-color: transparent;*/
+  /*border: 0.1rem solid #fff;*/
+  box-shadow: none;
+  /*height: 2.0rem;*/
+  padding: 0.5rem 0.2rem;
+  width: 100%;
+}
+input:focus,
+textarea:focus,
+select:focus {
+  border: 0.2rem solid #0073cf;
+  outline: 0;
+}
+
+
+input[type="checkbox"] {
+    width: 1rem;
+    height: 1rem;
+    margin: 0rem 0.2rem;
+}
+
+
+/* links */
+a{
+	color: rgb(0,82,147);
+	text-decoration: none;
+	-webkit-transition: all .25s;
+	-webkit-transition-property: all;
+	-webkit-transition-duration: 0.25s;
+	-webkit-transition-timing-function: initial;
+	-webkit-transition-delay: initial;
+	-moz-transition: all .25s;
+	-o-transition: all .25s;
+	transition: all .25s;
+	transition-property: all;
+	transition-duration: 0.25s;
+	transition-timing-function: initial;
+	
+	cursor: pointer;
+}
+
+a:visited { text-decoration:none; }
+a:hover { text-decoration:none; color: rgb(162,173,0);  }
+a:active { text-decoration:none; }
+a:focus { text-decoration:none; }
+
+/* References */
+
+
+/*KaTeX*/
+.LaTeX { font-size: 0.87rem !important; }
+
+
+
+/*Classes*/
+.emphbox { 
+	border: 0.2rem solid #679a1d;  
+	text-align: center;
+}
+
+
+/* responsive settings */
+@media only all and (min-width: 2000px) { /* HiDPi Layout */ 
+    html{
+        font-size: 20px;   /* 16px = 1em */
+    }
+}
+
+@media all and (max-width: 2000px) and (min-width: 1300px) {
+    html{
+        font-size: 18px;
+    }
+}
+
+@media all and (max-width: 480px) {
+    html{
+        font-size: 14px;
+    }
+}
+

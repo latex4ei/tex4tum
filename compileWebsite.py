@@ -4,6 +4,7 @@ import logging
 import sys
 import os
 import re
+import shutil
 from subprocess import Popen, PIPE
 
 
@@ -158,6 +159,12 @@ def translate_file(root, file):
     write_output_file(output_file_name, full_html)
 
 
+def copy_resources(src, dest):
+    if os.path.exists(dest):
+        shutil.rmtree(dest)
+    shutil.copytree(src, dest)
+
+
 #############################################################################
 #					M A I N   P R O G R A M									#
 #############################################################################
@@ -178,4 +185,8 @@ if __name__ == "__main__":
                     log.info("Reading File: " + file)
                     translate_file(root, file)
 
+        copy_resources('./img', './pages/img')
+        copy_resources('./res', './pages/res')
+
         sys.exit(0)
+
