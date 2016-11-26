@@ -1,0 +1,312 @@
+//colors
+@import "_tumcolors";
+
+//fonts
+$font_0: serif;
+$font_1: sans-serif;
+$font_2: Menlo;
+$font_3: Consolas;
+$font_4: Bitstream Vera Sans Mono;
+$font_5: DejaVu Sans Mono;
+$font_6: Monaco;
+$font_7: monospace;
+
+//@extend-elements
+//original selectors
+//td, th
+%extend_1 {
+  text-align: left;
+  vertical-align: baseline;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+//original selectors
+//input[type='email'], input[type='number'], input[type='password'], input[type='tel'], input[type='text'], input[type='url'], textarea, select
+%extend_2 {
+  appearance: none;
+  //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+  box-shadow: none;
+  padding: 0.5rem 0.2rem;
+  width: 100%;
+}
+
+html {
+  font-family: $font_0;
+  line-height: 170%;
+  min-height: 100%;
+}
+
+body {
+  background: $white;
+  padding: 0;
+  margin: 0;
+}
+
+input {
+  font-family: inherit;
+  font-size: inherit;
+  &:focus {
+    border: 0.2rem solid $tum_blue_light;
+    outline: 0;
+  }
+}
+
+select {
+  font-family: inherit;
+  font-size: inherit;
+  @extend %extend_2;
+  &:focus {
+    border: 0.2rem solid $tum_blue_light;
+    outline: 0;
+  }
+}
+
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  @extend %extend_2;
+  &:focus {
+    border: 0.2rem solid $tum_blue_light;
+    outline: 0;
+  }
+}
+
+button {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.fig {
+  max-width: 100%;
+}
+
+.container {
+  max-width: 100vw;
+  min-width: 20em;
+  width: 36em;
+  margin: auto;
+}
+
+.sc {
+  font-variant: small-caps;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  background: $tum_blue_dark;
+  margin: 0;
+  width: 100%;
+  min-width: 20em;
+  padding: 0;
+}
+
+main {
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  clear: both;
+}
+
+section {
+  background-color: $white;
+  border: 1px solid $light_gray;
+  margin-left: -0.5em;
+  margin-right: -0.5em;
+  padding: 0.5em;
+}
+
+h1 {
+  font-family: $font_1;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+h2 {
+  font-family: $font_1;
+  font-size: 1.5em;
+  margin-top: 1.5em;
+  margin-bottom: 0.2em;
+}
+
+h3 {
+  font-family: $font_1;
+  font-size: 1.1em;
+  margin-bottom: 0;
+}
+
+p {
+  margin-top: 0;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 1em 0;
+  &.sourceCode > tbody {
+    border: None;
+    background: transparent;
+  }
+}
+
+td {
+  @extend %extend_1;
+  img {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  &:first-child {
+    padding-left: 0;
+  }
+  &:last-child {
+    padding-right: 0;
+  }
+  &.lineNumbers {
+    border: None;
+    background: transparent;
+    > pre {
+      border: None;
+      background: transparent;
+    }
+  }
+}
+
+th {
+  @extend %extend_1;
+  &:first-child {
+    padding-left: 0;
+  }
+  &:last-child {
+    padding-right: 0;
+  }
+}
+
+thead {
+  border-top: 1px solid $light_gray;
+  background-color: $color_danube_approx;
+}
+
+tbody {
+  border-top: 1px solid $light_gray;
+  border-bottom: 1px solid $light_gray;
+  background-color: $white;
+}
+
+figure {
+  display: block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+text {
+  font-size: 5em;
+}
+
+pre {
+  border-left: 0.3rem solid $tum_green;
+  font-family: $font_2, $font_3, $font_4, $font_5, $font_6, $font_7;
+  line-height: 1.5rem;
+  margin: 0;
+  > code {
+    background: transparent;
+    background: $white;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 0.4rem;
+    display: block;
+    padding: 0.5rem 1.0rem;
+    white-space: pre;
+  }
+}
+
+input[type='email'] {
+  @extend %extend_2;
+}
+
+input[type='number'] {
+  @extend %extend_2;
+}
+
+input[type='password'] {
+  @extend %extend_2;
+}
+
+input[type='tel'] {
+  @extend %extend_2;
+}
+
+input[type='text'] {
+  @extend %extend_2;
+}
+
+input[type='url'] {
+  @extend %extend_2;
+}
+
+input[type="checkbox"] {
+  width: 1rem;
+  height: 1rem;
+  margin: 0 0.2rem;
+}
+
+a {
+  color: $tum_blue;
+  text-decoration: none;
+  //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+  transition: all .25s;
+  //Instead of the line below you could use @include transition-property($property-1, $property-2, $property-3, $property-4, $property-5, $property-6, $property-7, $property-8, $property-9, $property-10)
+  transition-property: all;
+  //Instead of the line below you could use @include transition-duration($duration-1, $duration-2, $duration-3, $duration-4, $duration-5, $duration-6, $duration-7, $duration-8, $duration-9, $duration-10)
+  transition-duration: 0.25s;
+  //Instead of the line below you could use @include transition-timing-function($function-1, $function-2, $function-3, $function-4, $function-5, $function-6, $function-7, $function-8, $function-9, $function-10)
+  transition-timing-function: initial;
+  cursor: pointer;
+  &:visited {
+    text-decoration: none;
+  }
+  &:hover {
+    text-decoration: none;
+    color: $tum_green;
+  }
+  &:active {
+    text-decoration: none;
+  }
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+.LaTeX {
+  font-size: 0.87rem !important;
+}
+
+.emphbox {
+  border: 0.2rem solid $color_olive_drab_approx;
+  text-align: center;
+}
+
+@media only all and(min-width: 2000px) {
+  html {
+    font-size: 20px;
+  }
+}
+
+@media all and(max-width: 2000px) and(min-width: 1300px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+@media all and(max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+tr:nth-child(even) {
+  background-color: $white;
+}

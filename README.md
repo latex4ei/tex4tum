@@ -45,8 +45,11 @@ python3 compileWebsite.py
 
 - python3
 - pandoc
+- rubygems
+- sass
 
 to install the dependencies just run
 ```bash
-sudo apt-get install python3 pandoc
+sudo apt-get install python3 pandoc rubygems
+sudo gem install sass
 ```

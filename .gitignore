@@ -3,3 +3,6 @@
 
 # PyCharm Project Files
 .idea
+
+# Sass Compiler Folder
+.sass-cache

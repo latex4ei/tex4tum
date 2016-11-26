@@ -4,7 +4,9 @@ python:
   - "3.5"
 
 # command to install dependencies
-install: "sudo apt-get install pandoc"
+install:
+  - "sudo apt-get install pandoc rubygems"
+  - "sudo gem install sass"
 
 # command to run tests
 script: python3 compileWebsite.py

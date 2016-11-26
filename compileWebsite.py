@@ -166,6 +166,16 @@ def copy_resources(src, dest):
     shutil.copytree(src, dest)
 
 
+def compile_scss_files():
+    for root, dirs, files in os.walk("./pages/res"):
+        root += '/'
+        for file in files:
+            if file.endswith(".scss") and not file.startswith("_"):
+                log.info("Compiling SCSS: " + file)
+                output_file = root + file[:-4] + 'css'
+                os.system('sass ' + root + file + ' ' + output_file)
+
+
 #############################################################################
 #					M A I N   P R O G R A M									#
 #############################################################################
@@ -191,3 +201,4 @@ if __name__ == "__main__":
     log.info("Copy Style Files")
     copy_resources('./img', './pages/img')
     copy_resources('./res', './pages/res')
+    compile_scss_files()
