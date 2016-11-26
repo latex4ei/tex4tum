@@ -5,6 +5,7 @@ import sys
 import os
 import re
 import shutil
+import argparse
 from subprocess import Popen, PIPE
 
 
@@ -176,17 +177,17 @@ if __name__ == "__main__":
 
     log.info("Starting Conversion")
 
-    # check arguments
-    args = sys.argv[1:]
-    if len(args) == 0:
+    parser = argparse.ArgumentParser(description='Compile website using pandoc')
+    parser.add_argument('--styleOnly', action='store_true', default=False,
+                        help='Just update JavaScript and CSS content')
+    args = parser.parse_args()
+
+    if args.styleOnly:
         for root, dirs, files in os.walk("./raw"):
             for file in files:
                 if file.endswith(".md"):
                     log.info("Reading File: " + file)
                     translate_file(root, file)
 
-        copy_resources('./img', './pages/img')
-        copy_resources('./res', './pages/res')
-
-        sys.exit(0)
-
+    copy_resources('./img', './pages/img')
+    copy_resources('./res', './pages/res')
