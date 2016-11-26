@@ -175,19 +175,19 @@ ABBREVIATION = re.compile(r'(\*\[([^\]]+)\]:\s*([^\n]+\n))')
 if __name__ == "__main__":
     setup_logging(1, logging.DEBUG)
 
-    log.info("Starting Conversion")
-
     parser = argparse.ArgumentParser(description='Compile website using pandoc')
     parser.add_argument('--styleOnly', action='store_true', default=False,
                         help='Just update JavaScript and CSS content')
     args = parser.parse_args()
 
-    if args.styleOnly:
+    if not args.styleOnly:
+        log.info("Starting Conversion")
         for root, dirs, files in os.walk("./raw"):
             for file in files:
                 if file.endswith(".md"):
                     log.info("Reading File: " + file)
                     translate_file(root, file)
 
+    log.info("Copy Style Files")
     copy_resources('./img', './pages/img')
     copy_resources('./res', './pages/res')
