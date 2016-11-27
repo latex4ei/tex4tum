@@ -176,6 +176,27 @@ def compile_scss_files():
                 os.system('sass ' + root + file + ' ' + output_file)
 
 
+def build_resources():
+    log.info("Copy Style Files")
+    copy_resources('./img', './pages/img')
+    copy_resources('./res', './pages/res')
+    compile_scss_files()
+
+
+def build_content():
+    log.info("Starting Conversion")
+    for root, dirs, files in os.walk("./content"):
+        for file in files:
+            if file.endswith(".md"):
+                log.info("Reading File: " + file)
+                translate_file(root, file)
+
+
+def clear_build_folder():
+    log.info("Clear pages folder")
+    os.system('rm -r pages/*')
+
+
 #############################################################################
 #					M A I N   P R O G R A M									#
 #############################################################################
@@ -187,18 +208,17 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(description='Compile website using pandoc')
     parser.add_argument('--styleOnly', action='store_true', default=False,
-                        help='Just update JavaScript and CSS content')
+                        help='Just update JavaScript and SCSS content and compile CSS')
+    parser.add_argument('--rebuild', action='store_true', default=False,
+                        help='Rebuild all files')
     args = parser.parse_args()
 
-    if not args.styleOnly:
-        log.info("Starting Conversion")
-        for root, dirs, files in os.walk("./content"):
-            for file in files:
-                if file.endswith(".md"):
-                    log.info("Reading File: " + file)
-                    translate_file(root, file)
-
-    log.info("Copy Style Files")
-    copy_resources('./img', './pages/img')
-    copy_resources('./res', './pages/res')
-    compile_scss_files()
+    if args.rebuild:
+        clear_build_folder()
+        build_content()
+        build_resources()
+    elif args.styleOnly:
+        build_resources()
+    else:
+        build_content()
+        build_resources()
