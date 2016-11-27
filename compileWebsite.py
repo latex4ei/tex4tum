@@ -120,11 +120,11 @@ def translate_file(root, file):
     main_md = read_input_file(file_name)
 
     # abbreviations
-    main_md = read_input_file('./parser_util/abbreviations.md') + '\n' + main_md
+    main_md = read_input_file('./res/parser_util/abbreviations.md') + '\n' + main_md
     main_md = parse_abbreviation(main_md)
 
     # additional tex definitions
-    main_md = read_input_file('./parser_util/tex_definitions.md') + '\n' + main_md
+    main_md = read_input_file('./res/parser_util/tex_definitions.md') + '\n' + main_md
     main_md = escape_katex(main_md)
 
     # translate with pandoc
@@ -144,15 +144,15 @@ def translate_file(root, file):
     full_html = full_html.replace('<main></main>', main_text)
 
     # head
-    head_text = read_input_file("./parser_util/head.html")
+    head_text = read_input_file("./res/layout/head.html")
     full_html = full_html.replace('<head></head>', head_text)
 
     # header
-    header_text = read_input_file("./parser_util/header.html")
+    header_text = read_input_file("./res/layout/header.html")
     full_html = full_html.replace('<header></header>', header_text)
 
     # footer
-    footer_text = read_input_file("./parser_util/footer.html")
+    footer_text = read_input_file("./res/layout/footer.html")
     full_html = full_html.replace('<footer></footer>', footer_text)
 
     # write output
@@ -167,7 +167,7 @@ def copy_resources(src, dest):
 
 
 def compile_scss_files():
-    for root, dirs, files in os.walk("./pages/res"):
+    for root, dirs, files in os.walk("./pages/res/layout/style"):
         root += '/'
         for file in files:
             if file.endswith(".scss") and not file.startswith("_"):
@@ -192,7 +192,7 @@ if __name__ == "__main__":
 
     if not args.styleOnly:
         log.info("Starting Conversion")
-        for root, dirs, files in os.walk("./raw"):
+        for root, dirs, files in os.walk("./content"):
             for file in files:
                 if file.endswith(".md"):
                     log.info("Reading File: " + file)
