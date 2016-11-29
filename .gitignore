@@ -1,5 +1,6 @@
-# Build Files
+# Build Files/Folder
 *.log
+pages/
 
 # PyCharm Project Files
 .idea

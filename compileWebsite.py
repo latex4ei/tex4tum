@@ -9,10 +9,7 @@ import argparse
 from subprocess import Popen, PIPE
 
 
-#############################################################################
-# 					O W N    F U N C T I O N S								#
-#############################################################################
-
+BUILD_FOLDER = 'pages/'
 
 # creates global log object
 # @param name the name of the logger
@@ -120,11 +117,11 @@ def translate_file(root, file):
     main_md = read_input_file(file_name)
 
     # abbreviations
-    main_md = read_input_file('./res/parser_util/abbreviations.md') + '\n' + main_md
+    main_md = read_input_file('res/parser_util/abbreviations.md') + '\n' + main_md
     main_md = parse_abbreviation(main_md)
 
     # additional tex definitions
-    main_md = read_input_file('./res/parser_util/tex_definitions.md') + '\n' + main_md
+    main_md = read_input_file('res/parser_util/tex_definitions.md') + '\n' + main_md
     main_md = escape_katex(main_md)
 
     # translate with pandoc
@@ -156,18 +153,19 @@ def translate_file(root, file):
     full_html = full_html.replace('<footer></footer>', footer_text)
 
     # write output
-    output_file_name = './pages/' + re.sub('\.md', '.html', file)
+    output_file_name = BUILD_FOLDER + re.sub('\.md', '.html', file)
     write_output_file(output_file_name, full_html)
 
 
-def copy_resources(src, dest):
+def copy_resources(src):
+    dest = BUILD_FOLDER + src
     if os.path.exists(dest):
         shutil.rmtree(dest)
     shutil.copytree(src, dest)
 
 
 def compile_scss_files():
-    for root, dirs, files in os.walk("./pages/res/layout/style"):
+    for root, dirs, files in os.walk(BUILD_FOLDER + "res/layout/style"):
         root += '/'
         for file in files:
             if file.endswith(".scss") and not file.startswith("_"):
@@ -178,14 +176,14 @@ def compile_scss_files():
 
 def build_resources():
     log.info("Copy Style Files")
-    copy_resources('./img', './pages/img')
-    copy_resources('./res', './pages/res')
+    copy_resources('img')
+    copy_resources('res')
     compile_scss_files()
 
 
 def build_content():
     log.info("Starting Conversion")
-    for root, dirs, files in os.walk("./content"):
+    for root, dirs, files in os.walk("content"):
         for file in files:
             if file.endswith(".md"):
                 log.info("Reading File: " + file)
@@ -193,8 +191,16 @@ def build_content():
 
 
 def clear_build_folder():
-    log.info("Clear pages folder")
-    os.system('rm -r pages/*')
+    log.info("Clear " + BUILD_FOLDER + " folder")
+    if os.path.exists(BUILD_FOLDER):
+        shutil.rmtree(BUILD_FOLDER)
+        os.makedirs(BUILD_FOLDER)
+
+
+def create_build_folder():
+    if not os.path.exists(BUILD_FOLDER):
+        log.info("Creating " + BUILD_FOLDER + " folder")
+        os.makedirs(BUILD_FOLDER)
 
 
 #############################################################################
@@ -211,14 +217,20 @@ if __name__ == "__main__":
                         help='Just update JavaScript and SCSS content and compile CSS')
     parser.add_argument('--rebuild', action='store_true', default=False,
                         help='Rebuild all files')
+    parser.add_argument('--clean', action='store_true', default=False,
+                        help='Clean build folder')
     args = parser.parse_args()
 
-    if args.rebuild:
+    if args.clean:
+        clear_build_folder()
+    elif args.rebuild:
         clear_build_folder()
         build_content()
         build_resources()
     elif args.styleOnly:
+        create_build_folder()
         build_resources()
     else:
-        build_content()
+        create_build_folder()
         build_resources()
+        build_content()
