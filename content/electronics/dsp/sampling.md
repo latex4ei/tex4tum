@@ -1,6 +1,0 @@
-# Sampling
-
-
-$\sinc(x)$
-
-

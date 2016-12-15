@@ -31,24 +31,20 @@ The articles are based on the cheat sheets from [www.latex4ei.de](http://www.lat
 * More content
 
 ## Internal Working
-* Markdown files are converted to HTML5 with pandoc
+* Markdown files are converted to HTML5 with jekyll
 * Graphs are plotted with SVG + JS
 * Math is rendered with KaTeX
+
+## Setup
+Installation with rubygems
+```bash
+sudo gem install jekyll bundler
+sudo gem install sass
+```
 
 ## Building
 to parse all markdown files, simply run
 ```bash
-python3 compileWebsite.py
+bundle exec jekyll serve
 ```
-
-**Dependecies:**
-
-- python3
-- pandoc
-- sass
-
-to install the dependencies just run
-```bash
-sudo apt-get install python3 pandoc
-sudo gem install sass
-```
+Now browse to http://localhost:4000

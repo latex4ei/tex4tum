@@ -1,21 +1,19 @@
-language: python
+language: ruby
+rvm:
+- 2.2.5
 
-python:
-  - "3.5"
+before_script:
+ - chmod +x ./script/cibuild
 
-addons:
-  apt:
-    packages:
-      - pandoc
-      - rubygems
+# Assume bundler is being used, therefore
+# the `install` step will run `bundle install` by default.
+script: jekyll build && htmlproofer ./_site
 
-before_install:
-  - gem install sass
+env:
+  global:
+  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
 
-install: true
-
-# command to run tests
-script: python3 compileWebsite.py
+sudo: false # route your build to the container-based infrastructure for a faster build
 
 notifications:
   email: false

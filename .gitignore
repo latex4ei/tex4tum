@@ -5,5 +5,7 @@ pages/
 # PyCharm Project Files
 .idea
 
-# Sass Compiler Folder
+# Jekyll build files
+_site
 .sass-cache
+.jekyll-metadata

@@ -1,0 +1,28 @@
+---
+layout: default
+---
+
+<div class="home">
+
+  <h1 class="page-heading">Interactive Cheat Sheets</h1>
+
+  <div class="search-container">
+    <input type="search" class="search-input" results=0 placeholder="Search (fuzzy)" tabindex="1">
+    <div class="ac-results-wrapper"></div>
+  </div>
+
+  {{ content }}
+
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+        <h2>
+          <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
+
+</div>

@@ -1,7 +1,0 @@
-# Electromagnetism
-
-Maxwell equations
-
-
-
-

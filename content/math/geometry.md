@@ -1,7 +1,0 @@
-# Geometry
-
-Geometry is ...
-
-
-
-
