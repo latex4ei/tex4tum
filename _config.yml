@@ -21,6 +21,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username: latex4ei
 facebook_username: LaTeX4Ei
+gitter_username: LaTeX4Ei
 collections:
   content:
     output: true
