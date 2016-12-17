@@ -29,23 +29,11 @@
 
       <div class="footer-col footer-col-2">
         <ul class="social-media-list">
-          {% if site.github_username %}
+          {% for entry in site.data.social %}
           <li>
-            {% include icon-github.html username=site.github_username %}
+            {% include icon-social.html data=entry %}
           </li>
-          {% endif %}
-
-          {% if site.facebook_username %}
-          <li>
-            {% include icon-facebook.html username=site.facebook_username %}
-          </li>
-          {% endif %}
-
-          {% if site.gitter_username %}
-          <li>
-            {% include icon-gitter.html username=site.gitter_username %}
-          </li>
-          {% endif %}
+          {% endfor %}
         </ul>
       </div>
 

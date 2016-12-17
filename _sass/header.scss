@@ -1,5 +1,5 @@
 //colors
-@import "tumcolors";
+@import "colors";
 
 .dropdown {
   position: relative;
@@ -110,4 +110,11 @@ header {
   -webkit-box-sizing: border-box;
   -ms-box-sizing: border-box;
   box-sizing: border-box;
+}
+
+.home-header {
+  @extend .site-header;
+  color: $white;
+  margin: auto;
+  text-align: center;
 }

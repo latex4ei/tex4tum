@@ -1,0 +1,17 @@
+- social: github
+  username: latex4ei
+  domain: github.com
+  icon: icon-github.svg
+  about_text: Find the source code for this Page at
+
+- social: gitter
+  username: LaTeX4Ei
+  domain: gitter.im
+  icon: icon-gitter.svg
+  about_text: Join our rooms on Gitter to discuss about further improvements of this page or our cheatsheets
+
+- social: facebook
+  username: LaTeX4Ei
+  domain: facebook.com
+  icon: icon-facebook.svg
+  about_text: Like our page on facebook to get the latest news about cheatsheets releases or this page

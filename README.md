@@ -41,9 +41,13 @@ Installation with rubygems
 sudo gem install jekyll bundler
 sudo gem install sass
 ```
+Install all required depencencies in the `Gemfile` with
+```bash
+bundle install
+```
 
 ## Building
-to parse all markdown files, simply run
+To parse all markdown files, simply run
 ```bash
 bundle exec jekyll serve
 ```
