@@ -2,7 +2,7 @@
 layout: home
 ---
 
-Take a look at the [**Demo Page!**](http://emareg.de/tex4tum/)
+Take a look at the [**Demo Page!**](demo.html)
 
 ### [Math](math.html)
 * [**Algebra**](algebra.html): [Complex Numbers](complex-number.html) • [Vectors](vector.html) • [Matrices](matrix.html)

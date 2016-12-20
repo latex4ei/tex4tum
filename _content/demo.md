@@ -1,6 +1,8 @@
-# Interactive Cheat Sheets Demo
+---
+title: Interactive Cheat Sheets Demo
+---
 
-This is a showcase to demonstrate how learning materials could be made interactive, fast accessible, and neat. 
+This is a showcase to demonstrate how learning materials could be made interactive, fast accessible, and neat.
 
 
 ## Features
@@ -12,23 +14,23 @@ Example: $\sqrt{ x^4 } = x^2$<br>
 <div class="legend">Legend: where x is an arbitrary value</div>
 </div>
 
-Furthermore, abbreviations do not need explanations anymore. If you do not know it just move the mouse over it: SVG 
+Furthermore, abbreviations do not need explanations anymore. If you do not know it just move the mouse over it: SVG
 
 ### Interactive Math
 Directly calculate an equation while reading. Click on the values of R and C in the text to change them!
 
 A RC low-pass filter with Resistance R = <span id="R_val" onclick="askValue(this.id)">10k</span>Ω and Capacitance C = <span id="C_val" onclick="askValue(this.id)">100n</span>F has a Cut-Off Frequency $f_c = \frac{1}{2\pi R C} =$ <tspan id="F_val">159 Hz</tspan><br>
 
-Even more complex equations such as 
+Even more complex equations such as
 $\int \sqrt{x^2} \diff x = \frac{1}{3} x^3$
-are rendered beautifully with [KaTex](https://khan.github.io/KaTeX/)). 
+are rendered beautifully with [KaTex](https://khan.github.io/KaTeX/)).
 
 
 
 ### Interactive Diagrams
 Play with diagrams for better understanding. Click and drag the black ray with the mouse or change any value in the diagram.
 
-<object class="fig" style="width: 18em" id="obj_fraction" data="img/fraction.svg" type="image/svg+xml"></object>
+<object class="fig" style="width: 18em" id="obj_fraction" data="res/img/content-images/fraction.svg" type="image/svg+xml"></object>
 
 
 ### Fast Fuzzy Search
@@ -37,7 +39,7 @@ Find an answer blazingly fast. The fuzzy search in the top bar displays results 
 
 
 ## Demo Pages
- * [Full Low-Pass Filter](low pass.html) (Interactive Math)
+ * [Full Low-Pass Filter](low-pass.html) (Interactive Math)
  * [Maxwell Equations](maxwell.html) (Math Showcase)
  * [Number Converter](numbers.html) (Fast interactions)
  * [Op-Amps](op-amp.html) (SVG diagrams)
@@ -67,4 +69,3 @@ function syncValues(id, value){
     RC_calcFrequency();
 }
 </script>
-
