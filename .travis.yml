@@ -2,6 +2,8 @@ language: ruby
 rvm:
 - 2.2.5
 
+before_install: gem install jekyll html-proofer jekyll-sitemap
+
 # Assume bundler is being used, therefore
 # the `install` step will run `bundle install` by default.
 script:

@@ -1,6 +1,6 @@
 ---
 title: Inductor
---- 
+---
 A inductor is a electrical component.
 
 | Inductor  |   |

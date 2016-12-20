@@ -38,6 +38,7 @@ The articles are based on the cheat sheets from [www.latex4ei.de](http://www.lat
 ## Setup
 Installation with rubygems
 ```bash
+sudo apt-get install ruby ruby-dev
 sudo gem install jekyll bundler
 sudo gem install sass
 ```

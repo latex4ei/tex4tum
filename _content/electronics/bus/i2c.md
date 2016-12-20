@@ -23,13 +23,8 @@ Transmission Speeds
 Protocol
 --------
 
-
-
-
 ### Tests
-<figure>
-<img src="electronics/bus/i2c/byte-transfer.svg">
-</figure>
+{% include figure.html image="byte-transfer" description="Byte Transfer" %}
 
 <div>Test</div>
 

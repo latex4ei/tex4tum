@@ -1,5 +1,5 @@
 {% assign data=include.data %}
 <a href="https://{{ data.domain }}/{{ data.username }}">
-  <span class="icon icon--{{ data.social }}">{% include {{ data.icon }} %}</span>
+  <span class="icon icon--{{ data.social }}">{% include {{ data.icon | prepend: 'social-icons/' | append: '.svg' }} %}</span>
   <span class="username">{{ data.username }}</span>
 </a>

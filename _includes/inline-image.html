@@ -1,0 +1,9 @@
+{% assign width='100%' %}
+{% if include.width %}
+  {% assign width={{include.width}} %}
+{% endif %}
+{% assign filetype='svg' %}
+{% if include.filetype %}
+  {% assign filetype={{include.filetype}} %}
+{% endif %}
+<img src="{{ include.image | prepend: 'res/img/content-images/' }}.{{ filetype }}" alt="{{ include.image }}" style="width:{{ width }}" />
