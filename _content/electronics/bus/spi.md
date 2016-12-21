@@ -17,7 +17,7 @@ Specification
 
 
 ## Connection
-{% include figure.html image="SPI_single_slave" description="Connection" %}
+{% include figure.html filename="SPI_single_slave.svg" description="Connection" %}
 
 Common Speeds
 :   9'600 bit/s, 38'400 bit/s

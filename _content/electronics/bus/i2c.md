@@ -24,7 +24,7 @@ Protocol
 --------
 
 ### Tests
-{% include figure.html image="byte-transfer" description="Byte Transfer" %}
+{% include figure.html filename="byte-transfer.svg" description="Byte Transfer" %}
 
 <div>Test</div>
 
