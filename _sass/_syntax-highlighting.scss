@@ -3,6 +3,7 @@
  */
 .highlight {
   background: #fff;
+  text-align: left;
   @extend %vertical-rhythm;
 
   .highlighter-rouge & {
@@ -69,3 +70,8 @@
   .vi    { color: #008080 } // Name.Variable.Instance
   .il    { color: #099 } // Literal.Number.Integer.Long
 }
+
+/* Make line numbers unselectable: excludes line numbers from copy-paste user ops */
+.highlight .lineno {-webkit-user-select: none;-moz-user-select: none; -o-user-select: none;}
+.lineno::-moz-selection {background-color: transparent;} /* Mozilla specific */
+.lineno::selection {background-color: transparent;} /* Other major browsers */

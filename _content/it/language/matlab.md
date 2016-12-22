@@ -6,7 +6,7 @@ title: Matlab
 Matlab is a powerful computer algebra system.
 </div>
 
-``` matlab
+{% highlight matlab %}
  A = ones(3)
  B = eye(3)
-```
+{% endhighlight %}

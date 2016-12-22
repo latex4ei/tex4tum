@@ -34,6 +34,7 @@ defaults:
 markdown: kramdown
 kramdown:
   math_engine: mathjax
+highlighter: pygments
 exclude:
   - Gemfile
   - Gemfile.lock

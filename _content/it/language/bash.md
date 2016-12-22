@@ -2,8 +2,8 @@
 title: Bash
 ---
 
-``` bash
-	int main(float test){
+{% highlight bash %}
+int main(float test) {
 	a = "hello"
 	def function
 	interface
@@ -11,4 +11,4 @@ title: Bash
 		echo 3
 	fi
 }
-```
+{% endhighlight %}
