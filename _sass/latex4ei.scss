@@ -31,18 +31,6 @@ $font_7: monospace;
   width: 100%;
 }
 
-html {
-  font-family: $font_0;
-  line-height: 170%;
-  min-height: 100%;
-}
-
-body {
-  background: $white;
-  padding: 0;
-  margin: 0;
-}
-
 input {
   font-family: inherit;
   font-size: inherit;
@@ -72,11 +60,6 @@ textarea {
   }
 }
 
-button {
-  font-family: inherit;
-  font-size: inherit;
-}
-
 .fig {
   max-width: 100%;
 }
@@ -95,7 +78,7 @@ button {
 header {
   display: flex;
   align-items: center;
-  background: $tum_blue_dark;
+  background: $tum_blue;
   margin: 0;
   width: 100%;
   min-width: 20em;
@@ -198,15 +181,6 @@ figure {
   margin-right: auto;
 }
 
-img {
-  display: block;
-  width: 100%;
-}
-
-text {
-  font-size: 5em;
-}
-
 pre {
   border-left: 0.3rem solid $tum_green;
   font-family: $font_2, $font_3, $font_4, $font_5, $font_6, $font_7;
@@ -254,7 +228,6 @@ input[type="checkbox"] {
 }
 
 a {
-  color: $tum_blue;
   text-decoration: none;
   //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
   transition: all .25s;

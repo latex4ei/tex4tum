@@ -12,7 +12,6 @@ ruby RUBY_VERSION
 gem "jekyll", "3.3.1"
 
 gem "html-proofer"
-
 gem "pygments.rb"
 
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
@@ -21,4 +20,7 @@ gem "pygments.rb"
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
+  gem 'bootstrap'
+  gem 'autoprefixer-rails'
+  gem 'jekyll-assets'
 end

@@ -41,12 +41,8 @@ header {
     vertical-align: middle;
     color: $white;
     text-align: center;
-    height: 2em;
     padding: 0 0.5em;
     text-decoration: none;
-    &:hover {
-      background-color: $color_woodsmoke_approx;
-    }
   }
   img {
     max-width: 100%;
@@ -61,7 +57,7 @@ header {
   //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
   border-radius: 1em;
   background-color: $white;
-  border: 0.2em solid $tum_blue_dark;
+  border: 0.2em solid $tum_blue;
   width: 100%;
   display: block;
   height: 2em;

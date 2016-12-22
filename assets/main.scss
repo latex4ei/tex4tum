@@ -39,6 +39,8 @@ $on-laptop:        800px !default;
 }
 
 // Import partials.
+@import 'bootstrap';
+@import "custom";
 @import
   "base",
   "layout",

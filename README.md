@@ -24,7 +24,6 @@ The articles are based on the cheat sheets from [www.latex4ei.de](http://www.lat
 
 
 ## Future Plans
-* Full responsive design
 * TOC and centered search on start page
 * consistent JS framework for interactive content
 * Improved search: Sorting results, reaction to no results
@@ -34,6 +33,7 @@ The articles are based on the cheat sheets from [www.latex4ei.de](http://www.lat
 * Markdown files are converted to HTML5 with jekyll
 * Graphs are plotted with SVG + JS
 * Math is rendered with KaTeX
+* Bootstrap for full responsive design  
 
 ## Setup
 Installation with rubygems
@@ -53,3 +53,8 @@ To parse all markdown files, simply run
 bundle exec jekyll serve
 ```
 Now browse to http://localhost:4000
+
+### Customize Bootstrap
+Copy variables from `_variables.scss` to the `_sass/_custom.scss` file to override default values without modifying source files.
+
+For `_variables.scss` see https://github.com/twbs/bootstrap/blob/v4-dev/scss/_variables.scss
