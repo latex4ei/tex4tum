@@ -1,7 +1,3 @@
-# Build Files/Folder
-*.log
-pages/
-
 # PyCharm Project Files
 .idea
 
@@ -11,5 +7,4 @@ pages/
 Gemfile.lock
 example/_site
 _site
-.sass-cache
 *.gem
