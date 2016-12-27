@@ -18,13 +18,6 @@
             <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
             {% endif %}
         </ul>
-        <div class="trigger">
-          {% for my_page in site.pages %}
-          {% if my_page.title %}
-          <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
-          {% endif %}
-          {% endfor %}
-        </div>
       </div>
 
       <div class="footer-col footer-col-2">

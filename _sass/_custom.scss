@@ -2,3 +2,8 @@
 //
 // Copy variables from `_variables.scss` to this file to override default values
 // without modifying source files.
+@import "colors";
+
+$brand-primary: $tum_blue_light;
+
+$navbar-border-radius: 0;

@@ -26,9 +26,10 @@
 
 #search {
   height: 2em;
-  margin-right: auto;
+  margin-right: 5em;
   min-width: 15em;
   text-align: baseline;
+  float: right;
 }
 
 #options {
@@ -106,11 +107,4 @@ header {
   -webkit-box-sizing: border-box;
   -ms-box-sizing: border-box;
   box-sizing: border-box;
-}
-
-.home-header {
-  @extend .site-header;
-  color: $white;
-  margin: auto;
-  text-align: center;
 }
