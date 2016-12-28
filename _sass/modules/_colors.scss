@@ -20,3 +20,6 @@ $color_olive_drab_approx: #679a1d;
 $color_french_gray_approx: #babdc0;
 $black_20: rgba(0, 0, 0, 0.2);
 $color_woodsmoke_approx: #111;
+
+$grey-color:       #828282 !default;
+$grey-color-light: lighten($grey-color, 40%) !default;

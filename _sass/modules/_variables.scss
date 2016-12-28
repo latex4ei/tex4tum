@@ -1,0 +1,19 @@
+//fonts
+$font_1: sans-serif;
+$font_2: Menlo;
+$font_3: Consolas;
+$font_4: Bitstream Vera Sans Mono;
+$font_5: DejaVu Sans Mono;
+$font_6: Monaco;
+$font_7: monospace;
+
+$base-font-size:   16px !default;
+$small-font-size:  $base-font-size * 0.875 !default;
+
+$spacing-unit:     30px !default;
+
+// Width of the content area
+$content-width:    800px !default;
+
+$on-palm:          600px !default;
+$on-laptop:        800px !default;

@@ -1,15 +1,169 @@
-  //colors
-@import "colors";
+@import "../modules/variables";
 
-//fonts
-$font_0: serif;
-$font_1: sans-serif;
-$font_2: Menlo;
-$font_3: Consolas;
-$font_4: Bitstream Vera Sans Mono;
-$font_5: DejaVu Sans Mono;
-$font_6: Monaco;
-$font_7: monospace;
+/**
+ * Reset some basic elements
+ */
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, hr,
+dl, dd, ol, ul, figure {
+  margin: 0;
+  padding: 0;
+}
+
+/**
+ * Set `margin-bottom` to maintain vertical rhythm
+ */
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+ul, ol, dl, figure,
+%vertical-rhythm {
+  margin-bottom: $spacing-unit / 2;
+}
+
+/**
+ * Images
+ */
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+/**
+ * Figures
+ */
+figure > img {
+  display: block;
+}
+
+figcaption {
+  font-size: $small-font-size;
+}
+
+/**
+ * Lists
+ */
+ul, ol {
+  margin-left: $spacing-unit;
+}
+
+li {
+  > ul,
+  > ol {
+    margin-bottom: 0;
+  }
+}
+
+/**
+ * Links
+ */
+a {
+  text-decoration: none;
+  //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+  transition: all .25s;
+  //Instead of the line below you could use @include transition-property($property-1, $property-2, $property-3, $property-4, $property-5, $property-6, $property-7, $property-8, $property-9, $property-10)
+  transition-property: all;
+  //Instead of the line below you could use @include transition-duration($duration-1, $duration-2, $duration-3, $duration-4, $duration-5, $duration-6, $duration-7, $duration-8, $duration-9, $duration-10)
+  transition-duration: 0.25s;
+  //Instead of the line below you could use @include transition-timing-function($function-1, $function-2, $function-3, $function-4, $function-5, $function-6, $function-7, $function-8, $function-9, $function-10)
+  transition-timing-function: initial;
+  cursor: pointer;
+  &:visited {
+    text-decoration: none;
+  }
+  &:hover {
+    text-decoration: none;
+    color: $tum_green;
+  }
+  &:active {
+    text-decoration: none;
+  }
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+/**
+ * Blockquotes
+ */
+blockquote {
+  color: $grey-color;
+  border-left: 4px solid $grey-color-light;
+  padding-left: $spacing-unit / 2;
+  font-size: 18px;
+  letter-spacing: -1px;
+  font-style: italic;
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+}
+
+/**
+ * Code formatting
+ */
+pre,
+code {
+  font-size: 15px;
+  border: 1px solid $grey-color-light;
+  border-radius: 3px;
+  background-color: #eef;
+}
+
+code {
+  padding: 1px 5px;
+}
+
+pre {
+  padding: 8px 12px;
+  overflow-x: auto;
+
+  > code {
+    border: 0;
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+/**
+ * Wrapper
+ */
+.wrapper {
+  max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
+  max-width: calc(#{$content-width} - (#{$spacing-unit} * 2));
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: $spacing-unit;
+  padding-left: $spacing-unit;
+  @extend %clearfix;
+
+  @include media-query($on-laptop) {
+    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
+    max-width: calc(#{$content-width} - (#{$spacing-unit}));
+    padding-right: $spacing-unit / 2;
+    padding-left: $spacing-unit / 2;
+  }
+}
+
+/**
+ * Clearfix
+ */
+%clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/**
+ * Icons
+ */
+.icon > svg {
+  display: inline-block;
+  vertical-align: middle;
+
+  path {
+    fill: $grey-color;
+  }
+}
 
 //@extend-elements
 //original selectors
@@ -60,21 +214,6 @@ textarea {
   }
 }
 
-.fig {
-  max-width: 100%;
-}
-
-.container {
-  max-width: 100vw;
-  min-width: 20em;
-  width: 36em;
-  margin: auto;
-}
-
-.sc {
-  font-variant: small-caps;
-}
-
 header {
   display: flex;
   align-items: center;
@@ -86,6 +225,7 @@ header {
 }
 
 main {
+  padding-top: 80px;
   padding-left: 0.5em;
   padding-right: 0.5em;
   clear: both;
@@ -225,59 +365,6 @@ input[type="checkbox"] {
   width: 1rem;
   height: 1rem;
   margin: 0 0.2rem;
-}
-
-a {
-  text-decoration: none;
-  //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
-  transition: all .25s;
-  //Instead of the line below you could use @include transition-property($property-1, $property-2, $property-3, $property-4, $property-5, $property-6, $property-7, $property-8, $property-9, $property-10)
-  transition-property: all;
-  //Instead of the line below you could use @include transition-duration($duration-1, $duration-2, $duration-3, $duration-4, $duration-5, $duration-6, $duration-7, $duration-8, $duration-9, $duration-10)
-  transition-duration: 0.25s;
-  //Instead of the line below you could use @include transition-timing-function($function-1, $function-2, $function-3, $function-4, $function-5, $function-6, $function-7, $function-8, $function-9, $function-10)
-  transition-timing-function: initial;
-  cursor: pointer;
-  &:visited {
-    text-decoration: none;
-  }
-  &:hover {
-    text-decoration: none;
-    color: $tum_green;
-  }
-  &:active {
-    text-decoration: none;
-  }
-  &:focus {
-    text-decoration: none;
-  }
-}
-
-.LaTeX {
-  font-size: 0.87rem !important;
-}
-
-.emphbox {
-  border: 0.2rem solid $color_olive_drab_approx;
-  text-align: center;
-}
-
-@media only all and(min-width: 2000px) {
-  html {
-    font-size: 20px;
-  }
-}
-
-@media all and(max-width: 2000px) and(min-width: 1300px) {
-  html {
-    font-size: 18px;
-  }
-}
-
-@media all and(max-width: 480px) {
-  html {
-    font-size: 14px;
-  }
 }
 
 tr:nth-child(even) {

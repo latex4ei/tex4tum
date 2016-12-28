@@ -3,28 +3,6 @@
 ---
 @charset "utf-8";
 
-$base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !default;
-$base-font-size:   16px !default;
-$base-font-weight: 400 !default;
-$small-font-size:  $base-font-size * 0.875 !default;
-$base-line-height: 1.5 !default;
-
-$spacing-unit:     30px !default;
-
-$text-color:       #111 !default;
-$background-color: #fdfdfd !default;
-$brand-color:      #2a7ae2 !default;
-
-$grey-color:       #828282 !default;
-$grey-color-light: lighten($grey-color, 40%) !default;
-$grey-color-dark:  darken($grey-color, 25%) !default;
-
-// Width of the content area
-$content-width:    800px !default;
-
-$on-palm:          600px !default;
-$on-laptop:        800px !default;
-
 // Use media queries like this:
 // @include media-query($on-palm) {
 //   .wrapper {
@@ -38,13 +16,31 @@ $on-laptop:        800px !default;
   }
 }
 
+@media only all and(min-width: 2000px) {
+  html {
+    font-size: 20px;
+  }
+}
+
+@media all and(max-width: 2000px) and(min-width: 1300px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+@media all and(max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+}
+
 // Import partials.
-@import "custom";
+@import "bootstrap/custom";
 @import 'bootstrap';
 @import
-  "base",
-  "layout",
-  "syntax-highlighting",
-  "header",
-  "latex4ei"
+  "partials/base",
+  "partials/layout",
+  "partials/syntax-highlighting",
+  "partials/header",
+  "partials/latex"
 ;

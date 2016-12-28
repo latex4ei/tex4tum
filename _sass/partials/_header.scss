@@ -1,28 +1,5 @@
 //colors
-@import "colors";
-
-.dropdown {
-  position: relative;
-  display: inline-block;
-  align-content: right;
-  &:hover .dropdown-content {
-    display: block;
-  }
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: $white;
-  min-width: 15em;
-  //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
-  box-shadow: 0 8px 16px 0 $black_20;
-  padding: 12px 16px;
-  right: 0;
-}
-
-#logo {
-}
+@import "../modules/colors";
 
 #search {
   height: 2em;
@@ -30,27 +7,6 @@
   min-width: 15em;
   text-align: baseline;
   float: right;
-}
-
-#options {
-}
-
-header {
-  a {
-    display: flex;
-    align-items: center;
-    vertical-align: middle;
-    color: $white;
-    text-align: center;
-    padding: 0 0.5em;
-    text-decoration: none;
-  }
-  img {
-    max-width: 100%;
-    max-height: 100%;
-    height: 2em;
-    width: auto;
-  }
 }
 
 .search-input {
