@@ -22,7 +22,6 @@ The articles are based on the cheat sheets from [www.latex4ei.de](http://www.lat
 * Fuzzy JS Search: Find articles really fast
 * Abbreviations: Hover your mouse over an abbreviation to see the full name
 
-
 ## Future Plans
 * TOC and centered search on start page
 * consistent JS framework for interactive content
@@ -35,7 +34,8 @@ The articles are based on the cheat sheets from [www.latex4ei.de](http://www.lat
 * Math is rendered with KaTeX
 * Bootstrap for full responsive design  
 
-## Setup
+## Contribution
+### Setup
 Installation with rubygems
 ```bash
 sudo apt-get install ruby ruby-dev
@@ -44,17 +44,27 @@ sudo gem install sass
 ```
 Install all required depencencies in the `Gemfile` with
 ```bash
-bundle install
+make install
 ```
 
-## Building
+### Building
 To parse all markdown files, simply run
 ```bash
-bundle exec jekyll serve
+make
+```
+Call the following command to watch for changes and regenerate build folder automatically.
+```bash
+make watch
 ```
 Now browse to http://localhost:4000
 
-### Customize Bootstrap
-Copy variables from `_variables.scss` to the `_sass/_custom.scss` file to override default values without modifying source files.
+### Testing
+Run Unittests with
+```bash
+make test
+```
+
+### Customizing Bootstrap
+Copy variables from `_variables.scss` to the `_custom.scss` file to override default values without modifying source files.
 
 For `_variables.scss` see https://github.com/twbs/bootstrap/blob/v4-dev/scss/_variables.scss
