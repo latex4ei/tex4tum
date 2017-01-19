@@ -1,7 +1,7 @@
 all:
 	bundle exec jekyll build
 
-watch:
+run:
 	bundle exec jekyll serve
 
 test: all
