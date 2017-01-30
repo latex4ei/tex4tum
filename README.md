@@ -32,7 +32,7 @@ The articles are based on the cheat sheets from [www.latex4ei.de](http://www.lat
 * Markdown files are converted to HTML5 with jekyll
 * Graphs are plotted with SVG + JS
 * Math is rendered with KaTeX
-* Bootstrap for full responsive design  
+* Bootstrap for full responsive design
 
 ## Contribution
 ### Setup
@@ -48,15 +48,15 @@ make install
 ```
 
 ### Building
-To parse all markdown files, simply run
+To parse all markdown files, just run
 ```bash
 make
 ```
 Call the following command to watch for changes and regenerate build folder automatically.
 ```bash
-make watch
+make run
 ```
-Now browse to http://localhost:4000
+Now browse to http://localhost:4000/
 
 ### Testing
 Run Unittests with
