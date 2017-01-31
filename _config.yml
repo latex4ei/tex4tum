@@ -39,3 +39,4 @@ gems: [bootstrap, autoprefixer-rails, jekyll-assets]
 exclude:
   - Gemfile
   - Gemfile.lock
+  - vendor
