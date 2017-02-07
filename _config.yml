@@ -35,7 +35,10 @@ markdown: kramdown
 kramdown:
   math_engine: mathjax
 highlighter: pygments
-gems: [bootstrap, autoprefixer-rails, jekyll-assets]
+gems:
+  - bootstrap
+  - autoprefixer-rails
+  - jekyll-assets
 exclude:
   - Gemfile
   - Gemfile.lock

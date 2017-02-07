@@ -40,7 +40,6 @@ Installation with rubygems
 ```bash
 sudo apt-get install ruby ruby-dev
 sudo gem install jekyll bundler
-sudo gem install sass
 ```
 Install all required depencencies in the `Gemfile` with
 ```bash

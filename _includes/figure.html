@@ -3,5 +3,5 @@
   {% assign width={{include.width}} %}
 {% endif %}
 <figure>
-<img src="{{ include.filename | prepend: 'res/img/content-images/' }}" alt="{{ include.caption }}" style="width:{{ width }}" /><figcaption>{{ include.caption }}</figcaption>
+<img src="{{ include.filename | prepend: 'res/img/content-images/' }}" alt="{{ include.description }}" style="width:{{ width }}" /><figcaption>{{ include.description }}</figcaption>
 </figure>
