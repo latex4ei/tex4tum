@@ -159,7 +159,7 @@ function replaceSVG(svg_id, svg_path) {
     var newobj = document.createElement('object');
     var oldobj = document.getElementById(svg_id);
     newobj.id = svg_id;
-    newobj.data = svg_path;
+    newobj.data = "res/img/content-images/"+svg_path;
     newobj.type = "image/svg+xml";
     oldobj.parentNode.insertBefore(newobj, oldobj);
     oldobj.parentNode.removeChild(oldobj);

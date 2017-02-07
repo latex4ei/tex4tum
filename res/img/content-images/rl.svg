@@ -1,5 +1,5 @@
 <svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="84.345mm" width="108.8mm" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 385.5 298.86" xmlns:dc="http://purl.org/dc/elements/1.1/">
-	<script xlink:href="../res/latex4ei.js"/>
+	<script xlink:href="../../../assets/js/latex4ei.js"/>
 	<path style="fill-rule:evenodd;stroke:#000;stroke-linecap:square;stroke-miterlimit:7.7;stroke-width:2.3321;fill:#fff" d="m256.51 117.07v-67.147"/>
 	<path style="fill-rule:evenodd;stroke:#000;stroke-linecap:square;stroke-miterlimit:7.7;stroke-width:2.8774;fill:#fff" d="m256.51 290.52v-87.63"/>
 	<g transform="matrix(4,0,0,4,128.93,-402.7)">

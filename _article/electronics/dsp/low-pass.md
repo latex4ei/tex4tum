@@ -8,8 +8,8 @@ var RC_graph;
 
 function RC_loadSVG(){
     switch(document.getElementById("Filter_Select").selectedIndex){
-        case 0: replaceSVG("RC_obj", "./img/rc.svg"); break;
-        case 1: replaceSVG("RC_obj", "./img/rl.svg"); break;
+        case 0: replaceSVG("RC_obj", "rc.svg"); break;
+        case 1: replaceSVG("RC_obj", "rl.svg"); break;
     }  
 }
 
@@ -58,10 +58,8 @@ Click on the values to change them! E.g. change "10k" to "20k". All equations an
 <option value="LR">LR</option>
 </select>
 
-<figure>
-<object class="fig" style="width: 18em" id="RC_obj" data="./img/rc.svg" type="image/svg+xml"></object>
-<figcaption>Circuit of low-pass filter</figcaption>
-</figure>
+{% include svg-object.html width="18em" id="RC_obj" filename="rc.svg" description="Circuit of low-pass filter" %}
+
 <script>
 RC_el = document.getElementById("RC_obj");
 RC_el.addEventListener("load",function(){
@@ -80,9 +78,8 @@ Dynamic: $I_C = C \cdot \dot U_C$
   <option value="FR">Frequency Response</option>
 </select>
 
-<figure>
-<object class="fig" style="width: 26em" id="RC_graph" data="img/rc_graph3.svg" type="image/svg+xml"></object>
-</figure>
+
+{% include svg-object.html width="26em" id="RC_graph" filename="rc_graph3.svg" %}
 
 <script>
 RC_graph_el = document.getElementById("RC_graph");

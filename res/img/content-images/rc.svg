@@ -1,5 +1,5 @@
 <svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="84.345mm" width="108.8mm" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 385.5 298.86" xmlns:dc="http://purl.org/dc/elements/1.1/">
-	<script xlink:href="../res/latex4ei.js"/>
+	<script xlink:href="../../../assets/js/latex4ei.js"/>
 	<path style="fill-rule:evenodd;stroke:#000;stroke-linecap:square;stroke-miterlimit:7.7;stroke-width:2.8346;fill:#fff" d="m256.51 149.6v-99.202"/>
 	<path style="fill-rule:evenodd;stroke:#000;stroke-linecap:square;stroke-miterlimit:7.7;stroke-width:3.2503;fill:#fff" d="m256.51 290.18v-111.81"/>
 	<rect style="color:#000000;stroke:#000;stroke-width:2.8346;stroke-miterlimit:7.7;stroke-linecap:square" transform="rotate(90)" height="56.692" width="5.6692" y="-284.85" x="172.24"/>
