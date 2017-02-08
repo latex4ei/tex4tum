@@ -1,5 +1,0 @@
-{% assign width='100%' %}
-{% if include.width %}
-  {% assign width={{include.width}} %}
-{% endif %}
-<img src="{{ include.filename | prepend: 'res/img/content-images/' }}" alt="{{ include.image }}" style="width:{{ width }}" />
