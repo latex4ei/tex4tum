@@ -13,4 +13,3 @@ module Jekyll
 end
 
 Liquid::Template.register_tag('inlineimage', Jekyll::InlineImage)
-Liquid::Template.register_tag('figure', Jekyll::Figure)
