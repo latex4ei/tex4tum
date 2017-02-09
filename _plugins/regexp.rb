@@ -7,11 +7,6 @@ module Jekyll
       puts "Replacing Abbreviations"
       puts "Replacing Latex"
 
-      site.pages.each do |page|
-        page.content = add_abbreviations(page.content)
-        page.content = replace_latex(page.content)
-      end
-
       site.collections.each do |label, collection|
         collection.docs.each do |document|
           document.content = add_abbreviations(document.content)
@@ -21,14 +16,19 @@ module Jekyll
     end
 
     def replace_latex(content)
-      # Put Regexp here
+      latex_definitions = File.read('./res/parser_util/tex_definitions.md')
+      # content += latex_definitions
 
-      content
+      return content
     end
 
     def add_abbreviations(content)
       abbreviations = File.read('./res/parser_util/abbreviations.md')
       content += abbreviations
+
+      return content
     end
+
+    private :replace_latex, :add_abbreviations
   end
 end
