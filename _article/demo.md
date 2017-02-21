@@ -9,10 +9,9 @@ This is a showcase to demonstrate how learning materials could be made interacti
 
 ### Control the Focus
 Read only the content you really need. Use the options in the top right corner to change the visibility of the following content:<br>
-<div class="definition">Definition: The square root is the math function $\sqrt{\cdot}$.<br></div><div class="example">
-Example: $\sqrt{ x^4 } = x^2$<br>
+<div class="definition">Definition: The square root is the math function $\sqrt{\cdot}$.<br></div>
+<div class="example">Example: $\sqrt{ x^4 } = x^2$<br></div>
 <div class="legend">Legend: where x is an arbitrary value</div>
-</div>
 
 Furthermore, abbreviations do not need explanations anymore. If you do not know it just move the mouse over it: SVG
 
