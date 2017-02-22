@@ -31,14 +31,21 @@ defaults:
       permalink: /:name
 
 # Build settings
-markdown: kramdown
+markdown: Pandoc
 kramdown:
   math_engine: mathjax
+pandoc:
+  flags: 'html5, latex_macros, implicit_figures'
+  extensions:
+    - normalize
+    - smart
+    - latexmathml
 highlighter: pygments
 gems:
   - bootstrap
   - autoprefixer-rails
   - jekyll-assets
+  - jekyll-pandoc
 exclude:
   - Gemfile
   - Gemfile.lock

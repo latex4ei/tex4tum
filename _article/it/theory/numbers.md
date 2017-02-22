@@ -35,6 +35,11 @@ C/Ada Notation: `0x..` / `16#..` (hex), `0b..` / `2#..` (bin)
 | I32 | -2 147 483 648 | .. | 2.147.483.647 |
 | I$x$ | $-2^{(x-1)}$ | .. | $2^{(x-1)} - 1$ |
 
+Useful approximations:
+$2^{10} \approx 1k$
+$2^{20} \approx 1M$
+$2^{30} \approx 1G$
+
 
 ## 2-Complement
 
