@@ -15,9 +15,10 @@ module Jekyll
       end
     end
 
+    private
+
     ABBREVIATION_REGEXP = %r{(\*\[([^\]]+)\]:\s*([^\n]+\n))}
     SECTION_REGEXP = %r{## (.*?)\n}
-
 
     def add_latex_definitions(content)
       latex_definitions = File.read('./res/parser_util/tex_definitions.md')
@@ -49,19 +50,14 @@ module Jekyll
       return content
     end
 
-
-
-    def create_search_index(content) 
-      content.scan(SECTION_REGEXP) { |match|
+    def create_search_index(content)
+      content.scan(SECTION_REGEXP) do |match|
           section = match[0]   #$1
 
           # todo: add to tags
-      }
+      end
 
       return content
     end
-
-
-    private :add_latex_definitions, :add_abbreviations, :parse_abbreviation
   end
 end

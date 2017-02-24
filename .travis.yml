@@ -6,6 +6,7 @@ addons:
   apt:
     packages:
       - make
+      - pandoc
 
 before_install:
   - gem install jekyll bundler
