@@ -6,11 +6,12 @@ run:
 
 test: all
 	bundle exec htmlproofer ./_site --only-4xx --check-favicon --check-html
+	bundle exec rspec
 
 install:
 	bundle install
 
 clean:
-	rm -rf ./_site/*
+	bundle exec jekyll clean
 
 rebuild: clean all
