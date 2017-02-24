@@ -16,6 +16,7 @@ GEM
     colorator (1.1.0)
     colored (1.2)
     concurrent-ruby (1.0.3)
+    diff-lcs (1.3)
     ethon (0.10.1)
       ffi (>= 1.3.0)
     execjs (2.7.0)
@@ -83,6 +84,19 @@ GEM
     rb-inotify (0.9.7)
       ffi (>= 0.5.0)
     rouge (1.11.1)
+    rspec (3.5.0)
+      rspec-core (~> 3.5.0)
+      rspec-expectations (~> 3.5.0)
+      rspec-mocks (~> 3.5.0)
+    rspec-core (3.5.4)
+      rspec-support (~> 3.5.0)
+    rspec-expectations (3.5.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.5.0)
+    rspec-mocks (3.5.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.5.0)
+    rspec-support (3.5.0)
     safe_yaml (1.0.4)
     sass (3.4.23)
     sprockets (3.6.3)
@@ -106,10 +120,11 @@ DEPENDENCIES
   jekyll-assets
   jekyll-pandoc
   pygments.rb
+  rspec
   sass
 
 RUBY VERSION
-   ruby 2.3.3p222
+   ruby 2.3.1p112
 
 BUNDLED WITH
-   1.14.3
+   1.14.5
