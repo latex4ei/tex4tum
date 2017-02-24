@@ -16,7 +16,8 @@ Take a look at the [**Demo Page!**](demo.html)
 
 ### [Information Theory](it.html)
 * [Complexity Theory](complexity-theory.html) • [Numbers](numbers.html)
-* [**Languages**](language.html): [C](c.html) • [Ada](ada.html) • [Bash](bash.html) • [Matlab](matlab.html)
+* [**Languages**](language.html): [C](c.html) • [Ada](ada.html) • [Bash](bash.html) • [Matlab](matlab.html) • [Regex](regular-expressions.html)
+* Computer: [Paging](paging.html) • [Filesystem](filesystem.html)
 
 ### [Physics](physics.html)
 * [SI-Units](si-units.html) • [Physical Constants](constants.html)
