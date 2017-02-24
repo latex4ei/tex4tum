@@ -15,3 +15,6 @@ clean:
 	bundle exec jekyll clean
 
 rebuild: clean all
+
+update:
+	bundle update
