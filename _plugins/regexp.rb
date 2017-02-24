@@ -4,6 +4,9 @@ module Jekyll
     priority :highest
 
     def generate(site)
+      puts "Add TeX Definitions..."
+      puts "Add Abbreviations..."
+
       site.collections.each do |label, collection|
         collection.docs.each do |document|
           document.content = add_abbreviations(document.content)
@@ -17,7 +20,6 @@ module Jekyll
 
 
     def add_latex_definitions(content)
-      puts "Add Latex Content..."
       latex_definitions = File.read('./res/parser_util/tex_definitions.md')
       content = latex_definitions + content
 
@@ -28,7 +30,6 @@ module Jekyll
       abbreviations = File.read('./res/parser_util/abbreviations.md')
       content += abbreviations
 
-      puts "Replacing Abbreviations..."
       content = parse_abbreviation(content)
 
       return content
