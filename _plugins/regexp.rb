@@ -4,9 +4,6 @@ module Jekyll
     priority :highest
 
     def generate(site)
-      puts "Replacing Abbreviations"
-      puts "Replacing Latex"
-
       site.collections.each do |label, collection|
         collection.docs.each do |document|
           document.content = add_abbreviations(document.content)
@@ -20,7 +17,10 @@ module Jekyll
 
     ABBREVIATION_REGEXP = %r{(\*\[([^\]]+)\]:\s*([^\n]+\n))}
 
-    def replace_latex(content)
+    SECTION_REGEXP = %r{## (.*?)\n}
+
+    def replace_latex(content) 
+      puts "Replacing Latex..."
       latex_definitions = File.read('./res/parser_util/tex_definitions.md')
       # content += "$$#{latex_definitions}$$"
       content = latex_definitions + content
@@ -44,6 +44,7 @@ module Jekyll
       abbreviations = File.read('./res/parser_util/abbreviations.md')
       content += abbreviations
 
+      puts "Replacing Abbreviations..."
       content = parse_abbreviation(content)
 
       return content
@@ -59,6 +60,17 @@ module Jekyll
 
           content = content.gsub(line, '')
           content = content.gsub(/(?<=\W|^)#{key}(?=\W|$)/, '<abbr title="' + value + '" >' + key + '</abbr>')
+      }
+
+      return content
+    end
+
+
+    def create_search_index(content) 
+      content.scan(SECTION_REGEXP) { |match|
+          section = match[0]   #$1
+
+          # todo: add to tags
       }
 
       return content

@@ -11,12 +11,25 @@ Object: The instance of a class
 Classes/Objects consist of attributes and methods.
 
 ## Concepts
+There are four main concepts in OOP:
 
-* Encapsulation: Related data and subprograms are grouped together
-* Inheritance: Class can be derived from base classes and inherit their methods and attributes
-* Polymorphism: Method calls are dynamically dispatched during runtime.
-* Abstraction: Specification of abstract interface that must be implemented by objects.
+* Encapsulation: Grouping of related attributes and methods
+* Inheritance: Derive classes (hierarchy)
+* Polymorphism: overwrite derived methods; dynamic dispatching
+* Abstraction: Force overwriting
 
+
+### Encapsulation
+Related data and subprograms are grouped together
+
+### Inheritance
+Class can be derived from base classes and inherit their methods and attributes
+
+### Polymorphism
+Methods of derived types are overwritten. Class wide calls are dynamically dispatched during runtime.
+
+### Abstraction
+Specification of abstract interface that must be implemented by objects.
 
 
 ## Likov Substitution Principle

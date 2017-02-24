@@ -12,11 +12,12 @@ C/Ada Notation: `0x..` / `16#..` (hex), `0b..` / `2#..` (bin)
 | Octal | <span id="oct_result">0377</span> |
 | Binary | <span id="bin_result">0b11111111</span> |
 
-32bit Integer Little Endian:
-<div id="int_32_l"></div>
 
-32bit Integer Big Endian:
-<div id="int_32_b"></div>
+0x100000FF as 32bit Integer stored at address 0x1000:
+| Endian | 0x1000 | 0x1001 | 0x1002 | 0x1003 |
+|----|---|---|---|
+| Little | 11111111 | 00000000 | 00000000 | 00000001 |
+| Big    | 00000001 | 00000000 | 00000000 | 11111111 |
 
 
 ## Data Types
@@ -26,7 +27,7 @@ C/Ada Notation: `0x..` / `16#..` (hex), `0b..` / `2#..` (bin)
 | Type | Limit Min |  | Limit Max  |
 |----|----:|----|:---|
 | U8, Char | 0 | .. | $255 = 2^8 - 1$ |
-| U16 | 0 | .. | $65353 = 2^{16} -1$ |
+| U16 | 0 | .. | $65535 = 2^{16} -1$ |
 | U32 | 0 | .. | $4\,294\,967\,295$ |
 | U64 | 0 | .. | $18\;446\;744\;073\;709\;551\;615$ |
 | U$x$ | 0 | .. | $2^x - 1$ |

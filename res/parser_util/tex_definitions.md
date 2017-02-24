@@ -60,6 +60,8 @@
 \newcommand{\second}{\text{s}\siexp}
 \newcommand{\ampere}{\text{A}\siexp}
 \newcommand{\kelvin}{\text{K}\siexp}
+\newcommand{\mol}{\text{mol}\siexp}
+\newcommand{\candela}{\text{cd}\siexp}
 \newcommand{\newton}{\text{N}\siexp}
 
 \newcommand{\hertz}{\text{Hz}\siexp}
