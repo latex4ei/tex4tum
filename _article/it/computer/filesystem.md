@@ -44,3 +44,5 @@ Unused bytes within a memory block. Files reserve complete blocks of memory. The
 
 ### External Fragmentation
 Unused blocks between Files. Happens if files are resized and become smaller or if a sequence of free blocks is slightly larger than the size of a new file.
+
+

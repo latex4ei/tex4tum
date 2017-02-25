@@ -1,5 +1,6 @@
 ---
 title: Trigonometry
+tags: [Sinus, Cosinus, Tangens, Arctan]
 ---
 
 | Properties |    Equation      a Test        |

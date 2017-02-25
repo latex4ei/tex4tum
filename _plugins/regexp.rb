@@ -11,12 +11,16 @@ module Jekyll
         collection.docs.each do |document|
           document.content = add_abbreviations(document.content)
           document.content = add_latex_definitions(document.content)
+          create_search_index(document.content)
+
+          puts document.data["tags"]  # gotcha!
         end
       end
     end
 
     ABBREVIATION_REGEXP = %r{(\*\[([^\]]+)\]:\s*([^\n]+\n))}
-    SECTION_REGEXP = %r{## (.*?)\n}
+    SECTION_REGEXP = %r{(?:^|\n)\s*## (.*?)\s*(?:\n|$)}
+    TAGS_REGEXP = %r{(?:\n|^)\s*tags:\s*(\[.*?\])\s*(?:$|\n)}
 
 
     def add_latex_definitions(content)
@@ -52,13 +56,20 @@ module Jekyll
 
 
     def create_search_index(content) 
-      content.scan(SECTION_REGEXP) { |match|
-          section = match[0]   #$1
+      # content.scan(SECTION_REGEXP) { |match|
+      #     section = match[0]   #$1
 
-          # todo: add to tags
-      }
+      #     entry = %q{ {title: "} }
+      #     # todo: add to tags
+      # }
 
-      return content
+      content.scan(TAGS_REGEXP) do |match|
+        puts "hit"
+        json = match[0].gsub(', ', '", "')
+        json = json.sub('[', '["')
+        json = json.sub(']', '"]')
+        puts json
+      end
     end
 
 
