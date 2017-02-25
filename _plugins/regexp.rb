@@ -12,7 +12,7 @@ module Jekyll
           document.content = add_abbreviations(document.content)
           document.content = add_latex_definitions(document.content)
 
-          puts document.data  # gotcha!
+          # puts document.data  # gotcha!
         end
       end
     end
