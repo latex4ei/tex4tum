@@ -29,7 +29,7 @@ The articles are based on the cheat sheets from [www.latex4ei.de](http://www.lat
 * More content
 
 ## Internal Working
-* Markdown files are converted to HTML5 with jekyll
+* Markdown files are converted to HTML5 with jekyll and pandoc
 * Graphs are plotted with SVG + JS
 * Math is rendered with KaTeX
 * Bootstrap for full responsive design
@@ -38,7 +38,7 @@ The articles are based on the cheat sheets from [www.latex4ei.de](http://www.lat
 ### Setup
 Installation with rubygems
 ```bash
-sudo apt-get install ruby ruby-dev
+sudo apt-get install ruby ruby-dev pandoc
 sudo gem install jekyll bundler
 ```
 Install all required depencencies in the `Gemfile` with
@@ -47,7 +47,7 @@ make install
 ```
 
 ### Building
-To parse all markdown files, just run
+To parse all markdown files run
 ```bash
 make
 ```
