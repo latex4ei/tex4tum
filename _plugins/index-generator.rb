@@ -26,7 +26,7 @@ module Jekyll
       end
 
       json_string = "search_index = " + index_array.to_json
-      File.write('assets/js/search_index.json', json_string)
+      File.write(site.dest + '/assets/js/search_index.json', json_string)
     end
 
 
@@ -34,7 +34,7 @@ module Jekyll
     TAGS_REGEXP = %r{(?:\n|^)\s*tags:\s*(\[.*?\])\s*(?:$|\n)}
 
 
-    def get_sectionlist(content) 
+    def get_sectionlist(content)
       section_array = Array.new
 
       content.scan(SECTION_REGEXP) do |match|
