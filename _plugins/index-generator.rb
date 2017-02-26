@@ -1,9 +1,7 @@
 module Jekyll
   require 'json'
 
-  class IndexGenerator < Generator
-    safe true
-    priority :highest
+  class IndexGenerator
 
     def generate(site)
       puts "Generating Search Index..."
@@ -29,10 +27,10 @@ module Jekyll
       File.write(site.dest + '/assets/js/search_index.json', json_string)
     end
 
+    private
 
     SECTION_REGEXP = %r{(?:^|\n)\s*## (.*?)\s*(?:\n|$)}
     TAGS_REGEXP = %r{(?:\n|^)\s*tags:\s*(\[.*?\])\s*(?:$|\n)}
-
 
     def get_sectionlist(content)
       section_array = Array.new
@@ -45,5 +43,9 @@ module Jekyll
       return section_array
     end
 
+  end
+
+  Hooks.register :site, :post_write do |site|
+    IndexGenerator.new.generate(site)
   end
 end
