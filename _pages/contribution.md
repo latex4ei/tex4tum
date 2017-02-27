@@ -78,4 +78,23 @@ Abbreviations are parsed and linked automatically. If you want to add a new abbr
 To define new LaTeX commands add them to `res/parser_util/tex_definition.md`
 
 ### TODOs
-Alle Zeilen die mit einem TODO beginnen werden in die [TODOLIST](todo.html) geschrieben.
+All lines starting with TODO will be added to [TODOLIST](todo.html).
+
+### Interactive Environments
+The following blocks can be enabled and disabled via the options (see [Demo Page](demo.html))
+```bash
+{% raw %}
+{% definition %}text{% enddefinition %}
+{% example %}text{% endexample %}
+{% legend %}text{% endlegend %}
+{% endraw %}
+```
+
+### Emphbox
+```bash
+{% raw %}
+{% emphbox %}Conten in box{% endemphbox %}
+{% endraw %}
+```
+Output:
+{% emphbox %}Conten in box{% endemphbox %}

@@ -2,9 +2,9 @@
 title: Diode
 ---
 
-<div class="definition">
+{% definition %}
 A diode is a two-terminal electronic component that conducts primarily in one direction.
-</div>
+{% enddefinition %}
 
 
 

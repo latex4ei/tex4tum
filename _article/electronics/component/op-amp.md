@@ -2,9 +2,9 @@
 title: Op Amp
 ---
 
-<div class="definition">
+{% definition %}
 An operational amplifier (short op-amp) is a DC-coupled high-gain electronic voltage amplifier with a differential input and a single-ended output.
-</div>
+{% enddefinition %}
 All amplifier circuits have the feedback to the negative input! <br>
 An Op-Amp does not draw current from the input!
 

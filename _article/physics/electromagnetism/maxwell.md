@@ -2,9 +2,9 @@
 title: Maxwell Equations
 ---
 
-<div class="definition">
+{% definition %}
 The Maxwell Equations are 4 fundamental equations that describe the relation between the quantities of electromagnetism.
-</div>
+{% enddefinition %}
 
 | Name | Integral Version | Differential Version |
 |---|---|---|

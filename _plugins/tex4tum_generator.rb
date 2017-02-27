@@ -63,8 +63,8 @@ module Jekyll
 
     def get_todos(document, todos)
       document.content.scan(TODO_REGEXP) do |match|
-        todo = match[0].gsub(/<\/?[^>]*>/, "") # Stripping thml
-        todos.push({"todo" => todo, "file" => document.path, "link" => document.url + ".html", "name" => document.data['title']})
+        todo = match[0].gsub(/<\/?[^>]*>/, "") # Stripping html
+        todos.push({"todo" => todo, "file" => document.data['slug'] + document.data['ext'], "link" => document.url + ".html", "name" => document.data['title']})
       end
       return todos
     end

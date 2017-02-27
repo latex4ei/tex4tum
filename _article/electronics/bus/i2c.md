@@ -2,9 +2,9 @@
 title: Inter-Integrated Circuit I²C
 ---
 
-<div class="definition">
+{% definition %}
 I2C is serial bus.
-</div>
+{% enddefinition %}
 
 Specification
 -------------

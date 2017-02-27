@@ -2,9 +2,9 @@
 title: Matlab
 ---
 
-<div class="definition">
+{% definition %}
 Matlab is a powerful computer algebra system.
-</div>
+{% enddefinition %}
 
 {% highlight matlab %}
  A = ones(3)

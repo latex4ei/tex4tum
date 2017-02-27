@@ -2,9 +2,9 @@
 title: Ada
 ---
 
-<div class="definition">
+{% definition %}
 Ada is a programming language intended for real-time safety-critical systems.
-</div>
+{% enddefinition %}
 
 
 {% highlight ada %}

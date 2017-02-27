@@ -2,9 +2,12 @@
 title: Matrix
 ---
 
-<div class="definition">
-A Matrix is a table of math objects. <span class="example">For example a matrix $\ma A \in \mathbb K^{2\times 3}$ could be $\ma A = \mat{ a & b & c \\ d & e & f}$.</span>
-</div>
+{% definition %}
+A Matrix is a table of math objects.
+{% enddefinition %}
+{% example %}
+For example a matrix $\ma A \in \mathbb K^{2\times 3}$ could be $\ma A = \mat{ a & b & c \\ d & e & f}$.
+{% endexample %}
 
 $\ma A=(a_{ij}) \in \mathbb K^{m\times n}$ has $m$ rows (index $i$) and $n$ columns (index $j$)
 

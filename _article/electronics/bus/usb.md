@@ -2,9 +2,9 @@
 title: Universal Serial Bus
 ---
 
-<div class="definition">
+{% definition %}
 USB is serial bus.
-</div>
+{% enddefinition %}
 
 
 
