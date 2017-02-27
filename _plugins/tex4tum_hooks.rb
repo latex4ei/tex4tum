@@ -11,7 +11,6 @@ module Jekyll
       site.collections.each do |label, collection|
         collection.docs.each do |document|
 
-
           section_array = get_sectionlist(document.content)
 
           entry = {title: document.data["title"], tags: document.data["tags"], sections: section_array}
@@ -36,9 +35,9 @@ module Jekyll
       section_array = Array.new
 
       content.scan(SECTION_REGEXP) do |match|
-           section = match[0]   #$1
-           section_array.push(section)
-           # puts section
+        section = match[0]   #$1
+        section_array.push(section)
+        # puts section
       end
       return section_array
     end

@@ -1,4 +1,6 @@
 module Jekyll
+  require "yaml"
+
   class Tex4TumGenerator < Generator
     safe true
     priority :highest
@@ -6,20 +8,28 @@ module Jekyll
     def generate(site)
       puts "Add TeX Definitions..."
       puts "Add Abbreviations..."
+      puts "Parsing TODOs..."
+
+      todos = Array.new
 
       site.collections.each do |label, collection|
         collection.docs.each do |document|
+          todos = get_todos(document, todos)
+
           document.content = add_abbreviations(document.content)
           document.content = add_latex_definitions(document.content)
 
           # puts document.data  # gotcha!
         end
       end
+
+      site.data['todos'] = todos
     end
 
     private
 
     ABBREVIATION_REGEXP = %r{(\*\[([^\]]+)\]:\s*([^\n]+\n))}
+    TODO_REGEXP = %r{TODO\s(.*?)\n}
 
     def add_latex_definitions(content)
       latex_definitions = File.read('./res/parser_util/tex_definitions.md')
@@ -49,6 +59,14 @@ module Jekyll
       end
 
       return content
+    end
+
+    def get_todos(document, todos)
+      document.content.scan(TODO_REGEXP) do |match|
+        todo = match[0].gsub(/<\/?[^>]*>/, "") # Stripping thml
+        todos.push({"todo" => todo, "file" => document.path, "link" => document.url + ".html", "name" => document.data['title']})
+      end
+      return todos
     end
 
   end

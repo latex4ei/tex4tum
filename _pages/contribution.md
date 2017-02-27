@@ -76,3 +76,6 @@ Abbreviations are parsed and linked automatically. If you want to add a new abbr
 
 ### LaTeX
 To define new LaTeX commands add them to `res/parser_util/tex_definition.md`
+
+### TODOs
+Alle Zeilen die mit einem TODO beginnen werden in die [TODOLIST](todo.html) geschrieben.
