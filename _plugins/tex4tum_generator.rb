@@ -1,5 +1,5 @@
 module Jekyll
-  class RegexpFilter < Generator
+  class Tex4TumGenerator < Generator
     safe true
     priority :highest
 
