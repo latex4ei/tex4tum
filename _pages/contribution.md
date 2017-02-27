@@ -42,6 +42,30 @@ Output: Inline Image {% inlineimage capacitor_symbol.svg %}
 Output: SVG Object
 {% include svg-object.html width="18em" id="RC_obj" filename="rc.svg" description="Circuit of low-pass filter" %}
 
+### Diagramms
+We use [mermaid](https://knsv.github.io/mermaid) for drawing diagramms. For this we created a liquid tag
+```bash
+{% raw %}
+{% mermaid %}
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+{% endmermaid %}
+{% endraw %}
+```
+Check some [demos](https://knsv.github.io/mermaid/#demos9) and the online editor of mermaid: [Live Editor](knsv.github.io/mermaid/live_editor)
+
+Output:
+{% mermaid %}
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+{% endmermaid %}
+
 ### Abbreviations
 Abbreviations are parsed and linked automatically. If you want to add a new abbreviation just add it to `res/parser_util/abbreviations.md`. The structure should look like this
 ```bash
@@ -51,4 +75,4 @@ Abbreviations are parsed and linked automatically. If you want to add a new abbr
 ```
 
 ### LaTeX
-To define new LaTeX commands add them to `res/parser_util/tex_definition.md` 
+To define new LaTeX commands add them to `res/parser_util/tex_definition.md`
