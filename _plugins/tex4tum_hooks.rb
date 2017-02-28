@@ -8,12 +8,18 @@ module Jekyll
 
       index_array = Array.new
 
+      # puts site.pages
+
       site.collections.each do |label, collection|
+        # puts collection
+
         collection.docs.each do |document|
 
           section_array = get_sectionlist(document.content)
 
-          entry = {title: document.data["title"], tags: document.data["tags"], sections: section_array}
+          # puts document.dest  # data["slug"]
+
+          entry = {url: document.data["slug"], title: document.data["title"], tags: document.data["tags"], sections: section_array}
           index_array.push(entry)
 
           # puts entry  # gotcha!
@@ -23,10 +29,18 @@ module Jekyll
       end
 
       json_string = "search_index = " + index_array.to_json
+
+      
+      js_text = File.read(site.dest + JS_PATH)
+      js_text = js_text.gsub(/var search_index = [^\n]+/, 'var ' + json_string)
+      File.write(site.dest + JS_PATH, js_text)
+
       File.write(site.dest + '/assets/js/search_index.json', json_string)
     end
 
     private
+
+    JS_PATH = '/assets/js/perfect-autocompl.js'
 
     SECTION_REGEXP = %r{(?:^|\n)\s*## (.*?)\s*(?:\n|$)}
     TAGS_REGEXP = %r{(?:\n|^)\s*tags:\s*(\[.*?\])\s*(?:$|\n)}
