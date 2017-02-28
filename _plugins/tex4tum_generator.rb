@@ -31,7 +31,7 @@ module Jekyll
     private
 
     ABBREVIATION_REGEXP = %r{(\*\[([^\]]+)\]:\s*([^\n]+\n))}
-    TODO_REGEXP = %r{TODO\s(.*?)\n}
+    TODO_REGEXP = %r{(?:\s|^)((?:TODO:?|\\todo|@todo)\s(.*?))(?:\.|\n)}
     INNER_SECTION_REGEXP = %r{^\s*(##+\s(.*?)\n((?:.|\n)*?)\n\s*\n(?=\s*##|\Z))}
     DEFINITION_REGEXP = %r{\A([A-Z](?:.|\n)*?)\n\s*\n}
 
@@ -69,8 +69,9 @@ module Jekyll
 
     def get_todos(document, todos)
       document.content.scan(TODO_REGEXP) do |match|
-        todo = match[0].gsub(/<\/?[^>]*>/, "") # Stripping html
+        todo = match[1].gsub(/<\/?[^>]*>/, "") # Stripping html
         todos.push({"todo" => todo, "file" => document.data['slug'] + document.data['ext'], "link" => document.url + ".html", "name" => document.data['title']})
+        document.content = document.content.sub(match[0], "")  # remove from final article
       end
       return todos
     end
