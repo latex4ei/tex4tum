@@ -1,5 +1,6 @@
 ---
 title: Serial Peripheral Interface
+tags: [SPI]
 ---
 
 SPI is serial bus.
@@ -23,5 +24,14 @@ Common Speeds
 :   9'600 bit/s, 38'400 bit/s
 
 
-Protocol
---------
+## Example of SPI
+This is a test
+
+### Legend
+The equation is
+$$x = 3 + y$$
+where $x$ is a number and $y$ too
+
+
+
+## Another section

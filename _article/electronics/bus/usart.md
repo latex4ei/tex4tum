@@ -1,5 +1,6 @@
 ---
-title: Universal Asynchronous Receiver Transmitter
+title: Universal Asynchronous Receiver Transmitter (UART)
+tags: [RX, TX, RTS, CTS]
 ---
 
 UART is serial bus.

@@ -1,10 +1,10 @@
 ---
 title: Inter-Integrated Circuit I²C
+tags: [I2C, SDA, SCK]
 ---
 
-{% definition %}
 I2C is serial bus.
-{% enddefinition %}
+
 
 Specification
 -------------

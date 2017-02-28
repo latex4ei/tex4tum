@@ -1,5 +1,6 @@
 ---
 title: Complex Numbers
+tags: [Imaginary Unit]
 ---
 
 $\cx z := a + b\i = r \cdot \exp(\i \varphi)$ with Imaginary Unit $\i = \sqrt{-1}$.

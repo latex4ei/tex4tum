@@ -16,6 +16,8 @@ module Jekyll
         collection.docs.each do |document|
           todos = get_todos(document, todos)
 
+          document.content = markDefinition(document.content)    # this has to be called first
+          document.content = replaceClasses(document.content)
           document.content = add_abbreviations(document.content)
           document.content = add_latex_definitions(document.content)
 
@@ -30,6 +32,10 @@ module Jekyll
 
     ABBREVIATION_REGEXP = %r{(\*\[([^\]]+)\]:\s*([^\n]+\n))}
     TODO_REGEXP = %r{TODO\s(.*?)\n}
+    INNER_SECTION_REGEXP = %r{^\s*(##+\s(.*?)\n((?:.|\n)*?)\n\s*\n(?=\s*##|\Z))}
+    DEFINITION_REGEXP = %r{\A([A-Z](?:.|\n)*?)\n\s*\n}
+
+    LEGEND_REGEXP = %r{(?:^|\n)\s*(\$\$(?=[^\s$])(?:.*?)(?<=[^\s$\\])\$\$\s*\n\s*((?:with|where|Legend:)\s+((?:.|\n)*?)\n\s*\n))}
 
     def add_latex_definitions(content)
       latex_definitions = File.read('./res/parser_util/tex_definitions.md')
@@ -68,6 +74,38 @@ module Jekyll
       end
       return todos
     end
+
+
+
+
+    def markDefinition(content)
+      #puts "START" + content
+      content = content.sub(DEFINITION_REGEXP, %q{{% definition %}\1{% enddefinition %}})
+      return content
+    end
+
+
+    def replaceClasses(content)
+      section_array = Array.new
+
+      content.scan(INNER_SECTION_REGEXP) do |match|
+        section_title = match[1]   #$1
+        if section_title.include? "Example"
+          content = content.sub(match[0], %q{{% example %}} + "\n" + match[0] + "\n" + %q{{% endexample %}})
+        end
+      end
+
+      content.scan(LEGEND_REGEXP) do |match|
+        equation_par = match[0]   #$1
+        equation_par = equation_par.sub(match[1], %q{{% legend %}} + "\n" + match[1] + "\n" + %q{{% endlegend %}})
+        content = content.sub(match[0], equation_par)
+      end
+
+
+      return content
+    end
+
+
 
   end
 end

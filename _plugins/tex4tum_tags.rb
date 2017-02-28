@@ -28,7 +28,7 @@ module Jekyll
   class Example < Liquid::Block
 
     def render(context)
-      "<div class=\"example\"><b>Example:</b> #{super}</div>"
+      "<div class=\"example\">#{super}</div>"
     end
   end
 

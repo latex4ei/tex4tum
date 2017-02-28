@@ -1,5 +1,6 @@
 ---
 title: Mechanical Motion
+tags: [Rotation, Translation]
 ---
 
 Laws of Motion
