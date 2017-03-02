@@ -76,15 +76,11 @@ module Jekyll
       return todos
     end
 
-
-
-
     def markDefinition(content)
       #puts "START" + content
       content = content.sub(DEFINITION_REGEXP, %q{{% definition %}\1{% enddefinition %}})
       return content
     end
-
 
     def replaceClasses(content)
       section_array = Array.new
@@ -102,11 +98,7 @@ module Jekyll
         content = content.sub(match[0], equation_par)
       end
 
-
       return content
     end
-
-
-
   end
 end

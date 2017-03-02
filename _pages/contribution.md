@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Contribution
+icon: handshake-o
 ---
 ## Setup
 Follow the instruction of the [README](https://github.com/latex4ei/tex4tum/blob/master/README.md#contribution) to install all dependencies

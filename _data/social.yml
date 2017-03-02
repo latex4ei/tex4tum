@@ -1,3 +1,10 @@
+- social: website
+  username: latex4ei.de
+  domain:
+  icon: globe
+  fa: true
+  about_text: The content of this page is based on the cheatsheets from
+
 - social: github
   username: latex4ei
   domain: github.com

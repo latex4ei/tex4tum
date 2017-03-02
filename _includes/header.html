@@ -1,23 +1,20 @@
 <nav class="navbar fixed-top navbar-inverse bg-primary navbar-toggleable-md">
-  <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"></button>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
   <div class="collapse navbar-collapse" id="navbarResponsive">
     <a class="navbar-brand" href="{{ "index.html" | relative_url }}">
       <img src="{{ "./res/img/Logo-inv.png" | relative_url }}" height="30" alt="Logo">
         {{site.title}}
     </a>
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="{{ "index.html" | relative_url }}">Home <span class="sr-only">(current)</span></a>
-      </li>
       {% for my_page in site.pages %}
       {% if my_page.title %}
       <li class="nav-item">
-        <a class="nav-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+        <a class="nav-link" href="{{ my_page.url | relative_url }}"><i class="fa fa-{{ my_page.icon }}"></i> {{ my_page.title | escape }}</a>
       </li>
       {% endif %}
       {% endfor %}
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="{{ "index.html" | relative_url }}" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Options</a>
+        <a class="nav-link dropdown-toggle" href="{{ "index.html" | relative_url }}" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{% icon fa-cog %} Options</a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
           <h6 class="dropdown-header">Display Options</h6>
           <div class="form-check">
@@ -42,10 +39,12 @@
       </li>
     </ul>
     {% if page.layout == 'page' %}
-    <div id="search" class="search-container">
-      <input type="search" class="search-input" results=0 placeholder="Search (fuzzy)" tabindex="1">
-      <div class="ac-results-wrapper"></div>
-    </div>
+    <form class="form-inline">
+      <div id="search" class="search-container">
+        <input type="search" class="search-input" results=0 placeholder="Search (fuzzy)" tabindex="1">
+        <div class="ac-results-wrapper"></div>
+      </div>
+    </form>
     {% endif %}
   </div>
 </nav>
