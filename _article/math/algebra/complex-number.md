@@ -5,7 +5,7 @@ tags: [Imaginary Unit]
 
 $\cx z := a + b\i = r \cdot \exp(\i \varphi)$ with Imaginary Unit $\i = \sqrt{-1}$.
 
-{% include figure.html filename="complex.svg" description="Complex Plane" width="50%" %}
+{% include figure.html filename="complex.svg" description="Complex Plane"%}
 
 ## Rules
 $\i^{2n} = -1^n$ &emsp; $\i^{2n+1} = -\i^n$ &emsp; $\i^{-1} = -\i$

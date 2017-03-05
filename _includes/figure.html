@@ -1,7 +1,3 @@
-{% assign width='100%' %}
-{% if include.width %}
-  {% assign width={{include.width}} %}
-{% endif %}
-<figure>
-<img src="{{ include.filename | prepend: 'res/img/content-images/' }}" alt="{{ include.description }}" style="width:{{ width }}" /><figcaption>{{ include.description }}</figcaption>
+<figure class="figure">
+<img class="figure-img img-fluid" src="{{ include.filename | prepend: 'res/img/content-images/' }}" alt="{{ include.description }}"/><figcaption class="figure-caption">{{ include.description }}</figcaption>
 </figure>

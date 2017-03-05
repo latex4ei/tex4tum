@@ -6,8 +6,7 @@ tags: [SPI]
 SPI is serial bus.
 
 
-Specification
--------------
+## Specification
 
 | Signals | |
 |------|---|

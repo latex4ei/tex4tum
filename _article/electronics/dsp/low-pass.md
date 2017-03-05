@@ -10,7 +10,7 @@ function RC_loadSVG(){
     switch(document.getElementById("Filter_Select").selectedIndex){
         case 0: replaceSVG("RC_obj", "rc.svg"); break;
         case 1: replaceSVG("RC_obj", "rl.svg"); break;
-    }  
+    }
 }
 
 function RC_calcFrequency() {
@@ -58,7 +58,7 @@ Click on the values to change them! E.g. change "10k" to "20k". All equations an
 <option value="LR">LR</option>
 </select>
 
-{% include svg-object.html width="18em" id="RC_obj" filename="rc.svg" description="Circuit of low-pass filter" %}
+{% include svg-object.html id="RC_obj" filename="rc.svg" description="Circuit of low-pass filter" %}
 
 <script>
 RC_el = document.getElementById("RC_obj");
@@ -79,7 +79,7 @@ Dynamic: $I_C = C \cdot \dot U_C$
 </select>
 
 
-{% include svg-object.html width="26em" id="RC_graph" filename="rc_graph3.svg" %}
+{% include svg-object.html id="RC_graph" filename="rc_graph3.svg" %}
 
 <script>
 RC_graph_el = document.getElementById("RC_graph");
@@ -89,4 +89,4 @@ RC_graph_el.addEventListener("load",function(){
 </script>
 
 $V_{\mathrm{out}} = V_{\mathrm{max}} \left( 1 - \exp( - t/\tau) \right)$<br>
-$V_{\mathrm{out}}$ will reach $V_{\mathrm{max}}$ after 3 to $4 \tau$.  
+$V_{\mathrm{out}}$ will reach $V_{\mathrm{max}}$ after 3 to $4 \tau$.

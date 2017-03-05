@@ -3,7 +3,7 @@ title: Trigonometry
 tags: [Sinus, Cosinus, Tangens, Arctan]
 ---
 
-{% include svg-object.html width="60%" id="UC" filename="unit_circle.svg" %}
+{% include svg-object.html id="UC" filename="unit_circle.svg" %}
 
 ## Basic Relations
 
@@ -41,6 +41,3 @@ with angle $\alpha$, radius $r$
 |$\sin 2x = 2 \sin x \cos x $  | $\int \sin^2(x) \diff x = \frac12 \bigl(x - \sin(x)\cos(x) \bigr)$|
 |$\cos 2x = 2\cos^2 x - 1$  | $\int \cos^2(x) \diff x = \frac12 \bigl(x + \sin(x)\cos(x) \bigr)$|
 |$\sin(x) = \tan(x)\cos(x)$ | $\int \cos(x)\sin(x) = -\frac12 \cos^2(x)$ |
-
-
-

@@ -7,7 +7,7 @@ module Jekyll
     end
 
     def render(context)
-      "<img src='res/img/content-images/#{@filename}'>"
+      "<img class='img-fluid' src='res/img/content-images/#{@filename}'>"
     end
   end
 
