@@ -20,9 +20,6 @@ ul, ol, dl, figure,
   margin-bottom: $spacing-unit / 2;
 }
 
-/**
- * Lists
- */
 ul, ol {
   margin-left: $spacing-unit;
 }
@@ -34,38 +31,6 @@ li {
   }
 }
 
-/**
- * Links
- */
-a {
-  text-decoration: none;
-  //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
-  transition: all .25s;
-  //Instead of the line below you could use @include transition-property($property-1, $property-2, $property-3, $property-4, $property-5, $property-6, $property-7, $property-8, $property-9, $property-10)
-  transition-property: all;
-  //Instead of the line below you could use @include transition-duration($duration-1, $duration-2, $duration-3, $duration-4, $duration-5, $duration-6, $duration-7, $duration-8, $duration-9, $duration-10)
-  transition-duration: 0.25s;
-  //Instead of the line below you could use @include transition-timing-function($function-1, $function-2, $function-3, $function-4, $function-5, $function-6, $function-7, $function-8, $function-9, $function-10)
-  transition-timing-function: initial;
-  cursor: pointer;
-  &:visited {
-    text-decoration: none;
-  }
-  &:hover {
-    text-decoration: none;
-    color: $tum_green;
-  }
-  &:active {
-    text-decoration: none;
-  }
-  &:focus {
-    text-decoration: none;
-  }
-}
-
-/**
- * Blockquotes
- */
 blockquote {
   color: $grey-color;
   border-left: 4px solid $grey-color-light;
@@ -79,35 +44,6 @@ blockquote {
   }
 }
 
-/**
- * Code formatting
- */
-pre,
-code {
-  font-size: 15px;
-  border: 1px solid $grey-color-light;
-  border-radius: 3px;
-  background-color: #eef;
-}
-
-code {
-  padding: 1px 5px;
-}
-
-pre {
-  padding: 8px 12px;
-  overflow-x: auto;
-
-  > code {
-    border: 0;
-    padding-right: 0;
-    padding-left: 0;
-  }
-}
-
-/**
- * Wrapper
- */
 .wrapper {
   max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
   max-width: calc(#{$content-width} - (#{$spacing-unit} * 2));
@@ -134,33 +70,10 @@ pre {
   clear: both;
 }
 
-/**
- * Icons
- */
-.icon > svg {
-  display: inline-block;
-  vertical-align: middle;
-
-  path {
-    fill: $grey-color;
-  }
-}
-
-//@extend-elements
-//original selectors
-//td, th
-%extend_1 {
-  text-align: left;
-  vertical-align: baseline;
-  padding-left: 1em;
-  padding-right: 1em;
-}
-
 //original selectors
 //input[type='email'], input[type='number'], input[type='password'], input[type='tel'], input[type='text'], input[type='url'], textarea, select
 %extend_2 {
   appearance: none;
-  //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
   box-shadow: none;
   padding: 0.5rem 0.2rem;
   width: 100%;
@@ -244,14 +157,14 @@ thead {
 }
 
 pre {
-  border-left: 0.3rem solid $tum_green;
-  font-family: $font_2, $font_3, $font_4, $font_5, $font_6, $font_7;
   line-height: 1.5rem;
   margin: 0;
+  padding: 8px 12px;
+  overflow-x: auto;
+  background-color: $grey-color-light;
+  border-radius: 3px;
   > code {
-    background: transparent;
     background: $white;
-    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
     border-radius: 0.4rem;
     display: block;
     padding: 0.5rem 1.0rem;

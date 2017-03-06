@@ -10,7 +10,6 @@
 
 .search-input {
   z-index: 10;
-  //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
   border-radius: 1em;
   background-color: $white;
   border: 0.2em solid $tum_blue;
@@ -57,7 +56,6 @@
 }
 
 * {
-  //Instead of the line below you could use @include box-sizing($bs)
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -ms-box-sizing: border-box;

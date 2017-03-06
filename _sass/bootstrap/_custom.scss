@@ -5,5 +5,11 @@
 @import '../modules/colors';
 
 $brand-primary: $tum_blue_light;
+$brand-success: $tum_green;
 
 $navbar-border-radius: 0;
+
+$link-hover-decoration: none;
+$link-hover-color: $brand-success;
+
+$card-border-width: 5px;
