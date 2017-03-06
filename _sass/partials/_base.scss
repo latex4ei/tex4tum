@@ -116,7 +116,7 @@ main {
 }
 
 section {
-  background-color: $white;
+  background-color: white;
   border: 1px solid $light_gray;
   margin-left: -0.5em;
   margin-right: -0.5em;
@@ -124,22 +124,22 @@ section {
 }
 
 h1 {
-  font-family: $font_1;
+  font-family: $font_header;
   font-size: 2em;
   font-weight: bold;
 }
 
 h2 {
-  font-family: $font_1;
+  font-family: $font_header;
   font-size: 1.5em;
   margin-top: 1.5em;
-  margin-bottom: 0.2em;
+  margin-bottom: 0.4em;
 }
 
 h3 {
-  font-family: $font_1;
+  font-family: $font_header;
   font-size: 1.1em;
-  margin-bottom: 0;
+  margin-bottom: 0.2em;
 }
 
 p {
@@ -164,7 +164,7 @@ pre {
   background-color: $grey-color-light;
   border-radius: 3px;
   > code {
-    background: $white;
+    background: white;
     border-radius: 0.4rem;
     display: block;
     padding: 0.5rem 1.0rem;
@@ -200,8 +200,4 @@ input[type="checkbox"] {
   width: 1rem;
   height: 1rem;
   margin: 0 0.2rem;
-}
-
-tr:nth-child(even) {
-  background-color: $white;
 }
