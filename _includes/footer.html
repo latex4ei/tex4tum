@@ -1,40 +1,29 @@
-<footer class="site-footer">
+<footer>
+  <div class="container">
+    <div class="row justify-content-md-center">
+      <div class="col-sm-1 col-md-1">
+        <img class="img-fluid" src="{{ "./res/img/Logo.png" | relative_url }}" alt="Logo">
+      </div>
 
-  <div class="wrapper">
-
-    <h2 class="footer-heading">{{ site.title | escape }}</h2>
-
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
+      <div class="col-sm-2 col-md-2">
+        <h3>{{ site.title | escape }}</h3>
         <ul class="contact-list">
-          <li>
-            {% if site.author %}
-              {{ site.author | escape }}
-            {% else %}
-              {{ site.title | escape }}
-            {% endif %}
-            </li>
-            {% if site.email %}
-            <li><a href="mailto:{{ site.email }}">{% icon fa-envelope %} {{ site.email }}</a></li>
-            {% endif %}
+          <li><a href="mailto:{{ site.email }}">{% icon fa-envelope %} {{ site.email }}</a></li>
+          <li><a href="http://latex4ei.de">{% icon fa-globe %} latex4ei.de</a></li>
         </ul>
       </div>
 
-      <div class="footer-col footer-col-2">
+      <div class="col-sm-2 col-md-2">
         <ul class="social-media-list">
           {% for entry in site.data.social %}
-          <li>
-            {% include icon-social.html data=entry %}
-          </li>
+          <li>{% include icon-social.html data=entry %}</li>
           {% endfor %}
         </ul>
       </div>
 
-      <div class="footer-col footer-col-3">
+      <div class="col-sm-3 col-md-3">
         <p>{{ site.description | escape }}</p>
       </div>
     </div>
-
-  </div>
-
+  </div
 </footer>

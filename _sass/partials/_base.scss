@@ -5,7 +5,7 @@
  */
 body, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
-dl, dd, ol, ul, figure {
+dl, dd, ol, ul, figure, footer {
   margin: 0;
   padding: 0;
 }
@@ -41,23 +41,6 @@ blockquote {
 
   > :last-child {
     margin-bottom: 0;
-  }
-}
-
-.wrapper {
-  max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
-  max-width: calc(#{$content-width} - (#{$spacing-unit} * 2));
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: $spacing-unit;
-  padding-left: $spacing-unit;
-  @extend %clearfix;
-
-  @include media-query($on-laptop) {
-    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
-    max-width: calc(#{$content-width} - (#{$spacing-unit}));
-    padding-right: $spacing-unit / 2;
-    padding-left: $spacing-unit / 2;
   }
 }
 
@@ -164,7 +147,6 @@ pre {
   background-color: $grey-color-light;
   border-radius: 3px;
   > code {
-    background: white;
     border-radius: 0.4rem;
     display: block;
     padding: 0.5rem 1.0rem;
@@ -200,4 +182,24 @@ input[type="checkbox"] {
   width: 1rem;
   height: 1rem;
   margin: 0 0.2rem;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 200px;
+}
+
+footer {
+  padding: 30px;
+  @extend %clearfix;
+  position: absolute;
+  font-size: 15px;
+  color: $grey-color;
+  bottom: 0;
+  width: 100%;
+  background-color: $gray-lighter;
 }
