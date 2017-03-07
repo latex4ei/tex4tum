@@ -6,7 +6,6 @@ window.onload = function () {
     parent.syncValues("all", 0);
 };
 
-
 // renders math with KaTeX
 function renderMath() {
     var math = document.getElementsByClassName("LaTeX");  // LaTeX, math
@@ -29,31 +28,8 @@ function renderMath() {
     });
 }
 
-
-// Options
-function showClass(className, isVisible) {
-    el = document.getElementsByClassName(className);
-    for (i = 0; i < el.length; i++) {
-        if (isVisible) {
-            el[i].style.display = 'initial';
-        } else {
-            el[i].style.display = 'none';
-        }
-    }
-}
-
-function changeOption(element) {
-    var className = element.id.split("_")[1];
-    var showDef = element.checked;
-    if (showDef) {
-        showClass(className, true);
-    } else {
-        showClass(className, false);
-    }
-}
-
-
 // load file from server
+// @TODO Unused
 function loadDocumentIntoElement(url, element) {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () { // callback function
@@ -65,6 +41,7 @@ function loadDocumentIntoElement(url, element) {
     xhttp.send();
 }
 
+// @TODO Unused
 function w3IncludeHTML() {
     var z, i, a, file, xhttp;
     z = document.getElementsByTagName("*");
@@ -88,6 +65,7 @@ function w3IncludeHTML() {
     }
 }
 
+// @TODO Unused
 function addLoadEvent(func) {
     var oldonload = window.onload;
     if (typeof window.onload != 'function') {
@@ -147,6 +125,7 @@ function askValue(clicked_id) {
 
 // SVG
 // ========================================
+// @TODO Unused
 function loadSVGDocObj(obj_id, svg_id) {
     el = document.getElementById(obj_id);
     el.addEventListener("load", function () {
@@ -166,7 +145,7 @@ function replaceSVG(svg_id, svg_path) {
     // document.getElementById(svg_id).data = svg_path;
 }
 
-
+// @TODO Unused
 function plotSVG(svg_obj, func, xmin, xmax, ymax) {
     var segments = svg_obj.getElementById("y2_line").pathSegList;
     var dx = (xmax - xmin) / segments.numberOfItems;
@@ -181,14 +160,16 @@ function plotSVG(svg_obj, func, xmin, xmax, ymax) {
     }
 }
 
-
 // create a function that can be called to show the tooltip
+// @TODO Unused
 function SVG_registerTooltip(svg_obj) {
     svg_obj.addEventListener("mousedown", SVG_showTooltip, false);
 }
 
+// @TODO Unused
 var plot_obj = {svg_obj, func, xmin, xmax};
 
+// @TODO Unused
 function SVG_showTooltip(event) {
     var mousex = event.pageX;
     mousey = event.pageY;
