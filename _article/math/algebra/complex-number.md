@@ -14,3 +14,5 @@ Conjugate: $\cxc z = a - b\i$ &emsp; $\exp(\overline{i\varphi}) = \exp({-i\varph
 $\cx z \ol{\cx z} = \abs{\cx z}^2 = a^2+b^2$
 
 Inverse $\cx z^{-1} = \frac{\cxc z}}{\cxc z} \cx z}=\frac{a - b\i}{a^2+b^2}$
+
+\todo KaTeX Error

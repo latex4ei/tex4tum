@@ -23,5 +23,8 @@ $\int \cos(x)\sin(x) = -\frac12 \cos^2(x)$
 
 
 ## Integral Rules
-| Integralsatz Gauß | $$\iiint\limits_V \div \vec v \diff V = \oiint\limits_{\partial V} \vec v \bdot \diff A$$ |
-| Integralsatz Stokes | $$\displaystyle \iint\limits_{A} \rot \vec v \diff A = \oint\limits_{\partial A} \vec v \diff \vec s$$ |
+###  Integral Gauß 
+$$\iiint\limits_V \div \vec v \diff V = \oiint\limits_{\partial V} \vec v \bdot \diff A$$
+
+### Integral Stokes 
+$$\displaystyle \iint\limits_{A} \rot \vec v \diff A = \oint\limits_{\partial A} \vec v \diff \vec s$$

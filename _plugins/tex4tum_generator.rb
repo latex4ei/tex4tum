@@ -1,3 +1,5 @@
+# encoding=utf-8
+
 module Jekyll
   require "yaml"
 
@@ -35,11 +37,37 @@ module Jekyll
     INNER_SECTION_REGEXP = %r{^\s*(##+\s(.*?)\n((?:.|\n)*?)\n\s*\n(?=\s*##|\Z))}
     DEFINITION_REGEXP = %r{\A([A-Z](?:.|\n)*?)\n\s*\n}
 
+    TEX_SINGLE_REGEXP = %r{(?:\s|^)\$(?=[^\s$])(.*?)(?<=[^\s$\\])\$(?:\s|$)}
+    TEX_DUAL_REGEXP = %r{(?:^|\n)\s*\$\$(?=[^\s$])(.*?)(?<=[^\s$\\])\$\$\s*(?:\n|$)}
+
     LEGEND_REGEXP = %r{(?:^|\n)\s*(\$\$(?=[^\s$])(?:.*?)(?<=[^\s$\\])\$\$\s*\n\s*((?:with|where|Legend:)\s+((?:.|\n)*?)\n\s*\n))}
+
+    UNICODE_TEX_HASH = {
+      '<' => %q{\lt}, '>' => %q{\gt}, 
+      "∈" => %q{\in},
+      "α" => %q{\alpha}, "Α" => %q{\Alpha}, "β" => %q{\beta},
+      "γ" => %q{\gamma}, "Γ" => %q{\alpha}, "δ" => %q{\dlpha}, "Δ" => %q{\Delta},
+      "ε" => %q{\epsilon}, "ζ" => %q{\zeta}, "η" => %q{\eta},
+      "θ" => %q{\theta}, "Θ" => %q{\Theta},
+      "κ" => %q{\kappa}, "λ" => %q{\lambda}, "Λ" => %q{\Lambda},
+      "μ" => %q{\mu}, "ν" => %q{\nu}, "ξ" => %q{\xi}, "Ξ" => %q{\Xi},
+      "π" => %q{\pi}, "Π" => %q{\Pi},
+      "ρ" => %q{\rho}, "σ" => %q{\sigma}, "Σ" => %q{\Sigma}, "τ" => %q{\tau},
+      "ω" => %q{\omega}, "Ω" => %q{\Omega} }
+
 
     def add_latex_definitions(content)
       latex_definitions = File.read('./res/parser_util/tex_definitions.md')
       content = latex_definitions + content
+
+
+      # replace unicode
+      content.scan(TEX_SINGLE_REGEXP) do |match|
+        newtext = match[0]
+        UNICODE_TEX_HASH.each { |k, v| newtext = newtext.gsub(k, v) }
+        content = content.gsub(match[0], newtext)
+      end
+
 
       return content
     end

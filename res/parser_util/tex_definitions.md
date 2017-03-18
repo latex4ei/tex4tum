@@ -1,4 +1,7 @@
 
+
+\newcommand{\DeclareMathOperator}[1]{\mathop{#1}}
+
 <!-- Basics -->
 \renewcommand{\quad}{&emsp;} <!--    -->
 \newcommand{\Ra}{\Rightarrow}
@@ -37,16 +40,15 @@
 
 
 
-\newcommand{Ω}{\Omega}
+\newcommand{\P}{\mathop{P}}
 
-
-\newcommand{\P}{\operatorname{P}}
-
-\newcommand{\X}{\text{X}}
-\newcommand{\Y}{\text{Y}}
+\newcommand{\Y}{\textit{Y}}
+\newcommand{\T}{\textit{T}}
+\newcommand{\X}{\textit{X}}
 
 
 <!-- SI Units -->
+<!--=============================================================== -->
 \newcommand{\siexp}{\,}
 \newcommand{\SI}[2]{#1\,#2}
 \newcommand{\si}[1]{#1}
@@ -60,7 +62,7 @@
 \newcommand{\second}{\text{s}\siexp}
 \newcommand{\ampere}{\text{A}\siexp}
 \newcommand{\kelvin}{\text{K}\siexp}
-\newcommand{\mol}{\text{mol}\siexp}
+\newcommand{\mole}{\text{mol}\siexp}
 \newcommand{\candela}{\text{cd}\siexp}
 \newcommand{\newton}{\text{N}\siexp}
 
@@ -77,13 +79,16 @@
 \newcommand{\tesla}{\text{T}\siexp}
 
 
+
+
+
+
 \newcommand{\grad}{\text{grad}}
 \newcommand{\div}{\text{div}}
 \newcommand{\rot}{\text{rot}}
 
-\newcommand{\oiint}{\iint}
 
-\newcommand{\ftsymbol}{\ \circ\:\!\!\!\!\!-\!\!\!\!\!\bullet\ }
+\newcommand{\ftsymbol}{\ \circ\:\!\!\!\!-\!\!\!\bullet\ }
 
 \newcommand{\FT}{\ftsymbol}					
 \newcommand{\LT}{\ftsymbol}					
@@ -91,6 +96,8 @@
 \newcommand{\DTFT}{\ftsymbol}				
 \newcommand{\ZT}{\ftsymbol}					
 
+
+\newcommand\oiint{\mathop{\circ\!\!\!\iint}}
 
 \DeclareMathOperator{\dirac}{\ensuremath{\delta}}			% Dirac Distribution
 \DeclareMathOperator{\heavi}{\ensuremath{\theta}}			% Heaviside Step Function
@@ -103,9 +110,14 @@
 
 
 <!-- KaTeX Tweaks -->
+
+\newcommand{\underset}[2]{\tiny\begin{matrix}\\ \normalsize #2 \\[1em] \scriptsize #1 \end{matrix}}
+
 \renewcommand{\ma}[1]{\mathbf{#1}}
+\renewcommand{\rm}{}
 \renewcommand{\P}{\mathrm{P}}
 \renewcommand{\boldsymbol}[1]{\mathbf{#1}}
-\renewcommand[1]{\operatorname}{\mathop{#1}}
+\renewcommand{\operatorname}[1]{\mathop{#1}}
+
 
 
