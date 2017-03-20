@@ -6,10 +6,9 @@ A resistor is a electrical component.
 
 | Resistor  |   |
 | -------------| -------- |
-| Symbol | ![Resistor](resistor/Resistor_symbol_IEC.svg) |
+| Symbol | {% inlineimage Resistor_symbol_IEC.svg %} |
 | Properies | linear, passive |
-| Equation | $U = R · I$ |
-
+| Equation | $U = R \cdot I$ |
 
 
 ## Color Codes

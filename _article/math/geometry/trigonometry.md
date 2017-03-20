@@ -25,8 +25,6 @@ with angle $\alpha$, radius $r$
 | Complex | $e^{\i x}=\cos(x)+\i\sin(x)$  $e^{-\i x}=\sin(x)-\i\cos(x)$ |
 
 
-
-
 | $x$ <br> $\scriptstyle{ \varphi }$ | $0$ <br> $\scriptstyle{0^\circ}$ | $\pi / 6$ <br> $\scriptstyle{30^\circ}$ | $\pi / 4$ <br> $\scriptstyle{45^\circ}$ | $\pi / 3$ <br> $\scriptstyle{60^\circ}$ | $\frac{1}{2}\pi$ <br> $\scriptstyle{90^\circ}$ | $\pi$ <br> $\scriptstyle{180^\circ}$ | $1\frac{1}{2}\pi$ <br> $\scriptstyle{270^\circ}$ | $2 \pi$ <br> $\scriptstyle{360^\circ}$ |
 |---|---|---|---|---|---|---|---|---|
 |$\sin$ | $0$ | $\frac{1}{2}$ | $\frac{1}{\sqrt{2}}$ | $\frac{\sqrt 3}{2}$ | $1$ | $0$ | $-1$ | $0$ |

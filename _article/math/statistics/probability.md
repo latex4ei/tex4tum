@@ -19,8 +19,3 @@ title: Probability
 **PDF:** $f_{\X}(x) = \frac{\diff F_{\X}(x)}{\diff x}$
 
 **CDF:** $F_{\X}(x) = \int\limits_{-\infty}^{x}{f_{\X}(\xi)\diff\xi}$
-
-
-
-*[PDF]: Probability Density Function
-*[CDF]: Commulative Density Function

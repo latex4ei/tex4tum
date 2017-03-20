@@ -6,7 +6,6 @@ title: Ada
 Ada is a programming language intended for real-time safety-critical systems.
 {% enddefinition %}
 
-
 {% highlight ada %}
 with Ada.Text_IO;
 

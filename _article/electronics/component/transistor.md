@@ -5,8 +5,7 @@ title: Transistor
 Is a current amplifier.
 
 
-Bipolar Transistor (BJT)
-------------------------
+## Bipolar Transistor (BJT)
 {% include figure.html filename="bjt.png" description="PNP: E->B--C; NPN: C--B->E" %}
 
 ### Cut-Off Voltage

@@ -4,7 +4,6 @@ title: Regular Expressions
 
 A regular expression is a character sequence that specifies a pattern of a string. It can be used to find and replace strings.
 
-
 | String  |  |
 | --------| -------- |
 | `\^`      |  Start of string, or start of line in multi-line pattern |
@@ -15,7 +14,6 @@ A regular expression is a character sequence that specifies a pattern of a strin
 | `\B` | Not word boundary |
 | `\<` | Start of word |
 | `\>` | End of word |
-
 
 | Character  | Class |
 | --------| -------- |
@@ -29,15 +27,11 @@ A regular expression is a character sequence that specifies a pattern of a strin
 | `\x` | Hexade­cimal digit |
 | `\O` | Octal digit |
 
-
 | Character  | Class |
 | --------| -------- |
 | `.` | any character |
 | `\n` | Newline |
 | `\t` | tab |
-
-
-
 
 | Quantifiers  |  |
 | -------------| -------- |
@@ -47,7 +41,6 @@ A regular expression is a character sequence that specifies a pattern of a strin
 | {3} | Exactly 3 |
 | {3,} | 3 or more |
 | {3,5} | 3, 4 or 5 |
-
 
 | Groups  |  |
 | -------------| -------- |
@@ -60,12 +53,7 @@ A regular expression is a character sequence that specifies a pattern of a strin
 | (?>...)| once (active) |
 
 
-
-
-
-
-Examples
----------
+## Examples
 
 Find a date: `\d{4}-\d{2}-\d{2}`
 
@@ -93,11 +81,10 @@ function applyRegex(e){
 		for (var i = 0; i < matches.length; i++) {
 			result_string += matches[i];
 			if (i != matches.length - 1){ result_string += ", "; }
-		}		
+		}
 	}
 	res_el.textContent = result_string;
 }
-
 
 </script>
 

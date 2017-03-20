@@ -2,12 +2,9 @@
 title: Floating Point Number
 ---
 
-Floats represents a 
+Floats represents a
 
 $$ (-1)^s \cdot 1.m \cdot 2^{e-127} $$
-
-
-
 
 | Precision | Width | Exp. | Bias | Mant. |
 |---|---|---|---|
@@ -50,7 +47,3 @@ To prevent unwanted behavior by jumping directly to zero, subnormal numbers fill
 
 
 ## Not-A-Number (NaN)
-
-
-
-

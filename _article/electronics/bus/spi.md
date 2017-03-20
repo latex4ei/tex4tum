@@ -32,5 +32,4 @@ $$x = 3 + y$$
 where $x$ is a number and $y$ too
 
 
-
 ## Another section

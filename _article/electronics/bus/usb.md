@@ -7,7 +7,6 @@ USB is serial bus.
 {% enddefinition %}
 
 
-
 ## USB 2.0
 
 | Pin | Signal | Color | Meaning |
@@ -17,15 +16,12 @@ USB is serial bus.
 | 3   | D+   | Green | Signal |
 | 4   | GND  | Black | Ground |
 
-
 | Spec | |
 |---|---|
 | Speed | 480 Mbit/s |
 | Voltage | 5.0 ± 0.25 V |
 | Current | 100mA, 500mA, 5A |
 | Length | < 5 m |
-
-
 
 
 ## USB 3.0
@@ -41,7 +37,6 @@ USB is serial bus.
 | 7   | GND_DRAIN  | N/A | Signal Ground |
 | 8   | A_SSRX− | Purple | SuperSpeed receiver differential - |
 | 9   | A_SSRX+ | Orange | SuperSpeed receiver differential + |
-
 
 
 | Speed |  4 Gbit/s |

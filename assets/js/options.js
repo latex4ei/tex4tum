@@ -6,8 +6,7 @@ var Options = (function () {
 
     var VERSION_STRING = "0.01";
 
-
-  // Private Methods:
+    // Private Methods:
     var showClass = function(className, isVisible) {
         el = document.getElementsByClassName(className);
         for (i = 0; i < el.length; i++) {
@@ -19,7 +18,6 @@ var Options = (function () {
         }
     };
 
- 
     var setCookie = function (key, value, expiredays) {
         var d = new Date();
         d.setTime(d.getTime() + (expiredays * 24 * 60 * 60 * 1000));
@@ -51,11 +49,10 @@ var Options = (function () {
         }
     }
 
-
   // Public Methods
     var changeOption = function(element) {
         var className = element.id.split("_")[1];
-        
+
         showClass(className, element.checked);     // set visibility
         setCookie(className, element.checked, 60)  // save cookie
 
@@ -72,7 +69,6 @@ var Options = (function () {
             cbox.checked = state;
         }
     };
-
 
     return {
       // Register all public methods here

@@ -4,7 +4,6 @@ title: Feature Test Site
 
 A Feature Test Site demonstrates the features.
 
-
 ## Equations
 If you have $x=3$ and the display style integral
 

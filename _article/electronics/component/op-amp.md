@@ -14,14 +14,17 @@ An Op-Amp does not draw current from the input!
 $$V_{\mathrm{out}} = V_{\mathrm{in}}$$
 Provides current at the output without loading the input.
 
+
 ## Non-Inverting Amplifier
 {% include figure.html width="20em" filename="opamp_noninv.svg" description="Non-Inverting Amplifier" %}
 
 $V_{\mathrm{out}} = \left(1 + \frac{R_2}{R_1} \right) V_{\mathrm{in}}$
 
+
 ## Inverting Amplifier
 {% include figure.html filename="opamp_inv.svg" description="Inverting Amplifier" %}
 $$V_{\mathrm{out}} = -\frac{R_2}{R_1} V_{\mathrm{in}}$$
+
 
 ## Differential Amplifier
 {% include figure.html filename="opamp_diff.svg" description="Differential Amplifier" %}

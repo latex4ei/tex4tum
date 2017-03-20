@@ -12,7 +12,6 @@ C/Ada Notation: `0x..` / `16#..` (hex), `0b..` / `2#..` (bin)
 | Octal | <span id="oct_result">0377</span> |
 | Binary | <span id="bin_result">0b11111111</span> |
 
-
 0x100000FF as 32bit Integer stored at address 0x1000:
 | Endian | 0x1000 | 0x1001 | 0x1002 | 0x1003 |
 |----|---|---|---|
@@ -22,7 +21,6 @@ C/Ada Notation: `0x..` / `16#..` (hex), `0b..` / `2#..` (bin)
 
 ## Data Types
 `int`, `short`, and `word` depend on the architecture.
-
 
 | Type | Limit Min |  | Limit Max  |
 |----|----:|----|:---|
@@ -43,11 +41,6 @@ $2^{30} \approx 1G$
 
 
 ## 2-Complement
-
-
-
-
-
 
 
 <script type="text/javascript">
@@ -75,7 +68,7 @@ $2^{30} \approx 1G$
 				if(rx_match[3] == "<<"){ exp = parseInt( rx_match[4] ); }
 				else if(rx_match[3] == ">>"){ exp = -parseInt( rx_match[4] ); }
 				num = Math.floor( num * Math.pow(2, exp ) );
-			}		
+			}
 		}
 		if ( hex_rx.test(e.value.trim()) ){
 			rx_match = hex_rx.exec( e.value.trim() );

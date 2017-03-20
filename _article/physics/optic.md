@@ -35,20 +35,16 @@ Material: $n_1 < n_2$
  ------------------------------
 
 
-
-
 <script type="text/javascript">
 
 var dragX, dragY;
 var pt;
-
 
 function svgloaded(){
     var svg = document.getElementsByTagName("svg")[0];
     pt = svg.createSVGPoint();
     syncValues("none", 0);
 }
-
 
 function syncValues(id, value){
     switch(id){
@@ -57,35 +53,32 @@ function syncValues(id, value){
     calcFraction();
 }
 
-    function getValue(str){
-        var prescale = 1;
-        var value = str.slice(0,-1);
-        switch( str.slice(-1) ){
-            case 'G': prescale = 1e9; break;
-            case 'M': prescale = 1e6; break;
-            case 'k': prescale = 1e3; break;
-            case 'm': prescale = 1e-3; break;
-            case 'u': prescale = 1e-6; break;
-            case 'n': prescale = 1e-9; break;
-            case 'p': prescale = 1e-12; break;
-            default: value = str;
-        }
-        return ( Number(value) * prescale );
+function getValue(str){
+    var prescale = 1;
+    var value = str.slice(0,-1);
+    switch( str.slice(-1) ){
+        case 'G': prescale = 1e9; break;
+        case 'M': prescale = 1e6; break;
+        case 'k': prescale = 1e3; break;
+        case 'm': prescale = 1e-3; break;
+        case 'u': prescale = 1e-6; break;
+        case 'n': prescale = 1e-9; break;
+        case 'p': prescale = 1e-12; break;
+        default: value = str;
     }
+    return ( Number(value) * prescale );
+}
 
-
-    function askValue(clicked_id){
-        var el = document.getElementById(clicked_id);
-        var newval = prompt("Please enter new Value", el.textContent);
-        if( isNaN( getValue(newval) ) ){
-            el.textContent = "NaN";
-        } else {
-            el.textContent = newval;
-        }
-        parent.syncValues(clicked_id, newval);
+function askValue(clicked_id){
+    var el = document.getElementById(clicked_id);
+    var newval = prompt("Please enter new Value", el.textContent);
+    if( isNaN( getValue(newval) ) ){
+        el.textContent = "NaN";
+    } else {
+        el.textContent = newval;
     }
-
-
+    parent.syncValues(clicked_id, newval);
+}
 
 function rotateToMouse(id_rot, id_anch){
     var anchor = document.getElementById(id_anch);
@@ -105,12 +98,9 @@ function rotateToMouse(id_rot, id_anch){
     calcFraction();
 }
 
-
-function dragLine(){    
+function dragLine(){
     rotateToMouse("ray", "anchor");
 }
-
-
 
 function rotateToAnchor(id_rot, id_anch, angle){
     var anchor = document.getElementById(id_anch);
@@ -119,12 +109,9 @@ function rotateToAnchor(id_rot, id_anch, angle){
     rotor.setAttribute('transform', "rotate("+angle+" "+anchor.x.animVal.value+" "+anchor.y.animVal.value+")");
 }
 
-
-
 function touchDrag(id){
     alert("Touch-Coordinate:"+event.changedTouches[0].clientX);
 }
-
 
 function rotateLine(id) {
     document.addEventListener('mousemove',dragLine,false);
@@ -139,9 +126,7 @@ function rotateLine(id) {
                 document.removeEventListener('touchmove',dragLine,false);
                 calcFraction();
             },false);
-
 }
-
 
 function getMouseAngleTo(x, y){
     //get the vector representing the mouse's position relative to the point...
@@ -152,7 +137,6 @@ function getMouseAngleTo(x, y){
     var angleRadians=Math.atan2(vx, -vy);   // -vy because on screen y is inverted
     return (angleRadians * (360 / (2 * Math.PI)));
 }
-
 
 var alpha = -30;
 
@@ -169,8 +153,7 @@ function calcFraction(){
     }
 
     // total reflection?
-    if (isNaN(frac_angle) ){ frac_angle = -alpha}
-
+    if (isNaN(frac_angle)){ frac_angle = -alpha}
 
     rotateToAnchor("ray", "anchor", alpha);
     rotateToAnchor("frac", "anchor", -alpha);

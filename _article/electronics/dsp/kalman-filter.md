@@ -13,8 +13,6 @@ The Kalman Filter averages a prediction of a system's state with a new measureme
 * control inputs to that process
 * multiple sequential measurements (e.g. from sensors)
 
-
-
 Facts:
 
 * the certainty of the measurements is expressed in the gains
@@ -33,8 +31,7 @@ $l$ measurements $\vec y$, measurement model $\ma H$, gaussian measurement noise
 time point $n$
 {% endlegend %}
 
-
-### 1. Step: Prediction
+### Step: Prediction
 calculate the next state based on the old state and the dynamic model (e.g. physical laws)
 
 $\hat {\vec x}_{n|n-1} = \ma G_n \hat{\vec x}_{n-1|n-1}$
@@ -42,9 +39,7 @@ $\hat {\vec x}_{n|n-1} = \ma G_n \hat{\vec x}_{n-1|n-1}$
 calculate a new process covariance (how certain is the model?)
 $\ma C_{\vec x_{n|n-1}} = \ma G_n \ma C_{\vec x_{n-1|n-1}} \ma G_n^\top + \ma C_{\vec v}$
 
-
-
-### 2. Step: Update
+### Step: Update
 calculate Innovation (real measurements minus predicted measurements)
 $\Delta \vec y_n = \vec y_n - \hat{\vec y}_{n|n-1} =\vec y_n - \ma H_{n} \hat{\vec x}_{n|n-1}$
 
@@ -56,17 +51,13 @@ $\ma K_n = \ma C_{\vec x_{n|n-1}} \ma H_{n}^\top {\ma S}^{-1}$
 
 with $K_{ij} \in [0.0; 1.0]$ where 0.0 means the filter fully trusts the prediction and 1.0 means the filter fully trusts the measurement.
 
-
 calculate the new state from $l$ measurements
 $\hat{\vec x}_{n|n} = \hat{\vec x}_{n|n-1} + \ma K_n \Delta \vec y_n$
 
 $\ma C_{\vec x_{n|n}} = \ma C_{\vec x_{n|n-1}} + \ma K_n \ma H_{n} \ma C_{\vec x_{n|n-1}}$
 
-
-
 ## Extended Kalman Filter
 The Extended Kalman Filter (EKF) uses non-linear dynamic models. For covariance the Jacobi-Matrix of the model is used.
-
 
 
 ## Sensor Fusion

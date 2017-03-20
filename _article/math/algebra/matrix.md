@@ -32,7 +32,6 @@ $\ma A=(a_{ij}) \in \mathbb K^{m\times n}$ has $m$ rows (index $i$) and $n$ colu
 | symmetric | $\ma A=\ma A^\top$ \qquad schiefsymmetrisch: $\ma A=-\ma A^\top$ |
 
 
-
 ## Eigenvalues and Eigenvectors
 Eigenvalues: $\det(\ma A - \lambda \ma 1) = 0$ <br>
 Eigenvectors: $\ker(\ma A - \lambda_i \ma 1) = \vec v_i$

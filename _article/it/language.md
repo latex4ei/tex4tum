@@ -8,9 +8,7 @@ title: Language
 | Word | W :=  | abba, ba, bbb... |
 | Language | L := | ba babb aab |
 
-
 **Production Rules**: S → aS
-
 
 
 ## Chomsky-Hierarchy

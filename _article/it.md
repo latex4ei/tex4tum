@@ -17,10 +17,6 @@ Information Theory (IT) is a science.
 * [**Tools**](tool.html)
 	* [GDB](gdb.html)
 
-
-
-
-
 Information is quantified by the information entropy
 
 $H = \log_2 \P( \text{pattern}_i )$

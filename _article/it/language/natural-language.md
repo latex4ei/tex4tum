@@ -9,10 +9,9 @@ The natural language is a context sensitive language and therefore difficult to 
 Is done in several steps.
 
 1. Tokenize: Separate individual words
-2. Tagging: Detect word type (Noun, Verb, etc.)
-3. Chunking: Group words into phrases
-4. Extraction: Analyze meaning
-
+1. Tagging: Detect word type (Noun, Verb, etc.)
+1. Chunking: Group words into phrases
+1. Extraction: Analyze meaning
 
 ### Part of Speech (POS) Tagging
 | Tag | Description | Example |
@@ -25,10 +24,8 @@ Is done in several steps.
 | MD  | Modal       | *shall, will* |
 | EX  | Existential | *there* |
 
-
 ### Chunking
 For each type of phrase (e.g. noun phrase) the words are tagged with 3 IOB Tags: `I`-inside, `O`-outside, `B`-begin. `B` if a phrase begins, following words get `I` if the word belongs to the phrase, or `O` for all other words.
-
 
 | Chunk | Description | Example |
 |-------|-------------|---------|

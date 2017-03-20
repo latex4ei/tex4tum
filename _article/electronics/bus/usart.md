@@ -6,8 +6,7 @@ tags: [RX, TX, RTS, CTS]
 UART is serial bus.
 
 
-Specification
--------------
+## Specification
 
 | Signals | |
 |------|---|
@@ -18,11 +17,8 @@ Specification
 
 Note: TX signal of the sender is connected to the RX signal at the receiver!
 
-
-
 Common Speeds
 :   9'600 bit/s, 38'400 bit/s
 
 
-Protocol
---------
+## Protocol

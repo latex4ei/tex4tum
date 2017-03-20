@@ -4,7 +4,6 @@ title: Object Oriented Programming (OOP)
 
 OOP is attractive to handle complexity and achieve modularity and maintainability of large programs.
 
-
 Class: A specification of an object
 Object: The instance of a class
 
@@ -17,7 +16,6 @@ There are four main concepts in OOP:
 * Inheritance: Derive classes (hierarchy)
 * Polymorphism: overwrite derived methods; dynamic dispatching
 * Abstraction: Force overwriting
-
 
 ### Encapsulation
 Related data and subprograms are grouped together

@@ -13,14 +13,12 @@ Common file systems
 | Ext 2/3/4 | Linux | Journaling |
 
 
-
 ## File Allocation Table (FAT)
-The FAT is table that stores information about each Block. The information can be: 
-* the block is defect 
+The FAT is table that stores information about each Block. The information can be:
+* the block is defect
 * the block is free
 * pointer to the next block of a file
 * last block of a file
-
 
 
 ## Index Nodes (I-Nodes)
@@ -28,7 +26,6 @@ Each file has an I-Node that stores:
 * Counter of references (links) to that file
 
 {% include figure.html filename="filesystem-inode.svg" description="I-Nodes" %}
-
 
 
 ## Journaling
@@ -44,5 +41,3 @@ Unused bytes within a memory block. Files reserve complete blocks of memory. The
 
 ### External Fragmentation
 Unused blocks between Files. Happens if files are resized and become smaller or if a sequence of free blocks is slightly larger than the size of a new file.
-
-

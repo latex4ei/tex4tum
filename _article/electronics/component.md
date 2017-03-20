@@ -9,6 +9,5 @@ tite: Electrical Component
 ## Three Terminal
 * [Transistor](transistor.html)
 
-
 ## More Terminal
 * [Op-Amp](op-amp.html)

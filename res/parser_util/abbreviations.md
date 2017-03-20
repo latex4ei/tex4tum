@@ -1,5 +1,3 @@
-
-
 *[AES]: Advanced Encryption Standard
 *[ADC]: Analog/Digital Converter
 
@@ -21,8 +19,8 @@
 
 *[LOC]: Line of Code
 
-
-
+*[PDF]: Probability Density Function
+*[CDF]: Commulative Density Function
 
 *[RAM]: Random Access Memory
 *[ROM]: Read-Only Memory
@@ -35,6 +33,3 @@
 *[UAV]: Unmanned aerial vehicle
 *[USART]: Universal Synchronous/Asynchronous Receiver Transmitter
 *[USB]: Universal Serial Bus
-
-
-

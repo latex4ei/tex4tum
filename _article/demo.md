@@ -27,17 +27,13 @@ Even more complex equations such as
 $\int \sqrt{x^2} \diff x = \frac{1}{3} x^3$
 are rendered beautifully with [KaTex](https://khan.github.io/KaTeX/)).
 
-
-
 ### Interactive Diagrams
 Play with diagrams for better understanding. Click and drag the black ray with the mouse or change any value in the diagram.
 
 <object class="fig" style="width: 18em" id="obj_fraction" data="res/img/content-images/fraction.svg" type="image/svg+xml"></object>
 
-
 ### Fast Fuzzy Search
 Find an answer blazingly fast. The fuzzy search in the top bar displays results immediately without slow sever communication. Just hit `tab` to focus the search, then type e.g. "did" to search for "Diode".
-
 
 
 ## Demo Pages
@@ -54,8 +50,6 @@ Find an answer blazingly fast. The fuzzy search in the top bar displays results 
 * consistent JS framework for interactive content
 * Improved search: Sorting results, reaction to no results
 * More content
-
-
 
 <script type="text/javascript">
 function RC_calcFrequency() {

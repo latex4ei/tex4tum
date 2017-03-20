@@ -9,8 +9,6 @@ title: 2D Geometry
 | Area: | $S = \pi \cdot r^2$ |
 
 
-
-
 | Triangle | |
 |---|---|
 | Area: |  |
