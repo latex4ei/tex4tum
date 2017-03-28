@@ -10,7 +10,7 @@ A regular expression is a character sequence that specifies a pattern of a strin
 | `\A`  | Start of string |
 | `\$` | End of string, or end of line in multi-line pattern |
 | `\Z` | End of string |
-| `\\b` | Word boundary |
+| `\b` | Word boundary |
 | `\B` | Not word boundary |
 | `\<` | Start of word |
 | `\>` | End of word |
@@ -35,22 +35,23 @@ A regular expression is a character sequence that specifies a pattern of a strin
 
 | Quantifiers  |  |
 | -------------| -------- |
-| ? | 0 or 1 |
-| * | 0 or more |
-| + | 1 or more |
-| {3} | Exactly 3 |
-| {3,} | 3 or more |
-| {3,5} | 3, 4 or 5 |
+| `?`     | 0 or 1 |
+| `*`     | 0 or more |
+| `+`     | 1 or more |
+| `{3}`   | Exactly 3 |
+| `{3,}`  | 3 or more |
+| `{3,5}` | 3, 4 or 5 |
 
-| Groups  |  |
-| -------------| -------- |
-| (...) | Active Group |
-| (?:…)| Passive (non-c­apt­uring) group |
-| (?=...)| look-ahead (passive) |
-| (?!...)| negative look-ahead (passive) |
-| (?<=...)| look-behind (passive) |
-| (?!=...)| negative look-behind (passive) |
-| (?>...)| once (active) |
+| Groups     | Description |
+| -----------|-------------|
+| `(...)`    | Active Group |
+| `(?:...)`    | Passive (non-c­apt­uring) group |
+| `(?=...)`  | look-ahead (passive) |
+| `(?!...)`  | negative look-ahead (passive) |
+| `(?<=...)` | look-behind (passive) |
+| `(?!=...)` | negative look-behind (passive) |
+| `(?<!...)` | negative look-behind (passive) |
+| `(?>...)`  | once (active) |
 
 
 ## Examples

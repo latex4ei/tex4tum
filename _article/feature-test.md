@@ -12,6 +12,7 @@ where $x$ is a number and $y$ too
 
 ## Tables
 Tables are easily generated.
+
 | Feature | Works |
 |------|---|
 | Tables | yes |
@@ -28,4 +29,19 @@ This is an example to demonstrate the auto detection of an example
 even over several lines
 
 
-## Another section
+## Tab experiments
+{% tabbox %}
+## Tab 1
+This should by displayed in tab 1
+
+## Tab 2
+tabs are simply created by the headers
+
+### This is a subsection
+subsections are also supported
+
+## Tab 3
+and this is tab 3. Markdown *elements* and tex $\sqrt{3}$ are supported.
+{% endtabbox %}
+
+Also content after the tabbox is displayed normally.
