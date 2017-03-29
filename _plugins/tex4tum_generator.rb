@@ -106,7 +106,7 @@ module Jekyll
 
     def markDefinition(content)
       #puts "START" + content
-      content = content.sub(DEFINITION_REGEXP, %q{{% definition %}\1{% enddefinition %}})
+      content = content.sub(DEFINITION_REGEXP, %q{{% definition %}\1{% enddefinition %}}+"\n\n")
       return content
     end
 
