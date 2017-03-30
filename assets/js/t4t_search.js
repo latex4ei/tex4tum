@@ -1,10 +1,9 @@
 
-
-// Fuse Test
+// Fuse (Fuzzy Search Library)
 // ====================================================================
 
 
-var search_index = ["empty"];
+var search_index = ["empty"]; // index will be filled by jekyll-hook
 
 var options = {
   keys: ['title', 'tags'] //,
@@ -13,7 +12,7 @@ var options = {
 var fuse = new Fuse(search_index, options)
 
 
-
+// dynamically load search index
 // ====================================================================
 
 // $.getJSON("/assets/js/search_index.json", function(data) {
@@ -33,13 +32,15 @@ var autocomplete = function (options) {
             data = options.data,
             contEl = options.container[idx],
             resultNodes = contEl.getElementsByTagName('A'),
+            inputEl = options.container[idx].firstElementChild,
             cache = {},
             handlers = {
                 'enter': function (e) {
-                    if (e.target.nextElementSibling.firstChild && e.target.nextElementSibling.firstChild.hasAttribute('href')) {
+                    if (e.target.nextElementSibling.firstChild && e.target.nextElementSibling.firstChild.style.display != 'none') {
                         window.location = e.target.nextElementSibling.firstChild.href;
-                    } else if (e.target.parentNode === contEl && contEl.children[0].value) {
-                        window.location = options.searchPath + encodeURIComponent(contEl.children[0].value);
+                    } else if (e.target.parentNode === contEl && resultNodes[0].style.display == 'none') {
+                        // todo: deal with no results
+                        window.location = './404.html';
                     }
                 },
                 'up': function (e) {
@@ -61,11 +62,15 @@ var autocomplete = function (options) {
                 'input': function (e) {
                     var val = e.target.value.trim().replace(/([.*+?^=!:${}()|\[\]\/\\])/g, "\\$1");
                     return val ? insert(cacheFn(val, check)) : insert();
+                },
+                'escape': function (e) {
+                    inputEl.value = "";
+                    insert();
+                    // contEl.firstElementChild.blur(); // should we unfocus?
                 }
-               
             };
 
-        function setEls() {
+        function createDropdown() {
             var wrapEl = contEl.querySelectorAll('.ac-results-wrapper')[0];
             var i = options.numResults;
             while (i--) {
@@ -84,60 +89,15 @@ var autocomplete = function (options) {
         function check(q) {   // fuse part
             var entries = fuse.search(q);
             var arr = [];
-            for (var i = 0; i < entries.length; i++) {
+            for (var i = 0; (i < entries.length && i < options.numResults); i++) {
                 arr.push({
                     'name': entries[i].url,
-                    'tag': entries[i].title,
-                    'group': ""
+                    'tag': entries[i].title
                 });
             }
             return arr;
         }
 
-
-
-        // function check(q) {
-        //     // var rxFn = function(s) {
-        //     //   return '\\b(' + s + ')(.*)';
-        //     // },
-        //     q = q.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\$&");
-        //     q = '(?:^|[A-Z]| )' + q.split(/(?=\w|\d|\s)/).join('\.*?');
-        //     var rx = new RegExp(q, 'gi'),
-        //         arr = [],
-        //         i = data.length;   // number of groups
-
-
-        //     function testTree(obj, parent) {
-        //         if (rx.test(obj.name)) {
-        //             arr.push({
-        //                 'name': obj.name,
-        //                 'tag': obj.name,
-        //                 'group': parent
-        //             });
-        //         }
-        //         var j = obj.tags.length;
-        //         while (j--) {
-        //             if (rx.test(obj.tags[j])) {
-        //                 arr.push({
-        //                     'name': obj.name,
-        //                     'tag': obj.tags[j] + ' (' + obj.name + ')',
-        //                     'group': parent
-        //                 });
-        //             }
-        //         }
-        //         if ("subgroups" in obj) {
-        //             var k = obj.subgroups.length
-        //             while (k--) {
-        //                 testTree(obj.subgroups[k], parent + '/' + obj.name)
-        //             }
-        //         }
-        //     }
-
-        //     while (i--) {
-        //         testTree(data[i], "")
-        //     }
-        //     return arr;
-        // }
 
         function insert(d) {
             var i = options.numResults;
@@ -146,9 +106,8 @@ var autocomplete = function (options) {
                     resultNodes[i].style.display = 'block';
                     resultNodes[i].firstChild.nodeValue = d[i].tag;
                     var uri = d[i].name.toLowerCase();
-                    resultNodes[i].href = options.directPath + d[i].group + '/' + uri + '.html';
                     resultNodes[i].href = options.directPath + '/' + uri + '.html';
-                    resultNodes[i].firstElementChild.firstChild.nodeValue = d[i].group;
+                    resultNodes[i].firstElementChild.firstChild.nodeValue = '';
                 } else if (!d || !d[i]) {
                     resultNodes[i].style.display = 'none';
                 }
@@ -158,7 +117,7 @@ var autocomplete = function (options) {
         function multiHandler(e) {
             var k = e.keyCode,
                 //assign a value to k if the up, down enter keys are pressed, or if the event is an input
-                meth = k === 13 ? 'enter' : k === 38 ? 'up' : k === 40 ? 'down' : e.type === 'input' ? 'input' : null;
+                meth = k === 13 ? 'enter' : k === 27 ? 'escape' : k === 38 ? 'up' : k === 40 ? 'down' : e.type === 'input' ? 'input' : null;
             //if 'meth' was assigned a value earlier, return the associated function and pass the event to it
             return meth ? handlers[meth](e) : null;
 
@@ -177,16 +136,15 @@ var autocomplete = function (options) {
                     window.setTimeout(function (){ contEl.children[0].focus(); }, 0);
                     contEl.children[0].focus();
                 }
-            }  
+            } 
         }
    
 
-        setEls();
+        createDropdown();
         document.addEventListener('keydown', globalHandler);
         contEl.addEventListener('input', multiHandler);
         contEl.addEventListener('keydown', multiHandler);
-        contEl.addEventListener('onsubmit', handlers.enter);
+        contEl.parentNode.addEventListener('submit', function(e){ event.returnValue=false; return false; } );  // for the form
         contEl.firstElementChild.addEventListener('change', changeHandler);
-
     }
 };

@@ -26,7 +26,7 @@
     <!-- Load Fuse -->
     <script src="https://cdn.jsdelivr.net/fuse/2.6.1/fuse.min.js"></script>
     <script src="{{ "/assets/js/search_index.json" | relative_url }}"></script>
-    <script src="{{ "/assets/js/perfect-autocompl.js" | relative_url }}"></script>
+    <script src="{{ "/assets/js/t4t_search.js" | relative_url }}"></script>
 
     <!-- Bootstrap -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
@@ -43,7 +43,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js"></script>
     <script type="text/javascript">
         window.onload = function () {
+            // render KaTeX
             renderMath();
+
+            // fix navbar hiding anchor jumps
+            window.addEventListener("hashchange", function() { scrollBy(0, -100) } );
+
+
 
             Options.loadOptions();
 

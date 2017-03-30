@@ -48,7 +48,7 @@ module Jekyll
 
     private
 
-    JS_PATH = '/assets/js/perfect-autocompl.js'
+    JS_PATH = '/assets/js/t4t_search.js'
 
     SECTION_REGEXP = %r{(?:^|\n)\s*## (.*?)\s*(?:\n|$)}
     TAGS_REGEXP = %r{(?:\n|^)\s*tags:\s*(\[.*?\])\s*(?:$|\n)}
@@ -228,7 +228,7 @@ module Jekyll
       text.scan(%r{(?:^|\n)\s*(#+) +(.*?)\s*(?:\n|$)}) do |matches|
         num_of_secs += 1
 
-        slug = matches[1].downcase.strip.gsub(' ', '-')
+        slug = matches[1].downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')
 
         if matches[0].length == 2
           toc_string+="* [#{matches[1]}](\##{slug})\n"
