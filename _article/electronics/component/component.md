@@ -11,3 +11,9 @@ tite: Electrical Component
 
 ## More Terminal
 * [Op-Amp](op-amp.html)
+
+
+
+## Supliers
+* www.farnell.com
+*

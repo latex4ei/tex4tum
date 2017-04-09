@@ -56,7 +56,15 @@ A regular expression is a character sequence that specifies a pattern of a strin
 
 ## Examples
 
-Find a date: `\d{4}-\d{2}-\d{2}`
+| Match | Pattern | Regex | 
+|-------|---------|-------|
+| Date  | YYYY-MM-DD | `\d{4}-\d{2}-\d{2}` |
+| Email | xx@xx.xx | `\S{1,}@\S{2,}\.\S{2,}` |
+| IPv4 | ddd.ddd.ddd.ddd | `(?:[0-9]{1,3}\.){3}[0-9]{1,3}` |
+
+
+
+
 
 
 ## Applet

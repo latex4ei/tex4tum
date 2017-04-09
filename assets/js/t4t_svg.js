@@ -3,6 +3,15 @@
 // Get Properties
 // =====================================================
 
+function SVG_getTranslationById(id_obj){
+  var obj = document.getElementById(id_obj);
+
+  ts = obj.getAttribute('transform');
+  matches = ts.match(/translate\(\s*([+-]?\d*(?:\.\d*)?),\s*([+-]?\d*(?:\.\d*)?)\)/);
+  return {x: matches[1], y: matches[2]};
+}
+
+
 // returns {x, y} of the origin
 function SVG_getOriginById(id_obj){
   var obj = document.getElementById(id_obj);
@@ -21,7 +30,7 @@ function SVG_getOriginById(id_obj){
       ox = (box.x + box.width) / 2;
       oy = (box.y + box.height) / 2;      
   }
-
+;
   return {x: ox, y: oy};
 }
 
@@ -66,11 +75,22 @@ function SVG_translateId(id_obj, id_anch, x, y){
 }
 
 function SVG_rotateId(id_rot, id_anch, angle){
-	var anchor = document.getElementById(id_anch);
-	var rotor = document.getElementById(id_rot);
+  var anchor = document.getElementById(id_anch);
+  var rotor = document.getElementById(id_rot);
 
-	rotor.setAttribute('transform', "rotate("+angle+" "+anchor.x.animVal.value+" "+anchor.y.animVal.value+")");
+  rotstring = "rotate("+angle+" "+anchor.x.animVal.value+" "+anchor.y.animVal.value+")"
+
+  tf = rotor.getAttribute('transform');
+  match = tf.match(/rotate\(.*?\)/);
+  if (match != null){ 
+    tf = tf.replace(match[0], rotstring)
+  } else {
+    tf = rotstring + '' + tf
+  }
+
+  rotor.setAttribute('transform', tf);
 }
+
 
 function SVG_scaleId(id_obj, x, y){
 	var obj = document.getElementById(id_obj);
