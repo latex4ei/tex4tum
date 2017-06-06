@@ -1,5 +1,8 @@
 *[AES]: Advanced Encryption Standard
 *[ADC]: Analog/Digital Converter
+*[AST]: Abstract Syntax Tree
+
+
 
 *[BNF]: Backus–Naur Form
 
@@ -24,6 +27,7 @@
 
 *[RAM]: Random Access Memory
 *[ROM]: Read-Only Memory
+*[RTL]: Register-Transfer Level
 
 *[SPI]: Serial Peripheral Interface
 

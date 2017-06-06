@@ -1,3 +1,9 @@
-<figure class="figure">
-<img class="figure-img img-fluid" src="{{ include.filename | prepend: 'res/img/content-images/' }}" alt="{{ include.description }}"/><figcaption class="figure-caption">{{ include.description }}</figcaption>
+{% for image in site.static_files %}
+{% if image.name contains include.filename %}
+<!--<p> Filename="{{ image.name }}", path="{{ image.path }}" </p>-->
+  <figure class="figure">
+<img class="figure-img img-fluid" src="{{ image.path }}" alt="{{ include.description }}"/><figcaption class="figure-caption">{{ include.description }}</figcaption>
 </figure>
+{% endif %}
+{% endfor %}
+

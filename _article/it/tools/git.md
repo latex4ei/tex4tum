@@ -28,7 +28,11 @@ Head: simply a named reference to a commit object. By default, there is a head i
 
 ### Branch:
 
-### Index:
+### Index
+The index (= Stage = Cache) 
+
+### Tag
+Tags are pointers to a certain commit. They use a name which is more memorizeable than the hash of the commit.
 
 
 
@@ -50,5 +54,13 @@ Head: simply a named reference to a commit object. By default, there is a head i
 
 ### Undo local changes
 To undo local changes use `git checkout -- <FILE>`. If `<FILE>` is already staged (happens if you do `git add`), you can use `git reset HEAD <FILE>` and then `git checkout -- <FILE>`
+
+
+### Link code lines in issues
+* view file, click on start line number 
+* hold shift, click on end line
+* press `y` to create permanent URL (hash)
+
+
 
 

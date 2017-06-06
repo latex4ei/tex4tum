@@ -7,7 +7,15 @@ module Jekyll
     end
 
     def render(context)
-      "<img class='img-fluid' src='res/img/content-images/#{@filename}'>"
+      site = context.registers[:site]
+      site.static_files.each do |file|
+        # puts 'search: "'+file.name+'", need: "'+@filename+'"'
+        if( @filename.include?(file.name))
+          # puts 'File: '+file.name+', path: '+file.relative_path
+          return "<img class='img-fluid' src='#{file.relative_path}'>"
+        end
+      end
+      
     end
   end
 
