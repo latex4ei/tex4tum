@@ -11,7 +11,7 @@ var Options = (function () {
         el = document.getElementsByClassName(className);
         for (i = 0; i < el.length; i++) {
             if (isVisible) {
-                el[i].style.display = 'initial';
+                el[i].style.display = 'block';
             } else {
                 el[i].style.display = 'none';
             }
