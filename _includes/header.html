@@ -1,29 +1,39 @@
 <nav class="navbar fixed-top navbar-inverse bg-primary navbar-toggleable-md">
-    <div class="navbar-header">
-      <!-- toggle button (if collapsed)  -->
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
 
-
-
-      <!-- search bar (always visible)  -->
-      {% if page.layout == 'page' %}
-      <form class="pull-right"  role="search">
-        <div id="search" class="search-container">
-          <input class="form-control search-input" type="search" placeholder="Search (fuzzy)" tabindex="1">
-        <div class="ac-results-wrapper"></div>
-        </div>
-      </form>
-     {% endif %}
-
-    </div>
-  
-    <!-- menu  -->
-    <div class="collapse navbar-collapse" id="navbarResponsive">
+    <!-- sticky left: logo -->
+    <div class="navbar-header navbar-left pull-left">
       <a class="navbar-brand" href="{{ "index.html" | relative_url }}">
         <img src="{{ "./res/img/Logo-inv.png" | relative_url }}" height="30" alt="Logo">
-          {{site.title}}
       </a>
-      <ul class="navbar-nav mr-auto">
+    </div>
+
+
+    <!-- sticky right: search and button -->
+    <div class="navbar-header navbar-right pull-right">
+      <!-- search bar (always visible)  -->
+      {% if page.layout == 'page' %}
+      <!--
+      <form class="pull-left inline-form"  role="search">
+        <div id="search" class="">
+          <input class="form-control search-input" type="search" placeholder="Search (fuzzy)" tabindex="1">
+        <div class=""></div>
+        </div>
+      </form> -->
+      <span class="navbar-text"> {{site.title}} </span>
+     {% endif %}
+
+      <!-- toggle button (if collapsed)  -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+    </div>
+
+
+    <!-- menu  -->
+    <div class="visible-xs-block clearfix"></div>
+
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      
+      <!-- <span class="navbar-text"> {{site.title}} </span> -->
+      <ul class="nav navbar-nav navbar-left">
         {% for my_page in site.pages %}
         {% if my_page.title %}
         <li class="nav-item">
@@ -57,5 +67,8 @@
         </li>
       </ul>
     </div>
+
+
+
 
 </nav>

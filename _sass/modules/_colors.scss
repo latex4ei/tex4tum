@@ -9,6 +9,7 @@ $tum_orange: #e37222;
 // Other
 $grey-color:       #828282 !default;
 $grey-color-light: lighten($grey-color, 40%) !default;
+$gray-lighter: lighten($grey-color, 40%) !default;
 
 $bg_tum_orange: lighten($tum_orange, 40%) !default;
 $bg_tum_blue_dark:   lighten($tum_blue_dark, 40%) !default;

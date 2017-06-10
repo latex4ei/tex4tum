@@ -15,6 +15,9 @@ $link-hover-color: $brand-success;
 $card-border-width: 5px;
 
 
-.container{
-	margin-top: 100px; /* some space to the navbar */
+
+
+.navbar{
+	flex-direction: row;
 }
+
