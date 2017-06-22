@@ -15,7 +15,7 @@ module Jekyll
           return "<img class='img-fluid' src='#{file.relative_path}'>"
         end
       end
-      
+
     end
   end
 
@@ -68,10 +68,10 @@ module Jekyll
       text = super
       level = text[/#+/].length
 
-      prelabelhtml='<input name="checkboxgroup" type="radio" id="checkboxid"><label for="checkboxid">'
-      postlabelhtml='</label>\n'
+      prelabelhtml='<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#checkboxid" role="tab">'
+      postlabelhtml='</a></li>\n'
 
-      pretabhtml='<div class="tab-content">'
+      pretabhtml='<div class="tab-pane" id="checkboxid" role="tabpanel">'
       posttabhtml='</div>\n'
 
       # do it in a loop
@@ -80,19 +80,22 @@ module Jekyll
       tablabels = ""
       text.scan(/((?<!#)\#{#{level}}\s+(.*))\n/) do |match|
         newprelabelhtml = prelabelhtml.gsub('checkboxid', "checkboxid-#{it}")
-        newprelabelhtml = newprelabelhtml.gsub('checkboxgroup', "checkboxgroup-#{group_id}")
         if(it == 0)
-          newprelabelhtml = newprelabelhtml.sub('><label', ' checked ><label')
-        end  
+          newprelabelhtml = newprelabelhtml.sub('"nav-link"', '"nav-link active"')
+        end
         tablabels += newprelabelhtml + match[1] + postlabelhtml + '\n'
 
-        tabhtml = (it > 0 ? posttabhtml : "") + pretabhtml
+        newpretabhtml = pretabhtml.gsub('checkboxid', "checkboxid-#{it}")
+        if(it == 0)
+          newpretabhtml = newpretabhtml.sub('"tab-pane"', '"tab-pane active"')
+        end
+        tabhtml = (it > 0 ? posttabhtml : "") + newpretabhtml
         text = text.gsub(match[0], tabhtml)
         it = it + 1
       end
 
       # First class element is required for JS
-      "<div class='tabbox'>#{tablabels}#{text}</div></div>"
+      "<div class='tabbox'>\n<ul class='nav nav-tabs' role='tablist'>#{tablabels}</ul>\</div>\n<div class='panel-body tab-content'>#{text}</div>\n</div>"
     end
   end
 
