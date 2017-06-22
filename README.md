@@ -46,6 +46,15 @@ Install all required depencencies in the `Gemfile` with
 make install
 ```
 
+#### Error nokogiri
+If the installation of nokogiri fails, run:
+```
+gem uninstall nokogiri
+sudo apt-get install libxslt-dev libxml2-dev zlib1g-dev
+```
+and try again
+
+
 ### Building
 To parse all markdown files run
 ```bash
