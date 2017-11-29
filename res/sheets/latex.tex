@@ -1,0 +1,304 @@
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% 
+% LaTeX-Einführung von Emanuel Regnath				Stand: 01.01.12
+%
+%
+%
+% Allgemeine LaTeX - Hinweise:
+% ======================================================================
+% LaTeX Code besteht aus 3 Dingen: Text, Befehlen und Formatierungszeichen.
+% Befehle haben immer die Form: \Befehl[optionaler Parameter]{Parameter}
+% Formatierungszeichen sind: % \ [ ] { } # & $ 
+% % kennzeichnet Kommentare
+% \ leitet einen Befehl ein
+% {} umklammern logisch zusammengehörige Blöcke
+% die Restlichen werden später erklärt
+%
+% Minimales LaTeX Grundgerüst:
+% \dokumentclass{scrartcl}
+% \begin{document}
+%	...textetxtext...
+% \end{document}
+%
+% Tipp: am besten kompiliert man den Code und vergleicht ihn immer wieder mit der PDF-Ausgabe.
+% Und Los gehts!??? Noch nicht; bevor man Text schreiben kann, muss einiges definiert werden:
+%
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+
+
+% Dokumenteinstellungen
+% ======================================================================
+
+% Die Dokumentklasse definiert die Art des Dokuments
+% und seine Grundeigenschaften
+\documentclass[10pt,a4paper]{scrartcl}		% [Schriftgröße 10, Textbereich Din A4] {Dokumentart Artikel}
+
+
+% Zusätzliche (aber sinnvolle) Pakete laden
+% ======================================================================
+% Pekete fügen verschiedene Funktionen zu LaTeX hinzu.
+% ganz ohne Pakete wäre Latex gerade mal etwas besser als notepad...
+\usepackage[a4paper]{geometry}				% DIN-A4 Größe des Papiers; sollte mit der Ausdehnung des Textes in documetnclass übereinstimmen.
+\usepackage[utf8]{inputenc}					% Zeichenkodierung UTF-8 falls Probleme wegen utf8 auftreten, utf8 durch utf8x ersetzen
+\usepackage[ngerman]{babel}					% Deutsche Sprache und Silbentrennung
+\usepackage{amsmath}						% erlaubt mathematische Formeln
+\usepackage{amssymb}						% Verschiedene Symbole
+\usepackage{graphicx}						% Zum Bilder einfügen benötigt
+\usepackage{hyperref}						% Sprunglinks für Überschriften, Fußnoten und Weblinks
+
+
+
+% Eigene Befehle und Befehlsanpassungen (optional)
+% ======================================================================
+% Form: \newcommand{\neuerBefehl}[Anzahl Parameter]{ Befehlsreihe oder Text #n }   n = 1,2,...
+% 		#n repräsentiert den übergebenen Parameter
+\newcommand{\norm}[1]{ \| #1 \| }									%Vektornorm
+\newcommand{\chem}[1]{\ensuremath{\displaystyle{ \mathrm{#1}}}}		%chemische Formeln die gut aussehen ;)
+
+% Überschreibungen
+\renewcommand{\arraystretch}{1.4}				% Vergrößert Abstände in Tabellen
+
+
+% Dokumentbeschreibung
+% ======================================================================
+\title{LaTeX-Einführung für Artikel}
+\author{Emanuel Regnath}
+
+
+
+
+ 
+
+
+% Dokumentbeginn
+% ======================================================================
+% Ab hier beginnt das eigentliche Dokument.
+% Alles was danach folgt wird im fertigen PDF angezeigt.
+
+\begin{document}
+
+
+% Titel		(Titel, Autor, Erstellungsdatum)
+% ===========================================
+\maketitle
+
+% Vertikaler Abstand
+% ===========================================
+\vspace{4.0cm}		% Gültige Einheiten für Längenangaben: pt, px, mm, cm, em
+
+% Inhaltsverzeichnis   (Überschriften werden automatisch in das Inhaltsverzeichnis aufgenommen.)
+% ===========================================
+\tableofcontents			
+
+
+% Neue Seite
+% ===========================================
+\newpage
+
+
+
+% -------------------------------------------
+% | 		E I N L E I T U N G				|		(Kommentare zur Übersicht sind wichtig!)
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% ======================================================================================================
+\section{Einleitung}	% \section{Überschrift}
+
+In Latex kann Text einfach geschrieben werden. Auch Umlaute wie ä, ö, ü oder ß sind mit dem UTF-8 package kein Problem.
+	Einrückung, viele           Leerzeichen oder Absätze im Editor 
+haben keine Auswirkung auf den Textfluss.
+Erst ein Doppelbackslash\\											% oder \newline aber \\ ist kürzer ;)
+erzeugt einen Zeilenumbruch. Ein doppelter Absatz im Editor			% oder \par aber doppel-Enter ist kürzer :)
+
+bewirkt einen eingerückten Absatz im Latex-PDF.
+Will man eine Leerzeile erreichen, bedient man sich folgender Methode:\\
+\\
+Nun ist eine Leerzeile entstanden ohne Einrückung.
+Verschiedene Einrückungen oder Abstände erreicht man so\,so\;so\ so\quad so\qquad so \hspace{2.0cm}so. Negativen Abstand s\!o s\!\!o bzw. \ s\!\!\!\!\!o \par
+Da folgende Zeichen Befehle oder Formatierungszeichen darstellen, müssen sie im Text etwas aufwendiger geschrieben werden: \textbackslash  \$ \{ \} \& \% \#
+
+
+% -------------------------------------------
+% | 		B E F E H L E					|
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% ======================================================================================================
+\section{Befehle}
+... beginnen in \LaTeX{} \emph{immer} mit einem Backslash. \\		% Form: \Befehl[optionaler Parameter]{Parameter}
+Textformatierungen: normal, \underline{unterstrichen}, \textbf{fett}, \textit{kursiv}, \textsl{schräg} ,\textsc{Großbuchstaben} \\
+Drei Schriftarten: \textnormal{normal}, \textsf{seriflos}, \texttt{typewriter}\\	
+% Das gleiche bewirken \rmfamily, \sffamily und \ttfamily, allerdings bis zum Ende eines Blockes{} oder bis \normalfont
+{Geschweifte \sffamily Klammern { } kennzeichen {\ttfamily logische Blöcke}, werden aber nicht gerendert.} \\[5pt]  					%Neue Zeile mit zusätzlichem Abstand
+Fußnoten\footnote{Ich bin eine Fußnote} sind total einfach\footnote{Automatische Nummerierung und Formatierung}.
+Es gibt drei Arten von Bindestrichen: - -- ---
+	
+
+% -------------------------------------------
+% | 		G L I E D E R U N G				|
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% ======================================================================================================
+
+\section{Gliederung: Mächtige Überschrift}
+% ======================================================================================================
+
+	\subsection{Unterüberschrift}
+	% ------------------------------------------------------------------
+	
+		\subsubsection{Kleinlaute Überschrift}
+		
+			\paragraph{Paragraph 1}	%  Wird nicht ins Inhaltsverzeichnis aufgenommen
+			Text bla bla bla. Weiter Gliederungsmöglichkeiten sind Listen. Auf alle Fälle sollte \textbf{Fettschrift} nicht zur Gliederung verwendet werden.
+			% Anmerkung in der Dokumentclass "book" gibt es über \section noch das \chapter
+
+
+% -------------------------------------------
+% | 		U M G E B U N G E N				|
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% ======================================================================================================
+\section{Umgebungen}
+Es gibt verschiedene Umgebungen in Latex, die sich vom normalen Text und Befehlen abgrenzen. 
+Zum Beispiel Tabellen, Formeln oder Zitate. Sie werden mit ``begin\{ Umgebung \}'' und ``end\{ Umgebung \}'' gekennzeichnet. 
+Zum Beispiel die quote-Umgegbung:
+\begin{quote}
+	\glqq Ich weiß, dass ich nichts weiß.\grqq \ --\ \textsc{Sokrates}				%Anführungszeichen deutsch: \glqq,\grqq  englisch: ``,''
+\end{quote}
+Auch wenn man diese Formatierung anders ereichen könnte, 
+ist es sinnvoll und guter Stil ein Zitat in eine quote-Umgebung zu packen, 
+da man eigene Formatierungen für Umgebungen festlegen kann und so alle Zitate auf einmal richtig formatiert werden.
+
+
+	\subsection{Tabellen}
+	% ------------------------------------------------------------------
+	sind auch leicht:\\
+	\begin{tabular}{l||lc|r}				%{lclr} gibt die Anzahl(4) und die Ausrichtung der Spalten an. | bedeutet eine vertikale Trennlinie. 
+		links 			& links & zentriert 	& rechts\\		% ein & trennt Spalten \\ beginnt eine neue Zeile
+		etwas Mathe 	& $3 \cdot 5 + \frac{1}{2}$ & $\ne 0$ & $\Rightarrow$ Ich weiß doch was\\ \hline 	% \hline erzeugt eine horizontale Linie
+		leere Spalten 	& & & \\
+	\end{tabular}
+
+
+	\subsection{Formeln}
+	% ------------------------------------------------------------------
+	Kleine mathematische Ausdrücke wie $f(x) = a \cdot x^2 + 2x$, chemische Formeln $H_3O^+$ oder Symbole $\Rightarrow$, können in den Textfluss 
+	mit Dollarzeichen eingebunden werden, größere Formeln werden mit der equation-Umgebung abgesetzt und nummeriert:
+	\begin{equation}
+		\lambda := \lim\limits_{x_1 \rightarrow \infty}    \int\limits_{x_0}^{x_1} \frac{ f(t) }{ \sqrt{t^2 + \sin^2(t) } } \; \mathrm dt \stackrel{!}\ge 1
+		% Diese Formel dient lediglich als Beispiel wie man einige mathematische Ausdrücke am besten in LaTeX umsetzt	
+	\end{equation}
+	
+	Will man in Formeln Text einfügen, muss man diesen extra kennzeichen:\\
+	$\text{falls } v \in \mathbb R^n,\ \lambda \in \mathbb R \text{ so gilt } \forall v \exists \lambda: \norm{ \lambda \cdot \vec v } = 1, denn so gehts nicht$\\
+	\\
+	Innerhalb von Formeln gibt es wiederum eigene Umgebungen wie Arrays oder Matrizen. Sie werden wie Tabellen formatiert:
+	\begin{equation}
+		\text{Matrix: } A^\top = \begin{bmatrix} a_{11} & \hdots & a_{1n} \\ \vdots & \ddots & \vdots \\ a_{m1} & \hdots & a_{mn} \end{bmatrix} \in \mathbb C^{m \times n} \qquad 
+		\text{Vektor: } \vec v = \begin{pmatrix} v_1 \\ v_2 \\ v_3 \end{pmatrix}
+	\end{equation}
+	\\
+	Man kann Formeln auch Einrahmen: \boxed{ f:D \subseteq \mathbb R^n \rightarrow \mathbb R^m ,\, x \mapsto f(x) } \\
+	Positionierung in Formeln: $m^{hoch} \quad m_{tief} \quad \overset{oben}{mitte} \quad \underset{unten}{mitte}$ \qquad speziell: $\xrightarrow{a \ne 0}$ und $\stackrel{!}\le$\\
+	% Eine vollständige Liste von mathematischen Ausdrücken findet man im Internet.
+		\subsubsection{Beispielformeln}
+		Physik: $v = \frac{\partial s}{\partial t} = 3.14 \mathrm{\frac{m}{ s}}$\\	
+		Chemische Formeln: $\chem{2H_2O \rightleftharpoons H_3 O^{+} + OH^-}$\\
+		Strahlungsphysik: $\chem{ ^{14}_{\ 6} C \rightarrow {}^{14}_{\ 7} N + e^- + \overline \nu_e}$
+
+
+	\subsection{Listen}
+	% ------------------------------------------------------------------
+	Es gibt drei Arten von Listen(itemize, enumerate, description) die mit der Erklärung über guten LaTeX Stil veranschaulicht werden.
+	Damit ein LaTeX Dokument	% Mit \itemsep4pt nach \begin{...} kann man den Abstand anpassen
+	\begin{itemize}\itemsep-2pt	
+		\item übersichtlich bleibt,
+		\item für sich und Andere später noch nachvollziehbar ist
+		\item und eventuelle Nachbesserungen einfach sind,
+	\end{itemize} 
+	sollte man ein paar Regeln beachten:
+	\begin{enumerate}			
+		\item Einrücken und Kommentare im Quellcode
+		\item Dokumentweite Einstellungen und eigene Befehle immer vor \textbackslash begin\{document\} schreiben
+		\item Befehle nicht zweckentfremden\\ 
+			$\Rightarrow$ Die von LaTeX vorgesehenen Befehle anpassen oder eigene erstellen.			%Es gibt für alles den richtigen LaTeX-Befehl, man muss ihn nur finden		
+	\end{enumerate}
+	
+	Zum Beispiel bewirken \emph{Hervorhebung} und \textit{kursiv} zunächst das selbe. 
+	Will man aber Hervorhebungen fett geschrieben haben so überschreibt man einfach den Befehl \textbackslash emph:
+	\renewcommand{\emph}[1]{\textbf{#1}}	%\renewcommand{\Befehl}[Anzahl der Parameter]{ Neuer Befehl {#Parameternummer} }
+	Somit bleiben \textbf{fett} und \textit{kursiv} unverändert und \emph{Hervorhebungen} sind flexibel anpassbar.\\
+	% Will man einen Befehl mit sich selbst überschreiben, muss man ihn zuerst mit \let kopieren.
+	% Beispiel: Vektoren fett schreiben:
+	% \let\oldvec = \vec 	   \renewcommand{\vec}[1]{\oldvec{\boldsymbol{#1}}}
+	\subsubsection{Querverweise} werden durch labels gesetzt.\label{hier} Es gibt drei Arten von Verweisen:
+	\begin{description}	
+		\item[Verweis] mit ref \ref{hier}
+		\item[Seitenverweis] wird mittels pageref \pageref{hier} eingefügt
+		\item[Literaturverweise:] Eine Tatsache aus einem Buch \cite{bowie}
+	\end{description}
+
+	
+% -------------------------------------------
+% | 		B I L D E R						|
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% ======================================================================================================	
+\section{Bilder}
+Bilder können mit dem Befehl \textbackslash includegraphics[width = ?, height = ?]\{ Pfad zum Bild.pdf\} eingebunden werden.		% Beispiel: \includegraphics[height = 3.0cm]{./vektor.pdf}
+Allerdings unterstützt LaTeX nur wenig Formate: .pdf .jpg .png .gif.
+Nur .pdf kann Vektorgrafiken enthalen. 		% Vektorgrafiken sind leichter zu erstellen, verlustfrei, und klein. :)
+
+
+
+% .:: Wie Latex funktioniert
+% ======================================================================================================
+\section{Wie LaTeX funktioniert}
+Grob gesagt macht \LaTeX{} um jedes Zeichen eine Box: \fbox{H}, dann um jedes Wort: \fbox{ \fbox{H}\fbox{a}\fbox{l}\fbox{l}\fbox{o} }, dann um jede Zeile, usw.
+Will man große Objekte und einen Text nebeneinander haben, muss man um beides eine Box bauen, denn in einer Zeile dürfen nur Boxen nebeneinander aber niemals übereinander stehen.
+Dies erreicht man am besten mit parbox oder pbox:\\
+\parbox{3.0cm}{
+	\begin{tabular}{l||l|l}
+	a & b & c \\ \hline \hline
+	1 & 2 & 4 \\
+	4 & 5 & 6 \\
+	\end{tabular}
+} 
+\parbox{10cm}{So hier ist ein ganz normaler Text, der allerdings über mehrere Zeilen neben der Tabelle erscheint. Text und Tabelle sind sozusagen zwei \glqq große\grqq\ Wörter innerhalb einer Zeile.}
+
+
+
+% .:: Literaturverzeichnis
+% ======================================================================================================
+\begin{thebibliography}{------}
+\bibitem[Bowie87]{bowie}		%[name]{label}
+	J. U. Bowie, R. L\"uthy and D. Eisenberg.
+	{\em A Method to Identify Protein Sequences That Fold 
+	into a Known Three-Dimensional Structure}.
+	Science, 1991 (253), pp 164-170
+\end{thebibliography}
+
+
+
+% Geschafft!
+% Nun liegt es an dir, dein eigenes LaTeX Dokument zu erstellen
+
+
+
+
+
+% Vorsicht!!! hier endet das Dokument.
+% Der Rand der sichtbaren Welt, danach hat nichts mehr etwas zu suchen.
+% ==============================================================================================================
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+haaaallo? ließt mich jemand?
+ich bin ein kleiner verirrter Text, der nirgends zu sehen ist.
+Was soll ich jetzt bloß machen? Ich will zurück zu meiner Mama!!! *schluchtz*
+
