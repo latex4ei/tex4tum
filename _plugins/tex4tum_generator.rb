@@ -18,6 +18,7 @@ module Jekyll
         collection.docs.each do |document|
           todos = get_todos(document, todos)
 
+          # puts document.path
           document.content = markDefinition(document.content)    # this has to be called first
           document.content = replaceClasses(document.content)
           document.content = add_abbreviations(document.content)
@@ -40,7 +41,7 @@ module Jekyll
     TEX_SINGLE_REGEXP = %r{(?:\s|^)\$(?=[^\s$])(.*?)(?<=[^\s$\\])\$(?:\s|$)}
     TEX_DUAL_REGEXP = %r{(?:^|\n)\s*\$\$(?=[^\s$])(.*?)(?<=[^\s$\\])\$\$\s*(?:\n|$)}
 
-    LEGEND_REGEXP = %r{(?:^|\n)\s*(\$\$(?=[^\s$])(?:.*?)(?<=[^\s$\\])\$\$\s*\n\s*((?:with|where|Legend:)\s+((?:.|\n)*?)\n\s*\n))}
+    LEGEND_REGEXP = %r{(?:^|\n)\s*((\$\$(?=[^\s$])(?:.*?)(?<=[^\s$\\])\$\$)\s*\n\s*((?:with|where|Legend:)\s+((?:.|\n)*?)\n\s*\n))}
 
     UNICODE_TEX_HASH = {
       '<' => %q{\lt}, '>' => %q{\gt}, 
@@ -57,7 +58,7 @@ module Jekyll
 
 
     def add_latex_definitions(content)
-      latex_definitions = File.read('./res/parser_util/tex_definitions.md')
+      latex_definitions = File.read('./res/parser_util/tex_definitions.md', :encoding => 'utf-8')
       content = latex_definitions + content
 
 
@@ -73,7 +74,7 @@ module Jekyll
     end
 
     def add_abbreviations(content)
-      abbreviations = File.read('./res/parser_util/abbreviations.md')
+      abbreviations = File.read('./res/parser_util/abbreviations.md', :encoding => 'utf-8')
       content += abbreviations
 
       content = parse_abbreviation(content)
@@ -95,6 +96,8 @@ module Jekyll
       return content
     end
 
+
+
     def get_todos(document, todos)
       document.content.scan(TODO_REGEXP) do |match|
         todo = match[1].gsub(/<\/?[^>]*>/, "") # Stripping html
@@ -104,11 +107,20 @@ module Jekyll
       return todos
     end
 
+
+
     def markDefinition(content)
+
+      # idea: find a definition and show it when the heading before it is clicked
+
       #puts "START" + content
-      content = content.sub(DEFINITION_REGEXP, %q{{% definition %}\1{% enddefinition %}}+"\n\n")
+      # title definition:
+      content = content.sub(DEFINITION_REGEXP, %q{{% definition title_def%}\1{% enddefinition %}}+"\n\n")
       return content
     end
+
+
+
 
     def replaceClasses(content)
       section_array = Array.new
@@ -120,10 +132,13 @@ module Jekyll
         end
       end
 
+      eq_num = 0
       content.scan(LEGEND_REGEXP) do |match|
         equation_par = match[0]   #$1
-        equation_par = equation_par.sub(match[1], %q{{% legend %}} + "\n" + match[1] + "\n" + %q{{% endlegend %}})
+        equation_par = equation_par.sub(match[1], "<div data-toggle='collapse' href='\#eq_#{eq_num}'>"+ "\n" + match[1] + "\n" + "</div>")
+        equation_par = equation_par.sub(match[2], '{% '+"legend eq_#{eq_num}"+'%}' + "\n" + match[2] + "\n" + %q{{% endlegend %}})
         content = content.sub(match[0], equation_par)
+        eq_num += 1
       end
 
       return content

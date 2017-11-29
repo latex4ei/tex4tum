@@ -14,7 +14,7 @@
 
 .search-input {
   z-index: 10;
-  border: 0.2em solid $tum_blue;
+  border: 0.2em solid $tum_prim_blue;
   min-width: inherit;
   display: block;
   height: inherit;
@@ -27,14 +27,14 @@
   display: block;
   min-width: inherit;
   font-size: 80%;
-  border: 1px solid $light_gray;
+  border: 1px solid $tum_sec_gray_light;
   border-top-width: 0;
   background-color: white;
   z-index: 11;
   a {
     display: none;
     height: 30px;
-    color: $tum_blue_light;
+    color: $tum_emph_lightblue;
     vertical-align: middle;
     line-height: 30px;
     padding-left: 5px;
@@ -42,18 +42,18 @@
     text-align: left;
     width: 100%;
     &:hover {
-      background-color: $tum_blue_light;
+      background-color: $tum_emph_lightblue;
       color: white;
     }
     &:focus {
-      background-color: $tum_blue_light;
+      background-color: $tum_emph_lightblue;
       color: white;
     }
   }
   i {
     float: right;
     padding-right: 5px;
-    color: $light_gray;
+    color: $tum_sec_gray_light;
   }
 }
 

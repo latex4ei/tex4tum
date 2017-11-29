@@ -10,8 +10,9 @@ GEM
       public_suffix (~> 2.0, >= 2.0.2)
     autoprefixer-rails (6.7.5)
       execjs
-    bootstrap (4.0.0.alpha6)
+    bootstrap (4.0.0.beta)
       autoprefixer-rails (>= 6.0.3)
+      popper_js (~> 1.11.1)
       sass (>= 3.4.19)
     colorator (1.1.0)
     colored (1.2)
@@ -75,6 +76,7 @@ GEM
     parallel (1.10.0)
     pathutil (0.14.0)
       forwardable-extended (~> 2.6)
+    popper_js (1.11.1)
     public_suffix (2.0.5)
     pygments.rb (1.1.1)
       multi_json (>= 1.0.0)
@@ -113,7 +115,7 @@ PLATFORMS
 
 DEPENDENCIES
   autoprefixer-rails
-  bootstrap
+  bootstrap (~> 4.0.0.beta)
   html-proofer
   jekyll
   jekyll-assets
@@ -123,7 +125,7 @@ DEPENDENCIES
   sass
 
 RUBY VERSION
-   ruby 2.3.1p112
+   ruby 2.3.3p222
 
 BUNDLED WITH
-   1.15.0
+   1.15.1

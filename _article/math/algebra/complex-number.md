@@ -3,7 +3,11 @@ title: Complex Numbers
 tags: [Imaginary Unit]
 ---
 
-$\cx z := a + b\i = r \cdot \exp(\i \varphi)$ with Imaginary Unit $\i = \sqrt{-1}$.
+Complex numbers extend the concept of the one-dimensional number line to the two-dimensional complex plane by using the horizontal axis for the real part and the vertical axis for the imaginary part.
+
+  $$\cx z := a + b\i = r \cdot \exp(\i \varphi)$$ 
+  with Imaginary Unit $\i = \sqrt{-1}$.
+
 
 {% include figure.html filename="complex.svg" description="Complex Plane"%}
 

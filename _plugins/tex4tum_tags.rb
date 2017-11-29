@@ -28,9 +28,21 @@ module Jekyll
 
   class Definition < Liquid::Block
 
+    def initialize(tag_name, params, tokens)
+      super
+      if(params != "")
+      	field = " id='#{params}'"	
+      else
+      	field = ""
+      end
+      @id_field = field
+      #puts "Id-field: "+@id_field
+    end
+
     def render(context)
+      #puts context
       # First class element is required for JS
-      "<div class='definition card card-warning'><div class='card-block'><b>Definition:</b> #{super}</div></div>"
+      "<div#{@id_field} class='collapse'><div class='card card-block'><b>Definition:</b> #{super}</div></div>"
     end
   end
 
@@ -42,11 +54,25 @@ module Jekyll
     end
   end
 
+
+
+
   class Legend < Liquid::Block
+
+    def initialize(tag_name, params, tokens)
+      super
+      if(params != "")
+      	field = " id='#{params}'"	
+      else
+      	field = ""
+      end
+      @id_field = field
+      #puts "Id-field: "+@id_field
+    end
 
     def render(context)
       # First class element is required for JS
-      "<div class='legend card card-info'><div class='card-block'><b>Legend:</b> #{super}</div></div>"
+      "<div#{@id_field} class='collapse'><div class='legend card card-info'><div class='card-block'><b>Legend:</b> #{super}</div></div></div>"
     end
   end
 

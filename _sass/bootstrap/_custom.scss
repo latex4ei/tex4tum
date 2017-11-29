@@ -4,20 +4,31 @@
 // without modifying source files.
 @import '../modules/colors';
 
-$brand-primary: $tum_blue_light;
-$brand-success: $tum_green;
+// old bootstrap
+//$brand-success: $tum_green;
 
+$theme-colors: (
+  primary: $tum_prim_blue,
+  secondary: $tum_sec_gray,
+  success: $tum_emph_green,
+  info: $tum_emph_lighterblue,
+  warning: $tum_emph_orange,
+  danger: $tum_ext_red,
+  light: $tum_emph_ivory,
+  dark: $tum_sec_gray_dark
+) !default;
+
+
+
+
+$brand-primary: $tum_emph_lightblue;
 $navbar-border-radius: 0;
 
 $link-hover-decoration: none;
-$link-hover-color: $brand-success;
+$link-hover-color: $tum_emph_green;
 
 $card-border-width: 5px;
 
 
 
-
-.navbar{
-	flex-direction: row;
-}
 

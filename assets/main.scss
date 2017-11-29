@@ -28,8 +28,8 @@
 }
 
 // Import partials.
-@import 'bootstrap';
 @import "bootstrap/custom";
+@import "bootstrap/scss/bootstrap";
 @import
   "modules/colors",
   "partials/base",

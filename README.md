@@ -54,6 +54,12 @@ sudo apt-get install libxslt-dev libxml2-dev zlib1g-dev
 ```
 and try again
 
+#### Error UTF-8
+make sure you have set your environment to utf-8:
+```
+export LC_ALL=en_US.U-8
+```
+
 
 ### Building
 To parse all markdown files run

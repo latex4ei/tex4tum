@@ -19,6 +19,7 @@ description: > # this means to ignore newlines until "baseurl:"
   Interactive online knowledge base for engineers
 baseurl: "" # the subpath of your site, e.g. /tex4tum
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
+encoding: utf-8
 collections:
   article:
     output: true
@@ -42,7 +43,7 @@ pandoc:
     - latexmathml
 highlighter: pygments
 gems:
-  - bootstrap
+  #- bootstrap
   - autoprefixer-rails
   - jekyll-assets
   - jekyll-pandoc

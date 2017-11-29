@@ -23,7 +23,9 @@ gem "jekyll-pandoc"
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
-  gem 'bootstrap'
+  gem 'bootstrap', '~> 4.0.0.beta'
+  #gem 'bootstrap-sass', '~>  3.3.6'
+  #, git: 'https://github.com/twbs/bootstrap-rubygem'
   gem 'autoprefixer-rails'
   gem 'jekyll-assets'
 end

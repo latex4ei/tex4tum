@@ -1,15 +1,72 @@
 // TUM Colors
-$tum_blue_light: #0065BD;
-$tum_blue: #005293;
-$tum_blue_dark: #003359;
-$light_gray: #999;
-$tum_green: #A2AD00;
-$tum_orange: #e37222;
+$tum_prim_blue: #005293;
+$tum_prim_white: #FFFFFF;
+
+$tum_sec_gray_light: #ccccc6;
+$tum_sec_gray: #808080;
+$tum_sec_gray_dark: #333333;
+
+$tum_sec_darkerblue: #003359;
+$tum_sec_darkerblue_80: #335c7a;
+$tum_sec_darkerblue_50: #8099ac;
+$tum_sec_darkerblue_20: #ccd6de;
+$tum_sec_darkblue: #005293;
+$tum_sec_darkblue_80: #3375a9;
+$tum_sec_darkblue_50: #80a9c9;
+$tum_sec_darkblue_20: #ccdce9;
+$tum_emph_green: #a2ad00;
+$tum_emph_ivory: #dad7cb;
+$tum_emph_orange: #e37222;
+$tum_emph_lightblue: #64a0c8;
+$tum_emph_lighterblue: #98c6ea;
+$tum_ext_violet: #69085a;
+$tum_ext_violet_80: #87397b;
+$tum_ext_violet_50: #b484ad;
+$tum_ext_violet_20: #e1cede;
+$tum_ext_navy: #0f1a5f;
+$tum_ext_navy_80: #3f497f;
+$tum_ext_navy_50: #878da0;
+$tum_ext_navy_20: #cfd1df;
+$tum_ext_teal: #00778a;
+$tum_ext_teal_80: #3392a1;
+$tum_ext_teal_50: #80bbc5;
+$tum_ext_teal_20: #cce4e8;
+$tum_ext_forest: #007c30;
+$tum_ext_forest_80: #339659;
+$tum_ext_forest_50: #80bd98;
+$tum_ext_forest_20: #cce5d6;
+$tum_ext_lime: #679a1d;
+$tum_ext_lime_80: #85ae4a;
+$tum_ext_lime_50: #b3cd8e;
+$tum_ext_lime_20: #e1ebd2;
+$tum_ext_yellow: #ffdc00;
+$tum_ext_yellow_80: #ffe333;
+$tum_ext_yellow_50: #ffee80;
+$tum_ext_yellow_20: #fff8cc;
+$tum_ext_goldenrod: #f9ba00;
+$tum_ext_goldenrod_80: #fac833;
+$tum_ext_goldenrod_50: #fcdd80;
+$tum_ext_goldenrod_20: #fef1cc;
+$tum_ext_pumpkin: #d64c13;
+$tum_ext_pumpkin_80: #de7042;
+$tum_ext_pumpkin_50: #eaa689;
+$tum_ext_pumpkin_20: #f7dbd0;
+$tum_ext_red: #c4071b;
+$tum_ext_red_80: #d03949;
+$tum_ext_red_50: #e2838d;
+$tum_ext_red_20: #f3cdd1;
+$tum_ext_maroon: #9c0d16;
+$tum_ext_maroon_80: #b03d45;
+$tum_ext_maroon_50: #ce868b;
+$tum_ext_maroon_20: #ebcfd0;
+
+
 
 // Other
+$light_gray: #999;
 $grey-color:       #828282 !default;
 $grey-color-light: lighten($grey-color, 40%) !default;
 $gray-lighter: lighten($grey-color, 40%) !default;
 
-$bg_tum_orange: lighten($tum_orange, 40%) !default;
-$bg_tum_blue_dark:   lighten($tum_blue_dark, 40%) !default;
+$bg_tum_orange: lighten($tum_emph_orange, 40%) !default;
+$bg_tum_blue_dark:   lighten($tum_sec_darkblue, 40%) !default;

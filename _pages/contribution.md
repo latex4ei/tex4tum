@@ -11,8 +11,14 @@ Run the local server and browse to http://localhost:4000/ with
 make run
 ```
 
+
+
+
+
 ## Custom Templates, Liquid Tags and Plugins
 We created some templates, liquid tags and plugins to simplify the development process. The following sections describe how to use these during contribution. Also check our [Demo Pages](demo.html) for some features
+
+
 
 ### Images
 To include Images use the following commands
@@ -78,8 +84,6 @@ Abbreviations are parsed and linked automatically. If you want to add a new abbr
 ### LaTeX
 To define new LaTeX commands add them to `res/parser_util/tex_definition.md`
 
-### TODOs
-All lines starting with TODO will be added to [TODOLIST](todo.html).
 
 ### Interactive Environments
 The following blocks can be enabled and disabled via the options (see [Demo Page](demo.html))
@@ -99,3 +103,10 @@ The following blocks can be enabled and disabled via the options (see [Demo Page
 ```
 Output:
 {% emphbox %}Conten in box{% endemphbox %}
+
+
+### List of TODOs
+All lines starting with TODO will be added to the following TODO list.
+
+{% include todo_table.html %}
+

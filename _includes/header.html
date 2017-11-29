@@ -1,39 +1,36 @@
-<nav class="navbar fixed-top navbar-inverse bg-primary navbar-toggleable-md">
+<nav class="navbar fixed-top navbar-dark bg-primary text-white navbar-expand-lg">
 
     <!-- sticky left: logo -->
-    <div class="navbar-header navbar-left pull-left">
-      <a class="navbar-brand" href="{{ "index.html" | relative_url }}">
+    <div class="navbar-brand">
+      <a href="{{ "index.html" | relative_url }}">
         <img src="{{ "./res/img/Logo-inv.png" | relative_url }}" height="30" alt="Logo">
       </a>
     </div>
 
 
-    <!-- sticky right: search and button -->
-    <div class="navbar-header navbar-right pull-right">
+
       <!-- search bar (always visible)  -->
       {% if page.layout == 'page' %}
-      <!--
-      <form class="pull-left inline-form"  role="search">
-        <div id="search" class="">
+      <form class="form-inline ml-auto order-lg-3"  role="search">
+        <div id="search" class="search-container">
           <input class="form-control search-input" type="search" placeholder="Search (fuzzy)" tabindex="1">
-        <div class=""></div>
+        <div class="ac-results-wrapper"></div>
         </div>
-      </form> -->
-      <span class="navbar-text"> {{site.title}} </span>
+      </form>
+      <!-- <span class="navbar-text"> {{site.title}} </span> -->
      {% endif %}
+
 
       <!-- toggle button (if collapsed)  -->
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-    </div>
 
 
-    <!-- menu  -->
-    <div class="visible-xs-block clearfix"></div>
 
-    <div class="collapse navbar-collapse" id="navbarResponsive">
+
+    <div class="collapse navbar-collapse justify-content-start order-6 order-lg-2" id="navbarResponsive">
       
       <!-- <span class="navbar-text"> {{site.title}} </span> -->
-      <ul class="nav navbar-nav navbar-left">
+      <ul class="navbar-nav">
         {% for my_page in site.pages %}
         {% if my_page.title %}
         <li class="nav-item">
@@ -42,22 +39,22 @@
         {% endif %}
         {% endfor %}
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="{{ "index.html" | relative_url }}" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{% icon fa-cog %} Options</a>
+          <a class="nav-link btn-group dropdown-toggle" href="{{ "index.html" | relative_url }}" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{% icon fa-cog %} Options</a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <h6 class="dropdown-header">Display Options</h6>
-            <div class="form-check">
+            <div class="form-check dropdown-item">
               <label class="form-check-label">
                 <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox" checked="checked" onchange="Options.changeOption(this)">
                   Definitions
               </label>
             </div>
-            <div class="form-check">
+            <div class="form-check dropdown-item">
               <label class="form-check-label">
                 <input class="form-check-input" id="checkbox_example" name="disp_opt" type="checkbox" checked="checked" onchange="Options.changeOption(this)">
                   Examples
               </label>
             </div>
-            <div class="form-check">
+            <div class="form-check dropdown-item">
               <label class="form-check-label">
                 <input class="form-check-input" id="checkbox_legend" name="disp_opt" type="checkbox" checked="checked" onchange="Options.changeOption(this)">
                   Legends

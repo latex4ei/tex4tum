@@ -9,7 +9,9 @@ $$\mu _{n}=\int _{-\infty }^{\infty }(x-c)^{n}\,f(x)\diff x$$
 ## Mean
 
 discrete:
-$$\mu_1 =\sum x \cdot P(x)$$
+
+  $$\mu_1 =\sum x_i \cdot P(x)$$
+  with result $x$ and probability function $P()$
 
 
 ## Variance
