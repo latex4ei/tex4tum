@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- title, description, favicon -->
+    <title>Interactive Cheat Sheets Demo</title>
+    <meta name="description" content="Interactive online knowledge base for engineers
+">
+    <link rel="shortcut icon" href="/res/img/Logo.png">
+
+    <link rel="stylesheet" href="/assets/main.css">
+    <link rel="canonical" href="http://localhost:4000/demo">
+
+    
+
+    <!-- Own javascript -->
+    <script src="/assets/js/latex4ei.js"></script>
+    <script src="/assets/js/options.js"></script>
+
+    <!-- Load jQuery -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+
+    <!-- Load Fuse -->
+    <script src="https://cdn.jsdelivr.net/fuse/2.6.1/fuse.min.js"></script>
+    <script src="/assets/js/search_index.json"></script>
+    <script src="/assets/js/t4t_search.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
+
+
+    <!-- Fontawesome -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <!-- Mermaid -->
+    <link rel="stylesheet" href="https://cdn.rawgit.com/knsv/mermaid/7.0.0/dist/mermaid.css">
+    <script type="text/javascript" src="https://cdn.rawgit.com/knsv/mermaid/7.0.0/dist/mermaid.min.js"></script>
+
+    <!-- Load KaTeX -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js"></script>
+    <script type="text/javascript">
+        window.onload = function () {
+            // render KaTeX
+            renderMath();
+
+            // fix navbar hiding anchor jumps
+            window.addEventListener("hashchange", function() { scrollBy(0, -100) } );
+
+
+
+            Options.loadOptions();
+
+            var opts = {
+                data: search_index,
+                numResults: 10,
+                searchPath: '/search?q=',
+                directPath: '.',
+                container: document.getElementsByClassName('search-container')
+            };
+            autocomplete(opts);
+        };
+    </script>
+
+</head>
+
+
+  <body>
+
+    <nav class="navbar fixed-top navbar-dark bg-primary text-white navbar-expand-lg">
+
+    <!-- sticky left: logo -->
+    <div class="navbar-brand">
+      <a href="/index.html">
+        <img src="/res/img/Logo-inv.png" height="30" alt="Logo">
+      </a>
+    </div>
+
+
+
+      <!-- search bar (always visible)  -->
+      
+      <form class="form-inline ml-auto order-lg-3" role="search">
+        <div id="search" class="search-container">
+          <input class="form-control search-input" type="search" placeholder="Search (fuzzy)" tabindex="1">
+        <div class="ac-results-wrapper"></div>
+        </div>
+      </form>
+      <!-- <span class="navbar-text"> Tex4Tum </span> -->
+     
+
+
+      <!-- toggle button (if collapsed)  -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+
+
+
+
+    <div class="collapse navbar-collapse justify-content-start order-6 order-lg-2" id="navbarResponsive">
+      
+      <!-- <span class="navbar-text"> Tex4Tum </span> -->
+      <ul class="navbar-nav">
+        
+        
+        
+        
+        
+        
+        <li class="nav-item">
+          <a class="nav-link" href="/contribution.html"><i class="fa fa-handshake-o"></i> Contribution</a>
+        </li>
+        
+        
+        
+        <li class="nav-item">
+          <a class="nav-link" href="/submenu/todo.html"><i class="fa fa-th-list"></i> TODO</a>
+        </li>
+        
+        
+        
+        <li class="nav-item">
+          <a class="nav-link" href="/sheets.html"><i class="fa fa-file-text"></i> Cheat Sheets</a>
+        </li>
+        
+        
+        
+        <li class="nav-item">
+          <a class="nav-link" href="/about.html"><i class="fa fa-question"></i> About</a>
+        </li>
+        
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link btn-group dropdown-toggle" href="/index.html" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-cog"></i> Options</a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <h6 class="dropdown-header">Display Options</h6>
+            <div class="form-check dropdown-item">
+              <label class="form-check-label">
+                <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox" checked onchange="Options.changeOption(this)">
+                  Definitions
+              </label>
+            </div>
+            <div class="form-check dropdown-item">
+              <label class="form-check-label">
+                <input class="form-check-input" id="checkbox_example" name="disp_opt" type="checkbox" checked onchange="Options.changeOption(this)">
+                  Examples
+              </label>
+            </div>
+            <div class="form-check dropdown-item">
+              <label class="form-check-label">
+                <input class="form-check-input" id="checkbox_legend" name="disp_opt" type="checkbox" checked onchange="Options.changeOption(this)">
+                  Legends
+              </label>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+
+
+
+</nav>
+
+
+    <main class="container" aria-label="Content">
+      <div class="row justify-content-md-center">
+        <div class="col-9">
+          <h1><a data-toggle="collapse" href="#title_def" aria-expanded="false" aria-controls="title_def">Interactive Cheat Sheets Demo</a></h1>
+
+<!-- Basics -->
+<!--    -->
+<!-- \newcommand{\diff}{\mathop{}\!\mathrm{\vphantom( d}} -->
+<!-- SI Units -->
+<!--=============================================================== -->
+<!-- KaTeX Tweaks -->
+<div id="title_def" class="collapse">
+<div class="card card-block">
+<b>Definition:</b> This is a showcase to demonstrate how learning materials could be made interactive, fast accessible, and neat.
+</div>
+</div>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul>
+<li>
+<a href="#features">Features</a>
+<ul>
+<li><a href="#control-the-focus">Control the Focus</a></li>
+<li><a href="#interactive-math">Interactive Math</a></li>
+<li><a href="#interactive-diagrams">Interactive Diagrams</a></li>
+<li><a href="#fast-fuzzy-search">Fast Fuzzy Search</a></li>
+</ul>
+</li>
+<li><a href="#demo-pages">Demo Pages</a></li>
+<li><a href="#todo">ToDo</a></li>
+</ul>
+<h2 id="features">Features</h2>
+<h3 id="control-the-focus">Control the Focus</h3>
+Read only the content you really need. Use the options in the top right corner to change the visibility of the following content:<br>
+<div class="collapse">
+<div class="card card-block">
+<b>Definition:</b> The square root is the math function <span class="LaTeX">$\sqrt{\cdot}$</span>.
+</div>
+</div>
+<div class="example card card-success">
+<div class="card-block">
+Example: <span class="LaTeX">$\sqrt{ x^4 } = x^2$</span>
+</div>
+</div>
+<div class="collapse">
+<div class="legend card card-info">
+<div class="card-block">
+<b>Legend:</b> Legend: where x is an arbitrary value
+</div>
+</div>
+</div>
+<p>Furthermore, abbreviations do not need explanations anymore. If you do not know it just move the mouse over it: <abbr title="Scalable Vector Graphics
+">SVG</abbr></p>
+<h3 id="interactive-math">Interactive Math</h3>
+<p>Directly calculate an equation while reading. Click on the values of R and C in the text to change them!</p>
+<p>A RC low-pass filter with Resistance R = <span id="R_val" onclick="askValue(this.id)">10k</span>Ω and Capacitance C = <span id="C_val" onclick="askValue(this.id)">100n</span>F has a Cut-Off Frequency <span class="LaTeX">$f_c = \frac{1}{2\pi R C} =$</span> <tspan id="F_val">159 Hz</tspan><br></p>
+<p>Even more complex equations such as <span class="LaTeX">$\int \sqrt{x^2} {\,\text{d}}x = \frac{1}{3} x^3$</span> are rendered beautifully with <a href="https://khan.github.io/KaTeX/">KaTex</a>).</p>
+<h3 id="interactive-diagrams">Interactive Diagrams</h3>
+<p>Play with diagrams for better understanding. Click and drag the black ray with the mouse or change any value in the diagram.</p>
+<object class="fig" style="width: 18em" id="obj_fraction" data="res/img/content-images/fraction.svg" type="image/svg+xml">
+</object>
+<h3 id="fast-fuzzy-search">Fast Fuzzy Search</h3>
+<p>Find an answer blazingly fast. The fuzzy search in the top bar displays results immediately without slow sever communication. Just hit <code>tab</code> to focus the search, then type e.g. “did” to search for “Diode”.</p>
+<h2 id="demo-pages">Demo Pages</h2>
+<ul>
+<li>
+<a href="low-pass.html">Full Low-Pass Filter</a> (Interactive Math)</li>
+<li>
+<a href="maxwell.html">Maxwell Equations</a> (Math Showcase)</li>
+<li>
+<a href="numbers.html">Number Converter</a> (Fast interactions)</li>
+<li>
+<a href="op-amp.html">Op-Amps</a> (<abbr title="Scalable Vector Graphics
+">SVG</abbr> diagrams)</li>
+<li>
+<a href="optic.html">Optics</a> (Interactive Graph)</li>
+</ul>
+<h2 id="todo">ToDo</h2>
+<ul>
+<li>Full responsive design</li>
+<li>remember options with cookies</li>
+<li>consistent <abbr title="JavaScript
+">JS</abbr> framework for interactive content</li>
+<li>Improved search: Sorting results, reaction to no results</li>
+<li>More content</li>
+</ul>
+<script type="text/javascript">
+function RC_calcFrequency() {
+ var C1 = getValue( document.getElementById("C_val").textContent );
+ var R1 = getValue( document.getElementById("R_val").textContent );
+ var F1 = document.getElementById("F_val");
+ var freq = 1/(2 * Math.PI * C1 * R1);
+ F1.textContent=freq.toPrecision(3)+" Hz";
+ tau.textContent=(R1 * C1 * 1000).toPrecision(3)+" ms";
+}
+
+function syncValues(id, value){
+    RC_calcFrequency();
+}
+</script>
+
+
+        </div>
+      </div>
+    </main>
+
+    <footer>
+  <div class="container">
+    <div class="row justify-content-md-center">
+      <div class="hidden-sm-down col-md-1">
+        <img class="img-fluid" src="/res/img/Logo.png" alt="Logo">
+      </div>
+
+      <div class="col-sm-2 col-md-2">
+        <h3>Tex4Tum</h3>
+        <ul class="contact-list">
+          <li><a href="mailto:info@latex4ei.de"><i class="fa fa-envelope"></i> info@latex4ei.de</a></li>
+          <li><a href="http://latex4ei.de"><i class="fa fa-globe"></i> latex4ei.de</a></li>
+        </ul>
+      </div>
+
+      <div class="col-sm-2 col-md-2">
+        <ul class="social-media-list">
+          
+          <li>
+<!-- Dont put these Liquid statements into a new line to ensure the correct output format -->
+<a href="https://github.com/latex4ei">
+  <i class="fa fa-github"></i>
+  <span class="username">latex4ei</span>
+</a>
+</li>
+          
+          <li>
+<!-- Dont put these Liquid statements into a new line to ensure the correct output format -->
+<a href="https://gitter.im/LaTeX4Ei">
+  <span class="img-fluid"><svg viewbox="0 0 16 16" width="16px" height="16px"><path d="M5.667 2.667H7V16H5.667V2.667zm4.666 0V16H9V2.667h1.333zM2.333 0h1.334v10H2.333V0zm10 2.667h1.334V10h-1.334V2.667z" style="fill:#828282;fill-opacity:1"></path>
+</svg>
+</span>
+  <span class="username">LaTeX4Ei</span>
+</a>
+</li>
+          
+          <li>
+<!-- Dont put these Liquid statements into a new line to ensure the correct output format -->
+<a href="https://facebook.com/LaTeX4Ei">
+  <i class="fa fa-facebook-square"></i>
+  <span class="username">LaTeX4Ei</span>
+</a>
+</li>
+          
+        </ul>
+      </div>
+
+      <div class="col-sm-3 col-md-3">
+        <p>Interactive online knowledge base for engineers
+</p>
+      </div>
+    </div>
+  </div></footer>
+
+
+  </body>
+
+</html>

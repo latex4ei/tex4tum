@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- title, description, favicon -->
+    <title>Optics</title>
+    <meta name="description" content="Interactive online knowledge base for engineers
+">
+    <link rel="shortcut icon" href="/res/img/Logo.png">
+
+    <link rel="stylesheet" href="/assets/main.css">
+    <link rel="canonical" href="http://localhost:4000/optic">
+
+    
+
+    <!-- Own javascript -->
+    <script src="/assets/js/latex4ei.js"></script>
+    <script src="/assets/js/options.js"></script>
+
+    <!-- Load jQuery -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+
+    <!-- Load Fuse -->
+    <script src="https://cdn.jsdelivr.net/fuse/2.6.1/fuse.min.js"></script>
+    <script src="/assets/js/search_index.json"></script>
+    <script src="/assets/js/t4t_search.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
+
+
+    <!-- Fontawesome -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <!-- Mermaid -->
+    <link rel="stylesheet" href="https://cdn.rawgit.com/knsv/mermaid/7.0.0/dist/mermaid.css">
+    <script type="text/javascript" src="https://cdn.rawgit.com/knsv/mermaid/7.0.0/dist/mermaid.min.js"></script>
+
+    <!-- Load KaTeX -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js"></script>
+    <script type="text/javascript">
+        window.onload = function () {
+            // render KaTeX
+            renderMath();
+
+            // fix navbar hiding anchor jumps
+            window.addEventListener("hashchange", function() { scrollBy(0, -100) } );
+
+
+
+            Options.loadOptions();
+
+            var opts = {
+                data: search_index,
+                numResults: 10,
+                searchPath: '/search?q=',
+                directPath: '.',
+                container: document.getElementsByClassName('search-container')
+            };
+            autocomplete(opts);
+        };
+    </script>
+
+</head>
+
+
+  <body>
+
+    <nav class="navbar fixed-top navbar-dark bg-primary text-white navbar-expand-lg">
+
+    <!-- sticky left: logo -->
+    <div class="navbar-brand">
+      <a href="/index.html">
+        <img src="/res/img/Logo-inv.png" height="30" alt="Logo">
+      </a>
+    </div>
+
+
+
+      <!-- search bar (always visible)  -->
+      
+      <form class="form-inline ml-auto order-lg-3" role="search">
+        <div id="search" class="search-container">
+          <input class="form-control search-input" type="search" placeholder="Search (fuzzy)" tabindex="1">
+        <div class="ac-results-wrapper"></div>
+        </div>
+      </form>
+      <!-- <span class="navbar-text"> Tex4Tum </span> -->
+     
+
+
+      <!-- toggle button (if collapsed)  -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+
+
+
+
+    <div class="collapse navbar-collapse justify-content-start order-6 order-lg-2" id="navbarResponsive">
+      
+      <!-- <span class="navbar-text"> Tex4Tum </span> -->
+      <ul class="navbar-nav">
+        
+        
+        
+        
+        
+        
+        <li class="nav-item">
+          <a class="nav-link" href="/contribution.html"><i class="fa fa-handshake-o"></i> Contribution</a>
+        </li>
+        
+        
+        
+        <li class="nav-item">
+          <a class="nav-link" href="/submenu/todo.html"><i class="fa fa-th-list"></i> TODO</a>
+        </li>
+        
+        
+        
+        <li class="nav-item">
+          <a class="nav-link" href="/sheets.html"><i class="fa fa-file-text"></i> Cheat Sheets</a>
+        </li>
+        
+        
+        
+        <li class="nav-item">
+          <a class="nav-link" href="/about.html"><i class="fa fa-question"></i> About</a>
+        </li>
+        
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link btn-group dropdown-toggle" href="/index.html" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-cog"></i> Options</a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <h6 class="dropdown-header">Display Options</h6>
+            <div class="form-check dropdown-item">
+              <label class="form-check-label">
+                <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox" checked onchange="Options.changeOption(this)">
+                  Definitions
+              </label>
+            </div>
+            <div class="form-check dropdown-item">
+              <label class="form-check-label">
+                <input class="form-check-input" id="checkbox_example" name="disp_opt" type="checkbox" checked onchange="Options.changeOption(this)">
+                  Examples
+              </label>
+            </div>
+            <div class="form-check dropdown-item">
+              <label class="form-check-label">
+                <input class="form-check-input" id="checkbox_legend" name="disp_opt" type="checkbox" checked onchange="Options.changeOption(this)">
+                  Legends
+              </label>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+
+
+
+</nav>
+
+
+    <main class="container" aria-label="Content">
+      <div class="row justify-content-md-center">
+        <div class="col-9">
+          <h1><a data-toggle="collapse" href="#title_def" aria-expanded="false" aria-controls="title_def">Optics</a></h1>
+
+<!-- Basics -->
+<!--    -->
+<!-- \newcommand{\diff}{\mathop{}\!\mathrm{\vphantom( d}} -->
+<!-- SI Units -->
+<!--=============================================================== -->
+<!-- KaTeX Tweaks -->
+<svg onload="svgloaded()" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="100mm" width="100mm" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 354.33073 354.3307" xmlns:dc="http://purl.org/dc/elements/1.1/">
+<defs> <marker id="Arrow1Sstart" refy="0.0" refx="0.0" style="overflow:visible" orient="auto"> <path style="stroke:#000;stroke-width:1pt;fill-rule:evenodd" transform="scale(.2) translate(6)" d="m0 0l5-5-17.5 5 17.5 5-5-5z"></path> </marker> <marker id="a" refy="0.0" refx="0.0" style="overflow:visible" orient="auto"> <path style="stroke-linejoin:round;stroke:#000;stroke-width:.625;fill-rule:evenodd" transform="scale(.6) rotate(180) translate(0)" d="m8.7186 4.0337l-10.926-4.0177 10.926-4.0177c-1.7455 2.3721-1.7355 5.6174 0 8.0354z"></path> </marker> <marker id="Arrow2Mend" refy="0.0" refx="0.0" style="overflow:visible" orient="auto"> <path style="stroke-linejoin:round;fill-rule:evenodd;stroke:#025;stroke-width:.625;fill:#025" transform="scale(.6) rotate(180) translate(0)" d="m8.7186 4.0337l-10.926-4.0177 10.926-4.0177c-1.7455 2.3721-1.7355 5.6174 0 8.0354z"></path> </marker> </defs> <rect style="fill:#82d4ff" height="131.85" width="298.74" y="222.48" x="-.0000026296"></rect> <rect id="anchor" y="220.66" width="1.7967" x="141.72" height="1.7551"></rect> <path id="ray" d="m141.96 218v-75.36-75.355" style="stroke:#000;stroke-width:8.7057;marker-mid:url(#Arrow1Sstart);fill:none" onmousedown="rotateLine(this.id)" ontouchstart="rotateLine(this.id)"></path> <path id="pass" style="stroke:#052;stroke-width:4.2762;marker-end:url(#a);fill:none" onmousedown="rotateLine(this.id)" d="m141.73 217.73v-145.46"></path> <text id="n1_val" style="font-size:24px" space="preserve" onclick="askValue(this.id)" y="209.86768" x="245.82343">1.2</text> <text id="n2_val" style="font-size:24px" space="preserve" onclick="askValue(this.id)" y="251.89607" x="244.11113">1.5</text> <text id="alpha" style="font-size:24px" space="preserve" onclick="askValue(this.id)" y="85.252937" x="3.4076719">30</text> <path id="frac" d="m141.93 218.15v-127.92" style="stroke-dasharray:4.0102, 8.0204;stroke:#025;stroke-width:4.0102;marker-end:url(#Arrow2Mend);fill:none" onmousedown="rotateLine(this.id)"></path>
+</svg>
+<h2 id="reflection">Reflection</h2>
+<p>Material: <span class="LaTeX">$n_1 \lt n_2$</span></p>
+<table>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Reflexion:</strong></td>
+<td><span class="LaTeX">$\alpha_1 = \alpha_2$</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Fraction:</strong></td>
+<td><span class="LaTeX">$\frac{\sin(\alpha)}{\sin(\beta)}=\frac{n_2}{n_1}=\frac{c_1}{c_2}=\frac{\lambda_1}{\lambda_2}$</span></td>
+</tr>
+</tbody>
+</table>
+<script type="text/javascript">
+
+var dragX, dragY;
+var pt;
+
+function svgloaded(){
+    var svg = document.getElementsByTagName("svg")[0];
+    pt = svg.createSVGPoint();
+    syncValues("none", 0);
+}
+
+function syncValues(id, value){
+    switch(id){
+        case "alpha": alpha = -value;
+    }
+    calcFraction();
+}
+
+function getValue(str){
+    var prescale = 1;
+    var value = str.slice(0,-1);
+    switch( str.slice(-1) ){
+        case 'G': prescale = 1e9; break;
+        case 'M': prescale = 1e6; break;
+        case 'k': prescale = 1e3; break;
+        case 'm': prescale = 1e-3; break;
+        case 'u': prescale = 1e-6; break;
+        case 'n': prescale = 1e-9; break;
+        case 'p': prescale = 1e-12; break;
+        default: value = str;
+    }
+    return ( Number(value) * prescale );
+}
+
+function askValue(clicked_id){
+    var el = document.getElementById(clicked_id);
+    var newval = prompt("Please enter new Value", el.textContent);
+    if( isNaN( getValue(newval) ) ){
+        el.textContent = "<abbr title="Not a Number
+" >NaN";
+    } else {
+        el.textContent = newval;
+    }
+    parent.syncValues(clicked_id, newval);
+}
+
+function rotateToMouse(id_rot, id_anch){
+    var anchor = document.getElementById(id_anch);
+    var rotor = document.getElementById(id_rot);
+
+    // coordinates within svg
+    pt.x = anchor.x.animVal.value;
+    pt.y = anchor.y.animVal.value;
+
+    // transform to screen corrdinates
+    var matrix = anchor.getScreenCTM();
+    pt = pt.matrixTransform(matrix);
+    var angle = getMouseAngleTo(pt.x, pt.y);
+    alpha = angle;
+
+    // rotate
+    calcFraction();
+}
+
+function dragLine(){
+    rotateToMouse("ray", "anchor");
+}
+
+function rotateToAnchor(id_rot, id_anch, angle){
+    var anchor = document.getElementById(id_anch);
+    var rotor = document.getElementById(id_rot);
+
+    rotor.setAttribute('transform', "rotate("+angle+" "+anchor.x.animVal.value+" "+anchor.y.animVal.value+")");
+}
+
+function touchDrag(id){
+    alert("Touch-Coordinate:"+event.changedTouches[0].clientX);
+}
+
+function rotateLine(id) {
+    document.addEventListener('mousemove',dragLine,false);
+    document.addEventListener('touchmove',dragLine,false);
+
+
+    document.addEventListener('mouseup',function(){
+                document.removeEventListener('mousemove',dragLine,false);
+                calcFraction();
+            },false);
+    document.addEventListener('touchend',function(){
+                document.removeEventListener('touchmove',dragLine,false);
+                calcFraction();
+            },false);
+}
+
+function getMouseAngleTo(x, y){
+    //get the vector representing the mouse's position relative to the point...
+    var vx = event.pageX - x;
+    var vy = event.pageY - y;
+
+    //use atan2 to get the angle; Atan2 returns radians
+    var angleRadians=Math.atan2(vx, -vy);   // -vy because on screen y is inverted
+    return (angleRadians * (360 / (2 * Math.PI)));
+}
+
+var alpha = -30;
+
+function calcFraction(){
+    var n1 = getValue( document.getElementById("n1_val").textContent );
+    var n2 = getValue( document.getElementById("n2_val").textContent );
+
+    // in or outside of density?
+    var frac_angle = 0;
+    if( Math.abs(alpha) > 90 ){
+        frac_angle = -Math.asin(Math.sin(alpha*Math.PI/180) * n2 / n1)*180/Math.PI;
+    } else {
+        frac_angle = Math.asin(Math.sin(alpha*Math.PI/180) * n1 / n2)*180/Math.PI+180;
+    }
+
+    // total reflection?
+    if (isNaN(frac_angle)){ frac_angle = -alpha}
+
+    rotateToAnchor("ray", "anchor", alpha);
+    rotateToAnchor("frac", "anchor", -alpha);
+    rotateToAnchor("pass", "anchor", frac_angle);
+}
+
+</script>
+
+
+        </div>
+      </div>
+    </main>
+
+    <footer>
+  <div class="container">
+    <div class="row justify-content-md-center">
+      <div class="hidden-sm-down col-md-1">
+        <img class="img-fluid" src="/res/img/Logo.png" alt="Logo">
+      </div>
+
+      <div class="col-sm-2 col-md-2">
+        <h3>Tex4Tum</h3>
+        <ul class="contact-list">
+          <li><a href="mailto:info@latex4ei.de"><i class="fa fa-envelope"></i> info@latex4ei.de</a></li>
+          <li><a href="http://latex4ei.de"><i class="fa fa-globe"></i> latex4ei.de</a></li>
+        </ul>
+      </div>
+
+      <div class="col-sm-2 col-md-2">
+        <ul class="social-media-list">
+          
+          <li>
+<!-- Dont put these Liquid statements into a new line to ensure the correct output format -->
+<a href="https://github.com/latex4ei">
+  <i class="fa fa-github"></i>
+  <span class="username">latex4ei</span>
+</a>
+</li>
+          
+          <li>
+<!-- Dont put these Liquid statements into a new line to ensure the correct output format -->
+<a href="https://gitter.im/LaTeX4Ei">
+  <span class="img-fluid"><svg viewbox="0 0 16 16" width="16px" height="16px"><path d="M5.667 2.667H7V16H5.667V2.667zm4.666 0V16H9V2.667h1.333zM2.333 0h1.334v10H2.333V0zm10 2.667h1.334V10h-1.334V2.667z" style="fill:#828282;fill-opacity:1"></path>
+</svg>
+</span>
+  <span class="username">LaTeX4Ei</span>
+</a>
+</li>
+          
+          <li>
+<!-- Dont put these Liquid statements into a new line to ensure the correct output format -->
+<a href="https://facebook.com/LaTeX4Ei">
+  <i class="fa fa-facebook-square"></i>
+  <span class="username">LaTeX4Ei</span>
+</a>
+</li>
+          
+        </ul>
+      </div>
+
+      <div class="col-sm-3 col-md-3">
+        <p>Interactive online knowledge base for engineers
+</p>
+      </div>
+    </div>
+  </div></footer>
+
+
+  </body>
+
+</html>

@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="1280px" height="382.566px" viewBox="0 0 1280 382.566" enable-background="new 0 0 1280 382.566" xml:space="preserve">
+<font horiz-adv-x="2048">
+<!-- Arial is a trademark of The Monotype Corporation. -->
+<!-- Copyright: Copyright 2013 Adobe System Incorporated. All rights reserved. -->
+<font-face font-family="ArialMT" units-per-em="2048" underline-position="-217" underline-thickness="150"/>
+<missing-glyph horiz-adv-x="1536" d="M256,0l0,1280l1024,0l0,-1280M288,32l960,0l0,1216l-960,0z"/>
+<glyph unicode=" " horiz-adv-x="569"/>
+<glyph unicode="A" horiz-adv-x="1366" d="M-3,0l563,1466l209,0l600,-1466l-221,0l-171,444l-613,0l-161,-444M420,602l497,0l-153,406C717,1131 683,1233 660,1312C641,1218 615,1125 581,1032z"/>
+<glyph unicode="C" horiz-adv-x="1479" d="M1204,514l194,-49C1357,306 1284,184 1179,101C1073,17 944,-25 791,-25C633,-25 505,7 406,72C307,136 231,229 180,351C128,473 102,604 102,744C102,897 131,1030 190,1144C248,1257 331,1344 439,1403C546,1462 665,1491 794,1491C941,1491 1064,1454 1164,1379C1264,1304 1334,1199 1373,1064l-191,-45C1148,1126 1099,1203 1034,1252C969,1301 888,1325 790,1325C677,1325 583,1298 508,1244C432,1190 379,1118 348,1027C317,936 302,842 302,745C302,620 320,512 357,419C393,326 449,256 526,210C603,164 686,141 775,141C884,141 976,172 1051,235C1126,298 1177,391 1204,514z"/>
+<glyph unicode="D" horiz-adv-x="1479" d="M158,0l0,1466l505,0C777,1466 864,1459 924,1445C1008,1426 1080,1391 1139,1340C1216,1275 1274,1191 1313,1090C1351,988 1370,872 1370,741C1370,630 1357,531 1331,445C1305,359 1272,288 1231,232C1190,175 1146,131 1098,99C1049,66 991,42 923,25C854,8 776,0 687,0M352,173l313,0C762,173 838,182 893,200C948,218 991,243 1024,276C1070,322 1106,384 1132,462C1157,539 1170,633 1170,744C1170,897 1145,1015 1095,1098C1044,1180 983,1235 911,1263C859,1283 775,1293 660,1293l-308,0z"/>
+<glyph unicode="E" horiz-adv-x="1366" d="M162,0l0,1466l1060,0l0,-173l-866,0l0,-449l811,0l0,-172l-811,0l0,-499l900,0l0,-173z"/>
+<glyph unicode="K" horiz-adv-x="1366" d="M150,0l0,1466l194,0l0,-727l728,727l263,0l-615,-594l642,-872l-256,0l-522,742l-240,-234l0,-508z"/>
+<glyph unicode="L" horiz-adv-x="1139" d="M150,0l0,1466l194,0l0,-1293l722,0l0,-173z"/>
+<glyph unicode="P" horiz-adv-x="1366" d="M158,0l0,1466l553,0C808,1466 883,1461 934,1452C1006,1440 1066,1417 1115,1384C1164,1350 1203,1303 1233,1242C1262,1181 1277,1115 1277,1042C1277,917 1237,812 1158,726C1079,639 935,596 728,596l-376,0l0,-596M352,769l379,0C856,769 945,792 998,839C1051,886 1077,951 1077,1036C1077,1097 1062,1150 1031,1194C1000,1237 959,1266 908,1280C875,1289 815,1293 727,1293l-375,0z"/>
+<glyph unicode="R" horiz-adv-x="1479" d="M161,0l0,1466l650,0C942,1466 1041,1453 1109,1427C1177,1400 1231,1354 1272,1287C1313,1220 1333,1147 1333,1066C1333,962 1299,874 1232,803C1165,732 1061,686 920,667C971,642 1010,618 1037,594C1094,542 1147,477 1198,399l255,-399l-244,0l-194,305C958,393 912,460 875,507C838,554 806,586 777,605C748,624 718,637 688,644C666,649 630,651 580,651l-225,0l0,-651M355,819l417,0C861,819 930,828 980,847C1030,865 1068,894 1094,935C1120,975 1133,1019 1133,1066C1133,1135 1108,1192 1058,1237C1007,1282 928,1304 819,1304l-464,0z"/>
+<glyph unicode="S" horiz-adv-x="1366" d="M92,471l183,16C284,414 304,354 336,307C367,260 416,222 483,193C550,164 625,149 708,149C782,149 847,160 904,182C961,204 1003,234 1031,273C1058,311 1072,353 1072,398C1072,444 1059,484 1032,519C1005,553 961,582 900,605C861,620 774,644 639,677C504,709 410,739 356,768C286,805 234,850 200,905C165,959 148,1020 148,1087C148,1161 169,1230 211,1295C253,1359 314,1408 395,1441C476,1474 565,1491 664,1491C773,1491 869,1474 952,1439C1035,1404 1098,1352 1143,1284C1188,1216 1212,1139 1215,1053l-186,-14C1019,1132 985,1202 928,1249C870,1296 785,1320 672,1320C555,1320 469,1299 416,1256C362,1213 335,1161 335,1100C335,1047 354,1004 392,970C429,936 527,901 685,866C842,830 950,799 1009,772C1094,733 1157,683 1198,623C1239,562 1259,493 1259,414C1259,336 1237,263 1192,194C1147,125 1083,71 1000,33C916,-6 822,-25 717,-25C584,-25 473,-6 384,33C294,72 224,130 173,208C122,285 95,373 92,471z"/>
+<glyph unicode="T" horiz-adv-x="1251" d="M531,0l0,1293l-483,0l0,173l1162,0l0,-173l-485,0l0,-1293z"/>
+<glyph unicode="V" horiz-adv-x="1366" d="M577,0l-568,1466l210,0l381,-1065C631,316 656,236 677,161C700,241 726,321 756,401l396,1065l198,0l-574,-1466z"/>
+<glyph unicode="W" horiz-adv-x="1933" d="M414,0l-389,1466l199,0l223,-961C471,404 492,304 509,205C546,362 568,452 575,476l279,990l234,0l210,-742C1351,540 1389,367 1412,205C1431,298 1455,404 1485,524l230,942l195,0l-402,-1466l-187,0l-309,1117C986,1210 971,1268 966,1289C951,1222 936,1164 923,1117l-311,-1117z"/>
+</font>
+
+	<symbol  id="_x30_to0" viewBox="-20 -25 40 50">
+	<g>
+		<polyline fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" points="-20,-4 -14,-4 -6,-24 0,-24 		"/>
+		<g>
+			<polyline fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" points="0,-24 6,-24 14,-4 20,-4 20,-4 14,-4 
+							"/>
+			<line fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" x1="-20" y1="24" x2="20" y2="24"/>
+		</g>
+	</g>
+	<polygon display="none" fill="none" points="-20,25 20,25 20,-25 -20,-25 	"/>
+</symbol>
+<symbol  id="_x31_to1" viewBox="-20 -35 40 70">
+	<g>
+		<polyline fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" points="-20,-14 -14,-14 -6,-34 0,-34 		"/>
+		<polyline fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" points="0,-34 6,-34 14,-14 20,-14 20,-14 
+			14,-14 		"/>
+		<line fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" x1="-20" y1="34" x2="20" y2="34"/>
+	</g>
+	<polygon display="none" fill="none" points="-20,35 20,35 20,-35 -20,-35 	"/>
+</symbol>
+<symbol  id="one2zero" viewBox="-20 -35 40 70">
+	<polyline fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" points="20,-14 14,-14 6,-34 0,-34 	"/>
+	<polyline fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" points="0,-34 -6,-34 -14,-14 -20,-14 -20,-14 
+		-14,-14 	"/>
+	<polyline fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" points="20,14 4,14 -4,34 -20,34 	"/>
+	<polygon display="none" fill="none" points="-20,35 20,35 20,-35 -20,-35 	"/>
+</symbol>
+<symbol  id="start_1_" viewBox="-21 -35 41 70">
+	<g id="start_6_">
+		<g id="start_7_">
+			<g>
+				<polyline fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" points="15,14 0.001,14 -7.999,34 -20,34 				
+					"/>
+				<polyline fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" points="20,-34 14.001,-34 6.001,-14.02 
+					-20,-14 				"/>
+			</g>
+		</g>
+	</g>
+	<polygon display="none" fill="none" points="-21,35 20,35 20,-35 -21,-35 	"/>
+</symbol>
+<symbol  id="stop" viewBox="-20 -35 41 70">
+	<polyline fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" points="-14,14 -0.001,14 7.999,34 20,34 	"/>
+	<polyline fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" points="-20,-34 -14.001,-34 -6,-14.02 20,-14 	
+		"/>
+	<polygon display="none" fill="none" points="-20,35 21,35 21,-35 -20,-35 	"/>
+</symbol>
+<symbol  id="zero2one" viewBox="-20 -35 40 70">
+	<polyline fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" points="-20,-14 -14,-14 -6,-34 0,-34 	"/>
+	<polyline fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" points="0,-34 6,-34 14,-14 20,-14 20,-14 14,-14 
+			"/>
+	<polyline fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" points="-20,14 -4,14 4,34 20,34 	"/>
+	<polygon display="none" fill="none" points="-20,35 20,35 20,-35 -20,-35 	"/>
+</symbol>
+<g id="start">
+	<g>
+		<rect x="115" y="22.566" fill="#EBF6FF" width="40" height="342"/>
+		<g>
+			<polyline fill="none" stroke="#B3B3B3" stroke-width="3" stroke-miterlimit="10" points="155.5,358.566 155.5,365.066 
+				149,365.066 			"/>
+			
+				<line fill="none" stroke="#B3B3B3" stroke-width="3" stroke-miterlimit="10" stroke-dasharray="9,9" x1="140" y1="365.066" x2="126" y2="365.066"/>
+			<polyline fill="none" stroke="#B3B3B3" stroke-width="3" stroke-miterlimit="10" points="121,365.066 114.5,365.066 
+				114.5,358.566 			"/>
+			
+				<line fill="none" stroke="#B3B3B3" stroke-width="3" stroke-miterlimit="10" stroke-dasharray="12,12" x1="114.5" y1="346.566" x2="114.5" y2="34.566"/>
+			<polyline fill="none" stroke="#B3B3B3" stroke-width="3" stroke-miterlimit="10" points="114.5,28.566 114.5,22.066 121,22.066 
+							"/>
+			
+				<line fill="none" stroke="#B3B3B3" stroke-width="3" stroke-miterlimit="10" stroke-dasharray="9,9" x1="130" y1="22.066" x2="145" y2="22.066"/>
+			<polyline fill="none" stroke="#B3B3B3" stroke-width="3" stroke-miterlimit="10" points="149,22.066 155.5,22.066 155.5,28.566 
+							"/>
+			
+				<line fill="none" stroke="#B3B3B3" stroke-width="3" stroke-miterlimit="10" stroke-dasharray="12,12" x1="155.5" y1="40.566" x2="155.5" y2="352.566"/>
+		</g>
+	</g>
+	
+		<text transform="matrix(1 0 0 1 121.4683 284.5664)" stroke="#B3B3B3" stroke-miterlimit="10" font-family="'ArialMT'" font-size="44">S</text>
+</g>
+<g id="SLAVE_ADDRESS">
+	<g>
+		<rect x="177" y="22.566" fill="#EBF6FF" width="387" height="342"/>
+		<g>
+			<polyline fill="none" stroke="#B3B3B3" stroke-width="3" stroke-miterlimit="10" points="563.5,358.566 563.5,365.066 
+				558,365.066 			"/>
+			
+				<line fill="none" stroke="#B3B3B3" stroke-width="3" stroke-miterlimit="10" stroke-dasharray="12,12" x1="546" y1="365.066" x2="189" y2="365.066"/>
+			<polyline fill="none" stroke="#B3B3B3" stroke-width="3" stroke-miterlimit="10" points="183,365.066 176.5,365.066 
+				176.5,358.566 			"/>
+			
+				<line fill="none" stroke="#B3B3B3" stroke-width="3" stroke-miterlimit="10" stroke-dasharray="12,12" x1="176.5" y1="346.566" x2="176.5" y2="34.566"/>
+			<polyline fill="none" stroke="#B3B3B3" stroke-width="3" stroke-miterlimit="10" points="176.5,28.566 176.5,22.066 183,22.066 
+							"/>
+			
+				<line fill="none" stroke="#B3B3B3" stroke-width="3" stroke-miterlimit="10" stroke-dasharray="12,12" x1="195" y1="22.066" x2="552" y2="22.066"/>
+			<polyline fill="none" stroke="#B3B3B3" stroke-width="3" stroke-miterlimit="10" points="558,22.066 563.5,22.066 563.5,28.566 
+							"/>
+			
+				<line fill="none" stroke="#B3B3B3" stroke-width="3" stroke-miterlimit="10" stroke-dasharray="12,12" x1="563.5" y1="40.566" x2="563.5" y2="352.566"/>
+		</g>
+	</g>
+	<text transform="matrix(1 0 0 1 186.5986 284.5664)" stroke="#B3B3B3" font-family="'ArialMT'" font-size="44">SLAVE ADDRESS</text>
+</g>
+<g id="ACK1">
+	<g>
+		<rect x="626" y="22.566" fill="#EBF6FF" width="52" height="342"/>
+		<g>
+			<polyline fill="none" stroke="#B3B3B3" stroke-width="3" stroke-miterlimit="10" points="677.5,358.566 677.5,365.066 
+				672,365.066 			"/>
+			
+				<line fill="none" stroke="#B3B3B3" stroke-width="3" stroke-miterlimit="10" stroke-dasharray="13,13" x1="659" y1="365.066" x2="639" y2="365.066"/>
+			<polyline fill="none" stroke="#B3B3B3" stroke-width="3" stroke-miterlimit="10" points="632,365.066 625.5,365.066 
+				625.5,358.566 			"/>
+			
+				<line fill="none" stroke="#B3B3B3" stroke-width="3" stroke-miterlimit="10" stroke-dasharray="12,12" x1="625.5" y1="346.566" x2="625.5" y2="34.566"/>
+			<polyline fill="none" stroke="#B3B3B3" stroke-width="3" stroke-miterlimit="10" points="625.5,28.566 625.5,22.066 632,22.066 
+							"/>
+			
+				<line fill="none" stroke="#B3B3B3" stroke-width="3" stroke-miterlimit="10" stroke-dasharray="13,13" x1="645" y1="22.066" x2="665" y2="22.066"/>
+			<polyline fill="none" stroke="#B3B3B3" stroke-width="3" stroke-miterlimit="10" points="672,22.066 677.5,22.066 677.5,28.566 
+							"/>
+			
+				<line fill="none" stroke="#B3B3B3" stroke-width="3" stroke-miterlimit="10" stroke-dasharray="12,12" x1="677.5" y1="40.566" x2="677.5" y2="352.566"/>
+		</g>
+	</g>
+	<text transform="matrix(1 0 0 1 638.1563 235.5664)"><tspan x="0" y="0" font-family="'ArialMT'" font-size="44">A</tspan><tspan x="-1.214" y="52.8" font-family="'ArialMT'" font-size="44">C</tspan><tspan x="0" y="105.6" font-family="'ArialMT'" font-size="44">K</tspan></text>
+</g>
+<g id="DATA">
+	<g>
+		<rect x="687" y="22.566" fill="#EBF6FF" width="437" height="342"/>
+		<g>
+			<polyline fill="none" stroke="#B3B3B3" stroke-width="3" stroke-miterlimit="10" points="1124.5,358.566 1124.5,365.066 
+				1118,365.066 			"/>
+			
+				<line fill="none" stroke="#B3B3B3" stroke-width="3" stroke-miterlimit="10" stroke-dasharray="12,12" x1="1106" y1="365.066" x2="699" y2="365.066"/>
+			<polyline fill="none" stroke="#B3B3B3" stroke-width="3" stroke-miterlimit="10" points="693,365.066 686.5,365.066 
+				686.5,358.566 			"/>
+			
+				<line fill="none" stroke="#B3B3B3" stroke-width="3" stroke-miterlimit="10" stroke-dasharray="12,12" x1="686.5" y1="346.566" x2="686.5" y2="34.566"/>
+			<polyline fill="none" stroke="#B3B3B3" stroke-width="3" stroke-miterlimit="10" points="686.5,28.566 686.5,22.066 693,22.066 
+							"/>
+			
+				<line fill="none" stroke="#B3B3B3" stroke-width="3" stroke-miterlimit="10" stroke-dasharray="12,12" x1="705" y1="22.066" x2="1112" y2="22.066"/>
+			<polyline fill="none" stroke="#B3B3B3" stroke-width="3" stroke-miterlimit="10" points="1118,22.066 1124.5,22.066 
+				1124.5,28.566 			"/>
+			
+				<line fill="none" stroke="#B3B3B3" stroke-width="3" stroke-miterlimit="10" stroke-dasharray="12,12" x1="1124.5" y1="40.566" x2="1124.5" y2="352.566"/>
+		</g>
+	</g>
+	<text transform="matrix(1 0 0 1 837.0371 284.5664)" font-family="'ArialMT'" font-size="44">DATA</text>
+</g>
+<g id="ACK2">
+	<g>
+		<rect x="1132" y="22.566" fill="#EBF6FF" width="56" height="342"/>
+		<g>
+			<polyline fill="none" stroke="#B3B3B3" stroke-width="3" stroke-miterlimit="10" points="1187.5,358.566 1187.5,365.066 
+				1182,365.066 			"/>
+			
+				<line fill="none" stroke="#B3B3B3" stroke-width="3" stroke-miterlimit="10" stroke-dasharray="15,15" x1="1167" y1="365.066" x2="1145" y2="365.066"/>
+			<polyline fill="none" stroke="#B3B3B3" stroke-width="3" stroke-miterlimit="10" points="1138,365.066 1131.5,365.066 
+				1131.5,358.566 			"/>
+			
+				<line fill="none" stroke="#B3B3B3" stroke-width="3" stroke-miterlimit="10" stroke-dasharray="12,12" x1="1131.5" y1="346.566" x2="1131.5" y2="34.566"/>
+			<polyline fill="none" stroke="#B3B3B3" stroke-width="3" stroke-miterlimit="10" points="1131.5,28.566 1131.5,22.066 
+				1138,22.066 			"/>
+			
+				<line fill="none" stroke="#B3B3B3" stroke-width="3" stroke-miterlimit="10" stroke-dasharray="15,15" x1="1152" y1="22.066" x2="1175" y2="22.066"/>
+			<polyline fill="none" stroke="#B3B3B3" stroke-width="3" stroke-miterlimit="10" points="1182,22.066 1187.5,22.066 
+				1187.5,28.566 			"/>
+			
+				<line fill="none" stroke="#B3B3B3" stroke-width="3" stroke-miterlimit="10" stroke-dasharray="12,12" x1="1187.5" y1="40.566" x2="1187.5" y2="352.566"/>
+		</g>
+	</g>
+	<text transform="matrix(1 0 0 1 1144.1563 231.5664)"><tspan x="0" y="0" font-family="'ArialMT'" font-size="44">A</tspan><tspan x="-1.214" y="52.8" font-family="'ArialMT'" font-size="44">C</tspan><tspan x="0" y="105.6" font-family="'ArialMT'" font-size="44">K</tspan></text>
+</g>
+<g id="STOP">
+	<g>
+		<rect x="1208" y="22.566" fill="#EBF6FF" width="40" height="342"/>
+		<g>
+			<polyline fill="none" stroke="#B3B3B3" stroke-width="3" stroke-miterlimit="10" points="1247.5,358.566 1247.5,365.066 
+				1242,365.066 			"/>
+			
+				<line fill="none" stroke="#B3B3B3" stroke-width="3" stroke-miterlimit="10" stroke-dasharray="9,9" x1="1233" y1="365.066" x2="1219" y2="365.066"/>
+			<polyline fill="none" stroke="#B3B3B3" stroke-width="3" stroke-miterlimit="10" points="1214,365.066 1208.5,365.066 
+				1208.5,358.566 			"/>
+			
+				<line fill="none" stroke="#B3B3B3" stroke-width="3" stroke-miterlimit="10" stroke-dasharray="12,12" x1="1208.5" y1="346.566" x2="1208.5" y2="34.566"/>
+			<polyline fill="none" stroke="#B3B3B3" stroke-width="3" stroke-miterlimit="10" points="1208.5,28.566 1208.5,22.066 
+				1214,22.066 			"/>
+			
+				<line fill="none" stroke="#B3B3B3" stroke-width="3" stroke-miterlimit="10" stroke-dasharray="9,9" x1="1224" y1="22.066" x2="1237" y2="22.066"/>
+			<polyline fill="none" stroke="#B3B3B3" stroke-width="3" stroke-miterlimit="10" points="1242,22.066 1247.5,22.066 
+				1247.5,28.566 			"/>
+			
+				<line fill="none" stroke="#B3B3B3" stroke-width="3" stroke-miterlimit="10" stroke-dasharray="12,12" x1="1247.5" y1="40.566" x2="1247.5" y2="352.566"/>
+		</g>
+	</g>
+	<text transform="matrix(1 0 0 1 1213.1563 284.5664)" font-family="'ArialMT'" font-size="44">P</text>
+</g>
+<g id="DIRECTION_R_x2F_W">
+	<line fill="none" stroke="#000000" stroke-width="3" stroke-miterlimit="10" x1="580" y1="283.066" x2="616" y2="283.066"/>
+	<g>
+		<rect x="573" y="22.566" fill="#EBF6FF" width="46" height="342"/>
+		<g>
+			<polyline fill="none" stroke="#B3B3B3" stroke-width="3" stroke-miterlimit="10" points="618.5,358.566 618.5,365.066 
+				613,365.066 			"/>
+			
+				<line fill="none" stroke="#B3B3B3" stroke-width="3" stroke-miterlimit="10" stroke-dasharray="11,11" x1="602" y1="365.066" x2="584" y2="365.066"/>
+			<polyline fill="none" stroke="#B3B3B3" stroke-width="3" stroke-miterlimit="10" points="579,365.066 572.5,365.066 
+				572.5,358.566 			"/>
+			
+				<line fill="none" stroke="#B3B3B3" stroke-width="3" stroke-miterlimit="10" stroke-dasharray="12,12" x1="572.5" y1="346.566" x2="572.5" y2="34.566"/>
+			<polyline fill="none" stroke="#B3B3B3" stroke-width="3" stroke-miterlimit="10" points="572.5,28.566 572.5,22.066 579,22.066 
+							"/>
+			
+				<line fill="none" stroke="#B3B3B3" stroke-width="3" stroke-miterlimit="10" stroke-dasharray="11,11" x1="590" y1="22.066" x2="607" y2="22.066"/>
+			<polyline fill="none" stroke="#B3B3B3" stroke-width="3" stroke-miterlimit="10" points="613,22.066 618.5,22.066 618.5,28.566 
+							"/>
+			
+				<line fill="none" stroke="#B3B3B3" stroke-width="3" stroke-miterlimit="10" stroke-dasharray="12,12" x1="618.5" y1="40.566" x2="618.5" y2="352.566"/>
+		</g>
+	</g>
+	<text transform="matrix(1 0 0 1 575.0654 324.5664)" font-family="'ArialMT'" font-size="44">W</text>
+	<text transform="matrix(1 0 0 1 580.1123 257.5664)" font-family="'ArialMT'" font-size="44">R</text>
+</g>
+<g id="lines">
+	<g id="waveform">
+		
+			<use xlink:href="#stop"  width="41" height="70" x="-20" y="-35" transform="matrix(1.4042 0 0 -1.4042 1215.6758 131.4199)" overflow="visible"/>
+		
+			<use xlink:href="#start_1_"  width="41" height="70" x="-21" y="-35" transform="matrix(1.4042 0 0 -1.4042 148.4883 131.4199)" overflow="visible"/>
+		
+			<use xlink:href="#zero2one"  width="40" height="70" x="-20" y="-35" transform="matrix(1.4042 0 0 -1.4042 176.5723 131.4199)" overflow="visible"/>
+		
+			<use xlink:href="#one2zero"  width="40" height="70" x="-20" y="-35" transform="matrix(1.4042 0 0 -1.4042 232.7397 131.4199)" overflow="visible"/>
+		
+			<use xlink:href="#zero2one"  width="40" height="70" x="-20" y="-35" transform="matrix(1.4042 0 0 -1.4042 288.9077 131.4199)" overflow="visible"/>
+		
+			<use xlink:href="#one2zero"  width="40" height="70" x="-20" y="-35" transform="matrix(1.4042 0 0 -1.4042 345.0757 131.4199)" overflow="visible"/>
+		
+			<use xlink:href="#_x30_to0"  width="40" height="50" x="-20" y="-25" transform="matrix(1.4042 0 0 -1.4042 401.2432 145.4619)" overflow="visible"/>
+		
+			<use xlink:href="#_x30_to0"  width="40" height="50" x="-20" y="-25" transform="matrix(1.4042 0 0 -1.4042 457.4106 145.4619)" overflow="visible"/>
+		
+			<use xlink:href="#zero2one"  width="40" height="70" x="-20" y="-35" transform="matrix(1.4042 0 0 -1.4042 513.5786 131.4199)" overflow="visible"/>
+		
+			<use xlink:href="#one2zero"  width="40" height="70" x="-20" y="-35" transform="matrix(1.4042 0 0 -1.4042 569.7461 131.4199)" overflow="visible"/>
+		
+			<use xlink:href="#zero2one"  width="40" height="70" x="-20" y="-35" transform="matrix(1.4042 0 0 -1.4042 625.9141 131.4199)" overflow="visible"/>
+		
+			<use xlink:href="#one2zero"  width="40" height="70" x="-20" y="-35" transform="matrix(1.4042 0 0 -1.4042 682.082 131.4199)" overflow="visible"/>
+		
+			<use xlink:href="#_x30_to0"  width="40" height="50" x="-20" y="-25" transform="matrix(1.4042 0 0 -1.4042 738.25 145.4619)" overflow="visible"/>
+		
+			<use xlink:href="#_x30_to0"  width="40" height="50" x="-20" y="-25" transform="matrix(1.4042 0 0 -1.4042 794.418 145.4619)" overflow="visible"/>
+		
+			<use xlink:href="#zero2one"  width="40" height="70" x="-20" y="-35" transform="matrix(1.4042 0 0 -1.4042 850.5859 131.4199)" overflow="visible"/>
+		
+			<use xlink:href="#_x31_to1"  width="40" height="70" x="-20" y="-35" transform="matrix(1.4042 0 0 -1.4042 906.7529 131.4199)" overflow="visible"/>
+		
+			<use xlink:href="#_x31_to1"  width="40" height="70" x="-20" y="-35" transform="matrix(1.4042 0 0 -1.4042 962.9209 131.4199)" overflow="visible"/>
+		
+			<use xlink:href="#one2zero"  width="40" height="70" x="-20" y="-35" transform="matrix(1.4042 0 0 -1.4042 1019.0889 131.4199)" overflow="visible"/>
+		
+			<use xlink:href="#_x30_to0"  width="40" height="50" x="-20" y="-25" transform="matrix(1.4042 0 0 -1.4042 1075.2568 145.4619)" overflow="visible"/>
+		
+			<use xlink:href="#zero2one"  width="40" height="70" x="-20" y="-35" transform="matrix(1.4042 0 0 -1.4042 1131.4248 131.4199)" overflow="visible"/>
+		
+			<use xlink:href="#one2zero"  width="40" height="70" x="-20" y="-35" transform="matrix(1.4042 0 0 -1.4042 1187.5918 131.4199)" overflow="visible"/>
+	</g>
+	<text transform="matrix(1 0 0 1 21 108.3594)" font-family="'ArialMT'" font-size="44">SDA</text>
+	<text transform="matrix(1 0 0 1 23 169.7607)" font-family="'ArialMT'" font-size="44">SCL</text>
+</g>
+</svg>

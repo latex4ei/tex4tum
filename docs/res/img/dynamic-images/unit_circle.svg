@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   height="120mm"
+   width="120mm"
+   version="1.1"
+   viewBox="0 0 425.19688 425.19684"
+   id="svg2"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="unit_circle.svg">
+  <metadata
+     id="metadata34">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1137"
+     inkscape:window-height="1411"
+     id="namedview32"
+     showgrid="true"
+     inkscape:zoom="0.50000001"
+     inkscape:cx="-114.93038"
+     inkscape:cy="144.9797"
+     inkscape:window-x="1147"
+     inkscape:window-y="24"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg2"
+     inkscape:object-paths="true"
+     inkscape:snap-intersection-paths="true"
+     inkscape:object-nodes="true"
+     showguides="false"
+     inkscape:snap-text-baseline="true">
+    <inkscape:grid
+       type="xygrid"
+       id="grid4198" />
+  </sodipodi:namedview>
+  <defs
+     id="defs4">
+    <marker
+       inkscape:stockid="DotM"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="DotM"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path4303"
+         d="m -2.5,-1 c 0,2.76 -2.24,5 -5,5 -2.76,0 -5,-2.24 -5,-5 0,-2.76 2.24,-5 5,-5 2.76,0 5,2.24 5,5 z"
+         style="fill:#040400;fill-opacity:1;fill-rule:evenodd;stroke:#040400;stroke-width:1pt;stroke-opacity:1"
+         transform="matrix(0.4,0,0,0.4,2.96,0.4)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="DotL"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="DotL"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path4300"
+         d="m -2.5,-1 c 0,2.76 -2.24,5 -5,5 -2.76,0 -5,-2.24 -5,-5 0,-2.76 2.24,-5 5,-5 2.76,0 5,2.24 5,5 z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         transform="matrix(0.8,0,0,0.8,5.92,0.8)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       id="Arrow1Sstart"
+       refY="0"
+       refX="0"
+       style="overflow:visible"
+       orient="auto">
+      <path
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt"
+         transform="matrix(0.2,0,0,0.2,1.2,0)"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 Z"
+         id="path7"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       id="a"
+       refY="0"
+       refX="0"
+       style="overflow:visible"
+       orient="auto">
+      <path
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:0.625;stroke-linejoin:round"
+         transform="scale(-0.6,-0.6)"
+         d="M 8.7186,4.0337 -2.2074,0.016 8.7186,-4.0017 c -1.7455,2.3721 -1.7355,5.6174 0,8.0354 z"
+         id="path10"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       id="Arrow2Mend"
+       refY="0"
+       refX="0"
+       style="overflow:visible"
+       orient="auto">
+      <path
+         style="fill:#002255;fill-rule:evenodd;stroke:#002255;stroke-width:0.625;stroke-linejoin:round"
+         transform="scale(-0.6,-0.6)"
+         d="M 8.7186,4.0337 -2.2074,0.016 8.7186,-4.0017 c -1.7455,2.3721 -1.7355,5.6174 0,8.0354 z"
+         id="path13"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="DotM"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="DotM-3"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         inkscape:connector-curvature="0"
+         id="path4303-6"
+         d="m -2.5,-1 c 0,2.76 -2.24,5 -5,5 -2.76,0 -5,-2.24 -5,-5 0,-2.76 2.24,-5 5,-5 2.76,0 5,2.24 5,5 z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         transform="matrix(0.4,0,0,0.4,2.96,0.4)" />
+    </marker>
+  </defs>
+  <script
+     type="text/javascript"
+     id="script20">//<![CDATA[
+
+
+  var svg = document.getElementsByTagName('svg')[0];
+  var pt = svg.createSVGPoint();
+
+
+function SVG_translateId(id_obj, id_anch, x, y){
+  var anchor = document.getElementById(id_anch);
+  var obj = document.getElementById(id_obj);
+
+  obj.setAttribute('transform', 'translate('+x+','+y+')');
+}
+
+function SVG_rotate(id_rot, id_anch, angle){
+  var anchor = document.getElementById(id_anch);
+  var rotor = document.getElementById(id_rot);
+
+  rotor.setAttribute('transform', 'rotate('+(-angle)+' '+anchor.x.animVal.value+' '+anchor.y.animVal.value+')');
+}
+
+function SVG_transformId(id_obj, tx, ty, sx, sy){
+  var obj = document.getElementById(id_obj);
+
+  obj.setAttribute('transform', 'translate('+tx+','+ty+') scale('+sx+','+sy+')');
+}
+
+function SVG_getRadiusById(id_obj){
+  var obj = document.getElementById(id_obj);
+
+  return obj.r.animVal.value;
+}
+
+
+function SVG_getOriginById(id_obj){
+  var obj = document.getElementById(id_obj);
+  var ctm = obj.getCTM();
+
+
+  switch(obj.tagName) {
+    case 'circle':
+      ox = obj.cx.animVal.value; 
+      oy = obj.cy.animVal.value;
+      break;
+    case 'rect':
+      ox = (obj.x + obj.width) / 2;
+      oy = (obj.y + obj.height) / 2;
+      break;
+    default:
+      box = obj.getBBox();
+      ox = (box.x + box.width) / 2;
+      oy = (box.y + box.height) / 2;      
+  }
+
+  return {x: ox, y: oy};
+}
+
+//SVG_setTM = (element, m) -&gt; element.transform.baseVal.initialize(element.ownerSVGElement.createSVGTransformFromMatrix(m));
+
+function SVG_getMouseAngleTo(id_anch){
+  var anchor = document.getElementById(id_anch);
+
+  // coordinates within svg
+  //3var pt = document.createSVGPoint();
+  pt.x = anchor.x.animVal.value;
+  pt.y = anchor.y.animVal.value;
+
+  var matrix = anchor.getScreenCTM();
+  pt = pt.matrixTransform(matrix);
+
+  var vx = event.pageX - pt.x
+  var vy = event.pageY - pt.y;
+
+  //use atan2 to get the angle; Atan2 returns radians
+  var angleRadians=Math.atan2(vy, vx); // -vy because on screen y is inverted
+  var angleDegree = (angleRadians * (360 / (2 * Math.PI)));
+  if( angleDegree < 0 ){ angleDegree = angleDegree + 360 }
+  return angleDegree;
+}
+
+function SVG_setLine(id_obj, x_s, y_s, x_t, y_t){
+  var obj = document.getElementById(id_obj);
+
+  obj.setAttribute('d', 'M'+x_s+' '+y_s+' '+x_t+' '+y_t);
+}
+
+
+function DSP_snap(val, snap_points, radius){
+  result = val;
+
+  
+  for( i = 0; i < snap_points.length; i++){
+    if( Math.abs(val - snap_points[i]) < radius ){
+      result = snap_points[i];
+    }
+  }
+  
+  return result;
+}
+
+
+function SVG_setCircleArc(id_obj, ox, oy, radius, angle){
+  var obj = document.getElementById(id_obj);
+
+   Degree = 1.0/360.0 * 2.0 * Math.PI;
+   var large_arc = 0;
+   if( angle < 180 ){ large_arc = 1 }
+   sin = Math.sin(angle*Degree);
+   cos = Math.cos(angle*Degree);
+
+  obj.setAttribute('d', 'm '+(ox+radius)+' '+oy+' a '+radius+' '+radius+' 0 '+large_arc+' 0 '+(cos*radius-radius)+' '+sin*radius);
+}
+
+var snaps = [0, 90, 180, 270, 360];
+
+function unit_anim(){
+  
+  angle = SVG_getMouseAngleTo('anchor');
+  angle = DSP_snap(angle, snaps, 2);
+
+  var Degree = 1.0/360.0 * 2.0 * Math.PI;
+  sin = Math.sin(angle*Degree);
+  cos = Math.cos(angle*Degree);
+  tan = Math.tan(angle*Degree);
+  if( Math.abs(tan) > 1.0e12){ tan = NaN }
+
+  var radius = SVG_getRadiusById('unit_circle');
+  var origin = SVG_getOriginById('unit_circle');
+
+  SVG_setLine('rotor', origin.x, origin.y, origin.x+cos*radius, origin.y+sin*radius);
+
+
+  SVG_setLine('sin', origin.x+cos*radius, origin.y, origin.x+cos*radius, origin.y+sin*radius);
+  SVG_setLine('cos', origin.x, origin.y, origin.x+cos*radius, origin.y);
+
+  SVG_setLine('tan', origin.x+cos*radius, origin.y+sin*radius, origin.x+radius*cos+radius*sin*tan, origin.y);
+  SVG_setLine('tan-2', origin.x+radius, origin.y, origin.x+radius, origin.y+tan*radius);
+
+  SVG_setLine('radius-extension', origin.x, origin.y, origin.x+radius, origin.y+tan*radius);
+  SVG_setCircleArc('angle_arc2', origin.x, origin.y, 35, angle);
+
+  // display... needs conversion
+
+
+  document.getElementById('text_alpha').innerHTML = 'α = '+(360 - angle).toFixed(0)+'°'; 
+  document.getElementById('text_sin').innerHTML = 'sin(α) = '+(-sin).toFixed(3); 
+  document.getElementById('text_cos').innerHTML = 'cos(α) = '+cos.toFixed(3); 
+  document.getElementById('text_tan').innerHTML = 'tan(α) = '+(-tan).toFixed(3); 
+
+}
+
+
+window.onload = function(){
+
+       document.addEventListener('mousemove', unit_anim);
+
+       var Degree = 1.0/360.0 * 2.0 * Math.Pi;
+       sin = Math.sin(angle);
+       cos = Math.cos(angle);
+
+
+}
+//]]></script>
+  <circle
+     style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#5e5e61;stroke-width:1.0629921;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     id="unit_circle"
+     cx="177.16536"
+     cy="248.03148"
+     r="141.73228" />
+  <path
+     style="fill:none;fill-rule:evenodd;stroke:#5a5d5d;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:4, 1;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#a)"
+     d="m 17.716535,248.03147 318.897635,0"
+     id="path4208"
+     inkscape:connector-curvature="0" />
+  <path
+     style="fill:none;fill-rule:evenodd;stroke:#5a5d5d;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:4, 1;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#a)"
+     d="m 177.16535,407.48029 0,-318.897628"
+     id="path4210"
+     inkscape:connector-curvature="0" />
+  <path
+     style="fill:none;fill-rule:evenodd;stroke:#4c4b4f;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 2;stroke-dashoffset:0;stroke-opacity:1"
+     d="M 177.16535,248.03147 318.89764,166.53542"
+     id="radius-extension"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="cc" />
+  <path
+     style="fill:none;fill-rule:evenodd;stroke:#040400;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#DotM)"
+     d="m 177.16534,248.03147 122.7436,-70.86642"
+     id="rotor"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="cc" />
+  <rect
+     style="opacity:0;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#004300;stroke-width:1.0629921;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     id="anchor"
+     width="7.0866141"
+     height="7.0866141"
+     x="177.16534"
+     y="248.03146" />
+  <path
+     style="fill:none;fill-rule:evenodd;stroke:#000080;stroke-width:3;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     d="m 299.98786,248.03148 -0.0603,-70.83414"
+     id="sin"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="cc" />
+  <path
+     style="fill:none;fill-rule:evenodd;stroke:#910000;stroke-width:3;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     d="m 177.16535,248.03147 122.82251,0"
+     id="cos"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="cc" />
+  <path
+     style="fill:none;fill-rule:evenodd;stroke:#003f00;stroke-width:3;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     d="m 318.89764,248.03147 0,-81.49605"
+     id="tan"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="cc" />
+  <path
+     style="fill:none;fill-rule:evenodd;stroke:#003f00;stroke-width:3;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     d="M 336.61417,248.03148 299.92756,177.19735"
+     id="tan-2"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="cc" />
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:125%;font-family:Calibri;-inkscape-font-specification:Calibri;letter-spacing:0px;word-spacing:0px;fill:#000080;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="17.716536"
+     y="42.519684"
+     id="0182309"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       x="17.716536"
+       y="42.519684"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';fill:#000080;fill-opacity:1"
+       id="text_sin">sin(α) = 0.500</tspan></text>
+  <path
+     style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#4c4b4f;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     id="angle_arc2"
+     sodipodi:type="arc"
+     sodipodi:cx="177.08917"
+     sodipodi:cy="248.08896"
+     sodipodi:rx="17.716536"
+     sodipodi:ry="17.716536"
+     sodipodi:start="5.7778109"
+     sodipodi:end="0"
+     sodipodi:open="true"
+     d="m 192.59102,239.51176 a 17.716536,17.716536 0 0 1 2.21469,8.5772" />
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:125%;font-family:Calibri;-inkscape-font-specification:Calibri;letter-spacing:0px;word-spacing:0px;fill:#910000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="17.716536"
+     y="67.32283"
+     id="text_sin-3"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       x="17.716536"
+       y="67.32283"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';fill:#910000;fill-opacity:1"
+       id="text_cos">cos(α) = 0.866</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:125%;font-family:Calibri;-inkscape-font-specification:Calibri;letter-spacing:0px;word-spacing:0px;fill:#003f00;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="17.716536"
+     y="92.125992"
+     id="text_sin-3-7"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       x="17.716536"
+       y="92.125992"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';fill:#003f00;fill-opacity:1"
+       id="text_tan">tan(α) = 0.577</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:125%;font-family:Calibri;-inkscape-font-specification:Calibri;letter-spacing:0px;word-spacing:0px;fill:#4c4b4f;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="17.716536"
+     y="17.716536"
+     id="text_sin-35"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       x="17.716536"
+       y="17.716536"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';fill:#4c4b4f;fill-opacity:1"
+       id="text_alpha">α = 30°</tspan></text>
+</svg>
