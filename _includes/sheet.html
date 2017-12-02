@@ -6,8 +6,7 @@
 {% if include.ghlink contains 'http' %}
 {% assign ghfull = include.ghlink %}
 {% else %}	{% assign ghfull = 'https://github.com/latex4ei/' | append: include.ghlink %}{% endif %}
-<a href="{{ ghfull }}" target="_blank"> <img class="icon" src="./res/img/open.png" /></a>{% endif %}
+<a href="{{ ghfull }}" target="_blank"> <i class="fa fa-github"></i></a>{% endif %}
 <a href="{{ sheet.path }}" >{{ include.description }}</a> <span class="pull-right">{{ sheet.modified_time | date: "%Y-%m-%d" }}</span> </p>
 {% endif %}
 {% endfor %}
-
