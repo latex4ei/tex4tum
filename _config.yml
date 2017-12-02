@@ -19,7 +19,6 @@ description: > # this means to ignore newlines until "baseurl:"
   Interactive online knowledge base for engineers
 baseurl: "/tex4tum" # the subpath of your site, e.g. "/tex4tum" or "" for local testing
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-destination: docs    # the folder where the final site is stored
 encoding: utf-8
 collections:
   article:
@@ -57,5 +56,3 @@ exclude:
   # - index.md
   # - README.md
   # - res
-
-
