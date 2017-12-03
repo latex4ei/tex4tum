@@ -107,7 +107,7 @@
       
       <!-- <span class="navbar-text"> Tex4Tum </span> -->
       <ul class="navbar-nav">
-        
+<!--         
         
         
         
@@ -132,10 +132,24 @@
         
         
         <li class="nav-item">
-          <a class="nav-link" href="/tex4tum/about.html"><i class="fa fa-question"></i> About</a>
+          <a class="nav-link" href="/tex4tum/about.html"><i class="fa fa-question"></i> About TeX4TUM</a>
         </li>
         
-        
+         -->
+        <li class="nav-item">
+          <a class="nav-link" href="/tex4tum/about.html"><i class="fa fa-question"></i> About</a>
+        </li>
+        <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fa fa-handshake-o"></i> Contribute
+        </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="/tex4tum/contribution.html"><i class="fa fa-pencil"></i> Contribute Article</a>
+            <a class="dropdown-item" href="/tex4tum/todo.html"><i class="fa fa-list"></i> ToDo List</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum"><i class="fa fa-github"></i> Develop TeX4TUM Features</a>
+          </div>
+        </li>
         <li class="nav-item dropdown">
           <a class="nav-link btn-group dropdown-toggle" href="/tex4tum/index.html" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-cog"></i> Options</a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -180,26 +194,6 @@
 <!-- SI Units -->
 <!--=============================================================== -->
 <!-- KaTeX Tweaks -->
-<h2 id="table-of-contents">Table of Contents</h2>
-<ul>
-<li><a href="#primitive-data-structures">Primitive Data Structures</a></li>
-<li>
-<a href="#container-advanced-abstract-data-types">Container (Advanced abstract data types)</a>
-<ul>
-<li><a href="#array">Array</a></li>
-<li><a href="#record--tuple--struct">Record = Tuple = Struct</a></li>
-<li><a href="#union">Union</a></li>
-<li><a href="#set">Set</a></li>
-<li><a href="#list--vector">List = Vector</a></li>
-<li><a href="#stack">Stack</a></li>
-<li><a href="#queue">Queue</a></li>
-<li><a href="#hash-tables">Hash Tables</a></li>
-<li><a href="#associative-array--map--dictionary">Associative array = Map = Dictionary</a></li>
-<li><a href="#tree">Tree</a></li>
-<li><a href="#graph">Graph</a></li>
-</ul>
-</li>
-</ul>
 <h2 id="primitive-data-structures">Primitive Data Structures</h2>
 <table>
 <thead>
@@ -228,12 +222,12 @@
 <tr class="even">
 <td>Character</td>
 <td>A single character</td>
-<td>‘a’</td>
+<td>'a'</td>
 </tr>
 <tr class="odd">
 <td>String</td>
 <td>A sequence of characters</td>
-<td>“Hello”</td>
+<td>"Hello"</td>
 </tr>
 </tbody>
 </table>
@@ -255,11 +249,9 @@
 <h3 id="list-vector">List = Vector</h3>
 <p>A list is a chain of elements. Each element has a pointer to the next element, thus it does not matter where elements are stored. Elements can be inserted and removed dynamically at each position in the list.</p>
 <h3 id="stack">Stack</h3>
-<p>A stack is a <abbr title="Last In First Out
-">LIFO</abbr> storage. Elements are added (push) and the latest added element is removed first (pop).</p>
+<p>A stack is a <abbr title="Last In First Out">LIFO</abbr> storage. Elements are added (push) and the latest added element is removed first (pop).</p>
 <h3 id="queue">Queue</h3>
-<p>A stack is a <abbr title="First In First Out
-">FIFO</abbr> storage. Elements are added (push) and the oldest added element is removed first (po)</p>
+<p>A stack is a <abbr title="First In First Out">FIFO</abbr> storage. Elements are added (push) and the oldest added element is removed first (po)</p>
 <h3 id="hash-tables">Hash Tables</h3>
 <p>A hash table can grow dynamically put performs better than a list. Elements are stored as key-value pair.</p>
 <h3 id="associative-array-map-dictionary">Associative array = Map = Dictionary</h3>

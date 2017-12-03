@@ -107,7 +107,7 @@
       
       <!-- <span class="navbar-text"> Tex4Tum </span> -->
       <ul class="navbar-nav">
-        
+<!--         
         
         
         
@@ -132,10 +132,24 @@
         
         
         <li class="nav-item">
-          <a class="nav-link" href="/tex4tum/about.html"><i class="fa fa-question"></i> About</a>
+          <a class="nav-link" href="/tex4tum/about.html"><i class="fa fa-question"></i> About TeX4TUM</a>
         </li>
         
-        
+         -->
+        <li class="nav-item">
+          <a class="nav-link" href="/tex4tum/about.html"><i class="fa fa-question"></i> About</a>
+        </li>
+        <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fa fa-handshake-o"></i> Contribute
+        </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="/tex4tum/contribution.html"><i class="fa fa-pencil"></i> Contribute Article</a>
+            <a class="dropdown-item" href="/tex4tum/todo.html"><i class="fa fa-list"></i> ToDo List</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum"><i class="fa fa-github"></i> Develop TeX4TUM Features</a>
+          </div>
+        </li>
         <li class="nav-item dropdown">
           <a class="nav-link btn-group dropdown-toggle" href="/tex4tum/index.html" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-cog"></i> Options</a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -182,7 +196,9 @@
 <!-- KaTeX Tweaks -->
 <div id="title_def" class="collapse">
 <div class="card card-block">
+<p>
 <b>Definition:</b> A file system manages the abstraction of grouped data blocks that belong to a single file.
+</p>
 </div>
 </div>
 <p>Common file systems</p>
@@ -190,15 +206,13 @@
 <thead>
 <tr class="header">
 <th>Name</th>
-<th><abbr title="Operating System
-">OS</abbr></th>
+<th><abbr title="Operating System">OS</abbr></th>
 <th>Features</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><abbr title="File Allocation Table
-">FAT</abbr></td>
+<td><abbr title="File Allocation Table">FAT</abbr></td>
 <td>all</td>
 <td>simple</td>
 </tr>
@@ -214,12 +228,17 @@
 </tr>
 </tbody>
 </table>
-<h2 id="file-allocation-table-fat">File Allocation Table (<abbr title="File Allocation Table
-">FAT</abbr>)</h2>
-<p>The <abbr title="File Allocation Table
-">FAT</abbr> is table that stores information about each Block. The information can be: * the block is defect * the block is free * pointer to the next block of a file * last block of a file</p>
+<h2 id="file-allocation-table-fat">File Allocation Table (FAT)</h2>
+<p>The <abbr title="File Allocation Table">FAT</abbr> is table that stores information about each Block. The information can be: * the block is defect * the block is free * pointer to the next block of a file * last block of a file</p>
 <h2 id="index-nodes-i-nodes">Index Nodes (I-Nodes)</h2>
 <p>Each file has an I-Node that stores: * Counter of references (links) to that file</p>
+<!--<p> Filename="filesystem-inode.svg", path="/docs/res/img/content-images/filesystem-inode.svg" </p>-->
+<figure class="figure">
+<img class="figure-img img-fluid" src="/docs/res/img/content-images/filesystem-inode.svg" alt="I-Nodes">
+<figcaption class="figure-caption">
+I-Nodes
+</figcaption>
+</figure>
 <!--<p> Filename="filesystem-inode.svg", path="/res/img/content-images/filesystem-inode.svg" </p>-->
 <figure class="figure">
 <img class="figure-img img-fluid" src="/res/img/content-images/filesystem-inode.svg" alt="I-Nodes">

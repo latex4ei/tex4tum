@@ -107,7 +107,7 @@
       
       <!-- <span class="navbar-text"> Tex4Tum </span> -->
       <ul class="navbar-nav">
-        
+<!--         
         
         
         
@@ -132,10 +132,24 @@
         
         
         <li class="nav-item">
-          <a class="nav-link" href="/tex4tum/about.html"><i class="fa fa-question"></i> About</a>
+          <a class="nav-link" href="/tex4tum/about.html"><i class="fa fa-question"></i> About TeX4TUM</a>
         </li>
         
-        
+         -->
+        <li class="nav-item">
+          <a class="nav-link" href="/tex4tum/about.html"><i class="fa fa-question"></i> About</a>
+        </li>
+        <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fa fa-handshake-o"></i> Contribute
+        </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="/tex4tum/contribution.html"><i class="fa fa-pencil"></i> Contribute Article</a>
+            <a class="dropdown-item" href="/tex4tum/todo.html"><i class="fa fa-list"></i> ToDo List</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum"><i class="fa fa-github"></i> Develop TeX4TUM Features</a>
+          </div>
+        </li>
         <li class="nav-item dropdown">
           <a class="nav-link btn-group dropdown-toggle" href="/tex4tum/index.html" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-cog"></i> Options</a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -191,8 +205,7 @@
 <li>
 <strong>Freshness:</strong> Old data should not be used as new (replay attacks)</li>
 <li>
-<strong>Availability:</strong> data/services should be available despite <abbr title="Denial-of-Service
-">DoS</abbr> attacks</li>
+<strong>Availability:</strong> data/services should be available despite <abbr title="Denial-of-Service">DoS</abbr> attacks</li>
 <li>
 <strong>Robustness:</strong> ensure continuous operation despite abnormalities</li>
 <li>
@@ -207,13 +220,10 @@
 <p>In a voting network, an attacker sets up many peers which subvert the election and inject faulty information.</p>
 <h2 id="crypto-primitives">Crypto Primitives</h2>
 <ul>
-<li>One-way hash: <abbr title="Secure Hash Algorithm
-">SHA</abbr>-256, MD5, RIPEMD-160</li>
-<li>Symmetric encryption: <abbr title="Advanced Encryption Standard
-">AES</abbr>
+<li>One-way hash: <abbr title="Secure Hash Algorithm">SHA</abbr>-256, MD5, RIPEMD-160</li>
+<li>Symmetric encryption: <abbr title="Advanced Encryption Standard">AES</abbr>
 </li>
-<li>Asymmetric encryption: <abbr title="Rivest, Shamir and Adleman
-">RSA</abbr>
+<li>Asymmetric encryption: <abbr title="Rivest, Shamir and Adleman">RSA</abbr>
 </li>
 <li>Digital Signature Algorithm: FIPS, ECDSA</li>
 </ul>

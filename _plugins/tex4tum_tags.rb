@@ -42,7 +42,7 @@ module Jekyll
     def render(context)
       #puts context
       # First class element is required for JS
-      "<div#{@id_field} class='collapse'><div class='card card-block'><b>Definition:</b> #{super}</div></div>"
+      "<div#{@id_field} class='collapse'><div class='card card-block'><p><b>Definition:</b> #{super}</p></div></div>"
     end
   end
 

@@ -107,7 +107,7 @@
       
       <!-- <span class="navbar-text"> Tex4Tum </span> -->
       <ul class="navbar-nav">
-        
+<!--         
         
         
         
@@ -132,10 +132,24 @@
         
         
         <li class="nav-item">
-          <a class="nav-link" href="/tex4tum/about.html"><i class="fa fa-question"></i> About</a>
+          <a class="nav-link" href="/tex4tum/about.html"><i class="fa fa-question"></i> About TeX4TUM</a>
         </li>
         
-        
+         -->
+        <li class="nav-item">
+          <a class="nav-link" href="/tex4tum/about.html"><i class="fa fa-question"></i> About</a>
+        </li>
+        <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fa fa-handshake-o"></i> Contribute
+        </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="/tex4tum/contribution.html"><i class="fa fa-pencil"></i> Contribute Article</a>
+            <a class="dropdown-item" href="/tex4tum/todo.html"><i class="fa fa-list"></i> ToDo List</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum"><i class="fa fa-github"></i> Develop TeX4TUM Features</a>
+          </div>
+        </li>
         <li class="nav-item dropdown">
           <a class="nav-link btn-group dropdown-toggle" href="/tex4tum/index.html" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-cog"></i> Options</a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -182,7 +196,9 @@
 <!-- KaTeX Tweaks -->
 <div class="collapse">
 <div class="card card-block">
-<p><b>Definition:</b> The Maxwell Equations are 4 fundamental equations that describe the relation between the quantities of electromagnetism.</p>
+<p>
+<b>Definition:</b> The Maxwell Equations are 4 fundamental equations that describe the relation between the quantities of electromagnetism.
+</p>
 </div>
 </div>
 <table style="width:17%;">
@@ -200,22 +216,22 @@
 </thead>
 <tbody>
 <tr class="odd">
-<td>Gauss’s law:</td>
+<td>Gauss's law:</td>
 <td><span class="LaTeX">$${\mathop{\circ\!\!\!\iint}}_{\partial \Omega} \vec E \cdot {\,\text{d}}A = \frac{1}{\epsilon_0} \iiint_{\Omega} \rho {\,\text{d}}V$$</span></td>
 <td><span class="LaTeX">$${\text{div}}\vec D = \varrho$$</span></td>
 </tr>
 <tr class="even">
-<td>Faraday’s law of induction</td>
+<td>Faraday's law of induction</td>
 <td><span class="LaTeX">$$\oint_{\partial A} \vec E \cdot {\,\text{d}}\vec s = - \iint_{A} \frac{\partial \vec B}{\partial t} \cdot {\,\text{d}}\vec A$$</span></td>
 <td><span class="LaTeX">$${\text{rot}}\vec E + \frac{\partial \vec B}{\partial t} = 0$$</span></td>
 </tr>
 <tr class="odd">
-<td>Gauss’s law for magnetism</td>
+<td>Gauss's law for magnetism</td>
 <td><span class="LaTeX">$${\mathop{\circ\!\!\!\iint}}_{\partial \Omega} \vec B \cdot {\,\text{d}}A = 0$$</span></td>
 <td><span class="LaTeX">$${\text{div}}\vec B = 0$$</span></td>
 </tr>
 <tr class="even">
-<td>Ampère’s law</td>
+<td>Ampère's law</td>
 <td><span class="LaTeX">$$\oint_{\partial A} \vec H \cdot {\,\text{d}}\vec s = \iint_{A} \vec j \cdot {\,\text{d}}\vec A + \iint_{A} \frac{\partial \vec D}{\partial t} \cdot {\,\text{d}}\vec A$$</span></td>
 <td><span class="LaTeX">$${\text{rot}}\vec H = \vec j + \frac{\partial \vec D}{\partial t}$$</span></td>
 </tr>

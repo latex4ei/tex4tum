@@ -107,7 +107,7 @@
       
       <!-- <span class="navbar-text"> Tex4Tum </span> -->
       <ul class="navbar-nav">
-        
+<!--         
         
         
         
@@ -132,10 +132,24 @@
         
         
         <li class="nav-item">
-          <a class="nav-link" href="/tex4tum/about.html"><i class="fa fa-question"></i> About</a>
+          <a class="nav-link" href="/tex4tum/about.html"><i class="fa fa-question"></i> About TeX4TUM</a>
         </li>
         
-        
+         -->
+        <li class="nav-item">
+          <a class="nav-link" href="/tex4tum/about.html"><i class="fa fa-question"></i> About</a>
+        </li>
+        <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fa fa-handshake-o"></i> Contribute
+        </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="/tex4tum/contribution.html"><i class="fa fa-pencil"></i> Contribute Article</a>
+            <a class="dropdown-item" href="/tex4tum/todo.html"><i class="fa fa-list"></i> ToDo List</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum"><i class="fa fa-github"></i> Develop TeX4TUM Features</a>
+          </div>
+        </li>
         <li class="nav-item dropdown">
           <a class="nav-link btn-group dropdown-toggle" href="/tex4tum/index.html" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-cog"></i> Options</a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -182,58 +196,33 @@
 <!-- KaTeX Tweaks -->
 <div id="title_def" class="collapse">
 <div class="card card-block">
-<b>Definition:</b> The Domain Name System (<abbr title="Domain Name System
-">DNS</abbr>) is a hierarchical decentralized naming system for computers connected to the Internet. It allows to access servers by name instead of an <abbr title="Internet Protocol
-">IP</abbr> address which is hard to remember.
+<p>
+<b>Definition:</b> The Domain Name System (DNS) is a hierarchical decentralized naming system for computers connected to the Internet <a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a>. It allows to access servers by name instead of an <abbr title="Internet Protocol">IP</abbr> address which is hard to remember.
+</p>
 </div>
 </div>
-<h2 id="table-of-contents">Table of Contents</h2>
-<ul>
-<li><a href="#public-abbr-titledomain-name-system">Public &lt;abbr title=“Domain Name System</a></li>
-<li><a href="#resource-record-format">Resource Record Format</a></li>
-<li>
-<a href="#resource-record-types">Resource Record Types</a>
-<ul>
-<li><a href="#dname">DNAME</a></li>
-<li><a href="#alias">ALIAS</a></li>
-</ul>
-</li>
-<li><a href="#rules-for-setting-up-a-abbr-titledomain-name-system">Rules for setting up a &lt;abbr title=“Domain Name System</a></li>
-<li><a href="#propagation-time">Propagation Time</a></li>
-<li><a href="#abbr-titledomain-name-system">&lt;abbr title=“Domain Name System</a></li>
-<li><a href="#references">References</a></li>
-</ul>
-<h2 id="public-dns">Public <abbr title="Domain Name System
-">DNS</abbr>
+<h2 id="public-dns">Public <abbr title="Domain Name System">DNS</abbr>
 </h2>
-<p>Google <abbr title="Domain Name System
-">DNS</abbr>: <code>8.8.8.8</code> or <code>2001:4860:4860::8888</code></p>
+<p>Google <abbr title="Domain Name System">DNS</abbr>: <code>8.8.8.8</code> or <code>2001:4860:4860::8888</code></p>
 <h2 id="resource-record-format">Resource Record Format</h2>
 <p>All RRs have the same top level format shown below:</p>
-<p><code>&lt;NAME&gt; &lt;&lt;abbr title="Time To Live " &gt;TTL&lt;/abbr&gt;&gt; &lt;CLASS&gt; &lt;TYPE&gt; &lt;RDLENGTH&gt; &lt;RDATA&gt;</code></p>
+<p><code>&lt;NAME&gt; &lt;TTL&gt; &lt;CLASS&gt; &lt;TYPE&gt; &lt;RDLENGTH&gt; &lt;RDATA&gt;</code></p>
 <p>with</p>
 <ul>
 <li>NAME: the name of the node</li>
 <li>
-<abbr title="Time To Live
-">TTL</abbr>: a 32 bit signed integer that specifies the time interval that the resource record may be cached</li>
+<abbr title="Time To Live">TTL</abbr>: a 32 bit signed integer that specifies the time interval that the resource record may be cached</li>
 <li>CLASS: two octets containing one of the RR CLASS codes.</li>
 <li>TYPE: two octets containing one of the RR TYPE codes.</li>
 <li>RDLENGTH: an unsigned 16 bit integer that specifies the length in octets of the RDATA field.</li>
 <li>RDATA: a variable length string of octets that describes the resource.</li>
 </ul>
 <h2 id="resource-record-types">Resource Record Types</h2>
-<table style="width:56%;">
-<colgroup>
-<col style="width: 15%">
-<col style="width: 20%">
-<col style="width: 19%">
-</colgroup>
+<table>
 <thead>
 <tr class="header">
 <th>
-<abbr title="Domain Name System
-">DNS</abbr> Type</th>
+<abbr title="Domain Name System">DNS</abbr> Type</th>
 <th>Return Type</th>
 <th>Application</th>
 </tr>
@@ -242,17 +231,14 @@
 <tr class="odd">
 <td><code>A</code></td>
 <td>IPv4 address</td>
-<td>map domain to 1 static <abbr title="Internet Protocol
-">IP</abbr>
+<td>map domain to 1 static <abbr title="Internet Protocol">IP</abbr>
 </td>
 </tr>
 <tr class="even">
 <td><code>AAAA</code></td>
 <td>
-<abbr title="Internet Protocol version 6
-">IPv6</abbr> address</td>
-<td>map domain to 1 static <abbr title="Internet Protocol
-">IP</abbr>
+<abbr title="Internet Protocol version 6">IPv6</abbr> address</td>
+<td>map domain to 1 static <abbr title="Internet Protocol">IP</abbr>
 </td>
 </tr>
 <tr class="odd">
@@ -273,8 +259,7 @@
 <tr class="even">
 <td><code>NS</code></td>
 <td>Name server</td>
-<td>delegate to other <abbr title="Domain Name System
-">DNS</abbr>
+<td>delegate to other <abbr title="Domain Name System">DNS</abbr>
 </td>
 </tr>
 <tr class="odd">
@@ -284,47 +269,40 @@
 </tr>
 <tr class="even">
 <td><code>MX</code></td>
-<td><abbr title="Uniform Resource Locator
-">URL</abbr></td>
+<td><abbr title="Uniform Resource Locator">URL</abbr></td>
 <td>Mail exchange server</td>
 </tr>
 <tr class="odd">
-<td><code>&lt;abbr title="Uniform Resource Locator " &gt;URL&lt;/abbr&gt;</code></td>
-<td><abbr title="Uniform Resource Locator
-">URL</abbr></td>
-<td>redirect (<abbr title="Hypertext Transfer Protocol
-">HTTP</abbr> 301) domain to <abbr title="Uniform Resource Locator
-">URL</abbr>
+<td><code>URL</code></td>
+<td><abbr title="Uniform Resource Locator">URL</abbr></td>
+<td>redirect (HTTP 301) domain to <abbr title="Uniform Resource Locator">URL</abbr>
 </td>
 </tr>
 </tbody>
 </table>
 <h3 id="dname">DNAME</h3>
-<p>The DNAME record provides redirection for a subtree of the domain name tree in the <abbr title="Domain Name System
-">DNS</abbr>. Note that a <code>DNAME</code> entry that maps <code>mydomain.com</code> to <code>public.com</code> will also map <code>sub.mydomain.com</code> to <code>sub.public.com</code>.</p>
+<p>The DNAME record provides redirection for a subtree of the domain name tree in the <abbr title="Domain Name System">DNS</abbr> <a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a>. Note that a <code>DNAME</code> entry that maps <code>mydomain.com</code> to <code>public.com</code> will also map <code>sub.mydomain.com</code> to <code>sub.public.com</code>.</p>
 <h3 id="alias">ALIAS</h3>
-<p>The <code>ALIAS</code> type is not part of the <abbr title="Domain Name System
-">DNS</abbr> standard and should only be used to map an Apex domain to another domain because <code>CNAME</code> cannot be used for this task.</p>
-<h2 id="rules-for-setting-up-a-dns-entry">Rules for setting up a <abbr title="Domain Name System
-">DNS</abbr> entry</h2>
+<p>The <code>ALIAS</code> type is not part of the <abbr title="Domain Name System">DNS</abbr> standard and should only be used to map an Apex domain to another domain because <code>CNAME</code> cannot be used for this task.</p>
+<h2 id="rules-for-setting-up-a-dns-entry">Rules for setting up a <abbr title="Domain Name System">DNS</abbr> entry</h2>
 <ul>
-<li>use an <code>A</code> and <code>AAAA</code> record if your destination is a server with one static and fixed <abbr title="Internet Protocol
-">IP</abbr> address (this is the most common case)</li>
+<li>use an <code>A</code> and <code>AAAA</code> record if your destination is a server with one static and fixed <abbr title="Internet Protocol">IP</abbr> address (this is the most common case)</li>
 <li>use a <code>CNAME</code> record if you want to alias a name to another name, and you don’t need other records (such as <code>MX</code> records for emails) for the same name</li>
 <li>use an <code>ALIAS</code> record if you are trying to alias the root domain or if you need other records for the same name</li>
 </ul>
 <h2 id="propagation-time">Propagation Time</h2>
-<p>Changes propagate within the network in about 24 hours. <abbr title="Time To Live
-">TTL</abbr> of records: 5 minutes to 24 hours.</p>
+<p>Changes propagate within the network in about 24 hours. <abbr title="Time To Live">TTL</abbr> of records: 5 minutes to 24 hours.</p>
 <h2 id="dns-softwre">
-<abbr title="Domain Name System
-">DNS</abbr> Softwre</h2>
+<abbr title="Domain Name System">DNS</abbr> Softwre</h2>
 <p>Linux: <code>dig DOMAIN</code>, <code>host DOMAIN</code>, <code>nslookup DOMAIN</code></p>
 <h2 id="references">References</h2>
-<ul>
-<li>https://tools.ietf.org/html/rfc1035</li>
-<li>DNAME Record: https://tools.ietf.org/html/rfc6672</li>
-</ul>
+<section class="footnotes">
+<hr>
+<ol>
+<li id="fn1"><p><a href="https://tools.ietf.org/html/rfc1035">RFC 1035</a>, <em>Domain Names - Implementation and Specification</em> , 1987<a href="#fnref1">↩</a></p></li>
+<li id="fn2"><p><a href="https://tools.ietf.org/html/rfc6672">RFC 6672</a>, <em>DNAME Redirection in the <abbr title="Domain Name System">DNS</abbr></em>, 2012<a href="#fnref2">↩</a></p></li>
+</ol>
+</section>
 
 
         </div>

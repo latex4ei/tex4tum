@@ -34,11 +34,6 @@ module Jekyll
           json_title = document.data["title"].to_json
           json_tags = document.data["tags"].to_json
 
-          # debugging: 
-          # if document.data["title"] == "Domain Name System (DNS)"
-          #   puts document.content
-          # end
-
         end
       end
 
@@ -254,8 +249,6 @@ module Jekyll
 
 
   end
-
-
 
   Hooks.register :site, :post_write do |site|
     IndexGenerator.new.generate(site)   

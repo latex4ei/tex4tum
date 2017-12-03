@@ -107,7 +107,7 @@
       
       <!-- <span class="navbar-text"> Tex4Tum </span> -->
       <ul class="navbar-nav">
-        
+<!--         
         
         
         
@@ -132,10 +132,24 @@
         
         
         <li class="nav-item">
-          <a class="nav-link" href="/tex4tum/about.html"><i class="fa fa-question"></i> About</a>
+          <a class="nav-link" href="/tex4tum/about.html"><i class="fa fa-question"></i> About TeX4TUM</a>
         </li>
         
-        
+         -->
+        <li class="nav-item">
+          <a class="nav-link" href="/tex4tum/about.html"><i class="fa fa-question"></i> About</a>
+        </li>
+        <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fa fa-handshake-o"></i> Contribute
+        </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="/tex4tum/contribution.html"><i class="fa fa-pencil"></i> Contribute Article</a>
+            <a class="dropdown-item" href="/tex4tum/todo.html"><i class="fa fa-list"></i> ToDo List</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum"><i class="fa fa-github"></i> Develop TeX4TUM Features</a>
+          </div>
+        </li>
         <li class="nav-item dropdown">
           <a class="nav-link btn-group dropdown-toggle" href="/tex4tum/index.html" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-cog"></i> Options</a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -182,15 +196,17 @@
 <!-- KaTeX Tweaks -->
 <div id="title_def" class="collapse">
 <div class="card card-block">
+<p>
 <b>Definition:</b> A trapdoor function is a function that is easy to perform one way, but has a secret that is required to perform the inverse calculation efficiently. A hash function is a one-way function and <em>not</em> a trapdoor function because it is not reversible.
+</p>
 </div>
 </div>
 <h2 id="analogy">Analogy</h2>
-<p>The analogy to a “trapdoor” is something like this: It’s easy to fall through a trapdoor, but it’s very hard to climb back out and get to where you started unless you have a ladder.</p>
+<p>The analogy to a "trapdoor" is something like this: It's easy to fall through a trapdoor, but it's very hard to climb back out and get to where you started unless you have a ladder.</p>
 <h2 id="formal-definition">Formal Definition</h2>
 <p>If <span class="LaTeX">$f$</span> is a trapdoor function, then <span class="LaTeX">$y=f(x)$</span> is easy to compute, but <span class="LaTeX">$x = f^{-1}(y)$</span> is hard to compute without some special knowledge <span class="LaTeX">$k$</span>. Given <span class="LaTeX">$k$</span>, it is easy to compute <span class="LaTeX">$y=f^{-1}(x,k)$</span>.</p>
 <h2 id="difference-to-hash-functions">Difference to Hash Functions</h2>
-<p>A hash function is not a trapdoor function because it is not reversible. Instead, it’s called a one-way function. A one-way function is similar to a trapdoor function in that it’s easy to compute both and it’s very hard to reverse both, but there is no special key that allows you to reverse the one-way function.</p>
+<p>A hash function is not a trapdoor function because it is not reversible. Instead, it's called a one-way function. A one-way function is similar to a trapdoor function in that it's easy to compute both and it's very hard to reverse both, but there is no special key that allows you to reverse the one-way function.</p>
 <h2 id="references">References</h2>
 <ul>
 <li>https://crypto.stackexchange.com/questions/10087/what-is-the-meaning-of-trapdoor-in-cryptography</li>

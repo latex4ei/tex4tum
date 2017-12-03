@@ -107,7 +107,7 @@
       
       <!-- <span class="navbar-text"> Tex4Tum </span> -->
       <ul class="navbar-nav">
-        
+<!--         
         
         
         
@@ -132,10 +132,24 @@
         
         
         <li class="nav-item">
-          <a class="nav-link" href="/tex4tum/about.html"><i class="fa fa-question"></i> About</a>
+          <a class="nav-link" href="/tex4tum/about.html"><i class="fa fa-question"></i> About TeX4TUM</a>
         </li>
         
-        
+         -->
+        <li class="nav-item">
+          <a class="nav-link" href="/tex4tum/about.html"><i class="fa fa-question"></i> About</a>
+        </li>
+        <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fa fa-handshake-o"></i> Contribute
+        </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="/tex4tum/contribution.html"><i class="fa fa-pencil"></i> Contribute Article</a>
+            <a class="dropdown-item" href="/tex4tum/todo.html"><i class="fa fa-list"></i> ToDo List</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum"><i class="fa fa-github"></i> Develop TeX4TUM Features</a>
+          </div>
+        </li>
         <li class="nav-item dropdown">
           <a class="nav-link btn-group dropdown-toggle" href="/tex4tum/index.html" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-cog"></i> Options</a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -182,32 +196,18 @@
 <!-- KaTeX Tweaks -->
 <div id="title_def" class="collapse">
 <div class="card card-block">
+<p>
 <b>Definition:</b> The Kalman Filter is a linear quadratic estimator used to estimate the state of a system by combining sensor measurements and a (physical) process model of the system. It works optimal if measurements and process variations have white gaussian noise.
+</p>
 </div>
 </div>
-<h2 id="table-of-contents">Table of Contents</h2>
-<ul>
-<li><a href="#working-principle">Working Principle</a></li>
-<li><a href="#requirements">Requirements</a></li>
-<li>
-<a href="#calculations">Calculations</a>
-<ul>
-<li><a href="#state-space">State Space</a></li>
-<li><a href="#step-prediction">Step: Prediction</a></li>
-<li><a href="#step-update">Step: Update</a></li>
-</ul>
-</li>
-<li><a href="#extended-kalman-filter">Extended Kalman Filter</a></li>
-<li><a href="#sensor-fusion">Sensor Fusion</a></li>
-<li><a href="#example">Example</a></li>
-</ul>
 <h2 id="working-principle">Working Principle</h2>
-<p>The Kalman Filter averages a prediction of a system’s state with a new measurement using a weighted average. The purpose of the weights is that estimated values with smaller uncertainty are “trusted” more. The result of the weighted average is a new state estimate that lies between the predicted and measured state, and has a smaller estimated uncertainty than either alone.</p>
+<p>The Kalman Filter averages a prediction of a system's state with a new measurement using a weighted average. The purpose of the weights is that estimated values with smaller uncertainty are "trusted" more. The result of the weighted average is a new state estimate that lies between the predicted and measured state, and has a smaller estimated uncertainty than either alone.</p>
 <h2 id="requirements">Requirements</h2>
 <ul>
-<li>system’s process model</li>
+<li>system's process model</li>
 <li>control inputs to that process</li>
-<li>multiple sequential measurements (e.g. from sensors)</li>
+<li>multiple sequential measurements (e.g. from sensors)</li>
 </ul>
 <p>Facts:</p>
 <ul>
@@ -225,7 +225,7 @@
 </div>
 </div>
 <h3 id="step-prediction">Step: Prediction</h3>
-<p>calculate the next state based on the old state and the dynamic model (e.g. physical laws)</p>
+<p>calculate the next state based on the old state and the dynamic model (e.g. physical laws)</p>
 <p><span class="LaTeX">$\hat {\vec x}_{n|n-1} = {\mathbf{G}}_n \hat{\vec x}_{n-1|n-1}$</span></p>
 <p>calculate a new process covariance (how certain is the model?) <span class="LaTeX">${\mathbf{C}}_{\vec x_{n|n-1}} = {\mathbf{G}}_n {\mathbf{C}}_{\vec x_{n-1|n-1}} {\mathbf{G}}_n^\top + {\mathbf{C}}_{\vec v}$</span></p>
 <h3 id="step-update">Step: Update</h3>

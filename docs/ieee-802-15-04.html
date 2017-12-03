@@ -107,7 +107,7 @@
       
       <!-- <span class="navbar-text"> Tex4Tum </span> -->
       <ul class="navbar-nav">
-        
+<!--         
         
         
         
@@ -132,10 +132,24 @@
         
         
         <li class="nav-item">
-          <a class="nav-link" href="/tex4tum/about.html"><i class="fa fa-question"></i> About</a>
+          <a class="nav-link" href="/tex4tum/about.html"><i class="fa fa-question"></i> About TeX4TUM</a>
         </li>
         
-        
+         -->
+        <li class="nav-item">
+          <a class="nav-link" href="/tex4tum/about.html"><i class="fa fa-question"></i> About</a>
+        </li>
+        <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fa fa-handshake-o"></i> Contribute
+        </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="/tex4tum/contribution.html"><i class="fa fa-pencil"></i> Contribute Article</a>
+            <a class="dropdown-item" href="/tex4tum/todo.html"><i class="fa fa-list"></i> ToDo List</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum"><i class="fa fa-github"></i> Develop TeX4TUM Features</a>
+          </div>
+        </li>
         <li class="nav-item dropdown">
           <a class="nav-link btn-group dropdown-toggle" href="/tex4tum/index.html" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-cog"></i> Options</a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -182,8 +196,9 @@
 <!-- KaTeX Tweaks -->
 <div id="title_def" class="collapse">
 <div class="card card-block">
-<b>Definition:</b> IEEE 802.15.4 is the standard for “Wireless Medium AccessControl (<abbr title="Media Access Control
-">MAC</abbr>) and Physical Layer (PHY) Specifications for Low-Rate Wireless Personal Area Networks (LR-WPANs)”
+<p>
+<b>Definition:</b> IEEE 802.15.4 is the standard for “Wireless Medium AccessControl (MAC) and Physical Layer (PHY) Specifications for Low-Rate Wireless Personal Area Networks (LR-WPANs)”
+</p>
 </div>
 </div>
 <h2 id="table-of-contents">Table of Contents</h2>
@@ -198,7 +213,7 @@
 </ul>
 </li>
 <li>
-<a href="#medium-access-layer-2-abbr-titlemedia-access-control">Medium Access Layer 2 (&lt;abbr title=“Media Access Control</a>
+<a href="#medium-access-layer-2-mac">Medium Access Layer 2 (MAC)</a>
 <ul>
 <li><a href="#beacon-enabled">Beacon Enabled</a></li>
 </ul>
@@ -262,19 +277,15 @@
 <li>30 channels available in the 915MHz bands</li>
 <li>16 channels available in the 2.4GHz bands</li>
 </ul>
-<h2 id="medium-access-layer-2-mac">Medium Access Layer 2 (<abbr title="Media Access Control
-">MAC</abbr>)</h2>
+<h2 id="medium-access-layer-2-mac">Medium Access Layer 2 (MAC)</h2>
 <ul>
-<li>4 types of <abbr title="Media Access Control
-">MAC</abbr> frames: Data, Beacon, Ack, Command</li>
-<li>typically 25 bytes <abbr title="Media Access Control
-">MAC</abbr> header</li>
+<li>4 types of <abbr title="Media Access Control">MAC</abbr> frames: Data, Beacon, Ack, Command</li>
+<li>typically 25 bytes <abbr title="Media Access Control">MAC</abbr> header</li>
 </ul>
 <h3 id="beacon-enabled">Beacon Enabled</h3>
 <ul>
 <li>
-<abbr title="Personal Area Network
-">PAN</abbr> Coordinator sends beacons. The beacon interval defines one superframe. Each superframe is divided into 16 time slots.</li>
+<abbr title="Personal Area Network">PAN</abbr> Coordinator sends beacons. The beacon interval defines one superframe. Each superframe is divided into 16 time slots.</li>
 </ul>
 <p>Slots: * Contention Access Period: random, collisions possible * Contention Free Period: slots are asigned to individual devices</p>
 <ul>
@@ -294,8 +305,7 @@
 <h2 id="link-layer-security">Link layer security</h2>
 <ul>
 <li>
-<abbr title="Advanced Encryption Standard
-">AES</abbr>-128</li>
+<abbr title="Advanced Encryption Standard">AES</abbr>-128</li>
 </ul>
 <h2 id="references">References</h2>
 

@@ -107,7 +107,7 @@
       
       <!-- <span class="navbar-text"> Tex4Tum </span> -->
       <ul class="navbar-nav">
-        
+<!--         
         
         
         
@@ -132,10 +132,24 @@
         
         
         <li class="nav-item">
-          <a class="nav-link" href="/tex4tum/about.html"><i class="fa fa-question"></i> About</a>
+          <a class="nav-link" href="/tex4tum/about.html"><i class="fa fa-question"></i> About TeX4TUM</a>
         </li>
         
-        
+         -->
+        <li class="nav-item">
+          <a class="nav-link" href="/tex4tum/about.html"><i class="fa fa-question"></i> About</a>
+        </li>
+        <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fa fa-handshake-o"></i> Contribute
+        </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="/tex4tum/contribution.html"><i class="fa fa-pencil"></i> Contribute Article</a>
+            <a class="dropdown-item" href="/tex4tum/todo.html"><i class="fa fa-list"></i> ToDo List</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum"><i class="fa fa-github"></i> Develop TeX4TUM Features</a>
+          </div>
+        </li>
         <li class="nav-item dropdown">
           <a class="nav-link btn-group dropdown-toggle" href="/tex4tum/index.html" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-cog"></i> Options</a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -182,8 +196,9 @@
 <!-- KaTeX Tweaks -->
 <div id="title_def" class="collapse">
 <div class="card card-block">
-<b>Definition:</b> A tree is a widely used abstract data type (<abbr title="Abstract Data Type
-">ADT</abbr>). It simulates a hierarchical tree structure, with a root element and subtrees.
+<p>
+<b>Definition:</b> A tree is a widely used abstract data type (ADT). It simulates a hierarchical tree structure, with a root element and subtrees.
+</p>
 </div>
 </div>
 <h2 id="terminology">Terminology</h2>
@@ -201,11 +216,11 @@
 </tr>
 <tr class="even">
 <td>Child</td>
-<td>A node connected “below” another node</td>
+<td>A node connected "below" another node</td>
 </tr>
 <tr class="odd">
 <td>Parent</td>
-<td>The node “above” another node</td>
+<td>The node "above" another node</td>
 </tr>
 <tr class="even">
 <td>Siblings</td>
@@ -213,11 +228,11 @@
 </tr>
 <tr class="odd">
 <td>Descendant</td>
-<td>A node somewhere “below” the current node</td>
+<td>A node somewhere "below" the current node</td>
 </tr>
 <tr class="even">
 <td>Ancestor</td>
-<td>A node somewhere “above” the current node</td>
+<td>A node somewhere "above" the current node</td>
 </tr>
 <tr class="odd">
 <td>Leaf</td>

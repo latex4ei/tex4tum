@@ -1,11 +1,11 @@
 <footer>
   <div class="container">
-    <div class="row justify-content-md-center">
-      <div class="hidden-sm-down col-md-1">
-        <img class="img-fluid" src="{{ "./res/img/Logo.png" | relative_url }}" alt="Logo">
+    <div class="row">
+      <div class="col-auto">
+        <img class="img-fluid" style="width: 4em;" src="{{ "./res/img/Logo.png" | relative_url }}" alt="Logo">
       </div>
 
-      <div class="col-sm-2 col-md-2">
+      <div class="col-sm-5 col-lg-3">
         <h3>{{ site.title | escape }}</h3>
         <ul class="contact-list">
           <li><a href="mailto:{{ site.email }}">{% icon fa-envelope %} {{ site.email }}</a></li>
@@ -13,7 +13,7 @@
         </ul>
       </div>
 
-      <div class="col-sm-2 col-md-2">
+      <div class="col-sm-3 col-lg-2">
         <ul class="social-media-list">
           {% for entry in site.data.social %}
           <li>{% include icon-social.html data=entry %}</li>
@@ -21,9 +21,9 @@
         </ul>
       </div>
 
-      <div class="col-sm-3 col-md-3">
+      <div class="col-lg-5">
         <p>{{ site.description | escape }}</p>
       </div>
     </div>
-  </div
+  </div>
 </footer>

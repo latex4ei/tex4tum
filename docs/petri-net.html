@@ -107,7 +107,7 @@
       
       <!-- <span class="navbar-text"> Tex4Tum </span> -->
       <ul class="navbar-nav">
-        
+<!--         
         
         
         
@@ -132,10 +132,24 @@
         
         
         <li class="nav-item">
-          <a class="nav-link" href="/tex4tum/about.html"><i class="fa fa-question"></i> About</a>
+          <a class="nav-link" href="/tex4tum/about.html"><i class="fa fa-question"></i> About TeX4TUM</a>
         </li>
         
-        
+         -->
+        <li class="nav-item">
+          <a class="nav-link" href="/tex4tum/about.html"><i class="fa fa-question"></i> About</a>
+        </li>
+        <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fa fa-handshake-o"></i> Contribute
+        </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="/tex4tum/contribution.html"><i class="fa fa-pencil"></i> Contribute Article</a>
+            <a class="dropdown-item" href="/tex4tum/todo.html"><i class="fa fa-list"></i> ToDo List</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum"><i class="fa fa-github"></i> Develop TeX4TUM Features</a>
+          </div>
+        </li>
         <li class="nav-item dropdown">
           <a class="nav-link btn-group dropdown-toggle" href="/tex4tum/index.html" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-cog"></i> Options</a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -182,7 +196,9 @@
 <!-- KaTeX Tweaks -->
 <div id="title_def" class="collapse">
 <div class="card card-block">
+<p>
 <b>Definition:</b> A petri net <span class="LaTeX">$N = (P,T,E)$</span> is a graph to model distributed systems. It consists of <em>places</em> <span class="LaTeX">$P$</span> and <em>transitions</em> <span class="LaTeX">$T$</span>, which are connected by directed edges <span class="LaTeX">$E$</span>.
+</p>
 </div>
 </div>
 <p>The places are marked with tokens. Tokens are transported by the edges. A transition consumes and produces tokens. The state of the net is defined by the numbers of tokens at each place.</p>
@@ -197,6 +213,13 @@
 <li>When a transition fires, it consumes a token from each connected input place and produces a token on each connected output place. The consumed and produced tokens do not need to sum up.</li>
 </ul>
 <p>In a weighted Petri Net, the transition consumes and produces tokens according to the weights of the edges.</p>
+<!--<p> Filename="petri-example.svg", path="/docs/res/img/content-images/it/petri-example.svg" </p>-->
+<figure class="figure">
+<img class="figure-img img-fluid" src="/docs/res/img/content-images/it/petri-example.svg" alt="Petri Net Transition">
+<figcaption class="figure-caption">
+Petri Net Transition
+</figcaption>
+</figure>
 <!--<p> Filename="petri-example.svg", path="/res/img/content-images/it/petri-example.svg" </p>-->
 <figure class="figure">
 <img class="figure-img img-fluid" src="/res/img/content-images/it/petri-example.svg" alt="Petri Net Transition">
@@ -209,6 +232,13 @@ Petri Net Transition
 <p>If a petri net is live with initial marking M0, then it is deadlock-free</p>
 <h2 id="context">Context</h2>
 <p>Petri nets are more general than state machines because they can model concurrency. A state machine is a special petri net where each transition is only connected to one input and one output place (no concurrency).</p>
+<!--<p> Filename="petrinet-classes.svg", path="/docs/res/img/content-images/petrinet-classes.svg" </p>-->
+<figure class="figure">
+<img class="figure-img img-fluid" src="/docs/res/img/content-images/petrinet-classes.svg" alt="Petri Net Classes">
+<figcaption class="figure-caption">
+Petri Net Classes
+</figcaption>
+</figure>
 <!--<p> Filename="petrinet-classes.svg", path="/res/img/content-images/petrinet-classes.svg" </p>-->
 <figure class="figure">
 <img class="figure-img img-fluid" src="/res/img/content-images/petrinet-classes.svg" alt="Petri Net Classes">

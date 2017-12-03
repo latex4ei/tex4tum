@@ -107,7 +107,7 @@
       
       <!-- <span class="navbar-text"> Tex4Tum </span> -->
       <ul class="navbar-nav">
-        
+<!--         
         
         
         
@@ -132,10 +132,24 @@
         
         
         <li class="nav-item">
-          <a class="nav-link" href="/tex4tum/about.html"><i class="fa fa-question"></i> About</a>
+          <a class="nav-link" href="/tex4tum/about.html"><i class="fa fa-question"></i> About TeX4TUM</a>
         </li>
         
-        
+         -->
+        <li class="nav-item">
+          <a class="nav-link" href="/tex4tum/about.html"><i class="fa fa-question"></i> About</a>
+        </li>
+        <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fa fa-handshake-o"></i> Contribute
+        </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="/tex4tum/contribution.html"><i class="fa fa-pencil"></i> Contribute Article</a>
+            <a class="dropdown-item" href="/tex4tum/todo.html"><i class="fa fa-list"></i> ToDo List</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum"><i class="fa fa-github"></i> Develop TeX4TUM Features</a>
+          </div>
+        </li>
         <li class="nav-item dropdown">
           <a class="nav-link btn-group dropdown-toggle" href="/tex4tum/index.html" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-cog"></i> Options</a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -180,14 +194,9 @@
 <!-- SI Units -->
 <!--=============================================================== -->
 <!-- KaTeX Tweaks -->
-<p>6LoWPAN (<abbr title="Internet Protocol version 6
-">IPv6</abbr> over Low-power Wireless Personal Area Networks) is an adaptation Layer that enables the use of <abbr title="Internet Protocol version 6
-">IPv6</abbr> over low-power IEEE 802.15.4 radio links.</p>
-<p>The 6LoWPAN network is connected to the <abbr title="Internet Protocol version 6
-">IPv6</abbr> network using an edge router.</p>
-<p>Fragmetns: 1280 byte <abbr title="Internet Protocol version 6
-">IPv6</abbr> <abbr title="Maximum Transmission Unit
-">MTU</abbr> → 127 byte 802.15.4 frames</p>
+<p>6LoWPAN (IPv6 over Low-power Wireless Personal Area Networks) is an adaptation Layer that enables the use of <abbr title="Internet Protocol version 6">IPv6</abbr> over low-power IEEE 802.15.4 radio links.</p>
+<p>The 6LoWPAN network is connected to the <abbr title="Internet Protocol version 6">IPv6</abbr> network using an edge router.</p>
+<p>Fragmetns: 1280 byte <abbr title="Internet Protocol version 6">IPv6</abbr> <abbr title="Maximum Transmission Unit">MTU</abbr> → 127 byte 802.15.4 frames</p>
 <p>Support for 64-bit/16-bit 802.15.4 addressing</p>
 <h2 id="table-of-contents">Table of Contents</h2>
 <ul>
@@ -223,8 +232,7 @@
 <li>2 bit:
 <ul>
 <li>00: not a 6LoWPAN frame</li>
-<li>01: <abbr title="Internet Protocol version 6
-">IPv6</abbr> addressing header</li>
+<li>01: <abbr title="Internet Protocol version 6">IPv6</abbr> addressing header</li>
 <li>10: Mesh header</li>
 </ul>
 </li>
@@ -233,18 +241,15 @@
 </li>
 </ul>
 <h2 id="rfc-4944-hc1-and-hc2-compression">RFC 4944: HC1 and HC2 compression</h2>
-<p>Possible to achieve 7 byte header for <abbr title="Internet Protocol version 6
-">IPv6</abbr> + UDP.</p>
+<p>Possible to achieve 7 byte header for <abbr title="Internet Protocol version 6">IPv6</abbr> + UDP.</p>
 <h4 id="hc1-compression-byte">HC1 compression byte:</h4>
 <pre><code>   0   1   2   3   4   5   6   7    
  +---+---+---+---+---+---+---+---+ 
- | &lt;abbr title="Internet Protocol</code></pre>
-<p>" &gt;IP SA | <abbr title="Internet Protocol
-">IP</abbr> DA |TF | NH |HC2| +—+—+—+—+—+—+—+—+</p>
+ | &lt;abbr title="Internet Protocol" &gt;IP&lt;/abbr&gt; SA | &lt;abbr title="Internet Protocol" &gt;IP&lt;/abbr&gt; DA |TF |  NH   |HC2| 
+ +---+---+---+---+---+---+---+---+ </code></pre>
 <ul>
 <li>
-<abbr title="Internet Protocol version 6
-">IPv6</abbr> source address (bits 0 and 1):
+<abbr title="Internet Protocol version 6">IPv6</abbr> source address (bits 0 and 1):
 <ul>
 <li>00: Prefix in-line, Interface identifier</li>
 <li>01: Prefix compressed (link-local prefix assumed).</li>
@@ -253,8 +258,7 @@
 </ul>
 </li>
 <li>
-<abbr title="Internet Protocol version 6
-">IPv6</abbr> destination address (bits 2 and 3):
+<abbr title="Internet Protocol version 6">IPv6</abbr> destination address (bits 2 and 3):
 <ul>
 <li>00: Prefix carried in-line</li>
 <li>01: Prefix compressed (link-local prefix assumed).</li>
@@ -273,8 +277,7 @@
 <li>00: not compressed; full 8 bits are sent</li>
 <li>01: UDP</li>
 <li>10: ICMP</li>
-<li>11: <abbr title="Transmission Control Protocol
-">TCP</abbr>
+<li>11: <abbr title="Transmission Control Protocol">TCP</abbr>
 </li>
 </ul>
 </li>
@@ -293,21 +296,20 @@
 <ul>
 <li>UDP source port (bit 0):
 <ul>
-<li>0: Not compressed, carried “in-line”</li>
+<li>0: Not compressed, carried "in-line"</li>
 <li>1: Compressed to 4 bits.</li>
 </ul>
 </li>
 <li>UDP destination port (bit 1):
 <ul>
-<li>0: Not compressed, carried “in-line”</li>
+<li>0: Not compressed, carried "in-line"</li>
 <li>1: Compressed to 4 bits.</li>
 </ul>
 </li>
 <li>Length (bit 2):
 <ul>
-<li>0: Not compressed, carried “in-line”</li>
-<li>1: length computed from <abbr title="Internet Protocol version 6
-">IPv6</abbr> header length</li>
+<li>0: Not compressed, carried "in-line"</li>
+<li>1: length computed from <abbr title="Internet Protocol version 6">IPv6</abbr> header length</li>
 </ul>
 </li>
 <li>Reserved (bit 3 through 7)</li>
@@ -317,10 +319,9 @@
 <p>6LoWPAN structure:</p>
 <pre><code>+-------------+-------------+-------------+-----------------+--------
 | LOWPAN_IPHC | In-line     | LOWPAN_NHC  | In-line Next    | Payload
-|   Encoding  |   &lt;abbr title="Internet Protocol</code></pre>
-<p>" &gt;IP Fields | Encoding | Header Fields | +————-+————-+————-+—————–+——–</p>
-<p>IPHC bytes: 0 1 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 +—+—+—+—+—+—+—+—+—+—+—+—+—+—+—+—+ | 0 | 1 | 1 | TF |NH | HLIM |CID|SAC| SAM | M |<abbr title="Digital/Analog Converter
-">DAC</abbr>| DAM | +—+—+—+—+—+—+—+—+—+—+—+—+—+—+—+—+</p>
+|   Encoding  |   &lt;abbr title="Internet Protocol" &gt;IP&lt;/abbr&gt; Fields |   Encoding  |   Header Fields |
++-------------+-------------+-------------+-----------------+--------</code></pre>
+<p>IPHC bytes: 0 1 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 +---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+ | 0 | 1 | 1 | TF |NH | HLIM |CID|SAC| SAM | M |DAC| DAM | +---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+</p>
 <p>NHC dispatch byte:</p>
 <ul>
 <li>Traffic Class and Flow Label (TF), 2 bit
@@ -351,8 +352,7 @@
 <li>1: 1-byte identifier follows</li>
 </ul>
 </li>
-<li>SAC/<abbr title="Digital/Analog Converter
-">DAC</abbr> (Source/Destination Address Compression)
+<li>SAC/DAC (Source/Destination Address Compression)
 <ul>
 <li>0: Stateless</li>
 <li>1: Context-based</li>
@@ -376,13 +376,11 @@
 <h3 id="routing">Routing</h3>
 <p>6LoWPAN supports two routing methods on different layers.</p>
 <ul>
-<li>Route-over: on layer 3 with <abbr title="Internet Protocol
-">IP</abbr> addresses (RPL protocol)</li>
-<li>Mesh-under: on layer 2 with <abbr title="Media Access Control
-">MAC</abbr> addresses</li>
+<li>Route-over: on layer 3 with <abbr title="Internet Protocol">IP</abbr> addresses (RPL protocol)</li>
+<li>Mesh-under: on layer 2 with <abbr title="Media Access Control">MAC</abbr> addresses</li>
 </ul>
 <h2 id="rpl">RPL</h2>
-<p>Routing Protocol for Low-Power and Lossy Networks (RPL) (pronounced “ripple”), is a protocol based on DODAG with expensive bits and dynamically formed topology.</p>
+<p>Routing Protocol for Low-Power and Lossy Networks (RPL) (pronounced "ripple"), is a protocol based on DODAG with expensive bits and dynamically formed topology.</p>
 <h3 id="neighbor-discovery">Neighbor Discovery</h3>
 <p>ND for 6LoWPAN has been specified in draft-ietf-6lowpan-nd (work in progress)</p>
 <h3 id="dodag">DODAG</h3>

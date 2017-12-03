@@ -107,7 +107,7 @@
       
       <!-- <span class="navbar-text"> Tex4Tum </span> -->
       <ul class="navbar-nav">
-        
+<!--         
         
         
         
@@ -132,10 +132,24 @@
         
         
         <li class="nav-item">
-          <a class="nav-link" href="/tex4tum/about.html"><i class="fa fa-question"></i> About</a>
+          <a class="nav-link" href="/tex4tum/about.html"><i class="fa fa-question"></i> About TeX4TUM</a>
         </li>
         
-        
+         -->
+        <li class="nav-item">
+          <a class="nav-link" href="/tex4tum/about.html"><i class="fa fa-question"></i> About</a>
+        </li>
+        <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fa fa-handshake-o"></i> Contribute
+        </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="/tex4tum/contribution.html"><i class="fa fa-pencil"></i> Contribute Article</a>
+            <a class="dropdown-item" href="/tex4tum/todo.html"><i class="fa fa-list"></i> ToDo List</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum"><i class="fa fa-github"></i> Develop TeX4TUM Features</a>
+          </div>
+        </li>
         <li class="nav-item dropdown">
           <a class="nav-link btn-group dropdown-toggle" href="/tex4tum/index.html" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-cog"></i> Options</a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -182,11 +196,13 @@
 <!-- KaTeX Tweaks -->
 <div id="title_def" class="collapse">
 <div class="card card-block">
-<b>Definition:</b> A public key certificate is an electronic document used to prove the ownership of a public key. The certificate includes information about the identity of its owner (called the subject) and the public key (digital signature) of an entity that has verified the certificate’s contents (called the issuer).
+<p>
+<b>Definition:</b> A public key certificate is an electronic document used to prove the ownership of a public key. The certificate includes information about the identity of its owner (called the subject) and the public key (digital signature) of an entity that has verified the certificate's contents (called the issuer).
+</p>
 </div>
 </div>
-<p>A certificate’s subject is typically a person, organization or server hostname. The issuer is typically a trusted certificate authority (CA). The matching private key is kept secret by the subject of the certificate.</p>
-<p>The certificate Transport Layer Security (TLS) . TLS has an older name “Secure Sockets Layer (SSL)”, thus certificates often refer to “TLS/SSL”.</p>
+<p>A certificate's subject is typically a person, organization or server hostname. The issuer is typically a trusted certificate authority (CA). The matching private key is kept secret by the subject of the certificate.</p>
+<p>The certificate Transport Layer Security (TLS) . TLS has an older name "Secure Sockets Layer (SSL)", thus certificates often refer to "TLS/SSL".</p>
 <p>The format for public key certificates is defined by the standard X.509 as defined in RFC 5280</p>
 <h2 id="tlsssl-server-certificate">TLS/SSL server certificate</h2>
 <p>A server is required to present a certificate as part of the initial connection setup.</p>
@@ -200,7 +216,7 @@
     - It first verifies the true identity of the subject, e.g. that a hostname belongs to the correct organization, and then assigns a public key to the hostname which is made public available.
 * A CA publishes digital certificates
 * A CA is trusted by the subject (owner) and each party that wants to verify the identity of the subject</code></pre>
-<p>Some major software (e.g. webbrowser) contains a list of certificate authorities that are trusted by default.</p>
+<p>Some major software (e.g. webbrowser) contains a list of certificate authorities that are trusted by default.</p>
 
 
         </div>

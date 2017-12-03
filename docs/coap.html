@@ -107,7 +107,7 @@
       
       <!-- <span class="navbar-text"> Tex4Tum </span> -->
       <ul class="navbar-nav">
-        
+<!--         
         
         
         
@@ -132,10 +132,24 @@
         
         
         <li class="nav-item">
-          <a class="nav-link" href="/tex4tum/about.html"><i class="fa fa-question"></i> About</a>
+          <a class="nav-link" href="/tex4tum/about.html"><i class="fa fa-question"></i> About TeX4TUM</a>
         </li>
         
-        
+         -->
+        <li class="nav-item">
+          <a class="nav-link" href="/tex4tum/about.html"><i class="fa fa-question"></i> About</a>
+        </li>
+        <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fa fa-handshake-o"></i> Contribute
+        </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="/tex4tum/contribution.html"><i class="fa fa-pencil"></i> Contribute Article</a>
+            <a class="dropdown-item" href="/tex4tum/todo.html"><i class="fa fa-list"></i> ToDo List</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum"><i class="fa fa-github"></i> Develop TeX4TUM Features</a>
+          </div>
+        </li>
         <li class="nav-item dropdown">
           <a class="nav-link btn-group dropdown-toggle" href="/tex4tum/index.html" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-cog"></i> Options</a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -182,7 +196,9 @@
 <!-- KaTeX Tweaks -->
 <div id="title_def" class="collapse">
 <div class="card card-block">
+<p>
 <b>Definition:</b> The Constrained Application Protocol (CoAP) is a specialized web transfer protocol for use with constrained nodes and constrained networks in the Internet of Things. The protocol is designed for machine-to-machine (M2M) applications such as smart energy and building automation.
+</p>
 </div>
 </div>
 <p>Based on Representational State Transfer (REST).</p>
@@ -202,31 +218,27 @@
 <li>Ver: Version Number (currently 0b01)</li>
 <li>T: Type (0: Confirmable, 1: Non-confirmable, 2: Acknowledgement, 3: Reset)</li>
 <li>Code: Upper 3 MSBs: Class, 5 LSBs: Class details</li>
-<li>Message ID: used to prevent duplicates, same for the <abbr title="ACKnowledgement
-">ACK</abbr>
+<li>Message ID: used to prevent duplicates, same for the <abbr title="ACKnowledgement">ACK</abbr>
 </li>
 <li>Token: used to correlate request and response</li>
 <li>Payload Marker:</li>
 </ul>
 <h3 id="options">Options</h3>
 <pre><code>0 1 2 3 4 5 6 7</code></pre>
-<p>+-+-+-+-+-+-+-+-+ | delta |length | 1 byte +—————+  delta ext.   0-2 byte +—————+  length ext.   0-2 byte +—————+   value   0 or more bytes +—————+</p>
+<p>+-+-+-+-+-+-+-+-+ | delta |length | 1 byte +---------------+  delta ext.   0-2 byte +---------------+  length ext.   0-2 byte +---------------+   value   0 or more bytes +---------------+</p>
 <h2 id="features">Features</h2>
 <ul>
 <li>Embedded web transfer protocol (<code>coap://</code>)</li>
 <li>UDP binding with reliability and multicast support</li>
 <li>GET, POST, PUT, DELETE methods</li>
 <li>
-<abbr title="Uniform Resource Identifier
-">URI</abbr> support</li>
+<abbr title="Uniform Resource Identifier">URI</abbr> support</li>
 <li>4 byte header</li>
-<li>Subset of MIME types and <abbr title="Hypertext Transfer Protocol
-">HTTP</abbr> response codes</li>
+<li>Subset of MIME types and <abbr title="Hypertext Transfer Protocol">HTTP</abbr> response codes</li>
 </ul>
 <p>REST request: <code>CON GET /light</code></p>
 <ul>
-<li>Problem: REST paradigm is often “PULL” type Solution: COAP observation Fragmentation at application layer to avoid fragmentation at <abbr title="Internet Protocol version 6
-">IPv6</abbr> layer.</li>
+<li>Problem: REST paradigm is often “PULL” type Solution: COAP observation Fragmentation at application layer to avoid fragmentation at <abbr title="Internet Protocol version 6">IPv6</abbr> layer.</li>
 </ul>
 <h2 id="references">References</h2>
 <p><a href="https://tools.ietf.org/html/rfc7252">RFC 7252</a></p>

@@ -107,7 +107,7 @@
       
       <!-- <span class="navbar-text"> Tex4Tum </span> -->
       <ul class="navbar-nav">
-        
+<!--         
         
         
         
@@ -132,10 +132,24 @@
         
         
         <li class="nav-item">
-          <a class="nav-link" href="/tex4tum/about.html"><i class="fa fa-question"></i> About</a>
+          <a class="nav-link" href="/tex4tum/about.html"><i class="fa fa-question"></i> About TeX4TUM</a>
         </li>
         
-        
+         -->
+        <li class="nav-item">
+          <a class="nav-link" href="/tex4tum/about.html"><i class="fa fa-question"></i> About</a>
+        </li>
+        <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fa fa-handshake-o"></i> Contribute
+        </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="/tex4tum/contribution.html"><i class="fa fa-pencil"></i> Contribute Article</a>
+            <a class="dropdown-item" href="/tex4tum/todo.html"><i class="fa fa-list"></i> ToDo List</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum"><i class="fa fa-github"></i> Develop TeX4TUM Features</a>
+          </div>
+        </li>
         <li class="nav-item dropdown">
           <a class="nav-link btn-group dropdown-toggle" href="/tex4tum/index.html" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-cog"></i> Options</a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -186,6 +200,13 @@
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash">
 {<span class="ex">%</span> include figure.html filename=<span class="st">"complex.svg"</span> description=<span class="st">"Description goes here"</span> width=<span class="st">"50%"</span> %}</code></pre></div>
 <p>Output: Image in figure environment with image description</p>
+<!--<p> Filename="complex.svg", path="/docs/res/img/content-images/math/complex.svg" </p>-->
+<figure class="figure">
+<img class="figure-img img-fluid" src="/docs/res/img/content-images/math/complex.svg" alt="Description goes here">
+<figcaption class="figure-caption">
+Description goes here
+</figcaption>
+</figure>
 <!--<p> Filename="complex.svg", path="/res/img/content-images/math/complex.svg" </p>-->
 <figure class="figure">
 <img class="figure-img img-fluid" src="/res/img/content-images/math/complex.svg" alt="Description goes here">
@@ -196,7 +217,7 @@ Description goes here
 <p><strong>Inline Image</strong></p>
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash">
 {<span class="ex">%</span> inlineimage capacitor_symbol.svg %}</code></pre></div>
-<p>Output: Inline Image <img class="img-fluid" src="/res/img/content-images/electrical/capacitor_symbol.svg"></p>
+<p>Output: Inline Image <img class="img-fluid" src="/docs/res/img/content-images/electrical/capacitor_symbol.svg"></p>
 <p><strong>SVG Objects</strong></p>
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash">
 {<span class="ex">%</span> include svg-object.html width=<span class="st">"18em"</span> id=<span class="st">"RC_obj"</span> filename=<span class="st">"rc.svg"</span> description=<span class="st">"Circuit of low-pass filter"</span> %}</code></pre></div>
@@ -220,7 +241,7 @@ Output: SVG Object
 <p>Check some <a href="https://knsv.github.io/mermaid/#demos9">demos</a> and the online editor of mermaid: <a href="knsv.github.io/mermaid/live_editor">Live Editor</a></p>
 Output:
 <div class="mermaid">
-<p>graph TD; A–&gt;B; A–&gt;C; B–&gt;D; C–&gt;D;</p>
+<p>graph TD; A--&gt;B; A--&gt;C; B--&gt;D; C--&gt;D;</p>
 </div>
 <h3 id="abbreviations">Abbreviations</h3>
 <p>Abbreviations are parsed and linked automatically. If you want to add a new abbreviation just add it to <code>res/parser_util/abbreviations.md</code>. The structure should look like this</p>

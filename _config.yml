@@ -43,7 +43,7 @@ pandoc:
     - latexmathml
     - read: markdown+footnotes   # general format+extensio1+extension2
     #- filter: pandoc-citeproc
-#highlighter: pygments
+highlighter: pygments
 plugins:
   #- bootstrap
   - autoprefixer-rails

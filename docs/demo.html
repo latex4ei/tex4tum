@@ -107,7 +107,7 @@
       
       <!-- <span class="navbar-text"> Tex4Tum </span> -->
       <ul class="navbar-nav">
-        
+<!--         
         
         
         
@@ -132,10 +132,24 @@
         
         
         <li class="nav-item">
-          <a class="nav-link" href="/tex4tum/about.html"><i class="fa fa-question"></i> About</a>
+          <a class="nav-link" href="/tex4tum/about.html"><i class="fa fa-question"></i> About TeX4TUM</a>
         </li>
         
-        
+         -->
+        <li class="nav-item">
+          <a class="nav-link" href="/tex4tum/about.html"><i class="fa fa-question"></i> About</a>
+        </li>
+        <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fa fa-handshake-o"></i> Contribute
+        </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="/tex4tum/contribution.html"><i class="fa fa-pencil"></i> Contribute Article</a>
+            <a class="dropdown-item" href="/tex4tum/todo.html"><i class="fa fa-list"></i> ToDo List</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum"><i class="fa fa-github"></i> Develop TeX4TUM Features</a>
+          </div>
+        </li>
         <li class="nav-item dropdown">
           <a class="nav-link btn-group dropdown-toggle" href="/tex4tum/index.html" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-cog"></i> Options</a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -182,29 +196,19 @@
 <!-- KaTeX Tweaks -->
 <div id="title_def" class="collapse">
 <div class="card card-block">
+<p>
 <b>Definition:</b> This is a showcase to demonstrate how learning materials could be made interactive, fast accessible, and neat.
+</p>
 </div>
 </div>
-<h2 id="table-of-contents">Table of Contents</h2>
-<ul>
-<li>
-<a href="#features">Features</a>
-<ul>
-<li><a href="#control-the-focus">Control the Focus</a></li>
-<li><a href="#interactive-math">Interactive Math</a></li>
-<li><a href="#interactive-diagrams">Interactive Diagrams</a></li>
-<li><a href="#fast-fuzzy-search">Fast Fuzzy Search</a></li>
-</ul>
-</li>
-<li><a href="#demo-pages">Demo Pages</a></li>
-<li><a href="#todo">ToDo</a></li>
-</ul>
 <h2 id="features">Features</h2>
 <h3 id="control-the-focus">Control the Focus</h3>
 Read only the content you really need. Use the options in the top right corner to change the visibility of the following content:<br>
 <div class="collapse">
 <div class="card card-block">
+<p>
 <b>Definition:</b> The square root is the math function <span class="LaTeX">$\sqrt{\cdot}$</span>.
+</p>
 </div>
 </div>
 <div class="example card card-success">
@@ -219,8 +223,7 @@ Example: <span class="LaTeX">$\sqrt{ x^4 } = x^2$</span>
 </div>
 </div>
 </div>
-<p>Furthermore, abbreviations do not need explanations anymore. If you do not know it just move the mouse over it: <abbr title="Scalable Vector Graphics
-">SVG</abbr></p>
+<p>Furthermore, abbreviations do not need explanations anymore. If you do not know it just move the mouse over it: <abbr title="Scalable Vector Graphics">SVG</abbr></p>
 <h3 id="interactive-math">Interactive Math</h3>
 <p>Directly calculate an equation while reading. Click on the values of R and C in the text to change them!</p>
 <p>A RC low-pass filter with Resistance R = <span id="R_val" onclick="askValue(this.id)">10k</span>Ω and Capacitance C = <span id="C_val" onclick="askValue(this.id)">100n</span>F has a Cut-Off Frequency <span class="LaTeX">$f_c = \frac{1}{2\pi R C} =$</span> <tspan id="F_val">159 Hz</tspan><br></p>
@@ -230,7 +233,7 @@ Example: <span class="LaTeX">$\sqrt{ x^4 } = x^2$</span>
 <object class="fig" style="width: 18em" id="obj_fraction" data="res/img/content-images/fraction.svg" type="image/svg+xml">
 </object>
 <h3 id="fast-fuzzy-search">Fast Fuzzy Search</h3>
-<p>Find an answer blazingly fast. The fuzzy search in the top bar displays results immediately without slow sever communication. Just hit <code>tab</code> to focus the search, then type e.g. “did” to search for “Diode”.</p>
+<p>Find an answer blazingly fast. The fuzzy search in the top bar displays results immediately without slow sever communication. Just hit <code>tab</code> to focus the search, then type e.g. "did" to search for "Diode".</p>
 <h2 id="demo-pages">Demo Pages</h2>
 <ul>
 <li>
@@ -240,8 +243,7 @@ Example: <span class="LaTeX">$\sqrt{ x^4 } = x^2$</span>
 <li>
 <a href="numbers.html">Number Converter</a> (Fast interactions)</li>
 <li>
-<a href="op-amp.html">Op-Amps</a> (<abbr title="Scalable Vector Graphics
-">SVG</abbr> diagrams)</li>
+<a href="op-amp.html">Op-Amps</a> (SVG diagrams)</li>
 <li>
 <a href="optic.html">Optics</a> (Interactive Graph)</li>
 </ul>
@@ -249,8 +251,7 @@ Example: <span class="LaTeX">$\sqrt{ x^4 } = x^2$</span>
 <ul>
 <li>Full responsive design</li>
 <li>remember options with cookies</li>
-<li>consistent <abbr title="JavaScript
-">JS</abbr> framework for interactive content</li>
+<li>consistent <abbr title="JavaScript">JS</abbr> framework for interactive content</li>
 <li>Improved search: Sorting results, reaction to no results</li>
 <li>More content</li>
 </ul>

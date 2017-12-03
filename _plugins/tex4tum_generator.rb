@@ -75,21 +75,21 @@ module Jekyll
 
     def add_abbreviations(content)
       abbreviations = File.read('./res/parser_util/abbreviations.md', :encoding => 'utf-8')
-      content += abbreviations
+      #content += abbreviations
 
-      content = parse_abbreviation(content)
+      content = parse_abbreviation(content, abbreviations)
 
       return content
     end
 
-    def parse_abbreviation(content)
-      content.scan(ABBREVIATION_REGEXP) do |match|
+    def parse_abbreviation(content, abbreviations)
+      abbreviations.scan(ABBREVIATION_REGEXP) do |match|
           line = match[0]   #$1
           #puts line
           key = match[1]
           value = match[2]
 
-          content = content.gsub(line, '')
+          #content = content.gsub(line, '')
           content = content.gsub(/(?<=\s|^)#{key}(?=\W|$)/, "<abbr title=\"" + value + "\" >" + key + "</abbr>")
       end
       #puts content

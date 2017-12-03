@@ -107,7 +107,7 @@
       
       <!-- <span class="navbar-text"> Tex4Tum </span> -->
       <ul class="navbar-nav">
-        
+<!--         
         
         
         
@@ -132,10 +132,24 @@
         
         
         <li class="nav-item">
-          <a class="nav-link" href="/tex4tum/about.html"><i class="fa fa-question"></i> About</a>
+          <a class="nav-link" href="/tex4tum/about.html"><i class="fa fa-question"></i> About TeX4TUM</a>
         </li>
         
-        
+         -->
+        <li class="nav-item">
+          <a class="nav-link" href="/tex4tum/about.html"><i class="fa fa-question"></i> About</a>
+        </li>
+        <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fa fa-handshake-o"></i> Contribute
+        </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="/tex4tum/contribution.html"><i class="fa fa-pencil"></i> Contribute Article</a>
+            <a class="dropdown-item" href="/tex4tum/todo.html"><i class="fa fa-list"></i> ToDo List</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum"><i class="fa fa-github"></i> Develop TeX4TUM Features</a>
+          </div>
+        </li>
         <li class="nav-item dropdown">
           <a class="nav-link btn-group dropdown-toggle" href="/tex4tum/index.html" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-cog"></i> Options</a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -182,9 +196,9 @@
 <!-- KaTeX Tweaks -->
 <div id="title_def" class="collapse">
 <div class="card card-block">
-<b>Definition:</b> The Joint Photographic Experts Group developed the <abbr title="Joint Photographic Experts Group
-">JPEG</abbr> standard <abbr title="International Organization for Standardization
-">ISO</abbr>/IEC 10918-1 which is used to encode images.
+<p>
+<b>Definition:</b> The Joint Photographic Experts Group developed the <abbr title="Joint Photographic Experts Group">JPEG</abbr> standard <abbr title="International Organization for Standardization">ISO</abbr>/IEC 10918-1 which is used to encode images.
+</p>
 </div>
 </div>
 <h2 id="encoding-process">Encoding Process</h2>
@@ -195,7 +209,7 @@
 </li>
 <li>
 <p>the resolution of the chroma data is reduced, usually by a factor of 2 or 3.</p>
-<p>Explanation: Due to the densities of color- and brightness-sensitive receptors in the human eye, humans can see considerably more fine detail in the brightness of an image (the Y’ component) than in the hue and color saturation of an image (the Cb and Cr components).</p>
+<p>Explanation: Due to the densities of color- and brightness-sensitive receptors in the human eye, humans can see considerably more fine detail in the brightness of an image (the Y' component) than in the hue and color saturation of an image (the Cb and Cr components).</p>
 </li>
 <li>
 <p>The image is split into blocks of 8×8 pixels, and for each block, each of the Y, <span class="LaTeX">$C_B$</span>, and <span class="LaTeX">$C_R$</span> data undergoes the discrete cosine transform (DCT).</p>
@@ -204,8 +218,7 @@
 </li>
 <li>
 <p>The amplitudes of the frequency components are quantized.</p>
-<p>Explanation: the magnitudes of the high-frequency components are stored with a lower accuracy than the low-frequency components. The quality setting of the encoder (for example 95 on a scale of 0–100 in the Independent <abbr title="Joint Photographic Experts Group
-">JPEG</abbr> Group’s library) affects to what extent the resolution of each frequency component is reduced.</p>
+<p>Explanation: the magnitudes of the high-frequency components are stored with a lower accuracy than the low-frequency components. The quality setting of the encoder (for example 95 on a scale of 0–100 in the Independent <abbr title="Joint Photographic Experts Group">JPEG</abbr> Group's library) affects to what extent the resolution of each frequency component is reduced.</p>
 </li>
 <li><p>The resulting data for all 8×8 blocks is further compressed with a lossless algorithm, a variant of Huffman encoding.</p></li>
 </ol>

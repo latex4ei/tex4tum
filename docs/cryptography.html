@@ -107,7 +107,7 @@
       
       <!-- <span class="navbar-text"> Tex4Tum </span> -->
       <ul class="navbar-nav">
-        
+<!--         
         
         
         
@@ -132,10 +132,24 @@
         
         
         <li class="nav-item">
-          <a class="nav-link" href="/tex4tum/about.html"><i class="fa fa-question"></i> About</a>
+          <a class="nav-link" href="/tex4tum/about.html"><i class="fa fa-question"></i> About TeX4TUM</a>
         </li>
         
-        
+         -->
+        <li class="nav-item">
+          <a class="nav-link" href="/tex4tum/about.html"><i class="fa fa-question"></i> About</a>
+        </li>
+        <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fa fa-handshake-o"></i> Contribute
+        </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="/tex4tum/contribution.html"><i class="fa fa-pencil"></i> Contribute Article</a>
+            <a class="dropdown-item" href="/tex4tum/todo.html"><i class="fa fa-list"></i> ToDo List</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum"><i class="fa fa-github"></i> Develop TeX4TUM Features</a>
+          </div>
+        </li>
         <li class="nav-item dropdown">
           <a class="nav-link btn-group dropdown-toggle" href="/tex4tum/index.html" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-cog"></i> Options</a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -182,7 +196,9 @@
 <!-- KaTeX Tweaks -->
 <div id="title_def" class="collapse">
 <div class="card card-block">
+<p>
 <b>Definition:</b> Cryptography is a technique for secure communication in the presence of third parties.
+</p>
 </div>
 </div>
 <h2 id="encryption">Encryption</h2>
@@ -197,7 +213,7 @@
 <li>symmetric encryption: encryption and decryption of data with the same key</li>
 <li>asymmetric encryption: en/decryption with private key, de/encryption with public key</li>
 <li>commitment scheme: commit to a chosen value while keeping it hidden to others</li>
-<li>Oblivious transfer: e.g. authenticated dictionary</li>
+<li>Oblivious transfer: e.g. authenticated dictionary</li>
 <li>pseudo-random generator: generate non-predictable random numbers</li>
 </ul>
 <h2 id="cryptographic-properties">Cryptographic properties</h2>
@@ -205,7 +221,7 @@
 <p>Diffusion: spreads every part of the input to every part of the output. A change of a single bit of the plaintext should statistically change half of the bits in the ciphertext</p>
 <p>Confusion and Diffusion are often achieved by series of substitutions and permutations.</p>
 <h1 id="cryptographic-problems">Cryptographic Problems</h1>
-<p>Cryptographic primitives are based on mathematical problems where most of the instances must be hard to solve and are easy to solve if some additional information (e.g. the key) is known.</p>
+<p>Cryptographic primitives are based on mathematical problems where most of the instances must be hard to solve and are easy to solve if some additional information (e.g. the key) is known.</p>
 <ul>
 <li>Factorization</li>
 <li>Discrete Logarithm</li>

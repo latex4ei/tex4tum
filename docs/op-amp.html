@@ -107,7 +107,7 @@
       
       <!-- <span class="navbar-text"> Tex4Tum </span> -->
       <ul class="navbar-nav">
-        
+<!--         
         
         
         
@@ -132,10 +132,24 @@
         
         
         <li class="nav-item">
-          <a class="nav-link" href="/tex4tum/about.html"><i class="fa fa-question"></i> About</a>
+          <a class="nav-link" href="/tex4tum/about.html"><i class="fa fa-question"></i> About TeX4TUM</a>
         </li>
         
-        
+         -->
+        <li class="nav-item">
+          <a class="nav-link" href="/tex4tum/about.html"><i class="fa fa-question"></i> About</a>
+        </li>
+        <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fa fa-handshake-o"></i> Contribute
+        </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="/tex4tum/contribution.html"><i class="fa fa-pencil"></i> Contribute Article</a>
+            <a class="dropdown-item" href="/tex4tum/todo.html"><i class="fa fa-list"></i> ToDo List</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum"><i class="fa fa-github"></i> Develop TeX4TUM Features</a>
+          </div>
+        </li>
         <li class="nav-item dropdown">
           <a class="nav-link btn-group dropdown-toggle" href="/tex4tum/index.html" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-cog"></i> Options</a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -182,11 +196,20 @@
 <!-- KaTeX Tweaks -->
 <div class="collapse">
 <div class="card card-block">
-<p><b>Definition:</b> An operational amplifier (short op-amp) is a DC-coupled high-gain electronic voltage amplifier with a differential input and a single-ended output.</p>
+<p>
+<b>Definition:</b> An operational amplifier (short op-amp) is a DC-coupled high-gain electronic voltage amplifier with a differential input and a single-ended output.
+</p>
 </div>
 </div>
 <p>All amplifier circuits have the feedback to the negative input! <br> An Op-Amp does not draw current from the input!</p>
 <h2 id="voltage-followerbuffer">Voltage Follower/Buffer</h2>
+<!--<p> Filename="opamp_follower.svg", path="/docs/res/img/content-images/electrical/opamp_follower.svg" </p>-->
+<figure class="figure">
+<img class="figure-img img-fluid" src="/docs/res/img/content-images/electrical/opamp_follower.svg" alt="Voltage Follower">
+<figcaption class="figure-caption">
+Voltage Follower
+</figcaption>
+</figure>
 <!--<p> Filename="opamp_follower.svg", path="/res/img/content-images/electrical/opamp_follower.svg" </p>-->
 <figure class="figure">
 <img class="figure-img img-fluid" src="/res/img/content-images/electrical/opamp_follower.svg" alt="Voltage Follower">
@@ -196,6 +219,13 @@ Voltage Follower
 </figure>
 <p><span class="LaTeX">$$V_{\mathrm{out}} = V_{\mathrm{in}}$$</span> Provides current at the output without loading the input.</p>
 <h2 id="non-inverting-amplifier">Non-Inverting Amplifier</h2>
+<!--<p> Filename="opamp_noninv.svg", path="/docs/res/img/content-images/electrical/opamp_noninv.svg" </p>-->
+<figure class="figure">
+<img class="figure-img img-fluid" src="/docs/res/img/content-images/electrical/opamp_noninv.svg" alt="Non-Inverting Amplifier">
+<figcaption class="figure-caption">
+Non-Inverting Amplifier
+</figcaption>
+</figure>
 <!--<p> Filename="opamp_noninv.svg", path="/res/img/content-images/electrical/opamp_noninv.svg" </p>-->
 <figure class="figure">
 <img class="figure-img img-fluid" src="/res/img/content-images/electrical/opamp_noninv.svg" alt="Non-Inverting Amplifier">
@@ -205,6 +235,13 @@ Non-Inverting Amplifier
 </figure>
 <p><span class="LaTeX">$V_{\mathrm{out}} = \left(1 + \frac{R_2}{R_1} \right) V_{\mathrm{in}}$</span></p>
 <h2 id="inverting-amplifier">Inverting Amplifier</h2>
+<!--<p> Filename="opamp_inv.svg", path="/docs/res/img/content-images/electrical/opamp_inv.svg" </p>-->
+<figure class="figure">
+<img class="figure-img img-fluid" src="/docs/res/img/content-images/electrical/opamp_inv.svg" alt="Inverting Amplifier">
+<figcaption class="figure-caption">
+Inverting Amplifier
+</figcaption>
+</figure>
 <!--<p> Filename="opamp_inv.svg", path="/res/img/content-images/electrical/opamp_inv.svg" </p>-->
 <figure class="figure">
 <img class="figure-img img-fluid" src="/res/img/content-images/electrical/opamp_inv.svg" alt="Inverting Amplifier">
@@ -214,6 +251,13 @@ Inverting Amplifier
 </figure>
 <p><span class="LaTeX">$$V_{\mathrm{out}} = -\frac{R_2}{R_1} V_{\mathrm{in}}$$</span></p>
 <h2 id="differential-amplifier">Differential Amplifier</h2>
+<!--<p> Filename="opamp_diff.svg", path="/docs/res/img/content-images/electrical/opamp_diff.svg" </p>-->
+<figure class="figure">
+<img class="figure-img img-fluid" src="/docs/res/img/content-images/electrical/opamp_diff.svg" alt="Differential Amplifier">
+<figcaption class="figure-caption">
+Differential Amplifier
+</figcaption>
+</figure>
 <!--<p> Filename="opamp_diff.svg", path="/res/img/content-images/electrical/opamp_diff.svg" </p>-->
 <figure class="figure">
 <img class="figure-img img-fluid" src="/res/img/content-images/electrical/opamp_diff.svg" alt="Differential Amplifier">
@@ -223,6 +267,13 @@ Differential Amplifier
 </figure>
 <p><span class="LaTeX">$V_{\mathrm{out}} = \frac{R_2}{R_1}\left(- V_1 + V_2 \frac{R_4}{R_4 + R_3}\right) + \frac{R_4}{R_4 + R_3} V_2$</span></p>
 <h2 id="schmitt-trigger">Schmitt-Trigger</h2>
+<!--<p> Filename="opamp_schmitt.svg", path="/docs/res/img/content-images/electrical/opamp_schmitt.svg" </p>-->
+<figure class="figure">
+<img class="figure-img img-fluid" src="/docs/res/img/content-images/electrical/opamp_schmitt.svg" alt="Schmitt Trigger">
+<figcaption class="figure-caption">
+Schmitt Trigger
+</figcaption>
+</figure>
 <!--<p> Filename="opamp_schmitt.svg", path="/res/img/content-images/electrical/opamp_schmitt.svg" </p>-->
 <figure class="figure">
 <img class="figure-img img-fluid" src="/res/img/content-images/electrical/opamp_schmitt.svg" alt="Schmitt Trigger">

@@ -107,7 +107,7 @@
       
       <!-- <span class="navbar-text"> Tex4Tum </span> -->
       <ul class="navbar-nav">
-        
+<!--         
         
         
         
@@ -132,10 +132,24 @@
         
         
         <li class="nav-item">
-          <a class="nav-link" href="/tex4tum/about.html"><i class="fa fa-question"></i> About</a>
+          <a class="nav-link" href="/tex4tum/about.html"><i class="fa fa-question"></i> About TeX4TUM</a>
         </li>
         
-        
+         -->
+        <li class="nav-item">
+          <a class="nav-link" href="/tex4tum/about.html"><i class="fa fa-question"></i> About</a>
+        </li>
+        <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fa fa-handshake-o"></i> Contribute
+        </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="/tex4tum/contribution.html"><i class="fa fa-pencil"></i> Contribute Article</a>
+            <a class="dropdown-item" href="/tex4tum/todo.html"><i class="fa fa-list"></i> ToDo List</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum"><i class="fa fa-github"></i> Develop TeX4TUM Features</a>
+          </div>
+        </li>
         <li class="nav-item dropdown">
           <a class="nav-link btn-group dropdown-toggle" href="/tex4tum/index.html" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-cog"></i> Options</a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -182,22 +196,19 @@
 <!-- KaTeX Tweaks -->
 <div id="title_def" class="collapse">
 <div class="card card-block">
+<p>
 <b>Definition:</b> A Byzantine fault is any fault that presents different symptoms to different observers. Byzantine faults imply no restrictions, which means that a failed node can stop sending data or generate arbitrary data. As a result, a node can also pretend to send correct data, while in fact it is sending incorrect data.
+</p>
 </div>
 </div>
-<h2 id="byzantine-fault-tolerance-bft">Byzantine fault tolerance (<abbr title="Byzantine Fault Tolerant
-">BFT</abbr>)</h2>
-<p>Byzantine fault tolerance (<abbr title="Byzantine Fault Tolerant
-">BFT</abbr>) is the characteristic of a system and states that the system can handle a certain amount of faulty or “evil” nodes without corruption of the systems consensus.</p>
+<h2 id="byzantine-fault-tolerance-bft">Byzantine fault tolerance (BFT)</h2>
+<p>Byzantine fault tolerance (BFT) is the characteristic of a system and states that the system can handle a certain amount of faulty or "evil" nodes without corruption of the systems consensus.</p>
 <p>Byzantine failures are considered the most general and most difficult class of failures among the failure modes.</p>
 <h2 id="solutions">Solutions</h2>
-<p>traditional <abbr title="Byzantine Fault Tolerant
-">BFT</abbr> algorithms use multiple rounds of explicit votes to achieve consensus. Ripple and Stellar developed consensus protocols that extend traditional <abbr title="Byzantine Fault Tolerant
-">BFT</abbr> for open participation.</p>
+<p>traditional <abbr title="Byzantine Fault Tolerant">BFT</abbr> algorithms use multiple rounds of explicit votes to achieve consensus. Ripple and Stellar developed consensus protocols that extend traditional <abbr title="Byzantine Fault Tolerant">BFT</abbr> for open participation.</p>
 <h2 id="application">Application</h2>
 <ul>
-<li>bitcoin is a peer-to-peer digital currency system with <abbr title="Byzantine Fault Tolerant
-">BFT</abbr>
+<li>bitcoin is a peer-to-peer digital currency system with <abbr title="Byzantine Fault Tolerant">BFT</abbr>
 </li>
 <li>SAFEbus can achieve Byzantine fault tolerance</li>
 <li>UpRight</li>

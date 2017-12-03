@@ -107,7 +107,7 @@
       
       <!-- <span class="navbar-text"> Tex4Tum </span> -->
       <ul class="navbar-nav">
-        
+<!--         
         
         
         
@@ -132,10 +132,24 @@
         
         
         <li class="nav-item">
-          <a class="nav-link" href="/tex4tum/about.html"><i class="fa fa-question"></i> About</a>
+          <a class="nav-link" href="/tex4tum/about.html"><i class="fa fa-question"></i> About TeX4TUM</a>
         </li>
         
-        
+         -->
+        <li class="nav-item">
+          <a class="nav-link" href="/tex4tum/about.html"><i class="fa fa-question"></i> About</a>
+        </li>
+        <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fa fa-handshake-o"></i> Contribute
+        </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="/tex4tum/contribution.html"><i class="fa fa-pencil"></i> Contribute Article</a>
+            <a class="dropdown-item" href="/tex4tum/todo.html"><i class="fa fa-list"></i> ToDo List</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum"><i class="fa fa-github"></i> Develop TeX4TUM Features</a>
+          </div>
+        </li>
         <li class="nav-item dropdown">
           <a class="nav-link btn-group dropdown-toggle" href="/tex4tum/index.html" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-cog"></i> Options</a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -182,35 +196,24 @@
 <!-- KaTeX Tweaks -->
 <div id="title_def" class="collapse">
 <div class="card card-block">
-<b>Definition:</b> MQTT is a publish-subscribe-based “lightweight” messaging protocol for use on top of the <abbr title="Transmission Control Protocol
-">TCP</abbr>/<abbr title="Internet Protocol
-">IP</abbr> protocol.
+<p>
+<b>Definition:</b> MQTT is a publish-subscribe-based "lightweight" messaging protocol for use on top of the <abbr title="Transmission Control Protocol">TCP</abbr>/IP protocol.
+</p>
 </div>
 </div>
 <p>The publish-subscribe messaging pattern requires a message broker. The broker is responsible for distributing messages to interested clients based on the topic of a message.</p>
-<h2 id="table-of-contents">Table of Contents</h2>
-<ul>
-<li><a href="#features">Features</a></li>
-<li><a href="#methods">Methods</a></li>
-<li><a href="#publishsubscribe">Publish/Subscribe</a></li>
-<li><a href="#protocol">Protocol</a></li>
-<li><a href="#references">References</a></li>
-</ul>
 <h2 id="features">Features</h2>
 <ul>
 <li>Simple to implement (especially at the sensor side)</li>
 <li>
-<abbr title="Quality of Service
-">QoS</abbr> Support</li>
+<abbr title="Quality of Service">QoS</abbr> Support</li>
 <li>Lightweight and bandwidth efficient</li>
 <li>Session awareness</li>
 </ul>
 <h2 id="methods">Methods</h2>
 <ul>
 <li>Connect: Waits for a connection to be established with the server.</li>
-<li>Disconnect: Waits for the MQTT client to finish any work it must do, and for the <abbr title="Transmission Control Protocol
-">TCP</abbr>/<abbr title="Internet Protocol
-">IP</abbr> session to disconnect.</li>
+<li>Disconnect: Waits for the MQTT client to finish any work it must do, and for the <abbr title="Transmission Control Protocol">TCP</abbr>/IP session to disconnect.</li>
 <li>Subscribe: Waits for completion of the Subscribe or UnSubscribe method.</li>
 <li>UnSubscribe: Requests the server unsubscribe the client from one or more topics.</li>
 <li><p>Publish: Returns immediately to the application thread after passing the request to the MQTT client.</p></li>
@@ -222,26 +225,21 @@
 <p>Clients subscribe on topic. Wildcards (+) allowed for subscription on single topic level.</p>
 <h2 id="protocol">Protocol</h2>
 <p>CONNECT message fields: * clientID * cleanSession</p>
-<p>PUBLISH message fields | Field | Example | |——-|———| | packageID | 2 | | topicName | <code>"matteo/temp"</code> | | <abbr title="Quality of Service
-">QoS</abbr> | 1 | | retainFlag | false | | Payload | <code>"temperature:30"</code> | | dupFlag | false |</p>
+<p>PUBLISH message fields | Field | Example | |-------|---------| | packageID | 2 | | topicName | <code>"matteo/temp"</code> | | <abbr title="Quality of Service">QoS</abbr> | 1 | | retainFlag | false | | Payload | <code>"temperature:30"</code> | | dupFlag | false |</p>
 <ul>
 <li>
-<abbr title="Quality of Service
-">QoS</abbr>
+<abbr title="Quality of Service">QoS</abbr>
 <ul>
-<li>0: at most once: transmitt without <abbr title="ACKnowledgement
-">ACK</abbr>
+<li>0: at most once: transmitt without <abbr title="ACKnowledgement">ACK</abbr>
 </li>
-<li>1: at least once: re-transmit until <abbr title="ACKnowledgement
-">ACK</abbr>
+<li>1: at least once: re-transmit until <abbr title="ACKnowledgement">ACK</abbr>
 </li>
 <li>2: exactly once: broker ckecks for duplicate</li>
 </ul>
 </li>
 </ul>
 <h2 id="references">References</h2>
-<p><abbr title="International Organization for Standardization
-">ISO</abbr>/IEC 20922</p>
+<p><abbr title="International Organization for Standardization">ISO</abbr>/IEC 20922</p>
 <ul>
 <li>http://docs.oasis-open.org/mqtt/mqtt/v3.1.1/mqtt-v3.1.1.html</li>
 <li>http://mqtt.org/</li>

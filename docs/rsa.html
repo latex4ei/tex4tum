@@ -107,7 +107,7 @@
       
       <!-- <span class="navbar-text"> Tex4Tum </span> -->
       <ul class="navbar-nav">
-        
+<!--         
         
         
         
@@ -132,10 +132,24 @@
         
         
         <li class="nav-item">
-          <a class="nav-link" href="/tex4tum/about.html"><i class="fa fa-question"></i> About</a>
+          <a class="nav-link" href="/tex4tum/about.html"><i class="fa fa-question"></i> About TeX4TUM</a>
         </li>
         
-        
+         -->
+        <li class="nav-item">
+          <a class="nav-link" href="/tex4tum/about.html"><i class="fa fa-question"></i> About</a>
+        </li>
+        <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fa fa-handshake-o"></i> Contribute
+        </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="/tex4tum/contribution.html"><i class="fa fa-pencil"></i> Contribute Article</a>
+            <a class="dropdown-item" href="/tex4tum/todo.html"><i class="fa fa-list"></i> ToDo List</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum"><i class="fa fa-github"></i> Develop TeX4TUM Features</a>
+          </div>
+        </li>
         <li class="nav-item dropdown">
           <a class="nav-link btn-group dropdown-toggle" href="/tex4tum/index.html" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-cog"></i> Options</a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -182,12 +196,12 @@
 <!-- KaTeX Tweaks -->
 <div id="title_def" class="collapse">
 <div class="card card-block">
-<b>Definition:</b> <abbr title="Rivest, Shamir and Adleman
-">RSA</abbr> is a public-key cryptosystems and is used for secure data transmission.
+<p>
+<b>Definition:</b> RSA is a public-key cryptosystems and is used for secure data transmission.
+</p>
 </div>
 </div>
-<p>The <abbr title="Rivest, Shamir and Adleman
-">RSA</abbr> algorithm involves four steps: key generation, key distribution, encryption, and decryption.</p>
+<p>The <abbr title="Rivest, Shamir and Adleman">RSA</abbr> algorithm involves four steps: key generation, key distribution, encryption, and decryption.</p>
 <h2 id="principle">Principle</h2>
 <p><span class="LaTeX">$${\displaystyle (m^{e})^{d}\equiv m{\pmod {n}}}$$</span></p>
 <h3 id="key-generation">Key generation</h3>
@@ -202,11 +216,10 @@
 <ul>
 <li><p>key-only attack: the attacker is only given the public verification key</p></li>
 <li><p>known message attack: the attacker is given valid signatures for a variety of messages known by the attacker but not chosen by the attacker</p></li>
-<li><p>adaptive chosen message attack: the attacker first learns signatures on arbitrary messages of the attacker’s choice</p></li>
+<li><p>adaptive chosen message attack: the attacker first learns signatures on arbitrary messages of the attacker's choice</p></li>
 </ul>
 <h2 id="homomorphic-multiplication">homomorphic multiplication</h2>
-<p><abbr title="Rivest, Shamir and Adleman
-">RSA</abbr> is multiplicatively homomorphic. That means you can exchange the order of operations without affecting the result. The product of the encryption of two messages is equal to the encryption of the product of the messages.</p>
+<p><abbr title="Rivest, Shamir and Adleman">RSA</abbr> is multiplicatively homomorphic. That means you can exchange the order of operations without affecting the result. The product of the encryption of two messages is equal to the encryption of the product of the messages.</p>
 <p><span class="LaTeX">$$E(x)E(y) \equiv x^ey^e \equiv (xy)^e \equiv E(xy) (\pmod n)$$</span></p>
 <p>Thus, you can perform calculations on encrypted data, without knowing the data, which is used in zero-knowledge proofs.</p>
 

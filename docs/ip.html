@@ -107,7 +107,7 @@
       
       <!-- <span class="navbar-text"> Tex4Tum </span> -->
       <ul class="navbar-nav">
-        
+<!--         
         
         
         
@@ -132,10 +132,24 @@
         
         
         <li class="nav-item">
-          <a class="nav-link" href="/tex4tum/about.html"><i class="fa fa-question"></i> About</a>
+          <a class="nav-link" href="/tex4tum/about.html"><i class="fa fa-question"></i> About TeX4TUM</a>
         </li>
         
-        
+         -->
+        <li class="nav-item">
+          <a class="nav-link" href="/tex4tum/about.html"><i class="fa fa-question"></i> About</a>
+        </li>
+        <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fa fa-handshake-o"></i> Contribute
+        </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="/tex4tum/contribution.html"><i class="fa fa-pencil"></i> Contribute Article</a>
+            <a class="dropdown-item" href="/tex4tum/todo.html"><i class="fa fa-list"></i> ToDo List</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum"><i class="fa fa-github"></i> Develop TeX4TUM Features</a>
+          </div>
+        </li>
         <li class="nav-item dropdown">
           <a class="nav-link btn-group dropdown-toggle" href="/tex4tum/index.html" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-cog"></i> Options</a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -182,34 +196,13 @@
 <!-- KaTeX Tweaks -->
 <div id="title_def" class="collapse">
 <div class="card card-block">
-<b>Definition:</b> The Internet Protocol (<abbr title="Internet Protocol
-">IP</abbr>) is the basic communication protocol in the Internet layer. <abbr title="Internet Protocol
-">IP</abbr> has the task of delivering packets from the source host to the destination host solely based on the <abbr title="Internet Protocol
-">IP</abbr> addresses in the packet headers.
+<p>
+<b>Definition:</b> The Internet Protocol (IP) is the basic communication protocol in the Internet layer. <abbr title="Internet Protocol">IP</abbr> has the task of delivering packets from the source host to the destination host solely based on the <abbr title="Internet Protocol">IP</abbr> addresses in the packet headers.
+</p>
 </div>
 </div>
-<h2 id="table-of-contents">Table of Contents</h2>
-<ul>
-<li><a href="#abbr-titleinternet-protocol">&lt;abbr title=“Internet Protocol</a></li>
-<li>
-<a href="#ipv4">IPv4</a>
-<ul>
-<li><a href="#special-ranges">Special Ranges</a></li>
-</ul>
-</li>
-<li>
-<a href="#abbr-titleinternet-protocol-version-6">&lt;abbr title=“Internet Protocol version 6</a>
-<ul>
-<li><a href="#address-notation">Address Notation</a></li>
-<li><a href="#header">Header</a></li>
-</ul>
-</li>
-<li><a href="#subnetmask">Subnetmask</a></li>
-<li><a href="#references">References</a></li>
-</ul>
 <h2 id="ip-address">
-<abbr title="Internet Protocol
-">IP</abbr>-Address</h2>
+<abbr title="Internet Protocol">IP</abbr>-Address</h2>
 <table>
 <thead>
 <tr class="header">
@@ -227,8 +220,7 @@
 <td>192.168.1.1</td>
 </tr>
 <tr class="even">
-<td><abbr title="Internet Protocol version 6
-">IPv6</abbr></td>
+<td><abbr title="Internet Protocol version 6">IPv6</abbr></td>
 <td>128</td>
 <td>3.4e38</td>
 <td>2001:0db8:85a3:0042:0000:8a2e:0370:7334</td>
@@ -238,18 +230,16 @@
 <h2 id="ipv4">IPv4</h2>
 <h3 id="special-ranges">Special Ranges</h3>
 <p>192.168.x.x private 10.x.x.x private</p>
-<h2 id="ipv6"><abbr title="Internet Protocol version 6
-">IPv6</abbr></h2>
+<h2 id="ipv6"><abbr title="Internet Protocol version 6">IPv6</abbr></h2>
 <h3 id="address-notation">Address Notation</h3>
 <p>16 byte: 8 groups of 16 bit written as 4 hexadecimal characters.</p>
 <ul>
 <li>leading zeros within a group may be omitted</li>
-<li>consecutive groups of only zeros may be replace by ‘::’. This replacement is only allowed once within an address.</li>
+<li>consecutive groups of only zeros may be replace by '::'. This replacement is only allowed once within an address.</li>
 </ul>
 <p>Example: Initial address: 2001:0db8:0000:0000:0000:ff00:0042:8329 Removing leading zeroes: 2001:db8:0:0:0:ff00:42:8329 Omitting consecutive groups of zeroes: 2001:db8::ff00:42:8329</p>
 <h3 id="header">Header</h3>
-<p><abbr title="Internet Protocol version 6
-">IPv6</abbr> header has a fixed size of 40 bytes.</p>
+<p><abbr title="Internet Protocol version 6">IPv6</abbr> header has a fixed size of 40 bytes.</p>
 <h2 id="subnetmask">Subnetmask</h2>
 <p>x.x.x.x/24 tells you how many bits are fixed to identify the network.</p>
 <h2 id="references">References</h2>

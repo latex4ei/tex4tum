@@ -4,8 +4,11 @@
 // without modifying source files.
 @import '../modules/colors';
 
-// old bootstrap
-//$brand-success: $tum_green;
+
+//
+// Color system
+//
+
 
 $theme-colors: (
   primary: $tum_prim_blue,
@@ -19,6 +22,25 @@ $theme-colors: (
 ) !default;
 
 
+
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+
+$container-max-widths: (
+  sm: 640px,
+  md: 720px,
+  lg: 920px,
+  xl: 960px
+) !default;
+
+
+
+
+//
+// Misc
+//
 
 
 $brand-primary: $tum_emph_lightblue;

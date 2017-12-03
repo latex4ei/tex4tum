@@ -107,7 +107,7 @@
       
       <!-- <span class="navbar-text"> Tex4Tum </span> -->
       <ul class="navbar-nav">
-        
+<!--         
         
         
         
@@ -132,10 +132,24 @@
         
         
         <li class="nav-item">
-          <a class="nav-link" href="/tex4tum/about.html"><i class="fa fa-question"></i> About</a>
+          <a class="nav-link" href="/tex4tum/about.html"><i class="fa fa-question"></i> About TeX4TUM</a>
         </li>
         
-        
+         -->
+        <li class="nav-item">
+          <a class="nav-link" href="/tex4tum/about.html"><i class="fa fa-question"></i> About</a>
+        </li>
+        <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fa fa-handshake-o"></i> Contribute
+        </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="/tex4tum/contribution.html"><i class="fa fa-pencil"></i> Contribute Article</a>
+            <a class="dropdown-item" href="/tex4tum/todo.html"><i class="fa fa-list"></i> ToDo List</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum"><i class="fa fa-github"></i> Develop TeX4TUM Features</a>
+          </div>
+        </li>
         <li class="nav-item dropdown">
           <a class="nav-link btn-group dropdown-toggle" href="/tex4tum/index.html" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-cog"></i> Options</a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -182,18 +196,20 @@
 <!-- KaTeX Tweaks -->
 <div id="title_def" class="collapse">
 <div class="card card-block">
-<b>Definition:</b> The General’s Problem describe an agreement problem about reaching consensus when communicating over an unreliable channel.
+<p>
+<b>Definition:</b> The General's Problem describe an agreement problem about reaching consensus when communicating over an unreliable channel.
+</p>
 </div>
 </div>
 <p>Mapping: computers are the generals and their digital communication links are the messengers.</p>
-<h2 id="two-generals-problem">Two General’s Problem</h2>
-<p>Two alayed generals, each leading an army, want to coordinate a simultanuous attack. The only way for the two generals to communicate is by sending messengers through a valley which is occupied by enemies. There’s a chance that any given messenger sent through the valley will be captured and the message will be lost.</p>
+<h2 id="two-generals-problem">Two General's Problem</h2>
+<p>Two alayed generals, each leading an army, want to coordinate a simultanuous attack. The only way for the two generals to communicate is by sending messengers through a valley which is occupied by enemies. There's a chance that any given messenger sent through the valley will be captured and the message will be lost.</p>
 <p>The challenge is how the two generals agree on a specific time for the attack (reach consensus).</p>
 <h3 id="approaches">Approaches</h3>
 <ul>
 <li>Send many messengers to increase the probabilty that the message reaches the other general.</li>
 </ul>
-<h2 id="byzantine-generals-problem">Byzantine Generals’ Problem</h2>
+<h2 id="byzantine-generals-problem">Byzantine Generals' Problem</h2>
 <p>A group of <span class="LaTeX">$n$</span> generals wish to formulate a plan for attacking the city. In its simplest form, the generals must only decide whether to attack or retreat. The important thing is that every general agrees on a common decision, because a halfhearted attack by a few generals is worse than a coordinated attack or a coordinated retreat.</p>
 <p>The problem is complicated by the presence of traitorous generals who may not only cast a vote for a suboptimal strategy, they may do so by selectively sending different messages to different generals.</p>
 <h3 id="approaches-1">Approaches</h3>

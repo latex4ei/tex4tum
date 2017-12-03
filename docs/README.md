@@ -1,15 +1,15 @@
-# tex4tum
+# [Tex4Tum](https://latex4ei.github.io/tex4tum/)
 
 [![Join the chat at https://gitter.im/LaTeX4Ei/tex4tum](https://badges.gitter.im/LaTeX4Ei/tex4tum.svg)](https://gitter.im/LaTeX4Ei/tex4tum?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-[![Build Status](https://travis-ci.org/latex4ei/tex4tum.svg?branch=master)](https://travis-ci.org/latex4ei/tex4tum)
+[![Build Status](https://travis-ci.org/latex4ei/tex4tum.svg?branch=master)](https://travis-ci.org/latex4ei/tex4tum) [![GitHub (pre-)release](https://img.shields.io/github/release/latex4ei/tex4tum/all.svg)](https://github.com/latex4ei/tex4tum/releases)
 
-**Interactive Knowledge Platform**
+## Interactive Knowledge Platform
 
 TeX4TUM is an online library of small articles of the topics:
-* math
-* physics
-* electrical engineering
-* information theory
+* Math
+* Physics
+* Electrical Engineering
+* Information Theory
 
 Check out the demo: [emareg.de/tex4tum](http://emareg.de/tex4tum)
 
@@ -60,7 +60,6 @@ make sure you have set your environment to utf-8:
 export LC_ALL=en_US.U-8
 ```
 
-
 ### Building
 To parse all markdown files run
 ```bash
@@ -76,6 +75,12 @@ Now browse to http://localhost:4000/
 Run Unittests with
 ```bash
 make test
+```
+
+### Deployment
+To release a new version on github pages run
+```bash
+make deploy
 ```
 
 ### Customizing Bootstrap
