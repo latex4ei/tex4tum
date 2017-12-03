@@ -36,12 +36,14 @@ markdown: Pandoc
 kramdown:
   math_engine: mathjax
 pandoc:
-  flags: 'html5, latex_macros, implicit_figures'
+  #flags: 'html5, latex_macros, implicit_figures, --form=markdown+footnotes'
   extensions:
     - normalize
-    - smart
+    # - smart
     - latexmathml
-highlighter: pygments
+    - read: markdown+footnotes   # general format+extensio1+extension2
+    #- filter: pandoc-citeproc
+#highlighter: pygments
 plugins:
   #- bootstrap
   - autoprefixer-rails

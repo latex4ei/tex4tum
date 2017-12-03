@@ -1,4 +1,3 @@
-
 *[ACK]: ACKnowledgement
 *[ADT]: Abstract Data Type
 *[AES]: Advanced Encryption Standard
@@ -7,13 +6,11 @@
 *[ASCII]: American Standard Code for Information Interchange
 *[AST]: Abstract Syntax Tree
 
-
 *[BER]: Bit Error Rate
 *[BFT]: Byzantine Fault Tolerant
 *[BJT]: Bipolar Junction Transistor
 *[bps]: bits per second
 *[BNF]: Backus–Naur Form
-
 *[BIOS]: Basic Input/Output System
 
 *[CAD]: Computer-Aided Design

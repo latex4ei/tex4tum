@@ -2,13 +2,19 @@
 layout: default
 ---
 
-<h1>Interactive Cheat Sheets</h1>
+<h1>TeX4TUM – Interactive Knowledge Platform</h1>
+<p class="lead">Search for a scientific term or topic:</p>
 
-<form class="form-inline row">
-  <div id="search" class="search-container">
-    <input class="form-control search-input" type="search" placeholder="Search (fuzzy)" tabindex="1">
+<!-- <div class="row"> -->
+<div>
+<form class="form-inline w-100">
+  <div id="search" class="search-container w-100 mx-0">
+    <input class="form-control search-input w-100" type="search" placeholder="Search (fuzzy)" tabindex="1">
     <div class="ac-results-wrapper"></div>
   </div>
 </form>
+<br>
+</div>
+<!-- </div> -->
 
 {{ content }}

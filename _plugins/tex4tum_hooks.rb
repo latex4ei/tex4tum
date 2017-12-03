@@ -33,6 +33,12 @@ module Jekyll
           # puts entry  # gotcha!
           json_title = document.data["title"].to_json
           json_tags = document.data["tags"].to_json
+
+          # debugging: 
+          # if document.data["title"] == "Domain Name System (DNS)"
+          #   puts document.content
+          # end
+
         end
       end
 
