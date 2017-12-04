@@ -7,13 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- title, description, favicon -->
-    <title>Resistor</title>
+    <title>TODO</title>
     <meta name="description" content="Interactive Knowledge Base for Engineers
 ">
     <link rel="shortcut icon" href="/res/img/Logo.png">
 
     <link rel="stylesheet" href="/assets/main.css">
-    <link rel="canonical" href="http://localhost:4000/resistor">
+    <link rel="canonical" href="http://localhost:4000/todo.html">
 
     
 
@@ -155,46 +155,136 @@
 
 
     <main class="container" aria-label="Content">
-      <h1><a data-toggle="collapse" href="#title_def" aria-expanded="false" aria-controls="title_def">Resistor</a></h1>
+      <h1><a data-toggle="collapse" href="#title_def" aria-expanded="false" aria-controls="title_def">TODO</a></h1>
 
-<!-- Basics -->
-<!--    -->
-<!-- \newcommand{\diff}{\mathop{}\!\mathrm{\vphantom( d}} -->
-<!-- SI Units -->
-<!--=============================================================== -->
-<!-- KaTeX Tweaks -->
-<div id="title_def" class="collapse">
-<div class="card card-block">
-<p>
-<b>Definition:</b> A resistor is a electrical component.
-</p>
-</div>
-</div>
-<table>
+<h2 id="list-of-todos">List of TODOs</h2>
+<table class="table table-striped">
 <thead>
-<tr class="header">
-<th>Resistor</th>
-<th></th>
+<tr>
+<th>
+ToDo
+</th>
+<th>
+Source File
+</th>
+<th>
+Page Reference
+</th>
 </tr>
 </thead>
 <tbody>
-<tr class="odd">
-<td>Symbol</td>
-<td><img class="img-fluid" src="/res/img/content-images/electrical/Resistor_symbol_IEC.svg"></td>
+<tr>
+<td>
+Das wird in die TodoList geschrieben
+</td>
+<td>
+demo.md
+</td>
+<td>
+<a href="/demo.html">Interactive Cheat Sheets Demo</a>
+</td>
 </tr>
-<tr class="even">
-<td>Properies</td>
-<td>linear, passive</td>
+<tr>
+<td>
+Zweiter Task
+</td>
+<td>
+demo.md
+</td>
+<td>
+<a href="/demo.html">Interactive Cheat Sheets Demo</a>
+</td>
 </tr>
-<tr class="odd">
-<td>Equation</td>
-<td><span class="LaTeX">$U = R \cdot I$</span></td>
+<tr>
+<td>
+jvascript that displays different encodings
+</td>
+<td>
+utf8.md
+</td>
+<td>
+<a href="/utf8.html">UTF-8</a>
+</td>
+</tr>
+<tr>
+<td>
+DESC | description DESC of what is still to do |
+</td>
+<td>
+doxygen.md
+</td>
+<td>
+<a href="/doxygen.html">DoxyGen</a>
+</td>
+</tr>
+<tr>
+<td>
+DESC | description DESC of what is still to do |
+</td>
+<td>
+doxygen.md
+</td>
+<td>
+<a href="/doxygen.html">DoxyGen</a>
+</td>
+</tr>
+<tr>
+<td>
+abbreviation
+</td>
+<td>
+http.md
+</td>
+<td>
+<a href="/http.html">HTTP</a>
+</td>
+</tr>
+<tr>
+<td>
+diagram
+</td>
+<td>
+udp.md
+</td>
+<td>
+<a href="/udp.html">UDP</a>
+</td>
+</tr>
+<tr>
+<td>
+Float umwandlung mit precision fehler
+</td>
+<td>
+numbers.md
+</td>
+<td>
+<a href="/numbers.html">Number Converter</a>
+</td>
+</tr>
+<tr>
+<td>
+KaTeX Error
+</td>
+<td>
+complex-number.md
+</td>
+<td>
+<a href="/complex-number.html">Complex Numbers</a>
+</td>
+</tr>
+<tr>
+<td>
+KaTeX Error
+</td>
+<td>
+vector.md
+</td>
+<td>
+<a href="/vector.html">Vector Space</a>
+</td>
 </tr>
 </tbody>
 </table>
-<h2 id="color-codes">Color Codes</h2>
-<p><select id="R_band1" onchange="R_calcResistor()"> <option style="background-color: black" value="black">black</option> <option style="background-color: brown" value="brown">brown</option> <option style="background-color: red" value="red">red</option> <option style="background-color: orange" value="orange">orange</option> <option style="background-color: yellow" value="yellow">yellow</option> <option style="background-color: green" value="green">green</option> <option style="background-color: blue" value="blue">blue</option> <option style="background-color: violet" value="violet">violet</option> <option style="background-color: grey" value="grey">grey</option> <option style="background-color: white" value="white">white</option> </select> <select id="R_band2" onchange="RC_loadSVG()"> <option style="background-color: black" value="black">black</option> <option style="background-color: brown" value="brown">brown</option> <option style="background-color: red" value="red">red</option> <option style="background-color: orange" value="orange">orange</option> <option style="background-color: yellow" value="yellow">yellow</option> <option style="background-color: green" value="green">green</option> <option style="background-color: blue" value="blue">blue</option> <option style="background-color: violet" value="violet">violet</option> <option style="background-color: grey" value="grey">grey</option> <option style="background-color: white" value="white">white</option> </select> <select id="R_band3" onchange="RC_loadSVG()"> <option style="background-color: black" value="black">black</option> <option style="background-color: brown" value="brown">brown</option> <option style="background-color: red" value="red">red</option> <option style="background-color: orange" value="orange">orange</option> <option style="background-color: yellow" value="yellow">yellow</option> <option style="background-color: green" value="green">green</option> <option style="background-color: blue" value="blue">blue</option> <option style="background-color: violet" value="violet">violet</option> <option style="background-color: grey" value="grey">grey</option> <option style="background-color: white" value="white">white</option> </select></p>
-<p><select id="R_band4" onchange="RC_loadSVG()"> <option style="background-color: black" value="black">black</option> <option style="background-color: brown" value="brown">brown</option> <option style="background-color: red" value="red">red</option> <option style="background-color: orange" value="orange">orange</option> <option style="background-color: yellow" value="yellow">yellow</option> <option style="background-color: green" value="green">green</option> <option style="background-color: blue" value="blue">blue</option> <option style="background-color: violet" value="violet">violet</option> <option style="background-color: grey" value="grey">grey</option> <option style="background-color: white" value="white">white</option> </select></p>
 
 
     </main>
