@@ -1,10 +1,7 @@
 ---
 title: Matlab
 ---
-
-{% definition %}
 Matlab is a powerful computer algebra system.
-{% enddefinition %}
 
 {% highlight matlab %}
  A = ones(3)

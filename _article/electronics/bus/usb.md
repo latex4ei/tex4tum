@@ -2,9 +2,7 @@
 title: Universal Serial Bus
 ---
 
-{% definition %}
-USB is serial bus.
-{% enddefinition %}
+The USB is serial bus commonly used in computers.
 
 
 ## USB 2.0

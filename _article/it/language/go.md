@@ -1,6 +1,8 @@
 ---
 title: Go
 ---
+Go is a compiled, statically typed programming language developed by Google.
+
 
 ## Features
 * object oriented 
@@ -19,10 +21,16 @@ title: Go
 
 
 
+## Example: Hello World
+{% highlight go %}
+package main
 
+import "fmt"
 
-
-
+func main() {
+    fmt.Println("Hello, World")
+}
+{% endhighlight %}
 
 
 

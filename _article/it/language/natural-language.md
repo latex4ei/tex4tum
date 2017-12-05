@@ -15,7 +15,7 @@ Is done in several steps.
 
 ### Part of Speech (POS) Tagging
 | Tag | Description | Example |
-|-----|-------------|---------|
+|-----|:---------|---------|
 | DT  | Article     | *the, a* |
 | NN  | Noun        | *dog, car* |
 | VB  | Verb        | *fly* |
@@ -23,6 +23,7 @@ Is done in several steps.
 | IN  | Preposition | *at, on, if* |
 | MD  | Modal       | *shall, will* |
 | EX  | Existential | *there* |
+
 
 ### Chunking
 For each type of phrase (e.g. noun phrase) the words are tagged with 3 IOB Tags: `I`-inside, `O`-outside, `B`-begin. `B` if a phrase begins, following words get `I` if the word belongs to the phrase, or `O` for all other words.
