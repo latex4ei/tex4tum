@@ -1,6 +1,38 @@
 ---
 title: Low Pass Filter
 ---
+A low-pass filter (LPF) is a filter that passes signals with a frequency lower than a certain cutoff frequency.
+
+Click on the values to change them! E.g. change "10k" to "20k". All equations and figures in the step response will adjust immediately!
+
+<select id="Filter_Select" onchange="RC_loadSVG()">
+<option value="RC">RC</option>
+<option value="LR">LR</option>
+</select>
+
+{% include svg-object.html id="RC_obj" filename="rc.svg" description="Circuit of low-pass filter" %}
+
+
+Cut-Off Frequency: $f_c = \frac{1}{2\pi R C} =$ <tspan id="F1_val">159 Hz</tspan><br>
+Time-Constant <tspan title="Time Constant">$\tau$</tspan> $= RC = \frac{1}{2\pi f_C} =$ <tspan id="RC_tau_val">6.28ms</tspan><br>
+Amplitude at <tspan title="Cut-Off Frequency">$f_c$</tspan> is $U(f_c)=\frac{U(0)}{\sqrt{2}} =$ <tspan id="A1_val">3.54 V</tspan><br>
+Dynamic: $I_C = C \cdot \dot U_C$
+
+## Filter Response:
+<select id="Response_Select" onchange="RC_updateGraph()">
+  <option value="SR">Step Response</option>
+  <option value="FR">Frequency Response</option>
+</select>
+
+
+{% include svg-object.html id="RC_graph" filename="rc_graph3.svg" %}
+
+
+
+$V_{\mathrm{out}} = V_{\mathrm{max}} \left( 1 - \exp( - t/\tau) \right)$<br>
+$V_{\mathrm{out}}$ will reach $V_{\mathrm{max}}$ after 3 to $4 \tau$.
+
+
 
 <script type="text/javascript">
 var RC_obj;
@@ -48,45 +80,15 @@ function syncValues(id, value){
     RC_calcAmplitude();
     RC_updateGraph();
 }
-</script>
 
-
-Click on the values to change them! E.g. change "10k" to "20k". All equations and figures in the step response will adjust immediately!
-
-<select id="Filter_Select" onchange="RC_loadSVG()">
-<option value="RC">RC</option>
-<option value="LR">LR</option>
-</select>
-
-{% include svg-object.html id="RC_obj" filename="rc.svg" description="Circuit of low-pass filter" %}
-
-<script>
 RC_el = document.getElementById("RC_obj");
 RC_el.addEventListener("load",function(){
     RC_obj = RC_el.contentDocument;  // get inner DOM
 }, false);
-</script>
 
-Cut-Off Frequency: $f_c = \frac{1}{2\pi R C} =$ <tspan id="F1_val">159 Hz</tspan><br>
-Time-Constant <tspan title="Time Constant">$\tau$</tspan> $= RC = \frac{1}{2\pi f_C} =$ <tspan id="RC_tau_val">6.28ms</tspan><br>
-Amplitude at <tspan title="Cut-Off Frequency">$f_c$</tspan> is $U(f_c)=\frac{U(0)}{\sqrt{2}} =$ <tspan id="A1_val">3.54 V</tspan><br>
-Dynamic: $I_C = C \cdot \dot U_C$
-
-## Filter Response:
-<select id="Response_Select" onchange="RC_updateGraph()">
-  <option value="SR">Step Response</option>
-  <option value="FR">Frequency Response</option>
-</select>
-
-
-{% include svg-object.html id="RC_graph" filename="rc_graph3.svg" %}
-
-<script>
 RC_graph_el = document.getElementById("RC_graph");
 RC_graph_el.addEventListener("load",function(){
     RC_graph = RC_graph_el.contentDocument;  // get inner DOM
 }, false);
 </script>
 
-$V_{\mathrm{out}} = V_{\mathrm{max}} \left( 1 - \exp( - t/\tau) \right)$<br>
-$V_{\mathrm{out}}$ will reach $V_{\mathrm{max}}$ after 3 to $4 \tau$.

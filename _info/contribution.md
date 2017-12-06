@@ -35,6 +35,8 @@ Our file structure requires a YAML header (surrounded by `---`) that states a ti
  text
 ```
 
+The first paragraph will become the definition, which you should always provide. If you really want to omit a definition, indent the first paragraph by two spaces.
+
 
 
 ### Equations with TeX
@@ -63,14 +65,12 @@ Our site is generated using [Jekyll](https://jekyllrb.com/) that manages every s
 We created some custom templates, liquid tags and plugins to simplify the development process. The following sections describe how to use these during contribution. Also check our [Demo Pages](demo.html) for some features.
 
 
-
 ### Images
 To include Images use the following commands
 
 **Figures**
 ```bash
-{% raw %}
-{% include figure.html filename="complex.svg" description="Description goes here" width="50%" %}
+{% raw %}{% include figure.html filename="complex.svg" description="Description goes here" width="50%" %}
 {% endraw %}
 ```
 Output: Image in figure environment with image description
@@ -78,26 +78,24 @@ Output: Image in figure environment with image description
 
 **Inline Image**
 ```bash
-{% raw %}
-{% inlineimage capacitor_symbol.svg %}
+{% raw %}{% inlineimage capacitor_symbol.svg %}
 {% endraw %}
 ```
 Output: Inline Image {% inlineimage capacitor_symbol.svg %}
 
 **SVG Objects**
 ```bash
-{% raw %}
-{% include svg-object.html width="18em" id="RC_obj" filename="rc.svg" description="Circuit of low-pass filter" %}
+{% raw %}{% include svg-object.html width="18em" id="RC_obj" filename="rc.svg" description="Circuit of low-pass filter" %}
 {% endraw %}
 ```
 Output: SVG Object
 {% include svg-object.html width="18em" id="RC_obj" filename="rc.svg" description="Circuit of low-pass filter" %}
 
+
 ### Diagramms
 We use [mermaid](https://knsv.github.io/mermaid) for drawing diagramms. For this we created a liquid tag
 ```bash
-{% raw %}
-{% mermaid %}
+{% raw %}{% mermaid %}
 graph TD;
     A-->B;
     A-->C;
@@ -117,20 +115,45 @@ graph TD;
     C-->D;
 {% endmermaid %}
 
-### Abbreviations
-Abbreviations are parsed and linked automatically. If you want to add a new abbreviation just add it to `res/parser_util/abbreviations.md`. The structure should look like this
-```bash
-{% raw %}
-*[AES]: Advanced Encryption Standard
+
+### Code Listings
+Verbatime code can be placed inside backticks, e.g. \`code\` is displayed as
+`code`.
+If you want to highlight code put it in a block of three backticks. Directly after the backticks you can specify the language.
+{% highlight c linenos %}
+```c
+int main() {
+	printf("Hello World");
+}
+```
+{% endhighlight %}
+
+As an alternative we also support advanced syntax highlighting using the following liquid tag
+```  
+{% raw %}{% highlight c linenos %}
+int main() {
+	if (a < 3){
+		printf("Hello World");
+	}
+}
+{% endhighlight %}
 {% endraw %}
 ```
 
 
-### Interactive Environments
-The following blocks can be enabled and disabled via the options (see [Demo Page](demo.html))
+
+### Acronyms
+Acronyms, such as AES, are parsed and linked automatically. If you want to add a new abbreviation just add it to `res/parser_util/abbreviations.md`. The structure should look like this
 ```bash
-{% raw %}
-{% definition %}text{% enddefinition %}
+{% raw %}*[AES]: Advanced Encryption Standard
+{% endraw %}
+```
+
+
+### Content Categories
+We currently support three special categories of content, which visibility is influenced via interactions or the options (see [Demo Page](demo.html))
+```bash
+{% raw %}{% definition %}text{% enddefinition %}
 {% example %}text{% endexample %}
 {% legend %}text{% endlegend %}
 {% endraw %}
@@ -138,12 +161,27 @@ The following blocks can be enabled and disabled via the options (see [Demo Page
 
 ### Emphbox
 ```bash
-{% raw %}
-{% emphbox %}Content in box{% endemphbox %}
+{% raw %}{% emphbox %}Content in box{% endemphbox %}
 {% endraw %}
 ```
 Output:
 {% emphbox %}Content in box{% endemphbox %}
+
+
+
+## Interactivity: HTML/SVG + JavaScript
+To create interactive content you can directly embedd HTML tags and JavaScript code. An easy to use framework is under development.
+```HTML
+Resistance R = <span id="R_val" onclick="askValue(this.id)">10k</span>Ω
+
+<script type="text/javascript">
+ var R1 = getValue( document.getElementById("R_val").textContent );
+</script>
+```
+
+
+Please ensure that you only have one `<script>` section *at the end* of the article! Otherwise our generator scripts might destroy your code.
+
 
 
 

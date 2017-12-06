@@ -68,6 +68,13 @@ A regular expression is a character sequence that specifies a pattern of a strin
 
 
 ## Applet
+<textarea id="search-space" cols="35" rows="4" placeholder="Paste your text here.">This is a text (a short one) to demonstrate a RegEx for inner paranthesis.</textarea>
+
+
+Your RegEx: <input id="regex-input" oninput="applyRegex(this)" placeholder="RegEx, e.g. \d\s." value="\([^)]*\)">
+
+Found Matches: <span id="regex-result"></span>
+
 
 <script type="text/javascript">
 
@@ -96,15 +103,3 @@ function applyRegex(e){
 }
 
 </script>
-
-<textarea id="search-space" cols="35" rows="4" placeholder="Paste your text here.">This is a text (a short one) to demonstrate a RegEx for inner paranthesis.</textarea>
-
-
-Your RegEx: <input id="regex-input" oninput="applyRegex(this)" placeholder="RegEx, e.g. \d\s." value="\([^)]*\)">
-
-
-
-
-
-
-Found Matches: <span id="regex-result"></span>

@@ -17,11 +17,16 @@ module Jekyll
       site.documents.each do |document|
         todos = get_todos(document, todos)
 
+        # exclude JS
+        relevant_content, sep, rest = document.content.partition(/<script .*?<\/script>/m)
+
         # puts document.path
-        document.content = markDefinition(document.content)    # this has to be called first
-        document.content = replaceClasses(document.content)
-        document.content = add_abbreviations(document.content)
-        document.content = add_latex_definitions(document.content)
+        relevant_content = markDefinition(relevant_content)    # this has to be called first
+        relevant_content = replaceClasses(relevant_content)
+        relevant_content = add_abbreviations(relevant_content)
+        relevant_content = add_latex_definitions(relevant_content)
+
+        document.content = relevant_content+sep+rest
 
         # puts document.data  # gotcha!
       end
@@ -122,6 +127,11 @@ module Jekyll
 
       #puts "START" + content
       # title definition:
+      # definition = content[DEFINITION_REGEXP, 1]
+      # if definition
+      #   puts definition
+      #   content = content.sub(definition, %q{{% definition title_def%}}+definition+%q{{% enddefinition %}}+"\n\n")
+      # end
       content = content.sub(DEFINITION_REGEXP, %q{{% definition title_def%}\1{% enddefinition %}}+"\n\n")
       return content
     end
