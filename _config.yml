@@ -23,10 +23,18 @@ encoding: utf-8
 collections:
   article:
     output: true
+  info:
+    output: true
 defaults:
   - scope:
       path: ""
       type: article
+    values:
+      layout: page
+      permalink: /:name
+  - scope:
+      path: ""
+      type: info
     values:
       layout: page
       permalink: /:name
@@ -41,7 +49,7 @@ pandoc:
     - normalize
     # - smart
     - latexmathml
-    - read: markdown+footnotes   # general format+extensio1+extension2
+    - read: markdown+footnotes+backtick_code_blocks   # general format+extensio1+extension2
     #- filter: pandoc-citeproc
 highlighter: pygments
 plugins:

@@ -14,19 +14,25 @@ module Jekyll
 
       todos = Array.new
 
-      site.collections.each do |label, collection|
-        collection.docs.each do |document|
-          todos = get_todos(document, todos)
+      site.documents.each do |document|
+        todos = get_todos(document, todos)
 
-          # puts document.path
-          document.content = markDefinition(document.content)    # this has to be called first
-          document.content = replaceClasses(document.content)
-          document.content = add_abbreviations(document.content)
-          document.content = add_latex_definitions(document.content)
+        # puts document.path
+        document.content = markDefinition(document.content)    # this has to be called first
+        document.content = replaceClasses(document.content)
+        document.content = add_abbreviations(document.content)
+        document.content = add_latex_definitions(document.content)
 
-          # puts document.data  # gotcha!
-        end
+        # puts document.data  # gotcha!
       end
+
+      # site.pages contains only main.scss
+      # site.posts is empty
+
+      # site.pages.each do |page|
+      #   page.content = replaceClasses(page.content)
+      #   #puts page.content
+      # end
 
       site.data['todos'] = todos
     end

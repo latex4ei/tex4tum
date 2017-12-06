@@ -111,14 +111,16 @@ h1 {
 h2 {
   font-family: $font_header;
   font-size: 1.5em;
+  font-weight: bold;
   margin-bottom: .4em;
   margin-top: 1.5em;
 }
 
 h3 {
   font-family: $font_header;
-  font-size: 1.1em;
-  margin-bottom: .2em;
+  font-size: 1.3em;
+  margin-bottom: 0.1em;
+  margin-top: 1.0em;
 }
 
 p {
