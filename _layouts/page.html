@@ -4,4 +4,10 @@ layout: default
 
 <h1><a data-toggle="collapse" href="#title_def" aria-expanded="false" aria-controls="title_def">{{ page.title | escape }}</a></h1>
 
+{% for tag in page.tags %}
+<span class="badge badge-primary text-white">
+  <i class="fas fa-tag"> {{ tag }}</i>
+</span>
+{% endfor %}
+
 {{ content }}
