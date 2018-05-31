@@ -8,8 +8,8 @@
 - social: gitter
   username: LaTeX4Ei
   domain: gitter.im
-  icon: icon-gitter
-  fa: false
+  icon: gitter
+  fa: true
   about_text: Join our rooms on Gitter to discuss about further improvements of this page or our cheatsheets
 
 - social: facebook

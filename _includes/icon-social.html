@@ -1,7 +1,6 @@
 {% assign data=include.data %}
 <!-- Dont put these Liquid statements into a new line to ensure the correct output format -->
-<a href="https://{{ data.domain }}/{{ data.username }}">{% if data.fa %}
-  <i class="fa fa-{{ data.icon }}"></i>{% else %}
-  <span class="img-fluid">{% include {{ data.icon | prepend: 'social-icons/' | append: '.svg' }} %}</span>{% endif %}
+<a href="https://{{ data.domain }}/{{ data.username }}">
+  <i class="fab fa-{{ data.icon }}"></i>
   <span class="username">{{ data.username }}</span>
 </a>

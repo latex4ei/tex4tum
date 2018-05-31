@@ -27,7 +27,7 @@ title: Tex4TUM
 </div>
 <div class="col">
 <div class="feature-item" data-toggle="collapse" href="#col_item_2">
- <i class="fa fa-sliders fa-4x"></i>
+ <i class="fa fa-sliders-h fa-4x"></i>
  <h2>Interactive</h2>
  Manipulate diagrams, learn from the response.
  <div id="col_item_2" class="collapse">
@@ -38,7 +38,7 @@ title: Tex4TUM
 </div>
 <div class="col">
 <div class="feature-item" data-toggle="collapse" href="#col_item_3">
- <i class="fa  fa-child fa-4x"></i>
+ <i class="fa fa-child fa-4x"></i>
  <h2>Intuitive</h2>
  Consistent notation, structure, and style.
  <div id="col_item_3" class="collapse">
@@ -51,7 +51,7 @@ title: Tex4TUM
 <div class="row">
 <div class="col">
 <div class="feature-item" data-toggle="collapse" href="#col_item_4">
- <i class="fa fa-clock-o fa-4x"></i>
+ <i class="far fa-clock fa-4x"></i>
  <h2>Instant</h2>
  Search fuzzy, find answers immediately.<a class="small">(<code>tab</code>)</a>
  <div id="col_item_4" class="collapse">
@@ -72,7 +72,7 @@ title: Tex4TUM
 </div>
 <div class="col">
 <div class="feature-item" data-toggle="collapse" href="#col_item_6">
-<i class="fa fa-wikipedia-w fa-4x"></i>
+<i class="fab fa-wikipedia-w fa-4x"></i>
  <h2>References</h2>
  Links to Wikipedia and other useful sources.
  <div id="col_item_6" class="collapse">
@@ -88,5 +88,3 @@ title: Tex4TUM
 
 ## Table of Contents
 {{ FOLDER_TOC }}
-
-
