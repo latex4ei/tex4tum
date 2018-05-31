@@ -2,76 +2,28 @@
 <html lang="en">
 
   <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- title, description, favicon -->
     <title>Contribution</title>
     <meta name="description" content="Interactive Knowledge Base for Engineers
-">
-    <link rel="shortcut icon" href="/res/img/Logo.png">
+"/>
+    <link rel="shortcut icon" href="/res/img/Logo.png"/>
+    <link rel="canonical" href="http://localhost:4000/contribution">
 
+    <!-- Brower bar color for mobile devices (TUM blue) -->
+    <meta name="theme-color" content="#005293">
+
+    <!-- Load CSS in head, JS after footer -->
+    <!-- Main/Bootstrap -->
     <link rel="stylesheet" href="/assets/main.css">
-    <link rel="canonical" href="http://localhost:4000/contribution.html">
 
-    
+    <!-- Fontawesome CSS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 
-    <!-- Own javascript -->
-    <script src="/assets/js/latex4ei.js"></script>
-    <script src="/assets/js/options.js"></script>
-
-
-    <!-- Load jQuery -->
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous">
-    </script>
-
-
-    <!-- Load Fuse -->
-    <script src="https://cdn.jsdelivr.net/fuse/2.6.1/fuse.min.js"></script>
-    <script src="/assets/js/search_index.json"></script>
-    <script src="/assets/js/t4t_search.js"></script>
-
-    <!-- Bootstrap -->
-    <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
-
-
-
-    <!-- Fontawesome -->
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-
-    <!-- Mermaid -->
-    <link rel="stylesheet" href="https://cdn.rawgit.com/knsv/mermaid/7.0.0/dist/mermaid.css">
-    <script type="text/javascript" src="https://cdn.rawgit.com/knsv/mermaid/7.0.0/dist/mermaid.min.js"></script>
-
-    <!-- Load KaTeX -->
+    <!-- KaTeX CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js"></script>
-    <script type="text/javascript">
-        window.onload = function () {
-            // render KaTeX
-            renderMath();
-
-            // fix navbar hiding anchor jumps
-            window.addEventListener("hashchange", function() { scrollBy(0, -100) } );
-
-
-
-            Options.loadOptions();
-
-            var opts = {
-                data: search_index,
-                numResults: 10,
-                searchPath: '/search?q=',
-                directPath: '.',
-                container: document.getElementsByClassName('search-container')
-            };
-            autocomplete(opts);
-        };
-    </script>
-
 </head>
 
 
@@ -90,9 +42,9 @@
 
     <!-- sticky right: search bar  -->
     
-    <form class="form-inline ml-auto order-lg-3" role="search">
+    <form class="form-inline ml-auto order-lg-3"  role="search">
       <div id="search" class="search-container">
-        <input class="form-control search-input" type="search" placeholder="Search (fuzzy)" tabindex="1">
+        <input class="form-control search-input w-100" type="search" placeholder="&#xf002; Search (fuzzy)" tabindex="1">
       <div class="ac-results-wrapper"></div>
       </div>
     </form>
@@ -106,20 +58,21 @@
 
 
     <!-- Collapsable Items: Links -->
-    <div class="collapse navbar-collapse justify-content-start order-6 order-lg-2" id="navbarResponsive">   
+    <div class="collapse navbar-collapse justify-content-start order-6 order-lg-2" id="navbarResponsive">
       <ul class="navbar-nav">
         <li class="nav-item">
           <a class="nav-link" href="/about.html"><i class="fa fa-question"></i> About</a>
         </li>
         <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <i class="fa fa-handshake-o"></i> Contribute
+          <i class="fa fa-handshake"></i> Contribute
         </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="/contribution.html"><i class="fa fa-pencil"></i> Contribute Article</a>
-            <a class="dropdown-item" href="/todo.html"><i class="fa fa-list"></i> ToDo List</a>
+            <a class="dropdown-item" href="/contribution.html"><i class="fa fa-edit"></i> Contribute Article</a>
+            <a class="dropdown-item" href="/todo.html"><i class="fa fa-tasks"></i> ToDo List</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum"><i class="fa fa-github"></i> Develop TeX4TUM Features</a>
+            <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum"><i class="fab fa-github"></i> Develop TeX4TUM Features</a>
+            <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum/issues"><i class="fa fa-bug"></i> Report a bug</a>
           </div>
         </li>
         <li class="nav-item dropdown">
@@ -128,19 +81,19 @@
             <h6 class="dropdown-header">Display Options</h6>
             <div class="form-check dropdown-item">
               <label class="form-check-label">
-                <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox" checked onchange="Options.changeOption(this)">
+                <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox" checked="checked" onchange="Options.changeOption(this)">
                   Definitions
               </label>
             </div>
             <div class="form-check dropdown-item">
               <label class="form-check-label">
-                <input class="form-check-input" id="checkbox_example" name="disp_opt" type="checkbox" checked onchange="Options.changeOption(this)">
+                <input class="form-check-input" id="checkbox_example" name="disp_opt" type="checkbox" checked="checked" onchange="Options.changeOption(this)">
                   Examples
               </label>
             </div>
             <div class="form-check dropdown-item">
               <label class="form-check-label">
-                <input class="form-check-input" id="checkbox_legend" name="disp_opt" type="checkbox" checked onchange="Options.changeOption(this)">
+                <input class="form-check-input" id="checkbox_legend" name="disp_opt" type="checkbox" checked="checked" onchange="Options.changeOption(this)">
                   Legends
               </label>
             </div>
@@ -155,23 +108,96 @@
 
 
     <main class="container" aria-label="Content">
-      <h1><a data-toggle="collapse" href="#title_def" aria-expanded="false" aria-controls="title_def">Contribution</a></h1>
+      <h1><a data-toggle="collapse" href="#title_def" aria-expanded="false" aria-controls="title_def">
+  
+  <i class="fas fa-edit"></i>
+  
+  Contribution
+</a></h1>
 
-<h2 id="setup">Setup</h2>
-<p>Follow the instruction of the <a href="https://github.com/latex4ei/tex4tum/blob/master/README.md#contribution">README</a> to install all dependencies</p>
-<p>Run the local server and browse to http://localhost:4000/ with</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">make</span> run</code></pre></div>
-<h2 id="custom-templates-liquid-tags-and-plugins">Custom Templates, Liquid Tags and Plugins</h2>
-<p>We created some templates, liquid tags and plugins to simplify the development process. The following sections describe how to use these during contribution. Also check our <a href="demo.html">Demo Pages</a> for some features</p>
+
+
+<!-- Basics -->
+<!--    -->
+<!-- \newcommand{\diff}{\mathop{}\!\mathrm{\vphantom( d}} -->
+<!-- SI Units -->
+<!--=============================================================== -->
+<!-- KaTeX Tweaks -->
+<div id="title_def" class="collapse">
+<div class="card card-block">
+<p>
+<b>Definition:</b> This article describes how you can contribute or edit articles.
+</p>
+</div>
+</div>
+<p>If you want to contribute or edit an article do the following:</p>
+<ol type="1">
+<li>fork <a href="https://github.com/latex4ei/tex4tum">the repository on github</a> and clone it locally.</li>
+<li>edit the corresponding <code>.md</code> file in the folder '<code>_article</code>' or create a new one.</li>
+<li>once finished, push the changes to GitHub and create a pull request.</li>
+</ol>
+<h2 id="table-of-contents"><i class="fa fa-list-ul"></i> Table of Contents</h2>
+<ul>
+<li><a href="#our-format-syntax">Our Format Syntax</a>
+<ul>
+<li><a href="#file-structure">File structure</a></li>
+<li><a href="#equations-with-tex">Equations with TeX</a></li>
+</ul></li>
+<li><a href="#jekyll-and-liquid-tags">Jekyll and Liquid Tags</a>
+<ul>
+<li><a href="#images">Images</a></li>
+<li><a href="#diagramms">Diagramms</a></li>
+<li><a href="#abbreviations">Abbreviations</a></li>
+<li><a href="#interactive-environments">Interactive Environments</a></li>
+<li><a href="#emphbox">Emphbox</a></li>
+</ul></li>
+<li><a href="#preview-your-article">Preview your article</a></li>
+<li><a href="#list-of-todos">List of TODOs</a></li>
+</ul>
+<h2 id="our-format-syntax">Our Format Syntax</h2>
+<p>The good news first: If you write text, it will be displayed as text. If you want to apply some formatting you can use <a href="/markdown.html">Markdown</a>. In particular, we use <a href="https://pandoc.org/MANUAL.html">Pandoc</a> as Markdown interpreter with the extension <code>footnotes</code> and <code>backtick_code_blocks</code>.</p>
+<h3 id="file-structure">File structure</h3>
+<p>Our file structure requires a <abbr title="YAML Ain't Markup Language" >YAML</abbr> header (surrounded by <code>---</code>) that states a title and some keywords (tags) that can be used to find the article.</p>
+<pre><code> ---
+ title: Inter-Integrated Circuit I²C
+ tags: i2c, bus, SDA, SCK
+ ---
+
+ The first paragraph is the definition (hidden by default).
+
+ After the first blank line comes the introduction.
+
+ ## First Heading
+ text</code></pre>
+<h3 id="equations-with-tex">Equations with TeX</h3>
+<p>We use <a href="https://khan.github.io/KaTeX/">KaTeX</a> as TeX interpreter, such that you can typeset math equations simply using <code>$</code>. For example to display <span class="LaTeX">$\sqrt{x^2 + \alpha}$</span> as inline you write <code>$\sqrt{x^2 + \alpha}$</code>. Please note that there must <em>not</em> be a space between the <code>$</code> and your tex code! For display style equations, leave a blank line and surround your tex code by double <code>$$</code>s. You may optionally explain used symbols by a line starting with <code>with</code> or <code>where</code> that directly follows the equation.</p>
+<p>The equation (you can click on it)</p>
+<div data-toggle="collapse" href="#eq_0">
+<p><span class="LaTeX">$$\oint_{\partial A} \vec E \cdot {\,\text{d}}\vec s$$</span></p>
+</div>
+<div id="eq_0" class="collapse">
+<div class="legend card card-info">
+<div class="card-block">
+<p><b>Legend:</b> with electric field <span class="LaTeX">$\vec E$</span>, surface <span class="LaTeX">$A$</span> and direction <span class="LaTeX">$\vec s$</span></p>
+</div>
+</div>
+</div>
+<p>is written as</p>
+<pre><code>$$\oint_{\partial A} \vec E \cdot \diff \vec s$$
+with electric field $\vec E$, surface $A$ and direction $\vec s$</code></pre>
+<p>Note: To define new LaTeX commands add them to <code>res/parser_util/tex_definition.md</code></p>
+<h2 id="jekyll-and-liquid-tags">Jekyll and Liquid Tags</h2>
+<p>Our site is generated using <a href="https://jekyllrb.com/">Jekyll</a> that manages every step of the conversion to the final <abbr title="Hypertext Markup Language" >HTML</abbr> files. Thus, Jekyll collects and converts the Markdown files by piping them through Pandoc. However, <strong>before</strong> the conversion, Jekyll allows to substitute dynamic content using Liquid Tags <code>{% include mycontent.md %}</code> and Liquid variables <code>{{ date }}</code>. These tags allow sophisticated generation of content using backend Ruby scripts.</p>
+<p>We created some custom templates, liquid tags and plugins to simplify the development process. The following sections describe how to use these during contribution. Also check our <a href="demo.html">Demo Pages</a> for some features.</p>
 <h3 id="images">Images</h3>
 <p>To include Images use the following commands</p>
 <p><strong>Figures</strong></p>
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash">
-{<span class="ex">%</span> include figure.html filename=<span class="st">"complex.svg"</span> description=<span class="st">"Description goes here"</span> width=<span class="st">"50%"</span> %}</code></pre></div>
+{<span class="ex">%</span> include figure.html filename=<span class="st">&quot;complex.svg&quot;</span> description=<span class="st">&quot;Description goes here&quot;</span> width=<span class="st">&quot;50%&quot;</span> %}</code></pre></div>
 <p>Output: Image in figure environment with image description</p>
 <!--<p> Filename="complex.svg", path="/res/img/content-images/math/complex.svg" </p>-->
 <figure class="figure">
-<img class="figure-img img-fluid" src="/res/img/content-images/math/complex.svg" alt="Description goes here">
+<img class="figure-img img-fluid" src="/res/img/content-images/math/complex.svg" alt="Description goes here"/>
 <figcaption class="figure-caption">
 Description goes here
 </figcaption>
@@ -179,11 +205,11 @@ Description goes here
 <p><strong>Inline Image</strong></p>
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash">
 {<span class="ex">%</span> inlineimage capacitor_symbol.svg %}</code></pre></div>
-<p>Output: Inline Image <img class="img-fluid" src="/res/img/content-images/electrical/capacitor_symbol.svg"></p>
+<p>Output: Inline Image <img class='img-fluid' src='/res/img/content-images/electrical/capacitor_symbol.svg'></p>
 <p><strong>SVG Objects</strong></p>
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash">
-{<span class="ex">%</span> include svg-object.html width=<span class="st">"18em"</span> id=<span class="st">"RC_obj"</span> filename=<span class="st">"rc.svg"</span> description=<span class="st">"Circuit of low-pass filter"</span> %}</code></pre></div>
-Output: SVG Object
+{<span class="ex">%</span> include svg-object.html width=<span class="st">&quot;18em&quot;</span> id=<span class="st">&quot;RC_obj&quot;</span> filename=<span class="st">&quot;rc.svg&quot;</span> description=<span class="st">&quot;Circuit of low-pass filter&quot;</span> %}</code></pre></div>
+Output: <abbr title="Scalable Vector Graphics" >SVG</abbr> Object
 <figure>
 <object class="img-fluid" id="RC_obj" data="res/img/dynamic-images/rc.svg" type="image/svg+xml">
 </object>
@@ -209,8 +235,6 @@ Output:
 <p>Abbreviations are parsed and linked automatically. If you want to add a new abbreviation just add it to <code>res/parser_util/abbreviations.md</code>. The structure should look like this</p>
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash">
 <span class="ex">*</span>[AES]: Advanced Encryption Standard</code></pre></div>
-<h3 id="latex">LaTeX</h3>
-<p>To define new LaTeX commands add them to <code>res/parser_util/tex_definition.md</code></p>
 <h3 id="interactive-environments">Interactive Environments</h3>
 <p>The following blocks can be enabled and disabled via the options (see <a href="demo.html">Demo Page</a>)</p>
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash">
@@ -219,15 +243,19 @@ Output:
 {<span class="ex">%</span> legend %}<span class="ex">text</span>{% endlegend %}</code></pre></div>
 <h3 id="emphbox">Emphbox</h3>
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash">
-{<span class="ex">%</span> emphbox %}<span class="ex">Conten</span> in box{% endemphbox %}</code></pre></div>
+{<span class="ex">%</span> emphbox %}<span class="ex">Content</span> in box{% endemphbox %}</code></pre></div>
 Output:
 <div class="card card-outline-danger text-center">
 <div class="card-block">
-Conten in box
+Content in box
 </div>
 </div>
-<h3 id="list-of-todos">List of TODOs</h3>
-<p>All lines starting with TODO will be added to the following TODO list.</p>
+<h2 id="preview-your-article">Preview your article</h2>
+<p>When you are done editing, you can preview your article. Follow the instruction of the <a href="https://github.com/latex4ei/tex4tum/blob/master/README.md#contribution">README</a> to install all dependencies</p>
+<p>Run the local server and browse to http://localhost:4000/ with</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">make</span> run</code></pre></div>
+<h2 id="list-of-todos">List of TODOs</h2>
+<p>All lines starting with</p>
 <table class="table table-striped">
 <thead>
 <tr>
@@ -243,83 +271,6 @@ Page Reference
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>
-Das wird in die TodoList geschrieben
-</td>
-<td>
-demo.md
-</td>
-<td>
-<a href="/demo.html">Interactive Cheat Sheets Demo</a>
-</td>
-</tr>
-<tr>
-<td>
-Zweiter Task
-</td>
-<td>
-demo.md
-</td>
-<td>
-<a href="/demo.html">Interactive Cheat Sheets Demo</a>
-</td>
-</tr>
-<tr>
-<td>
-jvascript that displays different encodings
-</td>
-<td>
-utf8.md
-</td>
-<td>
-<a href="/utf8.html">UTF-8</a>
-</td>
-</tr>
-<tr>
-<td>
-DESC | description DESC of what is still to do |
-</td>
-<td>
-doxygen.md
-</td>
-<td>
-<a href="/doxygen.html">DoxyGen</a>
-</td>
-</tr>
-<tr>
-<td>
-DESC | description DESC of what is still to do |
-</td>
-<td>
-doxygen.md
-</td>
-<td>
-<a href="/doxygen.html">DoxyGen</a>
-</td>
-</tr>
-<tr>
-<td>
-abbreviation
-</td>
-<td>
-http.md
-</td>
-<td>
-<a href="/http.html">HTTP</a>
-</td>
-</tr>
-<tr>
-<td>
-diagram
-</td>
-<td>
-udp.md
-</td>
-<td>
-<a href="/udp.html">UDP</a>
-</td>
-</tr>
 <tr>
 <td>
 Float umwandlung mit precision fehler
@@ -353,6 +304,50 @@ vector.md
 <a href="/vector.html">Vector Space</a>
 </td>
 </tr>
+<tr>
+<td>
+draw image of the process github .md --&gt; jekyll --&gt; scripts --&gt; pandoc --&gt; .html + head.html = webpage
+</td>
+<td>
+about.md
+</td>
+<td>
+<a href="/about.html">About TeX4TUM</a>
+</td>
+</tr>
+<tr>
+<td>
+will be added to the following TODO list.
+</td>
+<td>
+contribution.md
+</td>
+<td>
+<a href="/contribution.html">Contribution</a>
+</td>
+</tr>
+<tr>
+<td>
+Das wird in die TodoList geschrieben
+</td>
+<td>
+demo.md
+</td>
+<td>
+<a href="/demo.html">Interactive Cheat Sheets Demo</a>
+</td>
+</tr>
+<tr>
+<td>
+Zweiter Task
+</td>
+<td>
+demo.md
+</td>
+<td>
+<a href="/demo.html">Interactive Cheat Sheets Demo</a>
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -380,7 +375,7 @@ vector.md
           <li>
 <!-- Dont put these Liquid statements into a new line to ensure the correct output format -->
 <a href="https://github.com/latex4ei">
-  <i class="fa fa-github"></i>
+  <i class="fab fa-github"></i>
   <span class="username">latex4ei</span>
 </a>
 </li>
@@ -388,9 +383,7 @@ vector.md
           <li>
 <!-- Dont put these Liquid statements into a new line to ensure the correct output format -->
 <a href="https://gitter.im/LaTeX4Ei">
-  <span class="img-fluid"><svg viewbox="0 0 16 16" width="16px" height="16px"><path d="M5.667 2.667H7V16H5.667V2.667zm4.666 0V16H9V2.667h1.333zM2.333 0h1.334v10H2.333V0zm10 2.667h1.334V10h-1.334V2.667z" style="fill:#828282;fill-opacity:1"></path>
-</svg>
-</span>
+  <i class="fab fa-gitter"></i>
   <span class="username">LaTeX4Ei</span>
 </a>
 </li>
@@ -398,7 +391,7 @@ vector.md
           <li>
 <!-- Dont put these Liquid statements into a new line to ensure the correct output format -->
 <a href="https://facebook.com/LaTeX4Ei">
-  <i class="fa fa-facebook-square"></i>
+  <i class="fab fa-facebook-square"></i>
   <span class="username">LaTeX4Ei</span>
 </a>
 </li>
@@ -413,6 +406,62 @@ vector.md
     </div>
   </div>
 </footer>
+
+
+<!-- Load Javascript at the end for faster page loading -->
+<!-- ================================================== -->
+
+  <!-- Own javascript -->
+  <script src="/assets/js/latex4ei.js"></script>
+  <script src="/assets/js/options.js"></script>
+
+  <!-- KaTeX JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js"></script>
+
+  <!-- jQuery (req. for BootStrap) -->
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+
+  <!-- Bootstrap + Requirements -->
+  <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
+  <!-- Fuse + Own Adapter -->
+  <script src="https://cdn.jsdelivr.net/fuse/2.6.1/fuse.min.js"></script>
+  <script src="/assets/js/search_index.json"></script>
+  <script src="/assets/js/t4t_search.js"></script>
+
+  <script type="text/javascript">
+      window.onload = function () {
+          // render KaTeX
+          renderMath();
+
+          // fix navbar hiding anchor jumps
+          window.addEventListener("hashchange", function() { scrollBy(0, -100) } );
+
+
+          Options.loadOptions();
+
+          var opts = {
+              data: search_index,
+              numResults: 10,
+              searchPath: '/search?q=',
+              directPath: '.',
+              container: document.getElementsByClassName('search-container')
+          };
+          autocomplete(opts);
+      };
+  </script>
+
+
+  <!-- Mermaid -->
+  <link rel="stylesheet" href="https://cdn.rawgit.com/knsv/mermaid/7.0.0/dist/mermaid.css">
+  <script type="text/javascript" src="https://cdn.rawgit.com/knsv/mermaid/7.0.0/dist/mermaid.min.js"></script>
+
+<!-- ================================================== -->
+
+
+
 
 
   </body>

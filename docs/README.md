@@ -11,7 +11,7 @@ TeX4TUM is an online library of small articles of the topics:
 * Electrical Engineering
 * Information Theory
 
-Check out the demo: [emareg.de/tex4tum](http://emareg.de/tex4tum)
+Check out the demo: <http://www.tex4tum.de/index.html>
 
 The articles are based on the cheat sheets from [www.latex4ei.de](http://www.latex4ei.de)
 
@@ -36,12 +36,7 @@ The articles are based on the cheat sheets from [www.latex4ei.de](http://www.lat
 
 ## Contribution
 ### Setup
-Installation with rubygems
-```bash
-sudo apt-get install ruby ruby-dev pandoc
-sudo gem install jekyll bundler
-```
-Install all required depencencies in the `Gemfile` with
+Setup and install dependencies
 ```bash
 make install
 ```
@@ -50,7 +45,7 @@ make install
 If the installation of nokogiri fails, run:
 ```
 gem uninstall nokogiri
-sudo apt-get install libxslt-dev libxml2-dev zlib1g-dev
+sudo apt install libxslt-dev libxml2-dev zlib1g-dev -y
 ```
 and try again
 
@@ -60,26 +55,18 @@ make sure you have set your environment to utf-8:
 export LC_ALL=en_US.U-8
 ```
 
-### Building
-To parse all markdown files run
+### Build and Test
 ```bash
+# Build
 make
-```
-Call the following command to watch for changes and regenerate build folder automatically.
-```bash
+
+# Serve with hot reload at localhost:4000
 make run
-```
-Now browse to http://localhost:4000/
 
-### Testing
-Run Unittests with
-```bash
+# Run all tests
 make test
-```
 
-### Deployment
-To release a new version on github pages run
-```bash
+# Build for production and copy to gh-pages folder
 make deploy
 ```
 

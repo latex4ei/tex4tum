@@ -2,76 +2,28 @@
 <html lang="en">
 
   <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- title, description, favicon -->
     <title>About TeX4TUM</title>
     <meta name="description" content="Interactive Knowledge Base for Engineers
-">
-    <link rel="shortcut icon" href="/res/img/Logo.png">
+"/>
+    <link rel="shortcut icon" href="/res/img/Logo.png"/>
+    <link rel="canonical" href="http://localhost:4000/about">
 
+    <!-- Brower bar color for mobile devices (TUM blue) -->
+    <meta name="theme-color" content="#005293">
+
+    <!-- Load CSS in head, JS after footer -->
+    <!-- Main/Bootstrap -->
     <link rel="stylesheet" href="/assets/main.css">
-    <link rel="canonical" href="http://localhost:4000/about.html">
 
-    
+    <!-- Fontawesome CSS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 
-    <!-- Own javascript -->
-    <script src="/assets/js/latex4ei.js"></script>
-    <script src="/assets/js/options.js"></script>
-
-
-    <!-- Load jQuery -->
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous">
-    </script>
-
-
-    <!-- Load Fuse -->
-    <script src="https://cdn.jsdelivr.net/fuse/2.6.1/fuse.min.js"></script>
-    <script src="/assets/js/search_index.json"></script>
-    <script src="/assets/js/t4t_search.js"></script>
-
-    <!-- Bootstrap -->
-    <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
-
-
-
-    <!-- Fontawesome -->
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-
-    <!-- Mermaid -->
-    <link rel="stylesheet" href="https://cdn.rawgit.com/knsv/mermaid/7.0.0/dist/mermaid.css">
-    <script type="text/javascript" src="https://cdn.rawgit.com/knsv/mermaid/7.0.0/dist/mermaid.min.js"></script>
-
-    <!-- Load KaTeX -->
+    <!-- KaTeX CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js"></script>
-    <script type="text/javascript">
-        window.onload = function () {
-            // render KaTeX
-            renderMath();
-
-            // fix navbar hiding anchor jumps
-            window.addEventListener("hashchange", function() { scrollBy(0, -100) } );
-
-
-
-            Options.loadOptions();
-
-            var opts = {
-                data: search_index,
-                numResults: 10,
-                searchPath: '/search?q=',
-                directPath: '.',
-                container: document.getElementsByClassName('search-container')
-            };
-            autocomplete(opts);
-        };
-    </script>
-
 </head>
 
 
@@ -90,9 +42,9 @@
 
     <!-- sticky right: search bar  -->
     
-    <form class="form-inline ml-auto order-lg-3" role="search">
+    <form class="form-inline ml-auto order-lg-3"  role="search">
       <div id="search" class="search-container">
-        <input class="form-control search-input" type="search" placeholder="Search (fuzzy)" tabindex="1">
+        <input class="form-control search-input w-100" type="search" placeholder="&#xf002; Search (fuzzy)" tabindex="1">
       <div class="ac-results-wrapper"></div>
       </div>
     </form>
@@ -106,20 +58,21 @@
 
 
     <!-- Collapsable Items: Links -->
-    <div class="collapse navbar-collapse justify-content-start order-6 order-lg-2" id="navbarResponsive">   
+    <div class="collapse navbar-collapse justify-content-start order-6 order-lg-2" id="navbarResponsive">
       <ul class="navbar-nav">
         <li class="nav-item">
           <a class="nav-link" href="/about.html"><i class="fa fa-question"></i> About</a>
         </li>
         <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <i class="fa fa-handshake-o"></i> Contribute
+          <i class="fa fa-handshake"></i> Contribute
         </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="/contribution.html"><i class="fa fa-pencil"></i> Contribute Article</a>
-            <a class="dropdown-item" href="/todo.html"><i class="fa fa-list"></i> ToDo List</a>
+            <a class="dropdown-item" href="/contribution.html"><i class="fa fa-edit"></i> Contribute Article</a>
+            <a class="dropdown-item" href="/todo.html"><i class="fa fa-tasks"></i> ToDo List</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum"><i class="fa fa-github"></i> Develop TeX4TUM Features</a>
+            <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum"><i class="fab fa-github"></i> Develop TeX4TUM Features</a>
+            <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum/issues"><i class="fa fa-bug"></i> Report a bug</a>
           </div>
         </li>
         <li class="nav-item dropdown">
@@ -128,19 +81,19 @@
             <h6 class="dropdown-header">Display Options</h6>
             <div class="form-check dropdown-item">
               <label class="form-check-label">
-                <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox" checked onchange="Options.changeOption(this)">
+                <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox" checked="checked" onchange="Options.changeOption(this)">
                   Definitions
               </label>
             </div>
             <div class="form-check dropdown-item">
               <label class="form-check-label">
-                <input class="form-check-input" id="checkbox_example" name="disp_opt" type="checkbox" checked onchange="Options.changeOption(this)">
+                <input class="form-check-input" id="checkbox_example" name="disp_opt" type="checkbox" checked="checked" onchange="Options.changeOption(this)">
                   Examples
               </label>
             </div>
             <div class="form-check dropdown-item">
               <label class="form-check-label">
-                <input class="form-check-input" id="checkbox_legend" name="disp_opt" type="checkbox" checked onchange="Options.changeOption(this)">
+                <input class="form-check-input" id="checkbox_legend" name="disp_opt" type="checkbox" checked="checked" onchange="Options.changeOption(this)">
                   Legends
               </label>
             </div>
@@ -155,24 +108,31 @@
 
 
     <main class="container" aria-label="Content">
-      <h1><a data-toggle="collapse" href="#title_def" aria-expanded="false" aria-controls="title_def">About TeX4TUM</a></h1>
+      <h1><a data-toggle="collapse" href="#title_def" aria-expanded="false" aria-controls="title_def">
+  
+  <i class="fas fa-question"></i>
+  
+  About TeX4TUM
+</a></h1>
 
+
+
+<!-- Basics -->
+<!--    -->
+<!-- \newcommand{\diff}{\mathop{}\!\mathrm{\vphantom( d}} -->
+<!-- SI Units -->
+<!--=============================================================== -->
+<!-- KaTeX Tweaks -->
 <p class="lead">
-</p>
 <p>TeX4TUM is an Interactive Knowledge Platform for Engineers covering the following topics:</p>
 <ul>
-<li>
-<i class="fa fa-calculator"></i> math</li>
-<li>
-<i class="fa fa-flask"></i> physics</li>
-<li>
-<i class="fa fa-microchip"></i> electrical engineering</li>
-<li>
-<i class="fa fa-code"></i> information theory</li>
-<li>
-<i class="fa fa-cogs"></i> mechanical engineering</li>
+<li><i class="fa fa-calculator"></i> math</li>
+<li><i class="fa fa-flask"></i> physics</li>
+<li><i class="fa fa-microchip"></i> electrical engineering</li>
+<li><i class="fa fa-code"></i> information theory</li>
+<li><i class="fa fa-cogs"></i> mechanical engineering</li>
 </ul>
-
+</p>
 <h2 id="our-philosophy">Our Philosophy</h2>
 <p>We want to provide students an easy, fast and reliable source of information that focuses on the reader. In contrast to all the forums, blogs, and wikis out there, we focus on the most important aspects first and only optionally offer you the details if you need them. Our articles are short, consistent and well structured making them ideal for efficiently looking up your study topics. Making the content interactive, such that you can manipulate diagrams and equations, provides intuitive understanding without the need of long explanations. Experience it for yourself. Hit <code>tab</code> and type a term that you want to look up.</p>
 <h2 id="article-processing">Article Processing</h2>
@@ -180,27 +140,20 @@
 <h2 id="under-the-hood">Under the Hood</h2>
 <p>TeX4TUM uses many different frameworks to achieve its goals.</p>
 <ul>
-<li>Content Management: <a href="https://jekyllrb.com/">Jekyll</a>
-</li>
-<li>Version Control: <a href="https://github.com/latex4ei/tex4tum">GitHub</a>
-</li>
-<li>Markup Language: <a href="http://markdown.de/">Markdown</a>
-</li>
-<li>Math: <a href="https://khan.github.io/KaTeX/">KaTeX</a>
-</li>
-<li>Responsive Design: <a href="http://getbootstrap.com/">Bootstrap 4.0</a>
-</li>
-<li>Fuzzy Search: <a href="http://fusejs.io/">Fuse.js</a>
-</li>
-<li>Interactive Images: SVG images</li>
+<li>Content Management: <a href="https://jekyllrb.com/">Jekyll</a></li>
+<li>Version Control: <a href="https://github.com/latex4ei/tex4tum">GitHub</a></li>
+<li>Markup Language: <a href="http://markdown.de/">Markdown</a></li>
+<li>Math: <a href="https://khan.github.io/KaTeX/">KaTeX</a></li>
+<li>Responsive Design: <a href="http://getbootstrap.com/">Bootstrap 4.0</a></li>
+<li>Fuzzy Search: <a href="http://fusejs.io/">Fuse.js</a></li>
+<li>Interactive Images: <abbr title="Scalable Vector Graphics" >SVG</abbr> images</li>
 </ul>
-<p>TODO draw image of the process github .md --&gt; jekyll --&gt; scripts --&gt; pandoc --&gt; .html + head.html = webpage</p>
 <h2 id="quality">Quality</h2>
-<p>To improve the quality of this platform your feedback is important. Please report errors, bugs or improvements to our <a href="https://github.com/latex4ei/tex4tum/issues">issue tracker</a> or send an email to <a href="mailto:info@latex4ei.de"><i class="fa fa-envelope"></i> info@latex4ei.de</a></p>
+<p>To improve the quality of this platform your feedback is important. Please report errors, bugs or improvements to our <a href="https://github.com/latex4ei/tex4tum/issues"><i class="fa fa-bug"></i> issue tracker</a> or send an email to <a href="mailto:info@latex4ei.de"><i class="fa fa-envelope"></i> info@latex4ei.de</a></p>
 <p>The content of this page is based on the cheatsheets from <a href="http://latex4ei.de"><i class="fa fa-globe"></i> latex4ei.de</a></p>
-<p>Find the source code for this Page at: <!-- Dont put these Liquid statements into a new line to ensure the correct output format --> <a href="https://github.com/latex4ei"> <i class="fa fa-github"></i> <span class="username">latex4ei</span> </a></p>
-<p>Join our rooms on Gitter to discuss about further improvements of this page or our cheatsheets: <!-- Dont put these Liquid statements into a new line to ensure the correct output format --> <a href="https://gitter.im/LaTeX4Ei"> <span class="img-fluid"><svg viewbox="0 0 16 16" width="16px" height="16px"><path d="M5.667 2.667H7V16H5.667V2.667zm4.666 0V16H9V2.667h1.333zM2.333 0h1.334v10H2.333V0zm10 2.667h1.334V10h-1.334V2.667z" style="fill:#828282;fill-opacity:1"></path> </svg> </span> <span class="username">LaTeX4Ei</span> </a></p>
-<p>Like our page on facebook to get the latest news about cheatsheets releases or this page: <!-- Dont put these Liquid statements into a new line to ensure the correct output format --> <a href="https://facebook.com/LaTeX4Ei"> <i class="fa fa-facebook-square"></i> <span class="username">LaTeX4Ei</span> </a></p>
+<p>Find the source code for this Page at: <!-- Dont put these Liquid statements into a new line to ensure the correct output format --> <a href="https://github.com/latex4ei"> <i class="fab fa-github"></i> <span class="username">latex4ei</span> </a></p>
+<p>Join our rooms on Gitter to discuss about further improvements of this page or our cheatsheets: <!-- Dont put these Liquid statements into a new line to ensure the correct output format --> <a href="https://gitter.im/LaTeX4Ei"> <i class="fab fa-gitter"></i> <span class="username">LaTeX4Ei</span> </a></p>
+<p>Like our page on facebook to get the latest news about cheatsheets releases or this page: <!-- Dont put these Liquid statements into a new line to ensure the correct output format --> <a href="https://facebook.com/LaTeX4Ei"> <i class="fab fa-facebook-square"></i> <span class="username">LaTeX4Ei</span> </a></p>
 
 
     </main>
@@ -226,7 +179,7 @@
           <li>
 <!-- Dont put these Liquid statements into a new line to ensure the correct output format -->
 <a href="https://github.com/latex4ei">
-  <i class="fa fa-github"></i>
+  <i class="fab fa-github"></i>
   <span class="username">latex4ei</span>
 </a>
 </li>
@@ -234,9 +187,7 @@
           <li>
 <!-- Dont put these Liquid statements into a new line to ensure the correct output format -->
 <a href="https://gitter.im/LaTeX4Ei">
-  <span class="img-fluid"><svg viewbox="0 0 16 16" width="16px" height="16px"><path d="M5.667 2.667H7V16H5.667V2.667zm4.666 0V16H9V2.667h1.333zM2.333 0h1.334v10H2.333V0zm10 2.667h1.334V10h-1.334V2.667z" style="fill:#828282;fill-opacity:1"></path>
-</svg>
-</span>
+  <i class="fab fa-gitter"></i>
   <span class="username">LaTeX4Ei</span>
 </a>
 </li>
@@ -244,7 +195,7 @@
           <li>
 <!-- Dont put these Liquid statements into a new line to ensure the correct output format -->
 <a href="https://facebook.com/LaTeX4Ei">
-  <i class="fa fa-facebook-square"></i>
+  <i class="fab fa-facebook-square"></i>
   <span class="username">LaTeX4Ei</span>
 </a>
 </li>
@@ -259,6 +210,62 @@
     </div>
   </div>
 </footer>
+
+
+<!-- Load Javascript at the end for faster page loading -->
+<!-- ================================================== -->
+
+  <!-- Own javascript -->
+  <script src="/assets/js/latex4ei.js"></script>
+  <script src="/assets/js/options.js"></script>
+
+  <!-- KaTeX JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js"></script>
+
+  <!-- jQuery (req. for BootStrap) -->
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+
+  <!-- Bootstrap + Requirements -->
+  <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
+  <!-- Fuse + Own Adapter -->
+  <script src="https://cdn.jsdelivr.net/fuse/2.6.1/fuse.min.js"></script>
+  <script src="/assets/js/search_index.json"></script>
+  <script src="/assets/js/t4t_search.js"></script>
+
+  <script type="text/javascript">
+      window.onload = function () {
+          // render KaTeX
+          renderMath();
+
+          // fix navbar hiding anchor jumps
+          window.addEventListener("hashchange", function() { scrollBy(0, -100) } );
+
+
+          Options.loadOptions();
+
+          var opts = {
+              data: search_index,
+              numResults: 10,
+              searchPath: '/search?q=',
+              directPath: '.',
+              container: document.getElementsByClassName('search-container')
+          };
+          autocomplete(opts);
+      };
+  </script>
+
+
+  <!-- Mermaid -->
+  <link rel="stylesheet" href="https://cdn.rawgit.com/knsv/mermaid/7.0.0/dist/mermaid.css">
+  <script type="text/javascript" src="https://cdn.rawgit.com/knsv/mermaid/7.0.0/dist/mermaid.min.js"></script>
+
+<!-- ================================================== -->
+
+
+
 
 
   </body>

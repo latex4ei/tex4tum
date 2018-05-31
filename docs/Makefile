@@ -9,7 +9,13 @@ test: all
 	bundle exec rspec
 
 install:
-	bundle install
+	curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+	sudo apt install -y nodejs
+	sudo apt install ruby ruby-dev pandoc -y
+	sudo gem install jekyll bundler
+	sudo gem uninstall nokogiri
+	sudo apt install libxslt-dev libxml2-dev zlib1g-dev -y
+	sudo bundle install
 
 clean:
 	bundle exec jekyll clean
@@ -17,7 +23,7 @@ clean:
 rebuild: clean all
 
 update:
-	bundle update
+	sudo bundle update
 
 deploy:
 	cp -rf _site/* docs/
