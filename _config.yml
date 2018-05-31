@@ -62,6 +62,7 @@ exclude:
   - Gemfile.lock
   - vendor
   - docs
+  - spec
   # here starts the excludes for gh-pages build
   # - _article
   # - index.md
