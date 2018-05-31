@@ -18,7 +18,7 @@ title: Tex4TUM
 <div class="col">
 <div class="feature-item" data-toggle="collapse" href="#col_item_1">
  <i class="fa fa-eye fa-4x"></i>
- <h3>Focused</h3>
+ <h2>Focused</h2>
  Short is default, details on demand. <a class="small">(click)</a>
  <div id="col_item_1" class="collapse">
  <div class="card card-block small">If you click on items, some will show additional information.</div>
@@ -84,7 +84,4 @@ title: Tex4TUM
 
 
 
-
-
-## Table of Contents
 {{ FOLDER_TOC }}

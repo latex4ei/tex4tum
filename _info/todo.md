@@ -1,7 +1,6 @@
 ---
-layout: page
 title: TODO
-icon: th-list
+icon: tasks
 ---
 
 This pages displays articles that needs improvement.

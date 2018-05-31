@@ -1,5 +1,4 @@
 ---
-layout: page
 title: About TeX4TUM
 icon: question
 ---

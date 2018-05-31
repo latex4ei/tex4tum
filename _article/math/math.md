@@ -1,5 +1,6 @@
 ---
 title: Math
+icon: calculator
 ---
 
 ## Table of Contents

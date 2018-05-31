@@ -1,5 +1,6 @@
 ---
 title: Physics
+icon: flask
 ---
 
 {% definition %}

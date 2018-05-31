@@ -25,7 +25,7 @@ module Jekyll
 
           # puts document.dest  # data["slug"]
           # puts document.data # output: {"draft"=>false, "categories"=>[], "layout"=>"page", "permalink"=>"/:name", "title"=>"Reflection", "slug"=>"reflection", "ext"=>".md", "tags"=>[], "excerpt"=><Excerpt: /reflection#excerpt>, "date"=>2017-03-29 11:41:21 +0200}
-          # puts document.path 
+          # puts document.path
 
           entry = {url: document.data["slug"], title: document.data["title"], tags: document.data["tags"], sections: section_array}
           index_array.push(entry)
@@ -39,7 +39,7 @@ module Jekyll
 
       json_string = "search_index = " + index_array.to_json
 
-      
+
       js_text = File.read(site.dest + JS_PATH)
       js_text = js_text.gsub(/var search_index = [^\n]+/, 'var ' + json_string)
       File.write(site.dest + JS_PATH, js_text)
@@ -86,7 +86,7 @@ module Jekyll
 
       folderHash = get_folderlist(site)
       # puts "Dirs: "+folderHash.to_s
-      
+
       # create tocs
       site.collections.each do |label, collection|
         collection.docs.each do |document|
@@ -113,7 +113,7 @@ module Jekyll
           document.content = createLocalTOC(document.content)
         end
       end
-    end  
+    end
 
 
     def get_folderlist(site)
@@ -155,7 +155,7 @@ module Jekyll
 
             # add filename
             if filename.include?(".md")
-              if folders[2] 
+              if folders[2]
                 if filebasename != folders[2]
                   folderHash[folders[0]][folders[1]][folders[2]][filename] = document.data["title"]
                 end
@@ -164,38 +164,38 @@ module Jekyll
                   # puts "filebasename: "+filebasename+"  folders[1]:"+folders[1]
                   folderHash[folders[0]][folders[1]][filename] = document.data["title"]
                 end
-              elsif folders[0] and folders[0] != "." 
+              elsif folders[0] and folders[0] != "."
                 if filebasename != folders[0]
                   # puts "filebasename: "+filebasename+"  folders[0]:"+folders[0]
                   folderHash[folders[0]][filename] = document.data["title"]
                 end
-              elsif folders[0] == nil 
+              elsif folders[0] == nil
                 folderHash[filename] = document.data["title"]
-              end 
+              end
             end
           end
-        end 
+        end
       end
 
       return folderHash
     end
 
     def createFolderTOC(ahash, level)
-      toc_string=""
+      toc_string="## {% icon fa-list-ul %} Table of Contents\n"
       ahash.each do |key, val|
         if( key.include?('.md') )
           pagename=key.sub('.md', '.html')
           toc_string+="* [#{val}](#{pagename})\n"
         else
           title = key.capitalize
-          toc_string+="* [**#{title}**](#{key}.html)\n"  
+          toc_string+="* [**#{title}**](#{key}.html)\n"
           val.each do |key, val|
             if( key.include?('.md') )
               pagename=key.sub('.md', '.html')
               toc_string+="    - [#{val}](#{pagename})\n"
             else
               title = key.capitalize
-              toc_string+="    - [**#{title}**](#{key}.html)" 
+              toc_string+="    - [**#{title}**](#{key}.html)"
               if(level >= 3)
                 toc_string+=": "
                 val.each do |key, val|
@@ -211,7 +211,7 @@ module Jekyll
               toc_string += "\n"
             end
           end
-        end      
+        end
       end
       return toc_string
     end
@@ -224,7 +224,7 @@ module Jekyll
         return text
       end
 
-      toc_string="## Table of Contents\n"
+      toc_string="## {% icon fa-list-ul %} Table of Contents\n"
       num_of_secs = 0
       text.scan(%r{(?:^|\n)\s*(#+) +(.*?)\s*(?:\n|$)}) do |matches|
         num_of_secs += 1
@@ -251,11 +251,11 @@ module Jekyll
   end
 
   Hooks.register :site, :post_write do |site|
-    IndexGenerator.new.generate(site)   
+    IndexGenerator.new.generate(site)
   end
 
   Hooks.register :site, :pre_render do |site|
-    TocGenerator.new.generate(site) 
+    TocGenerator.new.generate(site)
   end
 
 end
