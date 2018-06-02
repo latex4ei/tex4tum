@@ -1,20 +1,20 @@
 sudo: false # route your build to the container-based infrastructure for a faster build
 language: ruby
 rvm:
-- 2.4.1
-
-env:
-  global:
-  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
+- 2.5.1
 
 addons:
   apt:
     packages:
       - make
       - pandoc
+      - libxslt-dev
+      - libxml2-dev
+      - zlib1g-dev
 
 before_install:
   - gem install jekyll bundler
+  - gem uninstall nokogiri
 
 # Assume bundler is being used, therefore
 # the `install` step will run `bundle install` by default.
