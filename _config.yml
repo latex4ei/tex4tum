@@ -63,8 +63,8 @@ exclude:
   - vendor
   - docs
   - spec
+  - README.md
   # here starts the excludes for gh-pages build
   # - _article
   # - index.md
-  # - README.md
   # - res

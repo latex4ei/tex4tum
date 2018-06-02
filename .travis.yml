@@ -3,6 +3,10 @@ language: ruby
 rvm:
 - 2.4.1
 
+env:
+  global:
+  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
+
 addons:
   apt:
     packages:
@@ -16,17 +20,14 @@ before_install:
 # the `install` step will run `bundle install` by default.
 script:
   - make
-
-env:
-  global:
-  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
+  - echo "# This branch is for deployment only" >> _site/README.md
 
 # Deploy to gh-pages branch
 deploy:
   provider: pages
   skip-cleanup: true
   github-token: $GITHUB_TOKEN  # Set in travis-ci.org dashboard, marked secure
-  local-dir: export
+  local-dir: _site
   on:
     branch: master
 
