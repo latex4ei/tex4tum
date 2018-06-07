@@ -1,6 +1,6 @@
 ---
 title: Contribution
-layout: page
+icon: edit
 ---
 
 This article describes how you can contribute or edit articles.
@@ -13,7 +13,7 @@ If you want to contribute or edit an article do the following:
 
 
 ## Our Format Syntax
-The good news first: If you write text, it will be displayed as text. If you want to apply some formatting you can use [Markdown](/markdown.html). 
+The good news first: If you write text, it will be displayed as text. If you want to apply some formatting you can use [Markdown](/markdown.html).
 In particular, we use [Pandoc](https://pandoc.org/MANUAL.html) as Markdown interpreter with the extension `footnotes` and `backtick_code_blocks`.
 
 
@@ -27,7 +27,7 @@ Our file structure requires a YAML header (surrounded by `---`) that states a ti
  tags: i2c, bus, SDA, SCK
  ---
 
- The first paragraph is the definition (hidden by default). 
+ The first paragraph is the definition (hidden by default).
 
  After the first blank line comes the introduction.
 
@@ -201,4 +201,3 @@ make run
 All lines starting with TODO will be added to the following TODO list.
 
 {% include todo_table.html %}
-

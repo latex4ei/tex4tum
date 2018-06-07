@@ -31,12 +31,12 @@
 \newcommand{\Sp}{\,\text{Sp}}
 \newcommand{\ker}{\,\text{ker}}
 
-\newcommand{\mat}[1]{\begin{bmatrix} #1 \end{bmatrix}}	
+\newcommand{\mat}[1]{\begin{bmatrix} #1 \end{bmatrix}}
 
-\DeclareMathOperator{\N}{\mathbb N}						% Natürliche Zahlen
-\DeclareMathOperator{\R}{\mathbb R}						% Reele Zahlen
-\DeclareMathOperator{\C}{\mathbb C}						% Komplexe Zahlen
-\DeclareMathOperator{\K}{\mathbb K}						% Reele oder komplexe Zahlen
+\DeclareMathOperator{\N}{\mathbb N}
+\DeclareMathOperator{\R}{\mathbb R}
+\DeclareMathOperator{\C}{\mathbb C}
+\DeclareMathOperator{\K}{\mathbb K}
 
 
 
@@ -90,22 +90,22 @@
 
 \newcommand{\ftsymbol}{\ \circ\:\!\!\!\!-\!\!\!\bullet\ }
 
-\newcommand{\FT}{\ftsymbol}					
-\newcommand{\LT}{\ftsymbol}					
-\newcommand{\DFT}{\ftsymbol}					
-\newcommand{\DTFT}{\ftsymbol}				
-\newcommand{\ZT}{\ftsymbol}					
+\newcommand{\FT}{\ftsymbol}
+\newcommand{\LT}{\ftsymbol}
+\newcommand{\DFT}{\ftsymbol}
+\newcommand{\DTFT}{\ftsymbol}
+\newcommand{\ZT}{\ftsymbol}
 
 
 \newcommand\oiint{\mathop{\circ\!\!\!\iint}}
 
-\DeclareMathOperator{\dirac}{\ensuremath{\delta}}			% Dirac Distribution
-\DeclareMathOperator{\heavi}{\ensuremath{\theta}}			% Heaviside Step Function
-\DeclareMathOperator{\sinc}{sinc}							% Sinus Cardinalis
-\DeclareMathOperator{\rect}{rect}							% Rectangular
-\DeclareMathOperator{\tri}{tri}								% Triangular
-\DeclareMathOperator{\erf}{erf}								% Error Function
-\DeclareMathOperator{\erfc}{erfc}							% Error Function
+\DeclareMathOperator{\dirac}{\ensuremath{\delta}}
+\DeclareMathOperator{\heavi}{\ensuremath{\theta}}
+\DeclareMathOperator{\sinc}{sinc}
+\DeclareMathOperator{\rect}{rect}
+\DeclareMathOperator{\tri}{tri}
+\DeclareMathOperator{\erf}{erf}
+\DeclareMathOperator{\erfc}{erfc}
 
 
 
@@ -118,6 +118,3 @@
 \renewcommand{\P}{\mathrm{P}}
 \renewcommand{\boldsymbol}[1]{\mathbf{#1}}
 \renewcommand{\operatorname}[1]{\mathop{#1}}
-
-
-
