@@ -152,7 +152,7 @@
        id="tspan34">α = </tspan>
     <tspan
        id="alpha"
-       onclick="askValue(this.id)">30</tspan>
+       onclick="askValue(this.id)">60</tspan>
   </text>
   <path
      id="frac"
@@ -166,7 +166,7 @@ var dragX, dragY;
 var pt;
 var svg_fraction;
 var ray_line, frac_line, pass_line, rotor, alpha_text
-var alpha = -30;
+var alpha = -60;
 
 
 function getValue(str){
@@ -259,14 +259,15 @@ function SVG_setCircleArc(id_obj, ox, oy, radius, angle){
   var obj = document.getElementById(id_obj);
 
    Degree = 1.0/360.0 * 2.0 * Math.PI;
+   var large_arc = 0;
    angle = - angle - 90
 
    sin = Math.sin(angle*Degree);
    cos = Math.cos(angle*Degree);
 
-    newx = (-cos*radius);
-    newy = (sin*radius+radius);  
-    value = 'm '+(ox)+' '+(oy-radius)+' a '+(radius)+' '+(radius)+' 0 '+large_arc+' 0 '+newx+' '+newy;
+    newx = (-cos*radius)
+    newy = (sin*radius+radius)  
+    value = 'm '+(ox)+' '+(oy-radius)+' a '+(radius)+' '+(radius)+' 0 '+large_arc+' 0 '+newx+' '+newy
 
 
   obj.setAttribute('d', value);
@@ -292,6 +293,9 @@ function calcFraction(){
     rotateToAnchor(frac_line, hitpoint, -alpha);
     rotateToAnchor(pass_line, hitpoint, frac_angle);
     SVG_setCircleArc('angle_arc2', hitpoint.x.animVal.value, hitpoint.y.animVal.value, 30, alpha);
+
+    // call sync
+    parent.syncValues("alpha", 0)
 }
 </script>
   <path
