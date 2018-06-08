@@ -10,7 +10,7 @@
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="http://localhost:4000/frequency-analysis">
+    <link rel="canonical" href="/frequency-analysis">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -89,6 +89,12 @@
               <label class="form-check-label">
                 <input class="form-check-input" id="checkbox_example" name="disp_opt" type="checkbox" checked="checked" onchange="Options.changeOption(this)">
                   Examples
+              </label>
+            </div>
+            <div class="form-check dropdown-item">
+              <label class="form-check-label">
+                <input class="form-check-input" id="checkbox_explanation" name="disp_opt" type="checkbox" checked="checked" onchange="Options.changeOption(this)">
+                  Explanations
               </label>
             </div>
             <div class="form-check dropdown-item">
@@ -194,31 +200,42 @@
 </tbody>
 </table>
 <div class="collapse">
-<div class="legend card card-info">
-<div class="card-block">
-<p><b>Legend:</b> timefunctions <span class="LaTeX">$f,g$</span>, frequency functions <span class="LaTeX">$X,F,G$</span>, complex number <span class="LaTeX">${{\mathbf{s}}}$</span>, time <span class="LaTeX">$t$</span>, time shift <span class="LaTeX">$\tau$</span>, constant <span class="LaTeX">$c$</span></p>
+<div class="legend card border-info mb-1">
+<div class="card-body">
+<h5 class="card-title text-info">
+Legend
+</h5>
+<p class="card-text">
+timefunctions <span class="LaTeX">$f,g$</span>, frequency functions <span class="LaTeX">$X,F,G$</span>, complex number <span class="LaTeX">${{\mathbf{s}}}$</span>, time <span class="LaTeX">$t$</span>, time shift <span class="LaTeX">$\tau$</span>, constant <span class="LaTeX">$c$</span>
+</p>
 </div>
 </div>
 </div>
 <h2 id="fourierreihe">Fourierreihe</h2>
 <p>Approximation einer <em>periodischen</em> Funktion <span class="LaTeX">$f(t)$</span> durch Überlagerung gewichteter Sinus und Cosinus einer Grundfrequenz <span class="LaTeX">$\omega_0 = \frac{1}{T}$</span> und deren Oberschwingungen <span class="LaTeX">$2\omega_0, 3\omega_0, ...$</span></p>
-<div class="card card-outline-danger text-center">
-<div class="card-block">
-<p><span class="LaTeX">$F(x) = \sum\limits_{k=-\infty}^\infty c_k e^{{\text{i}}k \omega_0 x} \qquad c_k = \frac{1}{T} \int\limits_{-\frac{T}{2}}^{\frac{T}{2}} f(x) e^{{\text{i}}k \omega_0 x} {\,\text{d}}x$</span></p>
+<div class='card border-danger'>
+<div class='card-body'>
+<p class='card-text text-center'>
+<span class="LaTeX">$F(x) = \sum\limits_{k=-\infty}^\infty c_k e^{{\text{i}}k \omega_0 x} \qquad c_k = \frac{1}{T} \int\limits_{-\frac{T}{2}}^{\frac{T}{2}} f(x) e^{{\text{i}}k \omega_0 x} {\,\text{d}}x$</span>
+<p>
 </div>
 </div>
 <h2 id="fouriertransformation-ft">Fouriertransformation (FT)</h2>
-<div class="card card-outline-danger text-center">
-<div class="card-block">
-<p><span class="LaTeX">$\displaystyle {\tiny\begin{matrix}\\ \normalsize  f(t) \\[1em] \scriptsize \text{Zeitbereich} \end{matrix}} {{\ \circ\:\!\!\!\!-\!\!\!\bullet\ }}{\tiny\begin{matrix}\\ \normalsize  F(\omega) \\[1em] \scriptsize \text{Frequenzspektrum} \end{matrix}} := \int\limits_{-\infty}^\infty f(t) \exp(-{\text{i}}\omega t) {\,\text{d}}t$</span></p>
+<div class='card border-danger'>
+<div class='card-body'>
+<p class='card-text text-center'>
+<span class="LaTeX">$\displaystyle {\tiny\begin{matrix}\\ \normalsize  f(t) \\[1em] \scriptsize \text{Zeitbereich} \end{matrix}} {{\ \circ\:\!\!\!\!-\!\!\!\bullet\ }}{\tiny\begin{matrix}\\ \normalsize  F(\omega) \\[1em] \scriptsize \text{Frequenzspektrum} \end{matrix}} := \int\limits_{-\infty}^\infty f(t) \exp(-{\text{i}}\omega t) {\,\text{d}}t$</span>
+<p>
 </div>
 </div>
 <p>Anmerkung: Es gibt unterschiedliche Normungen (<span class="LaTeX">$1, \frac{1}{\sqrt{2\pi}}$</span>)</p>
 <h2 id="laplaceransformation-lt-mathbfs-alpha-omegatexti">Laplaceransformation (LT) <span class="LaTeX">${{\mathbf{s}}} = \alpha + \omega{\text{i}}$</span></h2>
 LT ist Verallgemeinerung der FT mit Dämpfungsfaktor <span class="LaTeX">$\alpha$</span>
-<div class="card card-outline-danger text-center">
-<div class="card-block">
-<p><span class="LaTeX">$\displaystyle {\tiny\begin{matrix}\\ \normalsize  f(t) \\[1em] \scriptsize \text{Zeitbereich} \end{matrix}} {{\ \circ\:\!\!\!\!-\!\!\!\bullet\ }}{\tiny\begin{matrix}\\ \normalsize  F({{\mathbf{s}}}) = \mathcal L\left(f(t)\right) \\[1em] \scriptsize \text{Frequenzspektrum} \end{matrix}} := \int\limits_{0}^\infty f(t) \exp(- {{\mathbf{s}}} t) {\,\text{d}}t$</span></p>
+<div class='card border-danger'>
+<div class='card-body'>
+<p class='card-text text-center'>
+<span class="LaTeX">$\displaystyle {\tiny\begin{matrix}\\ \normalsize  f(t) \\[1em] \scriptsize \text{Zeitbereich} \end{matrix}} {{\ \circ\:\!\!\!\!-\!\!\!\bullet\ }}{\tiny\begin{matrix}\\ \normalsize  F({{\mathbf{s}}}) = \mathcal L\left(f(t)\right) \\[1em] \scriptsize \text{Frequenzspektrum} \end{matrix}} := \int\limits_{0}^\infty f(t) \exp(- {{\mathbf{s}}} t) {\,\text{d}}t$</span>
+<p>
 </div>
 </div>
 <h2 id="z-transform-zt">Z-Transform (ZT)</h2>

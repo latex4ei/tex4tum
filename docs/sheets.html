@@ -10,7 +10,7 @@
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="http://localhost:4000/sheets">
+    <link rel="canonical" href="/sheets">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -93,6 +93,12 @@
             </div>
             <div class="form-check dropdown-item">
               <label class="form-check-label">
+                <input class="form-check-input" id="checkbox_explanation" name="disp_opt" type="checkbox" checked="checked" onchange="Options.changeOption(this)">
+                  Explanations
+              </label>
+            </div>
+            <div class="form-check dropdown-item">
+              <label class="form-check-label">
                 <input class="form-check-input" id="checkbox_legend" name="disp_opt" type="checkbox" checked="checked" onchange="Options.changeOption(this)">
                   Legends
               </label>
@@ -124,10 +130,15 @@
 <!--=============================================================== -->
 <!-- KaTeX Tweaks -->
 <div id="title_def" class="collapse">
-<div class="card card-block">
-<p>
-<b>Definition:</b> Die hier verfügbaren Dateien sind immer die aktuelle Version.
+<div class="card border-primary mb-1">
+<div class="card-body">
+<h5 class="card-title text-primary">
+Definition
+</h5>
+<p class="card-text">
+Die hier verfügbaren Dateien sind immer die aktuelle Version.
 </p>
+</div>
 </div>
 </div>
 <!-- <p><a href="./res/sheets/(.*?)"[^>]+>(.*?)</a>(?: ?<a href="(.*?)")? -->
@@ -568,7 +579,7 @@
 </td>
 <td>
 <p>
-<a href="/res/sheets/Ingenieursgrundlagen.pdf" >Important Engineering Equations</a> <span class="pull-right">2018-01-27</span>
+<a href="/res/sheets/Ingenieursgrundlagen.pdf" >Important Engineering Equations</a> <span class="pull-right">2018-06-08</span>
 </p>
 </td>
 </tr>
@@ -578,22 +589,22 @@
 </td>
 <td>
 <p>
-<a href="https://github.com/latex4ei/Analysis-1" target="_blank"> <i class="fab fa-github"></i></a> <a href="/res/sheets/Analysis-1.pdf" >Analysis 1</a> <span class="pull-right">2018-01-27</span>
+<a href="https://github.com/latex4ei/Analysis-1" target="_blank"> <i class="fab fa-github"></i></a> <a href="/res/sheets/Analysis-1.pdf" >Analysis 1</a> <span class="pull-right">2018-06-08</span>
 </p>
 <p>
-<a href="/res/sheets/Analysis_1_ma.pdf" >Analysis 1 für Mathematiker</a> <span class="pull-right">2018-01-27</span>
+<a href="/res/sheets/Analysis_1_ma.pdf" >Analysis 1 für Mathematiker</a> <span class="pull-right">2018-06-08</span>
 </p>
 <p>
-<a href="https://github.com/latex4ei/Digitaltechnik" target="_blank"> <i class="fab fa-github"></i></a> <a href="/res/sheets/FSDigitaltechnik.pdf" >Digitaltechnik Formelsammlung</a> <span class="pull-right">2018-01-27</span>
+<a href="https://github.com/latex4ei/Digitaltechnik" target="_blank"> <i class="fab fa-github"></i></a> <a href="/res/sheets/FSDigitaltechnik.pdf" >Digitaltechnik Formelsammlung</a> <span class="pull-right">2018-06-08</span>
 </p>
 <p>
-<a href="/res/sheets/HM1_MaschBau.pdf" >Höhere Mathematik 1 Formelsammlung für Maschinenbauer</a> <span class="pull-right">2018-01-27</span>
+<a href="/res/sheets/HM1_MaschBau.pdf" >Höhere Mathematik 1 Formelsammlung für Maschinenbauer</a> <span class="pull-right">2018-06-08</span>
 </p>
 <p>
-<a href="https://github.com/latex4ei/Lineare-Algebra" target="_blank"> <i class="fab fa-github"></i></a> <a href="/res/sheets/Lineare-Algebra.pdf" >Lineare Algebra Formelsammlung</a> <span class="pull-right">2018-01-27</span>
+<a href="https://github.com/latex4ei/Lineare-Algebra" target="_blank"> <i class="fab fa-github"></i></a> <a href="/res/sheets/Lineare-Algebra.pdf" >Lineare Algebra Formelsammlung</a> <span class="pull-right">2018-06-08</span>
 </p>
 <p>
-<a href="https://github.com/latex4ei/Schaltungstechnik-1-2" target="_blank"> <i class="fab fa-github"></i></a> <a href="/res/sheets/Schaltungstechnik.pdf" >Schaltungstechnik (Mitarbeiter gesucht!) *</a> <span class="pull-right">2018-01-27</span>
+<a href="https://github.com/latex4ei/Schaltungstechnik-1-2" target="_blank"> <i class="fab fa-github"></i></a> <a href="/res/sheets/Schaltungstechnik.pdf" >Schaltungstechnik (Mitarbeiter gesucht!) *</a> <span class="pull-right">2018-06-08</span>
 </p>
 </td>
 </tr>
@@ -603,25 +614,25 @@
 </td>
 <td>
 <p>
-<a href="/res/sheets/ADS.pdf" >ADS Zusammenfassung (WS 2012/13)</a> <span class="pull-right">2018-01-27</span>
+<a href="/res/sheets/ADS.pdf" >ADS Zusammenfassung (WS 2012/13)</a> <span class="pull-right">2018-06-08</span>
 </p>
 <p>
-<a href="https://github.com/latex4ei/Analysis-2" target="_blank"> <i class="fab fa-github"></i></a> <a href="/res/sheets/Analysis-2.pdf" >Analysis 2 Formelsammlung</a> <span class="pull-right">2018-01-27</span>
+<a href="https://github.com/latex4ei/Analysis-2" target="_blank"> <i class="fab fa-github"></i></a> <a href="/res/sheets/Analysis-2.pdf" >Analysis 2 Formelsammlung</a> <span class="pull-right">2018-06-08</span>
 </p>
 <p>
-<a href="https://github.com/latex4ei/Elektrizitaet-und-Magnetismus" target="_blank"> <i class="fab fa-github"></i></a> <a href="/res/sheets/EundM.pdf" >EuM Zusammenfassung</a> <span class="pull-right">2018-01-27</span>
+<a href="https://github.com/latex4ei/Elektrizitaet-und-Magnetismus" target="_blank"> <i class="fab fa-github"></i></a> <a href="/res/sheets/EundM.pdf" >EuM Zusammenfassung</a> <span class="pull-right">2018-06-08</span>
 </p>
 <p>
-<a href="/res/sheets/Mathe2FS_MaschBau.pdf" >Höhere Mathematik 2 Formelsammlung für Maschinenbauer</a> <span class="pull-right">2018-01-27</span>
+<a href="/res/sheets/Mathe2FS_MaschBau.pdf" >Höhere Mathematik 2 Formelsammlung für Maschinenbauer</a> <span class="pull-right">2018-06-08</span>
 </p>
 <p>
-<a href="/res/sheets/PHY_2011.pdf" >Physik Zusammenfassung (unvollständig)</a> <span class="pull-right">2018-01-27</span>
+<a href="/res/sheets/PHY_2011.pdf" >Physik Zusammenfassung (unvollständig)</a> <span class="pull-right">2018-06-08</span>
 </p>
 <p>
-<a href="https://github.com/latex4ei/Schaltungstechnik-1-2" target="_blank"> <i class="fab fa-github"></i></a> <a href="/res/sheets/Schaltungstechnik.pdf" >Schaltungstechnik 2 (Mitarbeiter gesucht!) *</a> <span class="pull-right">2018-01-27</span>
+<a href="https://github.com/latex4ei/Schaltungstechnik-1-2" target="_blank"> <i class="fab fa-github"></i></a> <a href="/res/sheets/Schaltungstechnik.pdf" >Schaltungstechnik 2 (Mitarbeiter gesucht!) *</a> <span class="pull-right">2018-06-08</span>
 </p>
 <p>
-<a href="/res/sheets/ST2FS.pdf" >Schaltungstechnik 2 Zusatzblatt</a> <span class="pull-right">2018-01-27</span>
+<a href="/res/sheets/ST2FS.pdf" >Schaltungstechnik 2 Zusatzblatt</a> <span class="pull-right">2018-06-08</span>
 </p>
 </td>
 </tr>
@@ -631,28 +642,28 @@
 </td>
 <td>
 <p>
-<a href="https://github.com/latex4ei/Analysis-3" target="_blank"> <i class="fab fa-github"></i></a> <a href="/res/sheets/Analysis-3.pdf" >Analysis 3 Formelsammlung</a> <span class="pull-right">2018-01-27</span>
+<a href="https://github.com/latex4ei/Analysis-3" target="_blank"> <i class="fab fa-github"></i></a> <a href="/res/sheets/Analysis-3.pdf" >Analysis 3 Formelsammlung</a> <span class="pull-right">2018-06-08</span>
 </p>
 <p>
-<a href="https://github.com/latex4ei/Elektromagnetische-Feldtheorie" target="_blank"> <i class="fab fa-github"></i></a> <a href="/res/sheets/EMF.pdf" >EMF Zusammenfassung</a> <span class="pull-right">2018-01-27</span>
+<a href="https://github.com/latex4ei/Elektromagnetische-Feldtheorie" target="_blank"> <i class="fab fa-github"></i></a> <a href="/res/sheets/EMF.pdf" >EMF Zusammenfassung</a> <span class="pull-right">2018-06-08</span>
 </p>
 <p>
-<a href="/res/sheets/EMF-Formel-Zusammenfassung.pdf" >EMF Formeln (aus der Zentralübung)</a> <span class="pull-right">2018-01-27</span>
+<a href="/res/sheets/EMF-Formel-Zusammenfassung.pdf" >EMF Formeln (aus der Zentralübung)</a> <span class="pull-right">2018-06-08</span>
 </p>
 <p>
-<a href="https://github.com/latex4ei/Stochastische-Signale" target="_blank"> <i class="fab fa-github"></i></a> <a href="/res/sheets/StochastischeSignale.pdf" >Stochastische Signale</a> <span class="pull-right">2018-01-27</span>
+<a href="https://github.com/latex4ei/Stochastische-Signale" target="_blank"> <i class="fab fa-github"></i></a> <a href="/res/sheets/StochastischeSignale.pdf" >Stochastische Signale</a> <span class="pull-right">2018-06-08</span>
 </p>
 <p>
-<a href="https://github.com/latex4ei/Stochastische-Signale-Praktikum" target="_blank"> <i class="fab fa-github"></i></a> <a href="/res/sheets/StochastischeSignalePraktikum.pdf" >Stochastische Signale Matlab-Praktikum</a> <span class="pull-right">2018-01-27</span>
+<a href="https://github.com/latex4ei/Stochastische-Signale-Praktikum" target="_blank"> <i class="fab fa-github"></i></a> <a href="/res/sheets/StochastischeSignalePraktikum.pdf" >Stochastische Signale Matlab-Praktikum</a> <span class="pull-right">2018-06-08</span>
 </p>
 <p>
-<a href="https://github.com/latex4ei/Signaldarstellung" target="_blank"> <i class="fab fa-github"></i></a> <a href="/res/sheets/Signaldarstellung.pdf" >Signaldarstellung</a> <span class="pull-right">2018-01-27</span>
+<a href="https://github.com/latex4ei/Signaldarstellung" target="_blank"> <i class="fab fa-github"></i></a> <a href="/res/sheets/Signaldarstellung.pdf" >Signaldarstellung</a> <span class="pull-right">2018-06-08</span>
 </p>
 <p>
-<a href="https://github.com/latex4ei/Werkstoffe" target="_blank"> <i class="fab fa-github"></i></a> <a href="/res/sheets/Werkstoffe.pdf" >Werkstoffe Formelsammlung</a> <span class="pull-right">2018-01-27</span>
+<a href="https://github.com/latex4ei/Werkstoffe" target="_blank"> <i class="fab fa-github"></i></a> <a href="/res/sheets/Werkstoffe.pdf" >Werkstoffe Formelsammlung</a> <span class="pull-right">2018-06-08</span>
 </p>
 <p>
-<a href="/res/sheets/Werkstoffe_Fragen.pdf" >Werkstoffe Verständnisfragen</a> <span class="pull-right">2018-01-27</span>
+<a href="/res/sheets/Werkstoffe_Fragen.pdf" >Werkstoffe Verständnisfragen</a> <span class="pull-right">2018-06-08</span>
 </p>
 </td>
 </tr>
@@ -662,16 +673,16 @@
 </td>
 <td>
 <p>
-<a href="https://github.com/latex4ei/Matlab" target="_blank"> <i class="fab fa-github"></i></a> <a href="/res/sheets/Matlab.pdf" >MATLAB</a> <span class="pull-right">2018-01-27</span>
+<a href="https://github.com/latex4ei/Matlab" target="_blank"> <i class="fab fa-github"></i></a> <a href="/res/sheets/Matlab.pdf" >MATLAB</a> <span class="pull-right">2018-06-08</span>
 </p>
 <p>
-<a href="https://github.com/latex4ei/Nachrichtentechnik" target="_blank"> <i class="fab fa-github"></i></a> <a href="/res/sheets/Nachrichtentechnik.pdf" >Nachrichtentechnik</a> <span class="pull-right">2018-01-27</span>
+<a href="https://github.com/latex4ei/Nachrichtentechnik" target="_blank"> <i class="fab fa-github"></i></a> <a href="/res/sheets/Nachrichtentechnik.pdf" >Nachrichtentechnik</a> <span class="pull-right">2018-06-08</span>
 </p>
 <p>
-<a href="https://github.com/latex4ei/Regelungssysteme-1" target="_blank"> <i class="fab fa-github"></i></a> <a href="/res/sheets/Regelungssysteme.pdf" >Regelungssysteme 1</a> <span class="pull-right">2018-01-27</span>
+<a href="https://github.com/latex4ei/Regelungssysteme-1" target="_blank"> <i class="fab fa-github"></i></a> <a href="/res/sheets/Regelungssysteme.pdf" >Regelungssysteme 1</a> <span class="pull-right">2018-06-08</span>
 </p>
 <p>
-<a href="https://github.com/latex4ei/Energietechnik" target="_blank"> <i class="fab fa-github"></i></a> <a href="/res/sheets/Energietechnik.pdf" >Energie-/Hochspannungstechnik</a> <span class="pull-right">2018-01-27</span>
+<a href="https://github.com/latex4ei/Energietechnik" target="_blank"> <i class="fab fa-github"></i></a> <a href="/res/sheets/Energietechnik.pdf" >Energie-/Hochspannungstechnik</a> <span class="pull-right">2018-06-08</span>
 </p>
 </td>
 </tr>
@@ -681,13 +692,13 @@
 </td>
 <td>
 <p>
-<a href="/res/sheets/BWL.pdf" >Betriebswirtschaftslehre 1 (FIQ Fach)</a> <span class="pull-right">2018-01-27</span>
+<a href="/res/sheets/BWL.pdf" >Betriebswirtschaftslehre 1 (FIQ Fach)</a> <span class="pull-right">2018-06-08</span>
 </p>
 <p>
-<a href="https://github.com/MaKeAppDev/FS-EKM" target="_blank"> <i class="fab fa-github"></i></a> <a href="/res/sheets/FS-EKM.pdf" >Elektrische Kleinmaschinen</a> <span class="pull-right">2018-01-27</span>
+<a href="https://github.com/MaKeAppDev/FS-EKM" target="_blank"> <i class="fab fa-github"></i></a> <a href="/res/sheets/FS-EKM.pdf" >Elektrische Kleinmaschinen</a> <span class="pull-right">2018-06-08</span>
 </p>
 <p>
-<a href="https://github.com/latex4ei/Elektromagnetische-Vertraeglichkeit" target="_blank"> <i class="fab fa-github"></i></a> <a href="/res/sheets/EMV.pdf" >Elektromagnetische Verträglichkeit</a> <span class="pull-right">2018-01-27</span>
+<a href="https://github.com/latex4ei/Elektromagnetische-Vertraeglichkeit" target="_blank"> <i class="fab fa-github"></i></a> <a href="/res/sheets/EMV.pdf" >Elektromagnetische Verträglichkeit</a> <span class="pull-right">2018-06-08</span>
 </p>
 <!--
 
@@ -967,7 +978,7 @@
 
 <p>
 
-<a href="/res/sheets/Kommunikationsnetze.pdf" >Kommunikationsnetze*</a> <span class="pull-right">2018-01-27</span> </p>
+<a href="/res/sheets/Kommunikationsnetze.pdf" >Kommunikationsnetze*</a> <span class="pull-right">2018-06-08</span> </p>
 
 
 
@@ -1113,31 +1124,31 @@
 
 -->
 <p>
-<a href="https://github.com/latex4ei/Grundlagen-der-Energie-betragungstechnik" target="_blank"> <i class="fab fa-github"></i></a> <a href="/res/sheets/geuet_fs.pdf" >Grundlagen der Energieübertragungstechnik</a> <span class="pull-right">2018-01-27</span>
+<a href="https://github.com/latex4ei/Grundlagen-der-Energie-betragungstechnik" target="_blank"> <i class="fab fa-github"></i></a> <a href="/res/sheets/geuet_fs.pdf" >Grundlagen der Energieübertragungstechnik</a> <span class="pull-right">2018-06-08</span>
 </p>
 <p>
-<a href="https://github.com/MaKeAppDev/FS-GEM" target="_blank"> <i class="fab fa-github"></i></a> <a href="/res/sheets/FS-GEM.pdf" >Grundlagen elektrischer Maschinen</a> <span class="pull-right">2018-01-27</span>
+<a href="https://github.com/MaKeAppDev/FS-GEM" target="_blank"> <i class="fab fa-github"></i></a> <a href="/res/sheets/FS-GEM.pdf" >Grundlagen elektrischer Maschinen</a> <span class="pull-right">2018-06-08</span>
 </p>
 <p>
-<a href="/res/sheets/GIR.pdf" >Einführung in die Roboterregelung (unvollständig)</a> <span class="pull-right">2018-01-27</span>
+<a href="/res/sheets/GIR.pdf" >Einführung in die Roboterregelung (unvollständig)</a> <span class="pull-right">2018-06-08</span>
 </p>
 <p>
-<a href="https://github.com/latex4ei/Kryptologie" target="_blank"> <i class="fab fa-github"></i></a> <a href="/res/sheets/Kryptologie.pdf" >Kryptologie Formelsammlung</a> <span class="pull-right">2018-01-27</span>
+<a href="https://github.com/latex4ei/Kryptologie" target="_blank"> <i class="fab fa-github"></i></a> <a href="/res/sheets/Kryptologie.pdf" >Kryptologie Formelsammlung</a> <span class="pull-right">2018-06-08</span>
 </p>
 <p>
-<a href="https://github.com/latex4ei/Mensch-Maschine-Kommunikation-1" target="_blank"> <i class="fab fa-github"></i></a> <a href="/res/sheets/mmk1.pdf" >Mensch-Maschine-Kommunikation 1</a> <span class="pull-right">2018-01-27</span>
+<a href="https://github.com/latex4ei/Mensch-Maschine-Kommunikation-1" target="_blank"> <i class="fab fa-github"></i></a> <a href="/res/sheets/mmk1.pdf" >Mensch-Maschine-Kommunikation 1</a> <span class="pull-right">2018-06-08</span>
 </p>
 <p>
-<a href="https://github.com/latex4ei/Mensch-Maschine-Kommunikation-2" target="_blank"> <i class="fab fa-github"></i></a> <a href="/res/sheets/mmk2.pdf" >Mensch-Maschine-Kommunikation 2</a> <span class="pull-right">2018-01-27</span>
+<a href="https://github.com/latex4ei/Mensch-Maschine-Kommunikation-2" target="_blank"> <i class="fab fa-github"></i></a> <a href="/res/sheets/mmk2.pdf" >Mensch-Maschine-Kommunikation 2</a> <span class="pull-right">2018-06-08</span>
 </p>
 <p>
-<a href="https://github.com/latex4ei/nanoelectronics" target="_blank"> <i class="fab fa-github"></i></a> <a href="/res/sheets/nanoFS.pdf" >Nanoelectronics (unvollständig)</a> <span class="pull-right">2018-01-27</span>
+<a href="https://github.com/latex4ei/nanoelectronics" target="_blank"> <i class="fab fa-github"></i></a> <a href="/res/sheets/nanoFS.pdf" >Nanoelectronics (unvollständig)</a> <span class="pull-right">2018-06-08</span>
 </p>
 <p>
-<a href="https://github.com/latex4ei/Internetkommunikation" target="_blank"> <i class="fab fa-github"></i></a> <a href="/res/sheets/Internetkommunikation.pdf" >Internetkommunikation</a> <span class="pull-right">2018-01-27</span>
+<a href="https://github.com/latex4ei/Internetkommunikation" target="_blank"> <i class="fab fa-github"></i></a> <a href="/res/sheets/Internetkommunikation.pdf" >Internetkommunikation</a> <span class="pull-right">2018-06-08</span>
 </p>
 <p>
-<a href="https://github.com/latex4ei/Leistungselektronik" target="_blank"> <i class="fab fa-github"></i></a> <a href="/res/sheets/Leistungselektronik.pdf" >Leistungselektronik</a> <span class="pull-right">2018-01-27</span>
+<a href="https://github.com/latex4ei/Leistungselektronik" target="_blank"> <i class="fab fa-github"></i></a> <a href="/res/sheets/Leistungselektronik.pdf" >Leistungselektronik</a> <span class="pull-right">2018-06-08</span>
 </p>
 </td>
 </tr>
@@ -1147,52 +1158,52 @@
 </td>
 <td>
 <p>
-<a href="https://github.com/MaKeAppDev/FS-EM" target="_blank"> <i class="fab fa-github"></i></a> <a href="/res/sheets/FS-EM.pdf" >Elektrische Maschinen</a> <span class="pull-right">2018-01-27</span>
+<a href="https://github.com/MaKeAppDev/FS-EM" target="_blank"> <i class="fab fa-github"></i></a> <a href="/res/sheets/FS-EM.pdf" >Elektrische Maschinen</a> <span class="pull-right">2018-06-08</span>
 </p>
 <p>
-<a href="https://github.com/MaKeAppDev/FS-EEM" target="_blank"> <i class="fab fa-github"></i></a> <a href="/res/sheets/FS-EEM.pdf" >Entwurf Elektrischer Maschinen</a> <span class="pull-right">2018-01-27</span>
+<a href="https://github.com/MaKeAppDev/FS-EEM" target="_blank"> <i class="fab fa-github"></i></a> <a href="/res/sheets/FS-EEM.pdf" >Entwurf Elektrischer Maschinen</a> <span class="pull-right">2018-06-08</span>
 </p>
 <p>
-<a href="/res/sheets/Logik.pdf" >Logik (außerfachlich)</a> <span class="pull-right">2018-01-27</span>
+<a href="/res/sheets/Logik.pdf" >Logik (außerfachlich)</a> <span class="pull-right">2018-06-08</span>
 </p>
 <p>
-<a href="https://github.com/latex4ei/Akustik" target="_blank"> <i class="fab fa-github"></i></a> <a href="/res/sheets/Akustik.pdf" >Musikalische Akustik</a> <span class="pull-right">2018-01-27</span>
+<a href="https://github.com/latex4ei/Akustik" target="_blank"> <i class="fab fa-github"></i></a> <a href="/res/sheets/Akustik.pdf" >Musikalische Akustik</a> <span class="pull-right">2018-06-08</span>
 </p>
 <p>
-<a href="/res/sheets/NeuralEngineering.pdf" >Neural Engineering</a> <span class="pull-right">2018-01-27</span>
+<a href="/res/sheets/NeuralEngineering.pdf" >Neural Engineering</a> <span class="pull-right">2018-06-08</span>
 </p>
 <p>
-<a href="https://github.com/MaKeAppDev/FS-NMdE" target="_blank"> <i class="fab fa-github"></i></a> <a href="/res/sheets/Numerik.pdf" >Numerische Methoden der Elektrotechnik</a> <span class="pull-right">2018-01-27</span>
+<a href="https://github.com/MaKeAppDev/FS-NMdE" target="_blank"> <i class="fab fa-github"></i></a> <a href="/res/sheets/Numerik.pdf" >Numerische Methoden der Elektrotechnik</a> <span class="pull-right">2018-06-08</span>
 </p>
 <p>
 <a href="https://github.com/MaKeAppDev/Skript-NMdE" target="_blank"> <i class="fab fa-github"></i> </a><a href="https://lootsch.cetus.uberspace.de/latex/Skript-NMdE.pdf" class="file" target="_blank"> Numerische Methoden der Elektrotechnik Skript</a>
 </p>
 <p>
-<a href="/res/sheets/VHDL.pdf" >VHDL</a> <span class="pull-right">2018-01-27</span>
+<a href="/res/sheets/VHDL.pdf" >VHDL</a> <span class="pull-right">2018-06-08</span>
 </p>
 <p>
-<a href="/res/sheets/Batteriespeicher.pdf" >Batteriespeicher</a> <span class="pull-right">2018-01-27</span>
+<a href="/res/sheets/Batteriespeicher.pdf" >Batteriespeicher</a> <span class="pull-right">2018-06-08</span>
 </p>
 <p>
-<a href="/res/sheets/LowPower.pdf" >Low Power Design</a> <span class="pull-right">2018-01-27</span>
+<a href="/res/sheets/LowPower.pdf" >Low Power Design</a> <span class="pull-right">2018-06-08</span>
 </p>
 <p>
-<a href="https://github.com/MaKeAppDev/FS-RTPL" target="_blank"> <i class="fab fa-github"></i></a> <a href="/res/sheets/FS-RTPL.pdf" >Real Time Programming Languages</a> <span class="pull-right">2018-01-27</span>
+<a href="https://github.com/MaKeAppDev/FS-RTPL" target="_blank"> <i class="fab fa-github"></i></a> <a href="/res/sheets/FS-RTPL.pdf" >Real Time Programming Languages</a> <span class="pull-right">2018-06-08</span>
 </p>
 <p>
-<a href="/res/sheets/System-On-Chip.pdf" >System-on-Chip Technologies</a> <span class="pull-right">2018-01-27</span>
+<a href="/res/sheets/System-On-Chip.pdf" >System-on-Chip Technologies</a> <span class="pull-right">2018-06-08</span>
 </p>
 <p>
-<a href="/res/sheets/Mobile-Test.pdf" >System-on-Chip Mobile Version</a> <span class="pull-right">2018-01-27</span>
+<a href="/res/sheets/Mobile-Test.pdf" >System-on-Chip Mobile Version</a> <span class="pull-right">2018-06-08</span>
 </p>
 <p>
-<a href="https://github.com/latex4ei/Statistical-Signal-Processing" target="_blank"> <i class="fab fa-github"></i></a> <a href="/res/sheets/StaSigProc.pdf" >Statistical Signal Processing</a> <span class="pull-right">2018-01-27</span>
+<a href="https://github.com/latex4ei/Statistical-Signal-Processing" target="_blank"> <i class="fab fa-github"></i></a> <a href="/res/sheets/StaSigProc.pdf" >Statistical Signal Processing</a> <span class="pull-right">2018-06-08</span>
 </p>
 <p>
-<a href="/res/sheets/ModelEmbeddedSystems.pdf" >Modeling and Verification of Embedded Systems</a> <span class="pull-right">2018-01-27</span>
+<a href="/res/sheets/ModelEmbeddedSystems.pdf" >Modeling and Verification of Embedded Systems</a> <span class="pull-right">2018-06-08</span>
 </p>
 <p>
-<a href="https://github.com/latex4ei/Dynamische-Systeme" target="_blank"> <i class="fab fa-github"></i></a> <a href="/res/sheets/DynSysFS.pdf" >Dynamische Systeme</a> <span class="pull-right">2018-01-27</span>
+<a href="https://github.com/latex4ei/Dynamische-Systeme" target="_blank"> <i class="fab fa-github"></i></a> <a href="/res/sheets/DynSysFS.pdf" >Dynamische Systeme</a> <span class="pull-right">2018-06-08</span>
 </p>
 </td>
 </tr>
@@ -1202,13 +1213,13 @@
 </td>
 <td>
 <p>
-<a href="/res/sheets/latex.tex" >LaTeX Einführung als .tex Vorlage</a> <span class="pull-right">2018-01-27</span>
+<a href="/res/sheets/latex.tex" >LaTeX Einführung als .tex Vorlage</a> <span class="pull-right">2018-06-08</span>
 </p>
 <p>
-<a href="https://github.com/latex4ei/LaTeX-Cheat-Sheet" target="_blank"> <i class="fab fa-github"></i></a> <a href="/res/sheets/LaTeX_CheatSheet.pdf" >LaTeX Cheat Sheet</a> <span class="pull-right">2018-01-27</span>
+<a href="https://github.com/latex4ei/LaTeX-Cheat-Sheet" target="_blank"> <i class="fab fa-github"></i></a> <a href="/res/sheets/LaTeX_CheatSheet.pdf" >LaTeX Cheat Sheet</a> <span class="pull-right">2018-06-08</span>
 </p>
 <p>
-<a href="/res/sheets/latexsymbols.pdf" >LaTeX Symbol Liste</a> <span class="pull-right">2018-01-27</span>
+<a href="/res/sheets/latexsymbols.pdf" >LaTeX Symbol Liste</a> <span class="pull-right">2018-06-08</span>
 </p>
 <p>
 <a href="https://github.com/latex4ei/latex4ei-packages" target="_blank"><i class="fab fa-github"></i> </a> <a href="https://github.com/latex4ei/latex4ei-packages/releases/latest"  class="file" target="_blank">LaTeX4EI Template für eigene Dokumente</a>
@@ -1320,29 +1331,29 @@ Achtung: Diese Formelsammlungen werden nicht mehr verwendet und nicht mehr verbe
 </td>
 <td>
 <p>
-<a href="https://github.com/latex4ei/Hoehere-Mathematik" target="_blank"> <i class="fab fa-github"></i></a> <a href="/res/sheets/MatheFS.pdf" >Höhere Mathematik 1 Formelsammlung</a> <span class="pull-right">2018-01-27</span>
+<a href="https://github.com/latex4ei/Hoehere-Mathematik" target="_blank"> <i class="fab fa-github"></i></a> <a href="/res/sheets/MatheFS.pdf" >Höhere Mathematik 1 Formelsammlung</a> <span class="pull-right">2018-06-08</span>
 </p>
 <p>
-<a href="/res/sheets/Mathe1SK.pdf" >Höhere Mathematik für Elektoringenieure 1 - Mitschrift</a> <span class="pull-right">2018-01-27</span>
+<a href="/res/sheets/Mathe1SK.pdf" >Höhere Mathematik für Elektoringenieure 1 - Mitschrift</a> <span class="pull-right">2018-06-08</span>
 </p>
 <p>
-<a href="https://github.com/latex4ei/Hoehere-Mathematik" target="_blank"> <i class="fab fa-github"></i></a> <a href="/res/sheets/Mathe2FS.pdf" >Höhere Mathematik 2 Formelsammlung </a> <span class="pull-right">2018-01-27</span>
+<a href="https://github.com/latex4ei/Hoehere-Mathematik" target="_blank"> <i class="fab fa-github"></i></a> <a href="/res/sheets/Mathe2FS.pdf" >Höhere Mathematik 2 Formelsammlung </a> <span class="pull-right">2018-06-08</span>
 </p>
 <p>
-<a href="https://github.com/latex4ei/Hoehere-Mathematik" target="_blank"> <i class="fab fa-github"></i></a> <a href="/res/sheets/Mathe3FS.pdf" >Höhere Mathematik 3 Formelsammlung</a> <span class="pull-right">2018-01-27</span>
+<a href="https://github.com/latex4ei/Hoehere-Mathematik" target="_blank"> <i class="fab fa-github"></i></a> <a href="/res/sheets/Mathe3FS.pdf" >Höhere Mathematik 3 Formelsammlung</a> <span class="pull-right">2018-06-08</span>
 </p>
 <p>
-<a href="/res/sheets/Mathe3FS_WS2012.pdf" >Höhere Mathematik 3 Formelsammlung</a> <span class="pull-right">2018-01-27</span>
+<a href="/res/sheets/Mathe3FS_WS2012.pdf" >Höhere Mathematik 3 Formelsammlung</a> <span class="pull-right">2018-06-08</span>
 </p>
 <p>(WS 2012/13 - Ulbrich)</p>
 <p>
-<a href="https://github.com/latex4ei/Hoehere-Mathematik" target="_blank"> <i class="fab fa-github"></i></a> <a href="/res/sheets/Mathe4FS.pdf" >Höhere Mathematik 4 Formelsammlung</a> <span class="pull-right">2018-01-27</span>
+<a href="https://github.com/latex4ei/Hoehere-Mathematik" target="_blank"> <i class="fab fa-github"></i></a> <a href="/res/sheets/Mathe4FS.pdf" >Höhere Mathematik 4 Formelsammlung</a> <span class="pull-right">2018-06-08</span>
 </p>
 <p>
-<a href="/res/sheets/Mathe4FS-SoSe14.pdf" >Höhere Mathematik 4 Formelsammlung (Sommersemester 2014)</a> <span class="pull-right">2018-01-27</span>
+<a href="/res/sheets/Mathe4FS-SoSe14.pdf" >Höhere Mathematik 4 Formelsammlung (Sommersemester 2014)</a> <span class="pull-right">2018-06-08</span>
 </p>
 <p>
-<a href="https://github.com/latex4ei/Hoehere-Mathematik" target="_blank"> <i class="fab fa-github"></i></a> <a href="/res/sheets/vorlesung_math4.pdf" >Mathematik für Elektoringenieure IV (Prof. Ulbrich) - Mitschrift</a> <span class="pull-right">2018-01-27</span>
+<a href="https://github.com/latex4ei/Hoehere-Mathematik" target="_blank"> <i class="fab fa-github"></i></a> <a href="/res/sheets/vorlesung_math4.pdf" >Mathematik für Elektoringenieure IV (Prof. Ulbrich) - Mitschrift</a> <span class="pull-right">2018-06-08</span>
 </p>
 </td>
 </tr>
@@ -1352,10 +1363,10 @@ Achtung: Diese Formelsammlungen werden nicht mehr verwendet und nicht mehr verbe
 </td>
 <td>
 <p>
-<a href="https://github.com/latex4ei/Digitaltechnik" target="_blank"> <i class="fab fa-github"></i></a> <a href="/res/sheets/FSDigitaltechnik-alte-Version.pdf" >Digitaltechnik Formelsammlung (bis WS 2012/13)</a> <span class="pull-right">2018-01-27</span>
+<a href="https://github.com/latex4ei/Digitaltechnik" target="_blank"> <i class="fab fa-github"></i></a> <a href="/res/sheets/FSDigitaltechnik-alte-Version.pdf" >Digitaltechnik Formelsammlung (bis WS 2012/13)</a> <span class="pull-right">2018-06-08</span>
 </p>
 <p>
-<a href="/res/sheets/Rauschen.pdf" >Rauschen (unvollständig)</a> <span class="pull-right">2018-01-27</span>
+<a href="/res/sheets/Rauschen.pdf" >Rauschen (unvollständig)</a> <span class="pull-right">2018-06-08</span>
 </p>
 </td>
 </tr>

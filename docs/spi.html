@@ -10,7 +10,7 @@
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="http://localhost:4000/spi">
+    <link rel="canonical" href="/spi">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -93,6 +93,12 @@
             </div>
             <div class="form-check dropdown-item">
               <label class="form-check-label">
+                <input class="form-check-input" id="checkbox_explanation" name="disp_opt" type="checkbox" checked="checked" onchange="Options.changeOption(this)">
+                  Explanations
+              </label>
+            </div>
+            <div class="form-check dropdown-item">
+              <label class="form-check-label">
                 <input class="form-check-input" id="checkbox_legend" name="disp_opt" type="checkbox" checked="checked" onchange="Options.changeOption(this)">
                   Legends
               </label>
@@ -126,10 +132,15 @@
 <!--=============================================================== -->
 <!-- KaTeX Tweaks -->
 <div id="title_def" class="collapse">
-<div class="card card-block">
-<p>
-<b>Definition:</b> SPI is serial bus.
+<div class="card border-primary mb-1">
+<div class="card-body">
+<h5 class="card-title text-primary">
+Definition
+</h5>
+<p class="card-text">
+SPI is serial bus.
 </p>
+</div>
 </div>
 </div>
 <h2 id="specification">Specification</h2>
@@ -172,10 +183,15 @@ Connection
 <dd>9'600 bit/s, 38'400 bit/s
 </dd>
 </dl>
-<div class="example card card-success">
-<div class="card-block">
+<div class='example card border-success mb-1'>
+<div class='card-body'>
+<h5 class="card-title text-success">
+Example
+</h5>
+<p class='card-text'>
 <h2 id="example-of-spi">Example of <abbr title="Serial Peripheral Interface" >SPI</abbr></h2>
 <p>This is a test</p>
+<p>
 </div>
 </div>
 <h3 id="legend">Legend</h3>
@@ -184,9 +200,14 @@ The equation is
 <p><span class="LaTeX">$$x = 3 + y$$</span></p>
 </div>
 <div id="eq_0" class="collapse">
-<div class="legend card card-info">
-<div class="card-block">
-<p><b>Legend:</b> where <span class="LaTeX">$x$</span> is a number and <span class="LaTeX">$y$</span> too</p>
+<div class="legend card border-info mb-1">
+<div class="card-body">
+<h5 class="card-title text-info">
+Legend
+</h5>
+<p class="card-text">
+<p>where <span class="LaTeX">$x$</span> is a number and <span class="LaTeX">$y$</span> too</p>
+</p>
 </div>
 </div>
 </div>

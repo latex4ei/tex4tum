@@ -10,7 +10,7 @@
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="http://localhost:4000/feature-test">
+    <link rel="canonical" href="/feature-test">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -93,6 +93,12 @@
             </div>
             <div class="form-check dropdown-item">
               <label class="form-check-label">
+                <input class="form-check-input" id="checkbox_explanation" name="disp_opt" type="checkbox" checked="checked" onchange="Options.changeOption(this)">
+                  Explanations
+              </label>
+            </div>
+            <div class="form-check dropdown-item">
+              <label class="form-check-label">
                 <input class="form-check-input" id="checkbox_legend" name="disp_opt" type="checkbox" checked="checked" onchange="Options.changeOption(this)">
                   Legends
               </label>
@@ -122,10 +128,15 @@
 <!--=============================================================== -->
 <!-- KaTeX Tweaks -->
 <div id="title_def" class="collapse">
-<div class="card card-block">
-<p>
-<b>Definition:</b> A Feature Test Site demonstrates the features.
+<div class="card border-primary mb-1">
+<div class="card-body">
+<h5 class="card-title text-primary">
+Definition
+</h5>
+<p class="card-text">
+A Feature Test Site demonstrates the features.
 </p>
+</div>
 </div>
 </div>
 <h2 id="equations">Equations</h2>
@@ -134,9 +145,14 @@
 <p><span class="LaTeX">$$\int \sqrt{x^2} {\,\text{d}}x = \frac{1}{3} x^3$$</span></p>
 </div>
 <div id="eq_0" class="collapse">
-<div class="legend card card-info">
-<div class="card-block">
-<p><b>Legend:</b> where <span class="LaTeX">$x$</span> is a number and <span class="LaTeX">$y$</span> too</p>
+<div class="legend card border-info mb-1">
+<div class="card-body">
+<h5 class="card-title text-info">
+Legend
+</h5>
+<p class="card-text">
+<p>where <span class="LaTeX">$x$</span> is a number and <span class="LaTeX">$y$</span> too</p>
+</p>
 </div>
 </div>
 </div>
@@ -166,10 +182,15 @@
 </table>
 <h2 id="abbreviations">Abbreviations</h2>
 <p>Do you know what <abbr title="JavaScript" >JS</abbr> is? Or <abbr title="Random Access Memory" >RAM</abbr>? <abbr title="Read-Only Memory" >ROM</abbr> at the start of a sentence.</p>
-<div class="example card card-success">
-<div class="card-block">
+<div class='example card border-success mb-1'>
+<div class='card-body'>
+<h5 class="card-title text-success">
+Example
+</h5>
+<p class='card-text'>
 <h2 id="example-of-classes">Example of Classes</h2>
 <p>This is an example to demonstrate the auto detection of an example even over several lines</p>
+<p>
 </div>
 </div>
 <h2 id="tab-experiments">Tab experiments</h2>

@@ -10,7 +10,7 @@
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="http://localhost:4000/kalman-filter">
+    <link rel="canonical" href="/kalman-filter">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -93,6 +93,12 @@
             </div>
             <div class="form-check dropdown-item">
               <label class="form-check-label">
+                <input class="form-check-input" id="checkbox_explanation" name="disp_opt" type="checkbox" checked="checked" onchange="Options.changeOption(this)">
+                  Explanations
+              </label>
+            </div>
+            <div class="form-check dropdown-item">
+              <label class="form-check-label">
                 <input class="form-check-input" id="checkbox_legend" name="disp_opt" type="checkbox" checked="checked" onchange="Options.changeOption(this)">
                   Legends
               </label>
@@ -122,10 +128,15 @@
 <!--=============================================================== -->
 <!-- KaTeX Tweaks -->
 <div id="title_def" class="collapse">
-<div class="card card-block">
-<p>
-<b>Definition:</b> The Kalman Filter is a linear quadratic estimator used to estimate the state of a system by combining sensor measurements and a (physical) process model of the system. It works optimal if measurements and process variations have white gaussian noise.
+<div class="card border-primary mb-1">
+<div class="card-body">
+<h5 class="card-title text-primary">
+Definition
+</h5>
+<p class="card-text">
+The Kalman Filter is a linear quadratic estimator used to estimate the state of a system by combining sensor measurements and a (physical) process model of the system. It works optimal if measurements and process variations have white gaussian noise.
 </p>
+</div>
 </div>
 </div>
 <h2 id="working-principle">Working Principle</h2>
@@ -145,9 +156,14 @@
 <h3 id="state-space">State Space</h3>
 <p><span class="LaTeX">$\vec{x}_{n} = {\mathbf{G}}_n \vec{x}_{n-1} + {\mathbf{B}} \vec{u}_n + \vec{v}_n$</span> <br> <span class="LaTeX">$\vec{y}_{n} = {\mathbf{H}}_{n} \vec{x}_{n-1} + \vec{w}_{n}$</span></p>
 <div class="collapse">
-<div class="legend card card-info">
-<div class="card-block">
-<p><b>Legend:</b> <span class="LaTeX">$k$</span> states <span class="LaTeX">$\vec x$</span>, transition matrix <span class="LaTeX">${\mathbf{G}}$</span>, gaussian process noise <span class="LaTeX">$\vec v_n$</span>, input <span class="LaTeX">$\vec u$</span>, <span class="LaTeX">$l$</span> measurements <span class="LaTeX">$\vec y$</span>, measurement model <span class="LaTeX">${\mathbf{H}}$</span>, gaussian measurement noise <span class="LaTeX">$\vec w_n$</span>, time point <span class="LaTeX">$n$</span></p>
+<div class="legend card border-info mb-1">
+<div class="card-body">
+<h5 class="card-title text-info">
+Legend
+</h5>
+<p class="card-text">
+<span class="LaTeX">$k$</span> states <span class="LaTeX">$\vec x$</span>, transition matrix <span class="LaTeX">${\mathbf{G}}$</span>, gaussian process noise <span class="LaTeX">$\vec v_n$</span>, input <span class="LaTeX">$\vec u$</span>, <span class="LaTeX">$l$</span> measurements <span class="LaTeX">$\vec y$</span>, measurement model <span class="LaTeX">${\mathbf{H}}$</span>, gaussian measurement noise <span class="LaTeX">$\vec w_n$</span>, time point <span class="LaTeX">$n$</span>
+</p>
 </div>
 </div>
 </div>
@@ -168,10 +184,15 @@
 <h2 id="sensor-fusion">Sensor Fusion</h2>
 <p>If <span class="LaTeX">$i$</span> sensors measure the same state <span class="LaTeX">$x_j$</span>, this can be expressed in the measurement matrix <span class="LaTeX">${\mathbf{H}}$</span>. The column <span class="LaTeX">$j$</span> will have <span class="LaTeX">$i$</span> rows with entries.</p>
 <h2 id="example">Example</h2>
-<div class="example card card-success">
-<div class="card-block">
+<div class='example card border-success mb-1'>
+<div class='card-body'>
+<h5 class="card-title text-success">
+Example
+</h5>
+<p class='card-text'>
 <p>Kalman Filter for Gyroscope and Accelerometer:</p>
-<p>state <span class="LaTeX">$\vec x$</span> are the orientation angles roll and pitch and the bias angle</p>
+state <span class="LaTeX">$\vec x$</span> are the orientation angles roll and pitch and the bias angle
+<p>
 </div>
 </div>
 

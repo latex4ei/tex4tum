@@ -10,7 +10,7 @@
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="http://localhost:4000/trigonometry">
+    <link rel="canonical" href="/trigonometry">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -93,6 +93,12 @@
             </div>
             <div class="form-check dropdown-item">
               <label class="form-check-label">
+                <input class="form-check-input" id="checkbox_explanation" name="disp_opt" type="checkbox" checked="checked" onchange="Options.changeOption(this)">
+                  Explanations
+              </label>
+            </div>
+            <div class="form-check dropdown-item">
+              <label class="form-check-label">
                 <input class="form-check-input" id="checkbox_legend" name="disp_opt" type="checkbox" checked="checked" onchange="Options.changeOption(this)">
                   Legends
               </label>
@@ -137,6 +143,7 @@
 <!-- SI Units -->
 <!--=============================================================== -->
 <!-- KaTeX Tweaks -->
+<h2 id="unit-circle">Unit Circle</h2>
 <figure>
 <object class="img-fluid" id="UC" data="res/img/dynamic-images/unit_circle.svg" type="image/svg+xml">
 </object>
@@ -148,9 +155,14 @@
 <p><span class="LaTeX">$$\sin(\alpha) = \frac{y}{r}$$</span></p>
 </div>
 <div id="eq_0" class="collapse">
-<div class="legend card card-info">
-<div class="card-block">
-<p><b>Legend:</b> with angle <span class="LaTeX">$\alpha$</span>, radius <span class="LaTeX">$r$</span></p>
+<div class="legend card border-info mb-1">
+<div class="card-body">
+<h5 class="card-title text-info">
+Legend
+</h5>
+<p class="card-text">
+<p>with angle <span class="LaTeX">$\alpha$</span>, radius <span class="LaTeX">$r$</span></p>
+</p>
 </div>
 </div>
 </div>
@@ -158,9 +170,14 @@
 <p><span class="LaTeX">$$\cos(\alpha) = \frac{x}{r}$$</span></p>
 </div>
 <div id="eq_1" class="collapse">
-<div class="legend card card-info">
-<div class="card-block">
-<p><b>Legend:</b> with angle <span class="LaTeX">$\alpha$</span>, radius <span class="LaTeX">$r$</span></p>
+<div class="legend card border-info mb-1">
+<div class="card-body">
+<h5 class="card-title text-info">
+Legend
+</h5>
+<p class="card-text">
+<p>with angle <span class="LaTeX">$\alpha$</span>, radius <span class="LaTeX">$r$</span></p>
+</p>
 </div>
 </div>
 </div>
@@ -168,9 +185,14 @@
 <p><span class="LaTeX">$$\tan(\alpha) = \frac{y}{x}$$</span></p>
 </div>
 <div id="eq_2" class="collapse">
-<div class="legend card card-info">
-<div class="card-block">
-<p><b>Legend:</b> with angle <span class="LaTeX">$\alpha$</span>, radius <span class="LaTeX">$r$</span></p>
+<div class="legend card border-info mb-1">
+<div class="card-body">
+<h5 class="card-title text-info">
+Legend
+</h5>
+<p class="card-text">
+<p>with angle <span class="LaTeX">$\alpha$</span>, radius <span class="LaTeX">$r$</span></p>
+</p>
 </div>
 </div>
 </div>
@@ -183,7 +205,7 @@
 <thead>
 <tr class="header">
 <th>Properties</th>
-<th>Equation a Test</th>
+<th>Equation</th>
 </tr>
 </thead>
 <tbody>
