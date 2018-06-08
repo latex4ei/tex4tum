@@ -42,7 +42,7 @@ module Jekyll
     def render(context)
       #puts context
       # First class element is required for JS
-      "<div#{@id_field} class='collapse'><div class='card card-block'><p><b>Definition:</b> #{super}</p></div></div>"
+      "<div#{@id_field} class='collapse'><div class='card card-block bg-primary'><p><b>Definition:</b> #{super}</p></div></div>"
     end
   end
 
@@ -50,10 +50,18 @@ module Jekyll
 
     def render(context)
       # First class element is required for JS
-      "<div class='example card card-success'><div class='card-block'>#{super}</div></div>"
+      "<div class='example card bg-success'><div class='card-block'>#{super}</div></div>"
     end
   end
 
+
+  class Explanation < Liquid::Block
+
+    def render(context)
+      # First class element is required for JS
+      "<div class='explanation card bg-success'><div class='card-block'>#{super}</div></div>"
+    end
+  end
 
 
 
@@ -131,6 +139,7 @@ Liquid::Template.register_tag('inlineimage', Jekyll::InlineImage)
 Liquid::Template.register_tag('mermaid', Jekyll::Mermaid)
 Liquid::Template.register_tag('definition', Jekyll::Definition)
 Liquid::Template.register_tag('example', Jekyll::Example)
+Liquid::Template.register_tag('explanation', Jekyll::Explanation)
 Liquid::Template.register_tag('legend', Jekyll::Legend)
 Liquid::Template.register_tag('emphbox', Jekyll::EmphBox)
 Liquid::Template.register_tag('tabbox', Jekyll::TabBox)

@@ -23,9 +23,13 @@ The articles are based on the cheat sheets from [www.latex4ei.de](http://www.lat
 * Abbreviations: Hover your mouse over an abbreviation to see the full name
 
 ## Future Plans
-* TOC and centered search on start page
-* consistent JS framework for interactive content
-* Improved search: Sorting results, reaction to no results
+* Auto generated TOC for folders
+* Generate internal links to terms used in the text
+* Solve math equations (Math JS)
+* Topic Concepts
+* Summary/Concept boxes (e.g. for buses: speed, wires, range)
+* consistent JS framework for interactive content 
+* Improved search: Sorting results, reaction to no results (forward to wolfram alpha)
 * More content
 
 ## Internal Working

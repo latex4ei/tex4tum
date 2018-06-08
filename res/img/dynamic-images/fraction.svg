@@ -17,9 +17,9 @@
 	<rect id="anchor" y="220.66" width="1.7967" x="141.72" height="1.7551"/>
 	<path id="ray" d="m141.96 218v-75.36-75.355" style="stroke:#000;stroke-width:8.7057;marker-mid:url(#Arrow1Sstart);fill:none" onmousedown="rotateLine(this.id)"/>
 	<path id="pass" style="stroke:#052;stroke-width:4.2762;marker-end:url(#a);fill:none" onmousedown="rotateLine(this.id)" d="m141.73 217.73v-145.46"/>
-	<text id="n1_val" style="font-size:24px" space="preserve" onclick="askValue(this.id)" y="209.86768" x="245.82343">1.2</text>
-	<text id="n2_val" style="font-size:24px" space="preserve" onclick="askValue(this.id)" y="251.89607" x="244.11113">1.5</text>
-	<text style="font-size:24px" space="preserve" y="85.252937" x="3.4076719"><tspan>α = </tspan><tspan id="alpha" onclick="askValue(this.id)">30</tspan></text>
+	<text style="font-size:20px" space="preserve" y="209.86768" x="232.0"><tspan>n₁ = </tspan><tspan id="n1_val" onclick="askValue(this.id)">1.0</tspan></text>
+	<text style="font-size:20px" space="preserve" y="251.89607" x="232.0"><tspan>n₂ = </tspan><tspan id="n2_val" onclick="askValue(this.id)">1.5</tspan></text>
+	<text style="font-size:20px" space="preserve" y="85.252937" x="3.4076719"><tspan>α = </tspan><tspan id="alpha" onclick="askValue(this.id)">30</tspan></text>
 	<path id="frac" d="m141.93 218.15v-127.92" style="stroke-dasharray:4.0102, 8.0204;stroke:#025;stroke-width:4.0102;marker-end:url(#Arrow2Mend);fill:none" onmousedown="rotateLine(this.id)"/>
 	<script type="text/javascript">
 var dragX, dragY;
