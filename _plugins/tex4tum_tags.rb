@@ -31,7 +31,7 @@ module Jekyll
     def initialize(tag_name, params, tokens)
       super
       if(params != "")
-      	field = " id='#{params}'"	
+      	field = " id='#{params}'"
       else
       	field = ""
       end
@@ -42,7 +42,7 @@ module Jekyll
     def render(context)
       #puts context
       # First class element is required for JS
-      "<div#{@id_field} class='collapse'><div class='card card-block bg-primary'><p><b>Definition:</b> #{super}</p></div></div>"
+      "<div#{@id_field} class='collapse'><div class='card border-primary mb-1'><div class='card-body'><h5 class='card-title text-primary'>Definition</h5><p class='card-text'>#{super}</p></div></div></div>"
     end
   end
 
@@ -50,7 +50,7 @@ module Jekyll
 
     def render(context)
       # First class element is required for JS
-      "<div class='example card bg-success'><div class='card-block'>#{super}</div></div>"
+      "<div class='example card border-success mb-1'><div class='card-body'><h5 class='card-title text-success'>Example</h5><p class='card-text'>#{super}<p></div></div>"
     end
   end
 
@@ -59,7 +59,7 @@ module Jekyll
 
     def render(context)
       # First class element is required for JS
-      "<div class='explanation card bg-success'><div class='card-block'>#{super}</div></div>"
+      "<div class='explanation card border-warning mb-1'><div class='card-body'><h5 class='card-title text-warning'>Explanation</h5><p class='card-text'>#{super}<p></div></div>"
     end
   end
 
@@ -70,7 +70,7 @@ module Jekyll
     def initialize(tag_name, params, tokens)
       super
       if(params != "")
-      	field = " id='#{params}'"	
+      	field = " id='#{params}'"
       else
       	field = ""
       end
@@ -80,14 +80,14 @@ module Jekyll
 
     def render(context)
       # First class element is required for JS
-      "<div#{@id_field} class='collapse'><div class='legend card card-info'><div class='card-block'><b>Legend:</b> #{super}</div></div></div>"
+      "<div#{@id_field} class='collapse'><div class='legend card border-info mb-1'><div class='card-body'><h5 class='card-title text-info'>Legend</h5><p class='card-text'>#{super}</p></div></div></div>"
     end
   end
 
   class EmphBox < Liquid::Block
 
     def render(context)
-      "<div class='card card-outline-danger text-center'><div class='card-block'>#{super}</div></div>"
+      "<div class='card border-danger'><div class='card-body'><p class='card-text text-center'>#{super}<p></div></div>"
     end
   end
 

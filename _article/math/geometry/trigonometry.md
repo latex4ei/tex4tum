@@ -3,6 +3,7 @@ title: Trigonometry
 tags: [Sinus, Cosinus, Tangens, Arctan]
 ---
 
+## Unit Circle
 {% include svg-object.html id="UC" filename="unit_circle.svg" %}
 
 ## Basic Relations
@@ -19,7 +20,7 @@ with angle $\alpha$, radius $r$
 
 ## Properties
 
-| Properties |    Equation      a Test        |
+| Properties |    Equation  |
 |---|-----------------------|
 | Symmetry | $\sin(-x)=-\sin(x)$  $\cos (-x) = \cos (x)$ |
 | Complex | $e^{\i x}=\cos(x)+\i\sin(x)$  $e^{-\i x}=\sin(x)-\i\cos(x)$ |
