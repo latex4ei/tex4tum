@@ -10,7 +10,7 @@
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="http://localhost:4000/go">
+    <link rel="canonical" href="/go">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -93,6 +93,12 @@
             </div>
             <div class="form-check dropdown-item">
               <label class="form-check-label">
+                <input class="form-check-input" id="checkbox_explanation" name="disp_opt" type="checkbox" checked="checked" onchange="Options.changeOption(this)">
+                  Explanations
+              </label>
+            </div>
+            <div class="form-check dropdown-item">
+              <label class="form-check-label">
                 <input class="form-check-input" id="checkbox_legend" name="disp_opt" type="checkbox" checked="checked" onchange="Options.changeOption(this)">
                   Legends
               </label>
@@ -122,10 +128,15 @@
 <!--=============================================================== -->
 <!-- KaTeX Tweaks -->
 <div id="title_def" class="collapse">
-<div class="card card-block">
-<p>
-<b>Definition:</b> Go is a compiled, statically typed programming language developed by Google.
+<div class="card border-primary mb-1">
+<div class="card-body">
+<h5 class="card-title text-primary">
+Definition
+</h5>
+<p class="card-text">
+Go is a compiled, statically typed programming language developed by Google.
 </p>
+</div>
 </div>
 </div>
 <h2 id="features">Features</h2>
@@ -144,8 +155,12 @@
 <li>Go supports complex numbers: <code>var z complex = 5 + 3i</code></li>
 <li>concurrent tasks are created with <code>go test()</code></li>
 </ul>
-<div class="example card card-success">
-<div class="card-block">
+<div class='example card border-success mb-1'>
+<div class='card-body'>
+<h5 class="card-title text-success">
+Example
+</h5>
+<p class='card-text'>
 <h2 id="example-hello-world">Example: Hello World</h2>
 <figure class="highlight">
 <pre><code class="language-go" data-lang="go"><span></span><span class="kn">package</span> <span class="nx">main</span>
@@ -156,6 +171,7 @@
     <span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Hello, World&quot;</span><span class="p">)</span>
 <span class="p">}</span></code></pre>
 </figure>
+<p>
 </div>
 </div>
 

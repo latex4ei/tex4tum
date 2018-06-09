@@ -10,7 +10,7 @@
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="http://localhost:4000/oop">
+    <link rel="canonical" href="/oop">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -93,6 +93,12 @@
             </div>
             <div class="form-check dropdown-item">
               <label class="form-check-label">
+                <input class="form-check-input" id="checkbox_explanation" name="disp_opt" type="checkbox" checked="checked" onchange="Options.changeOption(this)">
+                  Explanations
+              </label>
+            </div>
+            <div class="form-check dropdown-item">
+              <label class="form-check-label">
                 <input class="form-check-input" id="checkbox_legend" name="disp_opt" type="checkbox" checked="checked" onchange="Options.changeOption(this)">
                   Legends
               </label>
@@ -122,10 +128,15 @@
 <!--=============================================================== -->
 <!-- KaTeX Tweaks -->
 <div id="title_def" class="collapse">
-<div class="card card-block">
-<p>
-<b>Definition:</b> OOP is attractive to handle complexity and achieve modularity and maintainability of large programs.
+<div class="card border-primary mb-1">
+<div class="card-body">
+<h5 class="card-title text-primary">
+Definition
+</h5>
+<p class="card-text">
+OOP is attractive to handle complexity and achieve modularity and maintainability of large programs.
 </p>
+</div>
 </div>
 </div>
 <p>Class: A specification of an object Object: The instance of a class</p>
@@ -149,10 +160,15 @@
 <h2 id="likov-substitution-principle">Likov Substitution Principle</h2>
 <p>Methods of a base type must be applicable and behave the same for derived types of that base type.</p>
 <p>The LSP is important to avoid problems with polymorphism.</p>
-<div class="example card card-success">
-<div class="card-block">
+<div class='example card border-success mb-1'>
+<div class='card-body'>
+<h5 class="card-title text-success">
+Example
+</h5>
+<p class='card-text'>
 <p>For example, if a type wombat is derived from a type animal, then every behavior that applies class-wide to an animal must also apply in the same way to a wombat.</p>
-<p>A typical example of a violation of the principle is a square type derived from a rectangle type. A possible precondition of a rectangle type would be that width and height must be positive, however, for a square type the precondition is strengthened because width and height must be the same.</p>
+A typical example of a violation of the principle is a square type derived from a rectangle type. A possible precondition of a rectangle type would be that width and height must be positive, however, for a square type the precondition is strengthened because width and height must be the same.
+<p>
 </div>
 </div>
 

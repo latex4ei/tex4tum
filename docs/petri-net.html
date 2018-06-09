@@ -10,7 +10,7 @@
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="http://localhost:4000/petri-net">
+    <link rel="canonical" href="/petri-net">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -93,6 +93,12 @@
             </div>
             <div class="form-check dropdown-item">
               <label class="form-check-label">
+                <input class="form-check-input" id="checkbox_explanation" name="disp_opt" type="checkbox" checked="checked" onchange="Options.changeOption(this)">
+                  Explanations
+              </label>
+            </div>
+            <div class="form-check dropdown-item">
+              <label class="form-check-label">
                 <input class="form-check-input" id="checkbox_legend" name="disp_opt" type="checkbox" checked="checked" onchange="Options.changeOption(this)">
                   Legends
               </label>
@@ -122,10 +128,15 @@
 <!--=============================================================== -->
 <!-- KaTeX Tweaks -->
 <div id="title_def" class="collapse">
-<div class="card card-block">
-<p>
-<b>Definition:</b> A petri net <span class="LaTeX">$N = (P,T,E)$</span> is a graph to model distributed systems. It consists of <em>places</em> <span class="LaTeX">$P$</span> and <em>transitions</em> <span class="LaTeX">$T$</span>, which are connected by directed edges <span class="LaTeX">$E$</span>.
+<div class="card border-primary mb-1">
+<div class="card-body">
+<h5 class="card-title text-primary">
+Definition
+</h5>
+<p class="card-text">
+A petri net <span class="LaTeX">$N = (P,T,E)$</span> is a graph to model distributed systems. It consists of <em>places</em> <span class="LaTeX">$P$</span> and <em>transitions</em> <span class="LaTeX">$T$</span>, which are connected by directed edges <span class="LaTeX">$E$</span>.
 </p>
+</div>
 </div>
 </div>
 <p>The places are marked with tokens. Tokens are transported by the edges. A transition consumes and produces tokens. The state of the net is defined by the numbers of tokens at each place.</p>

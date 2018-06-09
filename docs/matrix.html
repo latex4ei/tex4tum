@@ -10,7 +10,7 @@
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="http://localhost:4000/matrix">
+    <link rel="canonical" href="/matrix">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -93,6 +93,12 @@
             </div>
             <div class="form-check dropdown-item">
               <label class="form-check-label">
+                <input class="form-check-input" id="checkbox_explanation" name="disp_opt" type="checkbox" checked="checked" onchange="Options.changeOption(this)">
+                  Explanations
+              </label>
+            </div>
+            <div class="form-check dropdown-item">
+              <label class="form-check-label">
                 <input class="form-check-input" id="checkbox_legend" name="disp_opt" type="checkbox" checked="checked" onchange="Options.changeOption(this)">
                   Legends
               </label>
@@ -122,15 +128,25 @@
 <!--=============================================================== -->
 <!-- KaTeX Tweaks -->
 <div class="collapse">
-<div class="card card-block">
-<p>
-<b>Definition:</b> A Matrix is a table of math objects.
+<div class="card border-primary mb-1">
+<div class="card-body">
+<h5 class="card-title text-primary">
+Definition
+</h5>
+<p class="card-text">
+A Matrix is a table of math objects.
 </p>
 </div>
 </div>
-<div class="example card card-success">
-<div class="card-block">
-<p>For example a matrix <span class="LaTeX">${\mathbf{A}} \in \mathbb K^{2\times 3}$</span> could be <span class="LaTeX">${\mathbf{A}} = {\begin{bmatrix}  a &amp; b &amp; c \\ d &amp; e &amp; f \end{bmatrix}}$</span>.</p>
+</div>
+<div class='example card border-success mb-1'>
+<div class='card-body'>
+<h5 class="card-title text-success">
+Example
+</h5>
+<p class='card-text'>
+For example a matrix <span class="LaTeX">${\mathbf{A}} \in \mathbb K^{2\times 3}$</span> could be <span class="LaTeX">${\mathbf{A}} = {\begin{bmatrix}  a &amp; b &amp; c \\ d &amp; e &amp; f \end{bmatrix}}$</span>.
+<p>
 </div>
 </div>
 <p><span class="LaTeX">${\mathbf{A}}=(a_{ij}) \in \mathbb K^{m\times n}$</span> has <span class="LaTeX">$m$</span> rows (index <span class="LaTeX">$i$</span>) and <span class="LaTeX">$n$</span> columns (index <span class="LaTeX">$j$</span>)</p>

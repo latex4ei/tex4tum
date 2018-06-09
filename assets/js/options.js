@@ -2,7 +2,7 @@ var Options = (function () {
 
     // list of options
     var lstOptions =     ["definition", "example", "legend"];
-    var defaultOptions = [ true       , true     , false   ];
+    var defaultOptions = [ true       , true     , true   ];
 
     var VERSION_STRING = "0.01";
 

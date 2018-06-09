@@ -3,7 +3,6 @@ layout: home
 title: Tex4TUM
 ---
 
-
 <style>
 .feature-item{
 	text-align: center;
@@ -13,6 +12,7 @@ title: Tex4TUM
 	margin-top: 0.2em;
 }
 </style>
+
 ## Features
 <div class="row">
 <div class="col">
@@ -21,7 +21,7 @@ title: Tex4TUM
  <h2>Focused</h2>
  Short is default, details on demand. <a class="small">(click)</a>
  <div id="col_item_1" class="collapse">
- <div class="card card-block small">If you click on items, some will show additional information.</div>
+ <div class="card border-secondary small">If you click on items, some will show additional information.</div>
  </div>
 </div>
 </div>
@@ -31,7 +31,7 @@ title: Tex4TUM
  <h2>Interactive</h2>
  Manipulate diagrams, learn from the response.
  <div id="col_item_2" class="collapse">
- <div class="card card-block small">
+ <div class="card border-secondary small">
  Most diagrams should be interactive so that you can see how the output changes if you change the input.</div>
  </div>
 </div>
@@ -42,7 +42,7 @@ title: Tex4TUM
  <h2>Intuitive</h2>
  Consistent notation, structure, and style.
  <div id="col_item_3" class="collapse">
- <div class="card card-block small">Consistency will aid your understanding and eliminate confusion.</div>
+ <div class="card border-secondary small">Consistency will aid your understanding and eliminate confusion.</div>
  </div>
 </div>
 </div>
@@ -55,7 +55,7 @@ title: Tex4TUM
  <h2>Instant</h2>
  Search fuzzy, find answers immediately.<a class="small">(<code>tab</code>)</a>
  <div id="col_item_4" class="collapse">
- <div class="card card-block small">Hit <code>tab</code> and you will already see results while you type.</div>
+ <div class="card border-secondary small">Hit `tab` and you will already see results while you type.</div>
  </div>
 </div>
 </div>
@@ -66,7 +66,7 @@ title: Tex4TUM
  Free. Open Source. For everyone.
  <!--From students, for students.-->
  <div id="col_item_5" class="collapse">
- <div class="card card-block small">Powered by GitHub. Everyone can contribute to our articles.</div>
+ <div class="card border-secondary small">Powered by GitHub. Everyone can contribute to our articles.</div>
  </div>
 </div>
 </div>
@@ -76,12 +76,22 @@ title: Tex4TUM
  <h2>References</h2>
  Links to Wikipedia and other useful sources.
  <div id="col_item_6" class="collapse">
- <div class="card card-block small">References help you to find the origin of the information.</div>
+ <div class="card border-secondary small">References help you to find the origin of the information.</div>
  </div>
 </div>
 </div>
 </div>
 
-
+<div class="card bg-info mb-3">
+<div class="card-body">
+<h5 class="card-title">Nice interactive demos</h5>
+<p class="card-text">Checkout these pages for some nice interactive demos</p>
+<a href="./reflection.html" class="card-link">Reflection</a>
+<a href="./trigonometry.html" class="card-link">Trigonometry</a>
+<a href="./servo.html" class="card-link">Servo</a>
+<a href="./low-pass.html" class="card-link">Low Pass Filter</a>
+<a href="./maxwell.html" class="card-link">Maxwell Equations</a>
+</div>
+</div>
 
 {{ FOLDER_TOC }}

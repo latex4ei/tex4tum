@@ -10,7 +10,7 @@
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="http://localhost:4000/complex-number">
+    <link rel="canonical" href="/complex-number">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -93,6 +93,12 @@
             </div>
             <div class="form-check dropdown-item">
               <label class="form-check-label">
+                <input class="form-check-input" id="checkbox_explanation" name="disp_opt" type="checkbox" checked="checked" onchange="Options.changeOption(this)">
+                  Explanations
+              </label>
+            </div>
+            <div class="form-check dropdown-item">
+              <label class="form-check-label">
                 <input class="form-check-input" id="checkbox_legend" name="disp_opt" type="checkbox" checked="checked" onchange="Options.changeOption(this)">
                   Legends
               </label>
@@ -126,19 +132,29 @@
 <!--=============================================================== -->
 <!-- KaTeX Tweaks -->
 <div id="title_def" class="collapse">
-<div class="card card-block">
-<p>
-<b>Definition:</b> Complex numbers extend the concept of the one-dimensional number line to the two-dimensional complex plane by using the horizontal axis for the real part and the vertical axis for the imaginary part.
+<div class="card border-primary mb-1">
+<div class="card-body">
+<h5 class="card-title text-primary">
+Definition
+</h5>
+<p class="card-text">
+Complex numbers extend the concept of the one-dimensional number line to the two-dimensional complex plane by using the horizontal axis for the real part and the vertical axis for the imaginary part.
 </p>
+</div>
 </div>
 </div>
 <div data-toggle="collapse" href="#eq_0">
 <p><span class="LaTeX">$${{\mathbf{z}}} := a + b{\text{i}}= r \cdot \exp({\text{i}}\varphi)$$</span></p>
 </div>
 <div id="eq_0" class="collapse">
-<div class="legend card card-info">
-<div class="card-block">
-<p><b>Legend:</b> with Imaginary Unit <span class="LaTeX">${\text{i}}= \sqrt{-1}$</span>.</p>
+<div class="legend card border-info mb-1">
+<div class="card-body">
+<h5 class="card-title text-info">
+Legend
+</h5>
+<p class="card-text">
+<p>with Imaginary Unit <span class="LaTeX">${\text{i}}= \sqrt{-1}$</span>.</p>
+</p>
 </div>
 </div>
 </div>

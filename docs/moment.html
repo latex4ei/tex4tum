@@ -10,7 +10,7 @@
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="http://localhost:4000/moment">
+    <link rel="canonical" href="/moment">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -93,6 +93,12 @@
             </div>
             <div class="form-check dropdown-item">
               <label class="form-check-label">
+                <input class="form-check-input" id="checkbox_explanation" name="disp_opt" type="checkbox" checked="checked" onchange="Options.changeOption(this)">
+                  Explanations
+              </label>
+            </div>
+            <div class="form-check dropdown-item">
+              <label class="form-check-label">
                 <input class="form-check-input" id="checkbox_legend" name="disp_opt" type="checkbox" checked="checked" onchange="Options.changeOption(this)">
                   Legends
               </label>
@@ -122,10 +128,15 @@
 <!--=============================================================== -->
 <!-- KaTeX Tweaks -->
 <div id="title_def" class="collapse">
-<div class="card card-block">
-<p>
-<b>Definition:</b> The n-th moment of a continuous function <span class="LaTeX">$f(x)$</span> of a real variable <span class="LaTeX">$x$</span> about a value <span class="LaTeX">$c$</span> is
+<div class="card border-primary mb-1">
+<div class="card-body">
+<h5 class="card-title text-primary">
+Definition
+</h5>
+<p class="card-text">
+The n-th moment of a continuous function <span class="LaTeX">$f(x)$</span> of a real variable <span class="LaTeX">$x$</span> about a value <span class="LaTeX">$c$</span> is
 </p>
+</div>
 </div>
 </div>
 <p><span class="LaTeX">$$\mu _{n}=\int _{-\infty }^{\infty }(x-c)^{n}\,f(x){\,\text{d}}x$$</span></p>
@@ -135,9 +146,14 @@
 <p><span class="LaTeX">$$\mu_1 =\sum x_i \cdot P(x)$$</span></p>
 </div>
 <div id="eq_0" class="collapse">
-<div class="legend card card-info">
-<div class="card-block">
-<p><b>Legend:</b> with result <span class="LaTeX">$x$</span> and probability function <span class="LaTeX">$P()$</span></p>
+<div class="legend card border-info mb-1">
+<div class="card-body">
+<h5 class="card-title text-info">
+Legend
+</h5>
+<p class="card-text">
+<p>with result <span class="LaTeX">$x$</span> and probability function <span class="LaTeX">$P()$</span></p>
+</p>
 </div>
 </div>
 </div>
