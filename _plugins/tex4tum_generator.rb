@@ -54,12 +54,24 @@ module Jekyll
 
     LEGEND_REGEXP = %r{(?:^|\n)\s*((\$\$(?=[^\s$])(?:.*?)(?<=[^\s$\\])\$\$)\s*\n\s*((?:with|where|Legend:)\s+((?:.|\n)*?)\n\s*\n))}
 
+    RE_NL = %r{(?:^|\n)\s*}   # Newline
+    RE_BL = %r{(?:^|\n)\s*\n\s*}   # Blankline
+    RE_ANY = %r{((?:.|\n)*?)}       # Anything
+    RE_SE = %{\n\s*\n(?=\s*##|\Z))}  # Section End
+
+
+    #EXPLANATION_REGEXP = RE_NL+%r{((?:Explanation|Details):\s+(?:.|\n)*?)}+RE_BL
+    EXPLANATION_REGEXP = %r{(?:^|\n)\s*\n\s*(?:Explanation|Details):\s+((?:.|\n)*?)(?:^|\n)\s*\n\s*}
+    #RE_EXPLANATION_SECTION = %r{^\s*(##+\s(?:Explanation|Details).*)\n\s*((?:.|\n)*?)\n\s*\n(?=\s*##+|\Z))}
+    RE_EXAMPLE = %r{(?:^|\n)\s*\n\s*(?:Example|For Example):\s+((?:.|\n)*?)(?:^|\n)\s*\n\s*}
+
+
     UNICODE_TEX_HASH = {
       '<' => %q{\lt}, '>' => %q{\gt}, 
       "∈" => %q{\in},
       "α" => %q{\alpha}, "Α" => %q{\Alpha}, "β" => %q{\beta},
       "γ" => %q{\gamma}, "Γ" => %q{\alpha}, "δ" => %q{\dlpha}, "Δ" => %q{\Delta},
-      "ε" => %q{\epsilon}, "ζ" => %q{\zeta}, "η" => %q{\eta},
+      "ε" => %q{\varepsilon}, "ζ" => %q{\zeta}, "η" => %q{\eta},
       "θ" => %q{\theta}, "Θ" => %q{\Theta},
       "κ" => %q{\kappa}, "λ" => %q{\lambda}, "Λ" => %q{\Lambda},
       "μ" => %q{\mu}, "ν" => %q{\nu}, "ξ" => %q{\xi}, "Ξ" => %q{\Xi},
@@ -149,6 +161,7 @@ module Jekyll
         end
       end
 
+      # legends
       eq_num = 0
       content.scan(LEGEND_REGEXP) do |match|
         equation_par = match[0]   #$1
@@ -157,6 +170,15 @@ module Jekyll
         content = content.sub(match[0], equation_par)
         eq_num += 1
       end
+
+      # explanation
+      content = content.sub(EXPLANATION_REGEXP, "\n\n"+%q{{% explanation %}\1{% endexplanation %}}+"\n\n")
+      #content = content.sub(RE_EXPLANATION_SECTION, "\n\n"+%q{{% explanation %}\1{% endexplanation %}}+"\n\n")
+
+      # example
+      content = content.sub(RE_EXAMPLE, "\n\n"+%q{{% example %}\1{% endexample %}}+"\n\n")
+
+    
 
       return content
     end

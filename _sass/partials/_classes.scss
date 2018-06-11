@@ -15,3 +15,24 @@
   // background-color: $bg_tum_blue_dark;
 }
 
+
+// collapse title
+.clp_title.collapsed:before {
+     content: '+';
+}
+.clp_title.collapsed:after {
+     content: ' ...';
+}
+
+.clp_title:not(.collapsed):before {
+     content: '–';
+}
+
+// 
+// .example_title:not(.collapsed):after  {
+//     content: '-';
+// }
+
+
+
+

@@ -47,19 +47,35 @@ module Jekyll
   end
 
   class Example < Liquid::Block
+    def initialize(tag_name, text, tokens)
+      super
+      @example_idx = 0
+    end
 
     def render(context)
-      # First class element is required for JS
-      "<div class='example card border-success mb-1'><div class='card-body'><h5 class='card-title text-success'>Example</h5><p class='card-text'>#{super}<p></div></div>"
+      @example_idx += 1
+      """<h5 class='clp_title text-success' data-toggle='collapse' href='#example#{@example_idx}'><i class='fa fa-chart-bar'></i> Example</h5>
+  <div id='example#{@example_idx}' class='example collapse'><div class='card border-success mb-1'><div class='card-body'><p class='card-text'>#{super}<p>
+  </div></div></div>"""
     end
   end
 
 
   class Explanation < Liquid::Block
+    def initialize(tag_name, text, tokens)
+      super
+      @expl_id = 0
+    end
 
     def render(context)
+      @expl_id += 1
       # First class element is required for JS
-      "<div class='explanation card border-warning mb-1'><div class='card-body'><h5 class='card-title text-warning'>Explanation</h5><p class='card-text'>#{super}<p></div></div>"
+      #"<div class='explanation card border-warning mb-1'><div class='card-body'><h5 class='card-title text-warning'>Explanation</h5><p class='card-text'>#{super}<p></div></div>"
+      """<h5 class='clp_title text-warning' data-toggle='collapse' href='#expl#{@expl_id}'><i class='fa fa-comment-dots'></i> Explanation</h5>
+  <div id='expl#{@expl_id}' class='explanation collapse'><div class='card border-warning mb-1'><div class='card-body'>
+  <p class='card-text'>#{super}<p>
+  </div></div></div>"""
+  #<h5 class='card-title text-warning' data-toggle='collapse' href='#expl#{@expl_id}>Explanation</h5>
     end
   end
 
