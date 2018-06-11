@@ -1,6 +1,8 @@
 ---
 title: Physical Constants
 ---
+A physical constant is a physical quantity that is generally believed to be both universal in nature and have constant value in time. 
+
 
 | Constant | Value |
 |------|------|

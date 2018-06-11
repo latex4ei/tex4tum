@@ -3,12 +3,13 @@ title: Inter-Integrated Circuit I²C
 tags: [I2C, SDA, SCK]
 ---
 
-I2C is serial bus.
+I2C is serial bus used to attach lower-speed peripheral ICs to processors and microcontrollers in short-distance.
 
 
 ## Specification
 
-It has two signal lines *SDA* and *SCK*.
+I2C uses only two bidirectional open collector or open drain lines, *SDA* and *SCK*, which are pulled up with resistors. Typical voltages used are +5 V or +3.3 V.
+
 
 Transmission Speeds
 

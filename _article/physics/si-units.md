@@ -4,6 +4,7 @@ title: SI Units
 
 The System of International Units is a dimension system that is based on 7 base units.
 
+
 | **Dimension<br>Name** | **Dimension<br>Symbol** | **Unit<br>Name** | **Unit<br>Symbol** |
 |-----|----|---|---|
 | Length | L | Meter | $\si{\meter}$ |
@@ -11,7 +12,7 @@ The System of International Units is a dimension system that is based on 7 base 
 | Time | T | Second | $\si{\second}$ |
 | Current | I | Ampere | $\si{\ampere}$ |
 | Temperature | Θ | Kelvin | $\si{\second}$ |
-| Amount of substance | N | mol | $\si{\mol}$ |
+| Amount of substance | N | Mole | $\si{\mol}$ |
 | Luminous intensity | J | Candela | $\si{\candela}$ |
 
 
