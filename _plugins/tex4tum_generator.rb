@@ -46,23 +46,23 @@ module Jekyll
 
     ABBREVIATION_REGEXP = %r{(\*\[([^\]]+)\]:\s*([^\n]+)\n)}
     TODO_REGEXP = %r{(?:\s|^)((?:TODO:?|\\todo|@todo)\s(.*?))\n}
-    INNER_SECTION_REGEXP = %r{^\s*(##+\s(.*?)\n((?:.|\n)*?)\n\s*\n(?=\s*##|\Z))}
+    #INNER_SECTION_REGEXP = %r{^\s*(##+\s(.*?)\n((?:.|\n)*?)\n\s*\n(?=\s*##|\Z))}
     DEFINITION_REGEXP = %r{\A([A-Z](?:.|\n)*?)\n\s*\n}
 
     TEX_SINGLE_REGEXP = %r{(?:\s|^)\$(?=[^\s$])(.*?)(?<=[^\s$\\])\$(?:\s|$)}
     TEX_DUAL_REGEXP = %r{(?:^|\n)\s*\$\$(?=[^\s$])(.*?)(?<=[^\s$\\])\$\$\s*(?:\n|$)}
 
-    LEGEND_REGEXP = %r{(?:^|\n)\s*((\$\$(?=[^\s$])(?:.*?)(?<=[^\s$\\])\$\$)\s*\n\s*((?:with|where|Legend:)\s+((?:.|\n)*?)\n\s*\n))}
+    LEGEND_REGEXP = %r{(?:^|\n)\s*((\$\$(?=[^\s$])(?:.*?)(?<=[^\s$\\])\$\$)\s*\n\s*((?:with|where|Legend:)\s+((?:.|\n)*?))\n\s*\n)}
 
-    RE_NL = %r{(?:^|\n)\s*}   # Newline
-    RE_BL = %r{(?:^|\n)\s*\n\s*}   # Blankline
-    RE_ANY = %r{((?:.|\n)*?)}       # Anything
+    RE_NL = %r{(?:^|\n)\s*}          # Newline
+    RE_BL = %r{(?:^|\n)\s*\n\s*}     # Blankline
+    RE_ANY = %r{((?:.|\n)*?)}        # Anything
     RE_SE = %{\n\s*\n(?=\s*##|\Z))}  # Section End
 
 
     #EXPLANATION_REGEXP = RE_NL+%r{((?:Explanation|Details):\s+(?:.|\n)*?)}+RE_BL
     EXPLANATION_REGEXP = %r{(?:^|\n)\s*\n\s*(?:Explanation|Details):\s+((?:.|\n)*?)(?:^|\n)\s*\n\s*}
-    #RE_EXPLANATION_SECTION = %r{^\s*(##+\s(?:Explanation|Details).*)\n\s*((?:.|\n)*?)\n\s*\n(?=\s*##+|\Z))}
+    RE_EXPLANATION_SECTION = %r{(?<=^|\n)\s*##+\s*(Explanation.*?)\n\s*((?:.|\n)*?)\n.*\n(?=\s*##+|\Z)}    # \n\s*((?:.|\n)*?)\n\s*\n(?=\s*##+|\Z)
     RE_EXAMPLE = %r{(?:^|\n)\s*\n\s*(?:Example|For Example):\s+((?:.|\n)*?)(?:^|\n)\s*\n\s*}
 
 
@@ -137,7 +137,7 @@ module Jekyll
 
       # idea: find a definition and show it when the heading before it is clicked
 
-      #puts "START" + content
+      # puts "START" + content
       # title definition:
       # definition = content[DEFINITION_REGEXP, 1]
       # if definition
@@ -154,11 +154,19 @@ module Jekyll
     def replaceClasses(content)
       section_array = Array.new
 
-      content.scan(INNER_SECTION_REGEXP) do |match|
+      # regcognize sections (match between ## and ##)
+      level = 1
+      re_inner_section = %r{^\s*(\#{#{level}}+\s(.*?)\n((?:.|\n)*?)\n\s*\n(?=\s*\#{1,#{level}}|\Z))}
+      #content.scan(INNER_SECTION_REGEXP) do |match|
+      content.scan(re_inner_section) do |match|
         section_title = match[1]   #$1
         if section_title.include? "Example"
-          content = content.sub(match[0], %q{{% example %}} + "\n" + match[0] + "\n" + %q{{% endexample %}})
+          content = content.sub(match[0], "\n\n{\% example #{match[1]} \%}\n#{match[2]}\n{\% endexample \%}\n\n")
         end
+        if section_title.include? "Explanation"
+          content = content.sub(match[0], "\n\n{\% explanation #{match[1]}\%}\n#{match[2]}\n{\% endexplanation \%}\n\n")
+        end
+        #puts 'match0: '+match[0]+', match1:'+match[1]+', match2:'+match[2]
       end
 
       # legends
@@ -173,7 +181,6 @@ module Jekyll
 
       # explanation
       content = content.sub(EXPLANATION_REGEXP, "\n\n"+%q{{% explanation %}\1{% endexplanation %}}+"\n\n")
-      #content = content.sub(RE_EXPLANATION_SECTION, "\n\n"+%q{{% explanation %}\1{% endexplanation %}}+"\n\n")
 
       # example
       content = content.sub(RE_EXAMPLE, "\n\n"+%q{{% example %}\1{% endexample %}}+"\n\n")

@@ -42,37 +42,49 @@ module Jekyll
     def render(context)
       #puts context
       # First class element is required for JS
-      "<div#{@id_field} class='collapse'><div class='card border-primary mb-1'><div class='card-body'><h5 class='card-title text-primary'>Definition</h5><p class='card-text'>#{super}</p></div></div></div>"
+      "<div#{@id_field} class='definition collapse'><div class='card border-primary mb-1'><div class='card-body'><h5 class='card-title text-primary'>Definition</h5><p class='card-text'>#{super}</p></div></div></div>"
     end
   end
 
   class Example < Liquid::Block
-    def initialize(tag_name, text, tokens)
+    @@example_idx = 0
+    def initialize(tag_name, params, tokens)
       super
-      @example_idx = 0
+      if(params != "")
+        title = "#{params}"
+      else
+        title = "Example"
+      end
+      @heading = title
     end
 
     def render(context)
-      @example_idx += 1
-      """<h5 class='clp_title text-success' data-toggle='collapse' href='#example#{@example_idx}'><i class='fa fa-chart-bar'></i> Example</h5>
-  <div id='example#{@example_idx}' class='example collapse'><div class='card border-success mb-1'><div class='card-body'><p class='card-text'>#{super}<p>
+      @@example_idx += 1
+      """<h5 class='clp_title text-success' data-toggle='collapse' href='#example#{@@example_idx}'><i class='fa fa-chart-bar'></i> #{@heading}</h5>
+  <div id='example#{@@example_idx}' class='example collapse'><div class='card border-success mb-1'><div class='card-body'><p class='card-text'>#{super}<p>
   </div></div></div>"""
     end
   end
 
 
   class Explanation < Liquid::Block
-    def initialize(tag_name, text, tokens)
+    @@expl_id = 0
+    def initialize(tag_name, params, tokens)
       super
-      @expl_id = 0
+      if(params != "")
+        title = "#{params}"
+      else
+        title = "Explanation"
+      end
+      @heading = title
     end
 
     def render(context)
-      @expl_id += 1
+      @@expl_id += 1
       # First class element is required for JS
       #"<div class='explanation card border-warning mb-1'><div class='card-body'><h5 class='card-title text-warning'>Explanation</h5><p class='card-text'>#{super}<p></div></div>"
-      """<h5 class='clp_title text-warning' data-toggle='collapse' href='#expl#{@expl_id}'><i class='fa fa-comment-dots'></i> Explanation</h5>
-  <div id='expl#{@expl_id}' class='explanation collapse'><div class='card border-warning mb-1'><div class='card-body'>
+      """<h5 class='clp_title text-warning' data-toggle='collapse' href='#expl#{@@expl_id}'><i class='fa fa-comment-dots'></i> #{@heading}</h5>
+  <div id='expl#{@@expl_id}' class='explanation collapse'><div class='card border-warning mb-1'><div class='card-body'>
   <p class='card-text'>#{super}<p>
   </div></div></div>"""
   #<h5 class='card-title text-warning' data-toggle='collapse' href='#expl#{@expl_id}>Explanation</h5>
@@ -96,7 +108,8 @@ module Jekyll
 
     def render(context)
       # First class element is required for JS
-      "<div#{@id_field} class='collapse'><div class='legend card border-info mb-1'><div class='card-body'><h5 class='card-title text-info'>Legend</h5><p class='card-text'>#{super}</p></div></div></div>"
+      #"<div#{@id_field} class='legend collapse'><div class='card border-info w-75 mx-auto'><div class='card-body'><h5 class='card-title text-info'>Legend</h5><p class='card-text small'>#{super}</p></div></div></div>"
+      "<div#{@id_field} class='legend collapse'><div class='card border-info w-75 mx-auto'><div class='p-1 small'>#{super}</div></div></div>"
     end
   end
 
