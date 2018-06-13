@@ -79,7 +79,9 @@
 *[MAC]: Media Access Control
 *[MBR]: Master Boot Record
 *[MIMO]: Multiple-Input Multiple-Output
+*[MISO]: Master In, Slave Out
 *[MOSFET]: Metal-Oxide Semiconductor Field Effect Transistor
+*[MOSI]: Master Out, Slave In
 *[MPEG]: Motion Pictures Experts Group
 *[MSB]: Most Significant Bit
 *[MTU]: Maximum Transmission Unit

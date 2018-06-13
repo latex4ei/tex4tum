@@ -13,14 +13,13 @@ If you want to contribute or edit an article do the following:
 
 
 ## Our Format Syntax
-The good news first: If you write text, it will be displayed as text. If you want to apply some formatting you can use [Markdown](/markdown.html).
-In particular, we use [Pandoc](https://pandoc.org/MANUAL.html) as Markdown interpreter with the extension `footnotes` and `backtick_code_blocks`.
-
-
+The good news first: If you write text, it will be displayed as text. If you want to apply some text formatting you can use [Markdown](/markdown.html).
+Equations can be typset in TeX surrounded by `$` without spaces. 
 
 ### File structure
 Our file structure requires a YAML header (surrounded by `---`) that states a title and some keywords (tags) that can be used to find the article.
 
+{% example File example %}
 ```
  ---
  title: Inter-Integrated Circuit I²C
@@ -34,9 +33,33 @@ Our file structure requires a YAML header (surrounded by `---`) that states a ti
  {{ "" }}## First Heading
  text
 ```
+{% endexample %}
 
 The first paragraph will become the definition, which you should always provide. If you really want to omit a definition, indent the first paragraph by two spaces.
 
+
+### Markdown for Basic Text
+We use [Pandoc](https://pandoc.org/MANUAL.html) as Markdown interpreter with the extension `footnotes` and `backtick_code_blocks`.
+Thus, the following formatting is possible
+
+-------------------   -------------------
+`## Heading`          **Heading**
+`**bold**`            **bold**
+`**italic**`          *italic*
+`[Link-Text](url)`    [Link-Text](url)
+-------------------   -------------------
+
+
+### Own Parsers
+We also use our own backend scripts to parse certain content categories, for example, to detect the definition paragraph of an article.
+Furthermore, we format examples, explanations, and legends. To format a paragraph as example you just need to write `Example: ` before a paragraph. The paragraph is recognized by blank lines, so make sure that you have a blank line before the the `Example: ` marker.
+
+Example: This is an example Text and here is the code that produces it.</br>
+```
+Example: This is an example Text and here is the code that produces it.
+```
+
+Besides that you can also mark content using the Liquid Tags described below.
 
 
 ### Equations with TeX
@@ -151,10 +174,11 @@ Acronyms, such as AES, are parsed and linked automatically. If you want to add a
 
 
 ### Content Categories
-We currently support three special categories of content, which visibility is influenced via interactions or the options (see [Demo Page](demo.html))
+We currently support four special categories of content, which visibility is influenced via interactions or the options (see [Demo Page](demo.html))
 ```bash
 {% raw %}{% definition %}text{% enddefinition %}
 {% example %}text{% endexample %}
+{% explanation %}text{% endexplanation %}
 {% legend %}text{% endlegend %}
 {% endraw %}
 ```
