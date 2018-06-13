@@ -1,3 +1,7 @@
+
+//
+// categories
+//
 .definition {
   // background-color: $bg_tum_orange;
 }
@@ -16,7 +20,9 @@
 }
 
 
+//
 // collapse title
+//
 .clp_title.collapsed:before {
      content: '+';
 }
@@ -28,11 +34,11 @@
      content: '–';
 }
 
+
+
 // 
-// .example_title:not(.collapsed):after  {
-//     content: '-';
-// }
-
-
+// Math
+//
+.katex { font-size: 1.2em !important; }
 
 
