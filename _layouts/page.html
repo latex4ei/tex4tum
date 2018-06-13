@@ -2,12 +2,25 @@
 layout: default
 ---
 
+{% assign parent_pages = page.path | replace:'_article/','' | replace:'.md','' | split: "/" %}
+
+{% if parent_pages[0] != "_info" %}
+{% assign last_ppage = "" %}
+<p style="font-family: sans-serif;">
+	{% for ppage in parent_pages %}
+		{% if last_ppage != ppage and ppage != parent_pages.last %}
+		/ <a href="{{ ppage | append:'.html' | relative_url }}">{{ ppage }}</a>
+		{% endif %}
+		{% assign last_ppage = ppage %}
+	{% endfor %} /
+</p>
+{% endif %}
 <h1><a data-toggle="collapse" href="#title_def" aria-expanded="false" aria-controls="title_def">
   {% if page.icon %}
   <i class="fas fa-{{page.icon}}"></i>
   {% endif %}
   {{ page.title | escape }}
-</a></h1>
+</a><a class="float-right small" style="font-size: small" href="https://github.com/latex4ei/tex4tum/edit/master/{{page.path | replace:'.html','.md'}}">[edit]</a></h1>
 
 {% for tag in page.tags %}
 <span class="badge badge-primary text-white">
