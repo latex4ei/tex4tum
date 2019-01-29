@@ -93,7 +93,8 @@ textarea {
 
 main {
   clear: both;
-  padding: 150px .5em 200px;
+  padding: 5em .5em 5em;
+  min-height: 80vh;
 }
 
 section {
@@ -126,7 +127,7 @@ h3 {
 p {
   margin-top: 0;
   font-family: $font_paragraph;
-  font-size: 1.15em  // adjust serif font to sans 
+  //font-size: 1.15em  // adjust serif font to sans 
 }
 
 table {
@@ -192,10 +193,11 @@ html {
 footer {
   @extend %clearfix;
   background-color: $gray-lighter;
-  bottom: 0;
+  //position: absolute;
+  //bottom: 0;
+  margin-top: 1em;
   color: $grey-color;
   font-size: 15px;
-  padding: 30px;
-  position: absolute;
+  padding: 30px 0px 30px 0px;
   width: 100%;
 }

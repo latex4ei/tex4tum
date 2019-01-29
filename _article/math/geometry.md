@@ -1,5 +1,0 @@
----
-title: Geometry
----
-
-Geometry is ...

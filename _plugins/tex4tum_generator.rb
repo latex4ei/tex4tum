@@ -15,6 +15,9 @@ module Jekyll
       todos = Array.new
 
       site.documents.each do |document|
+        if document.is_a?(StaticFile)
+          puts "ERR: Forgot YAML Header in: "+document.path
+        end
         todos = get_todos(document, todos)
 
         # exclude JS
@@ -45,7 +48,7 @@ module Jekyll
     private
 
     ABBREVIATION_REGEXP = %r{(\*\[([^\]]+)\]:\s*([^\n]+)\n)}
-    TODO_REGEXP = %r{(?:\s|^)((?:TODO:?|\\todo|@todo)\s(.*?))\n}
+    TODO_REGEXP = %r{(?:\n\s*|^)((?:TODO|\\todo|@todo):?\s(.*?))\n}
     #INNER_SECTION_REGEXP = %r{^\s*(##+\s(.*?)\n((?:.|\n)*?)\n\s*\n(?=\s*##|\Z))}
     DEFINITION_REGEXP = %r{\A([A-Z](?:.|\n)*?)\n\s*\n}
 
@@ -69,6 +72,7 @@ module Jekyll
     UNICODE_TEX_HASH = {
       '<' => %q{\lt}, '>' => %q{\gt}, 
       "∈" => %q{\in},
+      "ℕ" => %q{\mathbb{N}}, "ℂ" => %q{\mathbb{C}},"ℤ" => %q{\mathbb{Z}},
       "α" => %q{\alpha}, "Α" => %q{\Alpha}, "β" => %q{\beta},
       "γ" => %q{\gamma}, "Γ" => %q{\alpha}, "δ" => %q{\dlpha}, "Δ" => %q{\Delta},
       "ε" => %q{\varepsilon}, "ζ" => %q{\zeta}, "η" => %q{\eta},

@@ -115,6 +115,8 @@ Output: SVG Object
 {% include svg-object.html width="18em" id="RC_obj" filename="rc.svg" description="Circuit of low-pass filter" %}
 
 
+@todo: should we use mermaid?
+{%comment%}
 ### Diagramms
 We use [mermaid](https://knsv.github.io/mermaid) for drawing diagramms. For this we created a liquid tag
 ```bash
@@ -136,7 +138,8 @@ graph TD;
     A-->C;
     B-->D;
     C-->D;
-{% endmermaid %}
+{% endmermaid %} 
+{%endcomment%}
 
 
 ### Code Listings

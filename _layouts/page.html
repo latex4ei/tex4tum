@@ -22,10 +22,12 @@ layout: default
   {{ page.title | escape }}
 </a><a class="float-right small" style="font-size: small" href="https://github.com/latex4ei/tex4tum/edit/master/{{page.path | replace:'.html','.md'}}">[edit]</a></h1>
 
+<p>
 {% for tag in page.tags %}
 <span class="badge badge-primary text-white">
   <i class="fas fa-tag"></i> {{ tag }}
 </span>
 {% endfor %}
+</p>
 
 {{ content }}

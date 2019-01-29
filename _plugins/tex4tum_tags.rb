@@ -160,8 +160,10 @@ module Jekyll
         it = it + 1
       end
 
-      # First class element is required for JS
-      final = "<div class=\"tabbox\">\n<ul class=\"nav nav-tabs ml-0\" role=\"tablist\">"+tablabels+"</ul>\</div>\n<div class=\"tab-content\">"+text+'</div>'
+      # tabbox is CSS3 only tab solution
+      #final = "<div class=\"tabbox\">\n<ul class=\"nav nav-tabs ml-0\" role=\"tablist\">"+tablabels+"</ul>\</div>\n<div class=\"tab-content\">"+text+'</div>'
+      final = "<div class=\"card tabbox\"><div class=\"card-header\">\n<ul class=\"nav nav-tabs card-header-tabs ml-0\" role=\"tablist\">"+tablabels+"</ul>\</div>\n<div class=\"card-body\"><div class=\"tab-content\">"+text+'</div></div></div></div></br>'
+
       #puts 'final: '+final
       return final
     end

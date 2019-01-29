@@ -1,5 +1,6 @@
 ---
 title: Diode
+tags: shottky, zener, led
 ---
 
 A diode is a two-terminal electronic component that conducts primarily in one direction.

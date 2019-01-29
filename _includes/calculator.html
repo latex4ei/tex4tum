@@ -1,26 +1,26 @@
----
-title: Calculator
-icon: calculator
----
 
- Try the expression parser below.
+<h2>Calculator Example</h2>
 
+
+<p>
+  Try the expression parser below.<br />
+  See <a href="http://mathnotepad.com/">Math Notepad</a> for a full application.
+</p>
 <div id="commandline">loading...</div>
-
-Shortcut keys:
-
-* Press `S` to set focus to the input field
-* Press `Ctrl+F11` to toggle full screen
-* Enter "clear" to clear history
-
-
-Explanation:
-Data Types: Boolean, Numbers, Complex, Units</br>
-Detailed documentation for [mathjs](http://mathjs.org/docs/index.html)
-
+<div class="tips">
+  Shortcut keys:
+  <ul>
+    <li>Press <b>S</b> to set focus to the input field</li>
+    <li>Press <b>Ctrl+F11</b> to toggle full screen</li>
+    <li>Enter <b>"clear"</b> to clear history</li>
+  </ul>
+</div>
+</div>
 
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/4.4.2/math.min.js"></script>
+
+
 
 <style type="text/css">
 
@@ -38,6 +38,7 @@ Detailed documentation for [mathjs](http://mathjs.org/docs/index.html)
   height: 100%;
   margin: 0;
   padding: 3px;
+
   border: 1px solid #e5e5e5;
   background-color: #f5f5f5;
   border-radius: 2px;
@@ -51,7 +52,6 @@ Detailed documentation for [mathjs](http://mathjs.org/docs/index.html)
   position: fixed;
   left: 0;
   top: 0;
-  padding-top: 4em;
   height: 100%;
   z-index: 999;
 }
@@ -77,31 +77,29 @@ Detailed documentation for [mathjs](http://mathjs.org/docs/index.html)
 
 .cle button.fullscreen {
   position: absolute;
-  top: 8px;
-  right: 8px;
-  padding: 0;
-  width: 24px;
-  height: 20px;
+  top: 5px;
+  right: 5px;
+  width: 16px;
+  height: 16px;
   z-index: 1;
+
   border: none;
   cursor: pointer;
+  background: url('img/fullscreen.png');
 }
-
-.cle.fullscreen button.fullscreen {
-  top: 5em;  /* +1 em more than normal for navbar */
-}
-
 
 .cle button.fullscreen:hover {
   opacity: 0.5;
   filter: alpha(opacity=50); /* For IE8 and earlier */
 }
 
+.cle.fullscreen button.fullscreen {
+  background: url('img/fullscreen_exit.png');
+}
 
 .cle .results {
   width: 100%;
   height: 100%;
-  min-height: 5rem;
   position: relative;
   overflow: auto;
   -moz-box-sizing: border-box;
@@ -205,6 +203,7 @@ Detailed documentation for [mathjs](http://mathjs.org/docs/index.html)
 
 
 </style>
+
 
 <script type="text/javascript">
 /**
@@ -350,10 +349,10 @@ function CommandLineEditor (params) {
 
   function resize() {
     // position the full screen button in the top right
-    // var top = 8;
-    // var right = (dom.topPanel.clientWidth - dom.results.clientWidth) + 6;
-    // dom.fullscreen.style.top = top + 'px';
-    // dom.fullscreen.style.right = right + 'px';
+    var top = 8;
+    var right = (dom.topPanel.clientWidth - dom.results.clientWidth) + 6;
+    dom.fullscreen.style.top = top + 'px';
+    dom.fullscreen.style.right = right + 'px';
   }
 
   function toggleFullscreen() {
@@ -593,8 +592,9 @@ function CommandLineEditor (params) {
 
     // create fullscreen button
     dom.fullscreen = document.createElement('button');
-    dom.fullscreen.className = 'fullscreen fa fa-expand-arrows-alt';
+    dom.fullscreen.className = 'fullscreen';
     dom.fullscreen.title = 'Toggle full screen display (Ctrl+F11)';
+    //dom.fullscreen.textContent = '<i class="fa fa-comment"></i>';
     dom.fullscreen.onclick = toggleFullscreen;
     dom.topPanel.appendChild(dom.fullscreen);
 
@@ -612,6 +612,14 @@ function CommandLineEditor (params) {
     dom.input.onkeydown = onKeyDown;
     dom.inputLeft.appendChild(dom.input);
 
+    // create an clear button
+    // dom.btnEval = document.createElement('button');
+    // dom.btnEval.appendChild(document.createTextNode('Clear'));
+    // dom.btnEval.className = 'clear';
+    // dom.btnEval.title = 'Clear the screen';
+    // dom.btnEval.onclick = clear;
+    // dom.inputRight.appendChild(dom.btnEval);
+
     // create an eval button
     dom.btnEval = document.createElement('button');
     dom.btnEval.appendChild(document.createTextNode('Evaluate'));
@@ -619,6 +627,7 @@ function CommandLineEditor (params) {
     dom.btnEval.title = 'Evaluate the expression (Enter)';
     dom.btnEval.onclick = evalInput;
     dom.inputRight.appendChild(dom.btnEval);
+
 
     // create global event listeners
     util.addEventListener(window, 'keydown', onWindowKeyDown);
@@ -664,9 +673,7 @@ function CommandLineEditor (params) {
     if (!expressions || !(expressions instanceof Array)) {
       // load some example expressions
       expressions = [
-        '1.2 / (3.3 + 1.7)',
         'a = 5.08 cm + 2 inch',
-        'a to inch',
         'sin(90 deg)',
         'f(x, y) = x ^ y',
         'f(2, 3)'
@@ -812,6 +819,5 @@ function createA (text, href, target) {
   return a;
 }
 </script>
-
 
 

@@ -1,6 +1,9 @@
 ---
-title: Probability
+title: Probability Theory
 ---
+
+
+## Terms
 
 | Name | Definition |
 |------|------------|
@@ -13,7 +16,25 @@ title: Probability
 |Unknown parameter $θ ∈ Θ$ | parameter of propability function |
 |Estimator $\T: \mathbb X \mapsto Θ$ | $\T(\X) = \hat{θ}$, finds $\hat{θ}$ from $\X$ |
 
+
+## Conditional Probabilty
+The probability for an event $A$ given that the event $B$ already occured is
+$$\P_B(A) = \P(A|B) = \frac{\P(A \cap B)}{\P(B)}$$
+with events $A,B$.
+
+Multiplication: $\P(A \cap B) = \P(A|B)\P(B) = \P(B|A)\P(A)$
+
+Bayes' law: 
+$$\P(B_k | A) = \frac{\P(A | B_k)\P(B_k)}{\sum\limits_{i \in I} \P(A|B_i) \P(B_i)}$$
+
+Total probabilty: $\P(A) = \sum\limits_{i \in I} \P(A|B_i)\P(B_i)$
+
+
+
 ## Random Variables
+$\X : \Omega \mapsto \Omega'$ is a random variable if for all events $A' \in \F'$ there exists an event  $A \in \F$ such that $\left\{\omega \in \Omega|\X(\omega) \in A'\right\} \in \F$.
+
+
 
 ## Distribution
 **PDF:** $f_{\X}(x) = \frac{\diff F_{\X}(x)}{\diff x}$

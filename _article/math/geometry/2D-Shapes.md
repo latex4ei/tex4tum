@@ -1,6 +1,10 @@
 ---
 title: 2D Geometry
+tags: circle, rectangle, triangle
 ---
+
+
+
 
 ## Rectangle
 

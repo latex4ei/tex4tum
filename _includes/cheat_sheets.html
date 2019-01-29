@@ -1,11 +1,12 @@
 
 <!-- <p><a href="./res/sheets/(.*?)"[^>]+>(.*?)</a>(?: ?<a href="(.*?)")? -->
+<!-- {% include sheet.html filename="extern/(.*?)" description="]+>(.*?)" ghlink="" %}(?: ?<a href="(.*?)")? -->
 <!-- {% include sheet.html filename="\1" description="\2" ghlink="\3" %} -->
 <table>
     <thead>
     <tr>
         <th><span>Category</span></th>
-        <th><span>Sheet</span><span class="pull-right">Revision</span></th>
+        <th><span>Sheet</span><span class="float-right">Revision</span></th>
     </tr>
     </thead>
     <tbody>
@@ -141,11 +142,11 @@
             <span>Informatik</span>
         </td>
         <td>
-            <p><a href="./ext_./res/sheets/CRefCard.v2.2.pdf" class="file" target="_blank">C Referenz Card (ANSI)</a></p>
-            <p><a href="./ext_./res/sheets/CppRefCard.pdf" class="file" target="_blank">C++ Referenz Card</a></p>
-            <p><a href="./ext_./res/sheets/Computertechnik_FS.pdf" class="file" target="_blank">Computertechnik</a></p>
-            <p><a href="./ext_./res/sheets/Grundlagen_Informatik_FS.pdf" class="file" target="_blank">Grundlagen der Informatik</a></p>
-            <p><a href="./ext_./res/sheets/Stochastische_Signale_FS.pdf" class="file" target="_blank">Stochastische Signale</a></p>
+            {% include sheet.html filename="extern/CRefCard.v2.2.pdf" description="C Referenz Card (ANSI)" ghlink="" %}
+            {% include sheet.html filename="extern/CppRefCard.pdf" description="C++ Referenz Card" ghlink="" %}
+            {% include sheet.html filename="extern/Computertechnik_FS.pdf" description="Computertechnik" ghlink="" %}
+            {% include sheet.html filename="extern/Grundlagen_Informatik_FS.pdf" description="Grundlagen der Informatik" ghlink="" %}
+            {% include sheet.html filename="extern/Stochastische_Signale_FS.pdf" description="Stochastische Signale" ghlink="" %}
         </td>
     </tr>
     <tr>
@@ -153,10 +154,10 @@
             <span>Elektrizität</span>
         </td>
         <td>
-            <p><a href="./ext_./res/sheets/Elektrizität_Magnetismus_Formeln.pdf" class="file" target="_blank">Elektrizität und Magnetismus</a></p>
-            <p><a href="./ext_./res/sheets/Elektrische_Energietechnik_FS.pdf" class="file" target="_blank">Elektrische Energietechnik</a></p>
-            <p><a href="./ext_./res/sheets/2009-ET_Verständnisfragen.pdf" class="file" target="_blank">Elektrische Energietechnik Verständnisfragen</a></p>
-            <p><a href="./ext_./res/sheets/Stromversorgung_mobiler_Geräte_FS.pdf" class="file" target="_blank">Stromversorgung mobiler Geräte FS</a></p>
+            {% include sheet.html filename="extern/Elektrizität_Magnetismus_Formeln.pdf" description="Elektrizität und Magnetismus" ghlink="" %}
+            {% include sheet.html filename="extern/Elektrische_Energietechnik_FS.pdf" description="Elektrische Energietechnik" ghlink="" %}
+            {% include sheet.html filename="extern/2009-ET_Verständnisfragen.pdf" description="Elektrische Energietechnik Verständnisfragen" ghlink="" %}
+            {% include sheet.html filename="extern/Stromversorgung_mobiler_Geräte_FS.pdf" description="Stromversorgung mobiler Geräte FS" ghlink="" %}
         </td>
     </tr>
     <tr>
@@ -165,9 +166,9 @@
         </td>
         <td>
             <p><a href="http://fabis-site.net/uni/st2/blaetter/st1-formelsammlung.pdf" target="_blank">SchaltungstechnikFS 1 (Fabian Steiner)</a></p>
-            <p><a href="./ext_./res/sheets/Schaltungstechnik_FS(1+2).pdf" class="file" target="_blank">SchaltungstechnikFS 1 + 2 (Rosnitschek)</a></p>
-            <p><a href="./ext_./res/sheets/Digitaltechnik_Formelsammlung.pdf"  class="file" target="_blank">Digitaltechnik FS (16 Seiten)</a></p>
-            <p><a href="./ext_./res/sheets/Digitaltechnik_Formelsammlung2.pdf"  class="file" target="_blank">Digitaltechnik FS v2</a></p>
+            {% include sheet.html filename="extern/Schaltungstechnik_FS(1+2).pdf" description="SchaltungstechnikFS 1 + 2 (Rosnitschek)" ghlink="" %}
+            {% include sheet.html filename="extern/Digitaltechnik_Formelsammlung.pdf" description="Digitaltechnik FS (16 Seiten)" ghlink="" %}
+            {% include sheet.html filename="extern/Digitaltechnik_Formelsammlung2.pdf" description="Digitaltechnik FS v2" ghlink="" %}
         </td>
     </tr>
     <tr>
@@ -175,11 +176,11 @@
             <span>Sonstiges</span>
         </td>
         <td>
-            <p><a href="./ext_./res/sheets/Werkstoffe_FS_V02.pdf" class="file" target="_blank">Werkstoffe FS</a></p>
+            {% include sheet.html filename="extern/Werkstoffe_FS_V02.pdf" description="Werkstoffe FS" ghlink="" %}
             <p><a href="http://www.eiit.de/v2/index.php?&showtopic=21121" class="file" target="_blank">Hochfrequenztechnik FS</a></p>
-            <p><a href="./ext_./res/sheets/Regelungssysteme2.pdf" class="file"     target="_blank">Regelungssysteme 2</a></p>
-            <p><a href="./ext_./res/sheets/Regelungssysteme2v2.pdf" class="file"     target="_blank">Regelungssysteme 2 Ver. 2</a></p>
-            <p><a href="./ext_./res/sheets/HM4.pdf" class="file" target="_blank">Höhere Mathematik 4</a></p>
+            {% include sheet.html filename="extern/Regelungssysteme2.pdf" description="Regelungssysteme 2" ghlink="" %}
+            {% include sheet.html filename="extern/Regelungssysteme2v2.pdf" description="Regelungssysteme 2 Ver. 2" ghlink="" %}
+            {% include sheet.html filename="extern/HM4.pdf" description="Höhere Mathematik 4" ghlink="" %}
         </td>
     </tr>
 </table>

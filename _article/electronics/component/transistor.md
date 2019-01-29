@@ -1,5 +1,6 @@
 ---
 title: Transistor
+tags: [bipolar, bjt, mosfet]
 ---
 
 Is a current amplifier.
@@ -15,3 +16,9 @@ $V_{\mathrm{BE}} < 0.7V$
 ### Linear Region
 
 $$V_{\mathrm{BE}} \approx 0.7V$$
+
+
+## MOS-FET
+
+TODO content from "Digitale Schaltungen"
+

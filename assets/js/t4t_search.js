@@ -106,7 +106,7 @@ var autocomplete = function (options) {
                     resultNodes[i].style.display = 'block';
                     resultNodes[i].firstChild.nodeValue = d[i].tag;
                     var uri = d[i].name.toLowerCase();
-                    resultNodes[i].href = options.directPath + '/' + uri + '.html';
+                    resultNodes[i].href = options.directPath + '/' + uri // + '.html';
                     resultNodes[i].firstElementChild.firstChild.nodeValue = '';
                 } else if (!d || !d[i]) {
                     resultNodes[i].style.display = 'none';

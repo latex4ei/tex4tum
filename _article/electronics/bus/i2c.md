@@ -1,6 +1,6 @@
 ---
 title: Inter-Integrated Circuit I²C
-tags: [I2C, SDA, SCK]
+tags: [bus, I2C, SDA, SCK]
 ---
 
 I2C is serial bus used to attach lower-speed peripheral ICs to processors and microcontrollers in short-distance.
@@ -22,11 +22,6 @@ Transmission Speeds
 
 ## Protocol
 
-### Tests
-{% include figure.html filename="byte-transfer.svg" description="Byte Transfer" %}
 
-A Link to [SPI](spi.html) and short [SPI] and [USART](usart.html)
 
-See [Specification]
 
-[USART](usart.html)

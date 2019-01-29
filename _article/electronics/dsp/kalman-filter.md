@@ -22,39 +22,43 @@ Facts:
 ## Calculations
 
 ### State Space
-$\vec{x}_{n} = \ma G_n \vec{x}_{n-1} + \ma B \vec{u}_n + \vec{v}_n$ <br>
-$\vec{y}_{n} = \ma H_{n} \vec{x}_{n-1} + \vec{w}_{n}$
 
-{% legend %}
-$k$ states $\vec x$, transition matrix $\ma G$, gaussian process noise $\vec v_n$, input $\vec u$,
+$$\begin{array}{l} \vec{x}_{n} = \ma G_n \vec{x}_{n-1} + \ma B \vec{u}_n + \vec{v}_n \\ 
+\vec{y}_{n} = \ma H_{n} \vec{x}_{n-1} + \vec{w}_{n}\end{array}$$
+with the $k$ states $\vec x$, transition matrix $\ma G$, gaussian process noise $\vec v_n$, input $\vec u$,
 $l$ measurements $\vec y$, measurement model $\ma H$, gaussian measurement noise $\vec w_n$,
 time point $n$
-{% endlegend %}
 
-### Step: Prediction
-calculate the next state based on the old state and the dynamic model (e.g. physical laws)
 
-$\hat {\vec x}_{n|n-1} = \ma G_n \hat{\vec x}_{n-1|n-1}$
+### 1. Step: Prediction
+1.1 calculate the next state based on the old state and the dynamic model (e.g. physical laws)
 
-calculate a new process covariance (how certain is the model?)
-$\ma C_{\vec x_{n|n-1}} = \ma G_n \ma C_{\vec x_{n-1|n-1}} \ma G_n^\top + \ma C_{\vec v}$
+$$\hat {\vec x}_{n|n-1} = \ma G_n \hat{\vec x}_{n-1|n-1}$$
 
-### Step: Update
-calculate Innovation (real measurements minus predicted measurements)
-$\Delta \vec y_n = \vec y_n - \hat{\vec y}_{n|n-1} =\vec y_n - \ma H_{n} \hat{\vec x}_{n|n-1}$
+1.2 calculate a new process covariance (how certain is the model?)
 
-Innovation Covariance: $\ma S = \ma H_{n} \ma C_{\vec x_{n|n-1}} \ma H_{n}^\top + \ma C_{\vec w_{n}}$
+$$\ma C_{\vec x_{n|n-1}} = \ma G_n \ma C_{\vec x_{n-1|n-1}} \ma G_n^\top + \ma C_{\vec v}$$
 
-With optimal **Kalman-gain** (prediction for $\vec x_n$ based on $\Delta y_n$):
+### 2. Step: Update
+2.1 calculate intermediate values: 
 
-$\ma K_n = \ma C_{\vec x_{n|n-1}} \ma H_{n}^\top {\ma S}^{-1}$
+* Innovation: $\Delta \vec y_n = \vec y_n - \hat{\vec y}_{n|n-1} =\vec y_n - \ma H_{n} \hat{\vec x}_{n|n-1}$ </br>
+which are the real measurements minus predicted measurements
 
+* Innovation Covariance: $\ma S = \ma H_{n} \ma C_{\vec x_{n|n-1}} \ma H_{n}^\top + \ma C_{\vec w_{n}}$
+
+* Optimal Kalman-gain: $\ma K_n = \ma C_{\vec x_{n|n-1}} \ma H_{n}^\top {\ma S}^{-1}$</br>
+which is the prediction for $\vec x_n$ based on $\Delta y_n$
 with $K_{ij} \in [0.0; 1.0]$ where 0.0 means the filter fully trusts the prediction and 1.0 means the filter fully trusts the measurement.
 
-calculate the new state from $l$ measurements
-$\hat{\vec x}_{n|n} = \hat{\vec x}_{n|n-1} + \ma K_n \Delta \vec y_n$
+2.2 calculate the new state from $l$ measurements:
 
-$\ma C_{\vec x_{n|n}} = \ma C_{\vec x_{n|n-1}} + \ma K_n \ma H_{n} \ma C_{\vec x_{n|n-1}}$
+$$\hat{\vec x}_{n|n} = \hat{\vec x}_{n|n-1} + \ma K_n \Delta \vec y_n$$
+
+2.3 update process covariance:
+
+$$\ma C_{\vec x_{n|n}} = \ma C_{\vec x_{n|n-1}} + \ma K_n \ma H_{n} \ma C_{\vec x_{n|n-1}}$$
+
 
 ## Extended Kalman Filter
 The Extended Kalman Filter (EKF) uses non-linear dynamic models. For covariance the Jacobi-Matrix of the model is used.
@@ -70,3 +74,12 @@ Kalman Filter for Gyroscope and Accelerometer:
 
 state $\vec x$ are the orientation angles roll and pitch and the bias angle
 {% endexample %}
+
+
+
+
+
+## References
+
+* [KALMAN FILTER IN ONE DIMENSION](https://www.kalmanfilter.net/kalman1d.html)
+

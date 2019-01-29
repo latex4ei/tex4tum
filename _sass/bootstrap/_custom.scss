@@ -22,6 +22,24 @@ $theme-colors: (
 ) !default;
 
 
+//
+// Fonts
+//
+
+$font-family-serif: Georgia;
+$font-family-sans-serif: Helvetica, Arial, sans;
+$font-family-monospace:  Menlo, Monaco, Consolas, monospace;
+
+$headings-font-family: $font-family-sans-serif;
+
+
+
+//
+// Headings
+//
+main h2 { margin-top: 2.5em; }
+main h3 { margin-top: 1.5em; }
+
 
 
 // Grid containers
@@ -39,9 +57,11 @@ $container-max-widths: (
 
 
 //
-// Headings
+// Tables
 //
-
+main table { width: auto; }
+$table-cell-padding: 0.75rem;
+$table-cell-padding-sm: 0.5rem 1.0rem;
 
 
 
@@ -56,6 +76,18 @@ $navbar-border-radius: 0;
 $link-hover-decoration: none;
 $link-hover-color: $tum_emph_green;
 
-$card-border-width: 5px;
 
+//
+// Cards
+//
 
+$card-border-width: 3px;
+
+// reset for tabbox
+.tabbox.card{
+  border: 1px solid rgba(0, 0, 0, 0.125);
+}
+.tabbox .card-header{
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  padding: 0.25rem 0.25rem 0.75rem 0.25rem ;
+}

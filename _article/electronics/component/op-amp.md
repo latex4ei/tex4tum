@@ -1,5 +1,6 @@
 ---
-title: Op Amp
+title: Operational Amplifier
+tags: [opamp, non-inverting, schmitt trigger]
 ---
 
 {% definition %}

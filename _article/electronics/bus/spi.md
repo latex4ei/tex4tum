@@ -1,6 +1,6 @@
 ---
 title: Serial Peripheral Interface
-tags: [SPI]
+tags: [bus, SPI, MOSI, MISO]
 ---
 
 SPI is serial bus.
@@ -19,17 +19,5 @@ SPI is serial bus.
 ## Connection
 {% include figure.html filename="SPI_single_slave.svg" description="Connection" %}
 
-Common Speeds
-:   9'600 bit/s, 38'400 bit/s
 
 
-## Example of SPI
-This is a test
-
-### Legend
-The equation is
-$$x = 3 + y$$
-where $x$ is a number and $y$ too
-
-
-## Another section

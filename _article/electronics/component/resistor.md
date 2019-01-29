@@ -1,5 +1,6 @@
 ---
 title: Resistor
+tags: ohm
 ---
 
 A resistor is a electrical component.
