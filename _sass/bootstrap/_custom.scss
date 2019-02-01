@@ -77,6 +77,12 @@ $link-hover-decoration: none;
 $link-hover-color: $tum_emph_green;
 
 
+
+.collapsed{ cursor: pointer; }
+[data-toggle="collapse"] {
+   cursor: pointer;
+}
+
 //
 // Cards
 //

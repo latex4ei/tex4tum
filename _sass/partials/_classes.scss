@@ -23,6 +23,9 @@
 //
 // collapse title
 //
+.clp_title {
+     cursor: pointer;
+}
 .clp_title.collapsed:before {
      content: '+';
 }
@@ -36,6 +39,7 @@
 
 
 
+
 // 
 // Math
 //
@@ -44,4 +48,7 @@
 .LaTeX {
   font-size: 0.87rem !important;
 }
+
+
+
 
