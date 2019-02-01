@@ -9,10 +9,9 @@ The places are marked with tokens. Tokens are transported by the edges. A transi
 The initial marking M0 defines the number of tokens at each place.
 
 ## Types
-Boolean petri net: Each place can only hold one token.
-Weighted petri net: Edges can transport more than one token.
-Colored Petri net: Tokens are “colored” to represent different kinds of
-resources.
+* Boolean petri net: Each place can only hold one token.
+* Weighted petri net: Edges can transport more than one token.
+* Colored Petri net: Tokens are “colored” to represent different kinds of resources.
 
 
 ## Execution Rules
@@ -28,13 +27,13 @@ In a weighted Petri Net, the transition consumes and produces tokens according t
 
 ## Properties
 
-Deadlock (local): State, in which there is no sequence to enable a certain transition.
-Deadlock (global): State, in which there is no further transition possible.
-Liveness: For all states there is a sequence to make any transition fire. No transition can reach a deadlock.
-Fairness: All transitions will fire infinitively often in any infinite firing sequence.
-Reachability:
-Boundness: The maximum number of tokens a place can hold.
-Starvation: A transition t is enabled but there is an infinite sequence such that t will never fire.
+* Deadlock (local): State, in which there is no sequence to enable a certain transition.
+* Deadlock (global): State, in which there is no further transition possible.
+* Liveness: For all states there is a sequence to make any transition fire. No transition can reach a deadlock.
+* Fairness: All transitions will fire infinitively often in any infinite firing sequence.
+* Reachability:
+* Boundness: The maximum number of tokens a place can hold.
+* Starvation: A transition t is enabled but there is an infinite sequence such that t will never fire.
 
 If a petri net is live with initial marking M0, then it is deadlock-free
 

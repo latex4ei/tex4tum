@@ -3,13 +3,12 @@ title: Vector Space
 ---
 
 A vector space $(V,+,\cdot)$ over Körper $(\K,+,\cdot),\ \vec v \in \K^n$
-TODO KaTeX Error
 
 **Linear Unabhängig:** Vektoren heißen linear unabhängig, wenn aus:
 
 $\alpha_1 \vec v_1 + \alpha_2 \vec v_2 + \ldots + \alpha_n \vec v_n = \vec 0$ folgt, dass alle $\alpha_i = 0$
 
-**Basis** $\ma B=\eset{\vec b_1, \vec b_2, ...}$: $n$ Vektoren, linear unabhängig, erzeugen $V$
+**Basis** $\ma B=\{\vec b_1, \vec b_2, ...\}$: $n$ Vektoren, linear unabhängig, erzeugen $V$
 
 **Betrag (Norm):** $\norm{\vec a} = \sqrt{\vec a \cdot \vec a} = \sqrt{a_1^2+a_2^2+\ldots +a_n^2}$
 

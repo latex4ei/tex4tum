@@ -2,7 +2,7 @@
 title: Moment
 ---
 
-The n-th moment of a continuous function $f(x)$ of a real variable $x$ about a value $c$ is
+ The n-th moment of a continuous function $f(x)$ of a real variable $x$ about a value $c$ is
 
 $$\mu _{n}=\int _{-\infty }^{\infty }(x-c)^{n}\,f(x)\diff x$$
 
