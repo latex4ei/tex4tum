@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- title, description, favicon -->
-    <title>Interactive Cheat Sheets Demo</title>
+    <title>Demo of Interactive Features</title>
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="/demo">
+    <link rel="canonical" href="http://localhost:4000/demo">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -18,6 +18,7 @@
     <!-- Load CSS in head, JS after footer -->
     <!-- Main/Bootstrap -->
     <link rel="stylesheet" href="/assets/main.css">
+    <link rel="stylesheet" href="/assets/syntax-highlight.css">
 
     <!-- Fontawesome CSS -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
@@ -30,7 +31,7 @@
   <body>
 
     <!-- Bootstrap 4.0 Navigation Bar -->
-<nav class="navbar fixed-top navbar-dark bg-primary text-white navbar-expand-lg">
+<nav class="navbar sticky-top navbar-dark bg-primary text-white navbar-expand-lg">
 
     <!-- sticky left: Logo -->
     <div class="navbar-brand">
@@ -61,17 +62,23 @@
     <div class="collapse navbar-collapse justify-content-start order-6 order-lg-2" id="navbarResponsive">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="/about.html"><i class="fa fa-question"></i> About</a>
+          <a class="nav-link" href="/calculator.html"><i class="fa fa-calculator"></i> Calc</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/sheets.html"><i class="fa fa-file"></i> Sheets</a>
         </li>
         <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <i class="fa fa-handshake"></i> Contribute
+          <i class="fa fa-info-circle"></i> Info
         </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="/contribution.html"><i class="fa fa-edit"></i> Contribute Article</a>
-            <a class="dropdown-item" href="/todo.html"><i class="fa fa-tasks"></i> ToDo List</a>
+            <a class="dropdown-item" href="/about.html"><i class="fa fa-question"></i> About TeX4TUM</a>
+            <a class="dropdown-item" href="/demo.html"><i class="fa fa-play-circle"></i> Feature Demo</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum"><i class="fab fa-github"></i> Develop TeX4TUM Features</a>
+            <h6 class="dropdown-header"><i class="fa fa-handshake"></i> Contribute</h6>
+            <a class="dropdown-item" href="/contribution.html"><i class="fa fa-edit"></i> Write Article</a>
+            <a class="dropdown-item" href="/todo.html"><i class="fa fa-tasks"></i> ToDo List</a>
+            <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum"><i class="fab fa-github"></i> Develop Features</a>
             <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum/issues"><i class="fa fa-bug"></i> Report a bug</a>
           </div>
         </li>
@@ -114,12 +121,17 @@
 
 
     <main class="container" aria-label="Content">
-      <h1><a data-toggle="collapse" href="#title_def" aria-expanded="false" aria-controls="title_def">
+      
+
+
+<h1><a data-toggle="collapse" href="#title_def" aria-expanded="false" aria-controls="title_def">
   
-  Interactive Cheat Sheets Demo
-</a></h1>
+  Demo of Interactive Features
+</a><a class="float-right small" style="font-size: small" href="https://github.com/latex4ei/tex4tum/edit/master/_info/demo.md">[edit]</a></h1>
 
+<p>
 
+</p>
 
 <!-- Basics -->
 <!--    -->
@@ -127,22 +139,45 @@
 <!-- SI Units -->
 <!--=============================================================== -->
 <!-- KaTeX Tweaks -->
-<div id="title_def" class="collapse">
+<div id="title_def" class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
 <h5 class="card-title text-primary">
 Definition
 </h5>
 <p class="card-text">
-This is a showcase to demonstrate how learning materials could be made interactive, fast accessible, and neat.
+This page is a showcase of the features that TeX4TUM provides and demonstrates how learning materials could be made interactive, fast accessible, and neat.
 </p>
 </div>
 </div>
 </div>
-<h2 id="features">Features</h2>
-<h3 id="control-the-focus">Control the Focus</h3>
-Read only the content you really need. Use the options in the top right corner to change the visibility of the following content:<br>
-<div class="collapse">
+<p>Click on the heading to unfold the definition box.</p>
+<h2 id="table-of-contents"><i class="fa fa-list-ul"></i> Table of Contents</h2>
+<ul>
+<li><a href="#interactive-features">Interactive Features</a>
+<ul>
+<li><a href="#content-categories">Content Categories</a></li>
+<li><a href="#interactive-equations">Interactive Equations</a></li>
+<li><a href="#interactive-diagrams">Interactive Diagrams</a></li>
+<li><a href="#fast-fuzzy-search">Fast Fuzzy Search</a></li>
+</ul></li>
+<li><a href="#basic-fomartting">Basic Fomartting</a>
+<ul>
+<li><a href="#tables">Tables</a></li>
+<li><a href="#abreviations">Abreviations</a></li>
+<li><a href="#tab-boxes">Tab Boxes</a></li>
+</ul></li>
+<li><a href="#todo">ToDo</a></li>
+<li><a href="#feature-tests">Feature Tests</a>
+<ul>
+<li><a href="#content-categories">Content Categories</a></li>
+</ul></li>
+</ul>
+<h2 id="interactive-features">Interactive Features</h2>
+<h3 id="content-categories">Content Categories</h3>
+<p>Read only the content you really need. Use the options in the top right corner to change the visibility of the following content:<br></p>
+<p>Using Liquid Tags:</p>
+<div class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
 <h5 class="card-title text-primary">
@@ -154,47 +189,113 @@ The square root is the math function <span class="LaTeX">$\sqrt{\cdot}$</span>.
 </div>
 </div>
 </div>
-<div class='example card border-success mb-1'>
-<div class='card-body'>
-<h5 class="card-title text-success">
-Example
+<h5 class="clp_title text-success" data-toggle="collapse" href="#example1172">
+<i class='fa fa-chart-bar'></i> Example
 </h5>
+<div id='example1172' class='example collapse'>
+<div class='card border-success mb-1'>
+<div class='card-body'>
 <p class='card-text'>
-Example: <span class="LaTeX">$\sqrt{ x^4 } = x^2$</span>
+Example <span class="LaTeX">$\sqrt{ x^4 } = x^2$</span>
 <p>
 </div>
 </div>
-<div class="collapse">
-<div class="legend card border-info mb-1">
-<div class="card-body">
-<h5 class="card-title text-info">
-Legend
+</div>
+<h5 class="clp_title text-warning" data-toggle="collapse" href="#expl390">
+<i class='fa fa-comment-dots'></i> Explanation
 </h5>
-<p class="card-text">
-Legend: where x is an arbitrary value
-</p>
+<div id='expl390' class='explanation collapse'>
+<div class='card border-warning mb-1'>
+<div class='card-body'>
+<p class='card-text'>
+This is an explanation.
+<p>
 </div>
 </div>
 </div>
-<p>Furthermore, abbreviations do not need explanations anymore. If you do not know it just move the mouse over it: <abbr title="Scalable Vector Graphics" >SVG</abbr></p>
-<h3 id="interactive-math">Interactive Math</h3>
-<p>Directly calculate an equation while reading. Click on the values of R and C in the text to change them!</p>
-<p>A RC low-pass filter with Resistance R = <span id="R_val" onclick="askValue(this.id)">10k</span>Ω and Capacitance C = <span id="C_val" onclick="askValue(this.id)">100n</span>F has a Cut-Off Frequency <span class="LaTeX">$f_c = \frac{1}{2\pi R C} =$</span> <tspan id="F_val">159 Hz</tspan><br></p>
-<p>Even more complex equations such as <span class="LaTeX">$\int \sqrt{x^2} {\,\text{d}}x = \frac{1}{3} x^3$</span> are rendered beautifully with <a href="https://khan.github.io/KaTeX/">KaTex</a>).</p>
+<h3 id="interactive-equations">Interactive Equations</h3>
+<p>For a low-pass filter, the Cut-Off Frequency is</p>
+<div data-toggle="collapse" href="#eq_0">
+<p><span class="LaTeX">$$f_c = \frac{1}{2\pi R C}$$</span></p>
+</div>
+<div id="eq_0" class="legend collapse">
+<div class="card border-info w-75 mx-auto">
+<div class="p-1 small">
+<p>with the resistance <span class="LaTeX">$R$</span> and capacity <span class="LaTeX">$C$</span></p>
+</div>
+</div>
+</div>
+<p>Click on the equation to expand the legend. For resistance <span class="LaTeX">$R$</span> = <span id="R_val" onclick="askValue(this.id)">10k</span>Ω and capacity <span class="LaTeX">$C$</span> = <span id="C_val" onclick="askValue(this.id)">100n</span>F the Cut-Off Frequency is <span class="LaTeX">$f_c$</span> = <tspan id="F_val">159 Hz</tspan>. Click on the values of R and C in the text to change them!</p>
+<!-- Even more complex equations such as $\int \sqrt{x^2} \diff x = \frac{1}{3} x^3$ are rendered beautifully with [KaTex](https://khan.github.io/KaTeX/)). -->
 <h3 id="interactive-diagrams">Interactive Diagrams</h3>
 <p>Play with diagrams for better understanding. Click and drag the black ray with the mouse or change any value in the diagram.</p>
-<object class="fig" style="width: 18em" id="obj_fraction" data="res/img/content-images/fraction.svg" type="image/svg+xml">
+<figure>
+<object class="img-fluid" id="fraction" data="res/img/dynamic-images/fraction.svg" type="image/svg+xml">
 </object>
+<figcaption>
+</figcaption>
+</figure>
 <h3 id="fast-fuzzy-search">Fast Fuzzy Search</h3>
 <p>Find an answer blazingly fast. The fuzzy search in the top bar displays results immediately without slow sever communication. Just hit <code>tab</code> to focus the search, then type e.g. &quot;did&quot; to search for &quot;Diode&quot;.</p>
-<h2 id="demo-pages">Demo Pages</h2>
-<ul>
-<li><a href="low-pass.html">Full Low-Pass Filter</a> (Interactive Math)</li>
-<li><a href="maxwell.html">Maxwell Equations</a> (Math Showcase)</li>
-<li><a href="numbers.html">Number Converter</a> (Fast interactions)</li>
-<li><a href="op-amp.html">Op-Amps</a> (SVG diagrams)</li>
-<li><a href="optic.html">Optics</a> (Interactive Graph)</li>
+<h2 id="basic-fomartting">Basic Fomartting</h2>
+<h3 id="tables">Tables</h3>
+<p>Tables are easily generated.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Feature</th>
+<th>Works</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Tables</td>
+<td>yes</td>
+</tr>
+<tr class="even">
+<td><abbr title="Master Out, Slave In" >MOSI</abbr></td>
+<td>Master Out, Slave In</td>
+</tr>
+<tr class="odd">
+<td><abbr title="Master In, Slave Out" >MISO</abbr></td>
+<td>Master In, Slave Out</td>
+</tr>
+</tbody>
+</table>
+<h3 id="abreviations">Abreviations</h3>
+<p>Furthermore, abbreviations such as <abbr title="Universal Serial Bus" >USB</abbr>, <abbr title="Basic Input/Output System" >BIOS</abbr>, <abbr title="Scalable Vector Graphics" >SVG</abbr>, or <abbr title="Joint Photographic Experts Group" >JPEG</abbr> do not need explanations anymore. If you do not know it just move the mouse over it.</p>
+<h3 id="tab-boxes">Tab Boxes</h3>
+<p>You can use boxes with tabs for content that exists in similiar variations.</p>
+<div class="card tabbox">
+<div class="card-header">
+<ul class="nav nav-tabs card-header-tabs ml-0" role="tablist">
+<li class="nav-item">
+<a class="nav-link active" data-toggle="tab" href="#checkboxid-0" role="tab">Tab 1</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" data-toggle="tab" href="#checkboxid-1" role="tab">Tab 2</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" data-toggle="tab" href="#checkboxid-2" role="tab">Tab 3</a>
+</li>
 </ul>
+</div>
+<div class="card-body">
+<div class="tab-content">
+<div id="checkboxid-0" class="tab-pane active" role="tabpanel">
+<p>This should by displayed in tab 1</p>
+</div>
+<div id="checkboxid-1" class="tab-pane" role="tabpanel">
+<p>tabs are simply created by the headers</p>
+</div>
+<div id="checkboxid-2" class="tab-pane" role="tabpanel">
+<p>and this is tab 3. Markdown <em>elements</em> and tex <span class="LaTeX">$\sqrt{3}$</span> are supported.</p>
+</div>
+</div>
+</div>
+</div>
+<p></br></p>
+<p>Also content after the tabbox is displayed normally.</p>
 <h2 id="todo">ToDo</h2>
 <ul>
 <li>Full responsive design</li>
@@ -203,6 +304,94 @@ Legend: where x is an arbitrary value
 <li>Improved search: Sorting results, reaction to no results</li>
 <li>More content</li>
 </ul>
+<h2 id="feature-tests">Feature Tests</h2>
+<h3 id="content-categories-1">Content Categories</h3>
+<p><strong>Using Liquid Tags:</strong></p>
+<div class="definition collapse">
+<div class="card border-primary mb-1">
+<div class="card-body">
+<h5 class="card-title text-primary">
+Definition
+</h5>
+<p class="card-text">
+The square root is the math function <span class="LaTeX">$\sqrt{\cdot}$</span>.
+</p>
+</div>
+</div>
+</div>
+<h5 class="clp_title text-success" data-toggle="collapse" href="#example1173">
+<i class='fa fa-chart-bar'></i> Example
+</h5>
+<div id='example1173' class='example collapse'>
+<div class='card border-success mb-1'>
+<div class='card-body'>
+<p class='card-text'>
+Example <span class="LaTeX">$\sqrt{ x^4 } = x^2$</span>
+<p>
+</div>
+</div>
+</div>
+<h5 class="clp_title text-warning" data-toggle="collapse" href="#expl391">
+<i class='fa fa-comment-dots'></i> Explanation
+</h5>
+<div id='expl391' class='explanation collapse'>
+<div class='card border-warning mb-1'>
+<div class='card-body'>
+<p class='card-text'>
+<span class="LaTeX">$x^4 = x^{2+2} = x^2 \cdot x^2$</span>
+<p>
+</div>
+</div>
+</div>
+<div class="legend collapse">
+<div class="card border-info w-75 mx-auto">
+<div class="p-1 small">
+where <span class="LaTeX">$x$</span> is an arbitrary number
+</div>
+</div>
+</div>
+<p><strong>Using Own Parser:</strong></p>
+<p>Definition: The square root is the math function</p>
+<h5 class="clp_title text-success" data-toggle="collapse" href="#example1174">
+<i class='fa fa-chart-bar'></i> Example
+</h5>
+<div id='example1174' class='example collapse'>
+<div class='card border-success mb-1'>
+<div class='card-body'>
+<p class='card-text'>
+<span class="LaTeX">$\sqrt{ x^4 } = x^2$</span>
+<p>
+</div>
+</div>
+</div>
+<p>Explanation: The answer is <span class="LaTeX">$x^2$</span> because <span class="LaTeX">$x^4 = x^{2+2} = x^2 \cdot x^2$</span></p>
+<p>Legend: where <span class="LaTeX">$x$</span> is an arbitrary number</p>
+<p><strong>Using Headings</strong></p>
+<h5 class="clp_title text-warning" data-toggle="collapse" href="#expl392">
+<i class='fa fa-comment-dots'></i> Explanation of This
+</h5>
+<div id='expl392' class='explanation collapse'>
+<div class='card border-warning mb-1'>
+<div class='card-body'>
+<p class='card-text'>
+<p>This is an explanation to demonstrate the auto detection of an explanation</p>
+even over several lines
+<p>
+</div>
+</div>
+</div>
+<h5 class="clp_title text-success" data-toggle="collapse" href="#example1175">
+<i class='fa fa-chart-bar'></i> Example Subsection
+</h5>
+<div id='example1175' class='example collapse'>
+<div class='card border-success mb-1'>
+<div class='card-body'>
+<p class='card-text'>
+This is an example to demonstrate the auto detection of an example even over several lines
+<p>
+</div>
+</div>
+</div>
 <script type="text/javascript">
 function RC_calcFrequency() {
  var C1 = getValue( document.getElementById("C_val").textContent );

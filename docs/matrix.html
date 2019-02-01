@@ -10,7 +10,7 @@
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="/matrix">
+    <link rel="canonical" href="http://localhost:4000/matrix">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -18,6 +18,7 @@
     <!-- Load CSS in head, JS after footer -->
     <!-- Main/Bootstrap -->
     <link rel="stylesheet" href="/assets/main.css">
+    <link rel="stylesheet" href="/assets/syntax-highlight.css">
 
     <!-- Fontawesome CSS -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
@@ -30,7 +31,7 @@
   <body>
 
     <!-- Bootstrap 4.0 Navigation Bar -->
-<nav class="navbar fixed-top navbar-dark bg-primary text-white navbar-expand-lg">
+<nav class="navbar sticky-top navbar-dark bg-primary text-white navbar-expand-lg">
 
     <!-- sticky left: Logo -->
     <div class="navbar-brand">
@@ -61,17 +62,23 @@
     <div class="collapse navbar-collapse justify-content-start order-6 order-lg-2" id="navbarResponsive">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="/about.html"><i class="fa fa-question"></i> About</a>
+          <a class="nav-link" href="/calculator.html"><i class="fa fa-calculator"></i> Calc</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/sheets.html"><i class="fa fa-file"></i> Sheets</a>
         </li>
         <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <i class="fa fa-handshake"></i> Contribute
+          <i class="fa fa-info-circle"></i> Info
         </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="/contribution.html"><i class="fa fa-edit"></i> Contribute Article</a>
-            <a class="dropdown-item" href="/todo.html"><i class="fa fa-tasks"></i> ToDo List</a>
+            <a class="dropdown-item" href="/about.html"><i class="fa fa-question"></i> About TeX4TUM</a>
+            <a class="dropdown-item" href="/demo.html"><i class="fa fa-play-circle"></i> Feature Demo</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum"><i class="fab fa-github"></i> Develop TeX4TUM Features</a>
+            <h6 class="dropdown-header"><i class="fa fa-handshake"></i> Contribute</h6>
+            <a class="dropdown-item" href="/contribution.html"><i class="fa fa-edit"></i> Write Article</a>
+            <a class="dropdown-item" href="/todo.html"><i class="fa fa-tasks"></i> ToDo List</a>
+            <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum"><i class="fab fa-github"></i> Develop Features</a>
             <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum/issues"><i class="fa fa-bug"></i> Report a bug</a>
           </div>
         </li>
@@ -114,12 +121,35 @@
 
 
     <main class="container" aria-label="Content">
-      <h1><a data-toggle="collapse" href="#title_def" aria-expanded="false" aria-controls="title_def">
+      
+
+
+
+<p style="font-family: sans-serif;">
+	
+		
+		/ <a href="/math.html">math</a>
+		
+		
+	
+		
+		/ <a href="/algebra.html">algebra</a>
+		
+		
+	
+		
+		
+	 /
+</p>
+
+<h1><a data-toggle="collapse" href="#title_def" aria-expanded="false" aria-controls="title_def">
   
   Matrix
-</a></h1>
+</a><a class="float-right small" style="font-size: small" href="https://github.com/latex4ei/tex4tum/edit/master/_article/math/algebra/matrix.md">[edit]</a></h1>
 
+<p>
 
+</p>
 
 <!-- Basics -->
 <!--    -->
@@ -127,7 +157,7 @@
 <!-- SI Units -->
 <!--=============================================================== -->
 <!-- KaTeX Tweaks -->
-<div class="collapse">
+<div id="title_def" class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
 <h5 class="card-title text-primary">
@@ -139,17 +169,19 @@ A Matrix is a table of math objects.
 </div>
 </div>
 </div>
-<div class='example card border-success mb-1'>
-<div class='card-body'>
-<h5 class="card-title text-success">
-Example
+<p><span class="LaTeX">${\mathbf{A}}=(a_{ij}) \in \mathbb K^{m\times n}$</span> has <span class="LaTeX">$m$</span> rows (index <span class="LaTeX">$i$</span>) and <span class="LaTeX">$n$</span> columns (index <span class="LaTeX">$j$</span>)</p>
+<h5 class="clp_title text-success" data-toggle="collapse" href="#example1167">
+<i class='fa fa-chart-bar'></i> Example
 </h5>
+<div id='example1167' class='example collapse'>
+<div class='card border-success mb-1'>
+<div class='card-body'>
 <p class='card-text'>
-For example a matrix <span class="LaTeX">${\mathbf{A}} \in \mathbb K^{2\times 3}$</span> could be <span class="LaTeX">${\mathbf{A}} = {\begin{bmatrix}  a &amp; b &amp; c \\ d &amp; e &amp; f \end{bmatrix}}$</span>.
+A matrix <span class="LaTeX">${\mathbf{A}} \in \mathbb K^{2\times 3}$</span> could be <span class="LaTeX">${\mathbf{A}} = {\begin{bmatrix}  a &amp; b &amp; c \\ d &amp; e &amp; f \end{bmatrix}}$</span>.
 <p>
 </div>
 </div>
-<p><span class="LaTeX">${\mathbf{A}}=(a_{ij}) \in \mathbb K^{m\times n}$</span> has <span class="LaTeX">$m$</span> rows (index <span class="LaTeX">$i$</span>) and <span class="LaTeX">$n$</span> columns (index <span class="LaTeX">$j$</span>)</p>
+</div>
 <table style="width:17%;">
 <colgroup>
 <col style="width: 16%" />
@@ -204,21 +236,30 @@ For example a matrix <span class="LaTeX">${\mathbf{A}} \in \mathbb K^{2\times 3}
 </table>
 <h3 id="rotation-matrix-of-mathopmathbb-r3">Rotation Matrix of <span class="LaTeX">${\mathop{\mathbb R}}^3$</span></h3>
 <p>for rotations in a right-handed coordinate system <span class="LaTeX">$XYZ$</span>.</p>
-<p>Rotation on x-axis:</p>
-<p><span class="LaTeX">$${\mathbf{R}}_x(\alpha) = \begin{bmatrix}
+<p><span class="LaTeX">$$\begin{matrix} 
+\begin{bmatrix}
 1 &amp;   0         &amp; 0           \\
 0 &amp; \cos \alpha &amp; -\sin \alpha \\
 0 &amp; \sin \alpha &amp;  \cos \alpha
-\end{bmatrix}$$</span></p>
-<p><span class="LaTeX">$${\mathbf{R}}_y(\alpha) = \begin{bmatrix}
+\end{bmatrix} &amp;
+\begin{bmatrix}
 \cos \alpha  &amp; 0 &amp; \sin \alpha \\
    0         &amp; 1 &amp;  0          \\
 -\sin \alpha &amp; 0 &amp; \cos \alpha
-\end{bmatrix}$$</span></p>
-<p><span class="LaTeX">$${\mathbf{R}}_{z}(\alpha )=\begin{pmatrix}\cos \alpha &amp;-\sin \alpha &amp;0\\\sin \alpha &amp;\cos \alpha &amp;0\\0&amp;0&amp;1\end{bmatrix}$$</span></p>
+\end{bmatrix} &amp;
+\begin{bmatrix}
+\cos \alpha &amp;-\sin \alpha &amp; 0\\
+\sin \alpha &amp; \cos \alpha &amp; 0\\
+    0       &amp;     0       &amp; 1
+\end{bmatrix} \\
+{\mathbf{R}}_x(\alpha) &amp;
+{\mathbf{R}}_y(\alpha) &amp;
+{\mathbf{R}}_{z}(\alpha)
+\end{matrix}
+$$</span></p>
 <h2 id="eigenvalues-and-eigenvectors">Eigenvalues and Eigenvectors</h2>
 <p>Eigenvalues: <span class="LaTeX">$\det({\mathbf{A}} - \lambda {\mathbf{1}}) = 0$</span> <br> Eigenvectors: <span class="LaTeX">${\,\text{ker}}({\mathbf{A}} - \lambda_i {\mathbf{1}}) = \vec v_i$</span></p>
-<p><span class="LaTeX">${\mathbf{A}} \vec v = \lambda \vec v$</span> <span class="LaTeX">$\det {\mathbf{A}} = \prod \lambda_i$</span>  <span class="LaTeX">${\,\text{Sp}}{\mathbf{A}} = \sum a_{ii} = \sum \lambda_i$</span></p>
+<p><span class="LaTeX">$${\mathbf{A}} \vec v = \lambda \vec v$ \qquad $\det {\mathbf{A}} = \prod \lambda_i$ \qquad\ ${\,\text{Sp}}{\mathbf{A}} = \sum a_{ii} = \sum \lambda_i$$</span></p>
 <h2 id="special-22-matrices">Special 2×2 Matrices</h2>
 <p><span class="LaTeX">$\det({\mathbf{A}}) = ad-bc$</span>   <span class="LaTeX">${\,\text{Sp}}({\mathbf{A}}) = a+d$</span> <br> <span class="LaTeX">${\begin{bmatrix} a &amp; b \ c &amp; d \end{bmatrix}}^{-1} = \frac{1}{\det {\mathbf{A}}} {\begin{bmatrix} d &amp; -b\ -c&amp; a \end{bmatrix}}$</span></p>
 <p><span class="LaTeX">$\lambda_{1/2} = \frac{{\,\text{Sp}}{\mathbf{A}}}{2} \pm \sqrt{ \left( \frac{{\,\text{Sp}}{\mathbf{A}}}{2} \right)^2 - \det {\mathbf{A}} }$</span></p>

@@ -1,12 +1,35 @@
+@charset "UTF-8";
 @media only all and (min-width: 2000px) {
   html {
-    font-size: 20px; } }
+    font-size: 18px; } }
 @media all and (max-width: 2000px) and (min-width: 1300px) {
   html {
-    font-size: 18px; } }
+    font-size: 16px; } }
 @media all and (max-width: 480px) {
   html {
     font-size: 14px; } }
+main h2 {
+  margin-top: 2.5em; }
+
+main h3 {
+  margin-top: 1.5em; }
+
+main table {
+  width: auto; }
+
+.collapsed {
+  cursor: pointer; }
+
+[data-toggle="collapse"] {
+  cursor: pointer; }
+
+.tabbox.card {
+  border: 1px solid rgba(0, 0, 0, 0.125); }
+
+.tabbox .card-header {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  padding: 0.25rem 0.25rem 0.75rem 0.25rem; }
+
 /*!
  * Bootstrap v4.0.0-beta (https://getbootstrap.com)
  * Copyright 2011-2017 The Bootstrap Authors
@@ -89,7 +112,7 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: Helvetica, Arial, sans;
   font-size: 1rem;
   font-weight: normal;
   line-height: 1.5;
@@ -338,7 +361,7 @@ template {
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 0.5rem;
-  font-family: inherit;
+  font-family: Helvetica, Arial, sans;
   font-weight: 500;
   line-height: 1.1;
   color: inherit; }
@@ -457,7 +480,7 @@ code,
 kbd,
 pre,
 samp {
-  font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+  font-family: Menlo, Monaco, Consolas, monospace; }
 
 code {
   padding: 0.2rem 0.4rem;
@@ -1043,7 +1066,7 @@ pre {
 .table-sm th, table th,
 .table-sm td,
 table td {
-  padding: 0.3rem; }
+  padding: 0.5rem 1rem; }
 
 .table-bordered {
   border: 1px solid #e9ecef; }
@@ -2625,7 +2648,7 @@ tbody.collapse.show {
   word-wrap: break-word;
   background-color: #fff;
   background-clip: border-box;
-  border: 5px solid rgba(0, 0, 0, 0.125);
+  border: 3px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem; }
 
 .card-body {
@@ -2658,16 +2681,16 @@ tbody.collapse.show {
   padding: 0.75rem 1.25rem;
   margin-bottom: 0;
   background-color: rgba(0, 0, 0, 0.03);
-  border-bottom: 5px solid rgba(0, 0, 0, 0.125); }
+  border-bottom: 3px solid rgba(0, 0, 0, 0.125); }
   .card-header:first-child {
-    border-radius: calc(0.25rem - 5px) calc(0.25rem - 5px) 0 0; }
+    border-radius: calc(0.25rem - 3px) calc(0.25rem - 3px) 0 0; }
 
 .card-footer {
   padding: 0.75rem 1.25rem;
   background-color: rgba(0, 0, 0, 0.03);
-  border-top: 5px solid rgba(0, 0, 0, 0.125); }
+  border-top: 3px solid rgba(0, 0, 0, 0.125); }
   .card-footer:last-child {
-    border-radius: 0 0 calc(0.25rem - 5px) calc(0.25rem - 5px); }
+    border-radius: 0 0 calc(0.25rem - 3px) calc(0.25rem - 3px); }
 
 .card-header-tabs {
   margin-right: -0.625rem;
@@ -2689,17 +2712,17 @@ tbody.collapse.show {
 
 .card-img {
   width: 100%;
-  border-radius: calc(0.25rem - 5px); }
+  border-radius: calc(0.25rem - 3px); }
 
 .card-img-top {
   width: 100%;
-  border-top-left-radius: calc(0.25rem - 5px);
-  border-top-right-radius: calc(0.25rem - 5px); }
+  border-top-left-radius: calc(0.25rem - 3px);
+  border-top-right-radius: calc(0.25rem - 3px); }
 
 .card-img-bottom {
   width: 100%;
-  border-bottom-right-radius: calc(0.25rem - 5px);
-  border-bottom-left-radius: calc(0.25rem - 5px); }
+  border-bottom-right-radius: calc(0.25rem - 3px);
+  border-bottom-left-radius: calc(0.25rem - 3px); }
 
 @media (min-width: 576px) {
   .card-deck {
@@ -3380,7 +3403,7 @@ button.close {
   z-index: 1070;
   display: block;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: Helvetica, Arial, sans;
   font-style: normal;
   font-weight: normal;
   line-height: 1.5;
@@ -3462,7 +3485,7 @@ button.close {
   display: block;
   max-width: 276px;
   padding: 1px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: Helvetica, Arial, sans;
   font-style: normal;
   font-weight: normal;
   line-height: 1.5;
@@ -6309,7 +6332,8 @@ textarea {
 
 main {
   clear: both;
-  padding: 150px .5em 200px; }
+  padding: 5em .5em 5em;
+  min-height: 80vh; }
 
 section {
   margin-left: -.5em;
@@ -6317,25 +6341,26 @@ section {
   padding: .5em; }
 
 h1 {
-  font-family: sans-serif;
+  font-family: Helvetica, Arial, sans;
   font-size: 2em;
   font-weight: bold; }
 
 h2 {
-  font-family: sans-serif;
+  font-family: Helvetica, Arial, sans;
   font-size: 1.5em;
   font-weight: bold;
   margin-bottom: .4em;
   margin-top: 1.5em; }
 
 h3 {
-  font-family: sans-serif;
+  font-family: Helvetica, Arial, sans;
   font-size: 1.3em;
   margin-bottom: 0.1em;
   margin-top: 1.0em; }
 
 p {
-  margin-top: 0; }
+  margin-top: 0;
+  font-family: Helvetica, Arial, sans; }
 
 pre {
   background-color: #e8e8e8;
@@ -6361,11 +6386,10 @@ html {
 
 footer {
   background-color: #e8e8e8;
-  bottom: 0;
+  margin-top: 1em;
   color: #828282;
   font-size: 15px;
-  padding: 30px;
-  position: absolute;
+  padding: 30px 0px 30px 0px;
   width: 100%; }
 
 .contact-list,
@@ -6582,45 +6606,20 @@ footer {
   background-color: transparent; }
 
 /* Other major browsers */
-.LaTeX {
-  font-size: 0.87rem !important; }
-
-/* styles for the tabbox */
-.tabbox .tab-content {
-  background-color: #f0f0f0;
-  padding: 0.2em;
-  min-height: 10px;
-  width: 100%; }
-
-.tabbox label {
-  display: inline-block;
-  padding: 0.5em 1.0em;
-  margin-right: 0.2em;
-  margin-bottom: 0;
-  font-weight: 600;
-  text-align: center;
-  border-radius: 0.2em 0.2em 0 0; }
-
-.tabbox input:checked + label {
-  background: #f0f0f0; }
-
-.tabbox label:hover {
-  background: #A2AD00;
+.clp_title {
   cursor: pointer; }
 
-.tabbox input {
-  display: none; }
+.clp_title.collapsed:before {
+  content: '+'; }
 
-.tabbox input:nth-of-type(1):checked ~ .tab-content:nth-of-type(1),
-.tabbox input:nth-of-type(2):checked ~ .tab-content:nth-of-type(2),
-.tabbox input:nth-of-type(3):checked ~ .tab-content:nth-of-type(3),
-.tabbox input:nth-of-type(3):checked ~ .tab-content:nth-of-type(4),
-.tabbox input:nth-of-type(3):checked ~ .tab-content:nth-of-type(5) {
-  display: block; }
+.clp_title.collapsed:after {
+  content: ' ...'; }
 
-.tabbox input:nth-of-type(1):not(:checked) ~ .tab-content:nth-of-type(1),
-.tabbox input:nth-of-type(2):not(:checked) ~ .tab-content:nth-of-type(2),
-.tabbox input:nth-of-type(3):not(:checked) ~ .tab-content:nth-of-type(3),
-.tabbox input:nth-of-type(3):not(:checked) ~ .tab-content:nth-of-type(4),
-.tabbox input:nth-of-type(3):not(:checked) ~ .tab-content:nth-of-type(5) {
-  display: none; }
+.clp_title:not(.collapsed):before {
+  content: '–'; }
+
+.katex {
+  font-size: 1.2em !important; }
+
+.LaTeX {
+  font-size: 0.87rem !important; }

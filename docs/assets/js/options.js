@@ -1,21 +1,26 @@
 var Options = (function () {
 
     // list of options
-    var lstOptions =     ["definition", "example", "legend"];
-    var defaultOptions = [ true       , true     , true   ];
+    var lstOptions =     ["definition", "example", "explanation", "legend"];
+    var defaultOptions = [ true       , true     , true         , true    ];
 
     var VERSION_STRING = "0.01";
 
     // Private Methods:
     var showClass = function(className, isVisible) {
-        el = document.getElementsByClassName(className);
-        for (i = 0; i < el.length; i++) {
-            if (isVisible) {
-                el[i].style.display = 'block';
-            } else {
-                el[i].style.display = 'none';
-            }
+        if (isVisible) {
+             $('.'+className).collapse('show')
+        } else {
+             $('.'+className).collapse('hide')
         }
+        // el = document.getElementsByClassName(className);
+        // for (i = 0; i < el.length; i++) {
+        //     if (isVisible) {
+        //         el[i].style.display = 'block';
+        //     } else {
+        //         el[i].style.display = 'none';
+        //     }
+        // }
     };
 
     var setCookie = function (key, value, expiredays) {

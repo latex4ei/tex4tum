@@ -10,7 +10,7 @@
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="/c">
+    <link rel="canonical" href="http://localhost:4000/c">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -18,6 +18,7 @@
     <!-- Load CSS in head, JS after footer -->
     <!-- Main/Bootstrap -->
     <link rel="stylesheet" href="/assets/main.css">
+    <link rel="stylesheet" href="/assets/syntax-highlight.css">
 
     <!-- Fontawesome CSS -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
@@ -30,7 +31,7 @@
   <body>
 
     <!-- Bootstrap 4.0 Navigation Bar -->
-<nav class="navbar fixed-top navbar-dark bg-primary text-white navbar-expand-lg">
+<nav class="navbar sticky-top navbar-dark bg-primary text-white navbar-expand-lg">
 
     <!-- sticky left: Logo -->
     <div class="navbar-brand">
@@ -61,17 +62,23 @@
     <div class="collapse navbar-collapse justify-content-start order-6 order-lg-2" id="navbarResponsive">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="/about.html"><i class="fa fa-question"></i> About</a>
+          <a class="nav-link" href="/calculator.html"><i class="fa fa-calculator"></i> Calc</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/sheets.html"><i class="fa fa-file"></i> Sheets</a>
         </li>
         <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <i class="fa fa-handshake"></i> Contribute
+          <i class="fa fa-info-circle"></i> Info
         </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="/contribution.html"><i class="fa fa-edit"></i> Contribute Article</a>
-            <a class="dropdown-item" href="/todo.html"><i class="fa fa-tasks"></i> ToDo List</a>
+            <a class="dropdown-item" href="/about.html"><i class="fa fa-question"></i> About TeX4TUM</a>
+            <a class="dropdown-item" href="/demo.html"><i class="fa fa-play-circle"></i> Feature Demo</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum"><i class="fab fa-github"></i> Develop TeX4TUM Features</a>
+            <h6 class="dropdown-header"><i class="fa fa-handshake"></i> Contribute</h6>
+            <a class="dropdown-item" href="/contribution.html"><i class="fa fa-edit"></i> Write Article</a>
+            <a class="dropdown-item" href="/todo.html"><i class="fa fa-tasks"></i> ToDo List</a>
+            <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum"><i class="fab fa-github"></i> Develop Features</a>
             <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum/issues"><i class="fa fa-bug"></i> Report a bug</a>
           </div>
         </li>
@@ -114,12 +121,35 @@
 
 
     <main class="container" aria-label="Content">
-      <h1><a data-toggle="collapse" href="#title_def" aria-expanded="false" aria-controls="title_def">
+      
+
+
+
+<p style="font-family: sans-serif;">
+	
+		
+		/ <a href="/informatics.html">informatics</a>
+		
+		
+	
+		
+		/ <a href="/language.html">language</a>
+		
+		
+	
+		
+		
+	 /
+</p>
+
+<h1><a data-toggle="collapse" href="#title_def" aria-expanded="false" aria-controls="title_def">
   
   C
-</a></h1>
+</a><a class="float-right small" style="font-size: small" href="https://github.com/latex4ei/tex4tum/edit/master/_article/informatics/language/c.md">[edit]</a></h1>
 
+<p>
 
+</p>
 
 <!-- Basics -->
 <!--    -->
@@ -127,7 +157,7 @@
 <!-- SI Units -->
 <!--=============================================================== -->
 <!-- KaTeX Tweaks -->
-<div id="title_def" class="collapse">
+<div id="title_def" class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
 <h5 class="card-title text-primary">
@@ -166,13 +196,13 @@ C is an imperative, procedural computer programming language with static type sy
 </tr>
 </tbody>
 </table>
-<div class='example card border-success mb-1'>
-<div class='card-body'>
-<h5 class="card-title text-success">
-Example
+<h5 class="clp_title text-success" data-toggle="collapse" href="#example1159">
+<i class='fa fa-chart-bar'></i> Example: Hello World
 </h5>
+<div id='example1159' class='example collapse'>
+<div class='card border-success mb-1'>
+<div class='card-body'>
 <p class='card-text'>
-<h2 id="example-hello-world">Example: Hello World</h2>
 <figure class="highlight">
 <pre><code class="language-c" data-lang="c"><span></span><span class="lineno">1 </span><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
 <span class="lineno">2 </span>  <span class="k">if</span> <span class="p">(</span><span class="n">a</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">){</span>
@@ -181,6 +211,7 @@ Example
 <span class="lineno">5 </span><span class="p">}</span></code></pre>
 </figure>
 <p>
+</div>
 </div>
 </div>
 <h2 id="operations">Operations</h2>

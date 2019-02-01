@@ -2,83 +2,36 @@
 <html lang="en">
 
   <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- title, description, favicon -->
     <title>6LoWPAN</title>
     <meta name="description" content="Interactive Knowledge Base for Engineers
-">
-    <link rel="shortcut icon" href="/res/img/Logo.png">
-
-    <link rel="stylesheet" href="/assets/main.css">
+"/>
+    <link rel="shortcut icon" href="/res/img/Logo.png"/>
     <link rel="canonical" href="http://localhost:4000/6lowpan">
 
-    
+    <!-- Brower bar color for mobile devices (TUM blue) -->
+    <meta name="theme-color" content="#005293">
 
-    <!-- Own javascript -->
-    <script src="/assets/js/latex4ei.js"></script>
-    <script src="/assets/js/options.js"></script>
+    <!-- Load CSS in head, JS after footer -->
+    <!-- Main/Bootstrap -->
+    <link rel="stylesheet" href="/assets/main.css">
+    <link rel="stylesheet" href="/assets/syntax-highlight.css">
 
+    <!-- Fontawesome CSS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 
-    <!-- Load jQuery -->
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous">
-    </script>
-
-
-    <!-- Load Fuse -->
-    <script src="https://cdn.jsdelivr.net/fuse/2.6.1/fuse.min.js"></script>
-    <script src="/assets/js/search_index.json"></script>
-    <script src="/assets/js/t4t_search.js"></script>
-
-    <!-- Bootstrap -->
-    <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
-
-
-
-    <!-- Fontawesome -->
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-
-    <!-- Mermaid -->
-    <link rel="stylesheet" href="https://cdn.rawgit.com/knsv/mermaid/7.0.0/dist/mermaid.css">
-    <script type="text/javascript" src="https://cdn.rawgit.com/knsv/mermaid/7.0.0/dist/mermaid.min.js"></script>
-
-    <!-- Load KaTeX -->
+    <!-- KaTeX CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js"></script>
-    <script type="text/javascript">
-        window.onload = function () {
-            // render KaTeX
-            renderMath();
-
-            // fix navbar hiding anchor jumps
-            window.addEventListener("hashchange", function() { scrollBy(0, -100) } );
-
-
-
-            Options.loadOptions();
-
-            var opts = {
-                data: search_index,
-                numResults: 10,
-                searchPath: '/search?q=',
-                directPath: '.',
-                container: document.getElementsByClassName('search-container')
-            };
-            autocomplete(opts);
-        };
-    </script>
-
 </head>
 
 
   <body>
 
     <!-- Bootstrap 4.0 Navigation Bar -->
-<nav class="navbar fixed-top navbar-dark bg-primary text-white navbar-expand-lg">
+<nav class="navbar sticky-top navbar-dark bg-primary text-white navbar-expand-lg">
 
     <!-- sticky left: Logo -->
     <div class="navbar-brand">
@@ -90,9 +43,9 @@
 
     <!-- sticky right: search bar  -->
     
-    <form class="form-inline ml-auto order-lg-3" role="search">
+    <form class="form-inline ml-auto order-lg-3"  role="search">
       <div id="search" class="search-container">
-        <input class="form-control search-input" type="search" placeholder="Search (fuzzy)" tabindex="1">
+        <input class="form-control search-input w-100" type="search" placeholder="&#xf002; Search (fuzzy)" tabindex="1">
       <div class="ac-results-wrapper"></div>
       </div>
     </form>
@@ -106,20 +59,27 @@
 
 
     <!-- Collapsable Items: Links -->
-    <div class="collapse navbar-collapse justify-content-start order-6 order-lg-2" id="navbarResponsive">   
+    <div class="collapse navbar-collapse justify-content-start order-6 order-lg-2" id="navbarResponsive">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="/about.html"><i class="fa fa-question"></i> About</a>
+          <a class="nav-link" href="/calculator.html"><i class="fa fa-calculator"></i> Calc</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/sheets.html"><i class="fa fa-file"></i> Sheets</a>
         </li>
         <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <i class="fa fa-handshake-o"></i> Contribute
+          <i class="fa fa-info-circle"></i> Info
         </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="/contribution.html"><i class="fa fa-pencil"></i> Contribute Article</a>
-            <a class="dropdown-item" href="/todo.html"><i class="fa fa-list"></i> ToDo List</a>
+            <a class="dropdown-item" href="/about.html"><i class="fa fa-question"></i> About TeX4TUM</a>
+            <a class="dropdown-item" href="/demo.html"><i class="fa fa-play-circle"></i> Feature Demo</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum"><i class="fa fa-github"></i> Develop TeX4TUM Features</a>
+            <h6 class="dropdown-header"><i class="fa fa-handshake"></i> Contribute</h6>
+            <a class="dropdown-item" href="/contribution.html"><i class="fa fa-edit"></i> Write Article</a>
+            <a class="dropdown-item" href="/todo.html"><i class="fa fa-tasks"></i> ToDo List</a>
+            <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum"><i class="fab fa-github"></i> Develop Features</a>
+            <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum/issues"><i class="fa fa-bug"></i> Report a bug</a>
           </div>
         </li>
         <li class="nav-item dropdown">
@@ -128,19 +88,25 @@
             <h6 class="dropdown-header">Display Options</h6>
             <div class="form-check dropdown-item">
               <label class="form-check-label">
-                <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox" checked onchange="Options.changeOption(this)">
+                <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox" checked="checked" onchange="Options.changeOption(this)">
                   Definitions
               </label>
             </div>
             <div class="form-check dropdown-item">
               <label class="form-check-label">
-                <input class="form-check-input" id="checkbox_example" name="disp_opt" type="checkbox" checked onchange="Options.changeOption(this)">
+                <input class="form-check-input" id="checkbox_example" name="disp_opt" type="checkbox" checked="checked" onchange="Options.changeOption(this)">
                   Examples
               </label>
             </div>
             <div class="form-check dropdown-item">
               <label class="form-check-label">
-                <input class="form-check-input" id="checkbox_legend" name="disp_opt" type="checkbox" checked onchange="Options.changeOption(this)">
+                <input class="form-check-input" id="checkbox_explanation" name="disp_opt" type="checkbox" checked="checked" onchange="Options.changeOption(this)">
+                  Explanations
+              </label>
+            </div>
+            <div class="form-check dropdown-item">
+              <label class="form-check-label">
+                <input class="form-check-input" id="checkbox_legend" name="disp_opt" type="checkbox" checked="checked" onchange="Options.changeOption(this)">
                   Legends
               </label>
             </div>
@@ -155,7 +121,35 @@
 
 
     <main class="container" aria-label="Content">
-      <h1><a data-toggle="collapse" href="#title_def" aria-expanded="false" aria-controls="title_def">6LoWPAN</a></h1>
+      
+
+
+
+<p style="font-family: sans-serif;">
+	
+		
+		/ <a href="/informatics.html">informatics</a>
+		
+		
+	
+		
+		/ <a href="/network.html">network</a>
+		
+		
+	
+		
+		
+	 /
+</p>
+
+<h1><a data-toggle="collapse" href="#title_def" aria-expanded="false" aria-controls="title_def">
+  
+  6LoWPAN
+</a><a class="float-right small" style="font-size: small" href="https://github.com/latex4ei/tex4tum/edit/master/_article/informatics/network/6LoWPAN.md">[edit]</a></h1>
+
+<p>
+
+</p>
 
 <!-- Basics -->
 <!--    -->
@@ -163,34 +157,28 @@
 <!-- SI Units -->
 <!--=============================================================== -->
 <!-- KaTeX Tweaks -->
-<p>6LoWPAN (IPv6 over Low-power Wireless Personal Area Networks) is an adaptation Layer that enables the use of <abbr title="Internet Protocol version 6">IPv6</abbr> over low-power IEEE 802.15.4 radio links.</p>
-<p>The 6LoWPAN network is connected to the <abbr title="Internet Protocol version 6">IPv6</abbr> network using an edge router.</p>
-<p>Fragmetns: 1280 byte <abbr title="Internet Protocol version 6">IPv6</abbr> <abbr title="Maximum Transmission Unit">MTU</abbr> → 127 byte 802.15.4 frames</p>
+<p>6LoWPAN (IPv6 over Low-power Wireless Personal Area Networks) is an adaptation Layer that enables the use of <abbr title="Internet Protocol version 6" >IPv6</abbr> over low-power IEEE 802.15.4 radio links.</p>
+<p>The 6LoWPAN network is connected to the <abbr title="Internet Protocol version 6" >IPv6</abbr> network using an edge router.</p>
+<p>Fragmetns: 1280 byte <abbr title="Internet Protocol version 6" >IPv6</abbr> <abbr title="Maximum Transmission Unit" >MTU</abbr> → 127 byte 802.15.4 frames</p>
 <p>Support for 64-bit/16-bit 802.15.4 addressing</p>
-<h2 id="table-of-contents">Table of Contents</h2>
+<h2 id="table-of-contents"><i class="fa fa-list-ul"></i> Table of Contents</h2>
 <ul>
 <li><a href="#header-compression">Header Compression</a></li>
 <li><a href="#rfc-4944-hc1-and-hc2-compression">RFC 4944: HC1 and HC2 compression</a></li>
-<li>
-<a href="#rfc-6282-iphc-and-nhc-compression">RFC 6282: IPHC and NHC compression</a>
+<li><a href="#rfc-6282-iphc-and-nhc-compression">RFC 6282: IPHC and NHC compression</a>
 <ul>
 <li><a href="#routing">Routing</a></li>
-</ul>
-</li>
-<li>
-<a href="#rpl">RPL</a>
+</ul></li>
+<li><a href="#rpl">RPL</a>
 <ul>
 <li><a href="#neighbor-discovery">Neighbor Discovery</a></li>
 <li><a href="#dodag">DODAG</a></li>
-</ul>
-</li>
-<li>
-<a href="#local-and-global-repair">Local and Global Repair</a>
+</ul></li>
+<li><a href="#local-and-global-repair">Local and Global Repair</a>
 <ul>
 <li><a href="#local-repair">local repair</a></li>
 <li><a href="#global-repair">Global repair</a></li>
-</ul>
-</li>
+</ul></li>
 <li><a href="#references">References</a></li>
 </ul>
 <h2 id="header-compression">Header Compression</h2>
@@ -201,61 +189,51 @@
 <li>2 bit:
 <ul>
 <li>00: not a 6LoWPAN frame</li>
-<li>01: <abbr title="Internet Protocol version 6">IPv6</abbr> addressing header</li>
+<li>01: <abbr title="Internet Protocol version 6" >IPv6</abbr> addressing header</li>
 <li>10: Mesh header</li>
-</ul>
-</li>
+</ul></li>
 <li>6 bit: fixed 0b000010</li>
-</ul>
-</li>
+</ul></li>
 </ul>
 <h2 id="rfc-4944-hc1-and-hc2-compression">RFC 4944: HC1 and HC2 compression</h2>
-<p>Possible to achieve 7 byte header for <abbr title="Internet Protocol version 6">IPv6</abbr> + UDP.</p>
+<p>Possible to achieve 7 byte header for <abbr title="Internet Protocol version 6" >IPv6</abbr> + UDP.</p>
 <h4 id="hc1-compression-byte">HC1 compression byte:</h4>
 <pre><code>   0   1   2   3   4   5   6   7    
  +---+---+---+---+---+---+---+---+ 
- | &lt;abbr title="Internet Protocol" &gt;IP&lt;/abbr&gt; SA | &lt;abbr title="Internet Protocol" &gt;IP&lt;/abbr&gt; DA |TF |  NH   |HC2| 
+ | &lt;abbr title=&quot;Internet Protocol&quot; &gt;IP&lt;/abbr&gt; SA | &lt;abbr title=&quot;Internet Protocol&quot; &gt;IP&lt;/abbr&gt; DA |TF |  NH   |HC2| 
  +---+---+---+---+---+---+---+---+ </code></pre>
 <ul>
-<li>
-<abbr title="Internet Protocol version 6">IPv6</abbr> source address (bits 0 and 1):
+<li><abbr title="Internet Protocol version 6" >IPv6</abbr> source address (bits 0 and 1):
 <ul>
 <li>00: Prefix in-line, Interface identifier</li>
 <li>01: Prefix compressed (link-local prefix assumed).</li>
 <li>10: Interface identifier carried in-line</li>
 <li>11: Interface identifier elided</li>
-</ul>
-</li>
-<li>
-<abbr title="Internet Protocol version 6">IPv6</abbr> destination address (bits 2 and 3):
+</ul></li>
+<li><abbr title="Internet Protocol version 6" >IPv6</abbr> destination address (bits 2 and 3):
 <ul>
 <li>00: Prefix carried in-line</li>
 <li>01: Prefix compressed (link-local prefix assumed).</li>
 <li>10: Interface identifier carried in-line</li>
 <li>11: Interface identifier elided</li>
-</ul>
-</li>
+</ul></li>
 <li>Traffic Class and Flow Label (bit 4):
 <ul>
 <li>0: not compressed; full 8 bits for TC and 20 bits for FL</li>
 <li>1: Traffic Class and Flow Label are zero</li>
-</ul>
-</li>
+</ul></li>
 <li>Next Header (bits 5 and 6):
 <ul>
 <li>00: not compressed; full 8 bits are sent</li>
 <li>01: UDP</li>
 <li>10: ICMP</li>
-<li>11: <abbr title="Transmission Control Protocol">TCP</abbr>
-</li>
-</ul>
-</li>
+<li>11: <abbr title="Transmission Control Protocol" >TCP</abbr></li>
+</ul></li>
 <li>HC2 encoding(bit 7):
 <ul>
 <li>0: no more header compression bits</li>
 <li>1: HC1 compression byte follows immediately</li>
-</ul>
-</li>
+</ul></li>
 </ul>
 <h4 id="hc2-compression-byte-for-udp">HC2 compression byte for UDP:</h4>
 <pre><code>   0   1   2   3   4   5   6   7  
@@ -265,22 +243,19 @@
 <ul>
 <li>UDP source port (bit 0):
 <ul>
-<li>0: Not compressed, carried "in-line"</li>
+<li>0: Not compressed, carried &quot;in-line&quot;</li>
 <li>1: Compressed to 4 bits.</li>
-</ul>
-</li>
+</ul></li>
 <li>UDP destination port (bit 1):
 <ul>
-<li>0: Not compressed, carried "in-line"</li>
+<li>0: Not compressed, carried &quot;in-line&quot;</li>
 <li>1: Compressed to 4 bits.</li>
-</ul>
-</li>
+</ul></li>
 <li>Length (bit 2):
 <ul>
-<li>0: Not compressed, carried "in-line"</li>
-<li>1: length computed from <abbr title="Internet Protocol version 6">IPv6</abbr> header length</li>
-</ul>
-</li>
+<li>0: Not compressed, carried &quot;in-line&quot;</li>
+<li>1: length computed from <abbr title="Internet Protocol version 6" >IPv6</abbr> header length</li>
+</ul></li>
 <li>Reserved (bit 3 through 7)</li>
 </ul>
 <h2 id="rfc-6282-iphc-and-nhc-compression">RFC 6282: IPHC and NHC compression</h2>
@@ -288,9 +263,14 @@
 <p>6LoWPAN structure:</p>
 <pre><code>+-------------+-------------+-------------+-----------------+--------
 | LOWPAN_IPHC | In-line     | LOWPAN_NHC  | In-line Next    | Payload
-|   Encoding  |   &lt;abbr title="Internet Protocol" &gt;IP&lt;/abbr&gt; Fields |   Encoding  |   Header Fields |
+|   Encoding  |   &lt;abbr title=&quot;Internet Protocol&quot; &gt;IP&lt;/abbr&gt; Fields |   Encoding  |   Header Fields |
 +-------------+-------------+-------------+-----------------+--------</code></pre>
-<p>IPHC bytes: 0 1 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 +---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+ | 0 | 1 | 1 | TF |NH | HLIM |CID|SAC| SAM | M |DAC| DAM | +---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+</p>
+<p>IPHC bytes:</p>
+<pre><code>  0                                       1
+  0   1   2   3   4   5   6   7   8   9   0   1   2   3   4   5
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+| 0 | 1 | 1 |  TF   |NH | HLIM  |CID|SAC|  SAM  | M |DAC|  DAM  |
++---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+</code></pre>
 <p>NHC dispatch byte:</p>
 <ul>
 <li>Traffic Class and Flow Label (TF), 2 bit
@@ -299,57 +279,50 @@
 <li>01: ECN+Flow</li>
 <li>10: ECN+DSCP</li>
 <li>11: Traffic Class and Flow Label are elided.</li>
-</ul>
-</li>
+</ul></li>
 <li>Next Header compression (NH)
 <ul>
 <li>0: Carried Inline</li>
 <li>1: next header is compressed using LOWPAN_NHC</li>
-</ul>
-</li>
+</ul></li>
 <li>Hop Limit (HLIM)
 <ul>
 <li>00: Carried Inline,</li>
 <li>01: 1,</li>
 <li>10: 64</li>
 <li>11: 255</li>
-</ul>
-</li>
+</ul></li>
 <li>Context Identifier Extension (CID)
 <ul>
 <li>0: No 1-byte CID identifier</li>
 <li>1: 1-byte identifier follows</li>
-</ul>
-</li>
+</ul></li>
 <li>SAC/DAC (Source/Destination Address Compression)
 <ul>
 <li>0: Stateless</li>
 <li>1: Context-based</li>
-</ul>
-</li>
+</ul></li>
 <li>SAM/DAM (Source/Destination Address Mode)
 <ul>
 <li>00: 16 bytes inline</li>
 <li>01: 8 bytes inline</li>
 <li>10: 2 bytes inline</li>
 <li>11: elided</li>
-</ul>
-</li>
+</ul></li>
 <li>Multicast Destination (M)
 <ul>
 <li>0: Destination is not multicast</li>
 <li>1: Destination is multicast</li>
-</ul>
-</li>
+</ul></li>
 </ul>
 <h3 id="routing">Routing</h3>
 <p>6LoWPAN supports two routing methods on different layers.</p>
 <ul>
-<li>Route-over: on layer 3 with <abbr title="Internet Protocol">IP</abbr> addresses (RPL protocol)</li>
-<li>Mesh-under: on layer 2 with <abbr title="Media Access Control">MAC</abbr> addresses</li>
+<li>Route-over: on layer 3 with <abbr title="Internet Protocol" >IP</abbr> addresses (RPL protocol)</li>
+<li>Mesh-under: on layer 2 with <abbr title="Media Access Control" >MAC</abbr> addresses</li>
 </ul>
 <h2 id="rpl">RPL</h2>
-<p>Routing Protocol for Low-Power and Lossy Networks (RPL) (pronounced "ripple"), is a protocol based on DODAG with expensive bits and dynamically formed topology.</p>
+<p>Routing Protocol for Low-Power and Lossy Networks (RPL) (pronounced &quot;ripple&quot;), is a protocol based on DODAG with expensive bits and dynamically formed topology.</p>
 <h3 id="neighbor-discovery">Neighbor Discovery</h3>
 <p>ND for 6LoWPAN has been specified in draft-ietf-6lowpan-nd (work in progress)</p>
 <h3 id="dodag">DODAG</h3>
@@ -393,7 +366,7 @@
           <li>
 <!-- Dont put these Liquid statements into a new line to ensure the correct output format -->
 <a href="https://github.com/latex4ei">
-  <i class="fa fa-github"></i>
+  <i class="fab fa-github"></i>
   <span class="username">latex4ei</span>
 </a>
 </li>
@@ -401,9 +374,7 @@
           <li>
 <!-- Dont put these Liquid statements into a new line to ensure the correct output format -->
 <a href="https://gitter.im/LaTeX4Ei">
-  <span class="img-fluid"><svg viewbox="0 0 16 16" width="16px" height="16px"><path d="M5.667 2.667H7V16H5.667V2.667zm4.666 0V16H9V2.667h1.333zM2.333 0h1.334v10H2.333V0zm10 2.667h1.334V10h-1.334V2.667z" style="fill:#828282;fill-opacity:1"></path>
-</svg>
-</span>
+  <i class="fab fa-gitter"></i>
   <span class="username">LaTeX4Ei</span>
 </a>
 </li>
@@ -411,7 +382,7 @@
           <li>
 <!-- Dont put these Liquid statements into a new line to ensure the correct output format -->
 <a href="https://facebook.com/LaTeX4Ei">
-  <i class="fa fa-facebook-square"></i>
+  <i class="fab fa-facebook-square"></i>
   <span class="username">LaTeX4Ei</span>
 </a>
 </li>
@@ -426,6 +397,62 @@
     </div>
   </div>
 </footer>
+
+
+<!-- Load Javascript at the end for faster page loading -->
+<!-- ================================================== -->
+
+  <!-- Own javascript -->
+  <script src="/assets/js/latex4ei.js"></script>
+  <script src="/assets/js/options.js"></script>
+
+  <!-- KaTeX JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js"></script>
+
+  <!-- jQuery (req. for BootStrap) -->
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+
+  <!-- Bootstrap + Requirements -->
+  <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
+  <!-- Fuse + Own Adapter -->
+  <script src="https://cdn.jsdelivr.net/fuse/2.6.1/fuse.min.js"></script>
+  <script src="/assets/js/search_index.json"></script>
+  <script src="/assets/js/t4t_search.js"></script>
+
+  <script type="text/javascript">
+      window.onload = function () {
+          // render KaTeX
+          renderMath();
+
+          // fix navbar hiding anchor jumps
+          window.addEventListener("hashchange", function() { scrollBy(0, -100) } );
+
+
+          Options.loadOptions();
+
+          var opts = {
+              data: search_index,
+              numResults: 10,
+              searchPath: '/search?q=',
+              directPath: '.',
+              container: document.getElementsByClassName('search-container')
+          };
+          autocomplete(opts);
+      };
+  </script>
+
+
+  <!-- Mermaid -->
+  <link rel="stylesheet" href="https://cdn.rawgit.com/knsv/mermaid/7.0.0/dist/mermaid.css">
+  <script type="text/javascript" src="https://cdn.rawgit.com/knsv/mermaid/7.0.0/dist/mermaid.min.js"></script>
+
+<!-- ================================================== -->
+
+
+
 
 
   </body>

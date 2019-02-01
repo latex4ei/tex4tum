@@ -10,7 +10,7 @@
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="/contribution">
+    <link rel="canonical" href="http://localhost:4000/contribution">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -18,6 +18,7 @@
     <!-- Load CSS in head, JS after footer -->
     <!-- Main/Bootstrap -->
     <link rel="stylesheet" href="/assets/main.css">
+    <link rel="stylesheet" href="/assets/syntax-highlight.css">
 
     <!-- Fontawesome CSS -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
@@ -30,7 +31,7 @@
   <body>
 
     <!-- Bootstrap 4.0 Navigation Bar -->
-<nav class="navbar fixed-top navbar-dark bg-primary text-white navbar-expand-lg">
+<nav class="navbar sticky-top navbar-dark bg-primary text-white navbar-expand-lg">
 
     <!-- sticky left: Logo -->
     <div class="navbar-brand">
@@ -61,17 +62,23 @@
     <div class="collapse navbar-collapse justify-content-start order-6 order-lg-2" id="navbarResponsive">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="/about.html"><i class="fa fa-question"></i> About</a>
+          <a class="nav-link" href="/calculator.html"><i class="fa fa-calculator"></i> Calc</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/sheets.html"><i class="fa fa-file"></i> Sheets</a>
         </li>
         <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <i class="fa fa-handshake"></i> Contribute
+          <i class="fa fa-info-circle"></i> Info
         </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="/contribution.html"><i class="fa fa-edit"></i> Contribute Article</a>
-            <a class="dropdown-item" href="/todo.html"><i class="fa fa-tasks"></i> ToDo List</a>
+            <a class="dropdown-item" href="/about.html"><i class="fa fa-question"></i> About TeX4TUM</a>
+            <a class="dropdown-item" href="/demo.html"><i class="fa fa-play-circle"></i> Feature Demo</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum"><i class="fab fa-github"></i> Develop TeX4TUM Features</a>
+            <h6 class="dropdown-header"><i class="fa fa-handshake"></i> Contribute</h6>
+            <a class="dropdown-item" href="/contribution.html"><i class="fa fa-edit"></i> Write Article</a>
+            <a class="dropdown-item" href="/todo.html"><i class="fa fa-tasks"></i> ToDo List</a>
+            <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum"><i class="fab fa-github"></i> Develop Features</a>
             <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum/issues"><i class="fa fa-bug"></i> Report a bug</a>
           </div>
         </li>
@@ -114,14 +121,19 @@
 
 
     <main class="container" aria-label="Content">
-      <h1><a data-toggle="collapse" href="#title_def" aria-expanded="false" aria-controls="title_def">
+      
+
+
+<h1><a data-toggle="collapse" href="#title_def" aria-expanded="false" aria-controls="title_def">
   
   <i class="fas fa-edit"></i>
   
   Contribution
-</a></h1>
+</a><a class="float-right small" style="font-size: small" href="https://github.com/latex4ei/tex4tum/edit/master/_info/contribution.md">[edit]</a></h1>
 
+<p>
 
+</p>
 
 <!-- Basics -->
 <!--    -->
@@ -129,7 +141,7 @@
 <!-- SI Units -->
 <!--=============================================================== -->
 <!-- KaTeX Tweaks -->
-<div id="title_def" class="collapse">
+<div id="title_def" class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
 <h5 class="card-title text-primary">
@@ -152,23 +164,34 @@ This article describes how you can contribute or edit articles.
 <li><a href="#our-format-syntax">Our Format Syntax</a>
 <ul>
 <li><a href="#file-structure">File structure</a></li>
+<li><a href="#markdown-for-basic-text">Markdown for Basic Text</a></li>
+<li><a href="#own-parsers">Own Parsers</a></li>
 <li><a href="#equations-with-tex">Equations with TeX</a></li>
 </ul></li>
 <li><a href="#jekyll-and-liquid-tags">Jekyll and Liquid Tags</a>
 <ul>
 <li><a href="#images">Images</a></li>
 <li><a href="#diagramms">Diagramms</a></li>
-<li><a href="#abbreviations">Abbreviations</a></li>
-<li><a href="#interactive-environments">Interactive Environments</a></li>
+<li><a href="#code-listings">Code Listings</a></li>
+<li><a href="#acronyms">Acronyms</a></li>
+<li><a href="#content-categories">Content Categories</a></li>
 <li><a href="#emphbox">Emphbox</a></li>
 </ul></li>
+<li><a href="#interactivity-abbr-titlehypertext-markup-language-htmlabbrsvg--javascript">Interactivity: <abbr title="Hypertext Markup Language" >HTML</abbr>/SVG + JavaScript</a></li>
 <li><a href="#preview-your-article">Preview your article</a></li>
 <li><a href="#list-of-todos">List of TODOs</a></li>
 </ul>
 <h2 id="our-format-syntax">Our Format Syntax</h2>
-<p>The good news first: If you write text, it will be displayed as text. If you want to apply some formatting you can use <a href="/markdown.html">Markdown</a>. In particular, we use <a href="https://pandoc.org/MANUAL.html">Pandoc</a> as Markdown interpreter with the extension <code>footnotes</code> and <code>backtick_code_blocks</code>.</p>
+<p>The good news first: If you write text, it will be displayed as text. If you want to apply some text formatting you can use <a href="/markdown.html">Markdown</a>. Equations can be typset in TeX surrounded by <code>$</code> without spaces.</p>
 <h3 id="file-structure">File structure</h3>
 <p>Our file structure requires a <abbr title="YAML Ain't Markup Language" >YAML</abbr> header (surrounded by <code>---</code>) that states a title and some keywords (tags) that can be used to find the article.</p>
+<h5 class="clp_title text-success" data-toggle="collapse" href="#example1170">
+<i class='fa fa-chart-bar'></i> File example
+</h5>
+<div id='example1170' class='example collapse'>
+<div class='card border-success mb-1'>
+<div class='card-body'>
+<p class='card-text'>
 <pre><code> ---
  title: Inter-Integrated Circuit I²C
  tags: i2c, bus, SDA, SCK
@@ -180,21 +203,58 @@ This article describes how you can contribute or edit articles.
 
  ## First Heading
  text</code></pre>
+<p>
+</div>
+</div>
+</div>
+<p>The first paragraph will become the definition, which you should always provide. If you really want to omit a definition, indent the first paragraph by two spaces.</p>
+<h3 id="markdown-for-basic-text">Markdown for Basic Text</h3>
+<p>We use <a href="https://pandoc.org/MANUAL.html">Pandoc</a> as Markdown interpreter with the extension <code>footnotes</code> and <code>backtick_code_blocks</code>. Thus, the following formatting is possible</p>
+<table>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>## Heading</code></td>
+<td style="text-align: left;"><strong>Heading</strong></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>**bold**</code></td>
+<td style="text-align: left;"><strong>bold</strong></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>**italic**</code></td>
+<td style="text-align: left;"><em>italic</em></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>[Link-Text](url)</code></td>
+<td style="text-align: left;"><a href="url">Link-Text</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="own-parsers">Own Parsers</h3>
+<p>We also use our own backend scripts to parse certain content categories, for example, to detect the definition paragraph of an article. Furthermore, we format examples, explanations, and legends. To format a paragraph as example you just need to write <code>Example:</code> before a paragraph. The paragraph is recognized by blank lines, so make sure that you have a blank line before the the <code>Example:</code> marker.</p>
+<h5 class="clp_title text-success" data-toggle="collapse" href="#example1171">
+<i class='fa fa-chart-bar'></i> Example
+</h5>
+<div id='example1171' class='example collapse'>
+<div class='card border-success mb-1'>
+<div class='card-body'>
+<p class='card-text'>
+This is an example Text and here is the code that produces it.</br> <code>Example: This is an example Text and here is the code that produces it.</code>
+<p>
+</div>
+</div>
+</div>
+<p>Besides that you can also mark content using the Liquid Tags described below.</p>
 <h3 id="equations-with-tex">Equations with TeX</h3>
 <p>We use <a href="https://khan.github.io/KaTeX/">KaTeX</a> as TeX interpreter, such that you can typeset math equations simply using <code>$</code>. For example to display <span class="LaTeX">$\sqrt{x^2 + \alpha}$</span> as inline you write <code>$\sqrt{x^2 + \alpha}$</code>. Please note that there must <em>not</em> be a space between the <code>$</code> and your tex code! For display style equations, leave a blank line and surround your tex code by double <code>$$</code>s. You may optionally explain used symbols by a line starting with <code>with</code> or <code>where</code> that directly follows the equation.</p>
 <p>The equation (you can click on it)</p>
 <div data-toggle="collapse" href="#eq_0">
 <p><span class="LaTeX">$$\oint_{\partial A} \vec E \cdot {\,\text{d}}\vec s$$</span></p>
 </div>
-<div id="eq_0" class="collapse">
-<div class="legend card border-info mb-1">
-<div class="card-body">
-<h5 class="card-title text-info">
-Legend
-</h5>
-<p class="card-text">
+<div id="eq_0" class="legend collapse">
+<div class="card border-info w-75 mx-auto">
+<div class="p-1 small">
 <p>with electric field <span class="LaTeX">$\vec E$</span>, surface <span class="LaTeX">$A$</span> and direction <span class="LaTeX">$\vec s$</span></p>
-</p>
 </div>
 </div>
 </div>
@@ -208,8 +268,7 @@ with electric field $\vec E$, surface $A$ and direction $\vec s$</code></pre>
 <h3 id="images">Images</h3>
 <p>To include Images use the following commands</p>
 <p><strong>Figures</strong></p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash">
-{<span class="ex">%</span> include figure.html filename=<span class="st">&quot;complex.svg&quot;</span> description=<span class="st">&quot;Description goes here&quot;</span> width=<span class="st">&quot;50%&quot;</span> %}</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash">{<span class="ex">%</span> include figure.html filename=<span class="st">&quot;complex.svg&quot;</span> description=<span class="st">&quot;Description goes here&quot;</span> width=<span class="st">&quot;50%&quot;</span> %}</code></pre></div>
 <p>Output: Image in figure environment with image description</p>
 <!--<p> Filename="complex.svg", path="/res/img/content-images/math/complex.svg" </p>-->
 <figure class="figure">
@@ -219,12 +278,10 @@ Description goes here
 </figcaption>
 </figure>
 <p><strong>Inline Image</strong></p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash">
-{<span class="ex">%</span> inlineimage capacitor_symbol.svg %}</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash">{<span class="ex">%</span> inlineimage capacitor_symbol.svg %}</code></pre></div>
 <p>Output: Inline Image <img class='img-fluid' src='/res/img/content-images/electrical/capacitor_symbol.svg'></p>
 <p><strong>SVG Objects</strong></p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash">
-{<span class="ex">%</span> include svg-object.html width=<span class="st">&quot;18em&quot;</span> id=<span class="st">&quot;RC_obj&quot;</span> filename=<span class="st">&quot;rc.svg&quot;</span> description=<span class="st">&quot;Circuit of low-pass filter&quot;</span> %}</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash">{<span class="ex">%</span> include svg-object.html width=<span class="st">&quot;18em&quot;</span> id=<span class="st">&quot;RC_obj&quot;</span> filename=<span class="st">&quot;rc.svg&quot;</span> description=<span class="st">&quot;Circuit of low-pass filter&quot;</span> %}</code></pre></div>
 Output: <abbr title="Scalable Vector Graphics" >SVG</abbr> Object
 <figure>
 <object class="img-fluid" id="RC_obj" data="res/img/dynamic-images/rc.svg" type="image/svg+xml">
@@ -232,34 +289,35 @@ Output: <abbr title="Scalable Vector Graphics" >SVG</abbr> Object
 <figcaption>
 </figcaption>
 </figure>
-<h3 id="diagramms">Diagramms</h3>
-<p>We use <a href="https://knsv.github.io/mermaid">mermaid</a> for drawing diagramms. For this we created a liquid tag</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash">
-{<span class="ex">%</span> mermaid %}
-<span class="ex">graph</span> TD<span class="kw">;</span>
-    <span class="ex">A--</span><span class="op">&gt;</span>B<span class="kw">;</span>
-    <span class="ex">A--</span><span class="op">&gt;</span>C<span class="kw">;</span>
-    <span class="ex">B--</span><span class="op">&gt;</span>D<span class="kw">;</span>
-    <span class="ex">C--</span><span class="op">&gt;</span>D<span class="kw">;</span>
-{<span class="ex">%</span> endmermaid %}</code></pre></div>
-<p>Check some <a href="https://knsv.github.io/mermaid/#demos9">demos</a> and the online editor of mermaid: <a href="knsv.github.io/mermaid/live_editor">Live Editor</a></p>
-Output:
-<div class="mermaid">
-<p>graph TD; A--&gt;B; A--&gt;C; B--&gt;D; C--&gt;D;</p>
-</div>
-<h3 id="abbreviations">Abbreviations</h3>
-<p>Abbreviations are parsed and linked automatically. If you want to add a new abbreviation just add it to <code>res/parser_util/abbreviations.md</code>. The structure should look like this</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash">
-<span class="ex">*</span>[AES]: Advanced Encryption Standard</code></pre></div>
-<h3 id="interactive-environments">Interactive Environments</h3>
-<p>The following blocks can be enabled and disabled via the options (see <a href="demo.html">Demo Page</a>)</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash">
-{<span class="ex">%</span> definition %}<span class="ex">text</span>{% enddefinition %}
+<h3 id="code-listings">Code Listings</h3>
+<p>Verbatime code can be placed inside backticks, e.g. `code` is displayed as <code>code</code>. If you want to highlight code put it in a block of three backticks. Directly after the backticks you can specify the language.</p>
+<figure class="highlight">
+<pre><code class="language-c" data-lang="c"><span></span><span class="lineno">1 </span><span class="err">```</span><span class="n">c</span>
+<span class="lineno">2 </span><span class="kt">int</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
+<span class="lineno">3 </span>  <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hello World&quot;</span><span class="p">);</span>
+<span class="lineno">4 </span><span class="p">}</span>
+<span class="lineno">5 </span><span class="err">```</span></code></pre>
+</figure>
+<p>As an alternative we also support advanced syntax highlighting using the following liquid tag</p>
+<pre><code>{% highlight c linenos %}
+int main() {
+    if (a &lt; 3){
+        printf(&quot;Hello World&quot;);
+    }
+}
+{% endhighlight %}
+</code></pre>
+<h3 id="acronyms">Acronyms</h3>
+<p>Acronyms, such as <abbr title="Advanced Encryption Standard" >AES</abbr>, are parsed and linked automatically. If you want to add a new abbreviation just add it to <code>res/parser_util/abbreviations.md</code>. The structure should look like this</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">*</span>[AES]: Advanced Encryption Standard</code></pre></div>
+<h3 id="content-categories">Content Categories</h3>
+<p>We currently support four special categories of content, which visibility is influenced via interactions or the options (see <a href="demo.html">Demo Page</a>)</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash">{<span class="ex">%</span> definition %}<span class="ex">text</span>{% enddefinition %}
 {<span class="ex">%</span> example %}<span class="ex">text</span>{% endexample %}
+{<span class="ex">%</span> explanation %}<span class="ex">text</span>{% endexplanation %}
 {<span class="ex">%</span> legend %}<span class="ex">text</span>{% endlegend %}</code></pre></div>
 <h3 id="emphbox">Emphbox</h3>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash">
-{<span class="ex">%</span> emphbox %}<span class="ex">Content</span> in box{% endemphbox %}</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash">{<span class="ex">%</span> emphbox %}<span class="ex">Content</span> in box{% endemphbox %}</code></pre></div>
 Output:
 <div class='card border-danger'>
 <div class='card-body'>
@@ -268,12 +326,20 @@ Content in box
 <p>
 </div>
 </div>
+<h2 id="interactivity-htmlsvg-javascript">Interactivity: <abbr title="Hypertext Markup Language" >HTML</abbr>/SVG + JavaScript</h2>
+<p>To create interactive content you can directly embedd <abbr title="Hypertext Markup Language" >HTML</abbr> tags and JavaScript code. An easy to use framework is under development.</p>
+<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html">Resistance R = <span class="kw">&lt;span</span><span class="ot"> id=</span><span class="st">&quot;R_val&quot;</span><span class="ot"> onclick=</span><span class="st">&quot;askValue(this.id)&quot;</span><span class="kw">&gt;</span>10k<span class="kw">&lt;/span&gt;</span>Ω
+
+<span class="kw">&lt;script</span><span class="ot"> type=</span><span class="st">&quot;text/javascript&quot;</span><span class="kw">&gt;</span>
+ <span class="kw">var</span> R1 <span class="op">=</span> <span class="at">getValue</span>( <span class="va">document</span>.<span class="at">getElementById</span>(<span class="st">&quot;R_val&quot;</span>).<span class="at">textContent</span> )<span class="op">;</span>
+<span class="kw">&lt;/script&gt;</span></code></pre></div>
+<p>Please ensure that you only have one <code>&lt;script&gt;</code> section <em>at the end</em> of the article! Otherwise our generator scripts might destroy your code.</p>
 <h2 id="preview-your-article">Preview your article</h2>
 <p>When you are done editing, you can preview your article. Follow the instruction of the <a href="https://github.com/latex4ei/tex4tum/blob/master/README.md#contribution">README</a> to install all dependencies</p>
 <p>Run the local server and browse to http://localhost:4000/ with</p>
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">make</span> run</code></pre></div>
 <h2 id="list-of-todos">List of TODOs</h2>
-<p>All lines starting with</p>
+<p>All lines starting with TODO will be added to the following TODO list.</p>
 <table class="table table-striped">
 <thead>
 <tr>
@@ -291,6 +357,61 @@ Page Reference
 <tbody>
 <tr>
 <td>
+content from &quot;Digitale Schaltungen&quot;
+</td>
+<td>
+transistor.md
+</td>
+<td>
+<a href="/transistor.html">Transistor</a>
+</td>
+</tr>
+<tr>
+<td>
+jvascript that displays different encodings
+</td>
+<td>
+utf8.md
+</td>
+<td>
+<a href="/utf8.html">UTF-8</a>
+</td>
+</tr>
+<tr>
+<td>
+fill list
+</td>
+<td>
+http.md
+</td>
+<td>
+<a href="/http.html">HTTP</a>
+</td>
+</tr>
+<tr>
+<td>
+diagram showing IP, bits and marks network bits
+</td>
+<td>
+ip.md
+</td>
+<td>
+<a href="/ip.html">Internet Protocol</a>
+</td>
+</tr>
+<tr>
+<td>
+write article
+</td>
+<td>
+mac.md
+</td>
+<td>
+<a href="/mac.html">Media Access Control</a>
+</td>
+</tr>
+<tr>
+<td>
 Float umwandlung mit precision fehler
 </td>
 <td>
@@ -302,24 +423,13 @@ numbers.md
 </tr>
 <tr>
 <td>
-KaTeX Error
+explain alpha, beta, and P
 </td>
 <td>
-complex-number.md
+testing.md
 </td>
 <td>
-<a href="/complex-number.html">Complex Numbers</a>
-</td>
-</tr>
-<tr>
-<td>
-KaTeX Error
-</td>
-<td>
-vector.md
-</td>
-<td>
-<a href="/vector.html">Vector Space</a>
+<a href="/testing.html">Hypothesis Testing</a>
 </td>
 </tr>
 <tr>
@@ -335,7 +445,7 @@ about.md
 </tr>
 <tr>
 <td>
-will be added to the following TODO list.
+should we use mermaid?
 </td>
 <td>
 contribution.md
@@ -346,24 +456,13 @@ contribution.md
 </tr>
 <tr>
 <td>
-Das wird in die TodoList geschrieben
+This will be written into the todo-list
 </td>
 <td>
 demo.md
 </td>
 <td>
-<a href="/demo.html">Interactive Cheat Sheets Demo</a>
-</td>
-</tr>
-<tr>
-<td>
-Zweiter Task
-</td>
-<td>
-demo.md
-</td>
-<td>
-<a href="/demo.html">Interactive Cheat Sheets Demo</a>
+<a href="/demo.html">Demo of Interactive Features</a>
 </td>
 </tr>
 </tbody>

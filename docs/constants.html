@@ -10,7 +10,7 @@
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="/constants">
+    <link rel="canonical" href="http://localhost:4000/constants">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -18,6 +18,7 @@
     <!-- Load CSS in head, JS after footer -->
     <!-- Main/Bootstrap -->
     <link rel="stylesheet" href="/assets/main.css">
+    <link rel="stylesheet" href="/assets/syntax-highlight.css">
 
     <!-- Fontawesome CSS -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
@@ -30,7 +31,7 @@
   <body>
 
     <!-- Bootstrap 4.0 Navigation Bar -->
-<nav class="navbar fixed-top navbar-dark bg-primary text-white navbar-expand-lg">
+<nav class="navbar sticky-top navbar-dark bg-primary text-white navbar-expand-lg">
 
     <!-- sticky left: Logo -->
     <div class="navbar-brand">
@@ -61,17 +62,23 @@
     <div class="collapse navbar-collapse justify-content-start order-6 order-lg-2" id="navbarResponsive">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="/about.html"><i class="fa fa-question"></i> About</a>
+          <a class="nav-link" href="/calculator.html"><i class="fa fa-calculator"></i> Calc</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/sheets.html"><i class="fa fa-file"></i> Sheets</a>
         </li>
         <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <i class="fa fa-handshake"></i> Contribute
+          <i class="fa fa-info-circle"></i> Info
         </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="/contribution.html"><i class="fa fa-edit"></i> Contribute Article</a>
-            <a class="dropdown-item" href="/todo.html"><i class="fa fa-tasks"></i> ToDo List</a>
+            <a class="dropdown-item" href="/about.html"><i class="fa fa-question"></i> About TeX4TUM</a>
+            <a class="dropdown-item" href="/demo.html"><i class="fa fa-play-circle"></i> Feature Demo</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum"><i class="fab fa-github"></i> Develop TeX4TUM Features</a>
+            <h6 class="dropdown-header"><i class="fa fa-handshake"></i> Contribute</h6>
+            <a class="dropdown-item" href="/contribution.html"><i class="fa fa-edit"></i> Write Article</a>
+            <a class="dropdown-item" href="/todo.html"><i class="fa fa-tasks"></i> ToDo List</a>
+            <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum"><i class="fab fa-github"></i> Develop Features</a>
             <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum/issues"><i class="fa fa-bug"></i> Report a bug</a>
           </div>
         </li>
@@ -114,12 +121,30 @@
 
 
     <main class="container" aria-label="Content">
-      <h1><a data-toggle="collapse" href="#title_def" aria-expanded="false" aria-controls="title_def">
+      
+
+
+
+<p style="font-family: sans-serif;">
+	
+		
+		/ <a href="/physics.html">physics</a>
+		
+		
+	
+		
+		
+	 /
+</p>
+
+<h1><a data-toggle="collapse" href="#title_def" aria-expanded="false" aria-controls="title_def">
   
   Physical Constants
-</a></h1>
+</a><a class="float-right small" style="font-size: small" href="https://github.com/latex4ei/tex4tum/edit/master/_article/physics/constants.md">[edit]</a></h1>
 
+<p>
 
+</p>
 
 <!-- Basics -->
 <!--    -->
@@ -127,6 +152,18 @@
 <!-- SI Units -->
 <!--=============================================================== -->
 <!-- KaTeX Tweaks -->
+<div id="title_def" class="definition collapse">
+<div class="card border-primary mb-1">
+<div class="card-body">
+<h5 class="card-title text-primary">
+Definition
+</h5>
+<p class="card-text">
+A physical constant is a physical quantity that is generally believed to be both universal in nature and have constant value in time.
+</p>
+</div>
+</div>
+</div>
 <table style="width:19%;">
 <colgroup>
 <col style="width: 9%" />
@@ -141,55 +178,55 @@
 <tbody>
 <tr class="odd">
 <td>Lichtgeschwindigkeit</td>
-<td><span class="LaTeX">$\mathrm{c}_0 \equiv \frac{1}{\sqrt{\varepsilon_0 \mu_0}} := {299 792 458\,{\text{m}{\,}}{/}{\text{s}{\,}}}$</span></td>
+<td><span class="LaTeX">$\mathrm{c}_0 \equiv \frac{1}{\sqrt{\varepsilon_0 \mu_0}} := {299 792 458\,\mathrm{{\text{m}{\,}}{/}{\text{s}{\,}}}}$</span></td>
 </tr>
 <tr class="even">
 <td>Elementarladung</td>
-<td><span class="LaTeX">$\mathrm{e} \approx {1.602 177e-19\,{\text{C}{\,}}}$</span></td>
+<td><span class="LaTeX">$\mathrm{e} \approx {1.602 177e-19\,\mathrm{{\text{C}{\,}}}}$</span></td>
 </tr>
 <tr class="odd">
 <td><span style="font-variant: small-caps;">Planck</span>-Konst.</td>
-<td><span class="LaTeX">$h \approx {6,626 069 57e-34\,{\text{J}{\,}}{\text{s}{\,}}}$</span></td>
+<td><span class="LaTeX">$h \approx {6,626 069 57e-34\,\mathrm{{\text{J}{\,}}{\text{s}{\,}}}}$</span></td>
 </tr>
 <tr class="even">
 <td></td>
-<td><span class="LaTeX">$\hbar \equiv \frac{h}{2 \pi} \approx {1.05457e-34\,{\text{J}{\,}}{\text{s}{\,}}}$</span></td>
+<td><span class="LaTeX">$\hbar \equiv \frac{h}{2 \pi} \approx {1.05457e-34\,\mathrm{{\text{J}{\,}}{\text{s}{\,}}}}$</span></td>
 </tr>
 <tr class="odd">
 <td>Elektr. Feldkonst.</td>
-<td><span class="LaTeX">$\varepsilon_0 = {8.854 188e-12\,{\text{F}{\,}}{/}{\text{m}{\,}}}$</span></td>
+<td><span class="LaTeX">$\varepsilon_0 = {8.854 188e-12\,\mathrm{{\text{F}{\,}}{/}{\text{m}{\,}}}}$</span></td>
 </tr>
 <tr class="even">
 <td>Magn. Feldkonst.</td>
-<td><span class="LaTeX">$\mu_0 := 4\pi \times {e-7\,{\text{H}{\,}}{/}{\text{m}{\,}}}$</span></td>
+<td><span class="LaTeX">$\mu_0 := 4\pi \times {e-7\,\mathrm{{\text{H}{\,}}{/}{\text{m}{\,}}}}$</span></td>
 </tr>
 <tr class="odd">
 <td><span style="font-variant: small-caps;">Avogadro</span>-Konst.</td>
-<td><span class="LaTeX">$N_{{{}}A} \approx {6.022 141e23\,{/}{\text{mol}{\,}}}$</span></td>
+<td><span class="LaTeX">$N_{{{}}A} \approx {6.022 141e23\,\mathrm{{/}{\text{mol}{\,}}}}$</span></td>
 </tr>
 <tr class="even">
 <td>Atomare Masse</td>
-<td><span class="LaTeX">$\mathrm{u} \approx {1.660 539e-27\,{\text{kg}{\,}}}$</span></td>
+<td><span class="LaTeX">$\mathrm{u} \approx {1.660 539e-27\,\mathrm{{\text{kg}{\,}}}}$</span></td>
 </tr>
 <tr class="odd">
 <td>Elektronenmasse</td>
-<td><span class="LaTeX">$m_e \approx {9,109 383e-31\,{\text{kg}{\,}}}$</span></td>
+<td><span class="LaTeX">$m_e \approx {9,109 383e-31\,\mathrm{{\text{kg}{\,}}}}$</span></td>
 </tr>
 <tr class="even">
 <td>Protonenmasse</td>
-<td><span class="LaTeX">$m_p \approx {1,674 927e-27\,{\text{kg}{\,}}}$</span></td>
+<td><span class="LaTeX">$m_p \approx {1,674 927e-27\,\mathrm{{\text{kg}{\,}}}}$</span></td>
 </tr>
 <tr class="odd">
 <td>Neutronenmasse</td>
-<td><span class="LaTeX">$m_n \approx {1,672 622e-27\,{\text{kg}{\,}}}$</span></td>
+<td><span class="LaTeX">$m_n \approx {1,672 622e-27\,\mathrm{{\text{kg}{\,}}}}$</span></td>
 </tr>
 <tr class="even">
 <td>Gravitationskonst.</td>
-<td><span class="LaTeX">$\mathrm{G} \approx {6,673 84e-11\,{\text{kg}{\,}}{/}{\text{s}{\,}}{^{2}}}$</span></td>
+<td><span class="LaTeX">$\mathrm{G} \approx {6,673 84e-11\,\mathrm{{\text{kg}{\,}}{/}{\text{s}{\,}}{^{2}}}}$</span></td>
 </tr>
 <tr class="odd">
 <td><span style="font-variant: small-caps;">Boltzmann</span>-Konst.</td>
-<td><span class="LaTeX">$k_{{{}}B} \approx {1.380 655e-23\,{\text{J}{\,}}{/}{\text{K}{\,}}}$</span></td>
+<td><span class="LaTeX">$k_{{{}}B} \approx {1.380 655e-23\,\mathrm{{\text{J}{\,}}{/}{\text{K}{\,}}}}$</span></td>
 </tr>
 </tbody>
 </table>

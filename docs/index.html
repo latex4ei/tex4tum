@@ -10,7 +10,7 @@
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="/index">
+    <link rel="canonical" href="http://localhost:4000/index">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -18,6 +18,7 @@
     <!-- Load CSS in head, JS after footer -->
     <!-- Main/Bootstrap -->
     <link rel="stylesheet" href="/assets/main.css">
+    <link rel="stylesheet" href="/assets/syntax-highlight.css">
 
     <!-- Fontawesome CSS -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
@@ -30,7 +31,7 @@
   <body>
 
     <!-- Bootstrap 4.0 Navigation Bar -->
-<nav class="navbar fixed-top navbar-dark bg-primary text-white navbar-expand-lg">
+<nav class="navbar sticky-top navbar-dark bg-primary text-white navbar-expand-lg">
 
     <!-- sticky left: Logo -->
     <div class="navbar-brand">
@@ -54,17 +55,23 @@
     <div class="collapse navbar-collapse justify-content-start order-6 order-lg-2" id="navbarResponsive">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="/about.html"><i class="fa fa-question"></i> About</a>
+          <a class="nav-link" href="/calculator.html"><i class="fa fa-calculator"></i> Calc</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/sheets.html"><i class="fa fa-file"></i> Sheets</a>
         </li>
         <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <i class="fa fa-handshake"></i> Contribute
+          <i class="fa fa-info-circle"></i> Info
         </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="/contribution.html"><i class="fa fa-edit"></i> Contribute Article</a>
-            <a class="dropdown-item" href="/todo.html"><i class="fa fa-tasks"></i> ToDo List</a>
+            <a class="dropdown-item" href="/about.html"><i class="fa fa-question"></i> About TeX4TUM</a>
+            <a class="dropdown-item" href="/demo.html"><i class="fa fa-play-circle"></i> Feature Demo</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum"><i class="fab fa-github"></i> Develop TeX4TUM Features</a>
+            <h6 class="dropdown-header"><i class="fa fa-handshake"></i> Contribute</h6>
+            <a class="dropdown-item" href="/contribution.html"><i class="fa fa-edit"></i> Write Article</a>
+            <a class="dropdown-item" href="/todo.html"><i class="fa fa-tasks"></i> ToDo List</a>
+            <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum"><i class="fab fa-github"></i> Develop Features</a>
             <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum/issues"><i class="fa fa-bug"></i> Report a bug</a>
           </div>
         </li>
@@ -241,24 +248,29 @@ Checkout these pages for some nice interactive demos
 <ul>
 <li><a href="electronics.html"><strong>Electronics</strong></a>
 <ul>
-<li><a href="bus.html"><strong>Bus</strong></a>: <a href="i2c.html">Inter-Integrated Circuit I²C</a> • <a href="spi.html">Serial Peripheral Interface</a> • <a href="usart.html">Universal Asynchronous Receiver Transmitter (UART)</a> • <a href="usb.html">Universal Serial Bus</a></li>
-<li><a href="component.html"><strong>Component</strong></a>: <a href="capacitor.html">Capacitor</a> • <a href="diode.html">Diode</a> • <a href="inductor.html">Inductor</a> • <a href="op-amp.html">Op Amp</a> • <a href="resistor.html">Resistor</a> • <a href="transistor.html">Transistor</a></li>
-<li><a href="dsp.html"><strong>Dsp</strong></a>: <a href="kalman-filter.html">Kalman Filter</a> • <a href="low-pass.html">Low Pass Filter</a> • <a href="sampling.html">Sampling</a></li>
-<li><a href="packages.html">Packages</a></li>
+<li><a href="actuator.html"><strong>Actuator</strong></a>: <a href="servo.html">Servo Motor</a></li>
+<li><a href="bus.html"><strong>Bus</strong></a>: <a href="usb.html">Universal Serial Bus</a></li>
+<li><a href="component.html"><strong>Component</strong></a>: <a href="capacitor.html">Capacitor</a> • <a href="diode.html">Diode</a> • <a href="inductor.html">Inductor</a> • <a href="op-amp.html">Operational Amplifier</a> • <a href="resistor.html">Resistor</a> • <a href="transistor.html">Transistor</a></li>
+<li><a href="computer.html"><strong>Computer</strong></a>: <a href="psu.html">Power Supply Unit (PSU)</a></li>
+<li><a href="dsp.html"><strong>Dsp</strong></a>: <a href="filter.html">Digital Filter</a> • <a href="kalman-filter.html">Kalman Filter</a> • <a href="low-pass.html">Low Pass Filter</a> • <a href="modulation.html">Modulation</a></li>
 </ul></li>
-<li><a href="it.html"><strong>It</strong></a>
+<li><a href="informatics.html"><strong>Informatics</strong></a>
 <ul>
-<li><a href="computer.html"><strong>Computer</strong></a>: <a href="filesystem.html">Filesystem</a> • <a href="memory.html">Memory Management</a> • <a href="paging.html">Paging</a> • <a href="systemcall.html">System Call</a></li>
-<li><a href="language.html"><strong>Language</strong></a>: <a href="ada.html">Ada</a> • <a href="bash.html">Bash</a> • <a href="c.html">C</a> • <a href="go.html">Go</a> • <a href="matlab.html">Matlab</a> • <a href="natural-language.html">Natural Language</a> • <a href="regular-expressions.html">Regular Expressions</a></li>
-<li><a href="theory.html"><strong>Theory</strong></a>: <a href="complexity-theory.html">Complexity Theory</a> • <a href="float.html">Floating Point Number</a> • <a href="numbers.html">Number Converter</a> • <a href="oop.html">Object Oriented Programming (OOP)</a> • <a href="petri-net.html">Petri Net</a> • <a href="semaphore.html">Semaphore</a></li>
-<li><a href="tools.html"><strong>Tools</strong></a>: <a href="gdb.html">Gnu Debugger (GDB)</a> • <a href="git.html">Git</a> • <a href="hg.html">Mercurial (HG)</a> • <a href="jekyll.html">Jekyll</a> • <a href="svn.html">Subversion (SVN)</a></li>
+<li><a href="algorithm.html"><strong>Algorithm</strong></a>: <a href="aes.html">Advanced Encryption Standard</a> • <a href="rsa.html">RSA</a> • <a href="sha-2.html">Secure Hash Algorithm 2</a> • <a href="sha-3.html">Secure Hash Algorithm 2</a></li>
+<li><a href="datastructures.html"><strong>Datastructures</strong></a>: <a href="jpeg.html">JPEG</a> • <a href="uri.html">Uniform Resource Identifier</a> • <a href="utf8.html">UTF-8</a> • <a href="vcf.html">vCard</a></li>
+<li><a href="language.html"><strong>Language</strong></a>: <a href="ada.html">Ada</a> • <a href="bash.html">Bash</a> • <a href="c.html">C</a> • <a href="cpp.html">C++</a> • <a href="doxygen.html">DoxyGen</a> • <a href="go.html">Go</a> • <a href="markdown.html">Markdown</a> • <a href="matlab.html">Matlab</a> • <a href="natural-language.html">Natural Language</a> • <a href="programming.html">Programming</a> • <a href="python.html">Python</a> • <a href="regular-expressions.html">Regular Expressions</a></li>
+<li><a href="network.html"><strong>Network</strong></a>: <a href="6LoWPAN.html">6LoWPAN</a> • <a href="IEEE_802.15.04.html">IEEE 802.15.4</a> • <a href="coap.html">Constrained Application Protocol</a> • <a href="dns.html">Domain Name System (DNS)</a> • <a href="http.html">HTTP</a> • <a href="ip.html">Internet Protocol</a> • <a href="mac.html">Media Access Control</a> • <a href="mqtt.html">Message Queue Telemetry Transport (MQTT)</a> • <a href="osi.html">Open Systems Interconnection model (OSI)</a> • <a href="rpl.html">RPL</a> • <a href="tcp.html">TCP</a> • <a href="udp.html">UDP</a> • <a href="zigbee.html">ZigBee</a></li>
+<li><a href="os.html"><strong>Os</strong></a>: <a href="filesystem.html">Filesystem</a> • <a href="memory.html">Memory Management</a> • <a href="paging.html">Paging</a> • <a href="systemcall.html">System Call</a></li>
+<li><a href="security.html"><strong>Security</strong></a>: <a href="certificate.html">Certificate</a> • <a href="cryptography.html">Cryptography</a> • <a href="hash.html">Hash Function</a> • <a href="multivariate-cryptography.html">Multivariate Cryptography</a> • <a href="signature.html">Signature</a> • <a href="zksnark.html">zkSNARK</a></li>
+<li><a href="theory.html"><strong>Theory</strong></a>: <a href="complexity-theory.html">Complexity Theory</a> • <a href="css-units.html">CSS Units</a> • <a href="float.html">Floating Point Number</a> • <a href="numbers.html">Number Converter</a> • <a href="oop.html">Object Oriented Programming (OOP)</a> • <a href="petri-net.html">Petri Net</a> • <a href="semaphore.html">Semaphore</a> • <a href="tree.html">Tree</a></li>
+<li><a href="tools.html"><strong>Tools</strong></a>: <a href="gdb.html">Gnu Debugger (GDB)</a> • <a href="git.html">Git</a></li>
 </ul></li>
 <li><a href="math.html"><strong>Math</strong></a>
 <ul>
 <li><a href="algebra.html"><strong>Algebra</strong></a>: <a href="complex-number.html">Complex Numbers</a> • <a href="matrix.html">Matrix</a> • <a href="vector.html">Vector Space</a></li>
-<li><a href="analysis.html"><strong>Analysis</strong></a>: <a href="frequency-analysis.html">Frequency Analysis</a> • <a href="integral.html">Integral</a></li>
-<li><a href="geometry.html"><strong>Geometry</strong></a>: <a href="2D-Shapes.html">2D Geometry</a> • <a href="trigonometry.html">Trigonometry</a></li>
-<li><a href="statistics.html"><strong>Statistics</strong></a>: <a href="moment.html">Moment</a> • <a href="normal-distribution.html">Normal Distribution</a> • <a href="probability.html">Probability</a> • <a href="testing.html">Hypothesis Testing</a></li>
+<li><a href="analysis.html"><strong>Analysis</strong></a>: <a href="frequency-analysis.html">Frequency Analysis</a> • <a href="integral.html">Integral</a> • <a href="row.html">Row</a></li>
+<li><a href="geometry.html"><strong>Geometry</strong></a>: <a href="trigonometry.html">Trigonometry</a></li>
+<li><a href="statistics.html"><strong>Statistics</strong></a>: <a href="moment.html">Moment</a> • <a href="normal-distribution.html">Normal Distribution</a> • <a href="probability.html">Probability Theory</a> • <a href="testing.html">Hypothesis Testing</a></li>
 </ul></li>
 <li><a href="physics.html"><strong>Physics</strong></a>
 <ul>
@@ -266,6 +278,7 @@ Checkout these pages for some nice interactive demos
 <li><a href="electromagnetism.html"><strong>Electromagnetism</strong></a>: <a href="electric-field.html">Electric Field</a> • <a href="kirchhoff.html">Kirchhoffs's Circuit Laws</a> • <a href="maxwell.html">Maxwell Equations</a></li>
 <li><a href="mechanics.html"><strong>Mechanics</strong></a>: <a href="motion.html">Mechanical Motion</a></li>
 <li><a href="optic.html"><strong>Optic</strong></a>: <a href="reflection.html">Reflection and Refraction</a></li>
+<li><a href="rounding.html">Rounding</a></li>
 <li><a href="si-units.html">SI Units</a></li>
 <li><a href="thermodynamics.html">Thermodynamics</a></li>
 </ul></li>

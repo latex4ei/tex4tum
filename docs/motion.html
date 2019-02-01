@@ -10,7 +10,7 @@
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="/motion">
+    <link rel="canonical" href="http://localhost:4000/motion">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -18,6 +18,7 @@
     <!-- Load CSS in head, JS after footer -->
     <!-- Main/Bootstrap -->
     <link rel="stylesheet" href="/assets/main.css">
+    <link rel="stylesheet" href="/assets/syntax-highlight.css">
 
     <!-- Fontawesome CSS -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
@@ -30,7 +31,7 @@
   <body>
 
     <!-- Bootstrap 4.0 Navigation Bar -->
-<nav class="navbar fixed-top navbar-dark bg-primary text-white navbar-expand-lg">
+<nav class="navbar sticky-top navbar-dark bg-primary text-white navbar-expand-lg">
 
     <!-- sticky left: Logo -->
     <div class="navbar-brand">
@@ -61,17 +62,23 @@
     <div class="collapse navbar-collapse justify-content-start order-6 order-lg-2" id="navbarResponsive">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="/about.html"><i class="fa fa-question"></i> About</a>
+          <a class="nav-link" href="/calculator.html"><i class="fa fa-calculator"></i> Calc</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/sheets.html"><i class="fa fa-file"></i> Sheets</a>
         </li>
         <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <i class="fa fa-handshake"></i> Contribute
+          <i class="fa fa-info-circle"></i> Info
         </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="/contribution.html"><i class="fa fa-edit"></i> Contribute Article</a>
-            <a class="dropdown-item" href="/todo.html"><i class="fa fa-tasks"></i> ToDo List</a>
+            <a class="dropdown-item" href="/about.html"><i class="fa fa-question"></i> About TeX4TUM</a>
+            <a class="dropdown-item" href="/demo.html"><i class="fa fa-play-circle"></i> Feature Demo</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum"><i class="fab fa-github"></i> Develop TeX4TUM Features</a>
+            <h6 class="dropdown-header"><i class="fa fa-handshake"></i> Contribute</h6>
+            <a class="dropdown-item" href="/contribution.html"><i class="fa fa-edit"></i> Write Article</a>
+            <a class="dropdown-item" href="/todo.html"><i class="fa fa-tasks"></i> ToDo List</a>
+            <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum"><i class="fab fa-github"></i> Develop Features</a>
             <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum/issues"><i class="fa fa-bug"></i> Report a bug</a>
           </div>
         </li>
@@ -114,11 +121,33 @@
 
 
     <main class="container" aria-label="Content">
-      <h1><a data-toggle="collapse" href="#title_def" aria-expanded="false" aria-controls="title_def">
+      
+
+
+
+<p style="font-family: sans-serif;">
+	
+		
+		/ <a href="/physics.html">physics</a>
+		
+		
+	
+		
+		/ <a href="/mechanics.html">mechanics</a>
+		
+		
+	
+		
+		
+	 /
+</p>
+
+<h1><a data-toggle="collapse" href="#title_def" aria-expanded="false" aria-controls="title_def">
   
   Mechanical Motion
-</a></h1>
+</a><a class="float-right small" style="font-size: small" href="https://github.com/latex4ei/tex4tum/edit/master/_article/physics/mechanics/motion.md">[edit]</a></h1>
 
+<p>
 
 <span class="badge badge-primary text-white">
   <i class="fas fa-tag"></i> Rotation
@@ -128,6 +157,7 @@
   <i class="fas fa-tag"></i> Translation
 </span>
 
+</p>
 
 <!-- Basics -->
 <!--    -->
@@ -135,18 +165,25 @@
 <!-- SI Units -->
 <!--=============================================================== -->
 <!-- KaTeX Tweaks -->
-<div id="title_def" class="collapse">
+<div id="title_def" class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
 <h5 class="card-title text-primary">
 Definition
 </h5>
 <p class="card-text">
-Laws of Motion
+Motion is a change in position of an object over time.
 </p>
 </div>
 </div>
 </div>
+<h2 id="newtons-laws-of-motion">Newton's Laws of Motion</h2>
+<ol type="1">
+<li>If the vector sum of all forces acting on an object is zero, then the velocity of the object is constant. <span class="LaTeX">$$\sum \vec F = 0 \; \Leftrightarrow \; \frac{{\,\text{d}}\vec{v} }{ {\,\text{d}}t } = 0$$</span></li>
+<li>If an object is accelerating, then there is a force on it. <span class="LaTeX">$$\vec F = m \cdot \vec a$$</span></li>
+<li>If one object <span class="LaTeX">$A$</span> exerts a force <span class="LaTeX">$F_A$</span> on a second object <span class="LaTeX">$B$</span>, then <span class="LaTeX">$B$</span> simultaneously exerts a force <span class="LaTeX">$F_B = - F_A$</span> on <span class="LaTeX">$A$</span>, and the two forces are equal in magnitude and opposite in direction.</li>
+</ol>
+<h2 id="classical-mechanics">Classical Mechanics</h2>
 <table style="width:17%;">
 <colgroup>
 <col style="width: 5%" />

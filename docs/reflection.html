@@ -10,7 +10,7 @@
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="/reflection">
+    <link rel="canonical" href="http://localhost:4000/reflection">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -18,6 +18,7 @@
     <!-- Load CSS in head, JS after footer -->
     <!-- Main/Bootstrap -->
     <link rel="stylesheet" href="/assets/main.css">
+    <link rel="stylesheet" href="/assets/syntax-highlight.css">
 
     <!-- Fontawesome CSS -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
@@ -30,7 +31,7 @@
   <body>
 
     <!-- Bootstrap 4.0 Navigation Bar -->
-<nav class="navbar fixed-top navbar-dark bg-primary text-white navbar-expand-lg">
+<nav class="navbar sticky-top navbar-dark bg-primary text-white navbar-expand-lg">
 
     <!-- sticky left: Logo -->
     <div class="navbar-brand">
@@ -61,17 +62,23 @@
     <div class="collapse navbar-collapse justify-content-start order-6 order-lg-2" id="navbarResponsive">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="/about.html"><i class="fa fa-question"></i> About</a>
+          <a class="nav-link" href="/calculator.html"><i class="fa fa-calculator"></i> Calc</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/sheets.html"><i class="fa fa-file"></i> Sheets</a>
         </li>
         <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <i class="fa fa-handshake"></i> Contribute
+          <i class="fa fa-info-circle"></i> Info
         </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="/contribution.html"><i class="fa fa-edit"></i> Contribute Article</a>
-            <a class="dropdown-item" href="/todo.html"><i class="fa fa-tasks"></i> ToDo List</a>
+            <a class="dropdown-item" href="/about.html"><i class="fa fa-question"></i> About TeX4TUM</a>
+            <a class="dropdown-item" href="/demo.html"><i class="fa fa-play-circle"></i> Feature Demo</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum"><i class="fab fa-github"></i> Develop TeX4TUM Features</a>
+            <h6 class="dropdown-header"><i class="fa fa-handshake"></i> Contribute</h6>
+            <a class="dropdown-item" href="/contribution.html"><i class="fa fa-edit"></i> Write Article</a>
+            <a class="dropdown-item" href="/todo.html"><i class="fa fa-tasks"></i> ToDo List</a>
+            <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum"><i class="fab fa-github"></i> Develop Features</a>
             <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum/issues"><i class="fa fa-bug"></i> Report a bug</a>
           </div>
         </li>
@@ -114,12 +121,35 @@
 
 
     <main class="container" aria-label="Content">
-      <h1><a data-toggle="collapse" href="#title_def" aria-expanded="false" aria-controls="title_def">
+      
+
+
+
+<p style="font-family: sans-serif;">
+	
+		
+		/ <a href="/physics.html">physics</a>
+		
+		
+	
+		
+		/ <a href="/optic.html">optic</a>
+		
+		
+	
+		
+		
+	 /
+</p>
+
+<h1><a data-toggle="collapse" href="#title_def" aria-expanded="false" aria-controls="title_def">
   
   Reflection and Refraction
-</a></h1>
+</a><a class="float-right small" style="font-size: small" href="https://github.com/latex4ei/tex4tum/edit/master/_article/physics/optic/reflection.md">[edit]</a></h1>
 
+<p>
 
+</p>
 
 <!-- Basics -->
 <!--    -->
@@ -127,7 +157,7 @@
 <!-- SI Units -->
 <!--=============================================================== -->
 <!-- KaTeX Tweaks -->
-<div id="title_def" class="collapse">
+<div id="title_def" class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
 <h5 class="card-title text-primary">
@@ -146,15 +176,10 @@ Reflection and Refraction are two wave phenomena that cause a change in directio
 <div data-toggle="collapse" href="#eq_0">
 <p><span class="LaTeX">$$\alpha_1 = - \alpha_2$$</span></p>
 </div>
-<div id="eq_0" class="collapse">
-<div class="legend card border-info mb-1">
-<div class="card-body">
-<h5 class="card-title text-info">
-Legend
-</h5>
-<p class="card-text">
+<div id="eq_0" class="legend collapse">
+<div class="card border-info w-75 mx-auto">
+<div class="p-1 small">
 <p>with the angle of incidence <span class="LaTeX">$\alpha_1$</span> and the angle of reflection <span class="LaTeX">$\alpha_2$</span>.</p>
-</p>
 </div>
 </div>
 </div>
@@ -162,15 +187,10 @@ Legend
 <div data-toggle="collapse" href="#eq_1">
 <p><span class="LaTeX">$$\frac{\sin(\alpha)}{\sin(\beta)}=\frac{n_2}{n_1}=\frac{c_1}{c_2}=\frac{\lambda_1}{\lambda_2}$$</span></p>
 </div>
-<div id="eq_1" class="collapse">
-<div class="legend card border-info mb-1">
-<div class="card-body">
-<h5 class="card-title text-info">
-Legend
-</h5>
-<p class="card-text">
+<div id="eq_1" class="legend collapse">
+<div class="card border-info w-75 mx-auto">
+<div class="p-1 small">
 <p>with the angle of incidence <span class="LaTeX">$\alpha$</span>, the angle of refraction <span class="LaTeX">$\beta$</span>, the refractive indices <span class="LaTeX">$n_1$</span> and <span class="LaTeX">$n_2$</span>.</p>
-</p>
 </div>
 </div>
 </div>
@@ -185,15 +205,10 @@ Legend
 <div data-toggle="collapse" href="#eq_2">
 <p><span class="LaTeX">$$n = \sqrt{\mu_r \epsilon_r}$$</span></p>
 </div>
-<div id="eq_2" class="collapse">
-<div class="legend card border-info mb-1">
-<div class="card-body">
-<h5 class="card-title text-info">
-Legend
-</h5>
-<p class="card-text">
+<div id="eq_2" class="legend collapse">
+<div class="card border-info w-75 mx-auto">
+<div class="p-1 small">
 <p>with <span class="LaTeX">$\epsilon_r$</span> is the material's relative permittivity, and <span class="LaTeX">$\mu_r$</span> is its relative permeability.</p>
-</p>
 </div>
 </div>
 </div>
@@ -208,29 +223,26 @@ Legend
 <div data-toggle="collapse" href="#eq_3">
 <p><span class="LaTeX">$$\alpha_C = \arcsin\left( \frac{n_2}{n_1} \right)$$</span></p>
 </div>
-<div id="eq_3" class="collapse">
-<div class="legend card border-info mb-1">
-<div class="card-body">
-<h5 class="card-title text-info">
-Legend
-</h5>
-<p class="card-text">
+<div id="eq_3" class="legend collapse">
+<div class="card border-info w-75 mx-auto">
+<div class="p-1 small">
 <p>where <span class="LaTeX">$\alpha_C$</span> is the critical angle, <span class="LaTeX">$n_1$</span> and <span class="LaTeX">$n_2$</span> are the refractive index.</p>
-</p>
 </div>
 </div>
 </div>
-<div class='explanation card border-warning mb-1'>
-<div class='card-body'>
-<h5 class="card-title text-warning">
-Explanation
+<h5 class="clp_title text-warning" data-toggle="collapse" href="#expl388">
+<i class='fa fa-comment-dots'></i> Explanation
 </h5>
+<div id='expl388' class='explanation collapse'>
+<div class='card border-warning mb-1'>
+<div class='card-body'>
 <p class='card-text'>
 <ul>
 <li>If <span class="LaTeX">$\alpha \le \alpha_C$</span>, the ray will split; some of the ray will reflect</li>
 <li>If <span class="LaTeX">$\alpha \gt \alpha_C$</span>, the entire ray reflects from the boundary.</li>
 </ul>
 <p>
+</div>
 </div>
 </div>
 <h3 id="polarization-angle">Polarization Angle</h3>
@@ -247,7 +259,7 @@ R_el.addEventListener("load",function(){
 function RC_calcReflection() {
  R_obj  = document.getElementById("fraction").contentDocument;
 
- // from <abbr title="Scalable Vector Graphics" >SVG</abbr>
+ // from SVG
  var angle = getValue( R_obj.getElementById("alpha").textContent );
  var n1_val = getValue( R_obj.getElementById("n1_val").textContent );
  var n2_val = getValue( R_obj.getElementById("n2_val").textContent );

@@ -1,0 +1,96 @@
+
+
+/* opacity */
+@keyframes hideshow {
+  0% { opacity: 1; }
+  10% { opacity: 1; }
+  15% { opacity: 0; }
+  100% { opacity: 0; }
+}
+@keyframes kf-hide {
+  0%  {opacity: 1}
+  100% {opacity: 0}
+}
+@keyframes kf-show {
+  0%  {opacity: 1}
+  100% {opacity: 0}
+}
+
+
+/* translate */
+@keyframes kf-move-r05 {
+  0%  { transform: translateX( 0% ); }
+  100% { transform: translateX( 50% ); }
+}
+@keyframes kf-move-l05 {
+  0%  { transform: translateX( 0% ); }
+  100% { transform: translateX( -50% ); }
+}
+
+@keyframes kf-move-r1 {
+  0%  { transform: translateX( 0% ); }
+  100% { transform: translateX( 100% ); }
+}
+@keyframes kf-move-l1 {
+  0%  { transform: translateX( 0% ); }
+  100% { transform: translateX( -100% ); }
+}
+
+
+
+@keyframes kf-rot-cw {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+
+/*hack for chrome (transforms origin to bounding box center)*/
+svg * {
+    transform-origin: unset;
+    transform-box: fill-box;
+    transform-origin: 50%, 50%;
+}
+
+
+/* mouse over fade in */
+.mo-fade-in:hover{
+	animation: kf-show 0.5s ease 0s 1 forwards;
+}
+.mo-fade-out:hover{
+	animation: kf-hide 0.5s ease 0s 1 forwards;
+}
+
+
+
+.rot-cw{ animation: kf-rot-cw 2.5s linear infinite; }
+.rot-ccw{ animation: kf-rot-cw 2.5s linear infinite reverse; }
+.mo-rot-cw:hover{
+	animation: kf-rot-cw 2.5s linear 0s infinite;
+}
+.mo-rot-ccw:hover{
+	animation: kf-rot-cw 2.5s linear 0s infinite reverse;
+}
+
+
+.move-l05{
+	animation: kf-move-l05 1s linear 0s infinite;
+}
+
+.mo-move-l1:hover{
+	animation: kf-move-l1 2.5s ease 0s 1 forwards;
+}
+.mo-move-r1:hover{
+	animation: kf-move-r1 2.5s ease 0s 1 forwards;
+}
+
+
+/*highlights*/
+.hl-prim:hover {
+	fill: #005293;
+}
+.hl-sec:hover {
+	fill: #ec008c;
+}
+.hl-emph:hover {
+	fill: #a2ad00;
+}

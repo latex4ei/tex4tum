@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- title, description, favicon -->
-    <title>Probability</title>
+    <title>Probability Theory</title>
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="/probability">
+    <link rel="canonical" href="http://localhost:4000/probability">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -18,6 +18,7 @@
     <!-- Load CSS in head, JS after footer -->
     <!-- Main/Bootstrap -->
     <link rel="stylesheet" href="/assets/main.css">
+    <link rel="stylesheet" href="/assets/syntax-highlight.css">
 
     <!-- Fontawesome CSS -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
@@ -30,7 +31,7 @@
   <body>
 
     <!-- Bootstrap 4.0 Navigation Bar -->
-<nav class="navbar fixed-top navbar-dark bg-primary text-white navbar-expand-lg">
+<nav class="navbar sticky-top navbar-dark bg-primary text-white navbar-expand-lg">
 
     <!-- sticky left: Logo -->
     <div class="navbar-brand">
@@ -61,17 +62,23 @@
     <div class="collapse navbar-collapse justify-content-start order-6 order-lg-2" id="navbarResponsive">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="/about.html"><i class="fa fa-question"></i> About</a>
+          <a class="nav-link" href="/calculator.html"><i class="fa fa-calculator"></i> Calc</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/sheets.html"><i class="fa fa-file"></i> Sheets</a>
         </li>
         <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <i class="fa fa-handshake"></i> Contribute
+          <i class="fa fa-info-circle"></i> Info
         </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="/contribution.html"><i class="fa fa-edit"></i> Contribute Article</a>
-            <a class="dropdown-item" href="/todo.html"><i class="fa fa-tasks"></i> ToDo List</a>
+            <a class="dropdown-item" href="/about.html"><i class="fa fa-question"></i> About TeX4TUM</a>
+            <a class="dropdown-item" href="/demo.html"><i class="fa fa-play-circle"></i> Feature Demo</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum"><i class="fab fa-github"></i> Develop TeX4TUM Features</a>
+            <h6 class="dropdown-header"><i class="fa fa-handshake"></i> Contribute</h6>
+            <a class="dropdown-item" href="/contribution.html"><i class="fa fa-edit"></i> Write Article</a>
+            <a class="dropdown-item" href="/todo.html"><i class="fa fa-tasks"></i> ToDo List</a>
+            <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum"><i class="fab fa-github"></i> Develop Features</a>
             <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum/issues"><i class="fa fa-bug"></i> Report a bug</a>
           </div>
         </li>
@@ -114,12 +121,35 @@
 
 
     <main class="container" aria-label="Content">
-      <h1><a data-toggle="collapse" href="#title_def" aria-expanded="false" aria-controls="title_def">
+      
+
+
+
+<p style="font-family: sans-serif;">
+	
+		
+		/ <a href="/math.html">math</a>
+		
+		
+	
+		
+		/ <a href="/statistics.html">statistics</a>
+		
+		
+	
+		
+		
+	 /
+</p>
+
+<h1><a data-toggle="collapse" href="#title_def" aria-expanded="false" aria-controls="title_def">
   
-  Probability
-</a></h1>
+  Probability Theory
+</a><a class="float-right small" style="font-size: small" href="https://github.com/latex4ei/tex4tum/edit/master/_article/math/statistics/probability.md">[edit]</a></h1>
 
+<p>
 
+</p>
 
 <!-- Basics -->
 <!--    -->
@@ -127,6 +157,7 @@
 <!-- SI Units -->
 <!--=============================================================== -->
 <!-- KaTeX Tweaks -->
+<h2 id="terms">Terms</h2>
 <table style="width:28%;">
 <colgroup>
 <col style="width: 9%" />
@@ -173,7 +204,23 @@
 </tr>
 </tbody>
 </table>
+<h2 id="conditional-probabilty">Conditional Probabilty</h2>
+The probability for an event <span class="LaTeX">$A$</span> given that the event <span class="LaTeX">$B$</span> already occured is
+<div data-toggle="collapse" href="#eq_0">
+<p><span class="LaTeX">$${\mathrm{P}}_B(A) = {\mathrm{P}}(A|B) = \frac{{\mathrm{P}}(A \cap B)}{{\mathrm{P}}(B)}$$</span></p>
+</div>
+<div id="eq_0" class="legend collapse">
+<div class="card border-info w-75 mx-auto">
+<div class="p-1 small">
+<p>with events <span class="LaTeX">$A,B$</span>.</p>
+</div>
+</div>
+</div>
+<p>Multiplication: <span class="LaTeX">${\mathrm{P}}(A \cap B) = {\mathrm{P}}(A|B){\mathrm{P}}(B) = {\mathrm{P}}(B|A){\mathrm{P}}(A)$</span></p>
+<p>Bayes' law: <span class="LaTeX">$${\mathrm{P}}(B_k | A) = \frac{{\mathrm{P}}(A | B_k){\mathrm{P}}(B_k)}{\sum\limits_{i \in I} {\mathrm{P}}(A|B_i) {\mathrm{P}}(B_i)}$$</span></p>
+<p>Total probabilty: <span class="LaTeX">${\mathrm{P}}(A) = \sum\limits_{i \in I} {\mathrm{P}}(A|B_i){\mathrm{P}}(B_i)$</span></p>
 <h2 id="random-variables">Random Variables</h2>
+<p><span class="LaTeX">${\textit{X}}: \Omega \mapsto \Omega&#39;$</span> is a random variable if for all events <span class="LaTeX">$A&#39; \in \mathbb F&#39;$</span> there exists an event <span class="LaTeX">$A \in \mathbb F$</span> such that <span class="LaTeX">$\left\{\omega \in \Omega|{\textit{X}}(\omega) \in A&#39;\right\} \in \mathbb F$</span>.</p>
 <h2 id="distribution">Distribution</h2>
 <p><strong>PDF:</strong> <span class="LaTeX">$f_{{\textit{X}}}(x) = \frac{{\,\text{d}}F_{{\textit{X}}}(x)}{{\,\text{d}}x}$</span></p>
 <p><strong>CDF:</strong> <span class="LaTeX">$F_{{\textit{X}}}(x) = \int\limits_{-\infty}^{x}{f_{{\textit{X}}}(\xi){\,\text{d}}\xi}$</span></p>

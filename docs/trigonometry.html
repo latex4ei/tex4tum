@@ -10,7 +10,7 @@
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="/trigonometry">
+    <link rel="canonical" href="http://localhost:4000/trigonometry">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -18,6 +18,7 @@
     <!-- Load CSS in head, JS after footer -->
     <!-- Main/Bootstrap -->
     <link rel="stylesheet" href="/assets/main.css">
+    <link rel="stylesheet" href="/assets/syntax-highlight.css">
 
     <!-- Fontawesome CSS -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
@@ -30,7 +31,7 @@
   <body>
 
     <!-- Bootstrap 4.0 Navigation Bar -->
-<nav class="navbar fixed-top navbar-dark bg-primary text-white navbar-expand-lg">
+<nav class="navbar sticky-top navbar-dark bg-primary text-white navbar-expand-lg">
 
     <!-- sticky left: Logo -->
     <div class="navbar-brand">
@@ -61,17 +62,23 @@
     <div class="collapse navbar-collapse justify-content-start order-6 order-lg-2" id="navbarResponsive">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="/about.html"><i class="fa fa-question"></i> About</a>
+          <a class="nav-link" href="/calculator.html"><i class="fa fa-calculator"></i> Calc</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/sheets.html"><i class="fa fa-file"></i> Sheets</a>
         </li>
         <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <i class="fa fa-handshake"></i> Contribute
+          <i class="fa fa-info-circle"></i> Info
         </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="/contribution.html"><i class="fa fa-edit"></i> Contribute Article</a>
-            <a class="dropdown-item" href="/todo.html"><i class="fa fa-tasks"></i> ToDo List</a>
+            <a class="dropdown-item" href="/about.html"><i class="fa fa-question"></i> About TeX4TUM</a>
+            <a class="dropdown-item" href="/demo.html"><i class="fa fa-play-circle"></i> Feature Demo</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum"><i class="fab fa-github"></i> Develop TeX4TUM Features</a>
+            <h6 class="dropdown-header"><i class="fa fa-handshake"></i> Contribute</h6>
+            <a class="dropdown-item" href="/contribution.html"><i class="fa fa-edit"></i> Write Article</a>
+            <a class="dropdown-item" href="/todo.html"><i class="fa fa-tasks"></i> ToDo List</a>
+            <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum"><i class="fab fa-github"></i> Develop Features</a>
             <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum/issues"><i class="fa fa-bug"></i> Report a bug</a>
           </div>
         </li>
@@ -114,11 +121,33 @@
 
 
     <main class="container" aria-label="Content">
-      <h1><a data-toggle="collapse" href="#title_def" aria-expanded="false" aria-controls="title_def">
+      
+
+
+
+<p style="font-family: sans-serif;">
+	
+		
+		/ <a href="/math.html">math</a>
+		
+		
+	
+		
+		/ <a href="/geometry.html">geometry</a>
+		
+		
+	
+		
+		
+	 /
+</p>
+
+<h1><a data-toggle="collapse" href="#title_def" aria-expanded="false" aria-controls="title_def">
   
   Trigonometry
-</a></h1>
+</a><a class="float-right small" style="font-size: small" href="https://github.com/latex4ei/tex4tum/edit/master/_article/math/geometry/trigonometry.md">[edit]</a></h1>
 
+<p>
 
 <span class="badge badge-primary text-white">
   <i class="fas fa-tag"></i> Sinus
@@ -136,6 +165,7 @@
   <i class="fas fa-tag"></i> Arctan
 </span>
 
+</p>
 
 <!-- Basics -->
 <!--    -->
@@ -143,6 +173,25 @@
 <!-- SI Units -->
 <!--=============================================================== -->
 <!-- KaTeX Tweaks -->
+<div id="title_def" class="definition collapse">
+<div class="card border-primary mb-1">
+<div class="card-body">
+<h5 class="card-title text-primary">
+Definition
+</h5>
+<p class="card-text">
+Trigonometry studies relationships involving lengths and angles of triangles.
+</p>
+</div>
+</div>
+</div>
+<h2 id="table-of-contents"><i class="fa fa-list-ul"></i> Table of Contents</h2>
+<ul>
+<li><a href="#unit-circle">Unit Circle</a></li>
+<li><a href="#sin-cos-tan">Sin, Cos, Tan</a></li>
+<li><a href="#hyperboles-sinh-cosh-tanh">Hyperboles sinh, cosh, tanh</a></li>
+<li><a href="#cardinal-sinus">Cardinal Sinus</a></li>
+</ul>
 <h2 id="unit-circle">Unit Circle</h2>
 <figure>
 <object class="img-fluid" id="UC" data="res/img/dynamic-images/unit_circle.svg" type="image/svg+xml">
@@ -150,53 +199,87 @@
 <figcaption>
 </figcaption>
 </figure>
-<h2 id="basic-relations">Basic Relations</h2>
+<h2 id="sin-cos-tan">Sin, Cos, Tan</h2>
 <div data-toggle="collapse" href="#eq_0">
-<p><span class="LaTeX">$$\sin(\alpha) = \frac{y}{r}$$</span></p>
+<p><span class="LaTeX">$$\sin^2(\alpha) + \cos^2(\alpha) = 1$$</span></p>
 </div>
-<div id="eq_0" class="collapse">
-<div class="legend card border-info mb-1">
-<div class="card-body">
-<h5 class="card-title text-info">
-Legend
+<div id="eq_0" class="legend collapse">
+<div class="card border-info w-75 mx-auto">
+<div class="p-1 small">
+<p>with angle <span class="LaTeX">$\alpha$</span></p>
+</div>
+</div>
+</div>
+<h5 class="clp_title text-warning" data-toggle="collapse" href="#expl387">
+<i class='fa fa-comment-dots'></i> Explanation
 </h5>
-<p class="card-text">
-<p>with angle <span class="LaTeX">$\alpha$</span>, radius <span class="LaTeX">$r$</span></p>
-</p>
+<div id='expl387' class='explanation collapse'>
+<div class='card border-warning mb-1'>
+<div class='card-body'>
+<p class='card-text'>
+In the unit circle, the sinus and cosinus at a given angle form an orthogonal triangle with the edges <span class="LaTeX">$a,b,c$</span>. The length of the hypotenuse <span class="LaTeX">$c$</span> corresponds to the radius <span class="LaTeX">$r$</span>, which equals 1 (unit circle). Thus, we can apply the law of Pythagoras <span class="LaTeX">$a^2 + b^2 = c^2$</span> with <span class="LaTeX">$a = \sin(\alpha)$</span>, <span class="LaTeX">$b = \cos(\alpha)$</span>, and <span class="LaTeX">$c = 1$</span>.
+<p>
 </div>
 </div>
 </div>
+<div class="card tabbox">
+<div class="card-header">
+<ul class="nav nav-tabs card-header-tabs ml-0" role="tablist">
+<li class="nav-item">
+<a class="nav-link active" data-toggle="tab" href="#checkboxid-0" role="tab">Sinus</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" data-toggle="tab" href="#checkboxid-1" role="tab">Cosinus</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" data-toggle="tab" href="#checkboxid-2" role="tab">Tangens</a>
+</li>
+</ul>
+</div>
+<div class="card-body">
+<div class="tab-content">
+<div id="checkboxid-0" class="tab-pane active" role="tabpanel">
 <div data-toggle="collapse" href="#eq_1">
-<p><span class="LaTeX">$$\cos(\alpha) = \frac{x}{r}$$</span></p>
+<p><span class="LaTeX">$$\sin(\alpha) = \frac{b}{r}$$</span></p>
 </div>
-<div id="eq_1" class="collapse">
-<div class="legend card border-info mb-1">
-<div class="card-body">
-<h5 class="card-title text-info">
-Legend
-</h5>
-<p class="card-text">
+<div id="eq_1" class="legend collapse">
+<div class="card border-info w-75 mx-auto">
+<div class="p-1 small">
 <p>with angle <span class="LaTeX">$\alpha$</span>, radius <span class="LaTeX">$r$</span></p>
-</p>
 </div>
 </div>
 </div>
+<p>Symmetry: <span class="LaTeX">$\sin(\alpha) = - \sin(\alpha)$</span></p>
+</div>
+<div id="checkboxid-1" class="tab-pane" role="tabpanel">
 <div data-toggle="collapse" href="#eq_2">
-<p><span class="LaTeX">$$\tan(\alpha) = \frac{y}{x}$$</span></p>
+<p><span class="LaTeX">$$\cos(\alpha) = \frac{a}{r}$$</span></p>
 </div>
-<div id="eq_2" class="collapse">
-<div class="legend card border-info mb-1">
-<div class="card-body">
-<h5 class="card-title text-info">
-Legend
-</h5>
-<p class="card-text">
+<div id="eq_2" class="legend collapse">
+<div class="card border-info w-75 mx-auto">
+<div class="p-1 small">
 <p>with angle <span class="LaTeX">$\alpha$</span>, radius <span class="LaTeX">$r$</span></p>
-</p>
 </div>
 </div>
 </div>
-<h2 id="properties">Properties</h2>
+<p>Symmetry: <span class="LaTeX">$\cos(\alpha) = \cos(-\alpha)$</span></p>
+</div>
+<div id="checkboxid-2" class="tab-pane" role="tabpanel">
+<div data-toggle="collapse" href="#eq_3">
+<p><span class="LaTeX">$$\tan(\alpha) = \frac{\cos(\alpha)}{\sin(\alpha)} = \frac{b}{a}$$</span></p>
+</div>
+<div id="eq_3" class="legend collapse">
+<div class="card border-info w-75 mx-auto">
+<div class="p-1 small">
+<p>with angle <span class="LaTeX">$\alpha$</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p></br></p>
 <table style="width:39%;">
 <colgroup>
 <col style="width: 5%" />
@@ -233,7 +316,7 @@ Legend
 </colgroup>
 <thead>
 <tr class="header">
-<th><span class="LaTeX">$x$</span> <br> <span class="LaTeX">$\scriptstyle{ \varphi }$</span></th>
+<th><span class="LaTeX">$x$</span> <br> <span class="LaTeX">$\scriptstyle{ \alpha }$</span></th>
 <th><span class="LaTeX">$0$</span> <br> <span class="LaTeX">$\scriptstyle{0^\circ}$</span></th>
 <th><span class="LaTeX">$\pi / 6$</span> <br> <span class="LaTeX">$\scriptstyle{30^\circ}$</span></th>
 <th><span class="LaTeX">$\pi / 4$</span> <br> <span class="LaTeX">$\scriptstyle{45^\circ}$</span></th>
@@ -301,7 +384,7 @@ Legend
 <td><span class="LaTeX">$\int x \sin(x) {\,\text{d}}x = \sin(x) - x \cos(x)$</span></td>
 </tr>
 <tr class="odd">
-<td>$2x = 2 x x $</td>
+<td><span class="LaTeX">$\sin 2x = 2 \sin x \cos x$</span></td>
 <td><span class="LaTeX">$\int \sin^2(x) {\,\text{d}}x = \frac12 \bigl(x - \sin(x)\cos(x) \bigr)$</span></td>
 </tr>
 <tr class="even">
@@ -314,6 +397,40 @@ Legend
 </tr>
 </tbody>
 </table>
+<h2 id="hyperboles-sinh-cosh-tanh">Hyperboles sinh, cosh, tanh</h2>
+<div class="card tabbox">
+<div class="card-header">
+<ul class="nav nav-tabs card-header-tabs ml-0" role="tablist">
+<li class="nav-item">
+<a class="nav-link active" data-toggle="tab" href="#checkboxid-0" role="tab">sinh</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" data-toggle="tab" href="#checkboxid-1" role="tab">cosh</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" data-toggle="tab" href="#checkboxid-2" role="tab">tanh</a>
+</li>
+</ul>
+</div>
+<div class="card-body">
+<div class="tab-content">
+<div id="checkboxid-0" class="tab-pane active" role="tabpanel">
+<p><span class="LaTeX">$$\sinh(x) = \frac{1}{2}(e^x -e^{-x}) = - {\text{i}}\, \sin({\text{i}}x)$$</span></p>
+</div>
+<div id="checkboxid-1" class="tab-pane" role="tabpanel">
+<p><span class="LaTeX">$$\cosh(x)  = \frac{1}{2}(e^x +e^{-x})= \cos({\text{i}}x)$$</span></p>
+</div>
+<div id="checkboxid-2" class="tab-pane" role="tabpanel">
+<p>empty</p>
+</div>
+</div>
+</div>
+</div>
+<p></br></p>
+<p><span class="LaTeX">$\cosh (x) + \sinh (x) = e^{x}$</span></br> <span class="LaTeX">$\cosh^2 (x) - \sinh^2 (x) = 1$</span></p>
+<h2 id="cardinal-sinus">Cardinal Sinus</h2>
+<p><span class="LaTeX">$$\mathrm{si}(x) = \frac{\sin(x)}{x}$$</span></p>
+<p>normalized: <span class="LaTeX">$${\mathop{sinc}}(x) = \frac{\sin(\pi x)}{\pi x}$$</span></p>
 
 
     </main>

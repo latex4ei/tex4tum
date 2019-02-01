@@ -15,12 +15,14 @@ function renderMath() {
         if (inner[1] == "$") {
             tex = el.innerHTML.split("$")[2].replace(/&amp;/g, '&');
             displaystyle = true;
+            font_size='\\large '
         } else {
             tex = el.innerHTML.split("$")[1].replace(/&amp;/g, '&');
             displaystyle = false;
+            font_size=''
         }
         try {
-            katex.render(tex, el, {displayMode: displaystyle});
+            katex.render(font_size+tex, el, {displayMode: displaystyle});
         } catch (err) {
             el.innerHTML = "ERROR: " + err;
             //el.innerHTML = inner;

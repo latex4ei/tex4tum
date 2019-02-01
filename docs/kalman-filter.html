@@ -10,7 +10,7 @@
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="/kalman-filter">
+    <link rel="canonical" href="http://localhost:4000/kalman-filter">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -18,6 +18,7 @@
     <!-- Load CSS in head, JS after footer -->
     <!-- Main/Bootstrap -->
     <link rel="stylesheet" href="/assets/main.css">
+    <link rel="stylesheet" href="/assets/syntax-highlight.css">
 
     <!-- Fontawesome CSS -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
@@ -30,7 +31,7 @@
   <body>
 
     <!-- Bootstrap 4.0 Navigation Bar -->
-<nav class="navbar fixed-top navbar-dark bg-primary text-white navbar-expand-lg">
+<nav class="navbar sticky-top navbar-dark bg-primary text-white navbar-expand-lg">
 
     <!-- sticky left: Logo -->
     <div class="navbar-brand">
@@ -61,17 +62,23 @@
     <div class="collapse navbar-collapse justify-content-start order-6 order-lg-2" id="navbarResponsive">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="/about.html"><i class="fa fa-question"></i> About</a>
+          <a class="nav-link" href="/calculator.html"><i class="fa fa-calculator"></i> Calc</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/sheets.html"><i class="fa fa-file"></i> Sheets</a>
         </li>
         <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <i class="fa fa-handshake"></i> Contribute
+          <i class="fa fa-info-circle"></i> Info
         </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="/contribution.html"><i class="fa fa-edit"></i> Contribute Article</a>
-            <a class="dropdown-item" href="/todo.html"><i class="fa fa-tasks"></i> ToDo List</a>
+            <a class="dropdown-item" href="/about.html"><i class="fa fa-question"></i> About TeX4TUM</a>
+            <a class="dropdown-item" href="/demo.html"><i class="fa fa-play-circle"></i> Feature Demo</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum"><i class="fab fa-github"></i> Develop TeX4TUM Features</a>
+            <h6 class="dropdown-header"><i class="fa fa-handshake"></i> Contribute</h6>
+            <a class="dropdown-item" href="/contribution.html"><i class="fa fa-edit"></i> Write Article</a>
+            <a class="dropdown-item" href="/todo.html"><i class="fa fa-tasks"></i> ToDo List</a>
+            <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum"><i class="fab fa-github"></i> Develop Features</a>
             <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum/issues"><i class="fa fa-bug"></i> Report a bug</a>
           </div>
         </li>
@@ -114,12 +121,35 @@
 
 
     <main class="container" aria-label="Content">
-      <h1><a data-toggle="collapse" href="#title_def" aria-expanded="false" aria-controls="title_def">
+      
+
+
+
+<p style="font-family: sans-serif;">
+	
+		
+		/ <a href="/electronics.html">electronics</a>
+		
+		
+	
+		
+		/ <a href="/dsp.html">dsp</a>
+		
+		
+	
+		
+		
+	 /
+</p>
+
+<h1><a data-toggle="collapse" href="#title_def" aria-expanded="false" aria-controls="title_def">
   
   Kalman Filter
-</a></h1>
+</a><a class="float-right small" style="font-size: small" href="https://github.com/latex4ei/tex4tum/edit/master/_article/electronics/dsp/kalman-filter.md">[edit]</a></h1>
 
+<p>
 
+</p>
 
 <!-- Basics -->
 <!--    -->
@@ -127,7 +157,7 @@
 <!-- SI Units -->
 <!--=============================================================== -->
 <!-- KaTeX Tweaks -->
-<div id="title_def" class="collapse">
+<div id="title_def" class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
 <h5 class="card-title text-primary">
@@ -139,62 +169,101 @@ The Kalman Filter is a linear quadratic estimator used to estimate the state of 
 </div>
 </div>
 </div>
+<h2 id="table-of-contents"><i class="fa fa-list-ul"></i> Table of Contents</h2>
+<ul>
+<li><a href="#working-principle">Working Principle</a></li>
+<li><a href="#defining-the-model">Defining the Model</a>
+<ul>
+<li><a href="#state-space">State Space</a></li>
+<li><a href="#noise">Noise</a></li>
+</ul></li>
+<li><a href="#calculations">Calculations</a>
+<ul>
+<li><a href="#1-step-prediction">1. Step: Prediction</a></li>
+<li><a href="#2-step-update">2. Step: Update</a></li>
+</ul></li>
+<li><a href="#extended-kalman-filter">Extended Kalman Filter</a></li>
+<li><a href="#sensor-fusion">Sensor Fusion</a></li>
+<li><a href="#references">References</a></li>
+</ul>
 <h2 id="working-principle">Working Principle</h2>
 <p>The Kalman Filter averages a prediction of a system's state with a new measurement using a weighted average. The purpose of the weights is that estimated values with smaller uncertainty are &quot;trusted&quot; more. The result of the weighted average is a new state estimate that lies between the predicted and measured state, and has a smaller estimated uncertainty than either alone.</p>
-<h2 id="requirements">Requirements</h2>
+<p>The Kalman filter works in two steps: <em>predict</em> and <em>update</em>.</p>
+<h2 id="defining-the-model">Defining the Model</h2>
 <ul>
 <li>system's process model</li>
 <li>control inputs to that process</li>
 <li>multiple sequential measurements (e.g. from sensors)</li>
 </ul>
-<p>Facts:</p>
-<ul>
-<li>the certainty of the measurements is expressed in the gains</li>
-<li>if values of <span class="LaTeX">${\mathbf{Q}}$</span> are larger than values of <span class="LaTeX">${\mathbf{R}}$</span>, the filter trusts more the process, less the measurements</li>
-</ul>
-<h2 id="calculations">Calculations</h2>
 <h3 id="state-space">State Space</h3>
-<p><span class="LaTeX">$\vec{x}_{n} = {\mathbf{G}}_n \vec{x}_{n-1} + {\mathbf{B}} \vec{u}_n + \vec{v}_n$</span> <br> <span class="LaTeX">$\vec{y}_{n} = {\mathbf{H}}_{n} \vec{x}_{n-1} + \vec{w}_{n}$</span></p>
-<div class="collapse">
-<div class="legend card border-info mb-1">
-<div class="card-body">
-<h5 class="card-title text-info">
-Legend
-</h5>
-<p class="card-text">
-<span class="LaTeX">$k$</span> states <span class="LaTeX">$\vec x$</span>, transition matrix <span class="LaTeX">${\mathbf{G}}$</span>, gaussian process noise <span class="LaTeX">$\vec v_n$</span>, input <span class="LaTeX">$\vec u$</span>, <span class="LaTeX">$l$</span> measurements <span class="LaTeX">$\vec y$</span>, measurement model <span class="LaTeX">${\mathbf{H}}$</span>, gaussian measurement noise <span class="LaTeX">$\vec w_n$</span>, time point <span class="LaTeX">$n$</span>
-</p>
-</div>
-</div>
-</div>
-<h3 id="step-prediction">Step: Prediction</h3>
-<p>calculate the next state based on the old state and the dynamic model (e.g. physical laws)</p>
-<p><span class="LaTeX">$\hat {\vec x}_{n|n-1} = {\mathbf{G}}_n \hat{\vec x}_{n-1|n-1}$</span></p>
-<p>calculate a new process covariance (how certain is the model?) <span class="LaTeX">${\mathbf{C}}_{\vec x_{n|n-1}} = {\mathbf{G}}_n {\mathbf{C}}_{\vec x_{n-1|n-1}} {\mathbf{G}}_n^\top + {\mathbf{C}}_{\vec v}$</span></p>
-<h3 id="step-update">Step: Update</h3>
-<p>calculate Innovation (real measurements minus predicted measurements) <span class="LaTeX">$\Delta \vec y_n = \vec y_n - \hat{\vec y}_{n|n-1} =\vec y_n - {\mathbf{H}}_{n} \hat{\vec x}_{n|n-1}$</span></p>
-<p>Innovation Covariance: <span class="LaTeX">${\mathbf{S}} = {\mathbf{H}}_{n} {\mathbf{C}}_{\vec x_{n|n-1}} {\mathbf{H}}_{n}^\top + {\mathbf{C}}_{\vec w_{n}}$</span></p>
-<p>With optimal <strong>Kalman-gain</strong> (prediction for <span class="LaTeX">$\vec x_n$</span> based on <span class="LaTeX">$\Delta y_n$</span>):</p>
-<p><span class="LaTeX">${\mathbf{K}}_n = {\mathbf{C}}_{\vec x_{n|n-1}} {\mathbf{H}}_{n}^\top {{\mathbf{S}}}^{-1}$</span></p>
-<p>with <span class="LaTeX">$K_{ij} \in [0.0; 1.0]$</span> where 0.0 means the filter fully trusts the prediction and 1.0 means the filter fully trusts the measurement.</p>
-<p>calculate the new state from <span class="LaTeX">$l$</span> measurements <span class="LaTeX">$\hat{\vec x}_{n|n} = \hat{\vec x}_{n|n-1} + {\mathbf{K}}_n \Delta \vec y_n$</span></p>
-<p><span class="LaTeX">${\mathbf{C}}_{\vec x_{n|n}} = {\mathbf{C}}_{\vec x_{n|n-1}} + {\mathbf{K}}_n {\mathbf{H}}_{n} {\mathbf{C}}_{\vec x_{n|n-1}}$</span></p>
+<p>The dynamic model for the physical process is</p>
+<p><span class="LaTeX">$$\begin{array}{ll} \vec{x}_{n} &amp; = {\mathbf{G}}_n \vec{x}_{n-1} + {\mathbf{B}} \vec{u}_n + \vec{w}_n \\[0.5em] 
+\vec{y}_{n} &amp; = {\mathbf{H}}_{n} \vec{x}_{n-1} + \vec{v}_{n} \end{array}$$</span></p>
+<p>with the <span class="LaTeX">$k$</span> states <span class="LaTeX">$\vec x$</span>, transition matrix <span class="LaTeX">${\mathbf{G}}$</span>, gaussian process noise <span class="LaTeX">$\vec w_n$</span>, input <span class="LaTeX">$\vec u$</span>, <span class="LaTeX">$l$</span> measurements <span class="LaTeX">$\vec y$</span>, measurement model <span class="LaTeX">${\mathbf{H}}$</span>, gaussian measurement noise <span class="LaTeX">$\vec v_n$</span>, time point <span class="LaTeX">$n$</span>.</p>
+<p>The measurement matrix <span class="LaTeX">${\mathbf{H}}$</span> defines how the observations correspond to the state. If the state variables can be directly observed then <span class="LaTeX">${\mathbf{H}} = {\mathbf{1}}$</span>.</p>
+<p>If there are no known inputs to the process, then <span class="LaTeX">${\mathbf{B}} \vec{u}_n = 0$</span> and this term can be removed.</p>
+<h3 id="noise">Noise</h3>
+<p>The overall uncertainty of the estimation is expressed with the covariance matrix <span class="LaTeX">${\mathbf{P}}_n$</span>. This matrix is influenced by the process noise <span class="LaTeX">$\vec w_n$</span> and the measurement noise <span class="LaTeX">$\vec v_n$</span>. During prediction, the process noise increases the uncertainty, whereas combining it with the measurement during the update phase decreases the uncertainty.</p>
+<p><span class="LaTeX">$$\begin{array}{ll} 
+\vec{w}_n &amp;  \sim \mathcal{N}({\mathbf{0}}, {\mathbf{Q}}_n) \\
+\vec{v}_n &amp;  \sim \mathcal{N}({\mathbf{0}}, {\mathbf{R}}_n)
+\end{array}$$</span></p>
+<p>If values of <span class="LaTeX">${\mathbf{Q}}$</span> are larger than values of <span class="LaTeX">${\mathbf{R}}$</span>, the filter trusts more the process, less the measurements.</p>
+<h2 id="calculations">Calculations</h2>
+<h3 id="step-prediction">1. Step: Prediction</h3>
+<p>1.1 calculate the new (a priori) state estimate based on the old state and the dynamic model (e.g. physical laws)</p>
+<p><span class="LaTeX">$$\hat {\vec x}_{n|n-1} = {\mathbf{G}}_n \hat{\vec x}_{n-1|n-1}$$</span></p>
+<p>1.2 calculate a new process covariance (how certain is the model?)</p>
+<p><span class="LaTeX">$${\mathbf{P}}_{\vec x_{n|n-1}} = {\mathbf{G}}_n {\mathbf{P}}_{\vec x_{n-1|n-1}} {\mathbf{G}}_n^\top + {\mathbf{Q}}_n$$</span></p>
+<h3 id="step-update">2. Step: Update</h3>
+<p>2.1 calculate intermediate values (optional):</p>
+<ul>
+<li><p>Innovation: <span class="LaTeX">$\Delta \vec y_n = \vec y_n - \hat{\vec y}_{n|n-1} =\vec y_n - {\mathbf{H}}_{n} \hat{\vec x}_{n|n-1}$</span> </br> which are the real measurements minus predicted measurements</p></li>
+<li><p>Innovation Covariance: <span class="LaTeX">${\mathbf{S}} = {\mathbf{H}}_{n} {\mathbf{P}}_{\vec x_{n|n-1}} {\mathbf{H}}_{n}^\top + {\mathbf{R}}_n$</span></p></li>
+</ul>
+<p>2.2 calculate optimal Kalman-gain:</p>
+<p><span class="LaTeX">$${\mathbf{K}}_n = \frac{{\mathbf{P}}_{\vec x_{n|n-1}} {\mathbf{H}}_{n}^\top}{{\mathbf{H}}_{n} {\mathbf{P}}_{\vec x_{n|n-1}} {\mathbf{H}}_{n}^\top + {\mathbf{R}}_n} = {\mathbf{P}}_{\vec x_{n|n-1}} {\mathbf{H}}_{n}^\top {{\mathbf{S}}}^{-1}$$</span></p>
+<p>2.3 calculate the updated (a posteriori) state estimate using <span class="LaTeX">$l$</span> measurements:</p>
+<p><span class="LaTeX">$$\hat{\vec x}_{n|n} = \hat{\vec x}_{n|n-1} + {\mathbf{K}}_n \Delta \vec y_n$$</span> which is the estimation of <span class="LaTeX">$\vec x_n$</span> based on <span class="LaTeX">$\Delta y_n$</span> with <span class="LaTeX">$K_{ij} \in [0.0; 1.0]$</span> where 0.0 means the filter fully trusts the prediction and 1.0 means the filter fully trusts the measurement.</p>
+<p>2.4 update process covariance:</p>
+<p><span class="LaTeX">$${\mathbf{P}}_{\vec x_{n|n}} = {\mathbf{P}}_{\vec x_{n|n-1}} + {\mathbf{K}}_n {\mathbf{H}}_{n} {\mathbf{P}}_{\vec x_{n|n-1}}$$</span></p>
 <h2 id="extended-kalman-filter">Extended Kalman Filter</h2>
-<p>The Extended Kalman Filter (EKF) uses non-linear dynamic models. For covariance the Jacobi-Matrix of the model is used.</p>
+<p>The Extended Kalman Filter (EKF) uses non-linear dynamic models.</p>
+<p><span class="LaTeX">$$\begin{array}{ll} \vec{x}_{n} &amp; = g(\vec{x}_{n-1}, \vec{u}_n) + \vec{w}_n \\[0.5em] 
+\vec{y}_{n} &amp; = h(\vec{x}_{n-1}) + \vec{v}_{n} \end{array}$$</span> where <span class="LaTeX">$g()$</span> and <span class="LaTeX">$h()$</span> are non-linear functions. For covariance the Jacobi-Matrix of the model is used:</p>
+<p><span class="LaTeX">$${\mathbf{G}} = \frac{\partial g}{\partial x} \Big\vert_{\hat{\vec x}_{n-1}, \vec u_n} \qquad {\mathbf{H}} = \frac{\partial h}{\partial x} \Big\vert_{\hat{\vec x}_{n}}$$</span></p>
 <h2 id="sensor-fusion">Sensor Fusion</h2>
 <p>If <span class="LaTeX">$i$</span> sensors measure the same state <span class="LaTeX">$x_j$</span>, this can be expressed in the measurement matrix <span class="LaTeX">${\mathbf{H}}$</span>. The column <span class="LaTeX">$j$</span> will have <span class="LaTeX">$i$</span> rows with entries.</p>
-<h2 id="example">Example</h2>
-<div class='example card border-success mb-1'>
-<div class='card-body'>
-<h5 class="card-title text-success">
-Example
+<h5 class="clp_title text-success" data-toggle="collapse" href="#example1154">
+<i class='fa fa-chart-bar'></i> Example
 </h5>
+<div id='example1154' class='example collapse'>
+<div class='card border-success mb-1'>
+<div class='card-body'>
+<p class='card-text'>
+<h5 class="clp_title text-success" data-toggle="collapse" href="#example1155">
+<i class='fa fa-chart-bar'></i> Example
+</h5>
+<div id='example1155' class='example collapse'>
+<div class='card border-success mb-1'>
+<div class='card-body'>
 <p class='card-text'>
 <p>Kalman Filter for Gyroscope and Accelerometer:</p>
 state <span class="LaTeX">$\vec x$</span> are the orientation angles roll and pitch and the bias angle
 <p>
 </div>
 </div>
+</div>
+<p>
+</div>
+</div>
+</div>
+<h2 id="references">References</h2>
+<ul>
+<li><p><a href="https://www.kalmanfilter.net/kalman1d.html">KALMAN FILTER IN ONE DIMENSION</a></p></li>
+<li><p><a href="https://medium.com/@jaems33/understanding-kalman-filters-with-python-2310e87b8f48">Madium: Understanding Kalman Filters with Python, 2018</a></p></li>
+<li><p><a href="https://www.youtube.com/watch?v=ul3u2yLPwU0">YouTube: Understanding Kalman Filters 3/5</a></p></li>
+</ul>
 
 
     </main>
