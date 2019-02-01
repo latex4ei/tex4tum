@@ -50,12 +50,20 @@
 <!-- SI Units -->
 <!--=============================================================== -->
 \newcommand{\siexp}{\,}
-\newcommand{\SI}[2]{#1\,#2}
+\newcommand{\SI}[2]{#1\,\mathrm{#2}}
 \newcommand{\si}[1]{#1}
 \newcommand{\per}{/}
 \newcommand{\squared}{^{2}}
 \newcommand{\cubed}{^{3}}
 \newcommand{\tothe}[1]{^{#1}}
+
+\newcommand{\tera}{T}
+\newcommand{\giga}{G}
+\newcommand{\mega}{M}
+\newcommand{\kilo}{k}
+\newcommand{\milli}{m}
+\newcommand{\micro}{\micro}
+\newcommand{\nano}{\nano}
 
 \newcommand{\kilogram}{\text{kg}\siexp}
 \newcommand{\meter}{\text{m}\siexp}
@@ -78,6 +86,7 @@
 \newcommand{\ohm}{\Omega\siexp}
 \newcommand{\weber}{\text{Wb}\siexp}
 \newcommand{\tesla}{\text{T}\siexp}
+\newcommand{\degree}{\text{deg}\siexp}
 
 
 
