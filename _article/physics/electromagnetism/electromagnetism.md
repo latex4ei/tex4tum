@@ -2,4 +2,4 @@
 title: Electromagnetism
 ---
 
-Maxwell equations
+{{ FOLDER_TOC }}

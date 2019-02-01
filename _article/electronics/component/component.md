@@ -14,6 +14,6 @@ tite: Electrical Component
 
 
 
-## Supliers
-* www.farnell.com
-*
+
+{{ FOLDER_TOC }}
+
