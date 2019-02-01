@@ -3,6 +3,7 @@ title: Probability Theory
 ---
 
 
+
 ## Terms
 
 | Name | Definition |
@@ -32,7 +33,7 @@ Total probabilty: $\P(A) = \sum\limits_{i \in I} \P(A|B_i)\P(B_i)$
 
 
 ## Random Variables
-$\X : \Omega \mapsto \Omega'$ is a random variable if for all events $A' \in \F'$ there exists an event  $A \in \F$ such that $\left\{\omega \in \Omega|\X(\omega) \in A'\right\} \in \F$.
+$\X : \Omega \mapsto \Omega'$ is a random variable if for all events $A' \in \mathbb F'$ there exists an event  $A \in \mathbb F$ such that $\left\{\omega \in \Omega|\X(\omega) \in A'\right\} \in \mathbb F$.
 
 
 

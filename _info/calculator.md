@@ -3,20 +3,35 @@ title: Calculator
 icon: calculator
 ---
 
- Try the expression parser below.
+This is a powerful, client-side JS calculator based on [mathjs](http://mathjs.org/docs/index.html).
+
+Try it. Full expression syntax on [mathjs](http://mathjs.org/docs/expressions/syntax.html).
+
 
 <div id="commandline">loading...</div>
+Shortcuts: `s`: set focus, `Ctrl+F11`: toggle fullscreen.
 
-Shortcut keys:
 
-* Press `S` to set focus to the input field
-* Press `Ctrl+F11` to toggle full screen
-* Enter "clear" to clear history
+## What you can do:
+
+* Algebraic calculations
+* Define functions, calculate derivative, simplify
+* Vector / Matrix calculations (determinant, etc.)
+
+
 
 
 Explanation:
-Data Types: Boolean, Numbers, Complex, Units</br>
-Detailed documentation for [mathjs](http://mathjs.org/docs/index.html)
+**Data Types:** Bool `true`/`false` , Num `7, 1.5e-9`, Complex `2+3i`, Units `3.0 cm, 2.7 kg`</br>
+**Vector / Matrix:** `v = [1, 2, 3]`, `M = [11, 12; 21, 22]`</br>
+**Predefined Functions:** `abs()`, `sqrt()`, `sin()`, `log()` </br>
+**Own Functions:** `f(x) = x^2 - 5`, then call `f(3)`, 
+
+Example:
+`f(x) = x^2 + 3x -1`</br>
+`fdev = derivative("x^2 + 3x -1", "x")`   // 2x + 3</br>
+`A = [2, 1; 0, 2]`</br>
+`d = det(A)`
 
 
 
@@ -664,12 +679,10 @@ function CommandLineEditor (params) {
     if (!expressions || !(expressions instanceof Array)) {
       // load some example expressions
       expressions = [
-        '1.2 / (3.3 + 1.7)',
         'a = 5.08 cm + 2 inch',
-        'a to inch',
         'sin(90 deg)',
-        'f(x, y) = x ^ y',
-        'f(2, 3)'
+        'f(x) = 3x^2 + 4x - 5',
+        'f(2)'
       ];
     }
 

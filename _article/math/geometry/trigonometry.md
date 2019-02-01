@@ -3,6 +3,8 @@ title: Trigonometry
 tags: [Sinus, Cosinus, Tangens, Arctan]
 ---
 
+Trigonometry studies relationships involving lengths and angles of triangles.
+
 
 ## Unit Circle
 {% include svg-object.html id="UC" filename="unit_circle.svg" %}
@@ -12,7 +14,7 @@ tags: [Sinus, Cosinus, Tangens, Arctan]
 $$\sin^2(\alpha) + \cos^2(\alpha) = 1$$
 with angle $\alpha$
 
-Explanation: In the unit circle, the sinus and cosinus at a given angle form a orthogonal triangle. The length of the hypotenuse corresponds to the radius, which equals 1 (unit circle). Thus, we can apply the law of Pythagoras $a^2 + b^2 = c^2$ with $a = \sin(\alpha)$, $b = \cos(\alpha)$, and $c = 1$. 
+Explanation: In the unit circle, the sinus and cosinus at a given angle form an orthogonal triangle with the edges $a,b,c$. The length of the hypotenuse $c$ corresponds to the radius $r$, which equals 1 (unit circle). Thus, we can apply the law of Pythagoras $a^2 + b^2 = c^2$ with $a = \sin(\alpha)$, $b = \cos(\alpha)$, and $c = 1$. 
 
 {% tabbox %}
 #### Sinus
@@ -52,7 +54,7 @@ with angle $\alpha$
 |---------|------------|
 |$\cos (x - \frac{\pi}{2}) = \sin x$ | $\int x \cos(x) \diff x = \cos(x) + x \sin(x)$|
 |$\sin (x + \frac{\pi}{2}) = \cos x$ | $\int x \sin(x) \diff x = \sin(x) - x \cos(x)$|
-|$\sin 2x = 2 \sin x \cos x $  | $\int \sin^2(x) \diff x = \frac12 \bigl(x - \sin(x)\cos(x) \bigr)$|
+|$\sin 2x = 2 \sin x \cos x$  | $\int \sin^2(x) \diff x = \frac12 \bigl(x - \sin(x)\cos(x) \bigr)$|
 |$\cos 2x = 2\cos^2 x - 1$  | $\int \cos^2(x) \diff x = \frac12 \bigl(x + \sin(x)\cos(x) \bigr)$|
 |$\sin(x) = \tan(x)\cos(x)$ | $\int \cos(x)\sin(x) = -\frac12 \cos^2(x)$ |
 

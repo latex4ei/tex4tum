@@ -2,14 +2,14 @@
 title: Matrix
 ---
 
-{% definition %}
 A Matrix is a table of math objects.
-{% enddefinition %}
-{% example %}
-For example a matrix $\ma A \in \mathbb K^{2\times 3}$ could be $\ma A = \mat{ a & b & c \\ d & e & f}$.
-{% endexample %}
+
 
 $\ma A=(a_{ij}) \in \mathbb K^{m\times n}$ has $m$ rows (index $i$) and $n$ columns (index $j$)
+
+Example:
+A matrix $\ma A \in \mathbb K^{2\times 3}$ could be $\ma A = \mat{ a & b & c \\ d & e & f}$.
+
 
 | Dimension |
 |-----------|
@@ -36,22 +36,27 @@ $\ma A=(a_{ij}) \in \mathbb K^{m\times n}$ has $m$ rows (index $i$) and $n$ colu
 ### Rotation Matrix of $\R^3$
 for rotations in a right-handed coordinate system $XYZ$.
 
-Rotation on x-axis:
-
-$$\ma R_x(\alpha) = \begin{bmatrix}
+$$\begin{matrix} 
+\begin{bmatrix}
 1 &   0         & 0           \\
 0 & \cos \alpha & -\sin \alpha \\
 0 & \sin \alpha &  \cos \alpha
-\end{bmatrix}$$
-
-
-$$\ma R_y(\alpha) = \begin{bmatrix}
+\end{bmatrix} &
+\begin{bmatrix}
 \cos \alpha  & 0 & \sin \alpha \\
    0         & 1 &  0          \\
 -\sin \alpha & 0 & \cos \alpha
-\end{bmatrix}$$
-
-$$\ma R_{z}(\alpha )=\begin{pmatrix}\cos \alpha &-\sin \alpha &0\\\sin \alpha &\cos \alpha &0\\0&0&1\end{bmatrix}$$
+\end{bmatrix} &
+\begin{bmatrix}
+\cos \alpha &-\sin \alpha & 0\\
+\sin \alpha & \cos \alpha & 0\\
+    0       &     0       & 1
+\end{bmatrix} \\
+\ma R_x(\alpha) &
+\ma R_y(\alpha) &
+\ma R_{z}(\alpha)
+\end{matrix}
+$$
 
 
 
@@ -60,7 +65,7 @@ $$\ma R_{z}(\alpha )=\begin{pmatrix}\cos \alpha &-\sin \alpha &0\\\sin \alpha &\
 Eigenvalues: $\det(\ma A - \lambda \ma 1) = 0$ <br>
 Eigenvectors: $\ker(\ma A - \lambda_i \ma 1) = \vec v_i$
 
-$\ma A \vec v = \lambda \vec v$ \quad $\det \ma A = \prod \lambda_i$ \quad\ $\Sp \ma A = \sum a_{ii} = \sum \lambda_i$
+$$\ma A \vec v = \lambda \vec v$ \qquad $\det \ma A = \prod \lambda_i$ \qquad\ $\Sp \ma A = \sum a_{ii} = \sum \lambda_i$$
 
 
 ## Special 2×2 Matrices
