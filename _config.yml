@@ -49,6 +49,7 @@ pandoc:
     - normalize
     # - smart
     - latexmathml
+    #- columns: 100
     - read: markdown+footnotes+backtick_code_blocks   # general format+extensio1+extension2
     #- filter: pandoc-citeproc
 highlighter: pygments

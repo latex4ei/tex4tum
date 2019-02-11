@@ -62,23 +62,47 @@ with angle $\alpha$
 
 ## Hyperboles sinh, cosh, tanh
 
+$\cosh (x) + \sinh (x) = e^{x}$</br>
+$\cosh^2 (x) - \sinh^2 (x) = 1$
+
+
 {% tabbox %}
 #### sinh
 $$\sinh(x) = \frac{1}{2}(e^x -e^{-x}) = - \i \, \sin(\i x)$$ 
 
 
 #### cosh
-$$\cosh(x)  = \frac{1}{2}(e^x +e^{-x})= \cos(\i x)$$
+$$\cosh(x)  = \frac{1}{2}(e^x +e^{-x}) =  \cos(\i x)$$
 
 
 #### tanh
-empty
+$$\tanh(x) =\frac {\sinh x}{\cosh x} = {\frac {\mathrm {e} ^{x}-\mathrm {e} ^{-x}}{\mathrm {e} ^{x}+\mathrm {e} ^{-x}}}={\frac {\mathrm {e} ^{2x}-1}{\mathrm {e} ^{2x}+1}}=1-{\frac {2}{\mathrm {e} ^{2x}+1}}$$
+
+
+#### coth
+$$\coth(x) ={\frac {\cosh x}{\sinh x}}={\frac {\mathrm {e} ^{x}+\mathrm {e} ^{-x}}{\mathrm {e} ^{x}-\mathrm {e} ^{-x}}}={\frac {\mathrm {e} ^{2x}+1}{\mathrm {e} ^{2x}-1}}=1+{\frac {2}{\mathrm {e} ^{2x}-1}}$$
 
 {% endtabbox %}
 
 
-$\cosh (x) + \sinh (x) = e^{x}$</br>
-$\cosh^2 (x) - \sinh^2 (x) = 1$
+### Inverse
+
+{% tabbox %}
+#### arcsinh
+$$\mathrm{arcsinh}(x) := \ln\left(x+\sqrt{x^2+1}\right)$$
+
+#### arccosh
+$$\mathrm{arccosh}(x) := \ln\left(x+\sqrt{x^2-1}\right)$$
+
+#### arctanh
+$$\mathrm{artanh}(x) = \frac{1}{2} \ln {\frac {1+x}{1-x}}$$
+
+#### arccoth
+$$\mathrm{arcoth}(x) = \frac{1}{2} \ln {\frac {x+1}{x-1}}$$
+
+{% endtabbox %}
+
+
 
 
 

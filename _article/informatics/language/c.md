@@ -33,6 +33,9 @@ int main() {
 
 
 
+TODO diagram explaining the GNU tool chain: linker
+
+
 ## Best practices
 
 **Namespaces**: use a capital prefix before each function name to indicate their belonging to a certain source file.

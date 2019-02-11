@@ -19,10 +19,7 @@ The Kalman filter works in two steps: *predict* and *update*.
 ### State Space
 The dynamic model for the physical process is
 
-$$\begin{array}{ll} \vec{x}_{n} & = \ma G_n \vec{x}_{n-1} + \ma B \vec{u}_n + \vec{w}_n \\[0.5em] 
-\vec{y}_{n} & = \ma H_{n} \vec{x}_{n-1} + \vec{v}_{n} \end{array}$$
-
-
+$$\begin{array}{ll} \vec{x}_{n} & = \ma G_n \vec{x}_{n-1} + \ma B \vec{u}_n + \vec{w}_n \\[0.5em] \vec{y}_{n} & = \ma H_{n} \vec{x}_{n-1} + \vec{v}_{n} \end{array}$$
 with the $k$ states $\vec x$, transition matrix $\ma G$, gaussian process noise $\vec w_n$, input $\vec u$,
 $l$ measurements $\vec y$, measurement model $\ma H$, gaussian measurement noise $\vec v_n$,
 time point $n$.
@@ -106,8 +103,10 @@ state $\vec x$ are the orientation angles roll and pitch and the bias angle
 
 ## References
 
-* [KALMAN FILTER IN ONE DIMENSION](https://www.kalmanfilter.net/kalman1d.html)
+* [Kalman Filter in one Dimension](https://www.kalmanfilter.net/kalman1d.html)
 
 * [Madium: Understanding Kalman Filters with Python, 2018](https://medium.com/@jaems33/understanding-kalman-filters-with-python-2310e87b8f48)
+
+* [Python Example](https://scipy-cookbook.readthedocs.io/items/KalmanFiltering.html)
 
 * [YouTube: Understanding Kalman Filters 3/5](https://www.youtube.com/watch?v=ul3u2yLPwU0)

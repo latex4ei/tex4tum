@@ -8,8 +8,8 @@ title: Frequency Analysis
 | **Complex** | Laplace | Z-Transform |
 
 
-| Properties |  | |
-|---|---:|---|
+| Properties |  |  |
+|-------------|---------------:|-------------------|
 | Linearity | $\alpha f(t) + \beta g(t)$ | $\ftsymbol\ \alpha F(s) + \beta G(s)$ |
 | Shift Time | $x(t - \tau)$ | $\ftsymbol\ e^{-s \tau} X(x)$|
 | Shift Frequency | $e^{\tau t}$ | $\ftsymbol\ X(s - \tau)$|
@@ -21,6 +21,29 @@ title: Frequency Analysis
 {% legend %}
 timefunctions $f,g$, frequency functions $X,F,G$, complex number $\cx s$, time $t$, time shift $\tau$, constant $c$
 {% endlegend %}
+
+
+
+## Example Spectrums
+<style>
+table{table-layout: fixed;} 
+td{width: 15em; padding-top: 1em!important;}
+</style>
+
+| Time $f(t)$                     | Frequency $X(f)$                |
+|---------------------------------|---------------------------------|
+| {% cellimg time_constant.svg %} | {% cellimg freq_constant.svg %} |
+| {% cellimg time_impulse.svg %}  | {% cellimg freq_impulse.svg %}  |
+| {% cellimg time_comb.svg %}     | {% cellimg freq_comb.svg %}     |
+| {% cellimg time_impulse_shift.svg %} | {% cellimg freq_impulse_shift.svg %} |
+| {% cellimg time_step.svg %}     | {% cellimg freq_step.svg %}     |
+| {% cellimg time_sinus.svg %}    | {% cellimg freq_sinus.svg %}    |
+| {% cellimg time_cosinus.svg %}  | {% cellimg freq_cosinus.svg %}  |
+| {% cellimg time_rect.svg %}     | {% cellimg freq_rect.svg %}     |
+| {% cellimg time_tri.svg %}      | {% cellimg freq_tri.svg %}      |
+
+
+
 
 ## Fourierreihe
 Approximation einer *periodischen* Funktion $f(t)$ durch Überlagerung gewichteter Sinus und Cosinus einer Grundfrequenz $\omega_0 = \frac{1}{T}$ und deren Oberschwingungen $2\omega_0, 3\omega_0, ...$
@@ -45,3 +68,6 @@ $\displaystyle \underset{\text{Zeitbereich}}{ f(t)} \LT \underset{\text{Frequenz
 
 
 ## Z-Transform (ZT)
+
+
+

@@ -5,12 +5,31 @@ title: Python
 Python is a widely used high-level interpreter language that focuses on readability and expressiveness.
 
 
-## Example: Hello World
-{% highlight python linenos %}
-def myfunction( myValue ):
-	if(myValue == 10):
-		print "Hallo World"
-{% endhighlight %}
+## Example: Hello Beer
+
+```python
+# hello beer: drink 0.5 liter in 4 rounds
+import time
+
+LITER_PER_SIP = 37e-3
+
+def sips2liter( sips ):
+	return float( sips ) * LITER_PER_SIP
+
+beer_l = 0.5
+sips_per_round = [3, 7, 4, 2]
+
+for sips in sips_per_round:
+	print("I drink {} sips.".format(sips)) 
+	time.sleep( sips )
+	beer_l -= sips2liter( sips )
+	if beer_l < 0:
+		beer_l = 0
+		print("My beer is empty!")
+		break
+	else:
+		print("I have {:.2f} l beer left.".format(beer_l))
+```
 
 
 ## Data Types
