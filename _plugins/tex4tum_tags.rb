@@ -1,4 +1,24 @@
 module Jekyll
+
+  class SvgImage < Liquid::Tag
+    def initialize(tag_name, text, tokens)
+      super
+      @filename = text
+    end
+
+    def render(context)
+      site = context.registers[:site]
+      site.static_files.each do |file|
+        if( @filename.include?(file.name))
+          return "<img class='img-fluid w-100' src='#{file.relative_path}'>"
+        end
+      end
+
+    end
+  end
+
+
+
   class InlineImage < Liquid::Tag
 
     def initialize(tag_name, text, tokens)
@@ -125,10 +145,11 @@ module Jekyll
     def initialize(tag_name, text, tokens)
       super
       @text = text
+      @@theid = 0
     end
 
     def render(context)
-      text = super
+      text = super   # only text between liquid tags
       level = text[/#+/].length
       #puts 'Length: '+level.to_s
 
@@ -139,25 +160,24 @@ module Jekyll
       posttabhtml="</div>\n"
 
       # do it in a loop
-      it = 0
-      group_id = rand(1000).to_s  # random group, @fixme get unique id!
+      startid = @@theid
       tablabels = ""
       text.scan(/((?<!#)\#{#{level}}\s+(.*))\n/) do |match|     # /((?<!#)\#{#{level}}\s+(.*))\n/
         #puts 'match: '+match[1]
-        newprelabelhtml = prelabelhtml.gsub('checkboxid', "checkboxid-#{it}")
-        if(it == 0)
+        newprelabelhtml = prelabelhtml.gsub('checkboxid', "checkboxid-#{@@theid}")
+        if(@@theid == startid)
           newprelabelhtml = newprelabelhtml.sub('"nav-link"', '"nav-link active"')
         end
         tablabels += newprelabelhtml + match[1] + postlabelhtml + "\n"
         #puts 'tablabels: '+tablabels
 
-        newpretabhtml = pretabhtml.gsub("checkboxid", "checkboxid-#{it}")
-        if(it == 0)
+        newpretabhtml = pretabhtml.gsub("checkboxid", "checkboxid-#{@@theid}")
+        if(@@theid == startid)
           newpretabhtml = newpretabhtml.sub('"tab-pane"', '"tab-pane active"')
         end
-        tabhtml = (it > 0 ? posttabhtml : "") + newpretabhtml
+        tabhtml = (@@theid > startid ? posttabhtml : "") + newpretabhtml
         text = text.gsub(match[0], tabhtml)
-        it = it + 1
+        @@theid += 1
       end
 
       # tabbox is CSS3 only tab solution
@@ -172,6 +192,7 @@ module Jekyll
 end
 
 Liquid::Template.register_tag('inlineimage', Jekyll::InlineImage)
+Liquid::Template.register_tag('cellimg', Jekyll::SvgImage)
 Liquid::Template.register_tag('mermaid', Jekyll::Mermaid)
 Liquid::Template.register_tag('definition', Jekyll::Definition)
 Liquid::Template.register_tag('example', Jekyll::Example)

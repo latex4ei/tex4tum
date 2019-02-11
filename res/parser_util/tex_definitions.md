@@ -6,7 +6,7 @@
 \renewcommand{\quad}{&emsp;} <!--    -->
 \newcommand{\Ra}{\Rightarrow}
 \newcommand{\ol}[1]{\overline{#1}}
-
+\newcommand{\ul}[1]{\underline{#1}}
 
 \newcommand{\ma}[1]{\boldsymbol #1}
 \newcommand{\ir}{\rm}
@@ -28,10 +28,12 @@
 \newcommand{\abs}[1]{\left\vert{#1}\right\vert}
 \newcommand{\norm}[1]{\left\lVert{#1}\right\rVert}
 \newcommand{\rang}{\text{rang}}
+\newcommand{\arccot}{\text{arccot}}
 \newcommand{\Sp}{\,\text{Sp}}
 \newcommand{\ker}{\,\text{ker}}
 
 \newcommand{\mat}[1]{\begin{bmatrix} #1 \end{bmatrix}}
+\newcommand{\vect}[1]{\begin{pmatrix} #1 \end{pmatrix}}
 
 \DeclareMathOperator{\N}{\mathbb N}
 \DeclareMathOperator{\R}{\mathbb R}

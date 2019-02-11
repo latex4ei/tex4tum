@@ -78,7 +78,7 @@ module Jekyll
 
     MAIN_INDEX_TITLE='Tex4TUM'
     TOC_TOKEN_RE=/\{\{\s*FOLDER_TOC\s*\}\}/
-    MIN_LINES_FOR_LOCAL_TOC=200   # required lines of the .md file to get a TOC
+    MIN_LINES_FOR_LOCAL_TOC=250   # required lines of the .md file to get a TOC
     MIN_HEADINGS_FOR_LOCAL_TOC=4  # required number of headings to get a TOC
 
     def generate(site)
@@ -233,7 +233,7 @@ module Jekyll
 
         if matches[0].length == 2
           toc_string+="* [#{matches[1]}](\##{slug})\n"
-        elsif matches[0].length == 3
+        elsif matches[0].length == 3 and false    # true if TOC depth should be 2
           toc_string+="    - [#{matches[1]}](\##{slug})\n"
         end
       end

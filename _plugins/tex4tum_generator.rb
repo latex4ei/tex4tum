@@ -53,9 +53,9 @@ module Jekyll
     DEFINITION_REGEXP = %r{\A([A-Z](?:.|\n)*?)\n\s*\n}
 
     TEX_SINGLE_REGEXP = %r{(?:\s|^)\$(?=[^\s$])(.*?)(?<=[^\s$\\])\$(?:\s|$)}
-    TEX_DUAL_REGEXP = %r{(?:^|\n)\s*\$\$(?=[^\s$])(.*?)(?<=[^\s$\\])\$\$\s*(?:\n|$)}
+    TEX_DUAL_REGEXP = %r{(?:^|\n)\s*\$\$(?=[^\s$])((.|\n)*?)(?<=[^\s$\\])\$\$\s*(?:\n|$)}
 
-    LEGEND_REGEXP = %r{(?:^|\n)\s*((\$\$(?=[^\s$])(?:.*?)(?<=[^\s$\\])\$\$)\s*\n\s*((?:with|where|Legend:)\s+((?:.|\n)*?))\n\s*\n)}
+    LEGEND_REGEXP = %r{(?:^|\n)\s*((\$\$(?=[^\s$])(?:.)*?\$\$)\s*\n\s*((?:with|where|Legend:)\s+((?:.|\n)*?))\n\s*\n)}   # safer: (?<=[^\s$\\])\$\$
 
     RE_NL = %r{(?:^|\n)\s*}          # Newline
     RE_BL = %r{(?:^|\n)\s*\n\s*}     # Blankline
@@ -173,12 +173,19 @@ module Jekyll
         #puts 'match0: '+match[0]+', match1:'+match[1]+', match2:'+match[2]
       end
 
+      # prepare math: ruby replaces \\ with \
+      content = content.gsub('\\\\(?!\n)') { '\\\\\\\\' }
+      content = content.gsub(%r{(\\mat\{[^$]*?)\\ }) { $1+'\\\\ ' }
+      # puts content
+      
       # legends
       eq_num = 0
       content.scan(LEGEND_REGEXP) do |match|
         equation_par = match[0]   #$1
-        equation_par = equation_par.sub(match[1], "<div data-toggle='collapse' href='\#eq_#{eq_num}'>"+ "\n" + match[1] + "\n" + "</div>")
+        equation = match[1].gsub('\\\\') { '\\\\\\\\' }
+        equation_par = equation_par.sub(match[1], "<div data-toggle='collapse' href='\#eq_#{eq_num}'>"+ "\n" + equation + "\n" + "</div>")
         equation_par = equation_par.sub(match[2], '{% '+"legend eq_#{eq_num}"+'%}' + "\n" + match[2] + "\n" + %q{{% endlegend %}})
+        #puts equation_par
         content = content.sub(match[0], equation_par)
         eq_num += 1
       end
@@ -190,7 +197,6 @@ module Jekyll
       content = content.sub(RE_EXAMPLE, "\n\n"+%q{{% example %}\1{% endexample %}}+"\n\n")
 
     
-
       return content
     end
   end
