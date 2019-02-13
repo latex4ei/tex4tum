@@ -4,13 +4,28 @@
 
 <!-- Basics -->
 \renewcommand{\quad}{&emsp;} <!--    -->
+\newcommand{\ra}{\rightarrow}
 \newcommand{\Ra}{\Rightarrow}
 \newcommand{\ol}[1]{\overline{#1}}
 \newcommand{\ul}[1]{\underline{#1}}
 
-\newcommand{\ma}[1]{\boldsymbol #1}
 \newcommand{\ir}{\rm}
+
+
+
 \newcommand{\i}{\text{i}}
+\newcommand{\e}{\mathrm{e}}
+
+
+\renewcommand{\vec}[1]{\boldsymbol #1}
+\newcommand{\ma}[1]{\boldsymbol{#1}}
+\newcommand{\cx}[1]{\boldsymbol{#1}}
+\newcommand{\cxc}[1]{\boldsymbol{#1}^{*}}
+
+
+
+\newcommand{\mat}[1]{\begin{bmatrix} #1 \end{bmatrix}}
+\newcommand{\vect}[1]{\begin{pmatrix} #1 \end{pmatrix}}
 
 
 
@@ -21,8 +36,6 @@
 \newcommand{\d}{\mathop{}\!\mathrm{\vphantom( d}}
 \newcommand{\bdot}{\boldsymbol \cdot}
 
-\newcommand{\cx}[1]{\boldsymbol{#1}}
-\newcommand{\cxc}[1]{\boldsymbol{#1}^{*}}
 
 
 \newcommand{\abs}[1]{\left\vert{#1}\right\vert}
@@ -32,8 +45,6 @@
 \newcommand{\Sp}{\,\text{Sp}}
 \newcommand{\ker}{\,\text{ker}}
 
-\newcommand{\mat}[1]{\begin{bmatrix} #1 \end{bmatrix}}
-\newcommand{\vect}[1]{\begin{pmatrix} #1 \end{pmatrix}}
 
 \DeclareMathOperator{\N}{\mathbb N}
 \DeclareMathOperator{\R}{\mathbb R}
@@ -43,7 +54,6 @@
 
 
 \newcommand{\P}{\mathop{P}}
-
 \newcommand{\Y}{\textit{Y}}
 \newcommand{\T}{\textit{T}}
 \newcommand{\X}{\textit{X}}
@@ -125,8 +135,7 @@
 
 \newcommand{\underset}[2]{\tiny\begin{matrix}\\ \normalsize #2 \\[1em] \scriptsize #1 \end{matrix}}
 
-\renewcommand{\ma}[1]{\mathbf{#1}}
-\renewcommand{\rm}{}
 \renewcommand{\P}{\mathrm{P}}
 \renewcommand{\boldsymbol}[1]{\mathbf{#1}}
 \renewcommand{\operatorname}[1]{\mathop{#1}}
+
