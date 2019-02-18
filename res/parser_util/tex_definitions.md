@@ -34,7 +34,7 @@
 
 
 \newcommand{\d}{\mathop{}\!\mathrm{\vphantom( d}}
-\newcommand{\bdot}{\boldsymbol \cdot}
+\newcommand{\bdot}{\pmb{\cdot}}
 
 
 
@@ -136,6 +136,6 @@
 \newcommand{\underset}[2]{\tiny\begin{matrix}\\ \normalsize #2 \\[1em] \scriptsize #1 \end{matrix}}
 
 \renewcommand{\P}{\mathrm{P}}
-\renewcommand{\boldsymbol}[1]{\mathbf{#1}}
+<!-- \renewcommand{\boldsymbol}[1]{\mathbf{#1}} -->
 \renewcommand{\operatorname}[1]{\mathop{#1}}
 
