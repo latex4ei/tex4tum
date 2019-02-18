@@ -8,7 +8,6 @@ module Jekyll
 
       index_array = Array.new
 
-      # puts site.pages
 
       for page in site.pages do
         #puts page.name
@@ -82,11 +81,12 @@ module Jekyll
     MIN_HEADINGS_FOR_LOCAL_TOC=4  # required number of headings to get a TOC
 
     def generate(site)
-      puts "Generating Table of Contents (TOC)..."
 
+      puts "Generating Folder List..."
       folderHash = get_folderlist(site)
       # puts "Dirs: "+folderHash.to_s
 
+      puts "Generating Table of Contents (TOC)..."
       # create tocs
       site.collections.each do |label, collection|
         collection.docs.each do |document|
@@ -101,7 +101,9 @@ module Jekyll
           relpath = document.relative_path.sub(document.collection.relative_directory, "")[1..-1]
           if relpath[/(?:^|\/)([^\/]*)\/\1/] # find paths of the form ...foo/foo.md
             folders = File.dirname(relpath).split('/')
-            if folders[1]
+            if folders[2]
+              toc = createFolderTOC(folderHash[folders[0]][folders[1]][folders[2]], 2)   
+            elsif folders[1]
               toc = createFolderTOC(folderHash[folders[0]][folders[1]], 2)
             elsif folders[0]
               toc = createFolderTOC(folderHash[folders[0]], 2)
@@ -180,11 +182,14 @@ module Jekyll
       return folderHash
     end
 
+
+
     def createFolderTOC(ahash, level)
-      toc_string="## {% icon fa-list-ul %} Table of Contents\n"
+      toc_string="## {% icon fa-list-ul %} Subfolders and Articles\n"
       ahash.each do |key, val|
         if( key.include?('.md') )
           pagename=key.sub('.md', '.html')
+          #puts val
           toc_string+="* [#{val}](#{pagename})\n"
         else
           title = key.capitalize
@@ -200,10 +205,11 @@ module Jekyll
                 toc_string+=": "
                 val.each do |key, val|
                   if( key.include?('.md') )
+                    val = val.sub(/^.+?\s\(([A-Z0-9-]+)\)$/, '\1')
                     pagename=key.sub('.md', '.html')
                     toc_string+="[#{val}](#{pagename}) • "
                   else
-                    toc_string+="[#{key.capitalize}**](#{key}.html) • "
+                    toc_string+="[**#{key.capitalize}**](#{key}.html) • "
                   end
                 end
                 toc_string = toc_string[0..-3]
@@ -246,16 +252,69 @@ module Jekyll
       return text
     end
 
+  end
+
+
+
+  class AcronymParser
+
+    def generate(site)
+
+      acros = []
+      ACRONYMS.scan(ABBREVIATION_REGEXP) do |match|
+        acros.push([match[1], match[2]])
+      end
+
+
+      site.collections.each do |label, collection|
+        collection.docs.each do |doc|
+          head, main, foot = doc.output.partition(/\n\s*<main .*?<\/main>\s*\n/m)
+
+          #puts "\n\n\n\nmain:\n===================\n", main
+          main.scan(/<(?:p|a|h|div|li|td|code|span)>[^<]+?<|>[^<]+?<\/(?:p|a|h\d|div|li|td|code|span)>/) do |innerHTML|
+
+            newHTML = innerHTML
+            acros.each do |match|
+              key = match[0]
+              value = match[1]
+
+              newHTML = newHTML.gsub(/(?<=\W|^)#{key}(?=\W|$)/, "<abbr title=\"" + value + "\" >" + key + "</abbr>")
+            end
+            main = main.sub(innerHTML, newHTML)
+          end
+
+          doc.output = head+main+foot
+        end
+      end
+    end
+
+  private
+  ACRONYMS = File.read('./res/parser_util/abbreviations.md', :encoding => 'utf-8')
+  ABBREVIATION_REGEXP = %r{(\*\[([^\]]+)\]:\s*([^\n]+)\n)}
 
 
   end
 
+
+  # ============================================================
+  Hooks.register :site, :pre_render do |site|
+    TocGenerator.new.generate(site)
+  end
+
+
+
+  # ============================================================
   Hooks.register :site, :post_write do |site|
     IndexGenerator.new.generate(site)
   end
 
-  Hooks.register :site, :pre_render do |site|
-    TocGenerator.new.generate(site)
+
+  # ============================================================
+  Jekyll::Hooks.register(:site, :post_render) do |site|
+    puts "Hook: replacing acronyms: Deactivated for speed (tex4tum_hooks.rb:3xx)"
+    #AcronymParser.new.generate(site)
   end
+
+
 
 end

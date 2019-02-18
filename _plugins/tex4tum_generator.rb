@@ -9,7 +9,7 @@ module Jekyll
 
     def generate(site)
       puts "Add TeX Definitions..."
-      puts "Add Abbreviations..."
+      #puts "Add Abbreviations..."
       puts "Parsing TODOs..."
 
       todos = Array.new
@@ -26,10 +26,10 @@ module Jekyll
         # puts document.path
         relevant_content = markDefinition(relevant_content)    # this has to be called first
         relevant_content = replaceClasses(relevant_content)
-        relevant_content = add_abbreviations(relevant_content)
+        #relevant_content = add_abbreviations(relevant_content)   # Pandoc does not support abbreviations.
         relevant_content = add_latex_definitions(relevant_content)
 
-        document.content = relevant_content+sep+rest
+        document.content = relevant_content+sep+rest # put together
 
         # puts document.data  # gotcha!
       end
@@ -47,7 +47,6 @@ module Jekyll
 
     private
 
-    ABBREVIATION_REGEXP = %r{(\*\[([^\]]+)\]:\s*([^\n]+)\n)}
     TODO_REGEXP = %r{(?:\n\s*|^)((?:TODO|\\todo|@todo):?\s(.*?))\n}
     #INNER_SECTION_REGEXP = %r{^\s*(##+\s(.*?)\n((?:.|\n)*?)\n\s*\n(?=\s*##|\Z))}
     DEFINITION_REGEXP = %r{\A([A-Z](?:.|\n)*?)\n\s*\n}
@@ -64,7 +63,7 @@ module Jekyll
 
 
     #EXPLANATION_REGEXP = RE_NL+%r{((?:Explanation|Details):\s+(?:.|\n)*?)}+RE_BL
-    EXPLANATION_REGEXP = %r{(?:^|\n)\s*\n\s*(?:Explanation|Details):\s+((?:.|\n)*?)(?:^|\n)\s*\n\s*}
+    EXPLANATION_REGEXP = %r{(?:^|\n)\s*\n\s*(?:Explanations?|Details?):\s+((?:.|\n)*?)(?:^|\n)\s*\n\s*}
     RE_EXPLANATION_SECTION = %r{(?<=^|\n)\s*##+\s*(Explanation.*?)\n\s*((?:.|\n)*?)\n.*\n(?=\s*##+|\Z)}    # \n\s*((?:.|\n)*?)\n\s*\n(?=\s*##+|\Z)
     RE_EXAMPLE = %r{(?:^|\n)\s*\n\s*(?:Example|For Example):\s+((?:.|\n)*?)(?:^|\n)\s*\n\s*}
 
@@ -100,29 +99,15 @@ module Jekyll
       return content
     end
 
+
+    # can only be used if Markdown renderer supports PHP style abbreviations. Pandoc does not support this.
     def add_abbreviations(content)
       abbreviations = File.read('./res/parser_util/abbreviations.md', :encoding => 'utf-8')
-      #content += abbreviations
-
-      content = parse_abbreviation(content, abbreviations)
-
+      content += abbreviations
       return content
     end
 
-    def parse_abbreviation(content, abbreviations)
-      abbreviations.scan(ABBREVIATION_REGEXP) do |match|
-          line = match[0]   #$1
-          #puts line
-          key = match[1]
-          value = match[2]
 
-          #content = content.gsub(line, '')
-          content = content.gsub(/(?<=\s|^)#{key}(?=\W|$)/, "<abbr title=\"" + value + "\" >" + key + "</abbr>")
-      end
-      #puts content
-
-      return content
-    end
 
 
 
@@ -138,16 +123,7 @@ module Jekyll
 
 
     def markDefinition(content)
-
       # idea: find a definition and show it when the heading before it is clicked
-
-      # puts "START" + content
-      # title definition:
-      # definition = content[DEFINITION_REGEXP, 1]
-      # if definition
-      #   puts definition
-      #   content = content.sub(definition, %q{{% definition title_def%}}+definition+%q{{% enddefinition %}}+"\n\n")
-      # end
       content = content.sub(DEFINITION_REGEXP, %q{{% definition title_def%}\1{% enddefinition %}}+"\n\n")
       return content
     end
@@ -191,11 +167,12 @@ module Jekyll
       end
 
       # explanation
-      content = content.sub(EXPLANATION_REGEXP, "\n\n"+%q{{% explanation %}\1{% endexplanation %}}+"\n\n")
+      content = content.gsub(EXPLANATION_REGEXP, "\n\n"+%q{{% explanation %} \1 {% endexplanation %}}+"\n\n")
 
       # example
-      content = content.sub(RE_EXAMPLE, "\n\n"+%q{{% example %}\1{% endexample %}}+"\n\n")
-
+      if content.include? "Example"
+        content = content.gsub(RE_EXAMPLE, "\n\n"+%q{{% example %}\1{% endexample %}}+"\n\n")
+      end
     
       return content
     end
