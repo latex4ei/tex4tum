@@ -155,6 +155,12 @@ pre {
   }
 }
 
+
+pre .diagram{
+  line-height: 1.0rem;
+}
+
+
 input[type='email'] {
   @extend %extend_2;
 }
