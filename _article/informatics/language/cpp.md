@@ -6,6 +6,7 @@ tags: cpp
 C++ is a general-purpose programming language with imperative, object-oriented and generic programming features.
 There are several ISO-Standards (ISO/IEC 14882) of the lanaguage referred as C++98, C++03, C++11, C++14, C++17, C++20.
 
+
 ## Guidlines
 
 * https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md
@@ -56,6 +57,8 @@ See http://en.cppreference.com/w/c/header for a comparison. The C++ Standard Lib
 * Qt
 * Boost
 * Standard Template Library (STL)
+
+
 
 
 

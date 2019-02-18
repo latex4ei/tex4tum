@@ -124,8 +124,11 @@ $$\begin{matrix}
 \end{matrix}
 $$
 
-Explanation: Bei einer Rotationsmatrix stehen die Spaltenvektoren senkrecht aufeinander (orthogonal). Deshalb ist der Bildraum nicht verzerrt da nur die Richtung der Einheitsvektoren verändert wird, allerdings nicht ihre Stellung zueinander. Somit entspricht eine orthogonale Abbildungsmatrix einer Drehung des Koordinatensystems in eine andere Richtung (bezüglich $n$
-Freiheitsgraden).
+
+
+Explanation: Bei einer Rotationsmatrix stehen die Spaltenvektoren senkrecht aufeinander (orthogonal).
+Deshalb ist der Bildraum nicht verzerrt da nur die Richtung der Einheitsvektoren verändert wird, allerdings nicht ihre Stellung zueinander. 
+Somit entspricht eine orthogonale Abbildungsmatrix einer Drehung des Koordinatensystems in eine andere Richtung (bezüglich $n$ Freiheitsgraden).
 
 
 

@@ -6,7 +6,7 @@ The Transmission Control Protocol (TCP) is one of the main protocols of the Inte
 
 ## Header Format
 
-```
+```diagram
  0                   1                   2                   3
  0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
@@ -38,13 +38,15 @@ The Transmission Control Protocol (TCP) is one of the main protocols of the Inte
 Ports 0–1023 are “well-known ports”.
 
 
-| Port | Service |
-|------|---------|
+| Port | Service              |
+|------|----------------------|
 | 22   | SSH (unix remote)    |
 | 25   | SMTP (outgoing mail) |
-| 80   | HTTP    |
+| 80   | HTTP                 |
 | 220  | IMAP (incoming mail) | 
-| 443  | HTTPS   |
+| 443  | HTTPS                |
+
+TODO fill list
 
 
 ## References

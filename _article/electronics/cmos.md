@@ -1,9 +1,18 @@
 ---
 title: CMOS
-tags: [mosfet, inverter, nand, nor]
+tags: [mosfet, inverter, nand, nor, not]
 ---
 
 Complementary Metal (Poly-Si) Oxide (SiO2) Semiconductor (CMOS).
+
+
+<style>.img-fluid{ height: 15em; }</style>
+
+| **NOT**      | **NAND**    | **NOR**     |
+|--------------|-------------|-------------|
+|{% inlineimage cmos_not.svg %}  | {% inlineimage cmos_nand.svg %}  | {% inlineimage cmos_nor.svg %}  |
+
+
 
 
 ## Parameters

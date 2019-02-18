@@ -42,14 +42,14 @@ CONNECT message fields:
 
 PUBLISH message fields
 
-| Field | Example |
-|-------|---------|
-| packageID | 2 |
-| topicName | `"matteo/temp"` |
-| QoS | 1 |
-| retainFlag | false |
-| Payload | `"temperature:30"` |
-| dupFlag | false |
+| Field      | Example            |
+|------------|--------------------|
+| packageID  | `2`                |
+| topicName  | `"matteo/temp"`    |
+| QoS        | `1`                |
+| retainFlag | `false`            |
+| Payload    | `"temperature:30"` |
+| dupFlag    | `false`            |
 
 
 * QoS 

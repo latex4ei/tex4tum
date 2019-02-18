@@ -4,8 +4,11 @@ title: Hash Function
 
 A hash function $H$ maps input of variable size to an output of fixed size.
 
-$$H(\cdot): \eset{0,1}^* \rightarrow \eset{0,1}^k$$
-with hash function $H$, an input bit stream $\eset{0,1}^*$ and output digest $\eset{0,1}^k$ of $k$ bit.
+$$H(\cdot): \{0,1\}^* \rightarrow \{0,1\}^k$$
+with hash function $H$, an input bit stream $\{0,1\}^*$ and output digest $\{0,1\}^k$ of $k$ bit.
+
+
+{{ FOLDER_TOC }}
 
 
 ## Properties
@@ -53,4 +56,7 @@ Cryptographic hashes often divide the input in fixed length blocks $m_i$ and ite
 * Preimage Attack: find any input that has a specific hash value.
 * Collision Attack: find any two inputs producing the same hash value
 * Length extension attack: find a new hash that corresponds to the original input with some arbitrary appended data.
+
+
+
 

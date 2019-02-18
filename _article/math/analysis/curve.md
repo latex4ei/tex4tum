@@ -9,6 +9,10 @@ A curve is a generalization of a line, in that its curvature need not be zero.
 $$\vec \gamma:[a,b] \rightarrow \R^n, t \mapsto \vect{ \gamma_1(t) \\ \vdots \\ \gamma_n(t)}$$
 
 
+{% include figure.html width="15em" src="curve.svg" %}
+
+
+
 ## Properties
 
 * $\mathcal C^0$-Kurve: Positionsstetigkeit (geschlossene Kurve)

@@ -6,11 +6,11 @@ A file system manages the abstraction of grouped data blocks that belong to a si
 
 Common file systems
 
-| Name | OS | Features |
-|---|---|---|
-| FAT | all | simple |
-| NTFS | Windows | Journaling |
-| Ext 2/3/4 | Linux | Journaling |
+| Name      | OS      | Features   |
+|-----------|---------|------------|
+| FAT       | all     | simple     |
+| NTFS      | Windows | Journaling |
+| Ext 2/3/4 | Linux   | Journaling |
 
 
 ## File Allocation Table (FAT)

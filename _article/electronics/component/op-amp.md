@@ -19,19 +19,22 @@ Provides current at the output without loading the input.
 ## Non-Inverting Amplifier
 {% include figure.html width="20em" filename="opamp_noninv.svg" description="Non-Inverting Amplifier" %}
 
-$V_{\mathrm{out}} = \left(1 + \frac{R_2}{R_1} \right) V_{\mathrm{in}}$
+$$V_{\mathrm{out}} = \left(1 + \frac{R_2}{R_1} \right) V_{\mathrm{in}}$$
+with resistances $R_1, R_2 \in \R$ and the voltages $V_{\mathrm{in}}, V_{\mathrm{out}} \in \R$.
 
 
 ## Inverting Amplifier
 {% include figure.html filename="opamp_inv.svg" width="18em" description="Inverting Amplifier" %}
 
 $$V_{\mathrm{out}} = -\frac{R_2}{R_1} V_{\mathrm{in}}$$
+with resistances $R_1, R_2 \in \R$ and the voltages $V_{\mathrm{in}}, V_{\mathrm{out}} \in \R$.
 
 
 ## Differential Amplifier
 {% include figure.html filename="opamp_diff.svg" width="18em" description="Differential Amplifier" %}
 
 $$V_{\mathrm{out}} = \frac{R_2}{R_1}\left(- V_1 + V_2 \frac{R_4}{R_4 + R_3}\right) + \frac{R_4}{R_4 + R_3} V_2$$
+with resistances $R_1, R_2, R_3, R_4 \in \R$ and the voltages $V_{\mathrm{in}}, V_{\mathrm{out}} \in \R$.
 
 
 ## Schmitt-Trigger

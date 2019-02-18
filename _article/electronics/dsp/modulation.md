@@ -1,7 +1,7 @@
 ---
 title: Modulation
 ---
-modulation is the process of embedding a message signal, for example a digital bit stream or an analog audio signal, inside another signal that can be physically transmitted.
+Modulation is the process of embedding a message signal, for example a digital bit stream or an analog audio signal, inside another signal that can be physically transmitted.
 
 
 ## Analog modulation
@@ -21,5 +21,6 @@ In digital modulation, an analog carrier signal is modulated by a discrete digit
 * Quadrature Amplitude Modulation (QAM): 
 
 
+## References
 
-https://www.its.bldrdoc.gov/fs-1037/fs-1037c.htm
+* [Federal Standard 1037C: Telecommunications: Glossary of Telecommunication Terms](https://www.its.bldrdoc.gov/fs-1037/fs-1037c.htm)

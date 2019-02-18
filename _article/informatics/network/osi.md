@@ -5,15 +5,15 @@ title: Open Systems Interconnection model (OSI)
 The Open Systems Interconnection model (OSI model) is a conceptual model that characterizes the communication functions of computing systems.
 
 
-| Layer | Name | Data Unit |
-|-----|------|-----------|
-| 7   | Application  | Data    |	
-| 6   | Presentation | Data    |	
-| 5   | Session	     | Data    | 
-| 4   | Transport    | Segment | 
-| 3   | Network	     | Packet  |	
-| 2   | Data link    | Frame   |
-| 1   | Physical     | Bit     |
+| Layer | Name       | Data Unit |
+|-----|--------------|-----------|
+| 7   | Application  | Data      |	
+| 6   | Presentation | Data      |	
+| 5   | Session	     | Data      | 
+| 4   | Transport    | Segment   | 
+| 3   | Network	     | Packet    |	
+| 2   | Data link    | Frame     |
+| 1   | Physical     | Bit       |
 
 
 ## Application Layer

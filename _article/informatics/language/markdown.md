@@ -4,14 +4,18 @@ title: Markdown
 Markdown is a simple markup language with the aim that the markup elements do not disturb the text itself.
 
 
-
 ## Basic Formatting
 
-| Text Style | Syntax |
-|----|----|---|
-| *italic* | `*italic*`  |
-| **bold** | `**bold**` |
-| `typewriter` | ` `typewriter` ` |
+| Text Style   | Syntax           |
+|--------------|------------------|
+| *italic*     | `*italic*`       |
+| **bold**     | `**bold**`       |
+| `typewriter` | \``typewriter`\`  |
+| ~~striked~~  | `~~striked~~`    |
+| [Link](http://google.de)  | `[Link](http://google.de)`    |
+
+
+
 
 
 ### Headigs
@@ -26,6 +30,15 @@ Markdown supports several levels for headings:
 ### Lists
 * Bulletpoints: `*`
 * Enumeration: `1.`
+
+
+### Tables
+```
+| Syntax      | Description |
+| ----------- | ----------- |
+| Header      | Title       |
+| Paragraph   | Text        |
+```
 
 
 ### Misc
@@ -43,5 +56,6 @@ There exist several variants (flawors) of the original markdown that extend the 
 
 
 ## References
+
 * [RFC 7763](https://tools.ietf.org/html/rfc7763), *The text/markdown Media Type*
 

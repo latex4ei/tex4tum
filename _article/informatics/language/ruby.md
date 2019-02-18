@@ -3,46 +3,50 @@ title: Ruby
 ---
 Ruby is a dynamic, interpreted, reflective, object-oriented, general-purpose programming language developed the mid-1990s by Yukihiro Matsumoto in Japan.
 
-
-## Hello Beer
 ```ruby
-class Parent
-  @@num_instances = []    # Shared between class and subclasses
-  @this_instance_id  = [] # Specific to this class
+# hello beer: drink 0.5 liter in 4 rounds
 
+LITER_PER_SIP = 37e-3
 
+def sips2liter( num_sips )
+    num_sips * LITER_PER_SIP
+end
+
+beer_l = 0.5
+rounds = 4
+sips_per_round = [3, 7, 4, 2]
+
+puts "I drink #{beer_l} l in #{rounds} rounds:"
+sips_per_round.each do |sips|
+    puts "I drink #{sips} sips."
+    sleep sips 
+    beer_l -= sips2liter( sips )
+    if beer_l <= 0.0
+        puts "My beer is empty!"
+        break
+    else
+        puts "I have #{beer_l} l beer left."
+    end
+end
 ```
 
+
+
+## Data Types
 
 ```ruby
 a = 'This is a single-quoted string'
 a = "\nThis is a double-quoted string\n"
-
-class Person
-  attr_reader :name, :age
-  def initialize(name, age)
-    @name, @age = name, age
-  end
-  def <=>(person) # the comparison operator for sorting
-    @age <=> person.age
-  end
-  def to_s
-    "#{@name} (#{@age})"
-  end
-end
-
-group = [
-  Person.new("Bob", 33),
-  Person.new("Chris", 16),
-  Person.new("Ash", 23)
-]
-
-puts group.sort.reverse
 ```
 
 
 
-## Class Variables
+
+
+## Classes
+
+
+### Class Variables
 ```ruby
 class Employee
 	@@num_employees = 0        # Shared between class and subclasses
@@ -54,5 +58,10 @@ class Employee
     end
 end
 ```
+
+
+## References
+
+* [Ruby Documentation](http://ruby-doc.org/core-2.6.1/Class.html)
 
 

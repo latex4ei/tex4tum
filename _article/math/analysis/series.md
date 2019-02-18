@@ -1,5 +1,5 @@
 ---
-title: Row
+title: Series
 tag: sum, mean
 ---
 
@@ -26,11 +26,11 @@ with $x \in \R$, function $f$, and order $m \in \N$.
 Konvergenzradius $R=\underset{i\rightarrow \infty}{\lim} \abs{\frac{a_i}{a_{i+1}}}$
 
 
-## Tylorrow
+## Taylor series
 $$f(\cx z) = \sum\limits_{k = 0}^{\infty} \frac{\cx f^{(k)}\left(\cx z_0\right)}{k!} (\cx z - \cx z_0)^k$$
 
 
-| $f(\cx z)$    | Tylorrow               | Conditions |
+| $f(\cx z)$    | Taylor series          | Conditions |
 |---------------|------------------------|------------|
 |$e^\cx{z}$ | $\sum_{n=0}^\infty \frac{\cx{z}^n}{n!}$ | $\forall \cx{z} \in \C$ |
 | $\ln(\cx{z})$ | $\sum_{n=1}^\infty \frac{(-1)^{n+1}}{n}(\cx{z}-1)^n$ | $0<\cx{z}\le2$ |

@@ -17,6 +17,18 @@ with signals $x(t)$, $h(t)$.
 $$(f*g)[n] = \sum\limits_{k = -\infty}^{\infty} {f[k] g[n-k]}$$
 
 
+{% include figure.html width="25em" filename="convolution.svg" description="Comparison of convolution, cross-correlation, and auto-correlation. [From Wikimedia](https://de.wikipedia.org/wiki/Datei:Comparison_convolution_correlation_de.svg)"%}
+
+TODO adjust svg like this: https://www.thinkcalculator.com/algebra/convolution-calculator.php
+
+
+{% include figure.html width="25em" filename="convolution_rect_spiky" description="Convolution of $f(t) * g(t)$ showing $f(\tau)$ and $g(t - \tau)$"%}
+
+
+
+
+
+
 
 ## Properties
 * Kommutativität: $f(t)*g(t) = g(t)*f(t)$
@@ -29,4 +41,8 @@ $$(f*g)[n] = \sum\limits_{k = -\infty}^{\infty} {f[k] g[n-k]}$$
 
 * Kausalität: $h(t - \tau) = 0$ für $\tau > t$ </br>
 $h[n - l] = 0$ für $l > n$
+
+
+
+## Refrences
 

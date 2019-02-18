@@ -43,3 +43,7 @@ A single attacker pretends to have several identities which subvert the election
 * Symmetric encryption: AES
 * Asymmetric encryption: RSA
 * Digital Signature Algorithm: FIPS, ECDSA
+
+
+{{ FOLDER_TOC }}
+

@@ -12,3 +12,7 @@ A capacitor is a electrical component.
 | Equations | $I = C \cdot\dot U$ <br> $C = \frac{\diff Q}{\diff U}$ |
 
 
+* Impedanz $Z = \frac{1}{j \omega C}$ 
+* Admitanz $Y = j \omega C$ 
+
+

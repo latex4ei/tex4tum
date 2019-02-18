@@ -61,11 +61,11 @@ Given a curve $\vec \gamma:[a,b] \rightarrow \R^n, t \mapsto \vec \gamma(t)$.
 
 {% tabbox %}
 ### Scalar field
-$$\int\limits_\gamma f \diff s := \int\limits^b_a f\bigl(\vec \gamma(t)\bigr) \cdot \norm{\vec{\dot \gamma}(t)} \diff t$$
+$$\int\limits_\gamma f \diff s := \int\limits^b_a f\bigl(\vec{\gamma(t)}\bigr) \cdot \norm{\vec{ {\dot{\gamma}} }(t)} \diff t$$
 with the scalar field $f(\vec x)$ along a curve $\vec \gamma(t)$ and the elementary arc length $\diff s$.
 
 ### Vector field
-$$\int \vec v \bdot \diff \vec s := \int\limits^b_a \vec v \bigl(\vec \gamma(t)\bigr)^\top \boldsymbol \cdot \vec{\dot \gamma}(t) \ \diff t$$
+$$\int \vec v \bdot \diff \vec s := \int\limits^b_a \vec v \bigl(\vec \gamma(t)\bigr)^\top \boldsymbol \cdot \vec{ {\dot{\gamma}} }(t) \ \diff t$$
 with the vector field $\vec v(\vec x)$, the curve $\vec \gamma$, and $\vec x, \vec v, \vec \gamma \in \R^n$.
 
 {% endtabbox %}
@@ -95,7 +95,7 @@ with the vector field $\vec v:D\subseteq \R^3 \rightarrow \R^3, \vec x \mapsto \
 
 ## Integral Rules
 ###  Integral Gauß 
-$$\iiint\limits_V \div\; \vec v \diff V = \iint\limits_{\partial V}\!\!\!\!\!\!\!\!\!\bigcirc \vec v \bdot \diff A$$
+$$\iiint\limits_V \div\; \vec v \diff V = \iint\limits_{\partial V}\!\!\!\!\!\!\!\!\!\bigcirc \ \vec v \bdot \diff A$$
 
 ### Integral Stokes 
 $$\iint\limits_{A} \rot\; \vec v \diff A = \oint\limits_{\partial A} \vec v \diff \vec s$$

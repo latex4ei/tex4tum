@@ -2,16 +2,16 @@
 title: 6LoWPAN
 ---
 
-6LoWPAN (IPv6 over Low-power Wireless Personal Area Networks) is an adaptation Layer that enables the use of IPv6 over low-power IEEE 802.15.4 radio links.
+The 6LoWPAN (IPv6 over Low-power Wireless Personal Area Networks) is an adaptation Layer that enables the use of IPv6 over low-power IEEE 802.15.4 radio links.
 
 
 The 6LoWPAN network is connected to the IPv6 network using an edge router.
 
-Fragmetns:
+<!-- Fragmetns:
 1280 byte IPv6 MTU → 127 byte 802.15.4 frames
 
 Support for 64-bit/16-bit 802.15.4 addressing
-
+ -->
 
 ## Header Compression
 
@@ -35,18 +35,21 @@ Possible to achieve 7 byte header for IPv6 + UDP.
 
 
 #### HC1 compression byte:
-                             
-       0   1   2   3   4   5   6   7    
-     +---+---+---+---+---+---+---+---+ 
-     | IP SA | IP DA |TF |  NH   |HC2| 
-     +---+---+---+---+---+---+---+---+ 
+```                            
+  0   1   2   3   4   5   6   7    
++---+---+---+---+---+---+---+---+ 
+| IP-SA | IP-DA |TF |  NH   |HC2| 
++---+---+---+---+---+---+---+---+ 
+```
 
-
-* IPv6 source address (bits 0 and 1):
+Explanation:
+IP-SA
+:   IPv6 source address (bits 0 and 1):
 	- 00: Prefix in-line, Interface identifier
 	- 01: Prefix compressed (link-local prefix assumed).
 	- 10: Interface identifier carried in-line
 	- 11: Interface identifier elided
+
 * IPv6 destination address (bits 2 and 3):
 	- 00: Prefix carried in-line
 	- 01: Prefix compressed (link-local prefix assumed).
@@ -66,12 +69,13 @@ Possible to achieve 7 byte header for IPv6 + UDP.
 
 
 #### HC2 compression byte for UDP:
-
-       0   1   2   3   4   5   6   7  
-     +---+---+---+---+---+---+---+---+
-     |SP |DP |LC | - | - | - | - | - |
-     +---+---+---+---+---+---+---+---+
-
+``` 
+  0   1   2   3   4   5   6   7  
++---+---+---+---+---+---+---+---+
+|SP |DP |LC | - | - | - | - | - |
++---+---+---+---+---+---+---+---+
+``` 
+Explanation:
 * UDP source port (bit 0):
 	- 0: Not compressed, carried "in-line"
 	- 1: Compressed to 4 bits.
