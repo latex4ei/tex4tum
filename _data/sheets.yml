@@ -103,9 +103,15 @@
   - name: https://lootsch.cetus.uberspace.de/latex/FS-GEM.pdf
     description: "Grundlagen elektrischer Maschinen"
     github: "https://github.com/MaKeAppDev/FS-GEM"
-  - name: http://latex4ei.de/downloads/GIR.pdf
+  - name: Einfuehrung_Roboterregelung.pdf
     description: "Einführung in die Roboterregelung (unvollständig)" 
     github: Einfuehrung-in-die-Roboterregelung
+  - name: ERR.pdf
+    description: "Einführung in die Roboterregelung (WS18/19)" 
+    github: Einfuehrung-in-die-Roboterregelung
+  - name: SSV.pdf
+    description: "Systeme der Signalverarbeitung" 
+    github: Systeme-der-Signalverarbeitung
   - name: http://latex4ei.de/downloads/Kryptologie.pdf
     description: "Kryptologie Formelsammlung"
     github: "Kryptologie"
