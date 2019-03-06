@@ -5,7 +5,7 @@ run:
 	bundle exec jekyll serve
 
 draft:
-	bundle exec jekyll serve -D
+	bundle exec jekyll serve --unpublished
 
 test: all
 	bundle exec htmlproofer ./_site --only-4xx --check-favicon --check-html
