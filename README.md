@@ -67,6 +67,9 @@ make
 # Serve with hot reload at localhost:4000
 make run
 
+# Serve with hot reload at localhost:4000 including _draft articles
+make draft
+
 # Run all tests
 make test
 

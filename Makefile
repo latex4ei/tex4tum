@@ -4,6 +4,9 @@ all:
 run:
 	bundle exec jekyll serve
 
+draft:
+	bundle exec jekyll serve -D
+
 test: all
 	bundle exec htmlproofer ./_site --only-4xx --check-favicon --check-html
 	bundle exec rspec
