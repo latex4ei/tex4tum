@@ -1,0 +1,9 @@
+<div class="row">
+    {% for entry in include.data %}
+    {% if entry.active == include.active %}
+    <div class="col-sm-6">
+        {% include member-card.html data=entry %}
+    </div>
+    {% endif %}
+    {% endfor %}
+</div>

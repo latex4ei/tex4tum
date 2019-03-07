@@ -81,6 +81,7 @@ make
 make run
 
 # Serve with hot reload at localhost:4000 including _draft articles
+# No acronyms replacement to improve build time
 make draft
 
 # Run all tests

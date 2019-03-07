@@ -311,8 +311,10 @@ module Jekyll
 
   # ============================================================
   Jekyll::Hooks.register(:site, :post_render) do |site|
-    puts "Hook: replacing acronyms: Deactivated for speed (tex4tum_hooks.rb:3xx)"
-    #AcronymParser.new.generate(site)
+    if ENV['JEKYLL_ENV'] == 'production'
+        puts "Hook: replacing acronyms"
+        AcronymParser.new.generate(site)
+    end
   end
 
 
