@@ -36,6 +36,9 @@ A Bus is a communication system that transfers data between devices. Data is sen
 
 
 
+      __    __   __ ___     __   __     __   __        _ 
+SDA --  \__/__···__X___\___/__···__\___/__···__\______/ 
+
 
       0__   1__   2__   3__   4__  5__  6__  7__  8__  9_
  SCL _/  \__/  \__/  \__/  \__/  \_/  \_/  \_/  \_/  \_/
