@@ -50,6 +50,7 @@
 \DeclareMathOperator{\R}{\mathbb R}
 \DeclareMathOperator{\C}{\mathbb C}
 \DeclareMathOperator{\K}{\mathbb K}
+\DeclareMathOperator{\O}{\mathcal O}
 
 
 
