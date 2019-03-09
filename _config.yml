@@ -23,6 +23,8 @@ encoding: utf-8
 collections:
   article:
     output: true
+  drafts:
+    output: true
   info:
     output: true
 defaults:
@@ -32,6 +34,14 @@ defaults:
     values:
       layout: page
       permalink: /:name
+  - scope:
+      path: ""
+      type: drafts
+    values:
+      layout: page
+      permalink: /:name
+      tags: [draft, unpublished]
+      published: false
   - scope:
       path: ""
       type: info
@@ -59,13 +69,11 @@ plugins:
   - jekyll-assets
   - jekyll-pandoc
 exclude:
+  # here starts the excludes for gh-pages build
   - Gemfile
   - Gemfile.lock
+  - Makefile
   - vendor
   - docs
   - spec
   - README.md
-  # here starts the excludes for gh-pages build
-  # - _article
-  # - index.md
-  # - res

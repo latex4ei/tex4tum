@@ -1,8 +1,11 @@
 all:
-	bundle exec jekyll build
+	JEKYLL_ENV=production bundle exec jekyll build
 
 run:
-	bundle exec jekyll serve
+	JEKYLL_ENV=production bundle exec jekyll serve
+
+draft:
+	bundle exec jekyll serve --unpublished
 
 test: all
 	bundle exec htmlproofer ./_site --only-4xx --check-favicon --check-html

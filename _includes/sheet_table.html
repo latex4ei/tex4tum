@@ -1,0 +1,22 @@
+<table>
+    <thead>
+        <tr>
+            <th><span>Category</span></th>
+            <th><span>Sheet</span></th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for entry in include.data %}
+        <tr>
+            <td>
+                <span>{{ entry.category }}</span>
+            </td>
+            <td>
+                {% for fs in entry.sheets %}
+                {% include sheet.html filename=fs.name description=fs.description ghlink=fs.github %}
+                {% endfor %}
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>

@@ -1,0 +1,199 @@
+- category: Allgemein
+  sheets:
+  - name: http://latex4ei.de/downloads/Ingenieursgrundlagen.pdf
+    github: ''
+    description: "Important Engineering Equations"
+- category: "1. Semester"
+  sheets:
+  - name: Analysis-1.pdf
+    description: "Analysis 1"
+    github: Analysis-1
+  - name: http://latex4ei.de/downloads/Analysis_1_ma.pdf
+    description: "Analysis 1 für Mathematiker" 
+    github: ''
+  - name: FSDigitaltechnik.pdf
+    description: "Digitaltechnik Formelsammlung"
+    github: Digitaltechnik
+  - name: http://latex4ei.de/downloads/HM1_MaschBau.pdf
+    description: "Höhere Mathematik 1 Formelsammlung für Maschinenbauer"
+    github: ''
+  - name: Lineare-Algebra.pdf
+    description: "Lineare Algebra Formelsammlung"
+    github: Lineare-Algebra
+  - name: Schaltungstechnik.pdf
+    description: "Schaltungstechnik"
+    github: Schaltungstechnik-1-2
+- category: "2. Semester"
+  sheets:
+  - name: http://latex4ei.de/downloads/ADS.pdf
+    description: "ADS Zusammenfassung (WS 2012/13)"
+    github: ''
+  - name: Analysis-2.pdf
+    description: "Analysis 2 Formelsammlung"
+    github: Analysis-2
+  - name: EundM.pdf
+    description: "EuM Zusammenfassung"
+    github: Elektrizitaet-und-Magnetismus
+  - name: http://latex4ei.de/downloads/Mathe2FS_MaschBau.pdf
+    description: "Höhere Mathematik 2 Formelsammlung für Maschinenbauer"
+    github: ''
+  - name: http://latex4ei.de/downloads/PHY_2011.pdf
+    description: "Physik Zusammenfassung (unvollständig)"
+    github: ''
+- category: "3. Semester"
+  sheets:
+  - name: http://latex4ei.de/downloads/Analysis-3.pdf
+    description: "Analysis 3 Formelsammlung"
+    github: Analysis-3
+  - name: http://latex4ei.de/downloads/EMF.pdf
+    description: "EMF Zusammenfassung"
+    github: Elektromagnetische-Feldtheorie
+  - name: http://latex4ei.de/downloads/EMF-Formel-Zusammenfassung.pdf
+    description: "EMF Formeln (aus der Zentralübung)"
+    github: ''
+  - name: StochastischeSignale.pdf
+    description: "Stochastische Signale"
+    github: Stochastische-Signale
+  - name: http://latex4ei.de/downloads/StochastischeSignalePraktikum.pdf
+    description: "Stochastische Signale Matlab-Praktikum"
+    github: Stochastische-Signale-Praktikum
+  - name: http://latex4ei.de/downloads/Signaldarstellung.pdf
+    description: "Signaldarstellung"
+    github: Signaldarstellung
+  - name: http://latex4ei.de/downloads/ZF_Signaldarstellung.pdf
+    description: "Signaldarstellung Zusammenfassung"
+    github: Signaldarstellung
+  - name: Werkstoffe.pdf
+    description: "Werkstoffe Formelsammlung"
+    github: Werkstoffe
+  - name: http://latex4ei.de/downloads/Werkstoffe_Fragen.pdf
+    description: "Werkstoffe Verständnisfragen"
+    github: ''
+- category: "4. Semester"
+  sheets:
+  - name: http://latex4ei.de/downloads/Matlab.pdf
+    description: "MATLAB"
+    github: Matlab
+  - name: http://latex4ei.de/downloads/Nachrichtentechnik.pdf
+    description: "Nachrichtentechnik"
+    github: Nachrichtentechnik
+  - name: Regelungssysteme.pdf
+    description: "Regelungssysteme 1"
+    github: Regelungssysteme-1
+  - name: http://latex4ei.de/downloads/Energietechnik.pdf
+    description: "Energie-/Hochspannungstechnik"
+    github: Energietechnik
+- category: "Wahlfächer"
+  sheets:
+  - name: http://latex4ei.de/downloads/BWL.pdf
+    description: "Betriebswirtschaftslehre 1 (FIQ Fach)"
+    github: ''
+  - name: https://lootsch.cetus.uberspace.de/latex/FS-EKM.pdf
+    description: "Elektrische Kleinmaschinen"
+    github: "https://github.com/MaKeAppDev/FS-EKM"
+  - name: http://latex4ei.de/downloads/EMV.pdf
+    description: "Elektromagnetische Verträglichkeit"
+    github: "Elektromagnetische-Vertraeglichkeit"
+  - name: http://latex4ei.de/downloads/Kommunikationsnetze.pdf
+    description: "Kommunikationsnetze" 
+    github: Kommunikationsnetze
+  - name: http://latex4ei.de/downloads/geuet_fs.pdf
+    description: "Grundlagen der Energieübertragungstechnik"
+    github: "Grundlagen-der-Energie-betragungstechnik"
+  - name: https://lootsch.cetus.uberspace.de/latex/FS-GEM.pdf
+    description: "Grundlagen elektrischer Maschinen"
+    github: "https://github.com/MaKeAppDev/FS-GEM"
+  - name: Einfuehrung_Roboterregelung.pdf
+    description: "Einführung in die Roboterregelung (unvollständig)" 
+    github: Einfuehrung-in-die-Roboterregelung
+  - name: ERR.pdf
+    description: "Einführung in die Roboterregelung (WS18/19)" 
+    github: Einfuehrung-in-die-Roboterregelung
+  - name: SSV.pdf
+    description: "Systeme der Signalverarbeitung" 
+    github: Systeme-der-Signalverarbeitung
+  - name: http://latex4ei.de/downloads/Kryptologie.pdf
+    description: "Kryptologie Formelsammlung"
+    github: "Kryptologie"
+  - name: http://latex4ei.de/downloads/mmk1.pdf
+    description: "Mensch-Maschine-Kommunikation 1"
+    github: "Mensch-Maschine-Kommunikation-1"
+  - name: http://latex4ei.de/downloads/mmk2.pdf
+    description: "Mensch-Maschine-Kommunikation 2"
+    github: "Mensch-Maschine-Kommunikation-2"
+  - name: http://latex4ei.de/downloads/nanoFS.pdf
+    description: "Nanoelectronics (unvollständig)"
+    github: "nanoelectronics"
+  - name: http://latex4ei.de/downloads/Internetkommunikation.pdf
+    description: "Internetkommunikation"
+    github: "Internetkommunikation"
+  - name: http://latex4ei.de/downloads/Leistungselektronik.pdf
+    description: "Leistungselektronik"
+    github: "Leistungselektronik"
+  - name: Verbrennungsmotoren.pdf
+    description: "Verbrennungsmotoren"
+    github: "Verbrennungsmotoren"
+- category: "Master"
+  sheets:
+  - name: https://lootsch.cetus.uberspace.de/latex/FS-EM.pdf
+    description: "Elektrische Maschinen"
+    github: https://github.com/MaKeAppDev/FS-EM
+  - name: https://lootsch.cetus.uberspace.de/latex/FS-EEM.pdf
+    description: "Entwurf Elektrischer Maschinen"
+    github: https://github.com/MaKeAppDev/FS-EEM
+  - name: http://latex4ei.de/downloads/Logik.pdf
+    description: "Logik (außerfachlich)"
+    github: ''
+  - name: http://latex4ei.de/downloads/Akustik.pdf
+    description: "Musikalische Akustik"
+    github: Akustik
+  - name: http://latex4ei.de/downloads/NeuralEngineering.pdf
+    description: "Neural Engineering"
+    github: ''
+  - name: https://lootsch.cetus.uberspace.de/latex/Numerik.pdf
+    description: "Numerische Methoden der Elektrotechnik"
+    github: https://github.com/MaKeAppDev/FS-NMdE
+  - name: https://lootsch.cetus.uberspace.de/latex/Skript-NMdE.pdf
+    description: "Numerische Methoden der Elektrotechnik Skript"
+    github: https://github.com/MaKeAppDev/Skript-NMdE
+  - name: http://latex4ei.de/downloads/VHDL.pdf
+    description: "VHDL"
+    github: ''
+  - name: http://latex4ei.de/downloads/Batteriespeicher.pdf
+    description: "Batteriespeicher"
+    github: ''
+  - name: http://latex4ei.de/downloads/LowPower.pdf
+    description: "Low Power Design"
+    github: ''
+  - name: https://lootsch.cetus.uberspace.de/latex/FS-RTPL.pdf
+    description: "Real Time Programming Languages"
+    github: https://github.com/MaKeAppDev/FS-RTPL
+  - name: http://latex4ei.de/downloads/System-On-Chip.pdf
+    description: "System-on-Chip Technologies"
+    github: ''
+  - name: http://latex4ei.de/downloads/Mobile-Test.pdf
+    description: "System-on-Chip Mobile Version"
+    github: ''
+  - name: StaSigProc.pdf
+    description: "Statistical Signal Processing"
+    github: Statistical-Signal-Processing
+  - name: http://latex4ei.de/downloads/ModelEmbeddedSystems.pdf
+    description: "Modeling and Verification of Embedded Systems"
+    github: ''
+  - name: http://latex4ei.de/downloads/DynSysFS.pdf
+    description: "Dynamische Systeme"
+    github: Dynamische-Systeme
+- category: "LaTeX"
+  sheets:
+  - name: http://latex4ei.de/downloads/latex.tex
+    description: "LaTeX Einführung als .tex Vorlage"
+    github: ''
+  - name: http://latex4ei.de/downloads/LaTeX_CheatSheet.pdf
+    description: "LaTeX Cheat Sheet"
+    github: LaTeX-Cheat-Sheet
+  - name: http://latex4ei.de/downloads/latexsymbols.pdf
+    description: "LaTeX Symbol Liste"
+    github: ''
+  - name: https://github.com/latex4ei/latex4ei-packages/releases/latest
+    description: LaTeX4EI Template für eigene Dokumente
+    github: latex4ei-packages

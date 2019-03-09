@@ -1,14 +1,16 @@
-{% for sheet in site.static_files %}
-{% assign path = 'res/downloads/' | append: include.filename %}
-{% if include.filename contains sheet.name %}
 <p>
-{% if include.ghlink %}
-{% if include.ghlink contains 'http' %}
-{% assign ghfull = include.ghlink %}
-{% else %}	{% assign ghfull = 'https://github.com/latex4ei/' | append: include.ghlink %}{% endif %}
-<span class="mr-3">
-<a href="{{ ghfull }}" target="_blank"> <i class="fab fa-github"></i></a>{% endif %}
-</span>
-<a href="{{ sheet.path }}" >{{ include.description }}</a><span class="float-right ml-3">{{ sheet.modified_time | date: "%Y-%m-%d" }}</span> </p>
-{% endif %}
-{% endfor %}
+    {% if include.ghlink contains 'http' %}
+    {% assign ghfull = include.ghlink %}
+    {% else %}
+    {% assign ghfull = 'https://github.com/latex4ei/' | append: include.ghlink %}
+    {% endif %}
+    {% if include.filename contains 'http' %}
+    {% assign filelink = include.filename %}
+    {% else %}
+    {% assign filelink = ghfull | append: '/raw/gh-pages/' | append: include.filename %}
+    {% endif %}
+    <span class="mr-3">
+        <a href="{{ ghfull }}" target="_blank"> <i class="fab fa-github"></i></a>
+        <a href="{{ filelink }}" target="_blank">{{ include.description }}</a>
+    </span>
+</p>

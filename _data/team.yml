@@ -1,0 +1,72 @@
+- name: Emanuel Regnath
+  mail: emanuel.regnath@tum.de
+  description: "Owner, Founder of LaTeX4EI, Support of all documents, Mainterner LaTeX templates, Author"
+  image: member/emareg.jpg
+  active: true
+  tags:
+    - LaTeX4EI
+    - TeX4TUM
+- name: Markus Hofbauer
+  mail: info@latex4ei.de
+  description: "Owner, Development Toolchain, Support of all documents, Mainterner LaTeX templates, Author"
+  image: Logo.png
+  active: true
+  tags:
+    - LaTeX4EI
+    - TeX4TUM
+- name: Martin Zellner
+  mail: Martin.Zellner@mytum.de
+  description: "Founder of LaTeX4EI, Webmaster, Author"
+  image: member/martin.jpg
+  active: false
+  tags:
+    - LaTeX4EI
+- name: Alexander Preißner
+  mail: a.preissner@tum.de
+  description: "Author"
+  image: member/alex.jpg
+  active: false
+  tags:
+    - LaTeX4EI
+- name: Katharina Krusche
+  mail: info@latex4ei.de
+  description: "Author Summaries"
+  image: member/kathi.jpg
+  active: false
+  tags:
+    - LaTeX4EI
+- name: Kevin Meyer
+  mail: info@latex4ei.de
+  description: "Author"
+  image: Logo.png
+  active: false
+  tags:
+    - LaTeX4EI
+- name: Hendrik Böttcher
+  mail: info@latex4ei.de
+  description: "Author"
+  image: Logo.png
+  active: false
+  tags:
+    - LaTeX4EI
+- name: Benedict Simlinger
+  mail: info@latex4ei.de
+  description: "Author"
+  image: Logo.png
+  active: false
+  tags:
+    - LaTeX4EI
+- name: Fabian Göttel
+  mail: info@latex4ei.de
+  description: "Author"
+  image: Logo.png
+  active: false
+  tags:
+    - LaTeX4EI
+- name: Lukas Kompatscher
+  mail: info@latex4ei.de
+  description: "Author"
+  image: Logo.png
+  active: false
+  tags:
+    - LaTeX4EI

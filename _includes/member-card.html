@@ -1,0 +1,22 @@
+{% assign data=include.data %}
+<div class="card mt-2">
+    <div class="row no-gutters">
+        <div class="col-md-4">
+            <img class="card-img mt-3" src="{{ data.image | prepend: 'res/img/' | relative_url }}" alt="Card image cap">
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+                {% for tag in data.tags %}
+                <span class="badge badge-primary text-white">
+                    <i class="fas fa-tag"></i> {{ tag }}
+                </span>
+                {% endfor %}
+                <h5 class="card-title"><a href="mailto:{{ data.mail }}"><i class="fa fa-envelope"></i>
+                        {{ data.name }}</a>
+                </h5>
+                <p class="card-text text-muted mt-3">{{ data.description }}</p>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

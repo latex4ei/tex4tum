@@ -6,6 +6,7 @@
 ## Interactive Knowledge Platform
 
 TeX4TUM is an online library of small articles of the topics:
+
 * Math
 * Physics
 * Electrical Engineering
@@ -16,6 +17,7 @@ Check out the demo: <http://www.tex4tum.de/index.html>
 The articles are based on the cheat sheets from [www.latex4ei.de](http://www.latex4ei.de)
 
 ## Features
+
 * Interactive Content: Display only the categories you need
 * Interactive Graphs: Play with graphs for better understanding
 * Interactive Math: Directly calculate an equation while reading
@@ -23,6 +25,7 @@ The articles are based on the cheat sheets from [www.latex4ei.de](http://www.lat
 * Abbreviations: Hover your mouse over an abbreviation to see the full name
 
 ## Future Plans
+
 * Auto generated TOC for folders
 * Generate internal links to terms used in the text
 * Solve math equations (Math JS)
@@ -33,39 +36,53 @@ The articles are based on the cheat sheets from [www.latex4ei.de](http://www.lat
 * More content
 
 ## Internal Working
+
 * Markdown files are converted to HTML5 with jekyll and pandoc
 * Graphs are plotted with SVG + JS
 * Math is rendered with KaTeX
 * Bootstrap for full responsive design
 
 ## Contribution
+
 ### Setup
+
 Setup and install dependencies
+
 ```bash
 make install
 ```
 
 #### Error nokogiri
+
 If the installation of nokogiri fails, run:
-```
+
+```bash
 gem uninstall nokogiri
 sudo apt install libxslt-dev libxml2-dev zlib1g-dev -y
 ```
+
 and try again
 
 #### Error UTF-8
+
 make sure you have set your environment to utf-8:
-```
+
+```bash
 export LC_ALL=en_US.U-8
 ```
 
 ### Build and Test
+
 ```bash
 # Build
 make
 
 # Serve with hot reload at localhost:4000
 make run
+
+# Serve with hot reload at localhost:4000 including _draft articles
+# No acronyms replacement to improve build time
+make draft
 
 # Run all tests
 make test
@@ -75,6 +92,7 @@ make deploy
 ```
 
 ### Customizing Bootstrap
+
 Copy variables from `_variables.scss` to the `_custom.scss` file to override default values without modifying source files.
 
 For `_variables.scss` see https://github.com/twbs/bootstrap/blob/v4-dev/scss/_variables.scss
