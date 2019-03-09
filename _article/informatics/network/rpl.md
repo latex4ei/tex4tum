@@ -33,8 +33,15 @@ An isolated node that wants to join an existing DODAG broadcasts DIS messages. W
 
 
 ### DODAG Repair
-* Global Repair
-* Local Repair
+
+### local repair 
+When a link or neighboring node failure is detected and the node
+has no other router in the ‘up’ direction, 
+
+
+### Global repair
+Can be triggered only from the root and has a cost of additional control traffic in the network.
+
 
 
 

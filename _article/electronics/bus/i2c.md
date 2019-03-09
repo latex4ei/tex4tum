@@ -1,5 +1,5 @@
 ---
-title: Inter-Integrated Circuit I²C
+title: Inter-Integrated Circuit (I2C)
 tags: [bus, I2C, SDA, SCK]
 ---
 

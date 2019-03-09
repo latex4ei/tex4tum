@@ -75,7 +75,8 @@ IP-SA
 |SP |DP |LC | - | - | - | - | - |
 +---+---+---+---+---+---+---+---+
 ``` 
-Explanation:
+
+##### Explanation of HC2 Byte
 * UDP source port (bit 0):
 	- 0: Not compressed, carried "in-line"
 	- 1: Compressed to 4 bits.
@@ -110,13 +111,8 @@ IPHC bytes:
     | 0 | 1 | 1 |  TF   |NH | HLIM  |CID|SAC|  SAM  | M |DAC|  DAM  |
     +---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
 
-NHC dispatch byte:
 
-
-
-
-
-
+### Explanation of NHC dispatch byte:
 * Traffic Class and Flow Label (TF), 2 bit
 	- 00: Carried Inline (ECN+DSCP+Flow) 
 	- 01: ECN+Flow
@@ -154,50 +150,6 @@ NHC dispatch byte:
 * Mesh-under: on layer 2 with MAC addresses
 
 
-
-
-## RPL
-Routing Protocol for Low-Power and Lossy Networks (RPL) (pronounced "ripple"), is a protocol based on DODAG with expensive bits and dynamically formed topology.
-
-
-
-
-
-### Neighbor Discovery
-ND for 6LoWPAN has been specified in draft-ietf-6lowpan-nd (work in progress)
-
-
-### DODAG
-An RPL Instance consists of multiple Destination Oriented
-Directed Acyclic Graphs (DODAGs). Traffic moves either up
-towards the DODAG root or down towards the DODAG leafs.
-
-Rank: the node’s individual position relative to other nodes with respect to a DODAG root.
-
-RPL Control Messages: DIO, DIS, DAO
-
-DODAG construction: 
-* Nodes periodically send link-local multicast DIO messages
-* Based on information in the DIOs the node chooses parents that minimize path cost to the DODAG root
-
-
-
-Error Detection:
-* No route further down
-* Rank and direction do not match
-
-
-
-## Local and Global Repair
-
-
-### local repair 
-When a link or neighboring node failure is detected and the node
-has no other router in the ‘up’ direction, 
-
-
-### Global repair
-Can be triggered only from the root and has a cost of additional control traffic in the network.
 
 
 

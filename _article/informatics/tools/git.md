@@ -6,17 +6,25 @@ Git is an open-source version control system.
 It is used to manage a set of files, as they change over time. 
 
 
-## Concepts
+## Terms
 
-https://www.sbf5.com/~cduan/technical/git/
-
+* **Working Directory:** simply the files in the root folder
+* **Commit:** A certain version of the files
+* **Tag**: a named pointer to a certain commit.
+* **Branch:** A chain of commits 
+* **Master:** Default Branch
+* **Head:** a named pointer to the current branch
 
 Repository: 
 It is stored in the same directory as the project itself, in a subdirectory called `.git`.
 
 
 
-Working Directory: simply the files
+## Usage
+1. clone a git repository: `git clone git://...` or create one `git init`
+1. Commit 
+
+
 
 ### Commit Object
 A Commit Object is a set files. 
@@ -41,9 +49,10 @@ Tags are pointers to a certain commit. They use a name which is more memorizeabl
 
 ## Commands
 
-| Command | Description |
-|---|---|
+| Command    | Description |
+|------------|---------------------------------------------------|
 | `git init` | creates a new repository in the current directory |
+
 
 
 

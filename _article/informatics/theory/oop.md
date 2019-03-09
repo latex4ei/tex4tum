@@ -12,10 +12,10 @@ Classes/Objects consist of attributes and methods.
 ## Concepts
 There are four main concepts in OOP:
 
-* Encapsulation: Grouping of related attributes and methods
-* Inheritance: Derive classes (hierarchy)
-* Polymorphism: overwrite derived methods; dynamic dispatching
-* Abstraction: Force overwriting
+* **Encapsulation:** Grouping of related attributes and methods
+* **Inheritance:** Derive classes (hierarchy)
+* **Polymorphism:** overwrite derived methods; dynamic dispatching
+* **Abstraction:** Force overwriting
 
 ### Encapsulation
 Related data and subprograms are grouped together

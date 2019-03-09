@@ -50,6 +50,9 @@ Bash only supports Integers! Float expressions need to be parsed by an external 
 
 
 
+TODO color escape codes
+
+
 ## Control Flow
 
 **Comparators (Test)**

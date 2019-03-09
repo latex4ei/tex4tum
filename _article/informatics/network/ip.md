@@ -1,5 +1,6 @@
 ---
 title: Internet Protocol
+tags: address, IPv4, IPv6
 ---
 The Internet Protocol (IP) is the basic communication protocol in the Internet layer.
 IP has the task of delivering packets from the source host to the destination host solely based on the IP addresses in the packet headers.

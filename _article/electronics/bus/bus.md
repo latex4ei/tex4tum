@@ -14,6 +14,7 @@ A bus is a communication system that transfers data between components inside a 
 | SPI           | 4     | 1.0 Mbit/s           |  |
 | Flexray       | 2/4   | 10 Mbit/s per ch.   |  |
 | Ethernet      | 8     | 10,100,1000 Mbit/s  |  |
+| MOST          | 2 opt. | 25 .. 150 MBit/s    |  |
 | USB 1.0       | 4     |  12 Mbit/s          |  |
 | USB 2.0       | 4     | 480 Mbit/s          |  |
 | USB 3.0       | 9     | 5.0 Gbit/s          |  |
@@ -47,7 +48,12 @@ Explanation:
 * 4K UHD: $3\,840 \times 2\,160$
 
 
-TODO MOS,
 
 
 {{ FOLDER_TOC }}
+
+
+
+## References
+* [“media oriented systems transport” protocol](http://yadda.icm.edu.pl/yadda/element/bwmeta1.element.agro-92501c5c-51b7-4c45-b15b-15d6fb69ff2d/c/24.pdf)
+

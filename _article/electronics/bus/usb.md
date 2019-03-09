@@ -1,5 +1,5 @@
 ---
-title: Universal Serial Bus
+title: Universal Serial Bus (USB)
 tags: USB, Typ-C
 ---
 

@@ -5,10 +5,10 @@ A digital signature is a mathematical scheme for demonstrating the authenticity 
 
 
 
-## Working Principle
+## Working Principles and Implementations
 
 * Prime Factorization: RSA
-* Elliptic Curve (ECDSA): Secp256k1
+* Elliptic Curves: Secp256k1
 * Hash based Signatures: SPHINCS
 * Multivariate:  
 * Code-based:  (one-time, large keys)
