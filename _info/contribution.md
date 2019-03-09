@@ -11,6 +11,14 @@ If you want to contribute or edit an article do the following:
 2. edit the corresponding `.md` file in the folder '`_article`' or create a new one.
 3. once finished, push the changes to GitHub and create a pull request.
 
+## What content is suitable for Tex4TUM?
+Before you start writing, think twice. 
+
+1. A TeX4TUM article should mostly consist of diagrams, tables, and equations. Text paragraphs should only be used as a last method to explain details and these details should be hidden by default. 
+1. The content should be timeless. Anything that out-dates or updates more frequent than 5 years is *not* suitable.
+1. The article should be an overview of knowledge that many engineers frequently need but often forget. The article should not focus on teaching or explaining something to the reader. These contribution guidelines are a good counter example of what should not be a normal TeX4TUM article.
+1. The content should stick to or inherit a pattern. For example, protocols always illustrate the header format and then explain the fields. 
+
 
 ## Our Format Syntax
 The good news first: If you write text, it will be displayed as text. If you want to apply some text formatting you can use [Markdown](/markdown.html).
