@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- title, description, favicon -->
-    <title>Universal Serial Bus</title>
+    <title>Universal Serial Bus (USB)</title>
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="http://localhost:4000/usb">
+    <link rel="canonical" href="/usb">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 
     <!-- KaTeX CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 </head>
 
 
@@ -35,84 +35,106 @@
 
     <!-- sticky left: Logo -->
     <div class="navbar-brand">
-      <a href="/index.html">
-        <img src="/res/img/Logo-inv.png" height="30" alt="Logo">
-      </a>
+        <a href="/index.html">
+            <img src="/res/img/Logo-inv.png" height="30" alt="Logo">
+        </a>
     </div>
 
 
     <!-- sticky right: search bar  -->
     
-    <form class="form-inline ml-auto order-lg-3"  role="search">
-      <div id="search" class="search-container">
-        <input class="form-control search-input w-100" type="search" placeholder="&#xf002; Search (fuzzy)" tabindex="1">
-      <div class="ac-results-wrapper"></div>
-      </div>
+    <form class="form-inline ml-auto order-lg-3" role="search">
+        <div id="search" class="search-container">
+            <input class="form-control search-input w-100" type="search" placeholder="&#xf002; Search (fuzzy)"
+                tabindex="1">
+            <div class="ac-results-wrapper"></div>
+        </div>
     </form>
-   
+    
 
 
     <!-- Toggle button for collapsed items  -->
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
     </button>
 
 
     <!-- Collapsable Items: Links -->
     <div class="collapse navbar-collapse justify-content-start order-6 order-lg-2" id="navbarResponsive">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="/calculator.html"><i class="fa fa-calculator"></i> Calc</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/sheets.html"><i class="fa fa-file"></i> Sheets</a>
-        </li>
-        <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <i class="fa fa-info-circle"></i> Info
-        </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="/about.html"><i class="fa fa-question"></i> About TeX4TUM</a>
-            <a class="dropdown-item" href="/demo.html"><i class="fa fa-play-circle"></i> Feature Demo</a>
-            <div class="dropdown-divider"></div>
-            <h6 class="dropdown-header"><i class="fa fa-handshake"></i> Contribute</h6>
-            <a class="dropdown-item" href="/contribution.html"><i class="fa fa-edit"></i> Write Article</a>
-            <a class="dropdown-item" href="/todo.html"><i class="fa fa-tasks"></i> ToDo List</a>
-            <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum"><i class="fab fa-github"></i> Develop Features</a>
-            <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum/issues"><i class="fa fa-bug"></i> Report a bug</a>
-          </div>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link btn-group dropdown-toggle" href="/index.html" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-cog"></i> Options</a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <h6 class="dropdown-header">Display Options</h6>
-            <div class="form-check dropdown-item">
-              <label class="form-check-label">
-                <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox" checked="checked" onchange="Options.changeOption(this)">
-                  Definitions
-              </label>
-            </div>
-            <div class="form-check dropdown-item">
-              <label class="form-check-label">
-                <input class="form-check-input" id="checkbox_example" name="disp_opt" type="checkbox" checked="checked" onchange="Options.changeOption(this)">
-                  Examples
-              </label>
-            </div>
-            <div class="form-check dropdown-item">
-              <label class="form-check-label">
-                <input class="form-check-input" id="checkbox_explanation" name="disp_opt" type="checkbox" checked="checked" onchange="Options.changeOption(this)">
-                  Explanations
-              </label>
-            </div>
-            <div class="form-check dropdown-item">
-              <label class="form-check-label">
-                <input class="form-check-input" id="checkbox_legend" name="disp_opt" type="checkbox" checked="checked" onchange="Options.changeOption(this)">
-                  Legends
-              </label>
-            </div>
-          </div>
-        </li>
-      </ul>
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="/calculator.html"><i class="fa fa-calculator"></i>
+                    Calc</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/sheets.html"><i class="fa fa-file"></i> Sheets</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    <i class="fa fa-info-circle"></i> Info
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="/about.html"><i class="fa fa-question"></i>
+                        About TeX4TUM</a>
+                    <a class="dropdown-item" href="/team.html"><i class="fa fa-users"></i>
+                        Team</a>
+                    <a class="dropdown-item" href="/demo.html"><i class="fa fa-play-circle"></i>
+                        Feature Demo</a>
+                    <div class="dropdown-divider"></div>
+                    <h6 class="dropdown-header"><i class="fa fa-handshake"></i> Contribute</h6>
+                    <a class="dropdown-item" href="/support.html"><i class="fa fa-life-ring"></i>
+                        Support</a>
+                    <a class="dropdown-item" href="/contribution.html"><i class="fa fa-edit"></i>
+                        Write Article</a>
+                    <a class="dropdown-item" href="/todo.html"><i class="fa fa-tasks"></i> ToDo
+                        List</a>
+                    <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum"><i class="fab fa-github"></i>
+                        Develop Features</a>
+                    <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum/issues"><i class="fa fa-bug"></i>
+                        Report a bug</a>
+                    <a class="dropdown-item" href="/contact.html"><i class="fas fa-user-edit"></i>
+                        Contact</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link btn-group dropdown-toggle" href="/index.html"
+                    id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false"><i class="fa fa-cog"></i> Options</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <h6 class="dropdown-header">Display Options</h6>
+                    <div class="form-check dropdown-item">
+                        <label class="form-check-label">
+                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox"
+                                checked="checked" onchange="Options.changeOption(this)">
+                            Definitions
+                        </label>
+                    </div>
+                    <div class="form-check dropdown-item">
+                        <label class="form-check-label">
+                            <input class="form-check-input" id="checkbox_example" name="disp_opt" type="checkbox"
+                                onchange="Options.changeOption(this)">
+                            Examples
+                        </label>
+                    </div>
+                    <div class="form-check dropdown-item">
+                        <label class="form-check-label">
+                            <input class="form-check-input" id="checkbox_explanation" name="disp_opt" type="checkbox"
+                                onchange="Options.changeOption(this)">
+                            Explanations
+                        </label>
+                    </div>
+                    <div class="form-check dropdown-item">
+                        <label class="form-check-label">
+                            <input class="form-check-input" id="checkbox_legend" name="disp_opt" type="checkbox"
+                                onchange="Options.changeOption(this)">
+                            Legends
+                        </label>
+                    </div>
+                </div>
+            </li>
+        </ul>
     </div>
 
 
@@ -144,13 +166,13 @@
 
 <h1><a data-toggle="collapse" href="#title_def" aria-expanded="false" aria-controls="title_def">
   
-  Universal Serial Bus
+  Universal Serial Bus (<abbr title="Universal Serial Bus" >USB</abbr>)
 </a><a class="float-right small" style="font-size: small" href="https://github.com/latex4ei/tex4tum/edit/master/_article/electronics/bus/usb.md">[edit]</a></h1>
 
 <p>
 
 <span class="badge badge-primary text-white">
-  <i class="fas fa-tag"></i> USB,
+  <i class="fas fa-tag"></i> <abbr title="Universal Serial Bus" >USB</abbr>,
 </span>
 
 <span class="badge badge-primary text-white">
@@ -165,15 +187,12 @@
 <!-- SI Units -->
 <!--=============================================================== -->
 <!-- KaTeX Tweaks -->
+<!-- \renewcommand{\boldsymbol}[1]{\mathbf{#1}} -->
 <div id="title_def" class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
-<h5 class="card-title text-primary">
-Definition
-</h5>
-<p class="card-text">
-The <abbr title="Universal Serial Bus" >USB</abbr> is serial bus commonly used in computers.
-</p>
+<h5 class='card-title text-primary'>Definition</h5>
+<p class='card-text'>The <abbr title="Universal Serial Bus" >USB</abbr> is serial bus commonly used in computers.</p>
 </div>
 </div>
 </div>
@@ -217,10 +236,7 @@ The <abbr title="Universal Serial Bus" >USB</abbr> is serial bus commonly used i
 <p>Maximum devices: 127. Cable length: <span class="LaTeX">$\lt {5\,\mathrm{m}}$</span></p>
 <!--<p> Filename="usb-connectors.svg", path="/res/img/content-images/connectors/usb-connectors.svg" </p>-->
 <figure class="figure">
-<img class="figure-img img-fluid" src="/res/img/content-images/connectors/usb-connectors.svg" alt="USB Connectors"/>
-<figcaption class="figure-caption">
-USB Connectors
-</figcaption>
+<img class="figure-img img-fluid" style="width: 20em;" src="/res/img/content-images/connectors/usb-connectors.svg" alt="USB Connectors"/><figcaption class="figure-caption">USB Connectors</figcaption>
 </figure>
 <h2 id="usb-2.0"><abbr title="Universal Serial Bus" >USB</abbr> 2.0</h2>
 <table>
@@ -288,291 +304,131 @@ USB Connectors
 <p>The practical speed is 280 Mbit/s due to bus access constraints.</p>
 <h3 id="pinout">Pinout</h3>
 <table style="text-align: center;">
-<caption>
-Standardstecker A / B
+<caption>Standardstecker A / B
 </caption>
-<tbody>
-<tr>
-<th>
-Pin
-</th>
-<th>
-Color
-</th>
-<th>
-Signal
-</th>
-<th>
-Description
-</th>
+<tbody><tr>
+ <th>Pin</th>
+ <th>Color</th>
+ <th>Signal</th>
+ <th>Description</th>
 </tr>
 <tr>
-<td style="text-align: center;">
-Shell
-</td>
-<td style="background: lightgray; color: black;">
-n.a.
-</td>
-<td>
-Shield
-</td>
-<td>
-Schirmgeflecht
-</td>
+ <td style="text-align: center;">Shell</td>
+ <td style="background: lightgray; color: black;">n.a.</td>
+ <td>Shield</td>
+ <td>Schirmgeflecht</td>
 </tr>
 <tr>
-<td style="text-align: center;">
-1
-</td>
-<td style="background: red; color: white;">
-Red
-</td>
-<td>
-VBUS
-</td>
-<td>
-+5 V
-</td>
+ <td style="text-align: center;">1</td>
+ <td style="background: red; color: white;">Red</td>
+ <td>VBUS</td>
+ <td>+5&nbsp;V</td>
 </tr>
 <tr>
-<td style="text-align: center;">
-2
-</td>
-<td style="background: white; color: black;">
-White
-</td>
-<td>
-D−
-</td>
-<td rowspan="2" style="text-align: left;">
-Data <abbr title="Universal Serial Bus" >USB</abbr> 2.0, differential Pair −/+
-</td>
+ <td style="text-align: center;">2</td>
+ <td style="background: white; color: black;">White</td>
+ <td>D−</td>
+ <td rowspan="2" style="text-align: left;">Data <abbr title="Universal Serial Bus" >USB</abbr>&nbsp;2.0, differential Pair −/+</td>
 </tr>
 <tr>
-<td style="text-align: center;">
-3
-</td>
-<td style="background: green; color: white;">
-Green
-</td>
-<td>
-D+
-</td>
+<td style="text-align: center;">3</td>
+<td style="background: green; color: white;">Green</td>
+<td>D+</td>
 </tr>
 <tr>
-<td style="text-align: center;">
-4
-</td>
-<td style="background: black; color: white;">
-Black
-</td>
-<td>
-GND
-</td>
-<td>
-Ground
-</td>
-</tr>
-</tbody>
+<td style="text-align: center;">4</td>
+<td style="background: black; color: white;">Black</td>
+<td>GND</td>
+<td>Ground</td>
+</tr></tbody>
 </table>
 <h2 id="usb-3.0"><abbr title="Universal Serial Bus" >USB</abbr> 3.0</h2>
 <!-- Wikipedia Table -->
 <table>
-<tbody style="text-align: center;">
-<tr>
-<th rowspan="2">
-Pin
-</th>
-<th rowspan="2">
-Color
-</th>
-<th colspan="2">
-Signal name
-</th>
-<th rowspan="2">
-Description
-</th>
+<tbody style="text-align: center;"><tr>
+<th rowspan="2">Pin</th>
+<th rowspan="2">Color</th>
+<th colspan="2">Signal name</th>
+<th rowspan="2">Description</th>
 </tr>
 <tr>
-<th>
-A connector
-</th>
-<th>
-B connector
-</th>
+<th>A connector</th>
+<th>B connector</th>
 </tr>
 <tr>
-<td>
-Shell
-</td>
-<td data-sort-value style="background: #ececec; color: #2C2C2C; vertical-align: middle; font-size: smaller; text-align: center;" class="table-na">
-N/A
-</td>
-<td colspan="2">
-Shield
-</td>
-<td style="text-align: left;">
-Metal housing
-</td>
+<td>Shell</td>
+<td data-sort-value="" style="background: #ececec; color: #2C2C2C; vertical-align: middle; font-size: smaller; text-align: center;" class="table-na">N/A</td>
+<td colspan="2">Shield</td>
+<td style="text-align: left;">Metal housing</td>
 </tr>
 <tr>
-<td>
-1
-</td>
-<td style="background: red; color: white;">
-Red
-</td>
-<td colspan="2">
-VBUS
-</td>
-<td style="text-align: left;">
-Power
-</td>
+<td>1</td>
+<td style="background: red; color: white;">Red</td>
+<td colspan="2">VBUS</td>
+<td style="text-align: left;">Power</td>
 </tr>
 <tr>
-<td>
-2
-</td>
-<td style="background: grey;">
-White
-</td>
-<td colspan="2">
-D−
-</td>
-<td rowspan="2" style="text-align: left;">
-USB 2.0 differential pair
-</td>
+<td>2</td>
+<td style="background: grey;">White</td>
+<td colspan="2">D−</td>
+<td rowspan="2" style="text-align: left;"><abbr title="Universal Serial Bus" >USB</abbr>&nbsp;2.0 differential pair</td>
 </tr>
 <tr>
-<td>
-3
-</td>
-<td style="background: green; color: white;">
-Green
-</td>
-<td colspan="2">
-D+
-</td>
+<td>3</td>
+<td style="background: green; color: white;">Green</td>
+<td colspan="2">D+</td>
 </tr>
 <tr>
-<td>
-4
-</td>
-<td style="background: black; color: white;">
-Black
-</td>
-<td colspan="2">
-GND
-</td>
-<td style="text-align: left;">
-Ground for power return
-</td>
+<td>4</td>
+<td style="background: black; color: white;">Black</td>
+<td colspan="2">GND</td>
+<td style="text-align: left;">Ground for power return</td>
 </tr>
 <tr>
-<td>
-5
-</td>
-<td style="background: blue; color: white;">
-Blue
-</td>
-<td>
-StdA_SSRX−
-</td>
-<td>
-StdB_SSTX−
-</td>
-<td rowspan="2" style="text-align: left;">
-SuperSpeed transmitter differential pair
-</td>
+<td>5</td>
+<td style="background: blue; color: white;">Blue</td>
+<td>StdA_SSRX−</td>
+<td>StdB_SSTX−</td>
+<td rowspan="2" style="text-align: left;">SuperSpeed transmitter differential pair</td>
 </tr>
 <tr>
-<td>
-6
-</td>
-<td style="background: yellow;">
-Yellow
-</td>
-<td>
-StdA_SSRX+
-</td>
-<td>
-StdB_SSTX+
-</td>
+<td>6</td>
+<td style="background: yellow;">Yellow</td>
+<td>StdA_SSRX+</td>
+<td>StdB_SSTX+</td>
 </tr>
 <tr>
-<td>
-7
-</td>
-<td data-sort-value style="background: #ececec; color: #2C2C2C; vertical-align: middle; font-size: smaller; text-align: center;" class="table-na">
-N/A
-</td>
-<td colspan="2">
-GND_DRAIN
-</td>
-<td style="text-align: left;">
-Ground for signal return
-</td>
+<td>7</td>
+<td data-sort-value="" style="background: #ececec; color: #2C2C2C; vertical-align: middle; font-size: smaller; text-align: center;" class="table-na">N/A</td>
+<td colspan="2">GND_DRAIN</td>
+<td style="text-align: left;">Ground for signal return</td>
 </tr>
 <tr>
-<td>
-8
-</td>
-<td style="background: purple; color: white;">
-Purple
-</td>
-<td>
-StdA_SSTX−
-</td>
-<td>
-StdB_SSRX−
-</td>
-<td rowspan="2" style="text-align: left;">
-SuperSpeed receiver differential pair
-</td>
+<td>8</td>
+<td style="background: purple; color: white;">Purple</td>
+<td>StdA_SSTX−</td>
+<td>StdB_SSRX−</td>
+<td rowspan="2" style="text-align: left;">SuperSpeed receiver differential pair</td>
 </tr>
 <tr>
-<td>
-9
-</td>
-<td style="background: orange;">
-Orange
-</td>
-<td>
-StdA_SSTX+
-</td>
-<td>
-StdB_SSRX+
-</td>
+<td>9</td>
+<td style="background: orange;">Orange</td>
+<td>StdA_SSTX+</td>
+<td>StdB_SSRX+</td>
 </tr>
 <tr>
-<th style="background:none;" colspan="5">
-The <abbr title="Universal Serial Bus" >USB</abbr> 3.0 <i>Powered-B</i> connector has two additional pins for power and ground supplied to the device.
-</th>
+<th style="background:none;" colspan="5">The USB&nbsp;3.0 <i>Powered-B</i> connector has two additional pins for power and ground supplied to the device.</th>
 </tr>
 <tr>
-<td>
-10
-</td>
-<td colspan="2" rowspan="2" data-sort-value style="background: #ececec; color: #2C2C2C; vertical-align: middle; font-size: smaller; text-align: center;" class="table-na">
-N/A
-</td>
-<td>
-DPWR
-</td>
-<td style="text-align: left;">
-Power provided to device (Powered-B only)
-</td>
+<td>10</td>
+<td colspan="2" rowspan="2" data-sort-value="" style="background: #ececec; color: #2C2C2C; vertical-align: middle; font-size: smaller; text-align: center;" class="table-na">N/A</td>
+<td>DPWR</td>
+<td style="text-align: left;">Power provided to device (Powered-B&nbsp;only)</td>
 </tr>
 <tr>
-<td>
-11
-</td>
-<td>
-DGND
-</td>
-<td style="text-align: left;">
-Ground for DPWR return (Powered-B only)
-</td>
+<td>11</td>
+<td>DGND</td>
+<td style="text-align: left;">Ground for DPWR return (Powered-B&nbsp;only)</td>
 </tr>
 </tbody>
 </table>
@@ -642,7 +498,7 @@ Ground for DPWR return (Powered-B only)
   <script src="/assets/js/options.js"></script>
 
   <!-- KaTeX JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js"></script>
 
   <!-- jQuery (req. for BootStrap) -->
   <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>

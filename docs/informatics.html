@@ -10,7 +10,7 @@
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="http://localhost:4000/informatics">
+    <link rel="canonical" href="/informatics">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 
     <!-- KaTeX CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 </head>
 
 
@@ -35,84 +35,106 @@
 
     <!-- sticky left: Logo -->
     <div class="navbar-brand">
-      <a href="/index.html">
-        <img src="/res/img/Logo-inv.png" height="30" alt="Logo">
-      </a>
+        <a href="/index.html">
+            <img src="/res/img/Logo-inv.png" height="30" alt="Logo">
+        </a>
     </div>
 
 
     <!-- sticky right: search bar  -->
     
-    <form class="form-inline ml-auto order-lg-3"  role="search">
-      <div id="search" class="search-container">
-        <input class="form-control search-input w-100" type="search" placeholder="&#xf002; Search (fuzzy)" tabindex="1">
-      <div class="ac-results-wrapper"></div>
-      </div>
+    <form class="form-inline ml-auto order-lg-3" role="search">
+        <div id="search" class="search-container">
+            <input class="form-control search-input w-100" type="search" placeholder="&#xf002; Search (fuzzy)"
+                tabindex="1">
+            <div class="ac-results-wrapper"></div>
+        </div>
     </form>
-   
+    
 
 
     <!-- Toggle button for collapsed items  -->
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
     </button>
 
 
     <!-- Collapsable Items: Links -->
     <div class="collapse navbar-collapse justify-content-start order-6 order-lg-2" id="navbarResponsive">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="/calculator.html"><i class="fa fa-calculator"></i> Calc</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/sheets.html"><i class="fa fa-file"></i> Sheets</a>
-        </li>
-        <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <i class="fa fa-info-circle"></i> Info
-        </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="/about.html"><i class="fa fa-question"></i> About TeX4TUM</a>
-            <a class="dropdown-item" href="/demo.html"><i class="fa fa-play-circle"></i> Feature Demo</a>
-            <div class="dropdown-divider"></div>
-            <h6 class="dropdown-header"><i class="fa fa-handshake"></i> Contribute</h6>
-            <a class="dropdown-item" href="/contribution.html"><i class="fa fa-edit"></i> Write Article</a>
-            <a class="dropdown-item" href="/todo.html"><i class="fa fa-tasks"></i> ToDo List</a>
-            <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum"><i class="fab fa-github"></i> Develop Features</a>
-            <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum/issues"><i class="fa fa-bug"></i> Report a bug</a>
-          </div>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link btn-group dropdown-toggle" href="/index.html" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-cog"></i> Options</a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <h6 class="dropdown-header">Display Options</h6>
-            <div class="form-check dropdown-item">
-              <label class="form-check-label">
-                <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox" checked="checked" onchange="Options.changeOption(this)">
-                  Definitions
-              </label>
-            </div>
-            <div class="form-check dropdown-item">
-              <label class="form-check-label">
-                <input class="form-check-input" id="checkbox_example" name="disp_opt" type="checkbox" checked="checked" onchange="Options.changeOption(this)">
-                  Examples
-              </label>
-            </div>
-            <div class="form-check dropdown-item">
-              <label class="form-check-label">
-                <input class="form-check-input" id="checkbox_explanation" name="disp_opt" type="checkbox" checked="checked" onchange="Options.changeOption(this)">
-                  Explanations
-              </label>
-            </div>
-            <div class="form-check dropdown-item">
-              <label class="form-check-label">
-                <input class="form-check-input" id="checkbox_legend" name="disp_opt" type="checkbox" checked="checked" onchange="Options.changeOption(this)">
-                  Legends
-              </label>
-            </div>
-          </div>
-        </li>
-      </ul>
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="/calculator.html"><i class="fa fa-calculator"></i>
+                    Calc</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/sheets.html"><i class="fa fa-file"></i> Sheets</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    <i class="fa fa-info-circle"></i> Info
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="/about.html"><i class="fa fa-question"></i>
+                        About TeX4TUM</a>
+                    <a class="dropdown-item" href="/team.html"><i class="fa fa-users"></i>
+                        Team</a>
+                    <a class="dropdown-item" href="/demo.html"><i class="fa fa-play-circle"></i>
+                        Feature Demo</a>
+                    <div class="dropdown-divider"></div>
+                    <h6 class="dropdown-header"><i class="fa fa-handshake"></i> Contribute</h6>
+                    <a class="dropdown-item" href="/support.html"><i class="fa fa-life-ring"></i>
+                        Support</a>
+                    <a class="dropdown-item" href="/contribution.html"><i class="fa fa-edit"></i>
+                        Write Article</a>
+                    <a class="dropdown-item" href="/todo.html"><i class="fa fa-tasks"></i> ToDo
+                        List</a>
+                    <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum"><i class="fab fa-github"></i>
+                        Develop Features</a>
+                    <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum/issues"><i class="fa fa-bug"></i>
+                        Report a bug</a>
+                    <a class="dropdown-item" href="/contact.html"><i class="fas fa-user-edit"></i>
+                        Contact</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link btn-group dropdown-toggle" href="/index.html"
+                    id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false"><i class="fa fa-cog"></i> Options</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <h6 class="dropdown-header">Display Options</h6>
+                    <div class="form-check dropdown-item">
+                        <label class="form-check-label">
+                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox"
+                                checked="checked" onchange="Options.changeOption(this)">
+                            Definitions
+                        </label>
+                    </div>
+                    <div class="form-check dropdown-item">
+                        <label class="form-check-label">
+                            <input class="form-check-input" id="checkbox_example" name="disp_opt" type="checkbox"
+                                onchange="Options.changeOption(this)">
+                            Examples
+                        </label>
+                    </div>
+                    <div class="form-check dropdown-item">
+                        <label class="form-check-label">
+                            <input class="form-check-input" id="checkbox_explanation" name="disp_opt" type="checkbox"
+                                onchange="Options.changeOption(this)">
+                            Explanations
+                        </label>
+                    </div>
+                    <div class="form-check dropdown-item">
+                        <label class="form-check-label">
+                            <input class="form-check-input" id="checkbox_legend" name="disp_opt" type="checkbox"
+                                onchange="Options.changeOption(this)">
+                            Legends
+                        </label>
+                    </div>
+                </div>
+            </li>
+        </ul>
     </div>
 
 
@@ -152,32 +174,29 @@
 <!-- SI Units -->
 <!--=============================================================== -->
 <!-- KaTeX Tweaks -->
+<!-- \renewcommand{\boldsymbol}[1]{\mathbf{#1}} -->
 <div id="title_def" class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
-<h5 class="card-title text-primary">
-Definition
-</h5>
-<p class="card-text">
-Information Theory (IT) is a science.
-</p>
+<h5 class='card-title text-primary'>Definition</h5>
+<p class='card-text'>Information Theory (IT) is a science.</p>
 </div>
 </div>
 </div>
-<h2 id="table-of-contents"><i class="fa fa-list-ul"></i> Table of Contents</h2>
+<h2 id="subfolders-and-articles"><i class="fa fa-list-ul"></i> Subfolders and Articles</h2>
 <ul>
 <li><a href="algorithm.html"><strong>Algorithm</strong></a>
 <ul>
-<li><a href="aes.html">Advanced Encryption Standard</a></li>
-<li><a href="rsa.html">RSA</a></li>
-<li><a href="sha-2.html">Secure Hash Algorithm 2</a></li>
-<li><a href="sha-3.html">Secure Hash Algorithm 2</a></li>
+<li><a href="aes.html">Advanced Encryption Standard (<abbr title="Advanced Encryption Standard" >AES</abbr>)</a></li>
+<li><a href="complexity-theory.html">Complexity Theory</a></li>
+<li><a href="rsa.html"><abbr title="Rivest, Shamir and Adleman" >RSA</abbr></a></li>
 </ul></li>
 <li><a href="datastructures.html"><strong>Datastructures</strong></a>
 <ul>
-<li><a href="jpeg.html">JPEG</a></li>
-<li><a href="uri.html">Uniform Resource Identifier</a></li>
-<li><a href="utf8.html">UTF-8</a></li>
+<li><a href="jpeg.html"><abbr title="Joint Photographic Experts Group" >JPEG</abbr></a></li>
+<li><a href="tree.html">Tree</a></li>
+<li><a href="uri.html">Uniform Resource Identifier (<abbr title="Uniform Resource Identifier" >URI</abbr>)</a></li>
+<li><a href="utf8.html"><abbr title="Unicode Transformation Format" >UTF</abbr>-8</a></li>
 <li><a href="vcf.html">vCard</a></li>
 </ul></li>
 <li><a href="language.html"><strong>Language</strong></a>
@@ -186,61 +205,59 @@ Information Theory (IT) is a science.
 <li><a href="bash.html">Bash</a></li>
 <li><a href="c.html">C</a></li>
 <li><a href="cpp.html">C++</a></li>
+<li><a href="css.html">Cascading Style Sheets (<abbr title="Cascading Style Sheets" >CSS</abbr>)</a></li>
 <li><a href="doxygen.html">DoxyGen</a></li>
 <li><a href="go.html">Go</a></li>
 <li><a href="markdown.html">Markdown</a></li>
 <li><a href="matlab.html">Matlab</a></li>
 <li><a href="natural-language.html">Natural Language</a></li>
-<li><a href="programming.html">Programming</a></li>
 <li><a href="python.html">Python</a></li>
 <li><a href="regular-expressions.html">Regular Expressions</a></li>
+<li><a href="ruby.html">Ruby</a></li>
+<li><a href="rust.html">Rust</a></li>
 </ul></li>
 <li><a href="network.html"><strong>Network</strong></a>
 <ul>
-<li><a href="6LoWPAN.html">6LoWPAN</a></li>
-<li><a href="IEEE_802.15.04.html">IEEE 802.15.4</a></li>
-<li><a href="coap.html">Constrained Application Protocol</a></li>
-<li><a href="dns.html">Domain Name System (DNS)</a></li>
-<li><a href="http.html">HTTP</a></li>
+<li><a href="6lowpan.html">6LoWPAN</a></li>
+<li><a href="coap.html">Constrained Application Protocol (CoAP)</a></li>
+<li><a href="dns.html">Domain Name System (<abbr title="Domain Name System" >DNS</abbr>)</a></li>
+<li><a href="http.html"><abbr title="Hypertext Transfer Protocol" >HTTP</abbr></a></li>
+<li><a href="ieee-802-15-04.html">IEEE 802.15.4</a></li>
 <li><a href="ip.html">Internet Protocol</a></li>
 <li><a href="mac.html">Media Access Control</a></li>
 <li><a href="mqtt.html">Message Queue Telemetry Transport (MQTT)</a></li>
-<li><a href="osi.html">Open Systems Interconnection model (OSI)</a></li>
+<li><a href="osi.html">Open Systems Interconnection model (<abbr title="Open Systems Interconnection" >OSI</abbr>)</a></li>
 <li><a href="rpl.html">RPL</a></li>
-<li><a href="tcp.html">TCP</a></li>
+<li><a href="tcp.html"><abbr title="Transmission Control Protocol" >TCP</abbr></a></li>
 <li><a href="udp.html">UDP</a></li>
 <li><a href="zigbee.html">ZigBee</a></li>
 </ul></li>
-<li><a href="os.html"><strong>Os</strong></a>
+<li><a href="operating%20system.html"><strong>Operating system</strong></a>
 <ul>
 <li><a href="filesystem.html">Filesystem</a></li>
-<li><a href="memory.html">Memory Management</a></li>
+<li><a href="operating-system.html">Operating System</a></li>
 <li><a href="paging.html">Paging</a></li>
+<li><a href="semaphore.html">Semaphore</a></li>
 <li><a href="systemcall.html">System Call</a></li>
 </ul></li>
 <li><a href="security.html"><strong>Security</strong></a>
 <ul>
-<li><a href="certificate.html">Certificate</a></li>
 <li><a href="cryptography.html">Cryptography</a></li>
-<li><a href="hash.html">Hash Function</a></li>
+<li><a href="hash.html"><strong>Hash</strong></a></li>
 <li><a href="multivariate-cryptography.html">Multivariate Cryptography</a></li>
 <li><a href="signature.html">Signature</a></li>
 <li><a href="zksnark.html">zkSNARK</a></li>
 </ul></li>
 <li><a href="theory.html"><strong>Theory</strong></a>
 <ul>
-<li><a href="complexity-theory.html">Complexity Theory</a></li>
-<li><a href="css-units.html">CSS Units</a></li>
 <li><a href="float.html">Floating Point Number</a></li>
 <li><a href="numbers.html">Number Converter</a></li>
-<li><a href="oop.html">Object Oriented Programming (OOP)</a></li>
+<li><a href="oop.html">Object Oriented Programming (<abbr title="Object-Oriented Programming" >OOP</abbr>)</a></li>
 <li><a href="petri-net.html">Petri Net</a></li>
-<li><a href="semaphore.html">Semaphore</a></li>
-<li><a href="tree.html">Tree</a></li>
 </ul></li>
 <li><a href="tools.html"><strong>Tools</strong></a>
 <ul>
-<li><a href="gdb.html">Gnu Debugger (GDB)</a></li>
+<li><a href="gdb.html">Gnu Debugger (<abbr title="GNU Debugger" >GDB</abbr>)</a></li>
 <li><a href="git.html">Git</a></li>
 </ul></li>
 </ul>
@@ -310,7 +327,7 @@ Information Theory (IT) is a science.
   <script src="/assets/js/options.js"></script>
 
   <!-- KaTeX JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js"></script>
 
   <!-- jQuery (req. for BootStrap) -->
   <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>

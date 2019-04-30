@@ -10,7 +10,7 @@
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="http://localhost:4000/git">
+    <link rel="canonical" href="/git">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 
     <!-- KaTeX CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 </head>
 
 
@@ -35,84 +35,106 @@
 
     <!-- sticky left: Logo -->
     <div class="navbar-brand">
-      <a href="/index.html">
-        <img src="/res/img/Logo-inv.png" height="30" alt="Logo">
-      </a>
+        <a href="/index.html">
+            <img src="/res/img/Logo-inv.png" height="30" alt="Logo">
+        </a>
     </div>
 
 
     <!-- sticky right: search bar  -->
     
-    <form class="form-inline ml-auto order-lg-3"  role="search">
-      <div id="search" class="search-container">
-        <input class="form-control search-input w-100" type="search" placeholder="&#xf002; Search (fuzzy)" tabindex="1">
-      <div class="ac-results-wrapper"></div>
-      </div>
+    <form class="form-inline ml-auto order-lg-3" role="search">
+        <div id="search" class="search-container">
+            <input class="form-control search-input w-100" type="search" placeholder="&#xf002; Search (fuzzy)"
+                tabindex="1">
+            <div class="ac-results-wrapper"></div>
+        </div>
     </form>
-   
+    
 
 
     <!-- Toggle button for collapsed items  -->
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
     </button>
 
 
     <!-- Collapsable Items: Links -->
     <div class="collapse navbar-collapse justify-content-start order-6 order-lg-2" id="navbarResponsive">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="/calculator.html"><i class="fa fa-calculator"></i> Calc</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/sheets.html"><i class="fa fa-file"></i> Sheets</a>
-        </li>
-        <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <i class="fa fa-info-circle"></i> Info
-        </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="/about.html"><i class="fa fa-question"></i> About TeX4TUM</a>
-            <a class="dropdown-item" href="/demo.html"><i class="fa fa-play-circle"></i> Feature Demo</a>
-            <div class="dropdown-divider"></div>
-            <h6 class="dropdown-header"><i class="fa fa-handshake"></i> Contribute</h6>
-            <a class="dropdown-item" href="/contribution.html"><i class="fa fa-edit"></i> Write Article</a>
-            <a class="dropdown-item" href="/todo.html"><i class="fa fa-tasks"></i> ToDo List</a>
-            <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum"><i class="fab fa-github"></i> Develop Features</a>
-            <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum/issues"><i class="fa fa-bug"></i> Report a bug</a>
-          </div>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link btn-group dropdown-toggle" href="/index.html" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-cog"></i> Options</a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <h6 class="dropdown-header">Display Options</h6>
-            <div class="form-check dropdown-item">
-              <label class="form-check-label">
-                <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox" checked="checked" onchange="Options.changeOption(this)">
-                  Definitions
-              </label>
-            </div>
-            <div class="form-check dropdown-item">
-              <label class="form-check-label">
-                <input class="form-check-input" id="checkbox_example" name="disp_opt" type="checkbox" checked="checked" onchange="Options.changeOption(this)">
-                  Examples
-              </label>
-            </div>
-            <div class="form-check dropdown-item">
-              <label class="form-check-label">
-                <input class="form-check-input" id="checkbox_explanation" name="disp_opt" type="checkbox" checked="checked" onchange="Options.changeOption(this)">
-                  Explanations
-              </label>
-            </div>
-            <div class="form-check dropdown-item">
-              <label class="form-check-label">
-                <input class="form-check-input" id="checkbox_legend" name="disp_opt" type="checkbox" checked="checked" onchange="Options.changeOption(this)">
-                  Legends
-              </label>
-            </div>
-          </div>
-        </li>
-      </ul>
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="/calculator.html"><i class="fa fa-calculator"></i>
+                    Calc</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/sheets.html"><i class="fa fa-file"></i> Sheets</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    <i class="fa fa-info-circle"></i> Info
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="/about.html"><i class="fa fa-question"></i>
+                        About TeX4TUM</a>
+                    <a class="dropdown-item" href="/team.html"><i class="fa fa-users"></i>
+                        Team</a>
+                    <a class="dropdown-item" href="/demo.html"><i class="fa fa-play-circle"></i>
+                        Feature Demo</a>
+                    <div class="dropdown-divider"></div>
+                    <h6 class="dropdown-header"><i class="fa fa-handshake"></i> Contribute</h6>
+                    <a class="dropdown-item" href="/support.html"><i class="fa fa-life-ring"></i>
+                        Support</a>
+                    <a class="dropdown-item" href="/contribution.html"><i class="fa fa-edit"></i>
+                        Write Article</a>
+                    <a class="dropdown-item" href="/todo.html"><i class="fa fa-tasks"></i> ToDo
+                        List</a>
+                    <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum"><i class="fab fa-github"></i>
+                        Develop Features</a>
+                    <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum/issues"><i class="fa fa-bug"></i>
+                        Report a bug</a>
+                    <a class="dropdown-item" href="/contact.html"><i class="fas fa-user-edit"></i>
+                        Contact</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link btn-group dropdown-toggle" href="/index.html"
+                    id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false"><i class="fa fa-cog"></i> Options</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <h6 class="dropdown-header">Display Options</h6>
+                    <div class="form-check dropdown-item">
+                        <label class="form-check-label">
+                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox"
+                                checked="checked" onchange="Options.changeOption(this)">
+                            Definitions
+                        </label>
+                    </div>
+                    <div class="form-check dropdown-item">
+                        <label class="form-check-label">
+                            <input class="form-check-input" id="checkbox_example" name="disp_opt" type="checkbox"
+                                onchange="Options.changeOption(this)">
+                            Examples
+                        </label>
+                    </div>
+                    <div class="form-check dropdown-item">
+                        <label class="form-check-label">
+                            <input class="form-check-input" id="checkbox_explanation" name="disp_opt" type="checkbox"
+                                onchange="Options.changeOption(this)">
+                            Explanations
+                        </label>
+                    </div>
+                    <div class="form-check dropdown-item">
+                        <label class="form-check-label">
+                            <input class="form-check-input" id="checkbox_legend" name="disp_opt" type="checkbox"
+                                onchange="Options.changeOption(this)">
+                            Legends
+                        </label>
+                    </div>
+                </div>
+            </li>
+        </ul>
     </div>
 
 
@@ -157,22 +179,31 @@
 <!-- SI Units -->
 <!--=============================================================== -->
 <!-- KaTeX Tweaks -->
+<!-- \renewcommand{\boldsymbol}[1]{\mathbf{#1}} -->
 <div id="title_def" class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
-<h5 class="card-title text-primary">
-Definition
-</h5>
-<p class="card-text">
-Git is an open-source version control system. It is used to manage a set of files, as they change over time.
-</p>
+<h5 class='card-title text-primary'>Definition</h5>
+<p class='card-text'>Git is an open-source version control system.
+It is used to manage a set of files, as they change over time. </p>
 </div>
 </div>
 </div>
-<h2 id="concepts">Concepts</h2>
-<p>https://www.sbf5.com/~cduan/technical/git/</p>
+<h2 id="terms">Terms</h2>
+<ul>
+<li><strong>Working Directory:</strong> simply the files in the root folder</li>
+<li><strong>Commit:</strong> A certain version of the files</li>
+<li><strong>Tag</strong>: a named pointer to a certain commit.</li>
+<li><strong>Branch:</strong> A chain of commits</li>
+<li><strong>Master:</strong> Default Branch</li>
+<li><strong>Head:</strong> a named pointer to the current branch</li>
+</ul>
 <p>Repository: It is stored in the same directory as the project itself, in a subdirectory called <code>.git</code>.</p>
-<p>Working Directory: simply the files</p>
+<h2 id="usage">Usage</h2>
+<ol type="1">
+<li>clone a git repository: <code>git clone git://...</code> or create one <code>git init</code></li>
+<li>Commit</li>
+</ol>
 <h3 id="commit-object">Commit Object</h3>
 <p>A Commit Object is a set files. It can be referred by its partial or full SHA1 name or relative to a head. The postfix <code>^</code> refers to the parent of a head.</p>
 <p>Head: simply a named reference to a commit object. By default, there is a head in every repository called <em>master</em>.</p>
@@ -220,7 +251,7 @@ Git is an open-source version control system. It is used to manage a set of file
 <ul>
 <li>view file, click on start line number</li>
 <li>hold shift, click on end line</li>
-<li>press <code>y</code> to create permanent <abbr title="Uniform Resource Locator" >URL</abbr> (hash)</li>
+<li>press <code>y</code> to create permanent URL (hash)</li>
 </ul>
 
 
@@ -288,7 +319,7 @@ Git is an open-source version control system. It is used to manage a set of file
   <script src="/assets/js/options.js"></script>
 
   <!-- KaTeX JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js"></script>
 
   <!-- jQuery (req. for BootStrap) -->
   <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>

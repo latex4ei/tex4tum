@@ -1,5 +1,13 @@
 /* KeyWordTok */
-.sourceCode .kw { color: #268BD2; }
+.sourceCode .kw { color: #268BD2; font-weight: bold; }
+
+/* Don'nt know */
+.sourceCode .cf { color: #268BD2; font-weight: bold; }
+.sourceCode .bu { color: #268BD2; }
+
+/* Import token */
+.sourceCode .im { color: #268BD2; }  
+
 /* DataTypeTok */
 .sourceCode .dt { color: #268BD2; }
 

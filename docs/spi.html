@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- title, description, favicon -->
-    <title>Serial Peripheral Interface</title>
+    <title>Serial Peripheral Interface (SPI)</title>
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
@@ -18,94 +18,123 @@
     <!-- Load CSS in head, JS after footer -->
     <!-- Main/Bootstrap -->
     <link rel="stylesheet" href="/assets/main.css">
+    <link rel="stylesheet" href="/assets/syntax-highlight.css">
 
     <!-- Fontawesome CSS -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 
     <!-- KaTeX CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 </head>
 
 
   <body>
 
     <!-- Bootstrap 4.0 Navigation Bar -->
-<nav class="navbar fixed-top navbar-dark bg-primary text-white navbar-expand-lg">
+<nav class="navbar sticky-top navbar-dark bg-primary text-white navbar-expand-lg">
 
     <!-- sticky left: Logo -->
     <div class="navbar-brand">
-      <a href="/index.html">
-        <img src="/res/img/Logo-inv.png" height="30" alt="Logo">
-      </a>
+        <a href="/index.html">
+            <img src="/res/img/Logo-inv.png" height="30" alt="Logo">
+        </a>
     </div>
 
 
     <!-- sticky right: search bar  -->
     
-    <form class="form-inline ml-auto order-lg-3"  role="search">
-      <div id="search" class="search-container">
-        <input class="form-control search-input w-100" type="search" placeholder="&#xf002; Search (fuzzy)" tabindex="1">
-      <div class="ac-results-wrapper"></div>
-      </div>
+    <form class="form-inline ml-auto order-lg-3" role="search">
+        <div id="search" class="search-container">
+            <input class="form-control search-input w-100" type="search" placeholder="&#xf002; Search (fuzzy)"
+                tabindex="1">
+            <div class="ac-results-wrapper"></div>
+        </div>
     </form>
-   
+    
 
 
     <!-- Toggle button for collapsed items  -->
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
     </button>
 
 
     <!-- Collapsable Items: Links -->
     <div class="collapse navbar-collapse justify-content-start order-6 order-lg-2" id="navbarResponsive">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="/about.html"><i class="fa fa-question"></i> About</a>
-        </li>
-        <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <i class="fa fa-handshake"></i> Contribute
-        </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="/contribution.html"><i class="fa fa-edit"></i> Contribute Article</a>
-            <a class="dropdown-item" href="/todo.html"><i class="fa fa-tasks"></i> ToDo List</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum"><i class="fab fa-github"></i> Develop TeX4TUM Features</a>
-            <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum/issues"><i class="fa fa-bug"></i> Report a bug</a>
-          </div>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link btn-group dropdown-toggle" href="/index.html" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-cog"></i> Options</a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <h6 class="dropdown-header">Display Options</h6>
-            <div class="form-check dropdown-item">
-              <label class="form-check-label">
-                <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox" checked="checked" onchange="Options.changeOption(this)">
-                  Definitions
-              </label>
-            </div>
-            <div class="form-check dropdown-item">
-              <label class="form-check-label">
-                <input class="form-check-input" id="checkbox_example" name="disp_opt" type="checkbox" checked="checked" onchange="Options.changeOption(this)">
-                  Examples
-              </label>
-            </div>
-            <div class="form-check dropdown-item">
-              <label class="form-check-label">
-                <input class="form-check-input" id="checkbox_explanation" name="disp_opt" type="checkbox" checked="checked" onchange="Options.changeOption(this)">
-                  Explanations
-              </label>
-            </div>
-            <div class="form-check dropdown-item">
-              <label class="form-check-label">
-                <input class="form-check-input" id="checkbox_legend" name="disp_opt" type="checkbox" checked="checked" onchange="Options.changeOption(this)">
-                  Legends
-              </label>
-            </div>
-          </div>
-        </li>
-      </ul>
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="/calculator.html"><i class="fa fa-calculator"></i>
+                    Calc</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/sheets.html"><i class="fa fa-file"></i> Sheets</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    <i class="fa fa-info-circle"></i> Info
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="/about.html"><i class="fa fa-question"></i>
+                        About TeX4TUM</a>
+                    <a class="dropdown-item" href="/team.html"><i class="fa fa-users"></i>
+                        Team</a>
+                    <a class="dropdown-item" href="/demo.html"><i class="fa fa-play-circle"></i>
+                        Feature Demo</a>
+                    <div class="dropdown-divider"></div>
+                    <h6 class="dropdown-header"><i class="fa fa-handshake"></i> Contribute</h6>
+                    <a class="dropdown-item" href="/support.html"><i class="fa fa-life-ring"></i>
+                        Support</a>
+                    <a class="dropdown-item" href="/contribution.html"><i class="fa fa-edit"></i>
+                        Write Article</a>
+                    <a class="dropdown-item" href="/todo.html"><i class="fa fa-tasks"></i> ToDo
+                        List</a>
+                    <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum"><i class="fab fa-github"></i>
+                        Develop Features</a>
+                    <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum/issues"><i class="fa fa-bug"></i>
+                        Report a bug</a>
+                    <a class="dropdown-item" href="/contact.html"><i class="fas fa-user-edit"></i>
+                        Contact</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link btn-group dropdown-toggle" href="/index.html"
+                    id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false"><i class="fa fa-cog"></i> Options</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <h6 class="dropdown-header">Display Options</h6>
+                    <div class="form-check dropdown-item">
+                        <label class="form-check-label">
+                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox"
+                                checked="checked" onchange="Options.changeOption(this)">
+                            Definitions
+                        </label>
+                    </div>
+                    <div class="form-check dropdown-item">
+                        <label class="form-check-label">
+                            <input class="form-check-input" id="checkbox_example" name="disp_opt" type="checkbox"
+                                onchange="Options.changeOption(this)">
+                            Examples
+                        </label>
+                    </div>
+                    <div class="form-check dropdown-item">
+                        <label class="form-check-label">
+                            <input class="form-check-input" id="checkbox_explanation" name="disp_opt" type="checkbox"
+                                onchange="Options.changeOption(this)">
+                            Explanations
+                        </label>
+                    </div>
+                    <div class="form-check dropdown-item">
+                        <label class="form-check-label">
+                            <input class="form-check-input" id="checkbox_legend" name="disp_opt" type="checkbox"
+                                onchange="Options.changeOption(this)">
+                            Legends
+                        </label>
+                    </div>
+                </div>
+            </li>
+        </ul>
     </div>
 
 
@@ -114,16 +143,51 @@
 
 
     <main class="container" aria-label="Content">
-      <h1><a data-toggle="collapse" href="#title_def" aria-expanded="false" aria-controls="title_def">
-  
-  Serial Peripheral Interface
-</a></h1>
+      
 
+
+
+<p style="font-family: sans-serif;">
+	
+		
+		/ <a href="/electronics.html">electronics</a>
+		
+		
+	
+		
+		/ <a href="/bus.html">bus</a>
+		
+		
+	
+		
+		
+	 /
+</p>
+
+<h1><a data-toggle="collapse" href="#title_def" aria-expanded="false" aria-controls="title_def">
+  
+  Serial Peripheral Interface (<abbr title="Serial Peripheral Interface" >SPI</abbr>)
+</a><a class="float-right small" style="font-size: small" href="https://github.com/latex4ei/tex4tum/edit/master/_article/electronics/bus/spi.md">[edit]</a></h1>
+
+<p>
 
 <span class="badge badge-primary text-white">
-  <i class="fas fa-tag"></i> SPI
+  <i class="fas fa-tag"></i> bus
 </span>
 
+<span class="badge badge-primary text-white">
+  <i class="fas fa-tag"></i> <abbr title="Serial Peripheral Interface" >SPI</abbr>
+</span>
+
+<span class="badge badge-primary text-white">
+  <i class="fas fa-tag"></i> <abbr title="Master Out, Slave In" >MOSI</abbr>
+</span>
+
+<span class="badge badge-primary text-white">
+  <i class="fas fa-tag"></i> <abbr title="Master In, Slave Out" >MISO</abbr>
+</span>
+
+</p>
 
 <!-- Basics -->
 <!--    -->
@@ -131,15 +195,12 @@
 <!-- SI Units -->
 <!--=============================================================== -->
 <!-- KaTeX Tweaks -->
-<div id="title_def" class="collapse">
+<!-- \renewcommand{\boldsymbol}[1]{\mathbf{#1}} -->
+<div id="title_def" class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
-<h5 class="card-title text-primary">
-Definition
-</h5>
-<p class="card-text">
-SPI is serial bus.
-</p>
+<h5 class='card-title text-primary'>Definition</h5>
+<p class='card-text'><abbr title="Serial Peripheral Interface" >SPI</abbr> is serial bus.</p>
 </div>
 </div>
 </div>
@@ -157,11 +218,11 @@ SPI is serial bus.
 <td>Serial Clock</td>
 </tr>
 <tr class="even">
-<td>MOSI</td>
+<td><abbr title="Master Out, Slave In" >MOSI</abbr></td>
 <td>Master Out, Slave In</td>
 </tr>
 <tr class="odd">
-<td>MISO</td>
+<td><abbr title="Master In, Slave Out" >MISO</abbr></td>
 <td>Master In, Slave Out</td>
 </tr>
 <tr class="even">
@@ -170,48 +231,37 @@ SPI is serial bus.
 </tr>
 </tbody>
 </table>
-<h2 id="connection">Connection</h2>
-<!--<p> Filename="SPI_single_slave.svg", path="/res/img/content-images/SPI_single_slave.svg" </p>-->
+<!--<p> Filename="SPI_single_slave.svg", path="/res/img/content-images/electrical/bus/SPI_single_slave.svg" </p>-->
 <figure class="figure">
-<img class="figure-img img-fluid" src="/res/img/content-images/SPI_single_slave.svg" alt="Connection"/>
-<figcaption class="figure-caption">
-Connection
-</figcaption>
+<img class="figure-img img-fluid" style="width: auto;" src="/res/img/content-images/electrical/bus/SPI_single_slave.svg" alt="Connection"/><figcaption class="figure-caption">Connection</figcaption>
 </figure>
-<dl>
-<dt>Common Speeds</dt>
-<dd>9'600 bit/s, 38'400 bit/s
-</dd>
-</dl>
-<div class='example card border-success mb-1'>
-<div class='card-body'>
-<h5 class="card-title text-success">
-Example
-</h5>
-<p class='card-text'>
-<h2 id="example-of-spi">Example of <abbr title="Serial Peripheral Interface" >SPI</abbr></h2>
-<p>This is a test</p>
-<p>
-</div>
-</div>
-<h3 id="legend">Legend</h3>
-The equation is
-<div data-toggle="collapse" href="#eq_0">
-<p><span class="LaTeX">$$x = 3 + y$$</span></p>
-</div>
-<div id="eq_0" class="collapse">
-<div class="legend card border-info mb-1">
-<div class="card-body">
-<h5 class="card-title text-info">
-Legend
-</h5>
-<p class="card-text">
-<p>where <span class="LaTeX">$x$</span> is a number and <span class="LaTeX">$y$</span> too</p>
-</p>
-</div>
-</div>
-</div>
-<h2 id="another-section">Another section</h2>
+<h2 id="protocol">Protocol</h2>
+<pre class="diagram"><code>For CPOL=0, CPHA=0 (capture on rising edge):
+           ___ ___ ___ ___ ___ ___ ___ ___       
+<abbr title="Master Out, Slave In" >MOSI</abbr> ··XXXX___X___X___X___X___X___X___X___XXXXXX··
+            |   |   |   |   |   |   |   | 
+           ___ ___ ___ ___ ___ ___ ___ ___      
+<abbr title="Master In, Slave Out" >MISO</abbr> ··XXXX___X___X___X___X___X___X___X___XXXXXX··
+            |   |   |   |   |   |   |   | 
+            |_  |_  |_  |_  |_  |_  |_  |_   
+SCLK ··_____/ \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_____··
+            0   1   2   3   4   5   6   7    
+       ___                                   ___
+SS1  ··   \_________________________________/   ··</code></pre>
+<p>The master must also configure the clock polarity: rising or falling edge</p>
+<h3 id="configuration">Configuration</h3>
+<ul>
+<li>CPOL determines the polarity of the clock.
+<ul>
+<li>CPOL=0: clock idles at 0, leading edge is a rising edge, trailing edge is a falling edge.</li>
+<li>CPOL=1: clock idles at 1, leading edge is a falling edge, trailing edge is a rising edge.</li>
+</ul></li>
+<li>CPHA determines the phase of the clock and the timing of the data bits.
+<ul>
+<li>CPHA=0: The first bit must be on the <abbr title="Master Out, Slave In" >MOSI</abbr> line before the leading clock edge.</li>
+<li>CPHA=1: The sender changes the data on the leading edge, while the receiver captures the data on the trailing edge.</li>
+</ul></li>
+</ul>
 
 
     </main>
@@ -278,7 +328,7 @@ Legend
   <script src="/assets/js/options.js"></script>
 
   <!-- KaTeX JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js"></script>
 
   <!-- jQuery (req. for BootStrap) -->
   <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>

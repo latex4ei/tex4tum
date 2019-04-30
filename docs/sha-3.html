@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- title, description, favicon -->
-    <title>Secure Hash Algorithm 2</title>
+    <title>Secure Hash Algorithm 3 (SHA-3)</title>
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="http://localhost:4000/sha-3">
+    <link rel="canonical" href="/sha-3">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 
     <!-- KaTeX CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 </head>
 
 
@@ -35,84 +35,106 @@
 
     <!-- sticky left: Logo -->
     <div class="navbar-brand">
-      <a href="/index.html">
-        <img src="/res/img/Logo-inv.png" height="30" alt="Logo">
-      </a>
+        <a href="/index.html">
+            <img src="/res/img/Logo-inv.png" height="30" alt="Logo">
+        </a>
     </div>
 
 
     <!-- sticky right: search bar  -->
     
-    <form class="form-inline ml-auto order-lg-3"  role="search">
-      <div id="search" class="search-container">
-        <input class="form-control search-input w-100" type="search" placeholder="&#xf002; Search (fuzzy)" tabindex="1">
-      <div class="ac-results-wrapper"></div>
-      </div>
+    <form class="form-inline ml-auto order-lg-3" role="search">
+        <div id="search" class="search-container">
+            <input class="form-control search-input w-100" type="search" placeholder="&#xf002; Search (fuzzy)"
+                tabindex="1">
+            <div class="ac-results-wrapper"></div>
+        </div>
     </form>
-   
+    
 
 
     <!-- Toggle button for collapsed items  -->
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
     </button>
 
 
     <!-- Collapsable Items: Links -->
     <div class="collapse navbar-collapse justify-content-start order-6 order-lg-2" id="navbarResponsive">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="/calculator.html"><i class="fa fa-calculator"></i> Calc</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/sheets.html"><i class="fa fa-file"></i> Sheets</a>
-        </li>
-        <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <i class="fa fa-info-circle"></i> Info
-        </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="/about.html"><i class="fa fa-question"></i> About TeX4TUM</a>
-            <a class="dropdown-item" href="/demo.html"><i class="fa fa-play-circle"></i> Feature Demo</a>
-            <div class="dropdown-divider"></div>
-            <h6 class="dropdown-header"><i class="fa fa-handshake"></i> Contribute</h6>
-            <a class="dropdown-item" href="/contribution.html"><i class="fa fa-edit"></i> Write Article</a>
-            <a class="dropdown-item" href="/todo.html"><i class="fa fa-tasks"></i> ToDo List</a>
-            <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum"><i class="fab fa-github"></i> Develop Features</a>
-            <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum/issues"><i class="fa fa-bug"></i> Report a bug</a>
-          </div>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link btn-group dropdown-toggle" href="/index.html" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-cog"></i> Options</a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <h6 class="dropdown-header">Display Options</h6>
-            <div class="form-check dropdown-item">
-              <label class="form-check-label">
-                <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox" checked="checked" onchange="Options.changeOption(this)">
-                  Definitions
-              </label>
-            </div>
-            <div class="form-check dropdown-item">
-              <label class="form-check-label">
-                <input class="form-check-input" id="checkbox_example" name="disp_opt" type="checkbox" checked="checked" onchange="Options.changeOption(this)">
-                  Examples
-              </label>
-            </div>
-            <div class="form-check dropdown-item">
-              <label class="form-check-label">
-                <input class="form-check-input" id="checkbox_explanation" name="disp_opt" type="checkbox" checked="checked" onchange="Options.changeOption(this)">
-                  Explanations
-              </label>
-            </div>
-            <div class="form-check dropdown-item">
-              <label class="form-check-label">
-                <input class="form-check-input" id="checkbox_legend" name="disp_opt" type="checkbox" checked="checked" onchange="Options.changeOption(this)">
-                  Legends
-              </label>
-            </div>
-          </div>
-        </li>
-      </ul>
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="/calculator.html"><i class="fa fa-calculator"></i>
+                    Calc</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/sheets.html"><i class="fa fa-file"></i> Sheets</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    <i class="fa fa-info-circle"></i> Info
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="/about.html"><i class="fa fa-question"></i>
+                        About TeX4TUM</a>
+                    <a class="dropdown-item" href="/team.html"><i class="fa fa-users"></i>
+                        Team</a>
+                    <a class="dropdown-item" href="/demo.html"><i class="fa fa-play-circle"></i>
+                        Feature Demo</a>
+                    <div class="dropdown-divider"></div>
+                    <h6 class="dropdown-header"><i class="fa fa-handshake"></i> Contribute</h6>
+                    <a class="dropdown-item" href="/support.html"><i class="fa fa-life-ring"></i>
+                        Support</a>
+                    <a class="dropdown-item" href="/contribution.html"><i class="fa fa-edit"></i>
+                        Write Article</a>
+                    <a class="dropdown-item" href="/todo.html"><i class="fa fa-tasks"></i> ToDo
+                        List</a>
+                    <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum"><i class="fab fa-github"></i>
+                        Develop Features</a>
+                    <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum/issues"><i class="fa fa-bug"></i>
+                        Report a bug</a>
+                    <a class="dropdown-item" href="/contact.html"><i class="fas fa-user-edit"></i>
+                        Contact</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link btn-group dropdown-toggle" href="/index.html"
+                    id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false"><i class="fa fa-cog"></i> Options</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <h6 class="dropdown-header">Display Options</h6>
+                    <div class="form-check dropdown-item">
+                        <label class="form-check-label">
+                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox"
+                                checked="checked" onchange="Options.changeOption(this)">
+                            Definitions
+                        </label>
+                    </div>
+                    <div class="form-check dropdown-item">
+                        <label class="form-check-label">
+                            <input class="form-check-input" id="checkbox_example" name="disp_opt" type="checkbox"
+                                onchange="Options.changeOption(this)">
+                            Examples
+                        </label>
+                    </div>
+                    <div class="form-check dropdown-item">
+                        <label class="form-check-label">
+                            <input class="form-check-input" id="checkbox_explanation" name="disp_opt" type="checkbox"
+                                onchange="Options.changeOption(this)">
+                            Explanations
+                        </label>
+                    </div>
+                    <div class="form-check dropdown-item">
+                        <label class="form-check-label">
+                            <input class="form-check-input" id="checkbox_legend" name="disp_opt" type="checkbox"
+                                onchange="Options.changeOption(this)">
+                            Legends
+                        </label>
+                    </div>
+                </div>
+            </li>
+        </ul>
     </div>
 
 
@@ -133,7 +155,12 @@
 		
 	
 		
-		/ <a href="/algorithm.html">algorithm</a>
+		/ <a href="/security.html">security</a>
+		
+		
+	
+		
+		/ <a href="/hash.html">hash</a>
 		
 		
 	
@@ -144,8 +171,8 @@
 
 <h1><a data-toggle="collapse" href="#title_def" aria-expanded="false" aria-controls="title_def">
   
-  Secure Hash Algorithm 2
-</a><a class="float-right small" style="font-size: small" href="https://github.com/latex4ei/tex4tum/edit/master/_article/informatics/algorithm/sha-3.md">[edit]</a></h1>
+  Secure Hash Algorithm 3 (<abbr title="Secure Hash Algorithm" >SHA</abbr>-3)
+</a><a class="float-right small" style="font-size: small" href="https://github.com/latex4ei/tex4tum/edit/master/_article/informatics/security/hash/sha-3.md">[edit]</a></h1>
 
 <p>
 
@@ -157,15 +184,12 @@
 <!-- SI Units -->
 <!--=============================================================== -->
 <!-- KaTeX Tweaks -->
+<!-- \renewcommand{\boldsymbol}[1]{\mathbf{#1}} -->
 <div id="title_def" class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
-<h5 class="card-title text-primary">
-Definition
-</h5>
-<p class="card-text">
-The Secure Hash Algorithm 3 (SHA-3) is a set of 6 cryptographic hash functions as a subset of the Keccak algorithm.
-</p>
+<h5 class='card-title text-primary'>Definition</h5>
+<p class='card-text'>The Secure Hash Algorithm 3 (<abbr title="Secure Hash Algorithm" >SHA</abbr>-3) is a set of 6 cryptographic hash functions as a subset of the Keccak algorithm. </p>
 </div>
 </div>
 </div>
@@ -173,41 +197,65 @@ The Secure Hash Algorithm 3 (SHA-3) is a set of 6 cryptographic hash functions a
 <table>
 <thead>
 <tr class="header">
-<th>Instances</th>
-<th>Output bits</th>
-<th>Security bits</th>
-<th>Block size bits</th>
+<th>Variant</th>
+<th style="text-align: right;">Block</th>
+<th style="text-align: right;">State</th>
+<th style="text-align: right;">Rounds</th>
+<th style="text-align: right;">Output</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>SHA3-224</td>
-<td>224</td>
-<td>112</td>
-<td>1152</td>
+<td style="text-align: right;">1152 b</td>
+<td style="text-align: right;">1600 b</td>
+<td style="text-align: right;">24</td>
+<td style="text-align: right;">224 b</td>
 </tr>
 <tr class="even">
 <td>SHA3-256</td>
-<td>256</td>
-<td>128</td>
-<td>1088</td>
+<td style="text-align: right;">1088 b</td>
+<td style="text-align: right;">1600 b</td>
+<td style="text-align: right;">24</td>
+<td style="text-align: right;">256 b</td>
 </tr>
 <tr class="odd">
 <td>SHA3-384</td>
-<td>384</td>
-<td>192</td>
-<td>832</td>
+<td style="text-align: right;">832 b</td>
+<td style="text-align: right;">1600 b</td>
+<td style="text-align: right;">24</td>
+<td style="text-align: right;">384 b</td>
 </tr>
 <tr class="even">
 <td>SHA3-512</td>
-<td>512</td>
-<td>256</td>
-<td>576</td>
+<td style="text-align: right;">576 b</td>
+<td style="text-align: right;">1600 b</td>
+<td style="text-align: right;">24</td>
+<td style="text-align: right;">512 b</td>
 </tr>
 </tbody>
 </table>
+<div class="row">
+<div class="col-md-auto pr-0">
+<p>SHA3-256 (&quot; <input id="number-input" style="width: 5em;" oninput="calcSHA3(this)" placeholder="Input" value=""> &quot;) =</p>
+</div>
+<div class="col pl-0">
+<p><code id="SHA3_out">a7ffc6f8bf1ed76651c14756a061d662f580ff4de43b49fa82d80a4b80f8434a</code></p>
+</div>
+</div>
 <h2 id="working-principle">Working Principle</h2>
-<p>In contrast to <abbr title="Secure Hash Algorithm" >SHA</abbr>-2, <abbr title="Secure Hash Algorithm" >SHA</abbr>-3 is based on sponge construction in which data is &quot;absorbed&quot; into the sponge, then the result is &quot;squeezed&quot; out. In the absorbing phase, message blocks are XORed into a subset of the state, which is then transformed as a whole using a permutation function f.</p>
+<p>In contrast to <abbr title="Secure Hash Algorithm" >SHA</abbr>-2, <abbr title="Secure Hash Algorithm" >SHA</abbr>-3 is based on sponge construction in which data is &quot;absorbed&quot; into the sponge, then the result is &quot;squeezed&quot; out. In the absorbing phase, message blocks are XORed into a subset of the state, which is then transformed as a whole using a permutation function <span class="LaTeX">$f$</span>.</p>
+<h2 id="references">References</h2>
+<ul>
+<li><p><a href="https://en.wikipedia.org/wiki/SHA-3">Wikipedia: <abbr title="Secure Hash Algorithm" >SHA</abbr>-3</a></p></li>
+<li><p><a href="https://keccak.team/keccak_specs_summary.html">Keccak Specification Summary</a></p></li>
+</ul>
+<script type="text/javascript" src="http://cdn.jsdelivr.net/gh/emn178/js-sha3/build/sha3.min.js"></script>
+<script type="text/javascript">
+function calcSHA3( text ){
+    document.getElementById('SHA3_out').textContent = sha3_256( text.value );
+}
+</script>
 
 
     </main>
@@ -274,7 +322,7 @@ The Secure Hash Algorithm 3 (SHA-3) is a set of 6 cryptographic hash functions a
   <script src="/assets/js/options.js"></script>
 
   <!-- KaTeX JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js"></script>
 
   <!-- jQuery (req. for BootStrap) -->
   <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>

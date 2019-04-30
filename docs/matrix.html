@@ -10,7 +10,7 @@
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="http://localhost:4000/matrix">
+    <link rel="canonical" href="/matrix">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 
     <!-- KaTeX CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 </head>
 
 
@@ -35,84 +35,106 @@
 
     <!-- sticky left: Logo -->
     <div class="navbar-brand">
-      <a href="/index.html">
-        <img src="/res/img/Logo-inv.png" height="30" alt="Logo">
-      </a>
+        <a href="/index.html">
+            <img src="/res/img/Logo-inv.png" height="30" alt="Logo">
+        </a>
     </div>
 
 
     <!-- sticky right: search bar  -->
     
-    <form class="form-inline ml-auto order-lg-3"  role="search">
-      <div id="search" class="search-container">
-        <input class="form-control search-input w-100" type="search" placeholder="&#xf002; Search (fuzzy)" tabindex="1">
-      <div class="ac-results-wrapper"></div>
-      </div>
+    <form class="form-inline ml-auto order-lg-3" role="search">
+        <div id="search" class="search-container">
+            <input class="form-control search-input w-100" type="search" placeholder="&#xf002; Search (fuzzy)"
+                tabindex="1">
+            <div class="ac-results-wrapper"></div>
+        </div>
     </form>
-   
+    
 
 
     <!-- Toggle button for collapsed items  -->
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
     </button>
 
 
     <!-- Collapsable Items: Links -->
     <div class="collapse navbar-collapse justify-content-start order-6 order-lg-2" id="navbarResponsive">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="/calculator.html"><i class="fa fa-calculator"></i> Calc</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/sheets.html"><i class="fa fa-file"></i> Sheets</a>
-        </li>
-        <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <i class="fa fa-info-circle"></i> Info
-        </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="/about.html"><i class="fa fa-question"></i> About TeX4TUM</a>
-            <a class="dropdown-item" href="/demo.html"><i class="fa fa-play-circle"></i> Feature Demo</a>
-            <div class="dropdown-divider"></div>
-            <h6 class="dropdown-header"><i class="fa fa-handshake"></i> Contribute</h6>
-            <a class="dropdown-item" href="/contribution.html"><i class="fa fa-edit"></i> Write Article</a>
-            <a class="dropdown-item" href="/todo.html"><i class="fa fa-tasks"></i> ToDo List</a>
-            <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum"><i class="fab fa-github"></i> Develop Features</a>
-            <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum/issues"><i class="fa fa-bug"></i> Report a bug</a>
-          </div>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link btn-group dropdown-toggle" href="/index.html" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-cog"></i> Options</a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <h6 class="dropdown-header">Display Options</h6>
-            <div class="form-check dropdown-item">
-              <label class="form-check-label">
-                <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox" checked="checked" onchange="Options.changeOption(this)">
-                  Definitions
-              </label>
-            </div>
-            <div class="form-check dropdown-item">
-              <label class="form-check-label">
-                <input class="form-check-input" id="checkbox_example" name="disp_opt" type="checkbox" checked="checked" onchange="Options.changeOption(this)">
-                  Examples
-              </label>
-            </div>
-            <div class="form-check dropdown-item">
-              <label class="form-check-label">
-                <input class="form-check-input" id="checkbox_explanation" name="disp_opt" type="checkbox" checked="checked" onchange="Options.changeOption(this)">
-                  Explanations
-              </label>
-            </div>
-            <div class="form-check dropdown-item">
-              <label class="form-check-label">
-                <input class="form-check-input" id="checkbox_legend" name="disp_opt" type="checkbox" checked="checked" onchange="Options.changeOption(this)">
-                  Legends
-              </label>
-            </div>
-          </div>
-        </li>
-      </ul>
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="/calculator.html"><i class="fa fa-calculator"></i>
+                    Calc</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/sheets.html"><i class="fa fa-file"></i> Sheets</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    <i class="fa fa-info-circle"></i> Info
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="/about.html"><i class="fa fa-question"></i>
+                        About TeX4TUM</a>
+                    <a class="dropdown-item" href="/team.html"><i class="fa fa-users"></i>
+                        Team</a>
+                    <a class="dropdown-item" href="/demo.html"><i class="fa fa-play-circle"></i>
+                        Feature Demo</a>
+                    <div class="dropdown-divider"></div>
+                    <h6 class="dropdown-header"><i class="fa fa-handshake"></i> Contribute</h6>
+                    <a class="dropdown-item" href="/support.html"><i class="fa fa-life-ring"></i>
+                        Support</a>
+                    <a class="dropdown-item" href="/contribution.html"><i class="fa fa-edit"></i>
+                        Write Article</a>
+                    <a class="dropdown-item" href="/todo.html"><i class="fa fa-tasks"></i> ToDo
+                        List</a>
+                    <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum"><i class="fab fa-github"></i>
+                        Develop Features</a>
+                    <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum/issues"><i class="fa fa-bug"></i>
+                        Report a bug</a>
+                    <a class="dropdown-item" href="/contact.html"><i class="fas fa-user-edit"></i>
+                        Contact</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link btn-group dropdown-toggle" href="/index.html"
+                    id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false"><i class="fa fa-cog"></i> Options</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <h6 class="dropdown-header">Display Options</h6>
+                    <div class="form-check dropdown-item">
+                        <label class="form-check-label">
+                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox"
+                                checked="checked" onchange="Options.changeOption(this)">
+                            Definitions
+                        </label>
+                    </div>
+                    <div class="form-check dropdown-item">
+                        <label class="form-check-label">
+                            <input class="form-check-input" id="checkbox_example" name="disp_opt" type="checkbox"
+                                onchange="Options.changeOption(this)">
+                            Examples
+                        </label>
+                    </div>
+                    <div class="form-check dropdown-item">
+                        <label class="form-check-label">
+                            <input class="form-check-input" id="checkbox_explanation" name="disp_opt" type="checkbox"
+                                onchange="Options.changeOption(this)">
+                            Explanations
+                        </label>
+                    </div>
+                    <div class="form-check dropdown-item">
+                        <label class="form-check-label">
+                            <input class="form-check-input" id="checkbox_legend" name="disp_opt" type="checkbox"
+                                onchange="Options.changeOption(this)">
+                            Legends
+                        </label>
+                    </div>
+                </div>
+            </li>
+        </ul>
     </div>
 
 
@@ -157,31 +179,18 @@
 <!-- SI Units -->
 <!--=============================================================== -->
 <!-- KaTeX Tweaks -->
+<!-- \renewcommand{\boldsymbol}[1]{\mathbf{#1}} -->
 <div id="title_def" class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
-<h5 class="card-title text-primary">
-Definition
-</h5>
-<p class="card-text">
-A Matrix is a table of math objects.
-</p>
+<h5 class='card-title text-primary'>Definition</h5>
+<p class='card-text'>A Matrix is a table of math objects.</p>
 </div>
 </div>
 </div>
-<p><span class="LaTeX">${\mathbf{A}}=(a_{ij}) \in \mathbb K^{m\times n}$</span> has <span class="LaTeX">$m$</span> rows (index <span class="LaTeX">$i$</span>) and <span class="LaTeX">$n$</span> columns (index <span class="LaTeX">$j$</span>)</p>
-<h5 class="clp_title text-success" data-toggle="collapse" href="#example1167">
-<i class='fa fa-chart-bar'></i> Example
-</h5>
-<div id='example1167' class='example collapse'>
-<div class='card border-success mb-1'>
-<div class='card-body'>
-<p class='card-text'>
-A matrix <span class="LaTeX">${\mathbf{A}} \in \mathbb K^{2\times 3}$</span> could be <span class="LaTeX">${\mathbf{A}} = {\begin{bmatrix}  a &amp; b &amp; c \\ d &amp; e &amp; f \end{bmatrix}}$</span>.
-<p>
-</div>
-</div>
-</div>
+<p><span class="LaTeX">${\boldsymbol{A}}=(a_{ij}) \in \mathbb K^{m\times n}$</span> has <span class="LaTeX">$m$</span> rows (index <span class="LaTeX">$i$</span>) and <span class="LaTeX">$n$</span> columns (index <span class="LaTeX">$j$</span>)</p>
+<h5 class='clp_title text-success' data-toggle='collapse' href='#example1109'><i class='fa fa-chart-bar'></i> Example</h5>
+<p><div id='example1109' class='example collapse'><div class='card border-success mb-1'><div class='card-body'><p class='card-text'>A matrix <span class="LaTeX">${\boldsymbol{A}} \in \mathbb K^{2\times 3}$</span> could be <span class="LaTeX">${\boldsymbol{A}} = {\begin{bmatrix}  a &amp; b &amp; c \\ d &amp; e &amp; f \end{bmatrix}}$</span>.<p> </div></div></div></p>
 <table style="width:17%;">
 <colgroup>
 <col style="width: 16%" />
@@ -193,16 +202,83 @@ A matrix <span class="LaTeX">${\mathbf{A}} \in \mathbb K^{2\times 3}$</span> cou
 </thead>
 <tbody>
 <tr class="odd">
-<td><span class="LaTeX">$\dim \mathbb K = n = {\text{rang}}{\mathbf{A}} + \dim{\,\text{ker}}{\mathbf{A}}$</span></td>
+<td><span class="LaTeX">$\dim \mathbb K = n = {\text{rang}}{\boldsymbol{A}} + \dim{\,\text{ker}}{\boldsymbol{A}}$</span></td>
 </tr>
 <tr class="even">
-<td><span class="LaTeX">${\text{rang}}{\mathbf{A}} = {\text{rang}}{\mathbf{A}}^{\top}$</span></td>
+<td><span class="LaTeX">${\text{rang}}{\boldsymbol{A}} = {\text{rang}}{\boldsymbol{A}}^{\top}$</span></td>
 </tr>
 </tbody>
 </table>
+<h2 id="table-of-contents"><i class="fa fa-list-ul"></i> Table of Contents</h2>
+<ul>
+<li><a href="#calculations">Calculations</a></li>
+<li><a href="#quadratic-matrices">Quadratic Matrices</a></li>
+<li><a href="#special-22-matrices">Special 2×2 Matrices</a></li>
+</ul>
 <h2 id="calculations">Calculations</h2>
-<div style="white-space: pre-line;"><span class="LaTeX">$({\mathbf{A}} + {\mathbf{B}})^\top = {\mathbf{A}}^\top + {\mathbf{B}}^\top$</span> | <span class="LaTeX">$({\mathbf{A}} \cdot {\mathbf{B}})^\top = {\mathbf{B}}^\top \cdot {\mathbf{A}}^\top$</span> |
-<span class="LaTeX">${({\mathbf{A}}^\top)}^{-1} = {({\mathbf{A}}^{-1})}^\top$</span> | <span class="LaTeX">$({\mathbf{A}} \cdot {\mathbf{B}})^{-1} = {\mathbf{B}}^{-1}{\mathbf{A}}^{-1}$</span> |</div>
+<p>For two general matrices <span class="LaTeX">${\boldsymbol{A}}$</span> and <span class="LaTeX">${\boldsymbol{B}}$</span>:</p>
+<ul>
+<li><span class="LaTeX">$({\boldsymbol{A}} + {\boldsymbol{B}})^\top = {\boldsymbol{A}}^\top + {\boldsymbol{B}}^\top$</span></li>
+<li><span class="LaTeX">$({\boldsymbol{A}} \cdot {\boldsymbol{B}})^\top = {\boldsymbol{B}}^\top \cdot {\boldsymbol{A}}^\top$</span></li>
+<li><span class="LaTeX">${({\boldsymbol{A}}^\top)}^{-1} = {({\boldsymbol{A}}^{-1})}^\top$</span></li>
+<li><span class="LaTeX">$({\boldsymbol{A}} \cdot {\boldsymbol{B}})^{-1} = {\boldsymbol{B}}^{-1}{\boldsymbol{A}}^{-1}$</span></li>
+</ul>
+<h3 id="norms">Norms</h3>
+<p><span class="LaTeX">${\boldsymbol{A}} \in {\mathop{\mathbb K}}^{m \times n}, i\in[1,m], j\in[1,n]$</span></p>
+<table style="width:31%;">
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 8%" />
+<col style="width: 9%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Norm</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Gesamtnorm</td>
+<td><span class="LaTeX">${\left\lVert{{\boldsymbol{A}}}\right\rVert}_G$</span></td>
+<td><span class="LaTeX">$\sqrt{mn}\cdot{\tiny\begin{matrix}\ \normalsize \max \[1em] \scriptsize i,j \end{matrix}}{\left\vert{a_{ij}}\right\vert}$</span></td>
+</tr>
+<tr class="even">
+<td>Zeilennorm (max Zeilensumme)</td>
+<td><span class="LaTeX">${\left\lVert{{\boldsymbol{A}}}\right\rVert}_\infty$</span></td>
+<td><span class="LaTeX">$= {\tiny\begin{matrix}\ \normalsize \max \[1em] \scriptsize i \end{matrix}}\sum\limits_{j=1}^n{\left\vert{a_{ij}}\right\vert}$</span></td>
+</tr>
+<tr class="odd">
+<td>Spaltennorm (max Spaltensumme)</td>
+<td><span class="LaTeX">${\left\lVert{{\boldsymbol{A}}}\right\rVert}_1$</span></td>
+<td><span class="LaTeX">$= {\tiny\begin{matrix}\ \normalsize \max \[1em] \scriptsize j \end{matrix}}\sum\limits_{i=1}^m{\left\vert{a_{ij}}\right\vert}$</span></td>
+</tr>
+<tr class="even">
+<td><span class="LaTeX">${\tiny\begin{matrix}\ \normalsize \text{Frobeniusnorm} \[1em] \scriptsize \text{euklidische Norm} \end{matrix}}$</span></td>
+<td><span class="LaTeX">${\left\lVert{{\boldsymbol{A}}}\right\rVert}_E$</span></td>
+<td><span class="LaTeX">$= \sqrt{\sum\limits_{i=1}\sum\limits_{j=1}{\left\vert{a_{ij}}\right\vert}^2}$</span></td>
+</tr>
+<tr class="odd">
+<td>Spektralnorm, Hilbertnorm</td>
+<td><span class="LaTeX">${\left\lVert{{\boldsymbol{A}}}\right\rVert}_\lambda$</span></td>
+<td><span class="LaTeX">$= \sqrt{\lambda_\text{max}({\boldsymbol{A}}^\top\cdot{\boldsymbol{A}})}$</span></td>
+</tr>
+</tbody>
+</table>
+<p><span class="LaTeX">$\left({\left\lVert{{\boldsymbol{A}}}\right\rVert}_M = \frac{{\left\lVert{{\boldsymbol{A}}}\right\rVert}_G}{\sqrt{mn}}\right)$</span></p>
+<h3 id="eigenvalues-and-eigenvectors">Eigenvalues and Eigenvectors</h3>
+<p>Eigenvalues: <span class="LaTeX">$\det({\boldsymbol{A}} - \lambda {\boldsymbol{1}}) = 0$</span> <br> Eigenvectors: <span class="LaTeX">${\,\text{ker}}({\boldsymbol{A}} - \lambda_i {\boldsymbol{1}}) = {\boldsymbol v}_i$</span></p>
+<div data-toggle="collapse" href="#eq_0">
+<p><span class="LaTeX">$${\boldsymbol{A}} {\boldsymbol v} = \lambda {\boldsymbol v}$ \qquad $\det {\boldsymbol{A}} = \prod \lambda_i$ \qquad\ ${\,\text{Sp}}{\boldsymbol{A}} = \sum a_{ii} = \sum \lambda_i$$</span></p>
+</div>
+<div id="eq_0" class="legend collapse">
+<div class="card border-info w-75 mx-auto">
+<div class="p-1 small">
+<p>with the Eigenvalue <span class="LaTeX">$\lambda$</span> and the Eigenvector <span class="LaTeX">${\boldsymbol v}$</span>.</p>
+</div>
+</div>
+</div>
 <h2 id="quadratic-matrices">Quadratic Matrices</h2>
 <table style="width:25%;">
 <colgroup>
@@ -218,51 +294,73 @@ A matrix <span class="LaTeX">${\mathbf{A}} \in \mathbb K^{2\times 3}$</span> cou
 <tbody>
 <tr class="odd">
 <td>regular</td>
-<td><span class="LaTeX">$\Leftrightarrow \det ({\mathbf{A}}) \ne 0 \Leftrightarrow {\text{rang}}{\mathbf{A}} = n$</span></td>
+<td><span class="LaTeX">$\Leftrightarrow \det ({\boldsymbol{A}}) \ne 0 \Leftrightarrow {\text{rang}}{\boldsymbol{A}} = n$</span></td>
 </tr>
 <tr class="even">
 <td>singular</td>
-<td><span class="LaTeX">$\Leftrightarrow \det ({\mathbf{A}}) = 0 \Leftrightarrow {\text{rang}}{\mathbf{A}} \ne n$</span></td>
+<td><span class="LaTeX">$\Leftrightarrow \det ({\boldsymbol{A}}) = 0 \Leftrightarrow {\text{rang}}{\boldsymbol{A}} \ne n$</span></td>
 </tr>
 <tr class="odd">
 <td>orthogonal</td>
-<td><span class="LaTeX">$\Leftrightarrow {\mathbf{A}}^\top={\mathbf{A}}^{-1} {\Rightarrow}\det({\mathbf{A}}) = \pm 1$</span></td>
+<td><span class="LaTeX">$\Leftrightarrow {\boldsymbol{A}}^\top={\boldsymbol{A}}^{-1} {\Rightarrow}\det({\boldsymbol{A}}) = \pm 1$</span></td>
 </tr>
 <tr class="even">
 <td>symmetric</td>
-<td><span class="LaTeX">${\mathbf{A}}={\mathbf{A}}^\top$</span> schiefsymmetrisch: <span class="LaTeX">${\mathbf{A}}=-{\mathbf{A}}^\top$</span></td>
+<td><span class="LaTeX">${\boldsymbol{A}}={\boldsymbol{A}}^\top$</span> schiefsymmetrisch: <span class="LaTeX">${\boldsymbol{A}}=-{\boldsymbol{A}}^\top$</span></td>
 </tr>
 </tbody>
 </table>
+<h3 id="determinant">Determinant</h3>
+<p>The determinant of a square matrix <span class="LaTeX">${\boldsymbol{A}}$</span> is denoted <span class="LaTeX">$\det({\boldsymbol{A}})$</span>, <span class="LaTeX">$\det {\boldsymbol{A}}$</span>, or <span class="LaTeX">$|A|$</span>. Geometrically, it can be viewed as the volume scaling factor of the linear transformation described by the matrix.</p>
+<p>If <span class="LaTeX">${\boldsymbol{A}}$</span> has <span class="LaTeX">$\ge 2$</span> lin. dependent rows/columns <span class="LaTeX">$\Rightarrow |A|=0$</span>.</p>
+<p><span class="LaTeX">$$\det\begin{pmatrix}A&amp;0\C&amp;D\end{pmatrix}=\det\begin{pmatrix}A&amp;B\0&amp;D\end{pmatrix}=\det(A)\cdot\det(D)$$</span></p>
+<p><span class="LaTeX">$|A|=\sum\limits_{i=1}^n (-1)^{i+j} \cdot a_{ij} \cdot |A_{ij}|$</span></p>
+<h3 id="inverse-matrix">Inverse Matrix</h3>
+<p>An <span class="LaTeX">$n \times n$</span> square matrix <span class="LaTeX">${\boldsymbol{A}}$</span> is called invertible (nonsingular) if there exists an <span class="LaTeX">$n \times n$</span> square matrix <span class="LaTeX">${\boldsymbol{B}}$</span> such that</p>
+<p><span class="LaTeX">$${\boldsymbol{A}} \cdot {\boldsymbol{B}} = {\boldsymbol{B}} \cdot {\boldsymbol{A}} = {\boldsymbol{1}}_n$$</span></p>
+<h5 class='clp_title text-warning' data-toggle='collapse' href='#expl1034'><i class='fa fa-comment-dots'></i> Explanation</h5>
+<p><div id='expl1034' class='explanation collapse'><div class='card border-warning mb-1'><div class='card-body'> <p class='card-text'> Eine Matrix heißt singulär, wenn ihre Spaltenvektoren linear abhängig voneinander sind. Daraus folgt, dass der Bildraum mindestens eine Dimension weniger hat als der Abbildungsraum, da die Spaltenvektoren den <span class="LaTeX">${\mathop{\mathbb R}}^n$</span> nicht mehr erzeugen können und keine Basis mehr zum <span class="LaTeX">${\mathop{\mathbb R}}^n$</span> darstellen. Hat man nun einen Bildpunkt im <span class="LaTeX">${\mathop{\mathbb R}}^{n-1}$</span> gegeben, so lässt sich nicht mehr sagen, von wo aus dem <span class="LaTeX">${\mathop{\mathbb R}}^n$</span> dieser Punkt auf den Bildraum <span class="LaTeX">${\mathop{\mathbb R}}^{n-1}$</span> abgebildet worden ist, da er ja durch unendlich verschiedene Linearkombination der Spaltenvektoren erreicht werden kann. Die Abbildung lässt sich deshalb nicht mehr umkehren, die Matrix ist nicht invertierbar, die Determinante ist null. <p> </div></div></div></p>
 <h3 id="rotation-matrix-of-mathopmathbb-r3">Rotation Matrix of <span class="LaTeX">${\mathop{\mathbb R}}^3$</span></h3>
 <p>for rotations in a right-handed coordinate system <span class="LaTeX">$XYZ$</span>.</p>
 <p><span class="LaTeX">$$\begin{matrix} 
 \begin{bmatrix}
-1 &amp;   0         &amp; 0           \\
-0 &amp; \cos \alpha &amp; -\sin \alpha \\
+1 &amp;   0         &amp; 0           \
+0 &amp; \cos \alpha &amp; -\sin \alpha \
 0 &amp; \sin \alpha &amp;  \cos \alpha
 \end{bmatrix} &amp;
 \begin{bmatrix}
-\cos \alpha  &amp; 0 &amp; \sin \alpha \\
-   0         &amp; 1 &amp;  0          \\
+\cos \alpha  &amp; 0 &amp; \sin \alpha \
+   0         &amp; 1 &amp;  0          \
 -\sin \alpha &amp; 0 &amp; \cos \alpha
 \end{bmatrix} &amp;
 \begin{bmatrix}
-\cos \alpha &amp;-\sin \alpha &amp; 0\\
-\sin \alpha &amp; \cos \alpha &amp; 0\\
+\cos \alpha &amp;-\sin \alpha &amp; 0\
+\sin \alpha &amp; \cos \alpha &amp; 0\
     0       &amp;     0       &amp; 1
-\end{bmatrix} \\
-{\mathbf{R}}_x(\alpha) &amp;
-{\mathbf{R}}_y(\alpha) &amp;
-{\mathbf{R}}_{z}(\alpha)
+\end{bmatrix} \
+{\boldsymbol{R}}_x(\alpha) &amp;
+{\boldsymbol{R}}_y(\alpha) &amp;
+{\boldsymbol{R}}_{z}(\alpha)
 \end{matrix}
 $$</span></p>
-<h2 id="eigenvalues-and-eigenvectors">Eigenvalues and Eigenvectors</h2>
-<p>Eigenvalues: <span class="LaTeX">$\det({\mathbf{A}} - \lambda {\mathbf{1}}) = 0$</span> <br> Eigenvectors: <span class="LaTeX">${\,\text{ker}}({\mathbf{A}} - \lambda_i {\mathbf{1}}) = \vec v_i$</span></p>
-<p><span class="LaTeX">$${\mathbf{A}} \vec v = \lambda \vec v$ \qquad $\det {\mathbf{A}} = \prod \lambda_i$ \qquad\ ${\,\text{Sp}}{\mathbf{A}} = \sum a_{ii} = \sum \lambda_i$$</span></p>
+<h5 class='clp_title text-warning' data-toggle='collapse' href='#expl1035'><i class='fa fa-comment-dots'></i> Explanation</h5>
+<p><div id='expl1035' class='explanation collapse'><div class='card border-warning mb-1'><div class='card-body'> <p class='card-text'> Bei einer Rotationsmatrix stehen die Spaltenvektoren senkrecht aufeinander (orthogonal). Deshalb ist der Bildraum nicht verzerrt da nur die Richtung der Einheitsvektoren verändert wird, allerdings nicht ihre Stellung zueinander. Somit entspricht eine orthogonale Abbildungsmatrix einer Drehung des Koordinatensystems in eine andere Richtung (bezüglich <span class="LaTeX">$n$</span> Freiheitsgraden). <p> </div></div></div></p>
 <h2 id="special-22-matrices">Special 2×2 Matrices</h2>
-<p><span class="LaTeX">$\det({\mathbf{A}}) = ad-bc$</span>   <span class="LaTeX">${\,\text{Sp}}({\mathbf{A}}) = a+d$</span> <br> <span class="LaTeX">${\begin{bmatrix} a &amp; b \ c &amp; d \end{bmatrix}}^{-1} = \frac{1}{\det {\mathbf{A}}} {\begin{bmatrix} d &amp; -b\ -c&amp; a \end{bmatrix}}$</span></p>
-<p><span class="LaTeX">$\lambda_{1/2} = \frac{{\,\text{Sp}}{\mathbf{A}}}{2} \pm \sqrt{ \left( \frac{{\,\text{Sp}}{\mathbf{A}}}{2} \right)^2 - \det {\mathbf{A}} }$</span></p>
+<p>For a <span class="LaTeX">$2 \times 2$</span> matrix <span class="LaTeX">${\boldsymbol{A}} = {\begin{bmatrix} a &amp; b \ c &amp; d \end{bmatrix}}$</span> the following rules hold:</p>
+<p>Determinant: <span class="LaTeX">$\det({\boldsymbol{A}}) = ad - bc$</span></p>
+<p>Trace (ger. „Spur“): <span class="LaTeX">${\,\text{Sp}}({\boldsymbol{A}}) = a+d$</span></p>
+<p>Inverse: <span class="LaTeX">$\displaystyle{\begin{bmatrix} a &amp; b \ c &amp; d \end{bmatrix}}^{-1} = \frac{1}{\det {\boldsymbol{A}}} {\begin{bmatrix} d &amp; -b \ -c &amp; a \end{bmatrix}}$</span></p>
+<p><strong>Eigenvalues:</strong></p>
+<div data-toggle="collapse" href="#eq_1">
+<p><span class="LaTeX">$$\lambda_{1/2} = \frac{{\,\text{Sp}}{\boldsymbol{A}}}{2} \pm \sqrt{ \left( \frac{{\,\text{Sp}}{\boldsymbol{A}}}{2} \right)^2 - \det {\boldsymbol{A}} }$$</span></p>
+</div>
+<div id="eq_1" class="legend collapse">
+<div class="card border-info w-75 mx-auto">
+<div class="p-1 small">
+<p>with <span class="LaTeX">${\boldsymbol{A}} = {\begin{bmatrix} a &amp; b \ c &amp; d \end{bmatrix}}$</span>, and <span class="LaTeX">${\,\text{Sp}}({\boldsymbol{A}}) = a+d$</span>.</p>
+</div>
+</div>
+</div>
 
 
     </main>
@@ -329,7 +427,7 @@ $$</span></p>
   <script src="/assets/js/options.js"></script>
 
   <!-- KaTeX JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js"></script>
 
   <!-- jQuery (req. for BootStrap) -->
   <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>

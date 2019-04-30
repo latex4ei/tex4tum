@@ -10,7 +10,7 @@
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="http://localhost:4000/op-amp">
+    <link rel="canonical" href="/op-amp">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 
     <!-- KaTeX CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 </head>
 
 
@@ -35,84 +35,106 @@
 
     <!-- sticky left: Logo -->
     <div class="navbar-brand">
-      <a href="/index.html">
-        <img src="/res/img/Logo-inv.png" height="30" alt="Logo">
-      </a>
+        <a href="/index.html">
+            <img src="/res/img/Logo-inv.png" height="30" alt="Logo">
+        </a>
     </div>
 
 
     <!-- sticky right: search bar  -->
     
-    <form class="form-inline ml-auto order-lg-3"  role="search">
-      <div id="search" class="search-container">
-        <input class="form-control search-input w-100" type="search" placeholder="&#xf002; Search (fuzzy)" tabindex="1">
-      <div class="ac-results-wrapper"></div>
-      </div>
+    <form class="form-inline ml-auto order-lg-3" role="search">
+        <div id="search" class="search-container">
+            <input class="form-control search-input w-100" type="search" placeholder="&#xf002; Search (fuzzy)"
+                tabindex="1">
+            <div class="ac-results-wrapper"></div>
+        </div>
     </form>
-   
+    
 
 
     <!-- Toggle button for collapsed items  -->
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
     </button>
 
 
     <!-- Collapsable Items: Links -->
     <div class="collapse navbar-collapse justify-content-start order-6 order-lg-2" id="navbarResponsive">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="/calculator.html"><i class="fa fa-calculator"></i> Calc</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/sheets.html"><i class="fa fa-file"></i> Sheets</a>
-        </li>
-        <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <i class="fa fa-info-circle"></i> Info
-        </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="/about.html"><i class="fa fa-question"></i> About TeX4TUM</a>
-            <a class="dropdown-item" href="/demo.html"><i class="fa fa-play-circle"></i> Feature Demo</a>
-            <div class="dropdown-divider"></div>
-            <h6 class="dropdown-header"><i class="fa fa-handshake"></i> Contribute</h6>
-            <a class="dropdown-item" href="/contribution.html"><i class="fa fa-edit"></i> Write Article</a>
-            <a class="dropdown-item" href="/todo.html"><i class="fa fa-tasks"></i> ToDo List</a>
-            <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum"><i class="fab fa-github"></i> Develop Features</a>
-            <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum/issues"><i class="fa fa-bug"></i> Report a bug</a>
-          </div>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link btn-group dropdown-toggle" href="/index.html" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-cog"></i> Options</a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <h6 class="dropdown-header">Display Options</h6>
-            <div class="form-check dropdown-item">
-              <label class="form-check-label">
-                <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox" checked="checked" onchange="Options.changeOption(this)">
-                  Definitions
-              </label>
-            </div>
-            <div class="form-check dropdown-item">
-              <label class="form-check-label">
-                <input class="form-check-input" id="checkbox_example" name="disp_opt" type="checkbox" checked="checked" onchange="Options.changeOption(this)">
-                  Examples
-              </label>
-            </div>
-            <div class="form-check dropdown-item">
-              <label class="form-check-label">
-                <input class="form-check-input" id="checkbox_explanation" name="disp_opt" type="checkbox" checked="checked" onchange="Options.changeOption(this)">
-                  Explanations
-              </label>
-            </div>
-            <div class="form-check dropdown-item">
-              <label class="form-check-label">
-                <input class="form-check-input" id="checkbox_legend" name="disp_opt" type="checkbox" checked="checked" onchange="Options.changeOption(this)">
-                  Legends
-              </label>
-            </div>
-          </div>
-        </li>
-      </ul>
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="/calculator.html"><i class="fa fa-calculator"></i>
+                    Calc</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/sheets.html"><i class="fa fa-file"></i> Sheets</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    <i class="fa fa-info-circle"></i> Info
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="/about.html"><i class="fa fa-question"></i>
+                        About TeX4TUM</a>
+                    <a class="dropdown-item" href="/team.html"><i class="fa fa-users"></i>
+                        Team</a>
+                    <a class="dropdown-item" href="/demo.html"><i class="fa fa-play-circle"></i>
+                        Feature Demo</a>
+                    <div class="dropdown-divider"></div>
+                    <h6 class="dropdown-header"><i class="fa fa-handshake"></i> Contribute</h6>
+                    <a class="dropdown-item" href="/support.html"><i class="fa fa-life-ring"></i>
+                        Support</a>
+                    <a class="dropdown-item" href="/contribution.html"><i class="fa fa-edit"></i>
+                        Write Article</a>
+                    <a class="dropdown-item" href="/todo.html"><i class="fa fa-tasks"></i> ToDo
+                        List</a>
+                    <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum"><i class="fab fa-github"></i>
+                        Develop Features</a>
+                    <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum/issues"><i class="fa fa-bug"></i>
+                        Report a bug</a>
+                    <a class="dropdown-item" href="/contact.html"><i class="fas fa-user-edit"></i>
+                        Contact</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link btn-group dropdown-toggle" href="/index.html"
+                    id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false"><i class="fa fa-cog"></i> Options</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <h6 class="dropdown-header">Display Options</h6>
+                    <div class="form-check dropdown-item">
+                        <label class="form-check-label">
+                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox"
+                                checked="checked" onchange="Options.changeOption(this)">
+                            Definitions
+                        </label>
+                    </div>
+                    <div class="form-check dropdown-item">
+                        <label class="form-check-label">
+                            <input class="form-check-input" id="checkbox_example" name="disp_opt" type="checkbox"
+                                onchange="Options.changeOption(this)">
+                            Examples
+                        </label>
+                    </div>
+                    <div class="form-check dropdown-item">
+                        <label class="form-check-label">
+                            <input class="form-check-input" id="checkbox_explanation" name="disp_opt" type="checkbox"
+                                onchange="Options.changeOption(this)">
+                            Explanations
+                        </label>
+                    </div>
+                    <div class="form-check dropdown-item">
+                        <label class="form-check-label">
+                            <input class="form-check-input" id="checkbox_legend" name="disp_opt" type="checkbox"
+                                onchange="Options.changeOption(this)">
+                            Legends
+                        </label>
+                    </div>
+                </div>
+            </li>
+        </ul>
     </div>
 
 
@@ -169,13 +191,12 @@
 <!-- SI Units -->
 <!--=============================================================== -->
 <!-- KaTeX Tweaks -->
+<!-- \renewcommand{\boldsymbol}[1]{\mathbf{#1}} -->
 <div class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
-<h5 class="card-title text-primary">
-Definition
-</h5>
-<p class="card-text">
+<h5 class='card-title text-primary'>Definition</h5>
+<p class='card-text'>
 An operational amplifier (short op-amp) is a DC-coupled high-gain electronic voltage amplifier with a differential input and a single-ended output.
 </p>
 </div>
@@ -183,48 +204,60 @@ An operational amplifier (short op-amp) is a DC-coupled high-gain electronic vol
 </div>
 <p>All amplifier circuits have the feedback to the negative input! <br> An Op-Amp does not draw current from the input!</p>
 <h2 id="voltage-followerbuffer">Voltage Follower/Buffer</h2>
-<!--<p> Filename="opamp_follower.svg", path="/res/img/content-images/electrical/opamp_follower.svg" </p>-->
+<!--<p> Filename="opamp_follower.svg", path="/res/img/content-images/electrical/circuits/opamp_follower.svg" </p>-->
 <figure class="figure">
-<img class="figure-img img-fluid" src="/res/img/content-images/electrical/opamp_follower.svg" alt="Voltage Follower"/>
-<figcaption class="figure-caption">
-Voltage Follower
-</figcaption>
+<img class="figure-img img-fluid" style="width: 15em;" src="/res/img/content-images/electrical/circuits/opamp_follower.svg" alt="Voltage Follower"/><figcaption class="figure-caption">Voltage Follower</figcaption>
 </figure>
 <p><span class="LaTeX">$$V_{\mathrm{out}} = V_{\mathrm{in}}$$</span> Provides current at the output without loading the input.</p>
 <h2 id="non-inverting-amplifier">Non-Inverting Amplifier</h2>
-<!--<p> Filename="opamp_noninv.svg", path="/res/img/content-images/electrical/opamp_noninv.svg" </p>-->
+<!--<p> Filename="opamp_noninv.svg", path="/res/img/content-images/electrical/circuits/opamp_noninv.svg" </p>-->
 <figure class="figure">
-<img class="figure-img img-fluid" src="/res/img/content-images/electrical/opamp_noninv.svg" alt="Non-Inverting Amplifier"/>
-<figcaption class="figure-caption">
-Non-Inverting Amplifier
-</figcaption>
+<img class="figure-img img-fluid" style="width: 20em;" src="/res/img/content-images/electrical/circuits/opamp_noninv.svg" alt="Non-Inverting Amplifier"/><figcaption class="figure-caption">Non-Inverting Amplifier</figcaption>
 </figure>
-<p><span class="LaTeX">$V_{\mathrm{out}} = \left(1 + \frac{R_2}{R_1} \right) V_{\mathrm{in}}$</span></p>
+<div data-toggle="collapse" href="#eq_0">
+<p><span class="LaTeX">$$V_{\mathrm{out}} = \left(1 + \frac{R_2}{R_1} \right) V_{\mathrm{in}}$$</span></p>
+</div>
+<div id="eq_0" class="legend collapse">
+<div class="card border-info w-75 mx-auto">
+<div class="p-1 small">
+<p>with resistances <span class="LaTeX">$R_1, R_2 \in {\mathop{\mathbb R}}$</span> and the voltages <span class="LaTeX">$V_{\mathrm{in}}, V_{\mathrm{out}} \in {\mathop{\mathbb R}}$</span>.</p>
+</div>
+</div>
+</div>
 <h2 id="inverting-amplifier">Inverting Amplifier</h2>
-<!--<p> Filename="opamp_inv.svg", path="/res/img/content-images/electrical/opamp_inv.svg" </p>-->
+<!--<p> Filename="opamp_inv.svg", path="/res/img/content-images/electrical/circuits/opamp_inv.svg" </p>-->
 <figure class="figure">
-<img class="figure-img img-fluid" src="/res/img/content-images/electrical/opamp_inv.svg" alt="Inverting Amplifier"/>
-<figcaption class="figure-caption">
-Inverting Amplifier
-</figcaption>
+<img class="figure-img img-fluid" style="width: 18em;" src="/res/img/content-images/electrical/circuits/opamp_inv.svg" alt="Inverting Amplifier"/><figcaption class="figure-caption">Inverting Amplifier</figcaption>
 </figure>
+<div data-toggle="collapse" href="#eq_1">
 <p><span class="LaTeX">$$V_{\mathrm{out}} = -\frac{R_2}{R_1} V_{\mathrm{in}}$$</span></p>
+</div>
+<div id="eq_1" class="legend collapse">
+<div class="card border-info w-75 mx-auto">
+<div class="p-1 small">
+<p>with resistances <span class="LaTeX">$R_1, R_2 \in {\mathop{\mathbb R}}$</span> and the voltages <span class="LaTeX">$V_{\mathrm{in}}, V_{\mathrm{out}} \in {\mathop{\mathbb R}}$</span>.</p>
+</div>
+</div>
+</div>
 <h2 id="differential-amplifier">Differential Amplifier</h2>
-<!--<p> Filename="opamp_diff.svg", path="/res/img/content-images/electrical/opamp_diff.svg" </p>-->
+<!--<p> Filename="opamp_diff.svg", path="/res/img/content-images/electrical/circuits/opamp_diff.svg" </p>-->
 <figure class="figure">
-<img class="figure-img img-fluid" src="/res/img/content-images/electrical/opamp_diff.svg" alt="Differential Amplifier"/>
-<figcaption class="figure-caption">
-Differential Amplifier
-</figcaption>
+<img class="figure-img img-fluid" style="width: 18em;" src="/res/img/content-images/electrical/circuits/opamp_diff.svg" alt="Differential Amplifier"/><figcaption class="figure-caption">Differential Amplifier</figcaption>
 </figure>
-<p><span class="LaTeX">$V_{\mathrm{out}} = \frac{R_2}{R_1}\left(- V_1 + V_2 \frac{R_4}{R_4 + R_3}\right) + \frac{R_4}{R_4 + R_3} V_2$</span></p>
+<div data-toggle="collapse" href="#eq_2">
+<p><span class="LaTeX">$$V_{\mathrm{out}} = \frac{R_2}{R_1}\left(- V_1 + V_2 \frac{R_4}{R_4 + R_3}\right) + \frac{R_4}{R_4 + R_3} V_2$$</span></p>
+</div>
+<div id="eq_2" class="legend collapse">
+<div class="card border-info w-75 mx-auto">
+<div class="p-1 small">
+<p>with resistances <span class="LaTeX">$R_1, R_2, R_3, R_4 \in {\mathop{\mathbb R}}$</span> and the voltages <span class="LaTeX">$V_{\mathrm{in}}, V_{\mathrm{out}} \in {\mathop{\mathbb R}}$</span>.</p>
+</div>
+</div>
+</div>
 <h2 id="schmitt-trigger">Schmitt-Trigger</h2>
-<!--<p> Filename="opamp_schmitt.svg", path="/res/img/content-images/electrical/opamp_schmitt.svg" </p>-->
+<!--<p> Filename="opamp_schmitt.svg", path="/res/img/content-images/electrical/circuits/opamp_schmitt.svg" </p>-->
 <figure class="figure">
-<img class="figure-img img-fluid" src="/res/img/content-images/electrical/opamp_schmitt.svg" alt="Schmitt Trigger"/>
-<figcaption class="figure-caption">
-Schmitt Trigger
-</figcaption>
+<img class="figure-img img-fluid" style="width: 18em;" src="/res/img/content-images/electrical/circuits/opamp_schmitt.svg" alt="Schmitt Trigger"/><figcaption class="figure-caption">Schmitt Trigger</figcaption>
 </figure>
 <p>Offset: <span class="LaTeX">$V_{\mathrm{ref}} \frac{R_2}{R_1 + R_2}$</span><br> <span class="LaTeX">$V^{+} = (V_{in} - V_{out}) \frac{R_4}{R_3 + R_4}$</span><br> Bias: <span class="LaTeX">$\Delta V$</span></p>
 
@@ -293,7 +326,7 @@ Schmitt Trigger
   <script src="/assets/js/options.js"></script>
 
   <!-- KaTeX JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js"></script>
 
   <!-- jQuery (req. for BootStrap) -->
   <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>

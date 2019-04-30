@@ -10,7 +10,7 @@
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="http://localhost:4000/tcp">
+    <link rel="canonical" href="/tcp">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 
     <!-- KaTeX CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 </head>
 
 
@@ -35,84 +35,106 @@
 
     <!-- sticky left: Logo -->
     <div class="navbar-brand">
-      <a href="/index.html">
-        <img src="/res/img/Logo-inv.png" height="30" alt="Logo">
-      </a>
+        <a href="/index.html">
+            <img src="/res/img/Logo-inv.png" height="30" alt="Logo">
+        </a>
     </div>
 
 
     <!-- sticky right: search bar  -->
     
-    <form class="form-inline ml-auto order-lg-3"  role="search">
-      <div id="search" class="search-container">
-        <input class="form-control search-input w-100" type="search" placeholder="&#xf002; Search (fuzzy)" tabindex="1">
-      <div class="ac-results-wrapper"></div>
-      </div>
+    <form class="form-inline ml-auto order-lg-3" role="search">
+        <div id="search" class="search-container">
+            <input class="form-control search-input w-100" type="search" placeholder="&#xf002; Search (fuzzy)"
+                tabindex="1">
+            <div class="ac-results-wrapper"></div>
+        </div>
     </form>
-   
+    
 
 
     <!-- Toggle button for collapsed items  -->
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
     </button>
 
 
     <!-- Collapsable Items: Links -->
     <div class="collapse navbar-collapse justify-content-start order-6 order-lg-2" id="navbarResponsive">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="/calculator.html"><i class="fa fa-calculator"></i> Calc</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/sheets.html"><i class="fa fa-file"></i> Sheets</a>
-        </li>
-        <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <i class="fa fa-info-circle"></i> Info
-        </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="/about.html"><i class="fa fa-question"></i> About TeX4TUM</a>
-            <a class="dropdown-item" href="/demo.html"><i class="fa fa-play-circle"></i> Feature Demo</a>
-            <div class="dropdown-divider"></div>
-            <h6 class="dropdown-header"><i class="fa fa-handshake"></i> Contribute</h6>
-            <a class="dropdown-item" href="/contribution.html"><i class="fa fa-edit"></i> Write Article</a>
-            <a class="dropdown-item" href="/todo.html"><i class="fa fa-tasks"></i> ToDo List</a>
-            <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum"><i class="fab fa-github"></i> Develop Features</a>
-            <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum/issues"><i class="fa fa-bug"></i> Report a bug</a>
-          </div>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link btn-group dropdown-toggle" href="/index.html" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-cog"></i> Options</a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <h6 class="dropdown-header">Display Options</h6>
-            <div class="form-check dropdown-item">
-              <label class="form-check-label">
-                <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox" checked="checked" onchange="Options.changeOption(this)">
-                  Definitions
-              </label>
-            </div>
-            <div class="form-check dropdown-item">
-              <label class="form-check-label">
-                <input class="form-check-input" id="checkbox_example" name="disp_opt" type="checkbox" checked="checked" onchange="Options.changeOption(this)">
-                  Examples
-              </label>
-            </div>
-            <div class="form-check dropdown-item">
-              <label class="form-check-label">
-                <input class="form-check-input" id="checkbox_explanation" name="disp_opt" type="checkbox" checked="checked" onchange="Options.changeOption(this)">
-                  Explanations
-              </label>
-            </div>
-            <div class="form-check dropdown-item">
-              <label class="form-check-label">
-                <input class="form-check-input" id="checkbox_legend" name="disp_opt" type="checkbox" checked="checked" onchange="Options.changeOption(this)">
-                  Legends
-              </label>
-            </div>
-          </div>
-        </li>
-      </ul>
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="/calculator.html"><i class="fa fa-calculator"></i>
+                    Calc</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/sheets.html"><i class="fa fa-file"></i> Sheets</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    <i class="fa fa-info-circle"></i> Info
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="/about.html"><i class="fa fa-question"></i>
+                        About TeX4TUM</a>
+                    <a class="dropdown-item" href="/team.html"><i class="fa fa-users"></i>
+                        Team</a>
+                    <a class="dropdown-item" href="/demo.html"><i class="fa fa-play-circle"></i>
+                        Feature Demo</a>
+                    <div class="dropdown-divider"></div>
+                    <h6 class="dropdown-header"><i class="fa fa-handshake"></i> Contribute</h6>
+                    <a class="dropdown-item" href="/support.html"><i class="fa fa-life-ring"></i>
+                        Support</a>
+                    <a class="dropdown-item" href="/contribution.html"><i class="fa fa-edit"></i>
+                        Write Article</a>
+                    <a class="dropdown-item" href="/todo.html"><i class="fa fa-tasks"></i> ToDo
+                        List</a>
+                    <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum"><i class="fab fa-github"></i>
+                        Develop Features</a>
+                    <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum/issues"><i class="fa fa-bug"></i>
+                        Report a bug</a>
+                    <a class="dropdown-item" href="/contact.html"><i class="fas fa-user-edit"></i>
+                        Contact</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link btn-group dropdown-toggle" href="/index.html"
+                    id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false"><i class="fa fa-cog"></i> Options</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <h6 class="dropdown-header">Display Options</h6>
+                    <div class="form-check dropdown-item">
+                        <label class="form-check-label">
+                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox"
+                                checked="checked" onchange="Options.changeOption(this)">
+                            Definitions
+                        </label>
+                    </div>
+                    <div class="form-check dropdown-item">
+                        <label class="form-check-label">
+                            <input class="form-check-input" id="checkbox_example" name="disp_opt" type="checkbox"
+                                onchange="Options.changeOption(this)">
+                            Examples
+                        </label>
+                    </div>
+                    <div class="form-check dropdown-item">
+                        <label class="form-check-label">
+                            <input class="form-check-input" id="checkbox_explanation" name="disp_opt" type="checkbox"
+                                onchange="Options.changeOption(this)">
+                            Explanations
+                        </label>
+                    </div>
+                    <div class="form-check dropdown-item">
+                        <label class="form-check-label">
+                            <input class="form-check-input" id="checkbox_legend" name="disp_opt" type="checkbox"
+                                onchange="Options.changeOption(this)">
+                            Legends
+                        </label>
+                    </div>
+                </div>
+            </li>
+        </ul>
     </div>
 
 
@@ -144,10 +166,14 @@
 
 <h1><a data-toggle="collapse" href="#title_def" aria-expanded="false" aria-controls="title_def">
   
-  TCP
+  <abbr title="Transmission Control Protocol" >TCP</abbr>
 </a><a class="float-right small" style="font-size: small" href="https://github.com/latex4ei/tex4tum/edit/master/_article/informatics/network/tcp.md">[edit]</a></h1>
 
 <p>
+
+<span class="badge badge-primary text-white">
+  <i class="fas fa-tag"></i> port
+</span>
 
 </p>
 
@@ -157,20 +183,17 @@
 <!-- SI Units -->
 <!--=============================================================== -->
 <!-- KaTeX Tweaks -->
+<!-- \renewcommand{\boldsymbol}[1]{\mathbf{#1}} -->
 <div id="title_def" class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
-<h5 class="card-title text-primary">
-Definition
-</h5>
-<p class="card-text">
-The Transmission Control Protocol (TCP) is one of the main protocols of the Internet protocol suite.
-</p>
+<h5 class='card-title text-primary'>Definition</h5>
+<p class='card-text'>The Transmission Control Protocol (<abbr title="Transmission Control Protocol" >TCP</abbr>) is one of the main protocols of the Internet protocol suite.</p>
 </div>
 </div>
 </div>
 <h2 id="header-format">Header Format</h2>
-<pre><code> 0                   1                   2                   3
+<pre class="diagram"><code> 0                   1                   2                   3
  0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 |          Source Port          |       Destination Port        |
@@ -189,14 +212,54 @@ The Transmission Control Protocol (TCP) is one of the main protocols of the Inte
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 |                             data                              |
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</code></pre>
+<h5 class='clp_title text-warning' data-toggle='collapse' href='#expl1032'><i class='fa fa-comment-dots'></i> Explanation of Header Fields</h5>
+<p><div id='expl1032' class='explanation collapse'><div class='card border-warning mb-1'><div class='card-body'> <p class='card-text'> Source Port : 16 bit source port number.</p>
+<dl>
+<dt>Destination Port</dt>
+<dd>16 bit destination port number.
+</dd>
+<dt>Sequence Number</dt>
+<dd>The 32 bit sequence number of the first data octet in this segment
+</dd>
+<dt>Acknowledgment Number</dt>
+<dd>32 bits. If the ACK control bit is set this field contains the value of the next sequence number the sender of the segment is expecting to receive. Once a connection is established this is always sent.
+</dd>
+<dt>Data Offset</dt>
+<dd>4 bits. The number of 32 bit words in the TCP Header. This indicates where the data begins. The TCP header (even one including options) is an integral number of 32 bits long.
+</dd>
+<dt>Reserved</dt>
+<dd>6 bits. Reserved for future use. Must be zero.
+</dd>
+<dt>Control Bits</dt>
+<dd><p>6 bits (from left to right):</p>
 <ul>
-<li>Source Port (16 bit)</li>
-<li>Destination Port (16 bit)</li>
-<li>Sequence Number (32 bit): The sequence number of the first data octet in this segment</li>
+<li>URG: Urgent Pointer field significant</li>
+<li><abbr title="ACKnowledgement" >ACK</abbr>: Acknowledgment field significant</li>
+<li>PSH: Push Function</li>
+<li>RST: Reset the connection</li>
+<li>SYN: Synchronize sequence numbers</li>
+<li>FIN: No more data from sender</li>
 </ul>
+</dd>
+<dt>Window</dt>
+<dd>16 bits. The number of data octets beginning with the one indicated in the acknowledgment field which the sender of this segment is willing to accept.
+</dd>
+<dt>Checksum</dt>
+<dd>16 bits. The checksum field is the 16 bit one's complement of the one's complement sum of all 16 bit words in the header and text.
+</dd>
+<dt>Options</dt>
+<dd>variable. Options may occupy space at the end of the TCP header and are a multiple of 8 bits in length. All options are included in the checksum. An option may begin on any octet boundary.
+</dd>
+<dt>Padding</dt>
+<dd>variable. The TCP header padding is used to ensure that the TCP header ends and data begins on a 32 bit boundary. The padding is composed of zeros. <p> </div></div></div>
+</dd>
+</dl>
 <h2 id="ports">Ports</h2>
 <p>16 bit number represents the port.</p>
-<p>Ports 0–1023 are “well-known ports”.</p>
+<ul>
+<li>Ports 0–1023 are “well-known ports”.</li>
+<li>Ports 1024–49151 are “registered ports”.</li>
+</ul>
 <table>
 <thead>
 <tr class="header">
@@ -206,16 +269,32 @@ The Transmission Control Protocol (TCP) is one of the main protocols of the Inte
 </thead>
 <tbody>
 <tr class="odd">
-<td>22</td>
-<td><abbr title="Secure Shell" >SSH</abbr> (unix remote)</td>
+<td>20</td>
+<td>FTP Data</td>
+</tr>
+<tr class="even">
+<td>21</td>
+<td>FTP Control</td>
+</tr>
+<tr class="odd">
+<td>23</td>
+<td>Telnet</td>
 </tr>
 <tr class="even">
 <td>25</td>
 <td>SMTP (outgoing mail)</td>
 </tr>
 <tr class="odd">
+<td>53</td>
+<td><abbr title="Domain Name System" >DNS</abbr></td>
+</tr>
+<tr class="even">
 <td>80</td>
 <td><abbr title="Hypertext Transfer Protocol" >HTTP</abbr></td>
+</tr>
+<tr class="odd">
+<td>123</td>
+<td>Network Time Protocol</td>
 </tr>
 <tr class="even">
 <td>220</td>
@@ -225,11 +304,30 @@ The Transmission Control Protocol (TCP) is one of the main protocols of the Inte
 <td>443</td>
 <td>HTTPS</td>
 </tr>
+<tr class="even">
+<td>546</td>
+<td>DHCPv6 Client</td>
+</tr>
+<tr class="odd">
+<td>547</td>
+<td>DHCPv6 Server</td>
+</tr>
+<tr class="even">
+<td>989</td>
+<td>FTP Data over TLS/SSL</td>
+</tr>
+<tr class="odd">
+<td>990</td>
+<td>FTP Control over TLS/SSL</td>
+</tr>
 </tbody>
 </table>
 <h2 id="references">References</h2>
 <ul>
-<li><a href="https://tools.ietf.org/html/rfc793">IETF: RFC 793</a></li>
+<li><a href="https://tools.ietf.org/html/rfc793">IETF: RFC 793, Transmission Control Protocol</a></li>
+<li><a href="https://tools.ietf.org/html/rfc1700">IETF: RFC 1700, Assigned Numbers</a></li>
+<li><p><a href="https://www.iana.org">Internet Assigned Numbers Authority (IANA)</a></p></li>
+<li><p><a href="https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers">Wikipedia: List of Ports</a></p></li>
 </ul>
 
 
@@ -297,7 +395,7 @@ The Transmission Control Protocol (TCP) is one of the main protocols of the Inte
   <script src="/assets/js/options.js"></script>
 
   <!-- KaTeX JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js"></script>
 
   <!-- jQuery (req. for BootStrap) -->
   <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>

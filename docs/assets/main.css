@@ -14,6 +14,12 @@ main h2 {
 main h3 {
   margin-top: 1.5em; }
 
+main h4 {
+  margin-top: 1.0em; }
+
+main h5 {
+  margin-top: 0.7em; }
+
 main table {
   width: auto; }
 
@@ -6274,7 +6280,7 @@ dl, dd, ol, ul, figure, footer {
  */
 h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
-ul, ol, dl, figure,
+ul, ol, dl, dd, figure,
 .highlight {
   margin-bottom: 15px; }
 
@@ -6354,7 +6360,14 @@ h2 {
 
 h3 {
   font-family: Helvetica, Arial, sans;
-  font-size: 1.3em;
+  font-size: 1.4em;
+  margin-bottom: 0.1em;
+  margin-top: 1.0em; }
+
+h4 {
+  font-family: Helvetica, Arial, sans;
+  font-size: 1.1em;
+  font-weight: bold;
   margin-bottom: 0.1em;
   margin-top: 1.0em; }
 
@@ -6374,6 +6387,9 @@ pre {
     display: block;
     padding: .5rem 1rem;
     white-space: pre; }
+
+pre.diagram {
+  line-height: 1.0rem; }
 
 input[type="checkbox"] {
   height: 1rem;

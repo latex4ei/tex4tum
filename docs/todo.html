@@ -10,7 +10,7 @@
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="http://localhost:4000/todo">
+    <link rel="canonical" href="/todo">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 
     <!-- KaTeX CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 </head>
 
 
@@ -35,84 +35,106 @@
 
     <!-- sticky left: Logo -->
     <div class="navbar-brand">
-      <a href="/index.html">
-        <img src="/res/img/Logo-inv.png" height="30" alt="Logo">
-      </a>
+        <a href="/index.html">
+            <img src="/res/img/Logo-inv.png" height="30" alt="Logo">
+        </a>
     </div>
 
 
     <!-- sticky right: search bar  -->
     
-    <form class="form-inline ml-auto order-lg-3"  role="search">
-      <div id="search" class="search-container">
-        <input class="form-control search-input w-100" type="search" placeholder="&#xf002; Search (fuzzy)" tabindex="1">
-      <div class="ac-results-wrapper"></div>
-      </div>
+    <form class="form-inline ml-auto order-lg-3" role="search">
+        <div id="search" class="search-container">
+            <input class="form-control search-input w-100" type="search" placeholder="&#xf002; Search (fuzzy)"
+                tabindex="1">
+            <div class="ac-results-wrapper"></div>
+        </div>
     </form>
-   
+    
 
 
     <!-- Toggle button for collapsed items  -->
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
     </button>
 
 
     <!-- Collapsable Items: Links -->
     <div class="collapse navbar-collapse justify-content-start order-6 order-lg-2" id="navbarResponsive">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="/calculator.html"><i class="fa fa-calculator"></i> Calc</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/sheets.html"><i class="fa fa-file"></i> Sheets</a>
-        </li>
-        <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <i class="fa fa-info-circle"></i> Info
-        </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="/about.html"><i class="fa fa-question"></i> About TeX4TUM</a>
-            <a class="dropdown-item" href="/demo.html"><i class="fa fa-play-circle"></i> Feature Demo</a>
-            <div class="dropdown-divider"></div>
-            <h6 class="dropdown-header"><i class="fa fa-handshake"></i> Contribute</h6>
-            <a class="dropdown-item" href="/contribution.html"><i class="fa fa-edit"></i> Write Article</a>
-            <a class="dropdown-item" href="/todo.html"><i class="fa fa-tasks"></i> ToDo List</a>
-            <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum"><i class="fab fa-github"></i> Develop Features</a>
-            <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum/issues"><i class="fa fa-bug"></i> Report a bug</a>
-          </div>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link btn-group dropdown-toggle" href="/index.html" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-cog"></i> Options</a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <h6 class="dropdown-header">Display Options</h6>
-            <div class="form-check dropdown-item">
-              <label class="form-check-label">
-                <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox" checked="checked" onchange="Options.changeOption(this)">
-                  Definitions
-              </label>
-            </div>
-            <div class="form-check dropdown-item">
-              <label class="form-check-label">
-                <input class="form-check-input" id="checkbox_example" name="disp_opt" type="checkbox" checked="checked" onchange="Options.changeOption(this)">
-                  Examples
-              </label>
-            </div>
-            <div class="form-check dropdown-item">
-              <label class="form-check-label">
-                <input class="form-check-input" id="checkbox_explanation" name="disp_opt" type="checkbox" checked="checked" onchange="Options.changeOption(this)">
-                  Explanations
-              </label>
-            </div>
-            <div class="form-check dropdown-item">
-              <label class="form-check-label">
-                <input class="form-check-input" id="checkbox_legend" name="disp_opt" type="checkbox" checked="checked" onchange="Options.changeOption(this)">
-                  Legends
-              </label>
-            </div>
-          </div>
-        </li>
-      </ul>
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="/calculator.html"><i class="fa fa-calculator"></i>
+                    Calc</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/sheets.html"><i class="fa fa-file"></i> Sheets</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    <i class="fa fa-info-circle"></i> Info
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="/about.html"><i class="fa fa-question"></i>
+                        About TeX4TUM</a>
+                    <a class="dropdown-item" href="/team.html"><i class="fa fa-users"></i>
+                        Team</a>
+                    <a class="dropdown-item" href="/demo.html"><i class="fa fa-play-circle"></i>
+                        Feature Demo</a>
+                    <div class="dropdown-divider"></div>
+                    <h6 class="dropdown-header"><i class="fa fa-handshake"></i> Contribute</h6>
+                    <a class="dropdown-item" href="/support.html"><i class="fa fa-life-ring"></i>
+                        Support</a>
+                    <a class="dropdown-item" href="/contribution.html"><i class="fa fa-edit"></i>
+                        Write Article</a>
+                    <a class="dropdown-item" href="/todo.html"><i class="fa fa-tasks"></i> ToDo
+                        List</a>
+                    <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum"><i class="fab fa-github"></i>
+                        Develop Features</a>
+                    <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum/issues"><i class="fa fa-bug"></i>
+                        Report a bug</a>
+                    <a class="dropdown-item" href="/contact.html"><i class="fas fa-user-edit"></i>
+                        Contact</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link btn-group dropdown-toggle" href="/index.html"
+                    id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false"><i class="fa fa-cog"></i> Options</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <h6 class="dropdown-header">Display Options</h6>
+                    <div class="form-check dropdown-item">
+                        <label class="form-check-label">
+                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox"
+                                checked="checked" onchange="Options.changeOption(this)">
+                            Definitions
+                        </label>
+                    </div>
+                    <div class="form-check dropdown-item">
+                        <label class="form-check-label">
+                            <input class="form-check-input" id="checkbox_example" name="disp_opt" type="checkbox"
+                                onchange="Options.changeOption(this)">
+                            Examples
+                        </label>
+                    </div>
+                    <div class="form-check dropdown-item">
+                        <label class="form-check-label">
+                            <input class="form-check-input" id="checkbox_explanation" name="disp_opt" type="checkbox"
+                                onchange="Options.changeOption(this)">
+                            Explanations
+                        </label>
+                    </div>
+                    <div class="form-check dropdown-item">
+                        <label class="form-check-label">
+                            <input class="form-check-input" id="checkbox_legend" name="disp_opt" type="checkbox"
+                                onchange="Options.changeOption(this)">
+                            Legends
+                        </label>
+                    </div>
+                </div>
+            </li>
+        </ul>
     </div>
 
 
@@ -141,15 +163,12 @@
 <!-- SI Units -->
 <!--=============================================================== -->
 <!-- KaTeX Tweaks -->
+<!-- \renewcommand{\boldsymbol}[1]{\mathbf{#1}} -->
 <div id="title_def" class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
-<h5 class="card-title text-primary">
-Definition
-</h5>
-<p class="card-text">
-This pages displays articles that needs improvement.
-</p>
+<h5 class='card-title text-primary'>Definition</h5>
+<p class='card-text'>This pages displays articles that needs improvement.</p>
 </div>
 </div>
 </div>
@@ -158,128 +177,121 @@ This pages displays articles that needs improvement.
 <table class="table table-striped">
 <thead>
 <tr>
-<th>
-ToDo
-</th>
-<th>
-Source File
-</th>
-<th>
-Page Reference
-</th>
+<th>ToDo</th>
+<th>Source File</th>
+<th>Page Reference</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>
-content from &quot;Digitale Schaltungen&quot;
-</td>
-<td>
-transistor.md
-</td>
-<td>
-<a href="/transistor.html">Transistor</a>
-</td>
-</tr>
-<tr>
-<td>
-jvascript that displays different encodings
-</td>
-<td>
-utf8.md
-</td>
-<td>
-<a href="/utf8.html">UTF-8</a>
-</td>
-</tr>
-<tr>
-<td>
-fill list
-</td>
-<td>
-http.md
-</td>
-<td>
-<a href="/http.html">HTTP</a>
-</td>
-</tr>
-<tr>
-<td>
-diagram showing IP, bits and marks network bits
-</td>
-<td>
-ip.md
-</td>
-<td>
-<a href="/ip.html">Internet Protocol</a>
-</td>
-</tr>
-<tr>
-<td>
-write article
-</td>
-<td>
-mac.md
-</td>
-<td>
-<a href="/mac.html">Media Access Control</a>
-</td>
-</tr>
-<tr>
-<td>
-Float umwandlung mit precision fehler
-</td>
-<td>
-numbers.md
-</td>
-<td>
-<a href="/numbers.html">Number Converter</a>
-</td>
-</tr>
-<tr>
-<td>
-explain alpha, beta, and P
-</td>
-<td>
-testing.md
-</td>
-<td>
-<a href="/testing.html">Hypothesis Testing</a>
-</td>
-</tr>
-<tr>
-<td>
-draw image of the process github .md --&gt; jekyll --&gt; scripts --&gt; pandoc --&gt; .html + head.html = webpage
-</td>
-<td>
-about.md
-</td>
-<td>
-<a href="/about.html">About TeX4TUM</a>
-</td>
-</tr>
-<tr>
-<td>
-should we use mermaid?
-</td>
-<td>
-contribution.md
-</td>
-<td>
-<a href="/contribution.html">Contribution</a>
-</td>
-</tr>
-<tr>
-<td>
-This will be written into the todo-list
-</td>
-<td>
-demo.md
-</td>
-<td>
-<a href="/demo.html">Demo of Interactive Features</a>
-</td>
-</tr>
+  
+  <tr>
+  <td>explain how values are read / written</td>
+  <td>ram.md</td>
+  <td><a href="/ram.html">Random Access Memory (<abbr title="Random Access Memory" >RAM</abbr>)</a></td>
+  </tr>
+  
+  <tr>
+  <td>typical values of <abbr title="Random Access Memory" >RAM</abbr> modules</td>
+  <td>ram.md</td>
+  <td><a href="/ram.html">Random Access Memory (<abbr title="Random Access Memory" >RAM</abbr>)</a></td>
+  </tr>
+  
+  <tr>
+  <td>jvascript that displays different encodings</td>
+  <td>utf8.md</td>
+  <td><a href="/utf8.html"><abbr title="Unicode Transformation Format" >UTF</abbr>-8</a></td>
+  </tr>
+  
+  <tr>
+  <td>color escape codes</td>
+  <td>bash.md</td>
+  <td><a href="/bash.html">Bash</a></td>
+  </tr>
+  
+  <tr>
+  <td>list all keywords</td>
+  <td>c.md</td>
+  <td><a href="/c.html">C</a></td>
+  </tr>
+  
+  <tr>
+  <td>diagram explaining the GNU tool chain: linker</td>
+  <td>c.md</td>
+  <td><a href="/c.html">C</a></td>
+  </tr>
+  
+  <tr>
+  <td>fill list</td>
+  <td>http.md</td>
+  <td><a href="/http.html"><abbr title="Hypertext Transfer Protocol" >HTTP</abbr></a></td>
+  </tr>
+  
+  <tr>
+  <td>write article</td>
+  <td>mac.md</td>
+  <td><a href="/mac.html">Media Access Control</a></td>
+  </tr>
+  
+  <tr>
+  <td>adjust <abbr title="JavaScript" >JS</abbr> library for blake2b</td>
+  <td>blake2.md</td>
+  <td><a href="/blake2.html">Blake 2</a></td>
+  </tr>
+  
+  <tr>
+  <td>Float umwandlung mit precision fehler</td>
+  <td>numbers.md</td>
+  <td><a href="/numbers.html">Number Converter</a></td>
+  </tr>
+  
+  <tr>
+  <td>explanation</td>
+  <td>matrix.md</td>
+  <td><a href="/matrix.html">Matrix</a></td>
+  </tr>
+  
+  <tr>
+  <td>adjust svg like this: https://www.thinkcalculator.com/algebra/convolution-calculator.php</td>
+  <td>convolution.md</td>
+  <td><a href="/convolution.html">Convolution</a></td>
+  </tr>
+  
+  <tr>
+  <td>explain alpha, beta, and P</td>
+  <td>testing.md</td>
+  <td><a href="/testing.html">Hypothesis Testing</a></td>
+  </tr>
+  
+  <tr>
+  <td>precision, recall, sensitivity</td>
+  <td>testing.md</td>
+  <td><a href="/testing.html">Hypothesis Testing</a></td>
+  </tr>
+  
+  <tr>
+  <td>draw image of the process github .md --> jekyll --> scripts --> pandoc --> .html + head.html = webpage</td>
+  <td>about.md</td>
+  <td><a href="/about.html">About TeX4TUM</a></td>
+  </tr>
+  
+  <tr>
+  <td>should we use mermaid?</td>
+  <td>contribution.md</td>
+  <td><a href="/contribution.html">Contribution</a></td>
+  </tr>
+  
+  <tr>
+  <td>This will be written into the todo-list</td>
+  <td>demo.md</td>
+  <td><a href="/demo.html">Demo of Interactive Features</a></td>
+  </tr>
+  
+  <tr>
+  <td>place as cards with logo (bootstrap)</td>
+  <td>links.md</td>
+  <td><a href="/links.html">Links</a></td>
+  </tr>
+  
 </tbody>
 </table>
 
@@ -348,7 +360,7 @@ demo.md
   <script src="/assets/js/options.js"></script>
 
   <!-- KaTeX JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js"></script>
 
   <!-- jQuery (req. for BootStrap) -->
   <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>

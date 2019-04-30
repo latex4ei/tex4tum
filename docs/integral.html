@@ -10,7 +10,7 @@
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="http://localhost:4000/integral">
+    <link rel="canonical" href="/integral">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 
     <!-- KaTeX CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 </head>
 
 
@@ -35,84 +35,106 @@
 
     <!-- sticky left: Logo -->
     <div class="navbar-brand">
-      <a href="/index.html">
-        <img src="/res/img/Logo-inv.png" height="30" alt="Logo">
-      </a>
+        <a href="/index.html">
+            <img src="/res/img/Logo-inv.png" height="30" alt="Logo">
+        </a>
     </div>
 
 
     <!-- sticky right: search bar  -->
     
-    <form class="form-inline ml-auto order-lg-3"  role="search">
-      <div id="search" class="search-container">
-        <input class="form-control search-input w-100" type="search" placeholder="&#xf002; Search (fuzzy)" tabindex="1">
-      <div class="ac-results-wrapper"></div>
-      </div>
+    <form class="form-inline ml-auto order-lg-3" role="search">
+        <div id="search" class="search-container">
+            <input class="form-control search-input w-100" type="search" placeholder="&#xf002; Search (fuzzy)"
+                tabindex="1">
+            <div class="ac-results-wrapper"></div>
+        </div>
     </form>
-   
+    
 
 
     <!-- Toggle button for collapsed items  -->
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
     </button>
 
 
     <!-- Collapsable Items: Links -->
     <div class="collapse navbar-collapse justify-content-start order-6 order-lg-2" id="navbarResponsive">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="/calculator.html"><i class="fa fa-calculator"></i> Calc</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/sheets.html"><i class="fa fa-file"></i> Sheets</a>
-        </li>
-        <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <i class="fa fa-info-circle"></i> Info
-        </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="/about.html"><i class="fa fa-question"></i> About TeX4TUM</a>
-            <a class="dropdown-item" href="/demo.html"><i class="fa fa-play-circle"></i> Feature Demo</a>
-            <div class="dropdown-divider"></div>
-            <h6 class="dropdown-header"><i class="fa fa-handshake"></i> Contribute</h6>
-            <a class="dropdown-item" href="/contribution.html"><i class="fa fa-edit"></i> Write Article</a>
-            <a class="dropdown-item" href="/todo.html"><i class="fa fa-tasks"></i> ToDo List</a>
-            <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum"><i class="fab fa-github"></i> Develop Features</a>
-            <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum/issues"><i class="fa fa-bug"></i> Report a bug</a>
-          </div>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link btn-group dropdown-toggle" href="/index.html" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-cog"></i> Options</a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <h6 class="dropdown-header">Display Options</h6>
-            <div class="form-check dropdown-item">
-              <label class="form-check-label">
-                <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox" checked="checked" onchange="Options.changeOption(this)">
-                  Definitions
-              </label>
-            </div>
-            <div class="form-check dropdown-item">
-              <label class="form-check-label">
-                <input class="form-check-input" id="checkbox_example" name="disp_opt" type="checkbox" checked="checked" onchange="Options.changeOption(this)">
-                  Examples
-              </label>
-            </div>
-            <div class="form-check dropdown-item">
-              <label class="form-check-label">
-                <input class="form-check-input" id="checkbox_explanation" name="disp_opt" type="checkbox" checked="checked" onchange="Options.changeOption(this)">
-                  Explanations
-              </label>
-            </div>
-            <div class="form-check dropdown-item">
-              <label class="form-check-label">
-                <input class="form-check-input" id="checkbox_legend" name="disp_opt" type="checkbox" checked="checked" onchange="Options.changeOption(this)">
-                  Legends
-              </label>
-            </div>
-          </div>
-        </li>
-      </ul>
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="/calculator.html"><i class="fa fa-calculator"></i>
+                    Calc</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/sheets.html"><i class="fa fa-file"></i> Sheets</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    <i class="fa fa-info-circle"></i> Info
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="/about.html"><i class="fa fa-question"></i>
+                        About TeX4TUM</a>
+                    <a class="dropdown-item" href="/team.html"><i class="fa fa-users"></i>
+                        Team</a>
+                    <a class="dropdown-item" href="/demo.html"><i class="fa fa-play-circle"></i>
+                        Feature Demo</a>
+                    <div class="dropdown-divider"></div>
+                    <h6 class="dropdown-header"><i class="fa fa-handshake"></i> Contribute</h6>
+                    <a class="dropdown-item" href="/support.html"><i class="fa fa-life-ring"></i>
+                        Support</a>
+                    <a class="dropdown-item" href="/contribution.html"><i class="fa fa-edit"></i>
+                        Write Article</a>
+                    <a class="dropdown-item" href="/todo.html"><i class="fa fa-tasks"></i> ToDo
+                        List</a>
+                    <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum"><i class="fab fa-github"></i>
+                        Develop Features</a>
+                    <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum/issues"><i class="fa fa-bug"></i>
+                        Report a bug</a>
+                    <a class="dropdown-item" href="/contact.html"><i class="fas fa-user-edit"></i>
+                        Contact</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link btn-group dropdown-toggle" href="/index.html"
+                    id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false"><i class="fa fa-cog"></i> Options</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <h6 class="dropdown-header">Display Options</h6>
+                    <div class="form-check dropdown-item">
+                        <label class="form-check-label">
+                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox"
+                                checked="checked" onchange="Options.changeOption(this)">
+                            Definitions
+                        </label>
+                    </div>
+                    <div class="form-check dropdown-item">
+                        <label class="form-check-label">
+                            <input class="form-check-input" id="checkbox_example" name="disp_opt" type="checkbox"
+                                onchange="Options.changeOption(this)">
+                            Examples
+                        </label>
+                    </div>
+                    <div class="form-check dropdown-item">
+                        <label class="form-check-label">
+                            <input class="form-check-input" id="checkbox_explanation" name="disp_opt" type="checkbox"
+                                onchange="Options.changeOption(this)">
+                            Explanations
+                        </label>
+                    </div>
+                    <div class="form-check dropdown-item">
+                        <label class="form-check-label">
+                            <input class="form-check-input" id="checkbox_legend" name="disp_opt" type="checkbox"
+                                onchange="Options.changeOption(this)">
+                            Legends
+                        </label>
+                    </div>
+                </div>
+            </li>
+        </ul>
     </div>
 
 
@@ -157,7 +179,54 @@
 <!-- SI Units -->
 <!--=============================================================== -->
 <!-- KaTeX Tweaks -->
-<table>
+<!-- \renewcommand{\boldsymbol}[1]{\mathbf{#1}} -->
+<div id="title_def" class="definition collapse">
+<div class="card border-primary mb-1">
+<div class="card-body">
+<h5 class='card-title text-primary'>Definition</h5>
+<p class='card-text'>An integral is a function $F$ of which a given function $f$ is the derivative. The integral describes displacement, area, volume, and other concepts that arise by calculating the infinite sum of rectangles of infinitesimal width. The symbol $\diff x$ was taken to represent an infinitesimally "small piece" of the independent variable $x$.</p>
+</div>
+</div>
+</div>
+<p><strong>Indefinite integral:</strong></p>
+<div data-toggle="collapse" href="#eq_0">
+<p><span class="LaTeX">$$F(x)=\int f(x){\,\text{d}}x$$</span></p>
+</div>
+<div id="eq_0" class="legend collapse">
+<div class="card border-info w-75 mx-auto">
+<div class="p-1 small">
+<p>with the function <span class="LaTeX">$f$</span> of a real variable <span class="LaTeX">$x$</span>.</p>
+</div>
+</div>
+</div>
+<p><strong>Definite integral:</strong></p>
+<div data-toggle="collapse" href="#eq_1">
+<p><span class="LaTeX">$$\int_{a}^{b}\,f(x){\,\text{d}}x = \left[F(x)\right]_{a}^{b}=F(b)-F(a)$$</span></p>
+</div>
+<div id="eq_1" class="legend collapse">
+<div class="card border-info w-75 mx-auto">
+<div class="p-1 small">
+<p>with the interval <span class="LaTeX">$[a, b]$</span> of the real line.</p>
+</div>
+</div>
+</div>
+<h5 class='clp_title text-success' data-toggle='collapse' href='#example1111'><i class='fa fa-chart-bar'></i> Example</h5>
+<p><div id='example1111' class='example collapse'><div class='card border-success mb-1'><div class='card-body'><p class='card-text'>Given <span class="LaTeX">$f(x) = x^2$</span>, then <span class="LaTeX">$\int_1^2 x^2 {\,\text{d}}x = \left[ \frac{1}{3}x^3 \right]_1^2 = \frac{8}{3} - \frac{1}{3} = \frac{7}{3} = 2 \frac{1}{3}$</span><p> </div></div></div></p>
+<h2 id="table-of-contents"><i class="fa fa-list-ul"></i> Table of Contents</h2>
+<ul>
+<li><a href="#common-integrals">Common Integrals</a></li>
+<li><a href="#trigonometry">Trigonometry</a></li>
+<li><a href="#line-integrals">Line Integrals</a></li>
+<li><a href="#surface-integrals">Surface Integrals</a></li>
+<li><a href="#integral-rules">Integral Rules</a></li>
+</ul>
+<h2 id="common-integrals">Common Integrals</h2>
+<table style="width:43%;">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 12%" />
+<col style="width: 13%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th><span class="LaTeX">$F(x) - C$</span></th>
@@ -197,24 +266,135 @@
 <td><span class="LaTeX">$\cos(x)$</span></td>
 </tr>
 <tr class="odd">
-<td><span class="LaTeX">$\cosh(x)$</span></td>
-<td><span class="LaTeX">$\sinh(x)$</span></td>
-<td><span class="LaTeX">$\cosh(x)$</span></td>
+<td><span class="LaTeX">$\sin(x)$</span></td>
+<td><span class="LaTeX">$\cos(x)$</span></td>
+<td><span class="LaTeX">$-\sin(x)$</span></td>
 </tr>
 <tr class="even">
 <td><span class="LaTeX">$-\ln {\left\vert{\cos(x)}\right\vert}$</span></td>
 <td><span class="LaTeX">$\tan(x)$</span></td>
 <td><span class="LaTeX">$\frac{1}{\cos^2(x)}$</span></td>
 </tr>
+<tr class="odd">
+<td><span class="LaTeX">$\ln {\left\vert{\sin(x)}\right\vert}$</span></td>
+<td><span class="LaTeX">$\cot(x)$</span></td>
+<td><span class="LaTeX">$\frac{-1}{\sin^2(x)}$</span></td>
+</tr>
+<tr class="even">
+<td><span class="LaTeX">$x\arcsin (x)+\sqrt{1-x^2}$</span></td>
+<td><span class="LaTeX">$\arcsin(x)$</span></td>
+<td><span class="LaTeX">$\frac{1}{\sqrt{1-x^2}}$</span></td>
+</tr>
+<tr class="odd">
+<td><span class="LaTeX">$x\arccos (x)-\sqrt{1-x^2}$</span></td>
+<td><span class="LaTeX">$\arccos(x)$</span></td>
+<td><span class="LaTeX">$-\frac{1}{\sqrt{1-x^2}}$</span></td>
+</tr>
+<tr class="even">
+<td><span class="LaTeX">$x\arctan (x)-\frac{1}{2} \ln {\left\vert{1+ x^2}\right\vert}$</span></td>
+<td><span class="LaTeX">$\arctan(x)$</span></td>
+<td><span class="LaTeX">$\frac{1}{1+x^2}$</span></td>
+</tr>
+<tr class="odd">
+<td><span class="LaTeX">$x\arctan (x)+\frac{1}{2} \ln {\left\vert{1+ x^2}\right\vert}$</span></td>
+<td><span class="LaTeX">${\text{arccot}}(x)$</span></td>
+<td><span class="LaTeX">$-\frac{1}{1+x^2}$</span></td>
+</tr>
+<tr class="even">
+<td><span class="LaTeX">$\cosh(x)$</span></td>
+<td><span class="LaTeX">$\sinh(x)$</span></td>
+<td><span class="LaTeX">$\cosh (x)$</span></td>
+</tr>
+<tr class="odd">
+<td><span class="LaTeX">$\sinh(x)$</span></td>
+<td><span class="LaTeX">$\cosh(x)$</span></td>
+<td><span class="LaTeX">$\sinh (x)$</span></td>
+</tr>
 </tbody>
 </table>
 <h2 id="trigonometry">Trigonometry</h2>
 <p><span class="LaTeX">$\int x \cos(x) {\,\text{d}}x = \cos(x) + x \sin(x)$</span><br> <span class="LaTeX">$\int x \sin(x) {\,\text{d}}x = \sin(x) - x \cos(x)$</span><br> <span class="LaTeX">$\int \sin^2(x) {\,\text{d}}x = \frac12 \bigl(x - \sin(x)\cos(x) \bigr)$</span><br> <span class="LaTeX">$\int \cos^2(x) {\,\text{d}}x = \frac12 \bigl(x + \sin(x)\cos(x) \bigr)$</span><br> <span class="LaTeX">$\int \cos(x)\sin(x) = -\frac12 \cos^2(x)$</span></p>
+<h2 id="line-integrals">Line Integrals</h2>
+<p>Given a curve <span class="LaTeX">${\boldsymbol \gamma}:[a,b] \rightarrow {\mathop{\mathbb R}}^n, t \mapsto {\boldsymbol \gamma}(t)$</span>.</p>
+<div class="card tabbox">
+<div class="card-header">
+<ul class="nav nav-tabs card-header-tabs ml-0" role="tablist"><li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#checkboxid-0" role="tab">Scalar field</a></li>
+<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#checkboxid-1" role="tab">Vector field</a></li>
+</ul>
+</div>
+<div class="card-body">
+<div class="tab-content">
+<div id="checkboxid-0" class="tab-pane active" role="tabpanel">
+<div data-toggle="collapse" href="#eq_2">
+<p><span class="LaTeX">$$\int\limits_\gamma f {\,\text{d}}s := \int\limits^b_a f\bigl({\boldsymbol \gamma(t)}\bigr) \cdot {\left\lVert{{\boldsymbol  {\dot{\gamma}} }(t)}\right\rVert} {\,\text{d}}t$$</span></p>
+</div>
+<div id="eq_2" class="legend collapse">
+<div class="card border-info w-75 mx-auto">
+<div class="p-1 small">
+<p>with the scalar field <span class="LaTeX">$f({\boldsymbol x})$</span> along a curve <span class="LaTeX">${\boldsymbol \gamma}(t)$</span> and the elementary arc length <span class="LaTeX">${\,\text{d}}s$</span>.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="checkboxid-1" class="tab-pane" role="tabpanel">
+<div data-toggle="collapse" href="#eq_3">
+<p><span class="LaTeX">$$\int {\boldsymbol v} {\pmb{\cdot}}{\,\text{d}}{\boldsymbol s} := \int\limits^b_a {\boldsymbol v} \bigl({\boldsymbol \gamma}(t)\bigr)^\top \boldsymbol \cdot {\boldsymbol  {\dot{\gamma}} }(t) \ {\,\text{d}}t$$</span></p>
+</div>
+<div id="eq_3" class="legend collapse">
+<div class="card border-info w-75 mx-auto">
+<div class="p-1 small">
+<p>with the vector field <span class="LaTeX">${\boldsymbol v}({\boldsymbol x})$</span>, the curve <span class="LaTeX">${\boldsymbol \gamma}$</span>, and <span class="LaTeX">${\boldsymbol x}, {\boldsymbol v}, {\boldsymbol \gamma} \in {\mathop{\mathbb R}}^n$</span>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p></br></p>
+<h2 id="surface-integrals">Surface Integrals</h2>
+<p>Given a surface <span class="LaTeX">${\boldsymbol \phi}: B \subseteq {\mathop{\mathbb R}}^2 \rightarrow {\mathop{\mathbb R}}^3, (u,w) \mapsto {\boldsymbol \phi}(u,w)$</span>.</p>
+<div class="card tabbox">
+<div class="card-header">
+<ul class="nav nav-tabs card-header-tabs ml-0" role="tablist"><li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#checkboxid-2" role="tab">Scalar field</a></li>
+<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#checkboxid-3" role="tab">Vector field</a></li>
+</ul>
+</div>
+<div class="card-body">
+<div class="tab-content">
+<div id="checkboxid-2" class="tab-pane active" role="tabpanel">
+<div data-toggle="collapse" href="#eq_4">
+<p><span class="LaTeX">$$\iint_{{\boldsymbol \phi}} f {\,\text{d}}O := \iint_B f\bigl({\boldsymbol \phi}(u,w)\bigr) \cdot {\left\lVert{ {\boldsymbol \phi}_u \times {\boldsymbol \phi}_w }\right\rVert} {\,\text{d}}u {\,\text{d}}w $$</span></p>
+</div>
+<div id="eq_4" class="legend collapse">
+<div class="card border-info w-75 mx-auto">
+<div class="p-1 small">
+<p>with the scalar field <span class="LaTeX">$f:D\subseteq {\mathop{\mathbb R}}^3 \rightarrow {\mathop{\mathbb R}}, {\boldsymbol x} \mapsto f({\boldsymbol x})$</span>, the surface <span class="LaTeX">${\boldsymbol \phi}$</span>.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="checkboxid-3" class="tab-pane" role="tabpanel">
+<div data-toggle="collapse" href="#eq_5">
+<p><span class="LaTeX">$$\iint_{{\boldsymbol \phi}} {\boldsymbol v} {\pmb{\cdot}}{\,\text{d}}{\boldsymbol O} := \iint_B {\boldsymbol v}\Bigl({\boldsymbol \phi}(u,w)\Bigr)^\top {\pmb{\cdot}}\Bigl( {\boldsymbol \phi}_u \times {\boldsymbol \phi}_w \Bigr) {\,\text{d}}u {\,\text{d}}w$$</span></p>
+</div>
+<div id="eq_5" class="legend collapse">
+<div class="card border-info w-75 mx-auto">
+<div class="p-1 small">
+<p>with the vector field <span class="LaTeX">${\boldsymbol v}:D\subseteq {\mathop{\mathbb R}}^3 \rightarrow {\mathop{\mathbb R}}^3, {\boldsymbol x} \mapsto {\boldsymbol v}({\boldsymbol x})$</span>, the curve <span class="LaTeX">${\boldsymbol \gamma}$</span>, and <span class="LaTeX">${\boldsymbol x}, {\boldsymbol v}, {\boldsymbol \gamma} \in {\mathop{\mathbb R}}^n$</span>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p></br></p>
 <h2 id="integral-rules">Integral Rules</h2>
 <h3 id="integral-gauß">Integral Gauß</h3>
-<p><span class="LaTeX">$$\iiint\limits_V {\text{div}}\; \vec v {\,\text{d}}V = \iint\limits_{\partial V}\!\!\!\!\!\!\!\!\!\bigcirc \vec v {{\mathbf{\cdot}}}{\,\text{d}}A$$</span></p>
+<p><span class="LaTeX">$$\iiint\limits_V {\text{div}}\; {\boldsymbol v} {\,\text{d}}V = \iint\limits_{\partial V}\!\!\!\!\!\!\!\!\!\bigcirc \ {\boldsymbol v} {\pmb{\cdot}}{\,\text{d}}A$$</span></p>
 <h3 id="integral-stokes">Integral Stokes</h3>
-<p><span class="LaTeX">$$\displaystyle \iint\limits_{A} {\text{rot}}\; \vec v {\,\text{d}}A = \oint\limits_{\partial A} \vec v {\,\text{d}}\vec s$$</span></p>
+<p><span class="LaTeX">$$\iint\limits_{A} {\text{rot}}\; {\boldsymbol v} {\,\text{d}}A = \oint\limits_{\partial A} {\boldsymbol v} {\,\text{d}}{\boldsymbol s}$$</span></p>
 
 
     </main>
@@ -281,7 +461,7 @@
   <script src="/assets/js/options.js"></script>
 
   <!-- KaTeX JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js"></script>
 
   <!-- jQuery (req. for BootStrap) -->
   <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>

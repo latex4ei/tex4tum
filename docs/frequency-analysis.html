@@ -10,7 +10,7 @@
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="http://localhost:4000/frequency-analysis">
+    <link rel="canonical" href="/frequency-analysis">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 
     <!-- KaTeX CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 </head>
 
 
@@ -35,84 +35,106 @@
 
     <!-- sticky left: Logo -->
     <div class="navbar-brand">
-      <a href="/index.html">
-        <img src="/res/img/Logo-inv.png" height="30" alt="Logo">
-      </a>
+        <a href="/index.html">
+            <img src="/res/img/Logo-inv.png" height="30" alt="Logo">
+        </a>
     </div>
 
 
     <!-- sticky right: search bar  -->
     
-    <form class="form-inline ml-auto order-lg-3"  role="search">
-      <div id="search" class="search-container">
-        <input class="form-control search-input w-100" type="search" placeholder="&#xf002; Search (fuzzy)" tabindex="1">
-      <div class="ac-results-wrapper"></div>
-      </div>
+    <form class="form-inline ml-auto order-lg-3" role="search">
+        <div id="search" class="search-container">
+            <input class="form-control search-input w-100" type="search" placeholder="&#xf002; Search (fuzzy)"
+                tabindex="1">
+            <div class="ac-results-wrapper"></div>
+        </div>
     </form>
-   
+    
 
 
     <!-- Toggle button for collapsed items  -->
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
     </button>
 
 
     <!-- Collapsable Items: Links -->
     <div class="collapse navbar-collapse justify-content-start order-6 order-lg-2" id="navbarResponsive">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="/calculator.html"><i class="fa fa-calculator"></i> Calc</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/sheets.html"><i class="fa fa-file"></i> Sheets</a>
-        </li>
-        <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <i class="fa fa-info-circle"></i> Info
-        </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="/about.html"><i class="fa fa-question"></i> About TeX4TUM</a>
-            <a class="dropdown-item" href="/demo.html"><i class="fa fa-play-circle"></i> Feature Demo</a>
-            <div class="dropdown-divider"></div>
-            <h6 class="dropdown-header"><i class="fa fa-handshake"></i> Contribute</h6>
-            <a class="dropdown-item" href="/contribution.html"><i class="fa fa-edit"></i> Write Article</a>
-            <a class="dropdown-item" href="/todo.html"><i class="fa fa-tasks"></i> ToDo List</a>
-            <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum"><i class="fab fa-github"></i> Develop Features</a>
-            <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum/issues"><i class="fa fa-bug"></i> Report a bug</a>
-          </div>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link btn-group dropdown-toggle" href="/index.html" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-cog"></i> Options</a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <h6 class="dropdown-header">Display Options</h6>
-            <div class="form-check dropdown-item">
-              <label class="form-check-label">
-                <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox" checked="checked" onchange="Options.changeOption(this)">
-                  Definitions
-              </label>
-            </div>
-            <div class="form-check dropdown-item">
-              <label class="form-check-label">
-                <input class="form-check-input" id="checkbox_example" name="disp_opt" type="checkbox" checked="checked" onchange="Options.changeOption(this)">
-                  Examples
-              </label>
-            </div>
-            <div class="form-check dropdown-item">
-              <label class="form-check-label">
-                <input class="form-check-input" id="checkbox_explanation" name="disp_opt" type="checkbox" checked="checked" onchange="Options.changeOption(this)">
-                  Explanations
-              </label>
-            </div>
-            <div class="form-check dropdown-item">
-              <label class="form-check-label">
-                <input class="form-check-input" id="checkbox_legend" name="disp_opt" type="checkbox" checked="checked" onchange="Options.changeOption(this)">
-                  Legends
-              </label>
-            </div>
-          </div>
-        </li>
-      </ul>
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="/calculator.html"><i class="fa fa-calculator"></i>
+                    Calc</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/sheets.html"><i class="fa fa-file"></i> Sheets</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    <i class="fa fa-info-circle"></i> Info
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="/about.html"><i class="fa fa-question"></i>
+                        About TeX4TUM</a>
+                    <a class="dropdown-item" href="/team.html"><i class="fa fa-users"></i>
+                        Team</a>
+                    <a class="dropdown-item" href="/demo.html"><i class="fa fa-play-circle"></i>
+                        Feature Demo</a>
+                    <div class="dropdown-divider"></div>
+                    <h6 class="dropdown-header"><i class="fa fa-handshake"></i> Contribute</h6>
+                    <a class="dropdown-item" href="/support.html"><i class="fa fa-life-ring"></i>
+                        Support</a>
+                    <a class="dropdown-item" href="/contribution.html"><i class="fa fa-edit"></i>
+                        Write Article</a>
+                    <a class="dropdown-item" href="/todo.html"><i class="fa fa-tasks"></i> ToDo
+                        List</a>
+                    <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum"><i class="fab fa-github"></i>
+                        Develop Features</a>
+                    <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum/issues"><i class="fa fa-bug"></i>
+                        Report a bug</a>
+                    <a class="dropdown-item" href="/contact.html"><i class="fas fa-user-edit"></i>
+                        Contact</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link btn-group dropdown-toggle" href="/index.html"
+                    id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false"><i class="fa fa-cog"></i> Options</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <h6 class="dropdown-header">Display Options</h6>
+                    <div class="form-check dropdown-item">
+                        <label class="form-check-label">
+                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox"
+                                checked="checked" onchange="Options.changeOption(this)">
+                            Definitions
+                        </label>
+                    </div>
+                    <div class="form-check dropdown-item">
+                        <label class="form-check-label">
+                            <input class="form-check-input" id="checkbox_example" name="disp_opt" type="checkbox"
+                                onchange="Options.changeOption(this)">
+                            Examples
+                        </label>
+                    </div>
+                    <div class="form-check dropdown-item">
+                        <label class="form-check-label">
+                            <input class="form-check-input" id="checkbox_explanation" name="disp_opt" type="checkbox"
+                                onchange="Options.changeOption(this)">
+                            Explanations
+                        </label>
+                    </div>
+                    <div class="form-check dropdown-item">
+                        <label class="form-check-label">
+                            <input class="form-check-input" id="checkbox_legend" name="disp_opt" type="checkbox"
+                                onchange="Options.changeOption(this)">
+                            Legends
+                        </label>
+                    </div>
+                </div>
+            </li>
+        </ul>
     </div>
 
 
@@ -157,6 +179,7 @@
 <!-- SI Units -->
 <!--=============================================================== -->
 <!-- KaTeX Tweaks -->
+<!-- \renewcommand{\boldsymbol}[1]{\mathbf{#1}} -->
 <table>
 <thead>
 <tr class="header">
@@ -178,11 +201,11 @@
 </tr>
 </tbody>
 </table>
-<table style="width:18%;">
+<table style="width:71%;">
 <colgroup>
-<col style="width: 5%" />
-<col style="width: 6%" />
-<col style="width: 5%" />
+<col style="width: 19%" />
+<col style="width: 23%" />
+<col style="width: 27%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -232,37 +255,73 @@
 <div class="legend collapse">
 <div class="card border-info w-75 mx-auto">
 <div class="p-1 small">
-<p>timefunctions <span class="LaTeX">$f,g$</span>, frequency functions <span class="LaTeX">$X,F,G$</span>, complex number <span class="LaTeX">${{\mathbf{s}}}$</span>, time <span class="LaTeX">$t$</span>, time shift <span class="LaTeX">$\tau$</span>, constant <span class="LaTeX">$c$</span></p>
+<p>timefunctions <span class="LaTeX">$f,g$</span>, frequency functions <span class="LaTeX">$X,F,G$</span>, complex number <span class="LaTeX">${\boldsymbol{s}}$</span>, time <span class="LaTeX">$t$</span>, time shift <span class="LaTeX">$\tau$</span>, constant <span class="LaTeX">$c$</span></p>
 </div>
 </div>
 </div>
+<h5 class='clp_title text-success' data-toggle='collapse' href='#example1110'><i class='fa fa-chart-bar'></i> Example Spectrums </h5>
+<p><div id='example1110' class='example collapse'><div class='card border-success mb-1'><div class='card-body'><p class='card-text'> <style> table{table-layout: fixed;} td{width: 15em; padding-top: 1em!important;} </style></p>
+<table>
+<thead>
+<tr class="header">
+<th>Time <span class="LaTeX">$f(t)$</span></th>
+<th>Frequency <span class="LaTeX">$X(f)$</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><img class='img-fluid w-100' src='/res/img/content-images/electrical/system/spectrum/time_constant.svg'></td>
+<td><img class='img-fluid w-100' src='/res/img/content-images/electrical/system/spectrum/freq_constant.svg'></td>
+</tr>
+<tr class="even">
+<td><img class='img-fluid w-100' src='/res/img/content-images/electrical/system/spectrum/time_impulse.svg'></td>
+<td><img class='img-fluid w-100' src='/res/img/content-images/electrical/system/spectrum/freq_impulse.svg'></td>
+</tr>
+<tr class="odd">
+<td><img class='img-fluid w-100' src='/res/img/content-images/electrical/system/spectrum/time_comb.svg'></td>
+<td><img class='img-fluid w-100' src='/res/img/content-images/electrical/system/spectrum/freq_comb.svg'></td>
+</tr>
+<tr class="even">
+<td><img class='img-fluid w-100' src='/res/img/content-images/electrical/system/spectrum/time_impulse_shift.svg'></td>
+<td><img class='img-fluid w-100' src='/res/img/content-images/electrical/system/spectrum/freq_impulse_shift.svg'></td>
+</tr>
+<tr class="odd">
+<td><img class='img-fluid w-100' src='/res/img/content-images/electrical/system/spectrum/time_step.svg'></td>
+<td><img class='img-fluid w-100' src='/res/img/content-images/electrical/system/spectrum/freq_step.svg'></td>
+</tr>
+<tr class="even">
+<td><img class='img-fluid w-100' src='/res/img/content-images/electrical/system/spectrum/time_sinus.svg'></td>
+<td><img class='img-fluid w-100' src='/res/img/content-images/electrical/system/spectrum/freq_sinus.svg'></td>
+</tr>
+<tr class="odd">
+<td><img class='img-fluid w-100' src='/res/img/content-images/electrical/system/spectrum/time_cosinus.svg'></td>
+<td><img class='img-fluid w-100' src='/res/img/content-images/electrical/system/spectrum/freq_cosinus.svg'></td>
+</tr>
+<tr class="even">
+<td><img class='img-fluid w-100' src='/res/img/content-images/electrical/system/spectrum/time_rect.svg'></td>
+<td><img class='img-fluid w-100' src='/res/img/content-images/electrical/system/spectrum/freq_rect.svg'></td>
+</tr>
+<tr class="odd">
+<td><img class='img-fluid w-100' src='/res/img/content-images/electrical/system/spectrum/time_tri.svg'></td>
+<td><img class='img-fluid w-100' src='/res/img/content-images/electrical/system/spectrum/freq_tri.svg'></td>
+</tr>
+</tbody>
+</table>
+<p>
+<p></div></div></div></p>
 <h2 id="fourierreihe">Fourierreihe</h2>
 <p>Approximation einer <em>periodischen</em> Funktion <span class="LaTeX">$f(t)$</span> durch Überlagerung gewichteter Sinus und Cosinus einer Grundfrequenz <span class="LaTeX">$\omega_0 = \frac{1}{T}$</span> und deren Oberschwingungen <span class="LaTeX">$2\omega_0, 3\omega_0, ...$</span></p>
 <div class='card border-danger'>
 <div class='card-body'>
 <p class='card-text text-center'>
-<span class="LaTeX">$F(x) = \sum\limits_{k=-\infty}^\infty c_k e^{{\text{i}}k \omega_0 x} \qquad c_k = \frac{1}{T} \int\limits_{-\frac{T}{2}}^{\frac{T}{2}} f(x) e^{{\text{i}}k \omega_0 x} {\,\text{d}}x$</span>
-<p>
-</div>
-</div>
+<p><span class="LaTeX">$F(x) = \sum\limits_{k=-\infty}^\infty c_k e^{{\text{i}}k \omega_0 x} \qquad c_k = \frac{1}{T} \int\limits_{-\frac{T}{2}}^{\frac{T}{2}} f(x) e^{{\text{i}}k \omega_0 x} {\,\text{d}}x$</span> <p></div></div></p>
 <h2 id="fouriertransformation-ft">Fouriertransformation (FT)</h2>
 <div class='card border-danger'>
 <div class='card-body'>
 <p class='card-text text-center'>
-<span class="LaTeX">$\displaystyle {\tiny\begin{matrix}\\ \normalsize  f(t) \\[1em] \scriptsize \text{Zeitbereich} \end{matrix}} {{\ \circ\:\!\!\!\!-\!\!\!\bullet\ }}{\tiny\begin{matrix}\\ \normalsize  F(\omega) \\[1em] \scriptsize \text{Frequenzspektrum} \end{matrix}} := \int\limits_{-\infty}^\infty f(t) \exp(-{\text{i}}\omega t) {\,\text{d}}t$</span>
-<p>
-</div>
-</div>
-<p>Anmerkung: Es gibt unterschiedliche Normungen (<span class="LaTeX">$1, \frac{1}{\sqrt{2\pi}}$</span>)</p>
-<h2 id="laplaceransformation-lt-mathbfs-alpha-omegatexti">Laplaceransformation (LT) <span class="LaTeX">${{\mathbf{s}}} = \alpha + \omega{\text{i}}$</span></h2>
-LT ist Verallgemeinerung der FT mit Dämpfungsfaktor <span class="LaTeX">$\alpha$</span>
-<div class='card border-danger'>
-<div class='card-body'>
-<p class='card-text text-center'>
-<span class="LaTeX">$\displaystyle {\tiny\begin{matrix}\\ \normalsize  f(t) \\[1em] \scriptsize \text{Zeitbereich} \end{matrix}} {{\ \circ\:\!\!\!\!-\!\!\!\bullet\ }}{\tiny\begin{matrix}\\ \normalsize  F({{\mathbf{s}}}) = \mathcal L\left(f(t)\right) \\[1em] \scriptsize \text{Frequenzspektrum} \end{matrix}} := \int\limits_{0}^\infty f(t) \exp(- {{\mathbf{s}}} t) {\,\text{d}}t$</span>
-<p>
-</div>
-</div>
+<p><span class="LaTeX">$\displaystyle {\tiny\begin{matrix}\ \normalsize  f(t) \[1em] \scriptsize \text{Zeitbereich} \end{matrix}} {{\ \circ\:\!\!\!\!-\!\!\!\bullet\ }}{\tiny\begin{matrix}\ \normalsize  F(\omega) \[1em] \scriptsize \text{Frequenzspektrum} \end{matrix}} := \int\limits_{-\infty}^\infty f(t) \exp(-{\text{i}}\omega t) {\,\text{d}}t$</span> <p></div></div> Anmerkung: Es gibt unterschiedliche Normungen (<span class="LaTeX">$1, \frac{1}{\sqrt{2\pi}}$</span>)</p>
+<h2 id="laplaceransformation-lt-boldsymbols-alpha-omegatexti">Laplaceransformation (LT) <span class="LaTeX">${\boldsymbol{s}} = \alpha + \omega{\text{i}}$</span></h2>
+<p>LT ist Verallgemeinerung der FT mit Dämpfungsfaktor <span class="LaTeX">$\alpha$</span> <div class='card border-danger'><div class='card-body'><p class='card-text text-center'> <span class="LaTeX">$\displaystyle {\tiny\begin{matrix}\ \normalsize  f(t) \[1em] \scriptsize \text{Zeitbereich} \end{matrix}} {{\ \circ\:\!\!\!\!-\!\!\!\bullet\ }}{\tiny\begin{matrix}\ \normalsize  F({\boldsymbol{s}}) = \mathcal L\left(f(t)\right) \[1em] \scriptsize \text{Frequenzspektrum} \end{matrix}} := \int\limits_{0}^\infty f(t) \exp(- {\boldsymbol{s}} t) {\,\text{d}}t$</span> <p></div></div></p>
 <h2 id="z-transform-zt">Z-Transform (ZT)</h2>
 
 
@@ -330,7 +389,7 @@ LT ist Verallgemeinerung der FT mit Dämpfungsfaktor <span class="LaTeX">$\alpha
   <script src="/assets/js/options.js"></script>
 
   <!-- KaTeX JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js"></script>
 
   <!-- jQuery (req. for BootStrap) -->
   <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>

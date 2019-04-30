@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- title, description, favicon -->
-    <title>Advanced Encryption Standard</title>
+    <title>Advanced Encryption Standard (AES)</title>
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="http://localhost:4000/aes">
+    <link rel="canonical" href="/aes">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 
     <!-- KaTeX CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 </head>
 
 
@@ -35,84 +35,106 @@
 
     <!-- sticky left: Logo -->
     <div class="navbar-brand">
-      <a href="/index.html">
-        <img src="/res/img/Logo-inv.png" height="30" alt="Logo">
-      </a>
+        <a href="/index.html">
+            <img src="/res/img/Logo-inv.png" height="30" alt="Logo">
+        </a>
     </div>
 
 
     <!-- sticky right: search bar  -->
     
-    <form class="form-inline ml-auto order-lg-3"  role="search">
-      <div id="search" class="search-container">
-        <input class="form-control search-input w-100" type="search" placeholder="&#xf002; Search (fuzzy)" tabindex="1">
-      <div class="ac-results-wrapper"></div>
-      </div>
+    <form class="form-inline ml-auto order-lg-3" role="search">
+        <div id="search" class="search-container">
+            <input class="form-control search-input w-100" type="search" placeholder="&#xf002; Search (fuzzy)"
+                tabindex="1">
+            <div class="ac-results-wrapper"></div>
+        </div>
     </form>
-   
+    
 
 
     <!-- Toggle button for collapsed items  -->
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
     </button>
 
 
     <!-- Collapsable Items: Links -->
     <div class="collapse navbar-collapse justify-content-start order-6 order-lg-2" id="navbarResponsive">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="/calculator.html"><i class="fa fa-calculator"></i> Calc</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/sheets.html"><i class="fa fa-file"></i> Sheets</a>
-        </li>
-        <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <i class="fa fa-info-circle"></i> Info
-        </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="/about.html"><i class="fa fa-question"></i> About TeX4TUM</a>
-            <a class="dropdown-item" href="/demo.html"><i class="fa fa-play-circle"></i> Feature Demo</a>
-            <div class="dropdown-divider"></div>
-            <h6 class="dropdown-header"><i class="fa fa-handshake"></i> Contribute</h6>
-            <a class="dropdown-item" href="/contribution.html"><i class="fa fa-edit"></i> Write Article</a>
-            <a class="dropdown-item" href="/todo.html"><i class="fa fa-tasks"></i> ToDo List</a>
-            <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum"><i class="fab fa-github"></i> Develop Features</a>
-            <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum/issues"><i class="fa fa-bug"></i> Report a bug</a>
-          </div>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link btn-group dropdown-toggle" href="/index.html" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-cog"></i> Options</a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <h6 class="dropdown-header">Display Options</h6>
-            <div class="form-check dropdown-item">
-              <label class="form-check-label">
-                <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox" checked="checked" onchange="Options.changeOption(this)">
-                  Definitions
-              </label>
-            </div>
-            <div class="form-check dropdown-item">
-              <label class="form-check-label">
-                <input class="form-check-input" id="checkbox_example" name="disp_opt" type="checkbox" checked="checked" onchange="Options.changeOption(this)">
-                  Examples
-              </label>
-            </div>
-            <div class="form-check dropdown-item">
-              <label class="form-check-label">
-                <input class="form-check-input" id="checkbox_explanation" name="disp_opt" type="checkbox" checked="checked" onchange="Options.changeOption(this)">
-                  Explanations
-              </label>
-            </div>
-            <div class="form-check dropdown-item">
-              <label class="form-check-label">
-                <input class="form-check-input" id="checkbox_legend" name="disp_opt" type="checkbox" checked="checked" onchange="Options.changeOption(this)">
-                  Legends
-              </label>
-            </div>
-          </div>
-        </li>
-      </ul>
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="/calculator.html"><i class="fa fa-calculator"></i>
+                    Calc</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/sheets.html"><i class="fa fa-file"></i> Sheets</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    <i class="fa fa-info-circle"></i> Info
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="/about.html"><i class="fa fa-question"></i>
+                        About TeX4TUM</a>
+                    <a class="dropdown-item" href="/team.html"><i class="fa fa-users"></i>
+                        Team</a>
+                    <a class="dropdown-item" href="/demo.html"><i class="fa fa-play-circle"></i>
+                        Feature Demo</a>
+                    <div class="dropdown-divider"></div>
+                    <h6 class="dropdown-header"><i class="fa fa-handshake"></i> Contribute</h6>
+                    <a class="dropdown-item" href="/support.html"><i class="fa fa-life-ring"></i>
+                        Support</a>
+                    <a class="dropdown-item" href="/contribution.html"><i class="fa fa-edit"></i>
+                        Write Article</a>
+                    <a class="dropdown-item" href="/todo.html"><i class="fa fa-tasks"></i> ToDo
+                        List</a>
+                    <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum"><i class="fab fa-github"></i>
+                        Develop Features</a>
+                    <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum/issues"><i class="fa fa-bug"></i>
+                        Report a bug</a>
+                    <a class="dropdown-item" href="/contact.html"><i class="fas fa-user-edit"></i>
+                        Contact</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link btn-group dropdown-toggle" href="/index.html"
+                    id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false"><i class="fa fa-cog"></i> Options</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <h6 class="dropdown-header">Display Options</h6>
+                    <div class="form-check dropdown-item">
+                        <label class="form-check-label">
+                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox"
+                                checked="checked" onchange="Options.changeOption(this)">
+                            Definitions
+                        </label>
+                    </div>
+                    <div class="form-check dropdown-item">
+                        <label class="form-check-label">
+                            <input class="form-check-input" id="checkbox_example" name="disp_opt" type="checkbox"
+                                onchange="Options.changeOption(this)">
+                            Examples
+                        </label>
+                    </div>
+                    <div class="form-check dropdown-item">
+                        <label class="form-check-label">
+                            <input class="form-check-input" id="checkbox_explanation" name="disp_opt" type="checkbox"
+                                onchange="Options.changeOption(this)">
+                            Explanations
+                        </label>
+                    </div>
+                    <div class="form-check dropdown-item">
+                        <label class="form-check-label">
+                            <input class="form-check-input" id="checkbox_legend" name="disp_opt" type="checkbox"
+                                onchange="Options.changeOption(this)">
+                            Legends
+                        </label>
+                    </div>
+                </div>
+            </li>
+        </ul>
     </div>
 
 
@@ -144,7 +166,7 @@
 
 <h1><a data-toggle="collapse" href="#title_def" aria-expanded="false" aria-controls="title_def">
   
-  Advanced Encryption Standard
+  Advanced Encryption Standard (<abbr title="Advanced Encryption Standard" >AES</abbr>)
 </a><a class="float-right small" style="font-size: small" href="https://github.com/latex4ei/tex4tum/edit/master/_article/informatics/algorithm/aes.md">[edit]</a></h1>
 
 <p>
@@ -157,15 +179,12 @@
 <!-- SI Units -->
 <!--=============================================================== -->
 <!-- KaTeX Tweaks -->
+<!-- \renewcommand{\boldsymbol}[1]{\mathbf{#1}} -->
 <div id="title_def" class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
-<h5 class="card-title text-primary">
-Definition
-</h5>
-<p class="card-text">
-The Advanced Encryption Standard (AES), (original name Rijndael) is a specification for the encryption of electronic data established by the U.S. National Institute of Standards and Technology (NIST) in 2001.
-</p>
+<h5 class='card-title text-primary'>Definition</h5>
+<p class='card-text'>The Advanced Encryption Standard (<abbr title="Advanced Encryption Standard" >AES</abbr>), (original name Rijndael) is a specification for the encryption of electronic data established by the U.S. National Institute of Standards and Technology (NIST) in 2001.</p>
 </div>
 </div>
 </div>
@@ -192,24 +211,139 @@ The Advanced Encryption Standard (AES), (original name Rijndael) is a specificat
 </tr>
 </tbody>
 </table>
+<h2 id="table-of-contents"><i class="fa fa-list-ul"></i> Table of Contents</h2>
+<ul>
+<li><a href="#algorithm">Algorithm</a></li>
+<li><a href="#modes-of-operation">Modes of Operation</a></li>
+<li><a href="#test-vectors">Test Vectors</a></li>
+<li><a href="#references">References</a></li>
+</ul>
 <h2 id="algorithm">Algorithm</h2>
+<!--<p> Filename="aes-128.svg", path="/res/img/content-images/informatics/security/aes-128.svg" </p>-->
+<figure class="figure">
+<img class="figure-img img-fluid" style="width: 25em;" src="/res/img/content-images/informatics/security/aes-128.svg" alt="AES 128 High Level Overview"/><figcaption class="figure-caption">AES 128 High Level Overview</figcaption>
+</figure>
 <ol type="1">
-<li>Key Expansion: Create individual 128bit round keys from the cipher key</li>
-<li>AddRoundKey: each byte of the block is combined with a block of the round key using bitwise xor.</li>
-<li>Rounds:
+<li><p><strong>Key Expansion:</strong> Create individual 128bit round keys from the cipher key</p></li>
+<li><p><strong>AddRoundKey:</strong> each byte of the block is combined with a block of the round key using bitwise xor.</p></li>
+<li><strong>Rounds:</strong>
 <ol type="1">
 <li>SubBytes: substitutes every byte of the state with an S-box entry</li>
 <li>ShiftRows: cyclically left shift every row</li>
 <li>MixColumns: takes the four bytes of each column as input and outputs four new bytes, where each input byte affects all four output bytes. Each column is transformed by multiplication with a fixed <span class="LaTeX">$4 \times 4$</span> Matrix.</li>
 <li>AddRoundKey: XOR of the 128bit round key and the 128bit block.</li>
 </ol></li>
-<li>FInal Round (no MixColumns)
+<li><strong>Final Round:</strong> (no MixColumns)
 <ol type="1">
 <li>SubBytes</li>
 <li>ShiftRows</li>
 <li>AddRoundKey</li>
 </ol></li>
 </ol>
+<!--
+### MixColumns
+<div data-toggle='collapse' href='#eq_0'>
+$$\vect{ b_{0,j} \ b_{1,j} \ b_{2,j} \ b_{3,j} } = \mat{2&3&1&1 \ 1&2&3&1 \ 1&1&2&3 \ 3&1&1&2} \cdot \vect{ a_{0,j} \ a_{1,j} \ a_{2,j} \ a_{3,j} }$$
+</div> 
+<div id='eq_0' class='legend collapse'><div class='card border-info w-75 mx-auto'><div class='p-1 small'>
+with the columns $j \in \{0,1,2,3\}$
+-->
+</div>
+</div>
+</div>
+<h2 id="modes-of-operation">Modes of Operation</h2>
+<div class="card tabbox">
+<div class="card-header">
+<ul class="nav nav-tabs card-header-tabs ml-0" role="tablist"><li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#checkboxid-0" role="tab">ECB</a></li>
+<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#checkboxid-1" role="tab">CBC</a></li>
+<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#checkboxid-2" role="tab">CFB</a></li>
+<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#checkboxid-3" role="tab">OFB</a></li>
+<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#checkboxid-4" role="tab">CTR</a></li>
+</ul>
+</div>
+<div class="card-body">
+<div class="tab-content">
+<div id="checkboxid-0" class="tab-pane active" role="tabpanel">
+<p><strong>Electronic Codebook (ECB)</strong></p>
+<p>The message is divided into blocks, and each block is encrypted separately.</p>
+<!--<p> Filename="encmode_ecb.svg", path="/res/img/content-images/informatics/security/encmode_ecb.svg" </p>-->
+<figure class="figure">
+<img class="figure-img img-fluid" style="width: 40em;" src="/res/img/content-images/informatics/security/encmode_ecb.svg" alt=""/><figcaption class="figure-caption"></figcaption>
+</figure>
+<!--<p> Filename="decmode_ecb.svg", path="/res/img/content-images/informatics/security/decmode_ecb.svg" </p>-->
+<figure class="figure">
+<img class="figure-img img-fluid" style="width: 40em;" src="/res/img/content-images/informatics/security/decmode_ecb.svg" alt=""/><figcaption class="figure-caption"></figcaption>
+</figure>
+</div>
+<div id="checkboxid-1" class="tab-pane" role="tabpanel">
+<p><strong>Cipher Block Chaining (CBC)</strong></p>
+<p>Each block of plaintext is XORed with the previous ciphertext block before being encrypted.</p>
+<!--<p> Filename="encmode_cbc.svg", path="/res/img/content-images/informatics/security/encmode_cbc.svg" </p>-->
+<figure class="figure">
+<img class="figure-img img-fluid" style="width: 40em;" src="/res/img/content-images/informatics/security/encmode_cbc.svg" alt=""/><figcaption class="figure-caption"></figcaption>
+</figure>
+<!--<p> Filename="decmode_cbc.svg", path="/res/img/content-images/informatics/security/decmode_cbc.svg" </p>-->
+<figure class="figure">
+<img class="figure-img img-fluid" style="width: 40em;" src="/res/img/content-images/informatics/security/decmode_cbc.svg" alt=""/><figcaption class="figure-caption"></figcaption>
+</figure>
+</div>
+<div id="checkboxid-2" class="tab-pane" role="tabpanel">
+<p><strong>Cipher Feedback (CFB)</strong></p>
+<p>A close relative of CBC. Transforms a block cipher into a self-synchronizing stream cipher.</p>
+<!--<p> Filename="encmode_cfb.svg", path="/res/img/content-images/informatics/security/encmode_cfb.svg" </p>-->
+<figure class="figure">
+<img class="figure-img img-fluid" style="width: 40em;" src="/res/img/content-images/informatics/security/encmode_cfb.svg" alt=""/><figcaption class="figure-caption"></figcaption>
+</figure>
+<!--<p> Filename="decmode_cfb.svg", path="/res/img/content-images/informatics/security/decmode_cfb.svg" </p>-->
+<figure class="figure">
+<img class="figure-img img-fluid" style="width: 40em;" src="/res/img/content-images/informatics/security/decmode_cfb.svg" alt=""/><figcaption class="figure-caption"></figcaption>
+</figure>
+</div>
+<div id="checkboxid-3" class="tab-pane" role="tabpanel">
+<p><strong>Output Feedback (OFB)</strong></p>
+<p>Transforms a block cipher into a synchronous stream cipher. It generates keystream blocks, which are then XORed with the plaintext blocks to get the ciphertext.</p>
+<!--<p> Filename="encmode_ofb.svg", path="/res/img/content-images/informatics/security/encmode_ofb.svg" </p>-->
+<figure class="figure">
+<img class="figure-img img-fluid" style="width: 40em;" src="/res/img/content-images/informatics/security/encmode_ofb.svg" alt=""/><figcaption class="figure-caption"></figcaption>
+</figure>
+<!--<p> Filename="decmode_ofb.svg", path="/res/img/content-images/informatics/security/decmode_ofb.svg" </p>-->
+<figure class="figure">
+<img class="figure-img img-fluid" style="width: 40em;" src="/res/img/content-images/informatics/security/decmode_ofb.svg" alt=""/><figcaption class="figure-caption"></figcaption>
+</figure>
+</div>
+<div id="checkboxid-4" class="tab-pane" role="tabpanel">
+<p><strong>Counter (CTR)</strong></p>
+<p>Counter mode turns a block cipher into a stream cipher. It generates the next keystream block by encrypting successive values of a &quot;counter&quot;.</p>
+<!--<p> Filename="encmode_ctr.svg", path="/res/img/content-images/informatics/security/encmode_ctr.svg" </p>-->
+<figure class="figure">
+<img class="figure-img img-fluid" style="width: 40em;" src="/res/img/content-images/informatics/security/encmode_ctr.svg" alt=""/><figcaption class="figure-caption"></figcaption>
+</figure>
+<!--<p> Filename="decmode_ctr.svg", path="/res/img/content-images/informatics/security/decmode_ctr.svg" </p>-->
+<figure class="figure">
+<img class="figure-img img-fluid" style="width: 40em;" src="/res/img/content-images/informatics/security/decmode_ctr.svg" alt=""/><figcaption class="figure-caption"></figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<p></br></p>
+<h2 id="test-vectors">Test Vectors</h2>
+<pre><code>mode = ECB-AES128.Encrypt 
+in   = 6bc1bee22e409f96e93d7e117393172a
+key  = 2b7e151628aed2a6abf7158809cf4f3c
+out  = 3ad77bb40d7a3660a89ecaf32466ef97 
+
+mode = CBC-AES128.Encrypt 
+in   = 6bc1bee22e409f96e93d7e117393172a
+key  = 2b7e151628aed2a6abf7158809cf4f3c
+iv   = 000102030405060708090a0b0c0d0e0f
+out  = 7649abac8119b246cee98e9b12e9197d</code></pre>
+<h2 id="references">References</h2>
+<ul>
+<li><p><a href="https://csrc.nist.gov/csrc/media/publications/fips/197/final/documents/fips-197.pdf">NIST FIPS 197: Advanced Encryption Standard</a></p></li>
+<li><p><a href="https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-38a.pdf">NIST Special Publication 800-38A: <abbr title="Advanced Encryption Standard" >AES</abbr> Test Vectors</a></p></li>
+<li><p><a href="https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation">Wikipedia: Block Cipher Modes</a></p></li>
+</ul>
 
 
     </main>
@@ -276,7 +410,7 @@ The Advanced Encryption Standard (AES), (original name Rijndael) is a specificat
   <script src="/assets/js/options.js"></script>
 
   <!-- KaTeX JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js"></script>
 
   <!-- jQuery (req. for BootStrap) -->
   <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>

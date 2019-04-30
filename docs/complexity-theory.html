@@ -10,7 +10,7 @@
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="http://localhost:4000/complexity-theory">
+    <link rel="canonical" href="/complexity-theory">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 
     <!-- KaTeX CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 </head>
 
 
@@ -35,84 +35,106 @@
 
     <!-- sticky left: Logo -->
     <div class="navbar-brand">
-      <a href="/index.html">
-        <img src="/res/img/Logo-inv.png" height="30" alt="Logo">
-      </a>
+        <a href="/index.html">
+            <img src="/res/img/Logo-inv.png" height="30" alt="Logo">
+        </a>
     </div>
 
 
     <!-- sticky right: search bar  -->
     
-    <form class="form-inline ml-auto order-lg-3"  role="search">
-      <div id="search" class="search-container">
-        <input class="form-control search-input w-100" type="search" placeholder="&#xf002; Search (fuzzy)" tabindex="1">
-      <div class="ac-results-wrapper"></div>
-      </div>
+    <form class="form-inline ml-auto order-lg-3" role="search">
+        <div id="search" class="search-container">
+            <input class="form-control search-input w-100" type="search" placeholder="&#xf002; Search (fuzzy)"
+                tabindex="1">
+            <div class="ac-results-wrapper"></div>
+        </div>
     </form>
-   
+    
 
 
     <!-- Toggle button for collapsed items  -->
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
     </button>
 
 
     <!-- Collapsable Items: Links -->
     <div class="collapse navbar-collapse justify-content-start order-6 order-lg-2" id="navbarResponsive">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="/calculator.html"><i class="fa fa-calculator"></i> Calc</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/sheets.html"><i class="fa fa-file"></i> Sheets</a>
-        </li>
-        <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <i class="fa fa-info-circle"></i> Info
-        </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="/about.html"><i class="fa fa-question"></i> About TeX4TUM</a>
-            <a class="dropdown-item" href="/demo.html"><i class="fa fa-play-circle"></i> Feature Demo</a>
-            <div class="dropdown-divider"></div>
-            <h6 class="dropdown-header"><i class="fa fa-handshake"></i> Contribute</h6>
-            <a class="dropdown-item" href="/contribution.html"><i class="fa fa-edit"></i> Write Article</a>
-            <a class="dropdown-item" href="/todo.html"><i class="fa fa-tasks"></i> ToDo List</a>
-            <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum"><i class="fab fa-github"></i> Develop Features</a>
-            <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum/issues"><i class="fa fa-bug"></i> Report a bug</a>
-          </div>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link btn-group dropdown-toggle" href="/index.html" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-cog"></i> Options</a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <h6 class="dropdown-header">Display Options</h6>
-            <div class="form-check dropdown-item">
-              <label class="form-check-label">
-                <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox" checked="checked" onchange="Options.changeOption(this)">
-                  Definitions
-              </label>
-            </div>
-            <div class="form-check dropdown-item">
-              <label class="form-check-label">
-                <input class="form-check-input" id="checkbox_example" name="disp_opt" type="checkbox" checked="checked" onchange="Options.changeOption(this)">
-                  Examples
-              </label>
-            </div>
-            <div class="form-check dropdown-item">
-              <label class="form-check-label">
-                <input class="form-check-input" id="checkbox_explanation" name="disp_opt" type="checkbox" checked="checked" onchange="Options.changeOption(this)">
-                  Explanations
-              </label>
-            </div>
-            <div class="form-check dropdown-item">
-              <label class="form-check-label">
-                <input class="form-check-input" id="checkbox_legend" name="disp_opt" type="checkbox" checked="checked" onchange="Options.changeOption(this)">
-                  Legends
-              </label>
-            </div>
-          </div>
-        </li>
-      </ul>
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="/calculator.html"><i class="fa fa-calculator"></i>
+                    Calc</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/sheets.html"><i class="fa fa-file"></i> Sheets</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    <i class="fa fa-info-circle"></i> Info
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="/about.html"><i class="fa fa-question"></i>
+                        About TeX4TUM</a>
+                    <a class="dropdown-item" href="/team.html"><i class="fa fa-users"></i>
+                        Team</a>
+                    <a class="dropdown-item" href="/demo.html"><i class="fa fa-play-circle"></i>
+                        Feature Demo</a>
+                    <div class="dropdown-divider"></div>
+                    <h6 class="dropdown-header"><i class="fa fa-handshake"></i> Contribute</h6>
+                    <a class="dropdown-item" href="/support.html"><i class="fa fa-life-ring"></i>
+                        Support</a>
+                    <a class="dropdown-item" href="/contribution.html"><i class="fa fa-edit"></i>
+                        Write Article</a>
+                    <a class="dropdown-item" href="/todo.html"><i class="fa fa-tasks"></i> ToDo
+                        List</a>
+                    <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum"><i class="fab fa-github"></i>
+                        Develop Features</a>
+                    <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum/issues"><i class="fa fa-bug"></i>
+                        Report a bug</a>
+                    <a class="dropdown-item" href="/contact.html"><i class="fas fa-user-edit"></i>
+                        Contact</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link btn-group dropdown-toggle" href="/index.html"
+                    id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false"><i class="fa fa-cog"></i> Options</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <h6 class="dropdown-header">Display Options</h6>
+                    <div class="form-check dropdown-item">
+                        <label class="form-check-label">
+                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox"
+                                checked="checked" onchange="Options.changeOption(this)">
+                            Definitions
+                        </label>
+                    </div>
+                    <div class="form-check dropdown-item">
+                        <label class="form-check-label">
+                            <input class="form-check-input" id="checkbox_example" name="disp_opt" type="checkbox"
+                                onchange="Options.changeOption(this)">
+                            Examples
+                        </label>
+                    </div>
+                    <div class="form-check dropdown-item">
+                        <label class="form-check-label">
+                            <input class="form-check-input" id="checkbox_explanation" name="disp_opt" type="checkbox"
+                                onchange="Options.changeOption(this)">
+                            Explanations
+                        </label>
+                    </div>
+                    <div class="form-check dropdown-item">
+                        <label class="form-check-label">
+                            <input class="form-check-input" id="checkbox_legend" name="disp_opt" type="checkbox"
+                                onchange="Options.changeOption(this)">
+                            Legends
+                        </label>
+                    </div>
+                </div>
+            </li>
+        </ul>
     </div>
 
 
@@ -133,7 +155,7 @@
 		
 	
 		
-		/ <a href="/theory.html">theory</a>
+		/ <a href="/algorithm.html">algorithm</a>
 		
 		
 	
@@ -145,9 +167,33 @@
 <h1><a data-toggle="collapse" href="#title_def" aria-expanded="false" aria-controls="title_def">
   
   Complexity Theory
-</a><a class="float-right small" style="font-size: small" href="https://github.com/latex4ei/tex4tum/edit/master/_article/informatics/theory/complexity-theory.md">[edit]</a></h1>
+</a><a class="float-right small" style="font-size: small" href="https://github.com/latex4ei/tex4tum/edit/master/_article/informatics/algorithm/complexity-theory.md">[edit]</a></h1>
 
 <p>
+
+<span class="badge badge-primary text-white">
+  <i class="fas fa-tag"></i> P,
+</span>
+
+<span class="badge badge-primary text-white">
+  <i class="fas fa-tag"></i> NP,
+</span>
+
+<span class="badge badge-primary text-white">
+  <i class="fas fa-tag"></i> DTIME,
+</span>
+
+<span class="badge badge-primary text-white">
+  <i class="fas fa-tag"></i> NTIME,
+</span>
+
+<span class="badge badge-primary text-white">
+  <i class="fas fa-tag"></i> DSPACE,
+</span>
+
+<span class="badge badge-primary text-white">
+  <i class="fas fa-tag"></i> NSPACE
+</span>
 
 </p>
 
@@ -157,40 +203,79 @@
 <!-- SI Units -->
 <!--=============================================================== -->
 <!-- KaTeX Tweaks -->
+<!-- \renewcommand{\boldsymbol}[1]{\mathbf{#1}} -->
 <div id="title_def" class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
-<h5 class="card-title text-primary">
-Definition
-</h5>
-<p class="card-text">
-Decision problem: A problem with a yes or no answer.
-</p>
+<h5 class='card-title text-primary'>Definition</h5>
+<p class='card-text'>Decision problem: A problem with a yes or no answer.</p>
 </div>
 </div>
 </div>
 <h2 id="notation">Notation</h2>
 <p>Given a decision problem <span class="LaTeX">$f(x) = {1,0}$</span> which can be computed in <span class="LaTeX">$n$</span> steps.</p>
 <h2 id="complexity-classes">Complexity Classes</h2>
-<p>Deterministic: DTIME, DSPACE Non-deterministic: NTIME, NSPACE</p>
+<p>ALL is the class of all decision problems. Many important complexity classes can be defined by bounding the time or space used by the algorithm.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Time</th>
+<th><span class="LaTeX">$f(n)$</span></th>
+<th><span class="LaTeX">$P(n)$</span></th>
+<th><span class="LaTeX">$2^{P(n)}$</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Deterministic</td>
+<td>DTIME</td>
+<td>P</td>
+<td>EXPTIME</td>
+</tr>
+<tr class="even">
+<td>Non-deterministic</td>
+<td>NTIME</td>
+<td>NP</td>
+<td>NEXPTIME</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr class="header">
+<th>Space</th>
+<th><span class="LaTeX">$f(n)$</span></th>
+<th><span class="LaTeX">${\mathop{\mathcal O}}(\log n)$</span></th>
+<th><span class="LaTeX">$P(n)$</span></th>
+<th><span class="LaTeX">$2^{P(n)}$</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Deterministic</td>
+<td>DSPACE</td>
+<td>L</td>
+<td>PSPACE</td>
+<td>EXPSPACE</td>
+</tr>
+<tr class="even">
+<td>Non-deterministic</td>
+<td>NSPACE</td>
+<td>NL</td>
+<td>NPSPACE</td>
+<td>NEXPSPACE</td>
+</tr>
+</tbody>
+</table>
+<p>where <span class="LaTeX">$n$</span> is the number of steps and <span class="LaTeX">$P$</span> a polynomial.</p>
 <h3 id="p">P</h3>
 <p>P is a complexity class that represents the set of all decision problems that can be solved in polynomial time. That is, given an instance of the problem, the answer yes or no can be decided in polynomial time <span class="LaTeX">$n^k$</span>. For non-artificial problems, k is usually not larger than 4.</p>
 <h3 id="np">NP</h3>
 <p>NP is a complexity class that represents the set of all decision problems for which the instances where the answer is &quot;yes&quot; have proofs that can be verified in polynomial time.</p>
 <h3 id="np-complete">NP-Complete</h3>
 <p>NP-Complete is a complexity class which represents the set of all problems X in NP for which it is possible to reduce any other NP problem Y to X in polynomial time.</p>
-<h5 class="clp_title text-success" data-toggle="collapse" href="#example1165">
-<i class='fa fa-chart-bar'></i> Example
-</h5>
-<div id='example1165' class='example collapse'>
-<div class='card border-success mb-1'>
-<div class='card-body'>
-<p class='card-text'>
-Given a graph <span class="LaTeX">$G$</span>, is there set <span class="LaTeX">$S$</span> of size <span class="LaTeX">$|S| ≥ k$</span> such that no two nodes in <span class="LaTeX">$S$</span> are connected by an edge?
-<p>
-</div>
-</div>
-</div>
+<h5 class='clp_title text-success' data-toggle='collapse' href='#example1099'><i class='fa fa-chart-bar'></i> Example</h5>
+<p><div id='example1099' class='example collapse'><div class='card border-success mb-1'><div class='card-body'><p class='card-text'>Given a graph <span class="LaTeX">$G$</span>, is there set <span class="LaTeX">$S$</span> of size <span class="LaTeX">$|S| ≥ k$</span> such that no two nodes in <span class="LaTeX">$S$</span> are connected by an edge?<p> </div></div></div></p>
 <h3 id="np-hard">NP-hard</h3>
 <p>A problem H is NP-hard when every problem L in NP can be reduced in polynomial time to H, that is given a solution for L we can verify it is a solution for H in polynomial time. The halting problem is an NP-hard problem.</p>
 <h2 id="reduction">Reduction</h2>
@@ -263,7 +348,7 @@ Given a graph <span class="LaTeX">$G$</span>, is there set <span class="LaTeX">$
   <script src="/assets/js/options.js"></script>
 
   <!-- KaTeX JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js"></script>
 
   <!-- jQuery (req. for BootStrap) -->
   <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>

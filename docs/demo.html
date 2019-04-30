@@ -10,7 +10,7 @@
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="http://localhost:4000/demo">
+    <link rel="canonical" href="/demo">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 
     <!-- KaTeX CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 </head>
 
 
@@ -35,84 +35,106 @@
 
     <!-- sticky left: Logo -->
     <div class="navbar-brand">
-      <a href="/index.html">
-        <img src="/res/img/Logo-inv.png" height="30" alt="Logo">
-      </a>
+        <a href="/index.html">
+            <img src="/res/img/Logo-inv.png" height="30" alt="Logo">
+        </a>
     </div>
 
 
     <!-- sticky right: search bar  -->
     
-    <form class="form-inline ml-auto order-lg-3"  role="search">
-      <div id="search" class="search-container">
-        <input class="form-control search-input w-100" type="search" placeholder="&#xf002; Search (fuzzy)" tabindex="1">
-      <div class="ac-results-wrapper"></div>
-      </div>
+    <form class="form-inline ml-auto order-lg-3" role="search">
+        <div id="search" class="search-container">
+            <input class="form-control search-input w-100" type="search" placeholder="&#xf002; Search (fuzzy)"
+                tabindex="1">
+            <div class="ac-results-wrapper"></div>
+        </div>
     </form>
-   
+    
 
 
     <!-- Toggle button for collapsed items  -->
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
     </button>
 
 
     <!-- Collapsable Items: Links -->
     <div class="collapse navbar-collapse justify-content-start order-6 order-lg-2" id="navbarResponsive">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="/calculator.html"><i class="fa fa-calculator"></i> Calc</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/sheets.html"><i class="fa fa-file"></i> Sheets</a>
-        </li>
-        <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <i class="fa fa-info-circle"></i> Info
-        </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="/about.html"><i class="fa fa-question"></i> About TeX4TUM</a>
-            <a class="dropdown-item" href="/demo.html"><i class="fa fa-play-circle"></i> Feature Demo</a>
-            <div class="dropdown-divider"></div>
-            <h6 class="dropdown-header"><i class="fa fa-handshake"></i> Contribute</h6>
-            <a class="dropdown-item" href="/contribution.html"><i class="fa fa-edit"></i> Write Article</a>
-            <a class="dropdown-item" href="/todo.html"><i class="fa fa-tasks"></i> ToDo List</a>
-            <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum"><i class="fab fa-github"></i> Develop Features</a>
-            <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum/issues"><i class="fa fa-bug"></i> Report a bug</a>
-          </div>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link btn-group dropdown-toggle" href="/index.html" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-cog"></i> Options</a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <h6 class="dropdown-header">Display Options</h6>
-            <div class="form-check dropdown-item">
-              <label class="form-check-label">
-                <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox" checked="checked" onchange="Options.changeOption(this)">
-                  Definitions
-              </label>
-            </div>
-            <div class="form-check dropdown-item">
-              <label class="form-check-label">
-                <input class="form-check-input" id="checkbox_example" name="disp_opt" type="checkbox" checked="checked" onchange="Options.changeOption(this)">
-                  Examples
-              </label>
-            </div>
-            <div class="form-check dropdown-item">
-              <label class="form-check-label">
-                <input class="form-check-input" id="checkbox_explanation" name="disp_opt" type="checkbox" checked="checked" onchange="Options.changeOption(this)">
-                  Explanations
-              </label>
-            </div>
-            <div class="form-check dropdown-item">
-              <label class="form-check-label">
-                <input class="form-check-input" id="checkbox_legend" name="disp_opt" type="checkbox" checked="checked" onchange="Options.changeOption(this)">
-                  Legends
-              </label>
-            </div>
-          </div>
-        </li>
-      </ul>
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="/calculator.html"><i class="fa fa-calculator"></i>
+                    Calc</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/sheets.html"><i class="fa fa-file"></i> Sheets</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    <i class="fa fa-info-circle"></i> Info
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="/about.html"><i class="fa fa-question"></i>
+                        About TeX4TUM</a>
+                    <a class="dropdown-item" href="/team.html"><i class="fa fa-users"></i>
+                        Team</a>
+                    <a class="dropdown-item" href="/demo.html"><i class="fa fa-play-circle"></i>
+                        Feature Demo</a>
+                    <div class="dropdown-divider"></div>
+                    <h6 class="dropdown-header"><i class="fa fa-handshake"></i> Contribute</h6>
+                    <a class="dropdown-item" href="/support.html"><i class="fa fa-life-ring"></i>
+                        Support</a>
+                    <a class="dropdown-item" href="/contribution.html"><i class="fa fa-edit"></i>
+                        Write Article</a>
+                    <a class="dropdown-item" href="/todo.html"><i class="fa fa-tasks"></i> ToDo
+                        List</a>
+                    <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum"><i class="fab fa-github"></i>
+                        Develop Features</a>
+                    <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum/issues"><i class="fa fa-bug"></i>
+                        Report a bug</a>
+                    <a class="dropdown-item" href="/contact.html"><i class="fas fa-user-edit"></i>
+                        Contact</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link btn-group dropdown-toggle" href="/index.html"
+                    id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false"><i class="fa fa-cog"></i> Options</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <h6 class="dropdown-header">Display Options</h6>
+                    <div class="form-check dropdown-item">
+                        <label class="form-check-label">
+                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox"
+                                checked="checked" onchange="Options.changeOption(this)">
+                            Definitions
+                        </label>
+                    </div>
+                    <div class="form-check dropdown-item">
+                        <label class="form-check-label">
+                            <input class="form-check-input" id="checkbox_example" name="disp_opt" type="checkbox"
+                                onchange="Options.changeOption(this)">
+                            Examples
+                        </label>
+                    </div>
+                    <div class="form-check dropdown-item">
+                        <label class="form-check-label">
+                            <input class="form-check-input" id="checkbox_explanation" name="disp_opt" type="checkbox"
+                                onchange="Options.changeOption(this)">
+                            Explanations
+                        </label>
+                    </div>
+                    <div class="form-check dropdown-item">
+                        <label class="form-check-label">
+                            <input class="form-check-input" id="checkbox_legend" name="disp_opt" type="checkbox"
+                                onchange="Options.changeOption(this)">
+                            Legends
+                        </label>
+                    </div>
+                </div>
+            </li>
+        </ul>
     </div>
 
 
@@ -139,39 +161,22 @@
 <!-- SI Units -->
 <!--=============================================================== -->
 <!-- KaTeX Tweaks -->
+<!-- \renewcommand{\boldsymbol}[1]{\mathbf{#1}} -->
 <div id="title_def" class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
-<h5 class="card-title text-primary">
-Definition
-</h5>
-<p class="card-text">
-This page is a showcase of the features that TeX4TUM provides and demonstrates how learning materials could be made interactive, fast accessible, and neat.
-</p>
+<h5 class='card-title text-primary'>Definition</h5>
+<p class='card-text'>This page is a showcase of the features that TeX4TUM provides and demonstrates how learning materials could be made interactive, fast accessible, and neat.</p>
 </div>
 </div>
 </div>
 <p>Click on the heading to unfold the definition box.</p>
 <h2 id="table-of-contents"><i class="fa fa-list-ul"></i> Table of Contents</h2>
 <ul>
-<li><a href="#interactive-features">Interactive Features</a>
-<ul>
-<li><a href="#content-categories">Content Categories</a></li>
-<li><a href="#interactive-equations">Interactive Equations</a></li>
-<li><a href="#interactive-diagrams">Interactive Diagrams</a></li>
-<li><a href="#fast-fuzzy-search">Fast Fuzzy Search</a></li>
-</ul></li>
-<li><a href="#basic-fomartting">Basic Fomartting</a>
-<ul>
-<li><a href="#tables">Tables</a></li>
-<li><a href="#abreviations">Abreviations</a></li>
-<li><a href="#tab-boxes">Tab Boxes</a></li>
-</ul></li>
+<li><a href="#interactive-features">Interactive Features</a></li>
+<li><a href="#basic-fomartting">Basic Fomartting</a></li>
 <li><a href="#todo">ToDo</a></li>
-<li><a href="#feature-tests">Feature Tests</a>
-<ul>
-<li><a href="#content-categories">Content Categories</a></li>
-</ul></li>
+<li><a href="#feature-tests">Feature Tests</a></li>
 </ul>
 <h2 id="interactive-features">Interactive Features</h2>
 <h3 id="content-categories">Content Categories</h3>
@@ -180,39 +185,15 @@ This page is a showcase of the features that TeX4TUM provides and demonstrates h
 <div class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
-<h5 class="card-title text-primary">
-Definition
-</h5>
-<p class="card-text">
-The square root is the math function <span class="LaTeX">$\sqrt{\cdot}$</span>.
-</p>
+<h5 class='card-title text-primary'>Definition</h5>
+<p class='card-text'>The square root is the math function $\sqrt{\cdot}$.</p>
 </div>
 </div>
 </div>
-<h5 class="clp_title text-success" data-toggle="collapse" href="#example1172">
-<i class='fa fa-chart-bar'></i> Example
-</h5>
-<div id='example1172' class='example collapse'>
-<div class='card border-success mb-1'>
-<div class='card-body'>
-<p class='card-text'>
-Example <span class="LaTeX">$\sqrt{ x^4 } = x^2$</span>
-<p>
-</div>
-</div>
-</div>
-<h5 class="clp_title text-warning" data-toggle="collapse" href="#expl390">
-<i class='fa fa-comment-dots'></i> Explanation
-</h5>
-<div id='expl390' class='explanation collapse'>
-<div class='card border-warning mb-1'>
-<div class='card-body'>
-<p class='card-text'>
-This is an explanation.
-<p>
-</div>
-</div>
-</div>
+<h5 class='clp_title text-success' data-toggle='collapse' href='#example1117'><i class='fa fa-chart-bar'></i> Example</h5>
+<p><div id='example1117' class='example collapse'><div class='card border-success mb-1'><div class='card-body'><p class='card-text'> Example <span class="LaTeX">$\sqrt{ x^4 } = x^2$</span> <p> </div></div></div></p>
+<h5 class='clp_title text-warning' data-toggle='collapse' href='#expl1043'><i class='fa fa-comment-dots'></i> Explanation</h5>
+<p><div id='expl1043' class='explanation collapse'><div class='card border-warning mb-1'><div class='card-body'> <p class='card-text'> This is an explanation. <p> </div></div></div></p>
 <h3 id="interactive-equations">Interactive Equations</h3>
 <p>For a low-pass filter, the Cut-Off Frequency is</p>
 <div data-toggle="collapse" href="#eq_0">
@@ -230,10 +211,8 @@ This is an explanation.
 <h3 id="interactive-diagrams">Interactive Diagrams</h3>
 <p>Play with diagrams for better understanding. Click and drag the black ray with the mouse or change any value in the diagram.</p>
 <figure>
-<object class="img-fluid" id="fraction" data="res/img/dynamic-images/fraction.svg" type="image/svg+xml">
-</object>
-<figcaption>
-</figcaption>
+<object class="img-fluid" id="fraction" data="res/img/dynamic-images/fraction.svg" type="image/svg+xml"></object>
+<figcaption></figcaption>
 </figure>
 <h3 id="fast-fuzzy-search">Fast Fuzzy Search</h3>
 <p>Find an answer blazingly fast. The fuzzy search in the top bar displays results immediately without slow sever communication. Just hit <code>tab</code> to focus the search, then type e.g. &quot;did&quot; to search for &quot;Diode&quot;.</p>
@@ -268,16 +247,9 @@ This is an explanation.
 <p>You can use boxes with tabs for content that exists in similiar variations.</p>
 <div class="card tabbox">
 <div class="card-header">
-<ul class="nav nav-tabs card-header-tabs ml-0" role="tablist">
-<li class="nav-item">
-<a class="nav-link active" data-toggle="tab" href="#checkboxid-0" role="tab">Tab 1</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" data-toggle="tab" href="#checkboxid-1" role="tab">Tab 2</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" data-toggle="tab" href="#checkboxid-2" role="tab">Tab 3</a>
-</li>
+<ul class="nav nav-tabs card-header-tabs ml-0" role="tablist"><li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#checkboxid-0" role="tab">Tab 1</a></li>
+<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#checkboxid-1" role="tab">Tab 2</a></li>
+<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#checkboxid-2" role="tab">Tab 3</a></li>
 </ul>
 </div>
 <div class="card-body">
@@ -310,88 +282,26 @@ This is an explanation.
 <div class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
-<h5 class="card-title text-primary">
-Definition
-</h5>
-<p class="card-text">
-The square root is the math function <span class="LaTeX">$\sqrt{\cdot}$</span>.
-</p>
+<h5 class='card-title text-primary'>Definition</h5>
+<p class='card-text'>The square root is the math function $\sqrt{\cdot}$.</p>
 </div>
 </div>
 </div>
-<h5 class="clp_title text-success" data-toggle="collapse" href="#example1173">
-<i class='fa fa-chart-bar'></i> Example
-</h5>
-<div id='example1173' class='example collapse'>
-<div class='card border-success mb-1'>
-<div class='card-body'>
-<p class='card-text'>
-Example <span class="LaTeX">$\sqrt{ x^4 } = x^2$</span>
-<p>
-</div>
-</div>
-</div>
-<h5 class="clp_title text-warning" data-toggle="collapse" href="#expl391">
-<i class='fa fa-comment-dots'></i> Explanation
-</h5>
-<div id='expl391' class='explanation collapse'>
-<div class='card border-warning mb-1'>
-<div class='card-body'>
-<p class='card-text'>
-<span class="LaTeX">$x^4 = x^{2+2} = x^2 \cdot x^2$</span>
-<p>
-</div>
-</div>
-</div>
-<div class="legend collapse">
-<div class="card border-info w-75 mx-auto">
-<div class="p-1 small">
-where <span class="LaTeX">$x$</span> is an arbitrary number
-</div>
-</div>
-</div>
+<h5 class='clp_title text-success' data-toggle='collapse' href='#example1118'><i class='fa fa-chart-bar'></i> Example</h5>
+<p><div id='example1118' class='example collapse'><div class='card border-success mb-1'><div class='card-body'><p class='card-text'> Example <span class="LaTeX">$\sqrt{ x^4 } = x^2$</span> <p> </div></div></div> <h5 class='clp_title text-warning' data-toggle='collapse' href='#expl1044'><i class='fa fa-comment-dots'></i> Explanation</h5> <div id='expl1044' class='explanation collapse'><div class='card border-warning mb-1'><div class='card-body'> <p class='card-text'> <span class="LaTeX">$x^4 = x^{2+2} = x^2 \cdot x^2$</span> <p> </div></div></div> <div class='legend collapse'><div class='card border-info w-75 mx-auto'><div class='p-1 small'> where <span class="LaTeX">$x$</span> is an arbitrary number </div></div></div></p>
 <p><strong>Using Own Parser:</strong></p>
 <p>Definition: The square root is the math function</p>
-<h5 class="clp_title text-success" data-toggle="collapse" href="#example1174">
-<i class='fa fa-chart-bar'></i> Example
-</h5>
-<div id='example1174' class='example collapse'>
-<div class='card border-success mb-1'>
-<div class='card-body'>
-<p class='card-text'>
-<span class="LaTeX">$\sqrt{ x^4 } = x^2$</span>
-<p>
-</div>
-</div>
-</div>
-<p>Explanation: The answer is <span class="LaTeX">$x^2$</span> because <span class="LaTeX">$x^4 = x^{2+2} = x^2 \cdot x^2$</span></p>
+<h5 class='clp_title text-success' data-toggle='collapse' href='#example1119'><i class='fa fa-chart-bar'></i> Example</h5>
+<p><div id='example1119' class='example collapse'><div class='card border-success mb-1'><div class='card-body'><p class='card-text'><span class="LaTeX">$\sqrt{ x^4 } = x^2$</span><p> </div></div></div></p>
+<h5 class='clp_title text-warning' data-toggle='collapse' href='#expl1045'><i class='fa fa-comment-dots'></i> Explanation</h5>
+<p><div id='expl1045' class='explanation collapse'><div class='card border-warning mb-1'><div class='card-body'> <p class='card-text'> The answer is <span class="LaTeX">$x^2$</span> because <span class="LaTeX">$x^4 = x^{2+2} = x^2 \cdot x^2$</span> <p> </div></div></div></p>
 <p>Legend: where <span class="LaTeX">$x$</span> is an arbitrary number</p>
 <p><strong>Using Headings</strong></p>
-<h5 class="clp_title text-warning" data-toggle="collapse" href="#expl392">
-<i class='fa fa-comment-dots'></i> Explanation of This
-</h5>
-<div id='expl392' class='explanation collapse'>
-<div class='card border-warning mb-1'>
-<div class='card-body'>
-<p class='card-text'>
-<p>This is an explanation to demonstrate the auto detection of an explanation</p>
-even over several lines
-<p>
-</div>
-</div>
-</div>
-<h5 class="clp_title text-success" data-toggle="collapse" href="#example1175">
-<i class='fa fa-chart-bar'></i> Example Subsection
-</h5>
-<div id='example1175' class='example collapse'>
-<div class='card border-success mb-1'>
-<div class='card-body'>
-<p class='card-text'>
-This is an example to demonstrate the auto detection of an example even over several lines
-<p>
-</div>
-</div>
-</div>
+<h5 class='clp_title text-warning' data-toggle='collapse' href='#expl1046'><i class='fa fa-comment-dots'></i> Explanation of This</h5>
+<p><div id='expl1046' class='explanation collapse'><div class='card border-warning mb-1'><div class='card-body'> <p class='card-text'> This is an explanation to demonstrate the auto detection of an explanation</p>
+<p>even over several lines <p> </div></div></div></p>
+<h5 class='clp_title text-success' data-toggle='collapse' href='#example1120'><i class='fa fa-chart-bar'></i> Example Subsection </h5>
+<p><div id='example1120' class='example collapse'><div class='card border-success mb-1'><div class='card-body'><p class='card-text'> This is an example to demonstrate the auto detection of an example even over several lines <p> </div></div></div></p>
 <script type="text/javascript">
 function RC_calcFrequency() {
  var C1 = getValue( document.getElementById("C_val").textContent );
@@ -472,7 +382,7 @@ function syncValues(id, value){
   <script src="/assets/js/options.js"></script>
 
   <!-- KaTeX JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js"></script>
 
   <!-- jQuery (req. for BootStrap) -->
   <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
