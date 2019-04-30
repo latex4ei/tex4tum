@@ -39,6 +39,8 @@ $headings-font-family: $font-family-sans-serif;
 //
 main h2 { margin-top: 2.5em; }
 main h3 { margin-top: 1.5em; }
+main h4 { margin-top: 1.0em; }
+main h5 { margin-top: 0.7em; }
 
 
 
@@ -62,6 +64,7 @@ $container-max-widths: (
 main table { width: auto; }
 $table-cell-padding: 0.75rem;
 $table-cell-padding-sm: 0.5rem 1.0rem;
+
 
 
 
