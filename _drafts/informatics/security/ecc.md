@@ -19,6 +19,7 @@ Only some parameter sets are secure and useful for craptography.
 
 Popular curves:
 * secp256k1
+* Curve25519
 
 
 
@@ -34,6 +35,7 @@ Breaking a 228-bit RSA key requires less energy than it takes to boil a teaspoon
 * [Interactive ECC](https://cdn.rawgit.com/andreacorbellini/ecc/920b29a/interactive/reals-add.html)
 
 
+* [SafeCurves: choosing safe curves for elliptic-curve cryptography](https://safecurves.cr.yp.to/)
 
 
 
