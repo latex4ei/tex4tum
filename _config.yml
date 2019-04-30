@@ -60,7 +60,7 @@ pandoc:
     # - smart
     - latexmathml
     #- columns: 100
-    - read: markdown+footnotes+backtick_code_blocks   # general format+extensio1+extension2
+    - read: markdown-markdown_in_html_blocks+raw_html+footnotes+backtick_code_blocks   # general format+extensio1+extension2  format=(markdown|markdown_strict)
     #- filter: pandoc-citeproc
 highlighter: pygments
 plugins:
