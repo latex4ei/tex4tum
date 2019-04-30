@@ -64,7 +64,7 @@ module Jekyll
 
     #EXPLANATION_REGEXP = RE_NL+%r{((?:Explanation|Details):\s+(?:.|\n)*?)}+RE_BL
     EXPLANATION_REGEXP = %r{(?:^|\n)\s*\n\s*(?:Explanations?|Details?):\s+((?:.|\n)*?)(?:^|\n)\s*\n\s*}
-    RE_EXPLANATION_SECTION = %r{(?<=^|\n)\s*##+\s*(Explanation.*?)\n\s*((?:.|\n)*?)\n.*\n(?=\s*##+|\Z)}    # \n\s*((?:.|\n)*?)\n\s*\n(?=\s*##+|\Z)
+    # RE_EXPLANATION_SECTION = %r{(?<=^|\n)\s*##+\s*(Explanation.*?)\n\s*((?:.|\n)*?)\n.*\n(?=##+|\Z|\n\n)}    # \n\s*((?:.|\n)*?)\n\s*\n(?=\s*##+|\Z)
     RE_EXAMPLE = %r{(?:^|\n)\s*\n\s*(?:Example|For Example):\s+((?:.|\n)*?)(?:^|\n)\s*\n\s*}
 
 
@@ -136,7 +136,7 @@ module Jekyll
 
       # regcognize sections (match between ## and ##)
       level = 1
-      re_inner_section = %r{^\s*(\#{#{level}}+\s(.*?)\n((?:.|\n)*?)\n\s*\n(?=\s*\#{1,#{level}}|\Z))}
+      re_inner_section = %r{^\s*(\#{#{level}}+\s(.*?)\n((?:.|\n)*?)\n\s*\n(?=\s*\#{1,#{level}}|\Z|\n\n\n))}
       #content.scan(INNER_SECTION_REGEXP) do |match|
       content.scan(re_inner_section) do |match|
         section_title = match[1]   #$1
