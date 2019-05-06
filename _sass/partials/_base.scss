@@ -1,4 +1,5 @@
-@import '../modules/variables';
+@import '../macros/font';
+@import '../macros/colors';
 
 /**
  * Reset some basic elements
@@ -10,6 +11,8 @@ dl, dd, ol, ul, figure, footer {
   padding: 0;
 }
 
+
+
 /**
  * Set `margin-bottom` to maintain vertical rhythm
  */
@@ -20,20 +23,11 @@ ul, ol, dl, dd, figure,
   margin-bottom: $spacing-unit / 2;
 }
 
-ul, ol {
-  margin-left: $spacing-unit;
-}
 
-li {
-  > ul,
-  > ol {
-    margin-bottom: 0;
-  }
-}
 
 blockquote {
-  border-left: 4px solid $grey-color-light;
-  color: $grey-color;
+  border-left: 4px solid $gray;
+  color: $tum_sec_gray_dark;
   font-size: 18px;
   font-style: italic;
   letter-spacing: -1px;
@@ -44,6 +38,17 @@ blockquote {
   }
 }
 
+
+
+p {
+  margin-top: 0;
+  font-family: $font_paragraph;
+  //font-size: 1.15em  // adjust serif font to sans 
+}
+
+
+
+
 /**
  * Clearfix
  */
@@ -53,43 +58,20 @@ blockquote {
   display: table;
 }
 
-//original selectors
-//input[type='email'], input[type='number'], input[type='password'], input[type='tel'], input[type='text'], input[type='url'], textarea, select
-%extend_2 {
-  appearance: none;
-  box-shadow: none;
-  padding: .5rem .2rem;
-  width: 100%;
+
+
+/** Basic Layout
+ *  ===================================================
+ */
+html {
+  min-height: 100%;
+  position: relative;
 }
 
-input {
-  font-family: inherit;
-  font-size: inherit;
-  &:focus {
-    border: .2rem solid $brand-primary;
-    outline: 0;
-  }
+body {
+  overflow-x: hidden;
 }
 
-select {
-  font-family: inherit;
-  font-size: inherit;
-  @extend %extend_2;
-  &:focus {
-    border: .2rem solid $brand-primary;
-    outline: 0;
-  }
-}
-
-textarea {
-  font-family: inherit;
-  font-size: inherit;
-  @extend %extend_2;
-  &:focus {
-    border: .2rem solid $brand-primary;
-    outline: 0;
-  }
-}
 
 main {
   clear: both;
@@ -103,62 +85,134 @@ section {
   padding: .5em;
 }
 
+footer {
+  @extend %clearfix;
+  background-color: $gray_lighter;
+  //position: absolute;
+  //bottom: 0;
+  margin-top: 1em;
+  color: $tum_sec_gray;
+  font-size: 15px;
+  padding: 30px 0px 30px 0px;
+  width: 100%;
+}
+
+
+
+/**
+ *   Headings
+ *  ===================================================
+ */
+
+h1, h2, h3, h4, h5, h6 { 
+  font-family: $font_header; 
+  line-height: 1.2; 
+}
+h1+h2, h2+h3, h3+h4, h4+h5, h5+h6 {
+  margin-top: 0.5em;
+}
+
 h1 {
-  font-family: $font_header;
   font-size: 2em;
   font-weight: bold;
 }
 
 h2 {
-  font-family: $font_header;
-  font-size: 1.5em;
-  font-weight: bold;
+  font-size: 2.0em;
+  font-weight: 300;
   margin-bottom: .4em;
   margin-top: 1.5em;
 }
 
 h3 {
-  font-family: $font_header;
-  font-size: 1.4em;
+  font-size: 1.5em;
   margin-bottom: 0.1em;
   margin-top: 1.0em;
 }
 
 h4 {
-  font-family: $font_header;
-  font-size: 1.1em;
+  font-size: 1.2em;
   font-weight: bold;
   margin-bottom: 0.1em;
   margin-top: 1.0em;
 }
 
+main h5 { font-size: larger; color: $tum_sec_gray_dark; }
+main h6 { font-size: 1em; font-weight: bold; }
 
 
-p {
-  margin-top: 0;
-  font-family: $font_paragraph;
-  //font-size: 1.15em  // adjust serif font to sans 
+
+
+
+/** Lists
+ *  ===================================================
+ */
+
+ul, ol {
+  margin-left: $spacing-unit;
 }
+
+li {
+  > ul,
+  > ol {
+    margin-bottom: 0;
+  }
+}
+
+
+
+
+
+/** Table
+ *  ===================================================
+ */
 
 table {
   @extend .table;
   @extend .table-sm;
-  @extend .table-striped;
+  // @extend .table-striped;
 }
 
-thead {
-  @extend .bg-info;
+main td, main th {
+  border-bottom: 0.1rem solid #d1d1d1;
+  text-align: left;
+  line-height: 1.1;
+  padding: 0.7rem 1.0rem 0.4rem;
+  white-space: nowrap;
+  &:first-child { padding-left:  0; }
+  &:last-child  { padding-right: 0; }
+}
+
+main thead th {
+  border-top:    0.1rem solid $tum_sec_gray;
+  border-bottom: 0.1rem solid $tum_sec_gray;  
+}
+
+main thead, main th {
+  background-color: $bg_thead;
+}
+
+
+
+/** Code
+ *  ===================================================
+ */
+
+code {
+  background-color: $bg_code;
+  color: $fg_code;
 }
 
 pre {
-  background-color: $grey-color-light;
-  border-radius: 3px;
   line-height: 1.5rem;
-  margin: 0;
+  margin: 0.5rem 0;
+  padding: 0;
   overflow-x: auto;
-  padding: 8px 12px;
   > code {
-    border-radius: .4rem;
+    background-color: $bg_code;
+    border-top-right-radius: .3rem;
+    border-bottom-right-radius: .3rem;    
+    border-left: 0.3rem solid $fg_code;
     display: block;
     padding: .5rem 1rem;
     white-space: pre;
@@ -168,32 +222,66 @@ pre {
 
 pre.diagram{
   line-height: 1.0rem;
+  > code {
+    border-left: none;
+  }
 }
 
 
-input[type='email'] {
+
+
+
+/** Input
+ *  ===================================================
+ */
+
+//original selectors
+//input[type='email'], input[type='number'], input[type='password'], input[type='tel'], input[type='text'], input[type='url'], textarea, select
+%extend_2 {
+  font-family: inherit;
+  font-size: inherit;
+  appearance: none;
+  box-shadow: none;
+  padding: .5rem .2rem;
+  width: 100%;
+}
+
+
+main input:not([type=checkbox]):not([type=radio]){
+  box-shadow: none;
+  border-radius: .3rem; 
+  border: .1rem solid #d1d1d1; 
+  padding: 0.3rem; 
+  outline: none;
+  &:focus{
+    border:.1rem solid $brand-primary;
+    box-shadow: 0 0 .5rem $brand-primary;
+  }
+}
+
+
+select {
+  @extend %extend_2;
+  &:focus {
+    border: .2rem solid $brand-primary;
+    outline: 0;
+  }
+}
+
+textarea {
+  @extend %extend_2;
+  &:focus {
+    border: .2rem solid $brand-primary;
+    outline: 0;
+  }
+}
+
+input[type='email'], input[type='number'], input[type='password'], 
+input[type='tel'], input[type='text'], input[type='url'] {
   @extend %extend_2;
 }
 
-input[type='number'] {
-  @extend %extend_2;
-}
 
-input[type='password'] {
-  @extend %extend_2;
-}
-
-input[type='tel'] {
-  @extend %extend_2;
-}
-
-input[type='text'] {
-  @extend %extend_2;
-}
-
-input[type='url'] {
-  @extend %extend_2;
-}
 
 input[type="checkbox"] {
   height: 1rem;
@@ -201,19 +289,4 @@ input[type="checkbox"] {
   width: 1rem;
 }
 
-html {
-  min-height: 100%;
-  position: relative;
-}
 
-footer {
-  @extend %clearfix;
-  background-color: $gray-lighter;
-  //position: absolute;
-  //bottom: 0;
-  margin-top: 1em;
-  color: $grey-color;
-  font-size: 15px;
-  padding: 30px 0px 30px 0px;
-  width: 100%;
-}

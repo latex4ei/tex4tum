@@ -4,59 +4,6 @@
   margin: $spacing-unit / 2 0;
 }
 
-#search {
-  height: 2em;
-  margin-right: 5em;
-  min-width: 15em;
-  text-align: baseline;
-  float: right;
-}
-
-.search-input {
-  z-index: 10;
-  border: 0.2em solid $tum_prim_blue;
-  min-width: inherit;
-  display: block;
-  height: inherit;
-  padding: 0 0.5rem;
-  margin: 0;
-  font-family: FontAwesome, Arial;
-}
-
-.ac-results-wrapper {
-  position: absolute;
-  display: block;
-  min-width: inherit;
-  font-size: 80%;
-  border: 1px solid $tum_sec_gray_light;
-  border-top-width: 0;
-  background-color: white;
-  z-index: 11;
-  a {
-    display: none;
-    height: 30px;
-    color: $tum_emph_lightblue;
-    vertical-align: middle;
-    line-height: 30px;
-    padding-left: 5px;
-    text-decoration: none;
-    text-align: left;
-    width: 100%;
-    &:hover {
-      background-color: $tum_emph_lightblue;
-      color: white;
-    }
-    &:focus {
-      background-color: $tum_emph_lightblue;
-      color: white;
-    }
-  }
-  i {
-    float: right;
-    padding-right: 5px;
-    color: $tum_sec_gray_light;
-  }
-}
 
 * {
   -moz-box-sizing: border-box;

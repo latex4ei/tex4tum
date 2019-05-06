@@ -27,14 +27,29 @@
   }
 }
 
-// Import partials.
+// Import bootstrap
 @import "bootstrap/custom";
 @import "bootstrap/scss/bootstrap";
+
+// Import macros (variable definitions)
+@import 
+  "macros/font",
+  "macros/tumcolors"
+;
+
+
+// Import partials (general CSS)
 @import
-  "modules/colors",
   "partials/base",
   "partials/layout",
   "partials/syntax-highlighting",
-  "partials/classes"
-  // "partials/tabs"
+  "partials/content-classes"
 ;
+
+
+// Import modules (specific CSS) 
+@import
+  "modules/searchbox"
+  //"modules/tabbox"
+;
+

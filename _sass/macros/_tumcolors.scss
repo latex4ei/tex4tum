@@ -2,6 +2,7 @@
 $tum_prim_blue: #005293;
 $tum_prim_white: #FFFFFF;
 
+// secondary colors
 $tum_sec_gray_light: #ccccc6;
 $tum_sec_gray: #808080;
 $tum_sec_gray_dark: #333333;
@@ -14,11 +15,16 @@ $tum_sec_darkblue: #005293;
 $tum_sec_darkblue_80: #3375a9;
 $tum_sec_darkblue_50: #80a9c9;
 $tum_sec_darkblue_20: #ccdce9;
+
+// emphasize colors
 $tum_emph_green: #a2ad00;
 $tum_emph_ivory: #dad7cb;
 $tum_emph_orange: #e37222;
 $tum_emph_lightblue: #64a0c8;
 $tum_emph_lighterblue: #98c6ea;
+
+
+// extended colors
 $tum_ext_violet: #69085a;
 $tum_ext_violet_80: #87397b;
 $tum_ext_violet_50: #b484ad;
@@ -59,14 +65,3 @@ $tum_ext_maroon: #9c0d16;
 $tum_ext_maroon_80: #b03d45;
 $tum_ext_maroon_50: #ce868b;
 $tum_ext_maroon_20: #ebcfd0;
-
-
-
-// Other
-$light_gray: #999;
-$grey-color:       #828282 !default;
-$grey-color-light: lighten($grey-color, 40%) !default;
-$gray-lighter: lighten($grey-color, 40%) !default;
-
-$bg_tum_orange: lighten($tum_emph_orange, 40%) !default;
-$bg_tum_blue_dark:   lighten($tum_sec_darkblue, 40%) !default;
