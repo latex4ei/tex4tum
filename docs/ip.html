@@ -195,9 +195,12 @@
 <div id="title_def" class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
-<h5 class='card-title text-primary'>Definition</h5>
-<p class='card-text'>The Internet Protocol (<abbr title="Internet Protocol" >IP</abbr>) is the basic communication protocol in the Internet layer.
-<abbr title="Internet Protocol" >IP</abbr> has the task of delivering packets from the source host to the destination host solely based on the <abbr title="Internet Protocol" >IP</abbr> addresses in the packet headers.</p>
+<h5 class="card-title text-primary">
+Definition
+</h5>
+<p class="card-text">
+The Internet Protocol (<abbr title="Internet Protocol" >IP</abbr>) is the basic communication protocol in the Internet layer. <abbr title="Internet Protocol" >IP</abbr> has the task of delivering packets from the source host to the destination host solely based on the <abbr title="Internet Protocol" >IP</abbr> addresses in the packet headers.
+</p>
 </div>
 </div>
 </div>
@@ -236,20 +239,36 @@
 <h3 id="address-notation">Address Notation</h3>
 <div class="card tabbox">
 <div class="card-header">
-<ul class="nav nav-tabs card-header-tabs ml-0" role="tablist"><li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#checkboxid-0" role="tab"><abbr title="Internet Protocol version 6" >IPv6</abbr> </a></li>
-<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#checkboxid-1" role="tab">IPv4 </a></li>
+<ul class="nav nav-tabs card-header-tabs ml-0" role="tablist">
+<li class="nav-item">
+<a class="nav-link active" data-toggle="tab" href="#checkboxid-0" role="tab"><abbr title="Internet Protocol version 6" >IPv6</abbr> </a>
+</li>
+<li class="nav-item">
+<a class="nav-link" data-toggle="tab" href="#checkboxid-1" role="tab">IPv4 </a>
+</li>
 </ul>
 </div>
 <div class="card-body">
 <div class="tab-content">
-<div id="checkboxid-0" class="tab-pane active" role="tabpanel">
+
+<div class="tab-pane active" id="checkboxid-0" role="tabpanel">
 <p>16 byte written as 8 groups of 4 hexadecimal characters.</p>
 <ul>
 <li>leading zeros within a group may be omitted</li>
 <li>consecutive groups of only zeros may be replace by <code>::</code>. This replacement is only allowed once within an address.</li>
 </ul>
-<h5 class='clp_title text-success' data-toggle='collapse' href='#example1107'><i class='fa fa-chart-bar'></i> Example</h5>
-<p><div id='example1107' class='example collapse'><div class='card border-success mb-1'><div class='card-body'><p class='card-text'>Initial address: <code>2001:0db8:0000:0000:0000:ff00:0042:8329</code></br> Removing leading zeroes: <code>2001:db8:0:0:0:ff00:42:8329</code></br> Omitting consecutive groups of zeroes: <code>2001:db8::ff00:42:8329</code><p> </div></div></div></p>
+<h5 class="clp_title text-success" data-toggle="collapse" href="#example15">
+<i class='fa fa-chart-bar'></i> Example
+</h5>
+<div id='example15' class='example collapse'>
+<div class='card border-success mb-1'>
+<div class='card-body'>
+<p class='card-text'>
+Initial address: <code>2001:0db8:0000:0000:0000:ff00:0042:8329</code></br> Removing leading zeroes: <code>2001:db8:0:0:0:ff00:42:8329</code></br> Omitting consecutive groups of zeroes: <code>2001:db8::ff00:42:8329</code>
+<p>
+</div>
+</div>
+</div>
 </div>
 <div id="checkboxid-1" class="tab-pane" role="tabpanel">
 <p>4 byte written as 4 groups of integers between 0 and 255.</p>
@@ -269,8 +288,13 @@
 <p>Certain adress ranges are reserved for special use cases.</p>
 <div class="card tabbox">
 <div class="card-header">
-<ul class="nav nav-tabs card-header-tabs ml-0" role="tablist"><li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#checkboxid-2" role="tab"><abbr title="Internet Protocol version 6" >IPv6</abbr></a></li>
-<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#checkboxid-3" role="tab">IPv4 </a></li>
+<ul class="nav nav-tabs card-header-tabs ml-0" role="tablist">
+<li class="nav-item">
+<a class="nav-link active" data-toggle="tab" href="#checkboxid-2" role="tab"><abbr title="Internet Protocol version 6" >IPv6</abbr></a>
+</li>
+<li class="nav-item">
+<a class="nav-link" data-toggle="tab" href="#checkboxid-3" role="tab">IPv4 </a>
+</li>
 </ul>
 </div>
 <div class="card-body">
@@ -302,13 +326,19 @@
 <h2 id="header-format">Header Format</h2>
 <div class="card tabbox">
 <div class="card-header">
-<ul class="nav nav-tabs card-header-tabs ml-0" role="tablist"><li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#checkboxid-4" role="tab"><abbr title="Internet Protocol version 6" >IPv6</abbr> </a></li>
-<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#checkboxid-5" role="tab">IPv4 </a></li>
+<ul class="nav nav-tabs card-header-tabs ml-0" role="tablist">
+<li class="nav-item">
+<a class="nav-link active" data-toggle="tab" href="#checkboxid-4" role="tab"><abbr title="Internet Protocol version 6" >IPv6</abbr> </a>
+</li>
+<li class="nav-item">
+<a class="nav-link" data-toggle="tab" href="#checkboxid-5" role="tab">IPv4 </a>
+</li>
 </ul>
 </div>
 <div class="card-body">
 <div class="tab-content">
-<div id="checkboxid-4" class="tab-pane active" role="tabpanel">
+
+<div class="tab-pane active" id="checkboxid-4" role="tabpanel">
 <p>The <abbr title="Internet Protocol version 6" >IPv6</abbr> header has a fixed size of 40 bytes.</p>
 <pre class="diagram"><code> 0                   1                   2                   3
  0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
@@ -333,8 +363,13 @@
 +                                                               +
 |                                                               |
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</code></pre>
-<h5 class='clp_title text-warning' data-toggle='collapse' href='#expl1030'><i class='fa fa-comment-dots'></i> Explanation of the Header Fields</h5>
-<p><div id='expl1030' class='explanation collapse'><div class='card border-warning mb-1'><div class='card-body'> <p class='card-text'></p>
+<h5 class="clp_title text-warning" data-toggle="collapse" href="#expl11">
+<i class='fa fa-comment-dots'></i> Explanation of the Header Fields
+</h5>
+<div id='expl11' class='explanation collapse'>
+<div class='card border-warning mb-1'>
+<div class='card-body'>
+<p class='card-text'>
 <dl>
 <dt>Version – 4 bit</dt>
 <dd>Internet Protocol version number = 6 (<code>0b1010</code>).
@@ -358,11 +393,15 @@
 <dd>Address of the originator of the packet.
 </dd>
 <dt>Destination Address – 128 bit</dt>
-<dd>Address of the intended recipient of the packet. <p> </div></div></div>
+<dd>Address of the intended recipient of the packet.
+<p>
+</div>
+</div>
+</div>
 </dd>
 </dl>
 </div>
-<div id="checkboxid-5" class="tab-pane" role="tabpanel">
+<div class="tab-pane" id="checkboxid-5" role="tabpanel">
 <p>The IPv4 header has a size of 20 bytes if options are not used.</p>
 <pre class="diagram"><code> 0                   1                   2                   3
  0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
@@ -379,8 +418,13 @@
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 |                    Options                    |    Padding    |
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</code></pre>
-<h5 class='clp_title text-warning' data-toggle='collapse' href='#expl1031'><i class='fa fa-comment-dots'></i> Explanation of the Header Fields</h5>
-<p><div id='expl1031' class='explanation collapse'><div class='card border-warning mb-1'><div class='card-body'> <p class='card-text'></p>
+<h5 class="clp_title text-warning" data-toggle="collapse" href="#expl12">
+<i class='fa fa-comment-dots'></i> Explanation of the Header Fields
+</h5>
+<div id='expl12' class='explanation collapse'>
+<div class='card border-warning mb-1'>
+<div class='card-body'>
+<p class='card-text'>
 <dl>
 <dt>Version – 4 bit</dt>
 <dd>The version of the internet header. (4 = <code>0b0100</code>)
@@ -426,7 +470,11 @@
 <dd>Address of the intended recipient of the packet.
 </dd>
 <dt>Options – variable</dt>
-<dd>The options field is not often used. <p> </div></div></div>
+<dd>The options field is not often used.
+<p>
+</div>
+</div>
+</div>
 </dd>
 </dl>
 </div>

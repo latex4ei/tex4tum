@@ -183,8 +183,12 @@
 <div id="title_def" class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
-<h5 class='card-title text-primary'>Definition</h5>
-<p class='card-text'>A file system manages the abstraction of grouped data blocks that belong to a single file. File systems use metadata such as *date created*, and *access permissions* to manage the access.</p>
+<h5 class="card-title text-primary">
+Definition
+</h5>
+<p class="card-text">
+A file system manages the abstraction of grouped data blocks that belong to a single file. File systems use metadata such as <em>date created</em>, and <em>access permissions</em> to manage the access.
+</p>
 </div>
 </div>
 </div>
@@ -231,7 +235,10 @@
 <p>Each file has an I-Node that stores: * Counter of references (links) to that file</p>
 <!--<p> Filename="filesystem-inode.svg", path="/res/img/content-images/filesystem-inode.svg" </p>-->
 <figure class="figure">
-<img class="figure-img img-fluid" style="width: auto;" src="/res/img/content-images/filesystem-inode.svg" alt="I-Nodes"/><figcaption class="figure-caption">I-Nodes</figcaption>
+<img class="figure-img img-fluid" style="width: auto;" src="/res/img/content-images/filesystem-inode.svg" alt="I-Nodes"/>
+<figcaption class="figure-caption">
+I-Nodes
+</figcaption>
 </figure>
 <h2 id="journaling">Journaling</h2>
 <p>Journaling helps to avoid corruption of the file system. Before actually performing changes to the file system, the action is written to a Journal and then executed. If the operating system crashes during the execution of the action, the action can be repeated from the Journal (after reboot).</p>

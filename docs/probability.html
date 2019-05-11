@@ -180,11 +180,23 @@
 <!--=============================================================== -->
 <!-- KaTeX Tweaks -->
 <!-- \renewcommand{\boldsymbol}[1]{\mathbf{#1}} -->
+<div id="title_def" class="definition collapse">
+<div class="card border-primary mb-1">
+<div class="card-body">
+<h5 class="card-title text-primary">
+Definition
+</h5>
+<p class="card-text">
+Probabilities denote the chance that an event occurs, it is not any kind of guarantee that this event will happen after a certain amount of trials.
+</p>
+</div>
+</div>
+</div>
 <h2 id="terms">Terms</h2>
-<table style="width:28%;">
+<table>
 <colgroup>
-<col style="width: 9%" />
-<col style="width: 18%" />
+<col style="width: 57%" />
+<col style="width: 42%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -228,15 +240,24 @@
 </tbody>
 </table>
 <h2 id="conditional-probabilty">Conditional Probabilty</h2>
-<p>The probability for an event <span class="LaTeX">$A$</span> given that the event <span class="LaTeX">$B$</span> already occured is <div data-toggle='collapse' href='#eq_0'> <span class="LaTeX">$${\mathrm{P}}_B(A) = {\mathrm{P}}(A|B) = \frac{{\mathrm{P}}(A \cap B)}{{\mathrm{P}}(B)}$$</span> </div> <div id='eq_0' class='legend collapse'><div class='card border-info w-75 mx-auto'><div class='p-1 small'> with events <span class="LaTeX">$A,B$</span>. </div></div></div></p>
+The probability for an event <span class="LaTeX">$A$</span> given that the event <span class="LaTeX">$B$</span> already occured is
+<div data-toggle="collapse" href="#eq_0">
+<p><span class="LaTeX">$${\mathrm{P}}_B(A) = {\mathrm{P}}(A|B) = \frac{{\mathrm{P}}(A \cap B)}{{\mathrm{P}}(B)}$$</span></p>
+</div>
+<div id="eq_0" class="legend collapse">
+<div class="card border-info w-75 mx-auto">
+<div class="p-1 small">
+<p>with events <span class="LaTeX">$A,B$</span>.</p>
+</div>
+</div>
+</div>
 <p>Multiplication: <span class="LaTeX">${\mathrm{P}}(A \cap B) = {\mathrm{P}}(A|B){\mathrm{P}}(B) = {\mathrm{P}}(B|A){\mathrm{P}}(A)$</span></p>
 <p>Bayes' law: <span class="LaTeX">$${\mathrm{P}}(B_k | A) = \frac{{\mathrm{P}}(A | B_k){\mathrm{P}}(B_k)}{\sum\limits_{i \in I} {\mathrm{P}}(A|B_i) {\mathrm{P}}(B_i)}$$</span></p>
 <p>Total probabilty: <span class="LaTeX">${\mathrm{P}}(A) = \sum\limits_{i \in I} {\mathrm{P}}(A|B_i){\mathrm{P}}(B_i)$</span></p>
 <h2 id="random-variables">Random Variables</h2>
 <p><span class="LaTeX">${\textit{X}}: \Omega \mapsto \Omega&#39;$</span> is a random variable if for all events <span class="LaTeX">$A&#39; \in \mathbb F&#39;$</span> there exists an event <span class="LaTeX">$A \in \mathbb F$</span> such that <span class="LaTeX">$\left\{\omega \in \Omega|{\textit{X}}(\omega) \in A&#39;\right\} \in \mathbb F$</span>.</p>
 <h2 id="distribution">Distribution</h2>
-<p><strong>PDF:</strong> <span class="LaTeX">$f_{{\textit{X}}}(x) = \frac{{\,\text{d}}F_{{\textit{X}}}(x)}{{\,\text{d}}x}$</span></p>
-<p><strong>CDF:</strong> <span class="LaTeX">$F_{{\textit{X}}}(x) = \int\limits_{-\infty}^{x}{f_{{\textit{X}}}(\xi){\,\text{d}}\xi}$</span></p>
+<p><strong>PDF:</strong> <span class="LaTeX">$f_{{\textit{X}}}(x) = \frac{{\,\text{d}}F_{{\textit{X}}}(x)}{{\,\text{d}}x}$</span> <strong>CDF:</strong> <span class="LaTeX">$F_{{\textit{X}}}(x) = \int\limits_{-\infty}^{x}{f_{{\textit{X}}}(\xi){\,\text{d}}\xi}$</span></p>
 
 
     </main>

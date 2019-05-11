@@ -191,8 +191,12 @@
 <div id="title_def" class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
-<h5 class='card-title text-primary'>Definition</h5>
-<p class='card-text'>A Servo Motor is a cheap rotary actuator used for radio control and small-scale robotics.</p>
+<h5 class="card-title text-primary">
+Definition
+</h5>
+<p class="card-text">
+A Servo Motor is a cheap rotary actuator used for radio control and small-scale robotics.
+</p>
 </div>
 </div>
 </div>
@@ -222,14 +226,35 @@
 </table>
 <h2 id="control">Control</h2>
 <figure>
-<object class="img-fluid" id="servo" data="res/img/dynamic-images/servo.svg" type="image/svg+xml"></object>
-<figcaption></figcaption>
+<object class="img-fluid" id="servo" data="res/img/dynamic-images/servo.svg" type="image/svg+xml">
+</object>
+<figcaption class="figure-caption">
+</figcaption>
 </figure>
 <p>The angle of the servo is determined by the width of the PWM signal that is applied to the control wire. Most servos expect to see a pulse every 20 ms. The angle is calculated as the fraction of the pulse width</p>
-<p><div data-toggle='collapse' href='#eq_0'> <span class="LaTeX">$$pw = {1.0\,\mathrm{ms}} + {1.0\,\mathrm{ms}} \cdot \left( \frac{\alpha}{\alpha_{\text{max}}}\right)$$</span> </div> <div id='eq_0' class='legend collapse'><div class='card border-info w-75 mx-auto'><div class='p-1 small'> with the pulsewidth <span class="LaTeX">$pw$</span>, the cuuent angle <span class="LaTeX">$\alpha$</span> . </div></div></div></p>
+<div data-toggle="collapse" href="#eq_0">
+<p><span class="LaTeX">$$pw = {1.0\,\mathrm{ms}} + {1.0\,\mathrm{ms}} \cdot \left( \frac{\alpha}{\alpha_{\text{max}}}\right)$$</span></p>
+</div>
+<div id="eq_0" class="legend collapse">
+<div class="card border-info w-75 mx-auto">
+<div class="p-1 small">
+<p>with the pulsewidth <span class="LaTeX">$pw$</span>, the cuuent angle <span class="LaTeX">$\alpha$</span> .</p>
+</div>
+</div>
+</div>
 <p>For most RC servos the exact refresh rate is irrelevant as long as it is in a range of 40 Hz to 200 Hz.</p>
-<h5 class='clp_title text-success' data-toggle='collapse' href='#example1093'><i class='fa fa-chart-bar'></i> Example </h5>
-<p><div id='example1093' class='example collapse'><div class='card border-success mb-1'><div class='card-body'><p class='card-text'> A pulsewidth of <span class="LaTeX">$pw = {1.5\,\mathrm{ms}}$</span> will turn a servo with a maximum angle <span class="LaTeX">$\alpha_{\max} = {180\,\mathrm{{\text{deg}{\,}}}}$</span> to <span class="LaTeX">$\alpha = 90$</span>° (neutral position). <p> </div></div></div></p>
+<h5 class="clp_title text-success" data-toggle="collapse" href="#example1">
+<i class='fa fa-chart-bar'></i> Example
+</h5>
+<div id='example1' class='example collapse'>
+<div class='card border-success mb-1'>
+<div class='card-body'>
+<p class='card-text'>
+A pulsewidth of <span class="LaTeX">$pw = {1.5\,\mathrm{ms}}$</span> will turn a servo with a maximum angle <span class="LaTeX">$\alpha_{\max} = {180\,\mathrm{{\text{deg}{\,}}}}$</span> to <span class="LaTeX">$\alpha = 90$</span>° (neutral position).
+<p>
+</div>
+</div>
+</div>
 <h2 id="references">References</h2>
 <ul>
 <li>Jameco Electronics, <a href="https://www.jameco.com/jameco/workshop/howitworks/how-servo-motors-work.html">How do Servo Motors Work</a></li>

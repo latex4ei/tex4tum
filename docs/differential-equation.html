@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- title, description, favicon -->
+    <title>Differential Equation</title>
+    <meta name="description" content="Interactive Knowledge Base for Engineers
+"/>
+    <link rel="shortcut icon" href="/res/img/Logo.png"/>
+    <link rel="canonical" href="/differential-equation">
+
+    <!-- Brower bar color for mobile devices (TUM blue) -->
+    <meta name="theme-color" content="#005293">
+
+    <!-- Load CSS in head, JS after footer -->
+    <!-- Main/Bootstrap -->
+    <link rel="stylesheet" href="/assets/main.css">
+    <link rel="stylesheet" href="/assets/syntax-highlight.css">
+
+    <!-- Fontawesome CSS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+    <!-- KaTeX CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+</head>
+
+
+  <body>
+
+    <!-- Bootstrap 4.0 Navigation Bar -->
+<nav class="navbar sticky-top navbar-dark bg-primary text-white navbar-expand-lg">
+
+    <!-- sticky left: Logo -->
+    <div class="navbar-brand">
+        <a href="/index.html">
+            <img src="/res/img/Logo-inv.png" height="30" alt="Logo">
+        </a>
+    </div>
+
+
+    <!-- sticky right: search bar  -->
+    
+    <form class="form-inline ml-auto order-lg-3" role="search">
+        <div id="search" class="search-container">
+            <input class="form-control search-input w-100" type="search" placeholder="&#xf002; Search (fuzzy)"
+                tabindex="1">
+            <div class="ac-results-wrapper"></div>
+        </div>
+    </form>
+    
+
+
+    <!-- Toggle button for collapsed items  -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+
+    <!-- Collapsable Items: Links -->
+    <div class="collapse navbar-collapse justify-content-start order-6 order-lg-2" id="navbarResponsive">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="/calculator.html"><i class="fa fa-calculator"></i>
+                    Calc</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/sheets.html"><i class="fa fa-file"></i> Sheets</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    <i class="fa fa-info-circle"></i> Info
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="/about.html"><i class="fa fa-question"></i>
+                        About TeX4TUM</a>
+                    <a class="dropdown-item" href="/team.html"><i class="fa fa-users"></i>
+                        Team</a>
+                    <a class="dropdown-item" href="/demo.html"><i class="fa fa-play-circle"></i>
+                        Feature Demo</a>
+                    <div class="dropdown-divider"></div>
+                    <h6 class="dropdown-header"><i class="fa fa-handshake"></i> Contribute</h6>
+                    <a class="dropdown-item" href="/support.html"><i class="fa fa-life-ring"></i>
+                        Support</a>
+                    <a class="dropdown-item" href="/contribution.html"><i class="fa fa-edit"></i>
+                        Write Article</a>
+                    <a class="dropdown-item" href="/todo.html"><i class="fa fa-tasks"></i> ToDo
+                        List</a>
+                    <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum"><i class="fab fa-github"></i>
+                        Develop Features</a>
+                    <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum/issues"><i class="fa fa-bug"></i>
+                        Report a bug</a>
+                    <a class="dropdown-item" href="/contact.html"><i class="fas fa-user-edit"></i>
+                        Contact</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link btn-group dropdown-toggle" href="/index.html"
+                    id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false"><i class="fa fa-cog"></i> Options</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <h6 class="dropdown-header">Display Options</h6>
+                    <div class="form-check dropdown-item">
+                        <label class="form-check-label">
+                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox"
+                                checked="checked" onchange="Options.changeOption(this)">
+                            Definitions
+                        </label>
+                    </div>
+                    <div class="form-check dropdown-item">
+                        <label class="form-check-label">
+                            <input class="form-check-input" id="checkbox_example" name="disp_opt" type="checkbox"
+                                onchange="Options.changeOption(this)">
+                            Examples
+                        </label>
+                    </div>
+                    <div class="form-check dropdown-item">
+                        <label class="form-check-label">
+                            <input class="form-check-input" id="checkbox_explanation" name="disp_opt" type="checkbox"
+                                onchange="Options.changeOption(this)">
+                            Explanations
+                        </label>
+                    </div>
+                    <div class="form-check dropdown-item">
+                        <label class="form-check-label">
+                            <input class="form-check-input" id="checkbox_legend" name="disp_opt" type="checkbox"
+                                onchange="Options.changeOption(this)">
+                            Legends
+                        </label>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+
+
+</nav>
+
+
+    <main class="container" aria-label="Content">
+      
+
+
+
+<p style="font-family: sans-serif;">
+	
+		
+		/ <a href="/math.html">math</a>
+		
+		
+	
+		
+		/ <a href="/analysis.html">analysis</a>
+		
+		
+	
+		
+		
+	 /
+</p>
+
+<h1><a data-toggle="collapse" href="#title_def" aria-expanded="false" aria-controls="title_def">
+  
+  Differential Equation
+</a><a class="float-right small" style="font-size: small" href="https://github.com/latex4ei/tex4tum/edit/master/_article/math/analysis/differential-equation.md">[edit]</a></h1>
+
+<p>
+
+</p>
+
+<!-- Basics -->
+<!--    -->
+<!-- \newcommand{\diff}{\mathop{}\!\mathrm{\vphantom( d}} -->
+<!-- SI Units -->
+<!--=============================================================== -->
+<!-- KaTeX Tweaks -->
+<!-- \renewcommand{\boldsymbol}[1]{\mathbf{#1}} -->
+<div id="title_def" class="definition collapse">
+<div class="card border-primary mb-1">
+<div class="card-body">
+<h5 class="card-title text-primary">
+Definition
+</h5>
+<p class="card-text">
+A differential equation is a mathematical equation that relates some function with its derivatives. In applications, the functions usually represent physical quantities, the derivatives represent their rates of change, and the equation defines a relationship between the two.
+</p>
+</div>
+</div>
+</div>
+<h2 id="differential-equation-of-n-th-order">Differential Equation of n-th Order</h2>
+<div data-toggle="collapse" href="#eq_0">
+<p><span class="LaTeX">$$a_n y^{(n)} + ... + a_1 y&#39; + a_0 y = b_m x^{(m)} + ... + b_1 x&#39; + b_0 x$$</span></p>
+</div>
+<div id="eq_0" class="legend collapse">
+<div class="card border-info w-75 mx-auto">
+<div class="p-1 small">
+<p>with the unknown function <span class="LaTeX">$y$</span> and its <span class="LaTeX">$n$</span> derivates <span class="LaTeX">$y&#39;,y&#39;&#39;,...$</span>, the known function <span class="LaTeX">$x$</span> and the coefficients <span class="LaTeX">$a_i, b_j$</span></p>
+</div>
+</div>
+</div>
+<h3 id="dgl-systeme">DGL-Systeme</h3>
+<p>Jede DGL lässt sich reduzieren auf ein DGL-System 1. Ordnung:</p>
+<ol type="1">
+<li><p>Substituiere <span class="LaTeX">$x_i := y^{(i-1)}$</span> und drücke <span class="LaTeX">$\dot x_i$</span> durch <span class="LaTeX">$x_1,...,x_n$</span> aus.</br> <span class="LaTeX">${\Rightarrow}$</span>  mit <span class="LaTeX">${\boldsymbol x}_{{\rm}ges} = {\boldsymbol x}_{{\rm}hom} + {\boldsymbol x}_{{\rm}part}$</span></br> Hom. Lösung: 1. Bestimme EW <span class="LaTeX">$\lambda_i$</span> und Basis aus EV <span class="LaTeX">${\boldsymbol b}_i$</span> von <span class="LaTeX">${\boldsymbol{A}}$</span></p></li>
+<li><p><span class="LaTeX">${\boldsymbol x}_{{\rm}hom} = {\boldsymbol c} \cdot e^{(x-x_0){\boldsymbol{A}}} = \sum\limits_{i = 0}^n c_i \cdot e^{\lambda_i x} \cdot {\boldsymbol b}_i$</span></p></li>
+<li><p>Bestimmung der Konstanten durch einsetzen der Anfangsbedingungen!</p></li>
+</ol>
+<h2 id="lösen-von-homogenen-dgls-2.-ordnung">Lösen von homogenen DGLs 2. Ordnung</h2>
+<p>Gegeben: Homogene Differnetialgleichungen der Form <span class="LaTeX">${\boldsymbol \dot x} = {\boldsymbol{A}} {\boldsymbol x}$</span> mit Anfangswerten <span class="LaTeX">$x_{0,1}$</span> und <span class="LaTeX">$x_{0,2}$</span></p>
+<p>Depending on the Eigenvalues <span class="LaTeX">$\lambda_1, \lambda_2 \in {\mathop{\mathbb R}}$</span></p>
+<h3 id="if-eigenvalues-are-real-and-inequal-large-lambda_1-ne-lambda_2">1. If Eigenvalues are real and inequal: <span class="LaTeX">$\Large \lambda_1 \ne \lambda_2$</span></h3>
+<p><span class="LaTeX">$$\bigl| \lambda_1 \bigr| &lt; \bigl|\lambda_2 \bigr|   {\Rightarrow}{\boldsymbol q}_2 \text{,,schneller&#39;&#39;} $$</span></p>
+<p><span class="LaTeX">$${\boldsymbol x}(t) = x_{0,1} \cdot \exp(\lambda_1 t) \cdot {\boldsymbol q}_1 + x_{0,2} \cdot \exp(\lambda_2 t) \cdot {\boldsymbol q}_2$$</span></p>
+<style>.img-fluid{height: 4.5em;}</style>
+<table style="width:81%;">
+<colgroup>
+<col style="width: 18%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Matrix <span class="LaTeX">$\Lambda$</span></th>
+<th>Eigenwerte</th>
+<th><span class="LaTeX">${\boldsymbol x} = 0$</span></th>
+<th>Name</th>
+<th>Portrait</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="LaTeX">${\begin{bmatrix} \lambda_1 &amp; 0 \\ 0 &amp; \lambda_2 \end{bmatrix}}$</span></td>
+<td><span class="LaTeX">$\lambda_1 \lt 0 \lt \lambda_2$</span></td>
+<td>instable</td>
+<td>Sattelpunkt</td>
+<td><img class='img-fluid' src='/res/img/content-images/math/dgl/PP_Sadle.svg'></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><span class="LaTeX">$\lambda_2 \lt 0, \lambda_1 \lt 0$</span></td>
+<td>stable</td>
+<td>Knoten 2</td>
+<td><img class='img-fluid' src='/res/img/content-images/math/dgl/PP_stableNode.svg'></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td><span class="LaTeX">$0 \lt \lambda_1, 0 \lt \lambda_2$</span></td>
+<td>instable</td>
+<td>Knoten 2</td>
+<td><img class='img-fluid' src='/res/img/content-images/math/dgl/PP_unstableNode.svg'></td>
+</tr>
+<tr class="even">
+<td><span class="LaTeX">${\begin{bmatrix} 0 &amp; 0 \ 0 &amp; \lambda_2 \end{bmatrix}}$</span></td>
+<td><span class="LaTeX">$\lambda_1 = 0,\ \lambda_2 \lt 0$</span></td>
+<td>stabil</td>
+<td>Kamm</td>
+<td><img class='img-fluid' src='/res/img/content-images/math/dgl/PP_stableLine.svg'></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td><span class="LaTeX">$\lambda_1 = 0,\ \lambda_2 \gt 0$</span></td>
+<td>instable</td>
+<td>Kamm</td>
+<td><img class='img-fluid' src='/res/img/content-images/math/dgl/PP_unstableLine.svg'></td>
+</tr>
+</tbody>
+</table>
+<h3 id="if-eigenvalues-are-real-and-equal-large-lambda_1-lambda_2">2. If Eigenvalues are real and equal: <span class="LaTeX">$\Large \lambda_1 = \lambda_2$</span></h3>
+<p><span class="LaTeX">$${\boldsymbol{Q}}&#39; = {\begin{bmatrix}  {\boldsymbol q}&#39;_1 &amp; {\boldsymbol q}&#39;_2 \end{bmatrix}} = {\begin{bmatrix}  -a_{12} &amp; -a_{12} \\ \frac{a_{11} - a_{22}}{2} &amp; \frac{a_{11} - a_{22}}{2} -1  \end{bmatrix}} = {\begin{bmatrix}  {\begin{pmatrix} \text{Eigen-} \\ \text{vektor} \end{pmatrix}} &amp; {\begin{pmatrix} \text{Haupt-} \ \text{vektor} \end{pmatrix}} \end{bmatrix}}$$</span></p>
+<p><span class="LaTeX">$${\boldsymbol x}(t) = \left[ {\boldsymbol{1}} + ({\boldsymbol{A}} - \lambda {\boldsymbol{1}}) \cdot t \right] \cdot \exp(\lambda t) \cdot {\begin{pmatrix} x_{0,1} \ x_{0,2} \end{pmatrix}}$$</span></p>
+<table style="width:81%;">
+<colgroup>
+<col style="width: 18%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Matrix <span class="LaTeX">$\Lambda$</span></th>
+<th>Eigenwerte</th>
+<th><span class="LaTeX">${\boldsymbol x} = 0$</span></th>
+<th>Name</th>
+<th>Portrait</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="LaTeX">${\begin{bmatrix} \lambda &amp; 0 \ 0 &amp; \lambda \end{bmatrix}}$</span></td>
+<td><span class="LaTeX">$\lambda \lt 0$</span></td>
+<td>stabil</td>
+<td>Knoten 1</td>
+<td><img class='img-fluid' src='/res/img/content-images/math/dgl/PP_stableStarNode.svg'></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><span class="LaTeX">$\lambda \gt 0$</span></td>
+<td>instable</td>
+<td>Knoten 1</td>
+<td><img class='img-fluid' src='/res/img/content-images/math/dgl/PP_unstableStarNode.svg'></td>
+</tr>
+<tr class="odd">
+<td><span class="LaTeX">${\begin{bmatrix} \lambda &amp; 1 \ 0 &amp; \lambda \end{bmatrix}}$</span></td>
+<td><span class="LaTeX">$\lambda \lt 0$</span></td>
+<td>stabil</td>
+<td>Knoten 3</td>
+<td><img class='img-fluid' src='/res/img/content-images/math/dgl/PP_stableWhirlNode.svg'></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><span class="LaTeX">$\lambda \gt 0$</span></td>
+<td>instable</td>
+<td>Knoten 3</td>
+<td><img class='img-fluid' src='/res/img/content-images/math/dgl/PP_unstableWhirlNode.svg'></td>
+</tr>
+<tr class="odd">
+<td><span class="LaTeX">${\begin{bmatrix} 0 &amp; 0 \ 0 &amp; 0  \end{bmatrix}}$</span></td>
+<td><span class="LaTeX">$\lambda = 0$</span></td>
+<td>stabil</td>
+<td>Ruheebene</td>
+<td><img class='img-fluid' src='/res/img/content-images/math/dgl/PP_stableZero.svg'></td>
+</tr>
+<tr class="even">
+<td><span class="LaTeX">${\begin{bmatrix} 0 &amp; 1 \ 0 &amp; 0  \end{bmatrix}}$</span></td>
+<td><span class="LaTeX">$\lambda = 0$</span></td>
+<td>instable</td>
+<td>Ruhegerade</td>
+<td><img class='img-fluid' src='/res/img/content-images/math/dgl/PP_unstableZero.svg'> }</td>
+</tr>
+</tbody>
+</table>
+<h3 id="if-eigenvalues-are-complex-and-equal-large-boldsymbollambda_1-boldsymbollambda_2">3. If Eigenvalues are complex and equal: <span class="LaTeX">$\Large {\boldsymbol{\lambda}}_1 = {\boldsymbol{\lambda}}^*_2$</span></h3>
+<p><span class="LaTeX">$${\boldsymbol{\lambda}}_1 = {\boldsymbol{\lambda}}^*_2 = \alpha + \beta j \in {\mathop{\mathbb C}}$$</span></p>
+<p><span class="LaTeX">$${\boldsymbol{Q}}&#39; = {\begin{bmatrix} \Re{{\boldsymbol q}_1} &amp; \Im{{\boldsymbol q}_1} \end{bmatrix}} = {\begin{bmatrix}  {\boldsymbol q}_r &amp; {\boldsymbol q}_j \end{bmatrix}}$$</span></p>
+<p><span class="LaTeX">$$\begin{array}{rl} {\boldsymbol x}(t) &amp; = x_{0,1} \cdot e^{\alpha t} \cdot \left[ \cos (\beta t) {\boldsymbol q}_r - \sin(\beta t) \cdot {\boldsymbol q}_j \right] + \ &amp; +\, x_{0,2} \cdot e^{\alpha t} \cdot \left[ \sin (\beta t) {\boldsymbol q}_r + \cos(\beta t) \cdot {\boldsymbol q}_j \right] \end{array}$$</span></p>
+<table style="width:81%;">
+<colgroup>
+<col style="width: 18%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Matrix <span class="LaTeX">$\Lambda$</span></th>
+<th>Eigenwerte</th>
+<th><span class="LaTeX">${\boldsymbol x} = 0$</span></th>
+<th>Name</th>
+<th>Portrait</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="LaTeX">${\begin{bmatrix} \alpha &amp; -\beta \\  \beta &amp; \alpha \end{bmatrix}}$</span></td>
+<td><span class="LaTeX">$\alpha \lt 0,\ \beta \ne 0$</span></td>
+<td>stabil</td>
+<td>Strudel</td>
+<td><img class='img-fluid' src='/res/img/content-images/math/dgl/PP_stableFocus.svg'></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><span class="LaTeX">$\alpha \gt 0,\ \beta \ne 0$</span></td>
+<td>instable</td>
+<td>Strudel</td>
+<td><img class='img-fluid' src='/res/img/content-images/math/dgl/PP_unstableFocus.svg'></td>
+</tr>
+<tr class="odd">
+<td><span class="LaTeX">${\begin{bmatrix} 0 &amp; -\beta \\  \beta &amp; 0 \end{bmatrix}}$</span></td>
+<td><span class="LaTeX">$\alpha = 0,\ \beta \ne 0$</span></td>
+<td>stabil</td>
+<td>Wirbel</td>
+<td><img class='img-fluid' src='/res/img/content-images/math/dgl/PP_Whirl.svg'></td>
+</tr>
+</tbody>
+</table>
+<p>Zeitverlauf immer von <span class="LaTeX">${\boldsymbol q}_j$</span> nach <span class="LaTeX">${\boldsymbol q}_r$</span> bzw. von <span class="LaTeX">${\boldsymbol q}_r$</span> nach <span class="LaTeX">$-{\boldsymbol q}_j$</span></p>
+<h2 id="lösung-für-inhomogene-dgl">Lösung für inhomogene DGL</h2>
+<p>Inhomogene DGL (<span class="LaTeX">${\boldsymbol v} \ne 0$</span>) mit singulärer Matrix <span class="LaTeX">${\boldsymbol{A}}$</span> (nicht entkoppelbar):</p>
+<table style="width:76%;">
+<colgroup>
+<col style="width: 26%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Matrix <span class="LaTeX">$\Lambda$</span></th>
+<th>Eigenwerte</th>
+<th><span class="LaTeX">${\boldsymbol x} = 0$</span></th>
+<th>Name</th>
+<th>Portrait</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="LaTeX">${\begin{bmatrix} 0 &amp; 0 \ 0 &amp; \lambda_2 \end{bmatrix}}$</span></td>
+<td><span class="LaTeX">$\lambda_1 = 0, \lambda_2 \lt 0$</span></td>
+<td>instable</td>
+<td>Kamm</td>
+<td><img class='img-fluid' src='/res/img/content-images/math/dgl/PP_unstableLine2.svg'></td>
+</tr>
+<tr class="even">
+<td><span class="LaTeX">${\begin{bmatrix} 0 &amp; 1 \ 0 &amp; 0  \end{bmatrix}}$</span></td>
+<td><span class="LaTeX">$\lambda = 0$</span></td>
+<td>instable</td>
+<td>Knoten</td>
+<td><img class='img-fluid' src='/res/img/content-images/math/dgl/PP_unstableZero2.svg'></td>
+</tr>
+</tbody>
+</table>
+
+
+    </main>
+
+    <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-auto">
+        <img class="img-fluid" style="width: 4em;" src="/res/img/Logo.png" alt="Logo">
+      </div>
+
+      <div class="col-sm-5 col-lg-3">
+        <h3>Tex4Tum</h3>
+        <ul class="contact-list">
+          <li><a href="mailto:info@latex4ei.de"><i class="fa fa-envelope"></i> info@latex4ei.de</a></li>
+          <li><a href="http://latex4ei.de"><i class="fa fa-globe"></i> latex4ei.de</a></li>
+        </ul>
+      </div>
+
+      <div class="col-sm-3 col-lg-2">
+        <ul class="social-media-list">
+          
+          <li>
+<!-- Dont put these Liquid statements into a new line to ensure the correct output format -->
+<a href="https://github.com/latex4ei">
+  <i class="fab fa-github"></i>
+  <span class="username">latex4ei</span>
+</a>
+</li>
+          
+          <li>
+<!-- Dont put these Liquid statements into a new line to ensure the correct output format -->
+<a href="https://gitter.im/LaTeX4Ei">
+  <i class="fab fa-gitter"></i>
+  <span class="username">LaTeX4Ei</span>
+</a>
+</li>
+          
+          <li>
+<!-- Dont put these Liquid statements into a new line to ensure the correct output format -->
+<a href="https://facebook.com/LaTeX4Ei">
+  <i class="fab fa-facebook-square"></i>
+  <span class="username">LaTeX4Ei</span>
+</a>
+</li>
+          
+        </ul>
+      </div>
+
+      <div class="col-lg-5">
+        <p>Interactive Knowledge Base for Engineers
+</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<!-- Load Javascript at the end for faster page loading -->
+<!-- ================================================== -->
+
+  <!-- Own javascript -->
+  <script src="/assets/js/latex4ei.js"></script>
+  <script src="/assets/js/options.js"></script>
+
+  <!-- KaTeX JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js"></script>
+
+  <!-- jQuery (req. for BootStrap) -->
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+
+  <!-- Bootstrap + Requirements -->
+  <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
+  <!-- Fuse + Own Adapter -->
+  <script src="https://cdn.jsdelivr.net/fuse/2.6.1/fuse.min.js"></script>
+  <script src="/assets/js/search_index.json"></script>
+  <script src="/assets/js/t4t_search.js"></script>
+
+  <script type="text/javascript">
+      window.onload = function () {
+          // render KaTeX
+          renderMath();
+
+          // fix navbar hiding anchor jumps
+          window.addEventListener("hashchange", function() { scrollBy(0, -100) } );
+
+
+          Options.loadOptions();
+
+          var opts = {
+              data: search_index,
+              numResults: 10,
+              searchPath: '/search?q=',
+              directPath: '.',
+              container: document.getElementsByClassName('search-container')
+          };
+          autocomplete(opts);
+      };
+  </script>
+
+
+  <!-- Mermaid -->
+  <link rel="stylesheet" href="https://cdn.rawgit.com/knsv/mermaid/7.0.0/dist/mermaid.css">
+  <script type="text/javascript" src="https://cdn.rawgit.com/knsv/mermaid/7.0.0/dist/mermaid.min.js"></script>
+
+<!-- ================================================== -->
+
+
+
+
+
+  </body>
+
+</html>

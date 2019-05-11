@@ -1,0 +1,44 @@
+<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="84.345mm" width="108.8mm" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 385.5 298.86" xmlns:dc="http://purl.org/dc/elements/1.1/">
+	<script xlink:href="/home/emu/Dropbox/Privat/Bilder/animatedSVG/low-pass/./latex4ei.js"/>
+	<path d="m273.54-71.14c0 1.96-1.59 3.54-3.55 3.54-1.95 0-3.54-1.58-3.54-3.54s1.59-3.54 3.54-3.54c1.96 0 3.55 1.58 3.55 3.54" style="fill-rule:evenodd"/>
+	<text id="R1_val" style="font-size:30px" space="preserve" onclick="askValue(this.id)" y="108.4352" x="206.6983">10k</text>
+	<text id="X1_val" style="font-size:30px" space="preserve" onclick="askValue(this.id)" y="208.4352" x="206.6983">100n</text>
+	<text y="211.12563" x="130.67293" style="font-size:30px" space="preserve">R2</text>
+	<text y="108.86" x="137.04988" style="font-size:30px" space="preserve">R1</text>
+	<text y="154.90492" x="27.38682" style="font-size:30px" space="preserve">U(0)</text>
+	<text id="U1_val" style="font-size:30px" space="preserve" onclick="askValue(this.id)" y="188.59479" x="25.786814">5</text>
+	<rect id="symbol" style="stroke:#000;stroke-linecap:square;stroke-width:2;fill:none" height="20" width="60" y="-81.14" x="159.99"/>
+	<path style="stroke:#000;stroke-linecap:square;stroke-width:2;fill:none" d="m149.99-71.14h10"/>
+	<path style="stroke:#000;stroke-linecap:square;stroke-width:2;fill:none" d="m219.99-71.14h10"/>
+	<rect style="stroke-width:.70866;color:#000000;stroke-dashoffset:1.76;stroke:#000;stroke-linecap:square;stroke-miterlimit:10;fill:none" transform="scale(-1)" height="7.0866" width="21.26" y="21.14" x="-199.99"/>
+	<path d="m199.99-24.68h7.09" style="fill-rule:evenodd;stroke:#000;stroke-linecap:square;stroke-miterlimit:7.7;stroke-width:.70866;fill:#fff"/>
+	<path d="m171.65-24.68h7.08" style="fill-rule:evenodd;stroke:#000;stroke-linecap:square;stroke-miterlimit:7.7;stroke-width:.70866;fill:#fff"/>
+	<path d="m224.99-31.14h5" style="fill-rule:evenodd;stroke:#000;stroke-linecap:square;stroke-miterlimit:7.7;stroke-width:.70866;fill:#fff"/>
+	<circle r="5" style="stroke:#000;stroke-linecap:round;stroke-width:2;fill:none" cx="109.99" cy="-71.14"/>
+	<g transform="matrix(0,1,-1,0,108.85,-91.13)">
+		<rect style="stroke:#000;stroke-linecap:square;stroke-width:2;fill:none" height="20" width="60" y="-81.14" x="159.99"/>
+		<path style="stroke:#000;stroke-linecap:square;stroke-width:2;fill:none" d="m139.99-71.144h20"/>
+		<path style="stroke:#000;stroke-linecap:square;stroke-width:2;fill:none" d="m219.99-71.14h40"/>
+	</g>
+	<g transform="matrix(0,1,-1,0,108.85,8.87)">
+		<rect style="stroke:#000;stroke-linecap:square;stroke-width:2;fill:none" height="20" width="60" y="-81.14" x="159.99"/>
+		<path style="stroke:#000;stroke-linecap:square;stroke-width:2;fill:none" d="m219.99-71.14h20"/>
+	</g>
+	<g transform="matrix(0,1,-1,0,198.85,8.87)">
+		<rect style="stroke:#000;stroke-linecap:square;stroke-width:2;fill:none" height="20" width="60" y="-81.14" x="159.99"/>
+		<path style="stroke:#000;stroke-linecap:square;stroke-width:2;fill:none" d="m139.99-71.144h20"/>
+		<path style="stroke:#000;stroke-linecap:square;stroke-width:2;fill:none" d="m219.99-71.14h20"/>
+	</g>
+	<path d="m183.54 148.86c0 1.96-1.59 3.54-3.55 3.54-1.95 0-3.54-1.58-3.54-3.54s1.59-3.54 3.54-3.54c1.96 0 3.55 1.58 3.55 3.54" style="fill-rule:evenodd"/>
+	<circle r="5" style="stroke:#000;stroke-linecap:round;stroke-width:2;fill:none" cx="99.994" cy="48.86"/>
+	<circle r="5" style="stroke:#000;stroke-linecap:round;stroke-width:2;fill:none" cx="99.994" cy="248.86"/>
+	<path style="stroke:#000;stroke-width:2;fill:none" d="m104.99 248.86h215"/>
+	<path style="stroke:#000;stroke-width:2;fill:none" d="m104.99 48.86h75"/>
+	<path style="stroke:#000;stroke-width:2;fill:none" d="m179.99 148.86h140"/>
+	<circle r="5" style="stroke:#000;stroke-linecap:round;stroke-width:2;fill:none" cx="324.99" cy="148.86"/>
+	<circle r="5" style="stroke:#000;stroke-linecap:round;stroke-width:2;fill:none" cx="324.99" cy="248.86"/>
+	<path d="m273.54 148.86c0 1.96-1.59 3.54-3.55 3.54-1.95 0-3.54-1.58-3.54-3.54s1.59-3.54 3.54-3.54c1.96 0 3.55 1.58 3.55 3.54" style="fill-rule:evenodd"/>
+	<path d="m273.54 248.86c0 1.96-1.59 3.54-3.55 3.54-1.95 0-3.54-1.58-3.54-3.54s1.59-3.54 3.54-3.54c1.96 0 3.55 1.58 3.55 3.54" style="fill-rule:evenodd"/>
+	<path d="m183.54 248.86c0 1.96-1.59 3.54-3.55 3.54-1.95 0-3.54-1.58-3.54-3.54s1.59-3.54 3.54-3.54c1.96 0 3.55 1.58 3.55 3.54" style="fill-rule:evenodd"/>
+	<rect style="stroke-width:.70866;color:#000000;stroke-dashoffset:1.76;stroke:#000;stroke-linecap:square;stroke-miterlimit:10;fill:none" transform="scale(-1)" height="7.0866" width="21.26" y="39.053" x="-291.25"/>
+</svg>

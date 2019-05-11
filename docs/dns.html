@@ -183,8 +183,12 @@
 <div id="title_def" class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
-<h5 class='card-title text-primary'>Definition</h5>
-<p class='card-text'>The Domain Name System (<abbr title="Domain Name System" >DNS</abbr>) is a hierarchical decentralized naming system for computers connected to the Internet [^RFCDNS]. It allows to access servers by name instead of an <abbr title="Internet Protocol" >IP</abbr> address which is hard to remember.</p>
+<h5 class="card-title text-primary">
+Definition
+</h5>
+<p class="card-text">
+The Domain Name System (DNS) is a hierarchical decentralized naming system for computers connected to the Internet <a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a>. It allows to access servers by name instead of an <abbr title="Internet Protocol" >IP</abbr> address which is hard to remember.
+</p>
 </div>
 </div>
 </div>
@@ -260,7 +264,7 @@
 </tbody>
 </table>
 <h3 id="dname">DNAME</h3>
-<p>The DNAME record provides redirection for a subtree of the domain name tree in the <abbr title="Domain Name System" >DNS</abbr> <a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a>. Note that a <code>DNAME</code> entry that maps <code>mydomain.com</code> to <code>public.com</code> will also map <code>sub.mydomain.com</code> to <code>sub.public.com</code>.</p>
+<p>The DNAME record provides redirection for a subtree of the domain name tree in the <abbr title="Domain Name System" >DNS</abbr> <a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a>. Note that a <code>DNAME</code> entry that maps <code>mydomain.com</code> to <code>public.com</code> will also map <code>sub.mydomain.com</code> to <code>sub.public.com</code>.</p>
 <h3 id="alias">ALIAS</h3>
 <p>The <code>ALIAS</code> type is not part of the DNS standard and should only be used to map an Apex domain to another domain because <code>CNAME</code> cannot be used for this task.</p>
 <h2 id="rules-for-setting-up-a-dns-entry">Rules for setting up a <abbr title="Domain Name System" >DNS</abbr> entry</h2>
@@ -277,7 +281,8 @@
 <section class="footnotes">
 <hr />
 <ol>
-<li id="fn1"><p><a href="https://tools.ietf.org/html/rfc6672">RFC 6672</a>, <em>DNAME Redirection in the DNS</em>, 2012<a href="#fnref1">↩</a></p></li>
+<li id="fn1"><p><a href="https://tools.ietf.org/html/rfc1035">RFC 1035</a>, <em>Domain Names - Implementation and Specification</em> , 1987<a href="#fnref1">↩</a></p></li>
+<li id="fn2"><p><a href="https://tools.ietf.org/html/rfc6672">RFC 6672</a>, <em>DNAME Redirection in the DNS</em>, 2012<a href="#fnref2">↩</a></p></li>
 </ol>
 </section>
 

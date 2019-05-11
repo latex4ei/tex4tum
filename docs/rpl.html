@@ -183,8 +183,12 @@
 <div id="title_def" class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
-<h5 class='card-title text-primary'>Definition</h5>
-<p class='card-text'>The Routing Protocol for Low-Power and Lossy Networks (RPL, pronounced “ripple”), is an <abbr title="Internet Protocol version 6" >IPv6</abbr> Routing Protocol that provides point-to-point, multipoint-to-point and point-to-multipoint traffic.</p>
+<h5 class="card-title text-primary">
+Definition
+</h5>
+<p class="card-text">
+The Routing Protocol for Low-Power and Lossy Networks (RPL, pronounced “ripple”), is an <abbr title="Internet Protocol version 6" >IPv6</abbr> Routing Protocol that provides point-to-point, multipoint-to-point and point-to-multipoint traffic.
+</p>
 </div>
 </div>
 </div>
@@ -196,8 +200,10 @@
 <h3 id="dodag-formation">DODAG Formation</h3>
 <p>The root node periodically broadcasts DIO messages. All receiving nodes calculate their rank based on the received DIO messages. When the rank is known, a node sends a DAO message to its determined parent. A node that has selected a parant will also broadcast DIO messages including its own rank.</p>
 <figure>
-<object class="img-fluid" id="dodag" data="res/img/dynamic-images/rpl-ani.svg" type="image/svg+xml"></object>
-<figcaption></figcaption>
+<object class="img-fluid" id="dodag" data="res/img/dynamic-images/rpl-ani.svg" type="image/svg+xml">
+</object>
+<figcaption class="figure-caption">
+</figcaption>
 </figure>
 <h3 id="dodag-join">DODAG Join</h3>
 <p>An isolated node that wants to join an existing DODAG broadcasts DIS messages. When a DODAG node receives a DIS message it will reply with a unicast DIO message.</p>

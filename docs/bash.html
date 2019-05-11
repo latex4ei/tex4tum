@@ -183,12 +183,17 @@
 <div id="title_def" class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
-<h5 class='card-title text-primary'>Definition</h5>
-<p class='card-text'>The “Bourne-again shell” (Bash) is a command language and interpreter on Unix systems.</p>
+<h5 class="card-title text-primary">
+Definition
+</h5>
+<p class="card-text">
+The “Bourne-again shell” (Bash) is a command language and interpreter on Unix systems.
+</p>
 </div>
 </div>
 </div>
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span><span class="ch">#!/usr/bin/env bash</span>
+<figure class="highlight">
+<pre><code class="language-bash" data-lang="bash"><span></span><span class="ch">#!/usr/bin/env bash</span>
 <span class="c1"># hello beer: drink 0.5 liter in 4 rounds</span>
 
 <span class="nv">LITER_PER_SIP</span><span class="o">=</span><span class="k">$(</span>bc <span class="o">&lt;&lt;&lt;</span> <span class="s2">&quot;scale=3; 37/1000&quot;</span><span class="k">)</span>
@@ -215,7 +220,8 @@
         <span class="nb">echo</span> <span class="s2">&quot;I have </span><span class="si">${</span><span class="nv">beer_l</span><span class="si">}</span><span class="s2"> l beer left.&quot;</span>
     <span class="k">fi</span>
 <span class="k">done</span>
-<span class="nb">exit</span> <span class="m">0</span></code></pre></figure>
+<span class="nb">exit</span> <span class="m">0</span></code></pre>
+</figure>
 <h2 id="data-structures">Data Structures</h2>
 <p><strong>Arrays</strong></br> Create (space separated): <code>arr=(one two 42)</code></br> Access: <code>${arr[0]}</code> one</p>
 <p><strong>Numbers</strong></br> Bash only supports Integers! Float expressions need to be parsed by an external binary such as <code>bc</code>.</p>
@@ -230,7 +236,8 @@
 <li>Files: <code>-f</code>, <code>-d</code>, <code>-r</code>, <code>-w</code>, <code>-x</code></li>
 </ul>
 <h2 id="input-output">Input / Output</h2>
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span><span class="nb">read</span> -p <span class="s2">&quot;Do you want to continue? (y|n)&quot;</span> -n <span class="m">1</span> -r
+<figure class="highlight">
+<pre><code class="language-bash" data-lang="bash"><span></span><span class="nb">read</span> -p <span class="s2">&quot;Do you want to continue? (y|n)&quot;</span> -n <span class="m">1</span> -r
 <span class="k">if</span> <span class="o">[[</span> <span class="nv">$REPLY</span> <span class="o">=</span>~ ^<span class="o">[</span>Yy<span class="o">]</span>$ <span class="o">]]</span><span class="p">;</span> <span class="k">then</span>
     <span class="c1"># do dangerous stuff</span>
 <span class="k">fi</span>
@@ -239,7 +246,8 @@
 <span class="k">while</span> <span class="nb">read</span> f<span class="p">;</span> <span class="k">do</span>
     <span class="nb">echo</span> <span class="s2">&quot;Line is </span><span class="nv">$f</span><span class="s2">&quot;</span> 
 <span class="k">done</span> &lt; <span class="nv">$path</span> 
-<span class="o">}</span></code></pre></figure>
+<span class="o">}</span></code></pre>
+</figure>
 
 
     </main>

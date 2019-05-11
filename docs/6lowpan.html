@@ -183,9 +183,12 @@
 <div id="title_def" class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
-<h5 class='card-title text-primary'>Definition</h5>
-<p class='card-text'>The 6LoWPAN (<abbr title="Internet Protocol version 6" >IPv6</abbr> over Low-power Wireless Personal Area Networks) is an adaptation Layer that enables the use of <abbr title="Internet Protocol version 6" >IPv6</abbr> over low-power IEEE 802.15.4 radio links.
-In most cases, the 6LoWPAN network is connected to the <abbr title="Internet Protocol version 6" >IPv6</abbr> network using an edge router.</p>
+<h5 class="card-title text-primary">
+Definition
+</h5>
+<p class="card-text">
+The 6LoWPAN (<abbr title="Internet Protocol version 6" >IPv6</abbr> over Low-power Wireless Personal Area Networks) is an adaptation Layer that enables the use of <abbr title="Internet Protocol version 6" >IPv6</abbr> over low-power IEEE 802.15.4 radio links. In most cases, the 6LoWPAN network is connected to the <abbr title="Internet Protocol version 6" >IPv6</abbr> network using an edge router.
+</p>
 </div>
 </div>
 </div>
@@ -246,13 +249,19 @@ Support for 64-bit/16-bit 802.15.4 addressing
 <h2 id="compression-schemes">Compression Schemes</h2>
 <div class="card tabbox">
 <div class="card-header">
-<ul class="nav nav-tabs card-header-tabs ml-0" role="tablist"><li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#checkboxid-0" role="tab">IPHC/NHC</a></li>
-<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#checkboxid-1" role="tab">HC1/HC2</a></li>
+<ul class="nav nav-tabs card-header-tabs ml-0" role="tablist">
+<li class="nav-item">
+<a class="nav-link active" data-toggle="tab" href="#checkboxid-0" role="tab">IPHC/NHC</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" data-toggle="tab" href="#checkboxid-1" role="tab">HC1/HC2</a>
+</li>
 </ul>
 </div>
 <div class="card-body">
 <div class="tab-content">
-<div id="checkboxid-0" class="tab-pane active" role="tabpanel">
+
+<div class="tab-pane active" id="checkboxid-0" role="tabpanel">
 <p>IPHC/NHC compression was defined in <a href="https://tools.ietf.org/html/rfc6282">RFC 6282</a> in 2011 and updates the older HC1/HC2 compression.</p>
 <p>Structure of a typical 6LoWPAN frame with <abbr title="Internet Protocol version 6" >IPv6</abbr>+UDP:</p>
 <pre class="diagram"><code>+--------+---  -  -  ---+----------+---  -  -  ---+--------
@@ -266,8 +275,13 @@ Support for 64-bit/16-bit 802.15.4 addressing
 +---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
 | 0 | 1 | 1 |  TF   |NH | HLIM  |CID|SAC|  SAM  | M |<abbr title="Digital/Analog Converter" >DAC</abbr>|  DAM  |
 +---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+</code></pre>
-<h5 class='clp_title text-warning' data-toggle='collapse' href='#expl1026'><i class='fa fa-comment-dots'></i> Explanation of IPHC dispatch byte:</h5>
-<p><div id='expl1026' class='explanation collapse'><div class='card border-warning mb-1'><div class='card-body'> <p class='card-text'></p>
+<h5 class="clp_title text-warning" data-toggle="collapse" href="#expl7">
+<i class='fa fa-comment-dots'></i> Explanation of IPHC dispatch byte:
+</h5>
+<div id='expl7' class='explanation collapse'>
+<div class='card border-warning mb-1'>
+<div class='card-body'>
+<p class='card-text'>
 <dl>
 <dt>TF – 2 bit</dt>
 <dd>Traffic Class and Flow Label (TF), 2 bit - 00: Carried Inline (ECN+DSCP+Flow) - 01: ECN+Flow - 10: ECN+DSCP - 11: Traffic Class and Flow Label are elided.
@@ -303,7 +317,11 @@ Support for 64-bit/16-bit 802.15.4 addressing
 </ul>
 <dl>
 <dt>M – 1 bit</dt>
-<dd>Multicast Destination (M) - 0: Destination is not multicast - 1: Destination is multicast <p> </div></div></div>
+<dd>Multicast Destination (M) - 0: Destination is not multicast - 1: Destination is multicast
+<p>
+</div>
+</div>
+</div>
 </dd>
 </dl>
 <h4 id="context-identifier-extension-cie">Context Identifier Extension (CIE)</h4>
@@ -320,15 +338,27 @@ Support for 64-bit/16-bit 802.15.4 addressing
 +---+---+---+---+---+---+---+---+
 | 1 | 1 | 1 | 1 | 0 | C |   P   |
 +---+---+---+---+---+---+---+---+</code></pre>
-<h5 class='clp_title text-warning' data-toggle='collapse' href='#expl1027'><i class='fa fa-comment-dots'></i> Explanation of UDP LOWPAN_NHC Byte</h5>
-<p><div id='expl1027' class='explanation collapse'><div class='card border-warning mb-1'><div class='card-body'> <p class='card-text'> C : Checksum: - 0: All 16 bits of Checksum are carried in-line. - 1: All 16 bits of Checksum are elided with higher-layer end-to-end integrity checks.</p>
+<h5 class="clp_title text-warning" data-toggle="collapse" href="#expl8">
+<i class='fa fa-comment-dots'></i> Explanation of UDP LOWPAN_NHC Byte
+</h5>
+<div id='expl8' class='explanation collapse'>
+<div class='card border-warning mb-1'>
+<div class='card-body'>
+<p class='card-text'>
 <dl>
+<dt>C</dt>
+<dd>Checksum: - 0: All 16 bits of Checksum are carried in-line. - 1: All 16 bits of Checksum are elided with higher-layer end-to-end integrity checks.
+</dd>
 <dt>P</dt>
-<dd>Ports: - 00: 16 bits. Source Port and Destination Port are carried in-line. - 01: All 16 bits for Source Port are carried in-line. First 8 bits of Destination Port is 0xf0 and elided. The remaining 8 bits of Destination Port are carried in-line. - 10: First 8 bits of Source Port are 0xf0 and elided. The remaining 8 bits of Source Port are carried in-line. All 16 bits for Destination Port are carried in-line. - 11: First 12 bits of both Source Port and Destination Port are 0xf0b and elided. The remaining 4 bits for each are carried in-line. <p> </div></div></div>
+<dd>Ports: - 00: 16 bits. Source Port and Destination Port are carried in-line. - 01: All 16 bits for Source Port are carried in-line. First 8 bits of Destination Port is 0xf0 and elided. The remaining 8 bits of Destination Port are carried in-line. - 10: First 8 bits of Source Port are 0xf0 and elided. The remaining 8 bits of Source Port are carried in-line. All 16 bits for Destination Port are carried in-line. - 11: First 12 bits of both Source Port and Destination Port are 0xf0b and elided. The remaining 4 bits for each are carried in-line.
+<p>
+</div>
+</div>
+</div>
 </dd>
 </dl>
 </div>
-<div id="checkboxid-1" class="tab-pane" role="tabpanel">
+<div class="tab-pane" id="checkboxid-1" role="tabpanel">
 <p>The HC1/HC2 compression was defined in <a href="https://tools.ietf.org/html/rfc4944">RFC 4944</a> in 2007 and is not recommended anymore. It uses two bytes – HC1 for IPv6 and HC2 for UDP – to specify how headers are compressed.</p>
 <p>With this compression it is possible to achieve a very small 7 byte frame for <abbr title="Internet Protocol version 6" >IPv6</abbr> + UDP if all compression mechanisms are used:</p>
 <ol type="1">
@@ -344,8 +374,13 @@ Support for 64-bit/16-bit 802.15.4 addressing
 +---+---+---+---+---+---+---+---+ 
 | <abbr title="Internet Protocol" >IP</abbr>-SA | <abbr title="Internet Protocol" >IP</abbr>-DA |TF |  NH   |HC2| 
 +---+---+---+---+---+---+---+---+ </code></pre>
-<h5 class='clp_title text-warning' data-toggle='collapse' href='#expl1028'><i class='fa fa-comment-dots'></i> Explanation of HC1 Byte</h5>
-<p><div id='expl1028' class='explanation collapse'><div class='card border-warning mb-1'><div class='card-body'> <p class='card-text'></p>
+<h5 class="clp_title text-warning" data-toggle="collapse" href="#expl9">
+<i class='fa fa-comment-dots'></i> Explanation of HC1 Byte
+</h5>
+<div id='expl9' class='explanation collapse'>
+<div class='card border-warning mb-1'>
+<div class='card-body'>
+<p class='card-text'>
 <dl>
 <dt>IP-SA – 2 bit</dt>
 <dd>IPv6 source address (bits 0 and 1): - 00: Prefix in-line, Interface identifier - 01: Prefix compressed (link-local prefix assumed). - 10: Interface identifier carried in-line - 11: Interface identifier elided
@@ -360,7 +395,11 @@ Support for 64-bit/16-bit 802.15.4 addressing
 <dd>Next Header (bits 5 and 6): - 00: not compressed; full 8 bits are sent - 01: UDP - 10: ICMP - 11: TCP
 </dd>
 <dt>HC2 – 1 bit</dt>
-<dd>HC2 encoding(bit 7): - 0: no more header compression bits - 1: HC1 compression byte follows immediately <p> </div></div></div>
+<dd>HC2 encoding(bit 7): - 0: no more header compression bits - 1: HC1 compression byte follows immediately
+<p>
+</div>
+</div>
+</div>
 </dd>
 </dl>
 <h4 id="hc2-compression-byte">HC2 compression byte</h4>
@@ -369,8 +408,13 @@ Support for 64-bit/16-bit 802.15.4 addressing
 +---+---+---+---+---+---+---+---+
 |SP |DP |LC | - | - | - | - | - |
 +---+---+---+---+---+---+---+---+</code></pre>
-<h5 class='clp_title text-warning' data-toggle='collapse' href='#expl1029'><i class='fa fa-comment-dots'></i> Explanation of HC2 Byte</h5>
-<p><div id='expl1029' class='explanation collapse'><div class='card border-warning mb-1'><div class='card-body'> <p class='card-text'></p>
+<h5 class="clp_title text-warning" data-toggle="collapse" href="#expl10">
+<i class='fa fa-comment-dots'></i> Explanation of HC2 Byte
+</h5>
+<div id='expl10' class='explanation collapse'>
+<div class='card border-warning mb-1'>
+<div class='card-body'>
+<p class='card-text'>
 <dl>
 <dt>SP – 1 bit</dt>
 <dd>UDP source port (bit 0): - 0: Not compressed, carried &quot;in-line&quot; - 1: Compressed to 4 bits.
@@ -382,7 +426,11 @@ Support for 64-bit/16-bit 802.15.4 addressing
 <dd>Length (bit 2): - 0: Not compressed, carried &quot;in-line&quot; - 1: length computed from IPv6 header length
 </dd>
 <dt>Rest – bit 3 to 7</dt>
-<dd>Reserved for future use. <p> </div></div></div>
+<dd>Reserved for future use.
+<p>
+</div>
+</div>
+</div>
 </dd>
 </dl>
 </div>

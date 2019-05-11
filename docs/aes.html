@@ -183,8 +183,12 @@
 <div id="title_def" class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
-<h5 class='card-title text-primary'>Definition</h5>
-<p class='card-text'>The Advanced Encryption Standard (<abbr title="Advanced Encryption Standard" >AES</abbr>), (original name Rijndael) is a specification for the encryption of electronic data established by the U.S. National Institute of Standards and Technology (NIST) in 2001.</p>
+<h5 class="card-title text-primary">
+Definition
+</h5>
+<p class="card-text">
+The Advanced Encryption Standard (<abbr title="Advanced Encryption Standard" >AES</abbr>), (original name Rijndael) is a specification for the encryption of electronic data established by the U.S. National Institute of Standards and Technology (NIST) in 2001.
+</p>
 </div>
 </div>
 </div>
@@ -221,7 +225,10 @@
 <h2 id="algorithm">Algorithm</h2>
 <!--<p> Filename="aes-128.svg", path="/res/img/content-images/informatics/security/aes-128.svg" </p>-->
 <figure class="figure">
-<img class="figure-img img-fluid" style="width: 25em;" src="/res/img/content-images/informatics/security/aes-128.svg" alt="AES 128 High Level Overview"/><figcaption class="figure-caption">AES 128 High Level Overview</figcaption>
+<img class="figure-img img-fluid" style="width: 25em;" src="/res/img/content-images/informatics/security/aes-128.svg" alt="AES 128 High Level Overview"/>
+<figcaption class="figure-caption">
+AES 128 High Level Overview
+</figcaption>
 </figure>
 <ol type="1">
 <li><p><strong>Key Expansion:</strong> Create individual 128bit round keys from the cipher key</p></li>
@@ -254,11 +261,22 @@ with the columns $j \in \{0,1,2,3\}$
 <h2 id="modes-of-operation">Modes of Operation</h2>
 <div class="card tabbox">
 <div class="card-header">
-<ul class="nav nav-tabs card-header-tabs ml-0" role="tablist"><li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#checkboxid-0" role="tab">ECB</a></li>
-<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#checkboxid-1" role="tab">CBC</a></li>
-<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#checkboxid-2" role="tab">CFB</a></li>
-<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#checkboxid-3" role="tab">OFB</a></li>
-<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#checkboxid-4" role="tab">CTR</a></li>
+<ul class="nav nav-tabs card-header-tabs ml-0" role="tablist">
+<li class="nav-item">
+<a class="nav-link active" data-toggle="tab" href="#checkboxid-0" role="tab">ECB</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" data-toggle="tab" href="#checkboxid-1" role="tab">CBC</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" data-toggle="tab" href="#checkboxid-2" role="tab">CFB</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" data-toggle="tab" href="#checkboxid-3" role="tab">OFB</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" data-toggle="tab" href="#checkboxid-4" role="tab">CTR</a>
+</li>
 </ul>
 </div>
 <div class="card-body">
@@ -268,11 +286,15 @@ with the columns $j \in \{0,1,2,3\}$
 <p>The message is divided into blocks, and each block is encrypted separately.</p>
 <!--<p> Filename="encmode_ecb.svg", path="/res/img/content-images/informatics/security/encmode_ecb.svg" </p>-->
 <figure class="figure">
-<img class="figure-img img-fluid" style="width: 40em;" src="/res/img/content-images/informatics/security/encmode_ecb.svg" alt=""/><figcaption class="figure-caption"></figcaption>
+<img class="figure-img img-fluid" style="width: 40em;" src="/res/img/content-images/informatics/security/encmode_ecb.svg" alt=""/>
+<figcaption class="figure-caption">
+</figcaption>
 </figure>
 <!--<p> Filename="decmode_ecb.svg", path="/res/img/content-images/informatics/security/decmode_ecb.svg" </p>-->
 <figure class="figure">
-<img class="figure-img img-fluid" style="width: 40em;" src="/res/img/content-images/informatics/security/decmode_ecb.svg" alt=""/><figcaption class="figure-caption"></figcaption>
+<img class="figure-img img-fluid" style="width: 40em;" src="/res/img/content-images/informatics/security/decmode_ecb.svg" alt=""/>
+<figcaption class="figure-caption">
+</figcaption>
 </figure>
 </div>
 <div id="checkboxid-1" class="tab-pane" role="tabpanel">
@@ -280,11 +302,15 @@ with the columns $j \in \{0,1,2,3\}$
 <p>Each block of plaintext is XORed with the previous ciphertext block before being encrypted.</p>
 <!--<p> Filename="encmode_cbc.svg", path="/res/img/content-images/informatics/security/encmode_cbc.svg" </p>-->
 <figure class="figure">
-<img class="figure-img img-fluid" style="width: 40em;" src="/res/img/content-images/informatics/security/encmode_cbc.svg" alt=""/><figcaption class="figure-caption"></figcaption>
+<img class="figure-img img-fluid" style="width: 40em;" src="/res/img/content-images/informatics/security/encmode_cbc.svg" alt=""/>
+<figcaption class="figure-caption">
+</figcaption>
 </figure>
 <!--<p> Filename="decmode_cbc.svg", path="/res/img/content-images/informatics/security/decmode_cbc.svg" </p>-->
 <figure class="figure">
-<img class="figure-img img-fluid" style="width: 40em;" src="/res/img/content-images/informatics/security/decmode_cbc.svg" alt=""/><figcaption class="figure-caption"></figcaption>
+<img class="figure-img img-fluid" style="width: 40em;" src="/res/img/content-images/informatics/security/decmode_cbc.svg" alt=""/>
+<figcaption class="figure-caption">
+</figcaption>
 </figure>
 </div>
 <div id="checkboxid-2" class="tab-pane" role="tabpanel">
@@ -292,11 +318,15 @@ with the columns $j \in \{0,1,2,3\}$
 <p>A close relative of CBC. Transforms a block cipher into a self-synchronizing stream cipher.</p>
 <!--<p> Filename="encmode_cfb.svg", path="/res/img/content-images/informatics/security/encmode_cfb.svg" </p>-->
 <figure class="figure">
-<img class="figure-img img-fluid" style="width: 40em;" src="/res/img/content-images/informatics/security/encmode_cfb.svg" alt=""/><figcaption class="figure-caption"></figcaption>
+<img class="figure-img img-fluid" style="width: 40em;" src="/res/img/content-images/informatics/security/encmode_cfb.svg" alt=""/>
+<figcaption class="figure-caption">
+</figcaption>
 </figure>
 <!--<p> Filename="decmode_cfb.svg", path="/res/img/content-images/informatics/security/decmode_cfb.svg" </p>-->
 <figure class="figure">
-<img class="figure-img img-fluid" style="width: 40em;" src="/res/img/content-images/informatics/security/decmode_cfb.svg" alt=""/><figcaption class="figure-caption"></figcaption>
+<img class="figure-img img-fluid" style="width: 40em;" src="/res/img/content-images/informatics/security/decmode_cfb.svg" alt=""/>
+<figcaption class="figure-caption">
+</figcaption>
 </figure>
 </div>
 <div id="checkboxid-3" class="tab-pane" role="tabpanel">
@@ -304,11 +334,15 @@ with the columns $j \in \{0,1,2,3\}$
 <p>Transforms a block cipher into a synchronous stream cipher. It generates keystream blocks, which are then XORed with the plaintext blocks to get the ciphertext.</p>
 <!--<p> Filename="encmode_ofb.svg", path="/res/img/content-images/informatics/security/encmode_ofb.svg" </p>-->
 <figure class="figure">
-<img class="figure-img img-fluid" style="width: 40em;" src="/res/img/content-images/informatics/security/encmode_ofb.svg" alt=""/><figcaption class="figure-caption"></figcaption>
+<img class="figure-img img-fluid" style="width: 40em;" src="/res/img/content-images/informatics/security/encmode_ofb.svg" alt=""/>
+<figcaption class="figure-caption">
+</figcaption>
 </figure>
 <!--<p> Filename="decmode_ofb.svg", path="/res/img/content-images/informatics/security/decmode_ofb.svg" </p>-->
 <figure class="figure">
-<img class="figure-img img-fluid" style="width: 40em;" src="/res/img/content-images/informatics/security/decmode_ofb.svg" alt=""/><figcaption class="figure-caption"></figcaption>
+<img class="figure-img img-fluid" style="width: 40em;" src="/res/img/content-images/informatics/security/decmode_ofb.svg" alt=""/>
+<figcaption class="figure-caption">
+</figcaption>
 </figure>
 </div>
 <div id="checkboxid-4" class="tab-pane" role="tabpanel">
@@ -316,11 +350,15 @@ with the columns $j \in \{0,1,2,3\}$
 <p>Counter mode turns a block cipher into a stream cipher. It generates the next keystream block by encrypting successive values of a &quot;counter&quot;.</p>
 <!--<p> Filename="encmode_ctr.svg", path="/res/img/content-images/informatics/security/encmode_ctr.svg" </p>-->
 <figure class="figure">
-<img class="figure-img img-fluid" style="width: 40em;" src="/res/img/content-images/informatics/security/encmode_ctr.svg" alt=""/><figcaption class="figure-caption"></figcaption>
+<img class="figure-img img-fluid" style="width: 40em;" src="/res/img/content-images/informatics/security/encmode_ctr.svg" alt=""/>
+<figcaption class="figure-caption">
+</figcaption>
 </figure>
 <!--<p> Filename="decmode_ctr.svg", path="/res/img/content-images/informatics/security/decmode_ctr.svg" </p>-->
 <figure class="figure">
-<img class="figure-img img-fluid" style="width: 40em;" src="/res/img/content-images/informatics/security/decmode_ctr.svg" alt=""/><figcaption class="figure-caption"></figcaption>
+<img class="figure-img img-fluid" style="width: 40em;" src="/res/img/content-images/informatics/security/decmode_ctr.svg" alt=""/>
+<figcaption class="figure-caption">
+</figcaption>
 </figure>
 </div>
 </div>

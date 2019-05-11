@@ -183,17 +183,90 @@
 <div id="title_def" class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
-<h5 class='card-title text-primary'>Definition</h5>
-<p class='card-text'>IEEE 802.15.4 is the standard for “Wireless Medium AccessControl (<abbr title="Media Access Control" >MAC</abbr>) and Physical Layer (PHY) Specifications for Low-Rate Wireless Personal Area Networks (LR-WPANs)”</p>
+<h5 class="card-title text-primary">
+Definition
+</h5>
+<p class="card-text">
+IEEE 802.15.4 is the standard for “Wireless Medium Access Control (<abbr title="Media Access Control" >MAC</abbr>) and Physical Layer (PHY) Specifications for Low-Rate Wireless Personal Area Networks (LR-WPANs)”
+</p>
 </div>
 </div>
 </div>
+<h2 id="table-of-contents"><i class="fa fa-list-ul"></i> Table of Contents</h2>
+<ul>
+<li><a href="#maximum-values">Maximum Values</a></li>
+<li><a href="#superframe-structure">Superframe Structure</a></li>
+<li><a href="#device-types">Device Types</a></li>
+<li><a href="#topologies">Topologies</a></li>
+<li><a href="#physical-layer-1-phy">Physical Layer 1 (PHY)</a></li>
+<li><a href="#medium-access-layer-2-mac">Medium Access Layer 2 (<abbr title="Media Access Control" >MAC</abbr>)</a></li>
+<li><a href="#link-layer-security">Link layer security</a></li>
+<li><a href="#references">References</a></li>
+</ul>
 <h2 id="maximum-values">Maximum Values</h2>
 <ul>
 <li>Raw data rate: 250 kbps</li>
 <li>Transmission Power: 1 mW</li>
+<li>Typical range: 10 m</li>
 <li>PHY payload: 127 bytes Reason: to ensure low packet and bit error rates in a lossy RF environment</li>
 <li>Address: 16 bit or 64 bit</li>
+</ul>
+<h2 id="superframe-structure">Superframe Structure</h2>
+<p>The communication of IEEE 802.15.4 networks is structured into <em>Superframes</em>, which is the perdiod between two coordinator beacons. Each superframe consists of an active and an inactive period but the length of the inactive perdiod may be zero.</p>
+<pre class="diagram"><code>  ||      active        |  inactive    || 
+  ||   CAP |  CFP       |              || 
+  ||       |            |              || 
+Beacon                               Beacon</code></pre>
+<h3 id="frame-structure">Frame Structure</h3>
+<pre class="diagram"><code>                            +-------------------------------+
+                            | <abbr title="Media Access Control" >MAC</abbr> head |   <abbr title="Media Access Control" >MAC</abbr>   | <abbr title="Media Access Control" >MAC</abbr> foot |
+                            |   (MHR)  | payload |  (MFR)   |
+                            +-------------------------------+
+                              \                           /
++-------------------------------------------------------+
+|  Sync. header  |  PHY header  |     PHY payload       |
+|     (SHR)      |    (PHR)     |        (PSDU)         |
++-------------------------------------------------------+</code></pre>
+<p>A cyclic redundancy check (<abbr title="Cyclic Redundancy Check" >CRC</abbr>) is used to detect errors in every PSDU.</p>
+<h3 id="access-methods">Access Methods</h3>
+<ul>
+<li>Unslotted CSMA-CA used in nonbeacon-enabled PANs</li>
+<li>Slotted CSMA-CA used in beacon-enabled PANs</li>
+<li>TSCH CCA used in non-shared slots in a TSCH <abbr title="Personal Area Network" >PAN</abbr></li>
+<li>TSCH CSMA-CA used for shared slots in a TSCH <abbr title="Personal Area Network" >PAN</abbr></li>
+<li>CSMA-CA with PCA in for critical events</li>
+<li>LECIM ALOHA with PCA</li>
+</ul>
+<h3 id="deterministic-and-synchronous-multi-channel-extension-dsme">Deterministic and Synchronous Multi-channel Extension (DSME)</h3>
+<p>If several coordinators are present, the communication is structured into <em>Multi-Superframes</em>. A multi-superframe consists of repeated superframes, each of which consists of an Enhanced Beacon frame, a CAP and a CFP.</p>
+<h2 id="device-types">Device Types</h2>
+<div class="card tabbox">
+<div class="card-header">
+<ul class="nav nav-tabs card-header-tabs ml-0" role="tablist">
+<li class="nav-item">
+<a class="nav-link active" data-toggle="tab" href="#checkboxid-0" role="tab">FFD</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" data-toggle="tab" href="#checkboxid-1" role="tab">RFD</a>
+</li>
+</ul>
+</div>
+<div class="card-body">
+<div class="tab-content">
+<div id="checkboxid-0" class="tab-pane active" role="tabpanel">
+<p>A full-Function Device (FFD) is a device that is capable of serving as a personal area network (<abbr title="Personal Area Network" >PAN</abbr>) coordinator.</p>
+</div>
+<div id="checkboxid-1" class="tab-pane" role="tabpanel">
+<p>A Reduced-Function Device (RFD) is a device that is not capable of serving as a coordinator and is intended for applications that are extremely simple.</p>
+</div>
+</div>
+</div>
+</div>
+<p></br></p>
+<h2 id="topologies">Topologies</h2>
+<ul>
+<li>Star</li>
+<li><abbr title="Peer-To-Peer" >P2P</abbr> / Mesh</li>
 </ul>
 <h2 id="physical-layer-1-phy">Physical Layer 1 (PHY)</h2>
 <h3 id="features">Features</h3>
@@ -216,16 +289,21 @@
 <td>O-QPSK</td>
 </tr>
 <tr class="even">
+<td>Channels</td>
+<td>1</td>
+<td>16</td>
+</tr>
+<tr class="odd">
 <td>Bit Rate</td>
 <td>20 kbps</td>
 <td>250 kbps</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Symbols</td>
 <td>1 bit/smyb</td>
 <td>4 bit/symb</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Chips/Symbol</td>
 <td>15</td>
 <td>32</td>
@@ -253,7 +331,7 @@
 <ul>
 <li><abbr title="Personal Area Network" >PAN</abbr> Coordinator sends beacons. The beacon interval defines one superframe. Each superframe is divided into 16 time slots.</li>
 </ul>
-<p>Slots: * Contention Access Period: random, collisions possible * Contention Free Period: slots are asigned to individual devices</p>
+<p>Slots: * Contention Access Period (CAP): competetive access with CSMA/CA or ALOHA, collisions possible * Contention Free Period (CFP): slots are asigned to individual devices</p>
 <ul>
 <li>Access Management:
 <ul>
@@ -271,6 +349,9 @@
 <li><abbr title="Advanced Encryption Standard" >AES</abbr>-128</li>
 </ul>
 <h2 id="references">References</h2>
+<ul>
+<li><a href="">IEEE: “IEEE Standard for Low-Rate Wireless Networks”, IEEE Std 802.15.4, 2015</a></li>
+</ul>
 
 
     </main>

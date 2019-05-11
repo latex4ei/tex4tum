@@ -207,8 +207,12 @@
 <div id="title_def" class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
-<h5 class='card-title text-primary'>Definition</h5>
-<p class='card-text'><abbr title="Universal Asynchronous Receiver Transmitter" >UART</abbr> is serial bus.</p>
+<h5 class="card-title text-primary">
+Definition
+</h5>
+<p class="card-text">
+<abbr title="Universal Asynchronous Receiver Transmitter" >UART</abbr> is serial bus.
+</p>
 </div>
 </div>
 </div>
@@ -249,8 +253,18 @@
 <li>57'600 bit/s</li>
 <li>115'200 bit/s</li>
 </ul>
-<h5 class='clp_title text-success' data-toggle='collapse' href='#example1094'><i class='fa fa-chart-bar'></i> Example</h5>
-<p><div id='example1094' class='example collapse'><div class='card border-success mb-1'><div class='card-body'><p class='card-text'>If a baudrate of 9600 bits/s is used with one stop bit and no parity (10 bit per byte) then the datarate would be 960 byte/s.<p> </div></div></div></p>
+<h5 class="clp_title text-success" data-toggle="collapse" href="#example2">
+<i class='fa fa-chart-bar'></i> Example
+</h5>
+<div id='example2' class='example collapse'>
+<div class='card border-success mb-1'>
+<div class='card-body'>
+<p class='card-text'>
+If a baudrate of 9600 bits/s is used with one stop bit and no parity (10 bit per byte) then the datarate would be 960 byte/s.
+<p>
+</div>
+</div>
+</div>
 <h2 id="protocol">Protocol</h2>
 <p><abbr title="Universal Asynchronous Receiver Transmitter" >UART</abbr> uses serial transmission of 8 bits framed by start and stop bits.</p>
 <pre class="diagram"><code>       ___     ___ ___ ___ ___ ___ ___ ___ ___ ________
@@ -258,8 +272,18 @@ RX ---    \___/___X___X___X___X___X___X___X___X___/    ---
             S  b0  b1  b2  b3  b4  b5  b6  b7  pr   P
 
 S: start bit,  b0-7: data,  pr: parity bit,  P: stop bit</code></pre>
-<h5 class='clp_title text-warning' data-toggle='collapse' href='#expl1021'><i class='fa fa-comment-dots'></i> Explanation</h5>
-<p><div id='expl1021' class='explanation collapse'><div class='card border-warning mb-1'><div class='card-body'> <p class='card-text'> All operations of the UART hardware are controlled by an internal clock signal which runs at a multiple of the data rate, typically 8 or 16 times the bit rate. The receiver tests the state of the incoming signal on each clock pulse, looking for the beginning of the start bit. If the apparent start bit lasts at least one-half of the bit time, it is valid and signals the start of a new character. If not, it is considered a spurious pulse and is ignored. <p> </div></div></div></p>
+<h5 class="clp_title text-warning" data-toggle="collapse" href="#expl2">
+<i class='fa fa-comment-dots'></i> Explanation
+</h5>
+<div id='expl2' class='explanation collapse'>
+<div class='card border-warning mb-1'>
+<div class='card-body'>
+<p class='card-text'>
+All operations of the UART hardware are controlled by an internal clock signal which runs at a multiple of the data rate, typically 8 or 16 times the bit rate. The receiver tests the state of the incoming signal on each clock pulse, looking for the beginning of the start bit. If the apparent start bit lasts at least one-half of the bit time, it is valid and signals the start of a new character. If not, it is considered a spurious pulse and is ignored.
+<p>
+</div>
+</div>
+</div>
 <p><strong>Variants:</strong> Stop bits: 1, 1.5, 2</br> Parity: odd, even, none</p>
 <h3 id="receiver-errors">Receiver Errors</h3>
 <ul>

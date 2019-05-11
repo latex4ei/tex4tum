@@ -183,8 +183,12 @@
 <div id="title_def" class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
-<h5 class='card-title text-primary'>Definition</h5>
-<p class='card-text'>The Kalman Filter is a linear quadratic estimator used to estimate the state of a system by combining sensor measurements and a (physical) process model of the system. It works optimal if measurements and process variations have white gaussian noise.</p>
+<h5 class="card-title text-primary">
+Definition
+</h5>
+<p class="card-text">
+The Kalman Filter is a linear quadratic estimator used to estimate the state of a system by combining sensor measurements and a (physical) process model of the system. It works optimal if measurements and process variations have white gaussian noise.
+</p>
 </div>
 </div>
 </div>
@@ -253,9 +257,30 @@
 <p><span class="LaTeX">$${\boldsymbol{G}} = \frac{\partial g}{\partial x} \Big\vert_{\hat{{\boldsymbol x}}_{n-1}, {\boldsymbol u}_n} \qquad {\boldsymbol{H}} = \frac{\partial h}{\partial x} \Big\vert_{\hat{{\boldsymbol x}}_{n}}$$</span></p>
 <h2 id="sensor-fusion">Sensor Fusion</h2>
 <p>If <span class="LaTeX">$i$</span> sensors measure the same state <span class="LaTeX">$x_j$</span>, this can be expressed in the measurement matrix <span class="LaTeX">${\boldsymbol{H}}$</span>. The column <span class="LaTeX">$j$</span> will have <span class="LaTeX">$i$</span> rows with entries.</p>
-<h5 class='clp_title text-success' data-toggle='collapse' href='#example1096'><i class='fa fa-chart-bar'></i> Example </h5>
-<p><div id='example1096' class='example collapse'><div class='card border-success mb-1'><div class='card-body'><p class='card-text'> <h5 class='clp_title text-success' data-toggle='collapse' href='#example1097'><i class='fa fa-chart-bar'></i> Example</h5> <div id='example1097' class='example collapse'><div class='card border-success mb-1'><div class='card-body'><p class='card-text'> Kalman Filter for Gyroscope and Accelerometer:</p>
-<p>state <span class="LaTeX">${\boldsymbol x}$</span> are the orientation angles roll and pitch and the bias angle <p> </div></div></div> <p> </div></div></div></p>
+<h5 class="clp_title text-success" data-toggle="collapse" href="#example4">
+<i class='fa fa-chart-bar'></i> Example
+</h5>
+<div id='example4' class='example collapse'>
+<div class='card border-success mb-1'>
+<div class='card-body'>
+<p class='card-text'>
+<h5 class="clp_title text-success" data-toggle="collapse" href="#example5">
+<i class='fa fa-chart-bar'></i> Example
+</h5>
+<div id='example5' class='example collapse'>
+<div class='card border-success mb-1'>
+<div class='card-body'>
+<p class='card-text'>
+<p>Kalman Filter for Gyroscope and Accelerometer:</p>
+state <span class="LaTeX">${\boldsymbol x}$</span> are the orientation angles roll and pitch and the bias angle
+<p>
+</div>
+</div>
+</div>
+<p>
+</div>
+</div>
+</div>
 <h2 id="references">References</h2>
 <ul>
 <li><p><a href="https://www.kalmanfilter.net/kalman1d.html">Kalman Filter in one Dimension</a></p></li>

@@ -183,8 +183,12 @@
 <div id="title_def" class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
-<h5 class='card-title text-primary'>Definition</h5>
-<p class='card-text'><abbr title="Rivest, Shamir and Adleman" >RSA</abbr> is a public-key cryptosystems and is used for secure data transmission.</p>
+<h5 class="card-title text-primary">
+Definition
+</h5>
+<p class="card-text">
+<abbr title="Rivest, Shamir and Adleman" >RSA</abbr> is a public-key cryptosystems and is used for secure data transmission.
+</p>
 </div>
 </div>
 </div>
@@ -207,8 +211,14 @@
 <li>choose random private key <span class="LaTeX">$d$</span> with <span class="LaTeX">$1 \lt d \lt n-1$</span></li>
 <li>find public key <span class="LaTeX">$e$</span> with <span class="LaTeX">$de \equiv 1 (\mod (p-1)(q-1))$</span></li>
 </ol>
-<h5 class='clp_title text-success' data-toggle='collapse' href='#example1100'><i class='fa fa-chart-bar'></i> Example </h5>
-<p><div id='example1100' class='example collapse'><div class='card border-success mb-1'><div class='card-body'><p class='card-text'> Here is an example of <abbr title="Rivest, Shamir and Adleman" >RSA</abbr> encryption and decryption. The parameters used here are artificially small.</p>
+<h5 class="clp_title text-success" data-toggle="collapse" href="#example8">
+<i class='fa fa-chart-bar'></i> Example
+</h5>
+<div id='example8' class='example collapse'>
+<div class='card border-success mb-1'>
+<div class='card-body'>
+<p class='card-text'>
+<p>Here is an example of <abbr title="Rivest, Shamir and Adleman" >RSA</abbr> encryption and decryption. The parameters used here are artificially small.</p>
 <p><strong>Generate Keypair</strong> <span class="LaTeX">$(d, e)$</span></p>
 <ol type="1">
 <li>Choose two distinct prime numbers, such as</br> <span class="LaTeX">$p=61$</span> and <span class="LaTeX">$q=53$</span></li>
@@ -220,7 +230,11 @@
 <p>The public key is <span class="LaTeX">$(n = 3233, e = 17)$</span>. Encryption function is <span class="LaTeX">$c(m)=m^{17}{\mod {3}}233$</span>.</p>
 <p>The private key is <span class="LaTeX">$(n = 3233, d = 413)$</span>. Decryption function is <span class="LaTeX">$m(c)=c^{413}{\mod {3}}233$</span>.</p>
 <p><strong>Encrypt message <span class="LaTeX">$m = 65$</span>:</strong></br> <span class="LaTeX">$c=65^{17}{\mod {3}}233=2790$</span></p>
-<p><strong>Decrypt cipher <span class="LaTeX">$c = 2790$</span>:</strong></br> <span class="LaTeX">$m=2790^{413}{\mod {3}}233=65$</span> <p> </div></div></div></p>
+<strong>Decrypt cipher <span class="LaTeX">$c = 2790$</span>:</strong></br> <span class="LaTeX">$m=2790^{413}{\mod {3}}233=65$</span>
+<p>
+</div>
+</div>
+</div>
 <h2 id="attack-model">Attack Model</h2>
 <ul>
 <li><p>key-only attack: the attacker is only given the public verification key</p></li>

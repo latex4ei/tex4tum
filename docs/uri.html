@@ -195,8 +195,12 @@
 <div id="title_def" class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
-<h5 class='card-title text-primary'>Definition</h5>
-<p class='card-text'>A Uniform Resource Identifier (<abbr title="Uniform Resource Identifier" >URI</abbr>) is a string of characters used to identify a resource. Web-URLs, for example, are a common type of URIs.</p>
+<h5 class="card-title text-primary">
+Definition
+</h5>
+<p class="card-text">
+A Uniform Resource Identifier (<abbr title="Uniform Resource Identifier" >URI</abbr>) is a string of characters used to identify a resource. Web-URLs, for example, are a common type of URIs.
+</p>
 </div>
 </div>
 </div>
@@ -224,13 +228,21 @@
 <p><input id="uri-input" type="text" oninput="parseURI(this)" placeholder="scheme:[//[user[:password]@]host[:port]][/path][?query][#fragment]" value=""></p>
 <div id="uri-divout">
 <ul>
-    <li>scheme: <code id="uri-scheme"></code></li>
-    <li>authority: <code id="uri-authority"></code></br>
-        (user: <code id="uri-user"> </code>, password: <code id="uri-password"> </code>, host: <code id="uri-host"> </code>, port: <code id="uri-port"> </code>)
-    </li>
-    <li>path: <code id="uri-path"></code></li>
-    <li>query: <code id="uri-query"></code></li>
-    <li>fragment: <code id="uri-fragment"></code></li>
+<li>
+scheme: <code id="uri-scheme"></code>
+</li>
+<li>
+authority: <code id="uri-authority"></code></br> (user: <code id="uri-user"> </code>, password: <code id="uri-password"> </code>, host: <code id="uri-host"> </code>, port: <code id="uri-port"> </code>)
+</li>
+<li>
+path: <code id="uri-path"></code>
+</li>
+<li>
+query: <code id="uri-query"></code>
+</li>
+<li>
+fragment: <code id="uri-fragment"></code>
+</li>
 </ul>
 </div>
 <h2 id="escape-characters">Escape Characters</h2>
@@ -239,7 +251,10 @@
 <p><input id="uri-decoded" type="text" oninput="encChar(this)" placeholder="why encode?"></p>
 </div>
 <div class="col-2">
-<p><span> ⇦ enc/dec ⇨</span></div> <div class="col-5"> <input id="uri-encoded" type="text" oninput="decChar(this)" placeholder="Why%20encode%3F"></p>
+<span> ⇦ enc/dec ⇨</span>
+</div>
+<div class="col-5">
+<p><input id="uri-encoded" type="text" oninput="decChar(this)" placeholder="Why%20encode%3F"></p>
 </div>
 </div>
 <p>The characters allowed in a <abbr title="Uniform Resource Identifier" >URI</abbr> are either <em>reserved</em>, <em>unreserved</em> or <em>percent-encoded</em> (e.g. <code>%3F</code> for a <code>?</code>).</p>

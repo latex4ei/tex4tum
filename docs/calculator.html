@@ -167,24 +167,50 @@
 <div id="title_def" class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
-<h5 class='card-title text-primary'>Definition</h5>
-<p class='card-text'>This is a powerful, client-side <abbr title="JavaScript" >JS</abbr> calculator based on [mathjs](http://mathjs.org/docs/index.html).</p>
+<h5 class="card-title text-primary">
+Definition
+</h5>
+<p class="card-text">
+This is a powerful, client-side JS calculator based on <a href="http://mathjs.org/docs/index.html">mathjs</a>.
+</p>
 </div>
 </div>
 </div>
 <p>Try it. Full expression syntax on <a href="http://mathjs.org/docs/expressions/syntax.html">mathjs</a>.</p>
 <div id="commandline">
-<p>loading...</div> Shortcuts: <code>s</code>: set focus, <code>Ctrl+F11</code>: toggle fullscreen.</p>
+loading...
+</div>
+<p>Shortcuts: <code>s</code>: set focus, <code>Ctrl+F11</code>: toggle fullscreen.</p>
 <h2 id="what-you-can-do">What you can do:</h2>
 <ul>
 <li>Algebraic calculations</li>
 <li>Define functions, calculate derivative, simplify</li>
 <li>Vector / Matrix calculations (determinant, etc.)</li>
 </ul>
-<h5 class='clp_title text-warning' data-toggle='collapse' href='#expl1042'><i class='fa fa-comment-dots'></i> Explanation</h5>
-<p><div id='expl1042' class='explanation collapse'><div class='card border-warning mb-1'><div class='card-body'> <p class='card-text'> <strong>Data Types:</strong> Bool <code>true</code>/<code>false</code> , Num <code>7, 1.5e-9</code>, Complex <code>2+3i</code>, Units <code>3.0 cm, 2.7 kg</code></br> <strong>Vector / Matrix:</strong> <code>v = [1, 2, 3]</code>, <code>M = [11, 12; 21, 22]</code></br> <strong>Predefined Functions:</strong> <code>abs()</code>, <code>sqrt()</code>, <code>sin()</code>, <code>log()</code> </br> <strong>Own Functions:</strong> <code>f(x) = x^2 - 5</code>, then call <code>f(3)</code>, <p> </div></div></div></p>
-<h5 class='clp_title text-success' data-toggle='collapse' href='#example1114'><i class='fa fa-chart-bar'></i> Example</h5>
-<p><div id='example1114' class='example collapse'><div class='card border-success mb-1'><div class='card-body'><p class='card-text'><code>f(x) = x^2 + 3x -1</code></br> <code>fdev = derivative(&quot;x^2 + 3x -1&quot;, &quot;x&quot;)</code> // 2x + 3</br> <code>A = [2, 1; 0, 2]</code></br> <code>d = det(A)</code><p> </div></div></div></p>
+<h5 class="clp_title text-warning" data-toggle="collapse" href="#expl23">
+<i class='fa fa-comment-dots'></i> Explanation
+</h5>
+<div id='expl23' class='explanation collapse'>
+<div class='card border-warning mb-1'>
+<div class='card-body'>
+<p class='card-text'>
+<strong>Data Types:</strong> Bool <code>true</code>/<code>false</code> , Num <code>7, 1.5e-9</code>, Complex <code>2+3i</code>, Units <code>3.0 cm, 2.7 kg</code></br> <strong>Vector / Matrix:</strong> <code>v = [1, 2, 3]</code>, <code>M = [11, 12; 21, 22]</code></br> <strong>Predefined Functions:</strong> <code>abs()</code>, <code>sqrt()</code>, <code>sin()</code>, <code>log()</code> </br> <strong>Own Functions:</strong> <code>f(x) = x^2 - 5</code>, then call <code>f(3)</code>,
+<p>
+</div>
+</div>
+</div>
+<h5 class="clp_title text-success" data-toggle="collapse" href="#example22">
+<i class='fa fa-chart-bar'></i> Example
+</h5>
+<div id='example22' class='example collapse'>
+<div class='card border-success mb-1'>
+<div class='card-body'>
+<p class='card-text'>
+<code>f(x) = x^2 + 3x -1</code></br> <code>fdev = derivative(&quot;x^2 + 3x -1&quot;, &quot;x&quot;)</code> // 2x + 3</br> <code>A = [2, 1; 0, 2]</code></br> <code>d = det(A)</code>
+<p>
+</div>
+</div>
+</div>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/4.4.2/math.min.js"></script>
 <style type="text/css">
 

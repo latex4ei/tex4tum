@@ -183,16 +183,30 @@
 <div id="title_def" class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
-<h5 class='card-title text-primary'>Definition</h5>
-<p class='card-text'>Zero-knowledge succinct non-interactive arguments of knowledge (zkSNARK) is a method to verify the correctness of a computation without knowing the data of the computation.</p>
+<h5 class="card-title text-primary">
+Definition
+</h5>
+<p class="card-text">
+Zero-knowledge succinct non-interactive arguments of knowledge (zkSNARK) is a method to verify the correctness of a computation without knowing the data of the computation.
+</p>
 </div>
 </div>
 </div>
 <p>zkSNARK can be used to verify the solution of NP-complete statements in constant time.</p>
 <h2 id="scenario">Scenario</h2>
 <p>There is a <strong>prover</strong> which wants to convince a <strong>verifier</strong> that cetain mathematical statement is true. The proof must be sound, complete, and must not reveal any information to the verifier (zero-knowledge).</p>
-<h5 class='clp_title text-warning' data-toggle='collapse' href='#expl1033'><i class='fa fa-comment-dots'></i> Explanation</h5>
-<p><div id='expl1033' class='explanation collapse'><div class='card border-warning mb-1'><div class='card-body'> <p class='card-text'> A protocol is used to exchange information about the solution and can be proven zero knowledge if for every possible Verifier, you can demonstrate the existence of an algorithm called a ‘Simulator’, that can demonstrate parts of the real solution (without effort) or simulate (fake) parts of the solution (with effort or simply by luck) without knowing the real solution. The verifier can then not distinguish between real and fake solutions and thus does not learn something about the real solution but gets confident about the correctness if the effort or luck required is high enough. <p> </div></div></div></p>
+<h5 class="clp_title text-warning" data-toggle="collapse" href="#expl14">
+<i class='fa fa-comment-dots'></i> Explanation
+</h5>
+<div id='expl14' class='explanation collapse'>
+<div class='card border-warning mb-1'>
+<div class='card-body'>
+<p class='card-text'>
+A protocol is used to exchange information about the solution and can be proven zero knowledge if for every possible Verifier, you can demonstrate the existence of an algorithm called a ‘Simulator’, that can demonstrate parts of the real solution (without effort) or simulate (fake) parts of the solution (with effort or simply by luck) without knowing the real solution. The verifier can then not distinguish between real and fake solutions and thus does not learn something about the real solution but gets confident about the correctness if the effort or luck required is high enough.
+<p>
+</div>
+</div>
+</div>
 <p>zkSNARKs as currently implemented, have 4 main ingredients: 1. Encode your problem as a polynomial <span class="LaTeX">$t(x)h(x) = w(x)v(x)$</span> 1. chooses a secret single evaluation point <span class="LaTeX">$s$</span> to reduce the problem to <span class="LaTeX">$t(s)h(s) = w(s)v(s)$</span> 1. Homomorphic encryption: the prover computes <span class="LaTeX">$E(t(s)), E(h(s)), E(w(s)), E(v(s))$</span> without knowing <span class="LaTeX">$s$</span> 1. Zero Knowledge: multiplying with a number so that the verifier can still check their correct structure without knowing the actual encoded values</p>
 <h2 id="process">Process</h2>
 <p>The prover knows some secret numbers <span class="LaTeX">$x$</span> and <span class="LaTeX">$y$</span> and computes their product, but sends only the encrypted versions <span class="LaTeX">$a = E(x), b = E(y)$</span> and <span class="LaTeX">$c = E(xy)$</span> to the verifier. The verifier now checks that <span class="LaTeX">$(ab)$</span> and the only thing the verifier learns is the encrypted version of the product and that the product was correctly computed, but she neither knows the two factors nor the actual product.</p>

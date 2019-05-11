@@ -183,28 +183,36 @@
 <div id="title_def" class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
-<h5 class='card-title text-primary'>Definition</h5>
-<p class='card-text'>Ada is a programming language intended for real-time safety-critical systems.</p>
+<h5 class="card-title text-primary">
+Definition
+</h5>
+<p class="card-text">
+Ada is a programming language intended for real-time safety-critical systems.
+</p>
 </div>
 </div>
 </div>
-<figure class="highlight"><pre><code class="language-ada" data-lang="ada"><span></span><span class="kn">with</span> <span class="nn">Ada.Text_IO</span><span class="p">;</span>
+<figure class="highlight">
+<pre><code class="language-ada" data-lang="ada"><span></span><span class="kn">with</span> <span class="nn">Ada.Text_IO</span><span class="p">;</span>
 
 <span class="kd">procedure</span> <span class="nf">main</span> <span class="kr">is</span>
     <span class="n">message</span> <span class="p">:</span> <span class="kt">String</span> <span class="p">:=</span> <span class="s">&quot;Hello World&quot;</span>
 <span class="kr">begin</span>
     <span class="c1">-- Print message</span>
     <span class="n">Ada</span><span class="p">.</span><span class="n">Text_IO</span><span class="p">.</span><span class="n">Put_Line</span><span class="p">(</span> <span class="n">message</span> <span class="p">);</span>
-<span class="kr">end</span> <span class="nf">main</span><span class="p">;</span></code></pre></figure>
+<span class="kr">end</span> <span class="nf">main</span><span class="p">;</span></code></pre>
+</figure>
 <h2 id="data-types">Data Types</h2>
-<figure class="highlight"><pre><code class="language-ada" data-lang="ada"><span></span><span class="c1">-- type declarations</span>
+<figure class="highlight">
+<pre><code class="language-ada" data-lang="ada"><span></span><span class="c1">-- type declarations</span>
 <span class="kd">type</span> <span class="kt">Counter_Type</span> <span class="kr">is</span> <span class="kr">range</span> <span class="mi">1</span> <span class="p">..</span> <span class="mi">10</span><span class="p">;</span>                  <span class="c1">-- constrained</span>
 <span class="kd">subtype</span> <span class="kt">Counter_Type</span> <span class="kr">is</span> <span class="n">Counter_Type</span> <span class="kr">range</span> <span class="mi">1</span> <span class="p">..</span> <span class="mi">3</span><span class="p">;</span>   <span class="c1">-- further constrained</span>
 <span class="kd">type</span> <span class="kt">Vector_Type</span> <span class="kr">is</span> <span class="kr">array</span> <span class="p">(</span><span class="mi">1</span> <span class="p">..</span> <span class="mi">3</span><span class="p">)</span> <span class="kr">of</span> <span class="kt">Integer</span><span class="p">;</span>       <span class="c1">-- 3 elements</span>
 
 <span class="c1">-- instanciations</span>
 <span class="n">MyCounter</span> <span class="p">:</span> <span class="n">Counter_Type</span> <span class="p">:=</span> <span class="mi">1</span><span class="p">;</span>
-<span class="n">Velocity</span> <span class="p">:</span> <span class="n">Vector_Type</span> <span class="p">:=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span></code></pre></figure>
+<span class="n">Velocity</span> <span class="p">:</span> <span class="n">Vector_Type</span> <span class="p">:=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span></code></pre>
+</figure>
 <ul>
 <li>Discrete Scalars: <code>Integer</code>, <code>Natural</code>, <code>Positive</code></li>
 <li>Real Scalars: <code>Float</code></li>

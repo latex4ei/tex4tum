@@ -183,14 +183,28 @@
 <div id="title_def" class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
-<h5 class='card-title text-primary'>Definition</h5>
-<p class='card-text'>A Matrix is a table of math objects.</p>
+<h5 class="card-title text-primary">
+Definition
+</h5>
+<p class="card-text">
+A Matrix is a table of math objects.
+</p>
 </div>
 </div>
 </div>
 <p><span class="LaTeX">${\boldsymbol{A}}=(a_{ij}) \in \mathbb K^{m\times n}$</span> has <span class="LaTeX">$m$</span> rows (index <span class="LaTeX">$i$</span>) and <span class="LaTeX">$n$</span> columns (index <span class="LaTeX">$j$</span>)</p>
-<h5 class='clp_title text-success' data-toggle='collapse' href='#example1109'><i class='fa fa-chart-bar'></i> Example</h5>
-<p><div id='example1109' class='example collapse'><div class='card border-success mb-1'><div class='card-body'><p class='card-text'>A matrix <span class="LaTeX">${\boldsymbol{A}} \in \mathbb K^{2\times 3}$</span> could be <span class="LaTeX">${\boldsymbol{A}} = {\begin{bmatrix}  a &amp; b &amp; c \\ d &amp; e &amp; f \end{bmatrix}}$</span>.<p> </div></div></div></p>
+<h5 class="clp_title text-success" data-toggle="collapse" href="#example17">
+<i class='fa fa-chart-bar'></i> Example
+</h5>
+<div id='example17' class='example collapse'>
+<div class='card border-success mb-1'>
+<div class='card-body'>
+<p class='card-text'>
+A matrix <span class="LaTeX">${\boldsymbol{A}} \in \mathbb K^{2\times 3}$</span> could be <span class="LaTeX">${\boldsymbol{A}} = {\begin{bmatrix}  a &amp; b &amp; c \\ d &amp; e &amp; f \end{bmatrix}}$</span>.
+<p>
+</div>
+</div>
+</div>
 <table style="width:17%;">
 <colgroup>
 <col style="width: 16%" />
@@ -318,8 +332,18 @@
 <h3 id="inverse-matrix">Inverse Matrix</h3>
 <p>An <span class="LaTeX">$n \times n$</span> square matrix <span class="LaTeX">${\boldsymbol{A}}$</span> is called invertible (nonsingular) if there exists an <span class="LaTeX">$n \times n$</span> square matrix <span class="LaTeX">${\boldsymbol{B}}$</span> such that</p>
 <p><span class="LaTeX">$${\boldsymbol{A}} \cdot {\boldsymbol{B}} = {\boldsymbol{B}} \cdot {\boldsymbol{A}} = {\boldsymbol{1}}_n$$</span></p>
-<h5 class='clp_title text-warning' data-toggle='collapse' href='#expl1034'><i class='fa fa-comment-dots'></i> Explanation</h5>
-<p><div id='expl1034' class='explanation collapse'><div class='card border-warning mb-1'><div class='card-body'> <p class='card-text'> Eine Matrix heißt singulär, wenn ihre Spaltenvektoren linear abhängig voneinander sind. Daraus folgt, dass der Bildraum mindestens eine Dimension weniger hat als der Abbildungsraum, da die Spaltenvektoren den <span class="LaTeX">${\mathop{\mathbb R}}^n$</span> nicht mehr erzeugen können und keine Basis mehr zum <span class="LaTeX">${\mathop{\mathbb R}}^n$</span> darstellen. Hat man nun einen Bildpunkt im <span class="LaTeX">${\mathop{\mathbb R}}^{n-1}$</span> gegeben, so lässt sich nicht mehr sagen, von wo aus dem <span class="LaTeX">${\mathop{\mathbb R}}^n$</span> dieser Punkt auf den Bildraum <span class="LaTeX">${\mathop{\mathbb R}}^{n-1}$</span> abgebildet worden ist, da er ja durch unendlich verschiedene Linearkombination der Spaltenvektoren erreicht werden kann. Die Abbildung lässt sich deshalb nicht mehr umkehren, die Matrix ist nicht invertierbar, die Determinante ist null. <p> </div></div></div></p>
+<h5 class="clp_title text-warning" data-toggle="collapse" href="#expl15">
+<i class='fa fa-comment-dots'></i> Explanation
+</h5>
+<div id='expl15' class='explanation collapse'>
+<div class='card border-warning mb-1'>
+<div class='card-body'>
+<p class='card-text'>
+Eine Matrix heißt singulär, wenn ihre Spaltenvektoren linear abhängig voneinander sind. Daraus folgt, dass der Bildraum mindestens eine Dimension weniger hat als der Abbildungsraum, da die Spaltenvektoren den <span class="LaTeX">${\mathop{\mathbb R}}^n$</span> nicht mehr erzeugen können und keine Basis mehr zum <span class="LaTeX">${\mathop{\mathbb R}}^n$</span> darstellen. Hat man nun einen Bildpunkt im <span class="LaTeX">${\mathop{\mathbb R}}^{n-1}$</span> gegeben, so lässt sich nicht mehr sagen, von wo aus dem <span class="LaTeX">${\mathop{\mathbb R}}^n$</span> dieser Punkt auf den Bildraum <span class="LaTeX">${\mathop{\mathbb R}}^{n-1}$</span> abgebildet worden ist, da er ja durch unendlich verschiedene Linearkombination der Spaltenvektoren erreicht werden kann. Die Abbildung lässt sich deshalb nicht mehr umkehren, die Matrix ist nicht invertierbar, die Determinante ist null.
+<p>
+</div>
+</div>
+</div>
 <h3 id="rotation-matrix-of-mathopmathbb-r3">Rotation Matrix of <span class="LaTeX">${\mathop{\mathbb R}}^3$</span></h3>
 <p>for rotations in a right-handed coordinate system <span class="LaTeX">$XYZ$</span>.</p>
 <p><span class="LaTeX">$$\begin{matrix} 
@@ -343,8 +367,18 @@
 {\boldsymbol{R}}_{z}(\alpha)
 \end{matrix}
 $$</span></p>
-<h5 class='clp_title text-warning' data-toggle='collapse' href='#expl1035'><i class='fa fa-comment-dots'></i> Explanation</h5>
-<p><div id='expl1035' class='explanation collapse'><div class='card border-warning mb-1'><div class='card-body'> <p class='card-text'> Bei einer Rotationsmatrix stehen die Spaltenvektoren senkrecht aufeinander (orthogonal). Deshalb ist der Bildraum nicht verzerrt da nur die Richtung der Einheitsvektoren verändert wird, allerdings nicht ihre Stellung zueinander. Somit entspricht eine orthogonale Abbildungsmatrix einer Drehung des Koordinatensystems in eine andere Richtung (bezüglich <span class="LaTeX">$n$</span> Freiheitsgraden). <p> </div></div></div></p>
+<h5 class="clp_title text-warning" data-toggle="collapse" href="#expl16">
+<i class='fa fa-comment-dots'></i> Explanation
+</h5>
+<div id='expl16' class='explanation collapse'>
+<div class='card border-warning mb-1'>
+<div class='card-body'>
+<p class='card-text'>
+Bei einer Rotationsmatrix stehen die Spaltenvektoren senkrecht aufeinander (orthogonal). Deshalb ist der Bildraum nicht verzerrt da nur die Richtung der Einheitsvektoren verändert wird, allerdings nicht ihre Stellung zueinander. Somit entspricht eine orthogonale Abbildungsmatrix einer Drehung des Koordinatensystems in eine andere Richtung (bezüglich <span class="LaTeX">$n$</span> Freiheitsgraden).
+<p>
+</div>
+</div>
+</div>
 <h2 id="special-22-matrices">Special 2×2 Matrices</h2>
 <p>For a <span class="LaTeX">$2 \times 2$</span> matrix <span class="LaTeX">${\boldsymbol{A}} = {\begin{bmatrix} a &amp; b \ c &amp; d \end{bmatrix}}$</span> the following rules hold:</p>
 <p>Determinant: <span class="LaTeX">$\det({\boldsymbol{A}}) = ad - bc$</span></p>
