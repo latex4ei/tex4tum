@@ -31,13 +31,13 @@ scheme:[//[user[:password]@]host[:port]][/path][?query][#fragment]
 
 <div id="uri-divout">
 <ul>
-	<li>scheme: <code id="uri-scheme"></code></li>
-	<li>authority: <code id="uri-authority"></code></br>
-		(user: <code id="uri-user"> </code>, password: <code id="uri-password"> </code>, host: <code id="uri-host"> </code>, port: <code id="uri-port"> </code>)
-	</li>
-	<li>path: <code id="uri-path"></code></li>
-	<li>query: <code id="uri-query"></code></li>
-	<li>fragment: <code id="uri-fragment"></code></li>
+<li>scheme: <code id="uri-scheme"></code></li>
+<li>authority: <code id="uri-authority"></code></br>
+ (user: <code id="uri-user"> </code>, password: <code id="uri-password"> </code>, host: <code id="uri-host"> </code>, port: <code id="uri-port"> </code>)
+</li>
+<li>path: <code id="uri-path"></code></li>
+<li>query: <code id="uri-query"></code></li>
+<li>fragment: <code id="uri-fragment"></code></li>
 </ul>
 </div>
 

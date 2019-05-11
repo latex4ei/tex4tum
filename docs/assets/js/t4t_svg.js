@@ -1,4 +1,6 @@
 
+// NOTE: you cannot access SVG DOM in Chrome locally => run python3 -m http.server
+
 
 // Get Properties
 // =====================================================
