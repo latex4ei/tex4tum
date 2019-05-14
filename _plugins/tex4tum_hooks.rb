@@ -94,7 +94,7 @@ module Jekyll
           # find main index file
           if document.data["title"] == MAIN_INDEX_TITLE
             toc = createFolderTOC(folderHash, 3)
-            document.content = document.content.sub(TOC_TOKEN_RE, toc)
+            document.content = document.content.sub(TOC_TOKEN_RE) { toc }
           end
 
           # find folder articles (articles with the same name as their folder)
@@ -108,7 +108,7 @@ module Jekyll
             elsif folders[0]
               toc = createFolderTOC(folderHash[folders[0]], 2)
             end
-            document.content = document.content.sub(TOC_TOKEN_RE, toc)
+            document.content = document.content.sub(TOC_TOKEN_RE) { toc }
           end
 
           # create local TOCs (if necessary)
@@ -278,9 +278,9 @@ module Jekyll
               key = match[0]
               value = match[1]
 
-              newHTML = newHTML.gsub(/(?<=\W|^)#{key}(?=\W|$)/, "<abbr title=\"" + value + "\" >" + key + "</abbr>")
+              newHTML = newHTML.gsub(/(?<=\W|^)#{key}(?=\W|$)/) { "<abbr title=\"" + value + "\" >" + key + "</abbr>" }
             end
-            main = main.sub(innerHTML, newHTML)
+            main = main.sub(innerHTML) { newHTML }
           end
 
           doc.output = head+main+foot

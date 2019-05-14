@@ -91,8 +91,8 @@ module Jekyll
       # replace unicode
       content.scan(TEX_SINGLE_REGEXP) do |match|
         newtext = match[0]
-        UNICODE_TEX_HASH.each { |k, v| newtext = newtext.gsub(k, v) }
-        content = content.gsub(match[0], newtext)
+        UNICODE_TEX_HASH.each { |k, v| newtext = newtext.gsub(k) { v } }
+        content = content.gsub(match[0]){ newtext }
       end
 
 
@@ -113,9 +113,9 @@ module Jekyll
 
     def get_todos(document, todos)
       document.content.scan(TODO_REGEXP) do |match|
-        todo = match[1].gsub(/<\/?[^>]*>/, "") # Stripping html
+        todo = match[1].gsub(/<\/?[^>]*>/) { "" } # Stripping html
         todos.push({"todo" => todo, "file" => document.data['slug'] + document.data['ext'], "link" => document.url + ".html", "name" => document.data['title']})
-        document.content = document.content.sub(match[0], "")  # remove from final article
+        document.content = document.content.sub(match[0]) { "" }  # remove from final article
       end
       return todos
     end
@@ -123,8 +123,8 @@ module Jekyll
 
 
     def markDefinition(content)
-      # idea: find a definition and show it when the heading before it is clicked
-      content = content.sub(DEFINITION_REGEXP, %q{{% definition title_def%}\1{% enddefinition %}}+"\n\n")
+      # idea: find a definition and show it when the heading is clicked
+      content = content.sub(DEFINITION_REGEXP) { %q{{% definition title_def%}}+ $1 +%q{{% enddefinition %}}+"\n\n" }
       return content
     end
 
@@ -141,37 +141,34 @@ module Jekyll
       content.scan(re_inner_section) do |match|
         section_title = match[1]   #$1
         if section_title.include? "Example"
-          content = content.sub(match[0], "\n\n{\% example #{match[1]} \%}\n#{match[2]}\n{\% endexample \%}\n\n")
+          content = content.sub(match[0]) { "\n\n{\% example #{match[1]} \%}\n#{match[2]}\n{\% endexample \%}\n\n" }
         end
         if section_title.include? "Explanation"
-          content = content.sub(match[0], "\n\n{\% explanation #{match[1]}\%}\n#{match[2]}\n{\% endexplanation \%}\n\n")
+          content = content.sub(match[0]) { "\n\n{\% explanation #{match[1]}\%}\n#{match[2]}\n{\% endexplanation \%}\n\n" }
         end
         #puts 'match0: '+match[0]+', match1:'+match[1]+', match2:'+match[2]
       end
 
-      # prepare math: ruby replaces \\ with \
-      content = content.gsub('\\\\(?!\n)') { '\\\\\\\\' }
-      content = content.gsub(%r{(\\mat\{[^$]*?)\\ }) { $1+'\\\\ ' }
-      # puts content
       
       # legends
       eq_num = 0
       content.scan(LEGEND_REGEXP) do |match|
-        equation_par = match[0]   #$1
-        equation = match[1].gsub('\\\\') { '\\\\\\\\' }
-        equation_par = equation_par.sub(match[1], "<div data-toggle='collapse' href='\#eq_#{eq_num}'>"+ "\n" + equation + "\n" + "</div>")
-        equation_par = equation_par.sub(match[2], '{% '+"legend eq_#{eq_num}"+'%}' + "\n" + match[2] + "\n" + %q{{% endlegend %}})
-        #puts equation_par
-        content = content.sub(match[0], equation_par)
+        equation_par = match[0]
+        equation = match[1]
+        # attention! use block style .sub(x) { y } instead of .sub(x, y) to avoid replacing \\ with \ (newline \\ will be an escape sequence for \)
+        # see https://stackoverflow.com/questions/1542214/weird-backslash-substitution-in-ruby
+        equation_par = equation_par.sub(equation) { "<div data-toggle='collapse' href='\#eq_#{eq_num}'>"+ "\n" + equation + "\n" + "</div>" }
+        equation_par = equation_par.sub(match[2]) { '{% '+"legend eq_#{eq_num}"+'%}' + "\n" + match[2] + "\n" + %q{{% endlegend %}} }
+        content = content.sub(match[0]) { equation_par }
         eq_num += 1
       end
 
       # explanation
-      content = content.gsub(EXPLANATION_REGEXP, "\n\n"+%q{{% explanation %} \1 {% endexplanation %}}+"\n\n")
+      content = content.gsub(EXPLANATION_REGEXP) { "\n\n"+%q{{% explanation %}}+$1+%q{{% endexplanation %}}+"\n\n" }
 
       # example
       if content.include? "Example"
-        content = content.gsub(RE_EXAMPLE, "\n\n"+%q{{% example %}\1{% endexample %}}+"\n\n")
+        content = content.gsub(RE_EXAMPLE) { "\n\n"+%q{{% example %}}+$1+%q{{% endexample %}}+"\n\n" }
       end
     
       return content
