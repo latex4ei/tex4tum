@@ -59,7 +59,7 @@ pandoc:
     - normalize
     # - smart
     - latexmathml
-    #- columns: 100
+    - columns: 10000  # prevent pandoc from assigning table widths
     - read: markdown+raw_html+footnotes+backtick_code_blocks   # general format+extensio1+extension2  format=(markdown|markdown_strict)
     #- filter: pandoc-citeproc
 highlighter: pygments
