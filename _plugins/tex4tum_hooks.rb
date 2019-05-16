@@ -1,54 +1,39 @@
 module Jekyll
   require 'json'
 
+  $index_array = []    # global index variable
+  # File.write(path, output, :mode => "wb")
+
+
   class IndexGenerator
 
     def generate(site)
-      puts "Generating Search Index..."
 
-      index_array = Array.new
+      # clear previous elements
+      $index_array.clear
 
+      site.collections["article"].docs.each do |doc|
 
-      for page in site.pages do
-        #puts page.name
+        section_array = get_sectionlist(doc.content)
+        entry = {url: doc.data["slug"], title: doc.data["title"], tags: doc.data["tags"], sections: section_array}
+        $index_array.push(entry)
+
+        # site.pages
+        # puts doc.dest  # data["slug"]
+        # puts doc.data # output: {"draft"=>false, "categories"=>[], "layout"=>"page", "permalink"=>"/:name", "title"=>"Reflection", "slug"=>"reflection", "ext"=>".md", "tags"=>[], "excerpt"=><Excerpt: /reflection#excerpt>, "date"=>2017-03-29 11:41:21 +0200}
+        # puts doc.path
+        # puts doc.collection.label
+        #puts entry
+        # puts entry  # gotcha!
+        #json_title = doc.data["title"].to_json
+        #json_tags = doc.data["tags"].to_json
+
       end
 
 
-      site.collections.each do |label, collection|
-        # puts collection
-        # puts label  # output: "posts, article"
-
-        collection.docs.each do |document|
-
-          section_array = get_sectionlist(document.content)
-
-          # puts document.dest  # data["slug"]
-          # puts document.data # output: {"draft"=>false, "categories"=>[], "layout"=>"page", "permalink"=>"/:name", "title"=>"Reflection", "slug"=>"reflection", "ext"=>".md", "tags"=>[], "excerpt"=><Excerpt: /reflection#excerpt>, "date"=>2017-03-29 11:41:21 +0200}
-          # puts document.path
-
-          entry = {url: document.data["slug"], title: document.data["title"], tags: document.data["tags"], sections: section_array}
-          index_array.push(entry)
-
-          # puts entry  # gotcha!
-          json_title = document.data["title"].to_json
-          json_tags = document.data["tags"].to_json
-
-        end
-      end
-
-      json_string = "search_index = " + index_array.to_json
-
-
-      js_text = File.read(site.dest + JS_PATH)
-      js_text = js_text.gsub(/var search_index = [^\n]+/, 'var ' + json_string)
-      File.write(site.dest + JS_PATH, js_text)
-
-      File.write(site.dest + '/assets/js/search_index.json', json_string)
     end
 
-    private
 
-    JS_PATH = '/assets/js/t4t_search.js'
 
     SECTION_REGEXP = %r{(?:^|\n)\s*## (.*?)\s*(?:\n|$)}
     TAGS_REGEXP = %r{(?:\n|^)\s*tags:\s*(\[.*?\])\s*(?:$|\n)}
@@ -67,6 +52,25 @@ module Jekyll
   end
 
 
+  class SearchIndex
+
+    def generate(site)
+      json_string = "search_index = " + $index_array.to_json
+
+      js_text = File.read(site.dest + JS_PATH)
+      # puts js_text
+      js_text = js_text.gsub(/var search_index = [^\n]+/, 'var ' + json_string)
+      File.write(site.dest + JS_PATH, js_text)
+      File.write(site.dest + '/assets/js/search_index.json', json_string)
+
+
+    end
+
+    private
+
+    JS_PATH = '/assets/js/t4t_search.js'
+  end
+
 
   # the TocGenerator creates two kinds of TOCs
   # 1. folder TOCs for articles with the same name as their parent folder
@@ -82,38 +86,37 @@ module Jekyll
 
     def generate(site)
 
-      puts "Generating Folder List..."
+      puts " - Generating Folder List..."
       folderHash = get_folderlist(site)
       # puts "Dirs: "+folderHash.to_s
 
-      puts "Generating Table of Contents (TOC)..."
+      puts " - Generating Table of Contents (TOC)..."
       # create tocs
-      site.collections.each do |label, collection|
-        collection.docs.each do |document|
+      site.collections["article"].docs.each do |doc|
 
-          # find main index file
-          if document.data["title"] == MAIN_INDEX_TITLE
-            toc = createFolderTOC(folderHash, 3)
-            document.content = document.content.sub(TOC_TOKEN_RE) { toc }
-          end
-
-          # find folder articles (articles with the same name as their folder)
-          relpath = document.relative_path.sub(document.collection.relative_directory, "")[1..-1]
-          if relpath[/(?:^|\/)([^\/]*)\/\1/] # find paths of the form ...foo/foo.md
-            folders = File.dirname(relpath).split('/')
-            if folders[2]
-              toc = createFolderTOC(folderHash[folders[0]][folders[1]][folders[2]], 2)   
-            elsif folders[1]
-              toc = createFolderTOC(folderHash[folders[0]][folders[1]], 2)
-            elsif folders[0]
-              toc = createFolderTOC(folderHash[folders[0]], 2)
-            end
-            document.content = document.content.sub(TOC_TOKEN_RE) { toc }
-          end
-
-          # create local TOCs (if necessary)
-          document.content = createLocalTOC(document.content)
+        # find main index file
+        if doc.data["title"] == MAIN_INDEX_TITLE
+          toc = createFolderTOC(folderHash, 3)
+          doc.content = doc.content.sub(TOC_TOKEN_RE) { toc }
         end
+
+        # find folder articles (articles with the same name as their folder)
+        relpath = doc.relative_path.sub(doc.collection.relative_directory, "")[1..-1]
+        if relpath[/(?:^|\/)([^\/]*)\/\1/] # find paths of the form ...foo/foo.md
+          folders = File.dirname(relpath).split('/')
+          if folders[2]
+            toc = createFolderTOC(folderHash[folders[0]][folders[1]][folders[2]], 2)   
+          elsif folders[1]
+            toc = createFolderTOC(folderHash[folders[0]][folders[1]], 2)
+          elsif folders[0]
+            toc = createFolderTOC(folderHash[folders[0]], 2)
+          end
+          doc.content = doc.content.sub(TOC_TOKEN_RE) { toc }
+        end
+
+        # create local TOCs (if necessary)
+        doc.content = createLocalTOC(doc.content)
+
       end
     end
 
@@ -266,26 +269,52 @@ module Jekyll
       end
 
 
-      site.collections.each do |label, collection|
-        collection.docs.each do |doc|
-          head, main, foot = doc.output.partition(/\n\s*<main .*?<\/main>\s*\n/m)
+      site.collections["article"].docs.each do |doc|
 
-          #puts "\n\n\n\nmain:\n===================\n", main
-          main.scan(/<(?:p|a|h|div|li|td|code|span)>[^<]+?<|>[^<]+?<\/(?:p|a|h\d|div|li|td|code|span)>/) do |innerHTML|
+        head, main, foot = doc.output.partition(/\n\s*<main .*?<\/main>\s*\n/m)
 
-            newHTML = innerHTML
-            acros.each do |match|
-              key = match[0]
-              value = match[1]
+        #puts "\n\n\n\nmain:\n===================\n", main
+        main.scan(/<(?:p|div|li|td|code)>[^<]+?<|>[^<]+?<\/(?:p|div|li|td|code)>/) do |innerHTML|
 
-              newHTML = newHTML.gsub(/(?<=\W|^)#{key}(?=\W|$)/) { "<abbr title=\"" + value + "\" >" + key + "</abbr>" }
-            end
-            main = main.sub(innerHTML) { newHTML }
-          end
+          newHTML = innerHTML
+          newHTML = insert_reference(newHTML, doc.data["title"])
+          newHTML = replace_acronyms(newHTML, acros)
+          # if newHTML != innerHTML
+          #   puts doc.data["title"]
+          # end
 
-          doc.output = head+main+foot
+          main = main.sub(innerHTML) { newHTML }
         end
+
+        doc.output = head+main+foot
+
       end
+    end
+
+    def replace_acronyms(text, acros)
+      acros.each do |match|
+        key = match[0]
+        value = match[1]
+
+        text = text.gsub(/(?<=[\s]|^)#{key}(?=[\s,.]|$)/) { "<abbr title=\"" + value + "\" >" + key + "</abbr>" }
+      end
+      return text
+    end
+
+    def insert_reference(text, curr_title)
+      # puts curr_title
+      $index_array.each do |entry|
+        if entry[:title] != curr_title and entry[:title].length >= 3
+          #title = entry[:title].sub(/ *([^\n]+)$/, '')
+          title, acro = entry[:title].scan(/^([^(]+)(?:$| *\(([^)]+)\)$)/)[0]
+          if acro != nil
+            text = text.sub(/(?<=\W|^)#{Regexp.quote(acro)}(?=\W|$)/) {  "<a href=\"" + entry[:url] + "\" title=\"#{title}\">#{acro}</a>" }
+          end
+          text = text.sub(/(?<=[\s(>]|^)(#{Regexp.quote(title)})(?=[\s,.)<]|$)/i) {  "<a href=\"/#{entry[:url]}\" >" + $1 + "</a>" }
+        end
+        #puts entry
+      end
+      return text
     end
 
   private
@@ -296,23 +325,32 @@ module Jekyll
   end
 
 
+
+
+  # ============================================================
+  Hooks.register :site, :pre_render do |site|   # post_write
+    puts "Hook (pre_render): Indexing all articles..."
+    IndexGenerator.new.generate(site)
+  end
+
   # ============================================================
   Hooks.register :site, :pre_render do |site|
+    puts "Hook (pre_render): Generating TOC..."
     TocGenerator.new.generate(site)
   end
 
 
-
   # ============================================================
   Hooks.register :site, :post_write do |site|
-    IndexGenerator.new.generate(site)
+    puts "Hook :post_write): Generating Search Index..."
+    SearchIndex.new.generate(site)
   end
 
 
   # ============================================================
   Jekyll::Hooks.register(:site, :post_render) do |site|
     if ENV['JEKYLL_ENV'] == 'production'
-        puts "Hook: replacing acronyms"
+        puts "Hook (post_render): cross-references and acronyms"
         AcronymParser.new.generate(site)
     end
   end
