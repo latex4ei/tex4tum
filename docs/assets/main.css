@@ -6645,6 +6645,9 @@ input[type="checkbox"] {
   background-color: transparent; }
 
 /* Other major browsers */
+object[type="image/svg+xml"] svg {
+  cursor: pointer; }
+
 .clp_title {
   cursor: pointer; }
 
