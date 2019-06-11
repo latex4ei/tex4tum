@@ -10,7 +10,7 @@
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="/curve">
+    <link rel="canonical" href="http://localhost:4000/curve">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -177,13 +177,37 @@
 
 </p>
 
+
 <!-- Basics -->
+
 <!--    -->
+
+
+
+
+
 <!-- \newcommand{\diff}{\mathop{}\!\mathrm{\vphantom( d}} -->
+
+
+
+
+
 <!-- SI Units -->
 <!--=============================================================== -->
+
+
+
+
+
+
+
+
+
 <!-- KaTeX Tweaks -->
+
+
 <!-- \renewcommand{\boldsymbol}[1]{\mathbf{#1}} -->
+
 <div id="title_def" class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
@@ -196,24 +220,24 @@ A curve is a generalization of a line, in that its curvature need not be zero.
 </div>
 </div>
 </div>
-<p><span class="LaTeX">$${\boldsymbol \gamma}:[a,b] \rightarrow {\mathop{\mathbb R}}^n, t \mapsto {\begin{pmatrix}  \gamma_1(t) \ \vdots \ \gamma_n(t) \end{pmatrix}}$$</span></p>
+<p><span class="math display">$$\boldsymbol \gamma:[a,b] \rightarrow \R^n, t \mapsto \begin{pmatrix}  \gamma_1(t) \\ \vdots \\ \gamma_n(t) \end{pmatrix}$$</span></p>
 <h2 id="properties">Properties</h2>
 <ul>
-<li><span class="LaTeX">$\mathcal C^0$</span>-Kurve: Positionsstetigkeit (geschlossene Kurve)</li>
-<li><span class="LaTeX">$\mathcal C^1$</span>-Kurve: Tangentialstetigkeit (stetig diffbar)</li>
-<li><span class="LaTeX">$\mathcal C^2$</span>-Kurve: Krümmungsstetigkeit (2 mal stetig diffbar)</li>
-<li>regulär, falls <span class="LaTeX">$\forall t \in [a,b]:\dot \gamma(t) \ne {\boldsymbol 0}$</span> (Keine Knicke)</li>
-<li>Singulär, falls <span class="LaTeX">$\dot \gamma(t)={\boldsymbol 0}$</span> (Knick)</li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mstyle mathvariant="script"><mi>𝒞</mi></mstyle><mn>0</mn></msup><annotation encoding="application/x-tex">\mathcal C^0</annotation></semantics></math>-Kurve: Positionsstetigkeit (geschlossene Kurve)</li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mstyle mathvariant="script"><mi>𝒞</mi></mstyle><mn>1</mn></msup><annotation encoding="application/x-tex">\mathcal C^1</annotation></semantics></math>-Kurve: Tangentialstetigkeit (stetig diffbar)</li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mstyle mathvariant="script"><mi>𝒞</mi></mstyle><mn>2</mn></msup><annotation encoding="application/x-tex">\mathcal C^2</annotation></semantics></math>-Kurve: Krümmungsstetigkeit (2 mal stetig diffbar)</li>
+<li>regulär, falls <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∀</mo><mi>t</mi><mo>∈</mo><mo stretchy="false" form="prefix">[</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false" form="postfix">]</mo><mo>:</mo><mover><mi>γ</mi><mo accent="true">̇</mo></mover><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>≠</mo><mstyle mathvariant="bold"><mn>0</mn></mstyle></mrow><annotation encoding="application/x-tex">\forall t \in [a,b]:\dot \gamma(t) \ne \boldsymbol 0</annotation></semantics></math> (Keine Knicke)</li>
+<li>Singulär, falls <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>γ</mi><mo accent="true">̇</mo></mover><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mstyle mathvariant="bold"><mn>0</mn></mstyle></mrow><annotation encoding="application/x-tex">\dot \gamma(t)=\boldsymbol 0</annotation></semantics></math> (Knick)</li>
 </ul>
 <h2 id="special-points">Special points</h2>
 <ul>
-<li>Doppel-punk, falls <span class="LaTeX">$\exists t_1,t_2:t_1 \ne t_2 \ \land \ \gamma(t_1)=\gamma(t_2)$</span></li>
-<li>Horizontaler Tangentenpunkt, falls <span class="LaTeX">$\dot \gamma_1(t) \ne 0 \ \land \ \dot \gamma_2(t)=0$</span></li>
-<li>Vertikaler Tangentenpunkt, falls <span class="LaTeX">$\dot \gamma_1(t) = 0 \ \land \ \dot \gamma_2(t) \ne 0$</span></li>
+<li>Doppel-punk, falls <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∃</mo><msub><mi>t</mi><mn>1</mn></msub><mo>,</mo><msub><mi>t</mi><mn>2</mn></msub><mo>:</mo><msub><mi>t</mi><mn>1</mn></msub><mo>≠</mo><msub><mi>t</mi><mn>2</mn></msub><mspace width="0.222em"></mspace><mo>∧</mo><mspace width="0.222em"></mspace><mi>γ</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>t</mi><mn>1</mn></msub><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>γ</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>t</mi><mn>2</mn></msub><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\exists t_1,t_2:t_1 \ne t_2 \ \land \ \gamma(t_1)=\gamma(t_2)</annotation></semantics></math></li>
+<li>Horizontaler Tangentenpunkt, falls <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mover><mi>γ</mi><mo accent="true">̇</mo></mover><mn>1</mn></msub><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>≠</mo><mn>0</mn><mspace width="0.222em"></mspace><mo>∧</mo><mspace width="0.222em"></mspace><msub><mover><mi>γ</mi><mo accent="true">̇</mo></mover><mn>2</mn></msub><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\dot \gamma_1(t) \ne 0 \ \land \ \dot \gamma_2(t)=0</annotation></semantics></math></li>
+<li>Vertikaler Tangentenpunkt, falls <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mover><mi>γ</mi><mo accent="true">̇</mo></mover><mn>1</mn></msub><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0</mn><mspace width="0.222em"></mspace><mo>∧</mo><mspace width="0.222em"></mspace><msub><mover><mi>γ</mi><mo accent="true">̇</mo></mover><mn>2</mn></msub><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>≠</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\dot \gamma_1(t) = 0 \ \land \ \dot \gamma_2(t) \ne 0</annotation></semantics></math></li>
 </ul>
 <h2 id="bogenlänge">Bogenlänge</h2>
-<p>Die Bogenlänge einer Kurve <span class="LaTeX">$L(\gamma)$</span> ist <span class="LaTeX">$$L(\gamma) = \int_{a}^{b} {\left\lVert{\dot \gamma(t)}\right\rVert} {\,\text{d}}t$$</span></p>
-<p>If <span class="LaTeX">$n = 2$</span> (2D): <span class="LaTeX">$L(\gamma) = \int_a^b \sqrt{\dot x^2 + \dot y^2}{\,\text{d}}t$</span></p>
+<p>Die Bogenlänge einer Kurve <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi><mo stretchy="false" form="prefix">(</mo><mi>γ</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">L(\gamma)</annotation></semantics></math> ist <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi><mo stretchy="false" form="prefix">(</mo><mi>γ</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><msubsup><mo>∫</mo><mi>a</mi><mi>b</mi></msubsup><mrow><mo stretchy="true" form="prefix">∥</mo><mover><mi>γ</mi><mo accent="true">̇</mo></mover><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="true" form="postfix">∥</mo></mrow><mspace width="0.167em"></mspace><mtext mathvariant="normal">d</mtext><mi>t</mi></mrow><annotation encoding="application/x-tex">L(\gamma) = \int_{a}^{b} \left\lVert{\dot \gamma(t)}\right\rVert \,\text{d}t</annotation></semantics></math></p>
+<p>If <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>=</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">n = 2</annotation></semantics></math> (2D): <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi><mo stretchy="false" form="prefix">(</mo><mi>γ</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><msubsup><mo>∫</mo><mi>a</mi><mi>b</mi></msubsup><msqrt><mrow><msup><mover><mi>x</mi><mo accent="true">̇</mo></mover><mn>2</mn></msup><mo>+</mo><msup><mover><mi>y</mi><mo accent="true">̇</mo></mover><mn>2</mn></msup></mrow></msqrt><mspace width="0.167em"></mspace><mtext mathvariant="normal">d</mtext><mi>t</mi></mrow><annotation encoding="application/x-tex">L(\gamma) = \int_a^b \sqrt{\dot x^2 + \dot y^2}\,\text{d}t</annotation></semantics></math></p>
 
 
     </main>

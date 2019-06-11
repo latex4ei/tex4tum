@@ -10,7 +10,7 @@
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="/convolution">
+    <link rel="canonical" href="http://localhost:4000/convolution">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -177,13 +177,37 @@
 
 </p>
 
+
 <!-- Basics -->
+
 <!--    -->
+
+
+
+
+
 <!-- \newcommand{\diff}{\mathop{}\!\mathrm{\vphantom( d}} -->
+
+
+
+
+
 <!-- SI Units -->
 <!--=============================================================== -->
+
+
+
+
+
+
+
+
+
 <!-- KaTeX Tweaks -->
+
+
 <!-- \renewcommand{\boldsymbol}[1]{\mathbf{#1}} -->
+
 <div id="title_def" class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
@@ -200,19 +224,19 @@ Corresponds to multiplication in the frequncy domain.
 <div class='card-body'>
 <p class='card-text text-center'>
 <div data-toggle="collapse" href="#eq_0">
-<p><span class="LaTeX">$$x(t) * h(t) = \int\limits_{-\infty}^{\infty} x(\tau) \cdot h(t-\tau) {\,\text{d}}\tau$$</span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>*</mo><mi>h</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><munderover><mo>∫</mo><mrow><mo>−</mo><mi>∞</mi></mrow><mo accent="false">∞</mo></munderover><mi>x</mi><mo stretchy="false" form="prefix">(</mo><mi>τ</mi><mo stretchy="false" form="postfix">)</mo><mo>⋅</mo><mi>h</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo>−</mo><mi>τ</mi><mo stretchy="false" form="postfix">)</mo><mspace width="0.167em"></mspace><mtext mathvariant="normal">d</mtext><mi>τ</mi></mrow><annotation encoding="application/x-tex">x(t) * h(t) = \int\limits_{-\infty}^{\infty} x(\tau) \cdot h(t-\tau) \,\text{d}\tau</annotation></semantics></math></p>
 </div>
 <div id="eq_0" class="legend collapse">
 <div class="card border-info w-75 mx-auto">
 <div class="p-1 small">
-<p>with signals <span class="LaTeX">$x(t)$</span>, <span class="LaTeX">$h(t)$</span>.</p>
+<p>with signals <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">x(t)</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>h</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">h(t)</annotation></semantics></math>.</p>
 </div>
 </div>
 </div>
 <p>
 </div>
 </div>
-<p><strong>Discrete:</strong> <span class="LaTeX">$$(f*g)[n] = \sum\limits_{k = -\infty}^{\infty} {f[k] g[n-k]}$$</span></p>
+<p><strong>Discrete:</strong> <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>f</mi><mo>*</mo><mi>g</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="prefix">[</mo><mi>n</mi><mo stretchy="false" form="postfix">]</mo><mo>=</mo><munderover><mo>∑</mo><mrow><mi>k</mi><mo>=</mo><mo>−</mo><mi>∞</mi></mrow><mo accent="false">∞</mo></munderover><mrow><mi>f</mi><mo stretchy="false" form="prefix">[</mo><mi>k</mi><mo stretchy="false" form="postfix">]</mo><mi>g</mi><mo stretchy="false" form="prefix">[</mo><mi>n</mi><mo>−</mo><mi>k</mi><mo stretchy="false" form="postfix">]</mo></mrow></mrow><annotation encoding="application/x-tex">(f*g)[n] = \sum\limits_{k = -\infty}^{\infty} {f[k] g[n-k]}</annotation></semantics></math></p>
 <!--<p> Filename="convolution.svg", path="/res/img/content-images/math/geometry/convolution.svg" </p>-->
 <figure class="figure">
 <img class="figure-img img-fluid" style="width: 25em;" src="/res/img/content-images/math/geometry/convolution.svg" alt="Comparison of convolution, cross-correlation, and auto-correlation. [From Wikimedia](https://de.wikipedia.org/wiki/Datei:Comparison_convolution_correlation_de.svg)"/>
@@ -224,16 +248,16 @@ Comparison of convolution, cross-correlation, and auto-correlation. <a href="htt
 <figure class="figure">
 <img class="figure-img img-fluid" style="width: 25em;" src="/res/img/content-images/math/geometry/convolution_rect_spiky.gif" alt="Convolution of $f(t) * g(t)$ showing $f(\tau)$ and $g(t - \tau)$"/>
 <figcaption class="figure-caption">
-Convolution of <span class="LaTeX">$f(t) * g(t)$</span> showing <span class="LaTeX">$f(\tau)$</span> and <span class="LaTeX">$g(t - \tau)$</span>
+Convolution of <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>*</mo><mi>g</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">f(t) * g(t)</annotation></semantics></math> showing <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mi>τ</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">f(\tau)</annotation></semantics></math> and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo>−</mo><mi>τ</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">g(t - \tau)</annotation></semantics></math>
 </figcaption>
 </figure>
 <h2 id="properties">Properties</h2>
 <ul>
-<li><p>Kommutativität: <span class="LaTeX">$f(t)*g(t) = g(t)*f(t)$</span></p></li>
-<li><p>Assoziativität: <span class="LaTeX">$f(t)*(g(t)*h(t)) = (f(t)*g(t))*h(t)$</span></p></li>
-<li><p>Distributivität: <span class="LaTeX">$f(t)*(g(t) + h(t)) = f(t)*g(t) + f(t)*h(t)$</span></p></li>
-<li><p>Faltung mit Dirac: <span class="LaTeX">$x(t)*\delta(t-b) = x(t-b)$</span> (Gleiches Signal verschoben)</p></li>
-<li><p>Kausalität: <span class="LaTeX">$h(t - \tau) = 0$</span> für <span class="LaTeX">$\tau \gt t$</span> </br> <span class="LaTeX">$h[n - l] = 0$</span> für <span class="LaTeX">$l \gt n$</span></p></li>
+<li><p>Kommutativität: <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>*</mo><mi>g</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>g</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>*</mo><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">f(t)*g(t) = g(t)*f(t)</annotation></semantics></math></p></li>
+<li><p>Assoziativität: <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>*</mo><mo stretchy="false" form="prefix">(</mo><mi>g</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>*</mo><mi>h</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>*</mo><mi>g</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">)</mo><mo>*</mo><mi>h</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">f(t)*(g(t)*h(t)) = (f(t)*g(t))*h(t)</annotation></semantics></math></p></li>
+<li><p>Distributivität: <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>*</mo><mo stretchy="false" form="prefix">(</mo><mi>g</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mi>h</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>*</mo><mi>g</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>*</mo><mi>h</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">f(t)*(g(t) + h(t)) = f(t)*g(t) + f(t)*h(t)</annotation></semantics></math></p></li>
+<li><p>Faltung mit Dirac: <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>*</mo><mi>δ</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo>−</mo><mi>b</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>x</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo>−</mo><mi>b</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">x(t)*\delta(t-b) = x(t-b)</annotation></semantics></math> (Gleiches Signal verschoben)</p></li>
+<li><p>Kausalität: <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>h</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo>−</mo><mi>τ</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">h(t - \tau) = 0</annotation></semantics></math> für <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>τ</mi><mo>&gt;</mo><mi>t</mi></mrow><annotation encoding="application/x-tex">\tau \gt t</annotation></semantics></math> </br> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>h</mi><mo stretchy="false" form="prefix">[</mo><mi>n</mi><mo>−</mo><mi>l</mi><mo stretchy="false" form="postfix">]</mo><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">h[n - l] = 0</annotation></semantics></math> für <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>l</mi><mo>&gt;</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">l \gt n</annotation></semantics></math></p></li>
 </ul>
 <h2 id="refrences">Refrences</h2>
 

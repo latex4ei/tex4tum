@@ -10,7 +10,7 @@
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="/vector">
+    <link rel="canonical" href="http://localhost:4000/vector">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -173,13 +173,37 @@
 
 </p>
 
+
 <!-- Basics -->
+
 <!--    -->
+
+
+
+
+
 <!-- \newcommand{\diff}{\mathop{}\!\mathrm{\vphantom( d}} -->
+
+
+
+
+
 <!-- SI Units -->
 <!--=============================================================== -->
+
+
+
+
+
+
+
+
+
 <!-- KaTeX Tweaks -->
+
+
 <!-- \renewcommand{\boldsymbol}[1]{\mathbf{#1}} -->
+
 <div id="title_def" class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
@@ -187,17 +211,17 @@
 Definition
 </h5>
 <p class="card-text">
-A vector space <span class="LaTeX">$(V,+,\cdot)$</span> over Körper <span class="LaTeX">$({\mathop{\mathbb K}},+,\cdot),\ {\boldsymbol v} \in {\mathop{\mathbb K}}^n$</span>
+A vector space <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>V</mi><mo>,</mo><mo>+</mo><mo>,</mo><mo>⋅</mo><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(V,+,\cdot)</annotation></semantics></math> over Körper <span class="math inline">$(\K,+,\cdot),\ \boldsymbol v \in \K^n$</span>
 </p>
 </div>
 </div>
 </div>
 <p><strong>Linear Unabhängig:</strong> Vektoren heißen linear unabhängig, wenn aus:</p>
-<p><span class="LaTeX">$\alpha_1 {\boldsymbol v}_1 + \alpha_2 {\boldsymbol v}_2 + \ldots + \alpha_n {\boldsymbol v}_n = {\boldsymbol 0}$</span> folgt, dass alle <span class="LaTeX">$\alpha_i = 0$</span></p>
-<p><strong>Basis</strong> <span class="LaTeX">${\boldsymbol{B}}=\{{\boldsymbol b}_1, {\boldsymbol b}_2, ...\}$</span>: <span class="LaTeX">$n$</span> Vektoren, linear unabhängig, erzeugen <span class="LaTeX">$V$</span></p>
-<p><strong>Betrag (Norm):</strong> <span class="LaTeX">${\left\lVert{{\boldsymbol a}}\right\rVert} = \sqrt{{\boldsymbol a} \cdot {\boldsymbol a}} = \sqrt{a_1^2+a_2^2+\ldots +a_n^2}$</span></p>
-<p><strong>Skalarprodukt:</strong> <span class="LaTeX">${\boldsymbol v} \cdot {\boldsymbol w} = {\boldsymbol v}^\top\!\! \cdot {\boldsymbol w} = \sum v_i w_i = {\left\lVert{{\boldsymbol a}}\right\rVert}{\left\lVert{{\boldsymbol b}}\right\rVert} \cos(\measuredangle {\boldsymbol a},{\boldsymbol b})$</span></p>
-<p><span class="LaTeX">$\left\langle{{\boldsymbol v}}{{\boldsymbol w}}\right\rangle_{{\boldsymbol{A}}} = {\boldsymbol v}^\top {\boldsymbol{A}} {\boldsymbol w}$</span> (quadr., symm., pos. definite Matrix <span class="LaTeX">${\boldsymbol{A}}$</span>)</p>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>α</mi><mn>1</mn></msub><msub><mstyle mathvariant="bold"><mi>𝐯</mi></mstyle><mn>1</mn></msub><mo>+</mo><msub><mi>α</mi><mn>2</mn></msub><msub><mstyle mathvariant="bold"><mi>𝐯</mi></mstyle><mn>2</mn></msub><mo>+</mo><mi>…</mi><mo>+</mo><msub><mi>α</mi><mi>n</mi></msub><msub><mstyle mathvariant="bold"><mi>𝐯</mi></mstyle><mi>n</mi></msub><mo>=</mo><mstyle mathvariant="bold"><mn>0</mn></mstyle></mrow><annotation encoding="application/x-tex">\alpha_1 \boldsymbol v_1 + \alpha_2 \boldsymbol v_2 + \ldots + \alpha_n \boldsymbol v_n = \boldsymbol 0</annotation></semantics></math> folgt, dass alle <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>α</mi><mi>i</mi></msub><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\alpha_i = 0</annotation></semantics></math></p>
+<p><strong>Basis</strong> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathvariant="bold"><mi>𝐁</mi></mstyle><mo>=</mo><mo stretchy="false" form="prefix">{</mo><msub><mstyle mathvariant="bold"><mi>𝐛</mi></mstyle><mn>1</mn></msub><mo>,</mo><msub><mstyle mathvariant="bold"><mi>𝐛</mi></mstyle><mn>2</mn></msub><mo>,</mo><mi>.</mi><mi>.</mi><mi>.</mi><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\boldsymbol{B}=\{\boldsymbol b_1, \boldsymbol b_2, ...\}</annotation></semantics></math>: <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math> Vektoren, linear unabhängig, erzeugen <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>V</mi><annotation encoding="application/x-tex">V</annotation></semantics></math></p>
+<p><strong>Betrag (Norm):</strong> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo stretchy="true" form="prefix">∥</mo><mstyle mathvariant="bold"><mi>𝐚</mi></mstyle><mo stretchy="true" form="postfix">∥</mo></mrow><mo>=</mo><msqrt><mrow><mstyle mathvariant="bold"><mi>𝐚</mi></mstyle><mo>⋅</mo><mstyle mathvariant="bold"><mi>𝐚</mi></mstyle></mrow></msqrt><mo>=</mo><msqrt><mrow><msubsup><mi>a</mi><mn>1</mn><mn>2</mn></msubsup><mo>+</mo><msubsup><mi>a</mi><mn>2</mn><mn>2</mn></msubsup><mo>+</mo><mi>…</mi><mo>+</mo><msubsup><mi>a</mi><mi>n</mi><mn>2</mn></msubsup></mrow></msqrt></mrow><annotation encoding="application/x-tex">\left\lVert{\boldsymbol a}\right\rVert = \sqrt{\boldsymbol a \cdot \boldsymbol a} = \sqrt{a_1^2+a_2^2+\ldots +a_n^2}</annotation></semantics></math></p>
+<p><strong>Skalarprodukt:</strong> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathvariant="bold"><mi>𝐯</mi></mstyle><mo>⋅</mo><mstyle mathvariant="bold"><mi>𝐰</mi></mstyle><mo>=</mo><msup><mstyle mathvariant="bold"><mi>𝐯</mi></mstyle><mi>⊤</mi></msup><mspace width="-0.167em"></mspace><mspace width="-0.167em"></mspace><mo>⋅</mo><mstyle mathvariant="bold"><mi>𝐰</mi></mstyle><mo>=</mo><mo>∑</mo><msub><mi>v</mi><mi>i</mi></msub><msub><mi>w</mi><mi>i</mi></msub><mo>=</mo><mrow><mo stretchy="true" form="prefix">∥</mo><mstyle mathvariant="bold"><mi>𝐚</mi></mstyle><mo stretchy="true" form="postfix">∥</mo></mrow><mrow><mo stretchy="true" form="prefix">∥</mo><mstyle mathvariant="bold"><mi>𝐛</mi></mstyle><mo stretchy="true" form="postfix">∥</mo></mrow><mo>cos</mo><mo stretchy="false" form="prefix">(</mo><mi>∡</mi><mstyle mathvariant="bold"><mi>𝐚</mi></mstyle><mo>,</mo><mstyle mathvariant="bold"><mi>𝐛</mi></mstyle><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\boldsymbol v \cdot \boldsymbol w = \boldsymbol v^\top\!\! \cdot \boldsymbol w = \sum v_i w_i = \left\lVert{\boldsymbol a}\right\rVert\left\lVert{\boldsymbol b}\right\rVert \cos(\measuredangle \boldsymbol a,\boldsymbol b)</annotation></semantics></math></p>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mrow><mo stretchy="true" form="prefix">⟨</mo><mstyle mathvariant="bold"><mi>𝐯</mi></mstyle><mstyle mathvariant="bold"><mi>𝐰</mi></mstyle><mo stretchy="true" form="postfix">⟩</mo></mrow><mstyle mathvariant="bold"><mi>𝐀</mi></mstyle></msub><mo>=</mo><msup><mstyle mathvariant="bold"><mi>𝐯</mi></mstyle><mi>⊤</mi></msup><mstyle mathvariant="bold"><mi>𝐀</mi></mstyle><mstyle mathvariant="bold"><mi>𝐰</mi></mstyle></mrow><annotation encoding="application/x-tex">\left\langle{\boldsymbol v}{\boldsymbol w}\right\rangle_{\boldsymbol{A}} = \boldsymbol v^\top \boldsymbol{A} \boldsymbol w</annotation></semantics></math> (quadr., symm., pos. definite Matrix <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="bold"><mi>𝐀</mi></mstyle><annotation encoding="application/x-tex">\boldsymbol{A}</annotation></semantics></math>)</p>
 
 
     </main>

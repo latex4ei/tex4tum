@@ -10,7 +10,7 @@
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="/rsa">
+    <link rel="canonical" href="http://localhost:4000/rsa">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -166,20 +166,44 @@
 
 <h1><a data-toggle="collapse" href="#title_def" aria-expanded="false" aria-controls="title_def">
   
-  <abbr title="Rivest, Shamir and Adleman" >RSA</abbr>
+  RSA
 </a><a class="float-right small" style="font-size: small" href="https://github.com/latex4ei/tex4tum/edit/master/_article/informatics/algorithm/rsa.md">[edit]</a></h1>
 
 <p>
 
 </p>
 
+
 <!-- Basics -->
+
 <!--    -->
+
+
+
+
+
 <!-- \newcommand{\diff}{\mathop{}\!\mathrm{\vphantom( d}} -->
+
+
+
+
+
 <!-- SI Units -->
 <!--=============================================================== -->
+
+
+
+
+
+
+
+
+
 <!-- KaTeX Tweaks -->
+
+
 <!-- \renewcommand{\boldsymbol}[1]{\mathbf{#1}} -->
+
 <div id="title_def" class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
@@ -187,50 +211,50 @@
 Definition
 </h5>
 <p class="card-text">
-<abbr title="Rivest, Shamir and Adleman" >RSA</abbr> is a public-key cryptosystems and is used for secure data transmission.
+RSA is a public-key cryptosystems and is used for secure data transmission.
 </p>
 </div>
 </div>
 </div>
-<p>The <abbr title="Rivest, Shamir and Adleman" >RSA</abbr> algorithm involves four steps: key generation, key distribution, encryption, and decryption.</p>
+<p>The RSA algorithm involves four steps: key generation, key distribution, encryption, and decryption.</p>
 <p>Key sizes: 1024 b, 2048 b, 4096 b</p>
 <h2 id="principle">Principle</h2>
 <div data-toggle="collapse" href="#eq_0">
-<p><span class="LaTeX">$${\displaystyle (m^{e})^{d}\equiv m{\pmod {n}}}$$</span></p>
+<p><span class="math display">$${\displaystyle (m^{e})^{d}\equiv m{\pmod {n}}}$$</span></p>
 </div>
 <div id="eq_0" class="legend collapse">
 <div class="card border-info w-75 mx-auto">
 <div class="p-1 small">
-<p>with the message <span class="LaTeX">$m$</span>, private key <span class="LaTeX">$d$</span>, public key <span class="LaTeX">$e$</span>.</p>
+<p>with the message <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>m</mi><annotation encoding="application/x-tex">m</annotation></semantics></math>, private key <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>d</mi><annotation encoding="application/x-tex">d</annotation></semantics></math>, public key <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>e</mi><annotation encoding="application/x-tex">e</annotation></semantics></math>.</p>
 </div>
 </div>
 </div>
 <h3 id="key-generation">Key generation</h3>
 <ol type="1">
-<li>Choose two distinct prime numbers <span class="LaTeX">$p$</span> and <span class="LaTeX">$q$</span> with <span class="LaTeX">$n = pq$</span>.</li>
-<li>choose random private key <span class="LaTeX">$d$</span> with <span class="LaTeX">$1 \lt d \lt n-1$</span></li>
-<li>find public key <span class="LaTeX">$e$</span> with <span class="LaTeX">$de \equiv 1 (\mod (p-1)(q-1))$</span></li>
+<li>Choose two distinct prime numbers <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>p</mi><annotation encoding="application/x-tex">p</annotation></semantics></math> and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>q</mi><annotation encoding="application/x-tex">q</annotation></semantics></math> with <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>=</mo><mi>p</mi><mi>q</mi></mrow><annotation encoding="application/x-tex">n = pq</annotation></semantics></math>.</li>
+<li>choose random private key <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>d</mi><annotation encoding="application/x-tex">d</annotation></semantics></math> with <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>&lt;</mo><mi>d</mi><mo>&lt;</mo><mi>n</mi><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">1 \lt d \lt n-1</annotation></semantics></math></li>
+<li>find public key <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>e</mi><annotation encoding="application/x-tex">e</annotation></semantics></math> with <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mi>e</mi><mo>≡</mo><mn>1</mn><mo stretchy="false" form="prefix">(</mo><mo>mod</mo><mo stretchy="false" form="prefix">(</mo><mi>p</mi><mo>−</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="prefix">(</mo><mi>q</mi><mo>−</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">de \equiv 1 (\mod (p-1)(q-1))</annotation></semantics></math></li>
 </ol>
-<h5 class="clp_title text-success" data-toggle="collapse" href="#example8">
+<h5 class="clp_title text-success" data-toggle="collapse" href="#example7">
 <i class='fa fa-chart-bar'></i> Example
 </h5>
-<div id='example8' class='example collapse'>
+<div id='example7' class='example collapse'>
 <div class='card border-success mb-1'>
 <div class='card-body'>
 <p class='card-text'>
-<p>Here is an example of <abbr title="Rivest, Shamir and Adleman" >RSA</abbr> encryption and decryption. The parameters used here are artificially small.</p>
-<p><strong>Generate Keypair</strong> <span class="LaTeX">$(d, e)$</span></p>
+<p>Here is an example of RSA encryption and decryption. The parameters used here are artificially small.</p>
+<p><strong>Generate Keypair</strong> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>d</mi><mo>,</mo><mi>e</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(d, e)</annotation></semantics></math></p>
 <ol type="1">
-<li>Choose two distinct prime numbers, such as</br> <span class="LaTeX">$p=61$</span> and <span class="LaTeX">$q=53$</span></li>
-<li>Compute <span class="LaTeX">$n = pq$</span> giving</br> <span class="LaTeX">$n=61\times 53=3233$</span></li>
-<li>Compute the Carmichael's totient function of the product as <span class="LaTeX">$\lambda(n) = lcm(p -1, q - 1)$</span> giving</br> <span class="LaTeX">$\lambda (3233)={\mathop{lcm}} (60,52)=780$</span></li>
-<li>Choose any number <span class="LaTeX">$1 \lt e \lt 780$</span> that is coprime to <span class="LaTeX">$780$</span>. Choosing a prime number for <span class="LaTeX">$e$</span> leaves us only to check that <span class="LaTeX">$e$</span> is not a divisor of 780.</br> Let <span class="LaTeX">$e=17$</span></li>
-<li>Compute d, the modular multiplicative inverse of <span class="LaTeX">$e \mod \lambda(n)$</span> yielding, <span class="LaTeX">$d=413$</span></br> <span class="LaTeX">$d\times e=1{\mod {\lambda }}(n)$</span></br> <span class="LaTeX">$413\times 17=1{\mod {7}}80$</span></li>
+<li>Choose two distinct prime numbers, such as</br> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo>=</mo><mn>61</mn></mrow><annotation encoding="application/x-tex">p=61</annotation></semantics></math> and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>q</mi><mo>=</mo><mn>53</mn></mrow><annotation encoding="application/x-tex">q=53</annotation></semantics></math></li>
+<li>Compute <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>=</mo><mi>p</mi><mi>q</mi></mrow><annotation encoding="application/x-tex">n = pq</annotation></semantics></math> giving</br> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>=</mo><mn>61</mn><mo>×</mo><mn>53</mn><mo>=</mo><mn>3233</mn></mrow><annotation encoding="application/x-tex">n=61\times 53=3233</annotation></semantics></math></li>
+<li>Compute the Carmichael’s totient function of the product as <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>λ</mi><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>l</mi><mi>c</mi><mi>m</mi><mo stretchy="false" form="prefix">(</mo><mi>p</mi><mo>−</mo><mn>1</mn><mo>,</mo><mi>q</mi><mo>−</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\lambda(n) = lcm(p -1, q - 1)</annotation></semantics></math> giving</br> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>λ</mi><mo stretchy="false" form="prefix">(</mo><mn>3233</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mo>lcm</mo><mo stretchy="false" form="prefix">(</mo><mn>60</mn><mo>,</mo><mn>52</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>780</mn></mrow><annotation encoding="application/x-tex">\lambda (3233)=\mathop{lcm} (60,52)=780</annotation></semantics></math></li>
+<li>Choose any number <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>&lt;</mo><mi>e</mi><mo>&lt;</mo><mn>780</mn></mrow><annotation encoding="application/x-tex">1 \lt e \lt 780</annotation></semantics></math> that is coprime to <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>780</mn><annotation encoding="application/x-tex">780</annotation></semantics></math>. Choosing a prime number for <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>e</mi><annotation encoding="application/x-tex">e</annotation></semantics></math> leaves us only to check that <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>e</mi><annotation encoding="application/x-tex">e</annotation></semantics></math> is not a divisor of 780.</br> Let <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>e</mi><mo>=</mo><mn>17</mn></mrow><annotation encoding="application/x-tex">e=17</annotation></semantics></math></li>
+<li>Compute d, the modular multiplicative inverse of <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>e</mi><mo>mod</mo><mi>λ</mi><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">e \mod \lambda(n)</annotation></semantics></math> yielding, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mo>=</mo><mn>413</mn></mrow><annotation encoding="application/x-tex">d=413</annotation></semantics></math></br> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mo>×</mo><mi>e</mi><mo>=</mo><mn>1</mn><mrow><mo>mod</mo><mi>λ</mi></mrow><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">d\times e=1{\mod {\lambda }}(n)</annotation></semantics></math></br> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>413</mn><mo>×</mo><mn>17</mn><mo>=</mo><mn>1</mn><mrow><mo>mod</mo><mn>7</mn></mrow><mn>80</mn></mrow><annotation encoding="application/x-tex">413\times 17=1{\mod {7}}80</annotation></semantics></math></li>
 </ol>
-<p>The public key is <span class="LaTeX">$(n = 3233, e = 17)$</span>. Encryption function is <span class="LaTeX">$c(m)=m^{17}{\mod {3}}233$</span>.</p>
-<p>The private key is <span class="LaTeX">$(n = 3233, d = 413)$</span>. Decryption function is <span class="LaTeX">$m(c)=c^{413}{\mod {3}}233$</span>.</p>
-<p><strong>Encrypt message <span class="LaTeX">$m = 65$</span>:</strong></br> <span class="LaTeX">$c=65^{17}{\mod {3}}233=2790$</span></p>
-<strong>Decrypt cipher <span class="LaTeX">$c = 2790$</span>:</strong></br> <span class="LaTeX">$m=2790^{413}{\mod {3}}233=65$</span>
+<p>The public key is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo>=</mo><mn>3233</mn><mo>,</mo><mi>e</mi><mo>=</mo><mn>17</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(n = 3233, e = 17)</annotation></semantics></math>. Encryption function is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi><mo stretchy="false" form="prefix">(</mo><mi>m</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><msup><mi>m</mi><mn>17</mn></msup><mrow><mo>mod</mo><mn>3</mn></mrow><mn>233</mn></mrow><annotation encoding="application/x-tex">c(m)=m^{17}{\mod {3}}233</annotation></semantics></math>.</p>
+<p>The private key is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo>=</mo><mn>3233</mn><mo>,</mo><mi>d</mi><mo>=</mo><mn>413</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(n = 3233, d = 413)</annotation></semantics></math>. Decryption function is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo stretchy="false" form="prefix">(</mo><mi>c</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><msup><mi>c</mi><mn>413</mn></msup><mrow><mo>mod</mo><mn>3</mn></mrow><mn>233</mn></mrow><annotation encoding="application/x-tex">m(c)=c^{413}{\mod {3}}233</annotation></semantics></math>.</p>
+<p><strong>Encrypt message <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>=</mo><mn>65</mn></mrow><annotation encoding="application/x-tex">m = 65</annotation></semantics></math>:</strong></br> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi><mo>=</mo><msup><mn>65</mn><mn>17</mn></msup><mrow><mo>mod</mo><mn>3</mn></mrow><mn>233</mn><mo>=</mo><mn>2790</mn></mrow><annotation encoding="application/x-tex">c=65^{17}{\mod {3}}233=2790</annotation></semantics></math></p>
+<strong>Decrypt cipher <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi><mo>=</mo><mn>2790</mn></mrow><annotation encoding="application/x-tex">c = 2790</annotation></semantics></math>:</strong></br> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>=</mo><msup><mn>2790</mn><mn>413</mn></msup><mrow><mo>mod</mo><mn>3</mn></mrow><mn>233</mn><mo>=</mo><mn>65</mn></mrow><annotation encoding="application/x-tex">m=2790^{413}{\mod {3}}233=65</annotation></semantics></math>
 <p>
 </div>
 </div>
@@ -239,15 +263,15 @@ Definition
 <ul>
 <li><p>key-only attack: the attacker is only given the public verification key</p></li>
 <li><p>known message attack: the attacker is given valid signatures for a variety of messages known by the attacker but not chosen by the attacker</p></li>
-<li><p>adaptive chosen message attack: the attacker first learns signatures on arbitrary messages of the attacker's choice</p></li>
+<li><p>adaptive chosen message attack: the attacker first learns signatures on arbitrary messages of the attacker’s choice</p></li>
 </ul>
 <h2 id="homomorphic-multiplication">homomorphic multiplication</h2>
-<p><abbr title="Rivest, Shamir and Adleman" >RSA</abbr> is multiplicatively homomorphic. That means you can exchange the order of operations without affecting the result. The product of the encryption of two messages is equal to the encryption of the product of the messages.</p>
-<p><span class="LaTeX">$$E(x)E(y) \equiv x^ey^e \equiv (xy)^e \equiv E(xy) (\pmod n)$$</span></p>
+<p>RSA is multiplicatively homomorphic. That means you can exchange the order of operations without affecting the result. The product of the encryption of two messages is equal to the encryption of the product of the messages.</p>
+<p><span class="math display">$$E(x)E(y) \equiv x^ey^e \equiv (xy)^e \equiv E(xy) (\pmod n)$$</span></p>
 <p>Thus, you can perform calculations on encrypted data, without knowing the data, which is used in zero-knowledge proofs.</p>
 <h2 id="references">References</h2>
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/RSA_(cryptosystem)">Wikipedia: <abbr title="Rivest, Shamir and Adleman" >RSA</abbr></a></li>
+<li><a href="https://en.wikipedia.org/wiki/RSA_(cryptosystem)">Wikipedia: RSA</a></li>
 </ul>
 
 

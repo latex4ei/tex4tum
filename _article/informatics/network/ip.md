@@ -1,6 +1,6 @@
 ---
 title: Internet Protocol
-tags: address, IPv4, IPv6
+tags: address IPv4 IPv6
 ---
 
 The Internet Protocol (IP) is the basic communication protocol in the Internet layer.

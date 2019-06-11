@@ -1,6 +1,6 @@
 ---
 title: Security
-tags: authentication, encryption, integrity
+tags: authentication encryption integrity
 ---
 
 

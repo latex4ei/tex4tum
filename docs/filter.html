@@ -10,7 +10,7 @@
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="/filter">
+    <link rel="canonical" href="http://localhost:4000/filter">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -181,13 +181,37 @@
 
 </p>
 
+
 <!-- Basics -->
+
 <!--    -->
+
+
+
+
+
 <!-- \newcommand{\diff}{\mathop{}\!\mathrm{\vphantom( d}} -->
+
+
+
+
+
 <!-- SI Units -->
 <!--=============================================================== -->
+
+
+
+
+
+
+
+
+
 <!-- KaTeX Tweaks -->
+
+
 <!-- \renewcommand{\boldsymbol}[1]{\mathbf{#1}} -->
+
 <div id="title_def" class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
@@ -202,12 +226,12 @@ The order of a filter is the amount of previous values taken into account to cal
 </div>
 <h2 id="fir-filter">FIR Filter</h2>
 <p>A FIR filter has a finite impulse response and its output only depends previous inputs.</p>
-<p><span class="LaTeX">$y[n] = \sum\limits_{i = 0}^P \alpha_i y[n - i]$</span></p>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi><mo stretchy="false" form="prefix">[</mo><mi>n</mi><mo stretchy="false" form="postfix">]</mo><mo>=</mo><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>0</mn></mrow><mi>P</mi></munderover><msub><mi>α</mi><mi>i</mi></msub><mi>y</mi><mo stretchy="false" form="prefix">[</mo><mi>n</mi><mo>−</mo><mi>i</mi><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">y[n] = \sum\limits_{i = 0}^P \alpha_i y[n - i]</annotation></semantics></math></p>
 <h2 id="iir-filter">IIR Filter</h2>
 <p>The output of an IIR filter depends on previous input values <strong>and</strong> previous output values</p>
-<p>For example, an analog RC low pass filter is an IIR filter because its impulse response is of the form <span class="LaTeX">$e^{-t}$</span> and therfore not zero for and infinite time.</p>
-<p><span class="LaTeX">$\sum\limits_{j = 0}^Q \beta_j y[n - j] = \sum\limits_{i = 0}^P \alpha_i y[n - i]$</span></p>
-<p><span class="LaTeX">$\sum\limits_{j = 0}^Q \beta_j y[n - j] = \sum\limits_{i = 0}^P \alpha_i y[n - i]$</span></p>
+<p>For example, an analog RC low pass filter is an IIR filter because its impulse response is of the form <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>e</mi><mrow><mo>−</mo><mi>t</mi></mrow></msup><annotation encoding="application/x-tex">e^{-t}</annotation></semantics></math> and therfore not zero for and infinite time.</p>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><munderover><mo>∑</mo><mrow><mi>j</mi><mo>=</mo><mn>0</mn></mrow><mi>Q</mi></munderover><msub><mi>β</mi><mi>j</mi></msub><mi>y</mi><mo stretchy="false" form="prefix">[</mo><mi>n</mi><mo>−</mo><mi>j</mi><mo stretchy="false" form="postfix">]</mo><mo>=</mo><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>0</mn></mrow><mi>P</mi></munderover><msub><mi>α</mi><mi>i</mi></msub><mi>y</mi><mo stretchy="false" form="prefix">[</mo><mi>n</mi><mo>−</mo><mi>i</mi><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">\sum\limits_{j = 0}^Q \beta_j y[n - j] = \sum\limits_{i = 0}^P \alpha_i y[n - i]</annotation></semantics></math></p>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><munderover><mo>∑</mo><mrow><mi>j</mi><mo>=</mo><mn>0</mn></mrow><mi>Q</mi></munderover><msub><mi>β</mi><mi>j</mi></msub><mi>y</mi><mo stretchy="false" form="prefix">[</mo><mi>n</mi><mo>−</mo><mi>j</mi><mo stretchy="false" form="postfix">]</mo><mo>=</mo><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>0</mn></mrow><mi>P</mi></munderover><msub><mi>α</mi><mi>i</mi></msub><mi>y</mi><mo stretchy="false" form="prefix">[</mo><mi>n</mi><mo>−</mo><mi>i</mi><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">\sum\limits_{j = 0}^Q \beta_j y[n - j] = \sum\limits_{i = 0}^P \alpha_i y[n - i]</annotation></semantics></math></p>
 
 
     </main>

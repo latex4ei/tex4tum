@@ -10,7 +10,7 @@
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="/optic">
+    <link rel="canonical" href="http://localhost:4000/optic">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -171,27 +171,51 @@
 
 </p>
 
+
 <!-- Basics -->
+
 <!--    -->
+
+
+
+
+
 <!-- \newcommand{\diff}{\mathop{}\!\mathrm{\vphantom( d}} -->
+
+
+
+
+
 <!-- SI Units -->
 <!--=============================================================== -->
+
+
+
+
+
+
+
+
+
 <!-- KaTeX Tweaks -->
+
+
 <!-- \renewcommand{\boldsymbol}[1]{\mathbf{#1}} -->
+
 <svg onload="svgloaded()" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="100mm" width="100mm" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 354.33073 354.3307" xmlns:dc="http://purl.org/dc/elements/1.1/">
 <defs> <marker id="Arrow1Sstart" refY="0.0" refX="0.0" style="overflow:visible" orient="auto"> <path style="stroke:#000;stroke-width:1pt;fill-rule:evenodd" transform="scale(.2) translate(6)" d="m0 0l5-5-17.5 5 17.5 5-5-5z"/> </marker> <marker id="a" refY="0.0" refX="0.0" style="overflow:visible" orient="auto"> <path style="stroke-linejoin:round;stroke:#000;stroke-width:.625;fill-rule:evenodd" transform="scale(.6) rotate(180) translate(0)" d="m8.7186 4.0337l-10.926-4.0177 10.926-4.0177c-1.7455 2.3721-1.7355 5.6174 0 8.0354z"/> </marker> <marker id="Arrow2Mend" refY="0.0" refX="0.0" style="overflow:visible" orient="auto"> <path style="stroke-linejoin:round;fill-rule:evenodd;stroke:#025;stroke-width:.625;fill:#025" transform="scale(.6) rotate(180) translate(0)" d="m8.7186 4.0337l-10.926-4.0177 10.926-4.0177c-1.7455 2.3721-1.7355 5.6174 0 8.0354z"/> </marker> </defs> <rect style="fill:#82d4ff" height="131.85" width="298.74" y="222.48" x="-.0000026296"/> <rect id="anchor" y="220.66" width="1.7967" x="141.72" height="1.7551"/> <path id="ray" d="m141.96 218v-75.36-75.355" style="stroke:#000;stroke-width:8.7057;marker-mid:url(#Arrow1Sstart);fill:none" onmousedown="rotateLine(this.id)" ontouchstart="rotateLine(this.id)"/> <path id="pass" style="stroke:#052;stroke-width:4.2762;marker-end:url(#a);fill:none" onmousedown="rotateLine(this.id)" d="m141.73 217.73v-145.46"/> <text id="n1_val" style="font-size:24px" space="preserve" onclick="askValue(this.id)" y="209.86768" x="245.82343">1.2</text> <text id="n2_val" style="font-size:24px" space="preserve" onclick="askValue(this.id)" y="251.89607" x="244.11113">1.5</text> <text id="alpha" style="font-size:24px" space="preserve" onclick="askValue(this.id)" y="85.252937" x="3.4076719">30</text> <path id="frac" d="m141.93 218.15v-127.92" style="stroke-dasharray:4.0102, 8.0204;stroke:#025;stroke-width:4.0102;marker-end:url(#Arrow2Mend);fill:none" onmousedown="rotateLine(this.id)"/>
 </svg>
 <h2 id="reflection">Reflection</h2>
-<p>Material: <span class="LaTeX">$n_1 \lt n_2$</span></p>
+<p>Material: <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>n</mi><mn>1</mn></msub><mo>&lt;</mo><msub><mi>n</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">n_1 \lt n_2</annotation></semantics></math></p>
 <table>
 <tbody>
 <tr class="odd">
 <td style="text-align: left;"><strong>Reflexion:</strong></td>
-<td><span class="LaTeX">$\alpha_1 = \alpha_2$</span></td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>α</mi><mn>1</mn></msub><mo>=</mo><msub><mi>α</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">\alpha_1 = \alpha_2</annotation></semantics></math></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><strong>Fraction:</strong></td>
-<td><span class="LaTeX">$\frac{\sin(\alpha)}{\sin(\beta)}=\frac{n_2}{n_1}=\frac{c_1}{c_2}=\frac{\lambda_1}{\lambda_2}$</span></td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mo>sin</mo><mo stretchy="false" form="prefix">(</mo><mi>α</mi><mo stretchy="false" form="postfix">)</mo></mrow><mrow><mo>sin</mo><mo stretchy="false" form="prefix">(</mo><mi>β</mi><mo stretchy="false" form="postfix">)</mo></mrow></mfrac><mo>=</mo><mfrac><msub><mi>n</mi><mn>2</mn></msub><msub><mi>n</mi><mn>1</mn></msub></mfrac><mo>=</mo><mfrac><msub><mi>c</mi><mn>1</mn></msub><msub><mi>c</mi><mn>2</mn></msub></mfrac><mo>=</mo><mfrac><msub><mi>λ</mi><mn>1</mn></msub><msub><mi>λ</mi><mn>2</mn></msub></mfrac></mrow><annotation encoding="application/x-tex">\frac{\sin(\alpha)}{\sin(\beta)}=\frac{n_2}{n_1}=\frac{c_1}{c_2}=\frac{\lambda_1}{\lambda_2}</annotation></semantics></math></td>
 </tr>
 </tbody>
 </table>

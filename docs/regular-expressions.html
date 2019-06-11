@@ -10,7 +10,7 @@
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="/regular-expressions">
+    <link rel="canonical" href="http://localhost:4000/regular-expressions">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -173,13 +173,37 @@
 
 </p>
 
+
 <!-- Basics -->
+
 <!--    -->
+
+
+
+
+
 <!-- \newcommand{\diff}{\mathop{}\!\mathrm{\vphantom( d}} -->
+
+
+
+
+
 <!-- SI Units -->
 <!--=============================================================== -->
+
+
+
+
+
+
+
+
+
 <!-- KaTeX Tweaks -->
+
+
 <!-- \renewcommand{\boldsymbol}[1]{\mathbf{#1}} -->
+
 <div id="title_def" class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
@@ -225,11 +249,11 @@ A regular expression is a character sequence that specifies a pattern of a strin
 <td>Not word boundary</td>
 </tr>
 <tr class="odd">
-<td><code><code>\&lt;<lt;</code></td>
+<td><code>\&lt;</code></td>
 <td>Start of word</td>
 </tr>
 <tr class="even">
-<td><code><code>\&gt;<gt;</code></td>
+<td><code>\&gt;</code></td>
 <td>End of word</td>
 </tr>
 </tbody>
@@ -378,10 +402,10 @@ A regular expression is a character sequence that specifies a pattern of a strin
 </tr>
 </tbody>
 </table>
-<h5 class="clp_title text-success" data-toggle="collapse" href="#example13">
+<h5 class="clp_title text-success" data-toggle="collapse" href="#example12">
 <i class='fa fa-chart-bar'></i> Examples
 </h5>
-<div id='example13' class='example collapse'>
+<div id='example12' class='example collapse'>
 <div class='card border-success mb-1'>
 <div class='card-body'>
 <p class='card-text'>
@@ -416,9 +440,7 @@ A regular expression is a character sequence that specifies a pattern of a strin
 </div>
 </div>
 <h2 id="applet">Applet</h2>
-<textarea id="search-space" cols="35" rows="4" placeholder="Paste your text here.">
-This is a text (a short one) to demonstrate a RegEx for inner paranthesis.
-</textarea>
+<textarea id="search-space" cols="35" rows="4" placeholder="Paste your text here.">This is a text (a short one) to demonstrate a RegEx for inner paranthesis.</textarea>
 <p>Your RegEx: <input id="regex-input" oninput="applyRegex(this)" placeholder="RegEx, e.g. \d\s." value="\([^)]*\)"></p>
 <p>Found Matches: <span id="regex-result"></span></p>
 <script type="text/javascript">

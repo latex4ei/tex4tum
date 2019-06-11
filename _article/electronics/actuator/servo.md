@@ -1,6 +1,6 @@
 ---
 title: Servo Motor
-tags: motor, pwm
+tags: motor pwm
 ---
 A Servo Motor is a cheap rotary actuator used for radio control and small-scale robotics.
 
@@ -23,7 +23,7 @@ The angle of the servo is determined by the width of the PWM signal that is appl
 Most servos expect to see a pulse every 20 ms. The angle is calculated as the fraction of the pulse width
 
   $$pw = \SI{1.0}{ms} + \SI{1.0}{ms} \cdot \left( \frac{\alpha}{\alpha_{\text{max}}}\right)$$
-  with the pulsewidth $pw$, the cuuent angle $\alpha$ .
+  with the pulsewidth $pw$, the current angle $\alpha$ .
 
 For most RC servos the exact refresh rate is irrelevant as long as it is in a range of 40 Hz to 200 Hz.
 

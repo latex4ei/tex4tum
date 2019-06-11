@@ -10,7 +10,7 @@
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="/css">
+    <link rel="canonical" href="http://localhost:4000/css">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -166,20 +166,44 @@
 
 <h1><a data-toggle="collapse" href="#title_def" aria-expanded="false" aria-controls="title_def">
   
-  Cascading Style Sheets (<abbr title="Cascading Style Sheets" >CSS</abbr>)
+  Cascading Style Sheets (CSS)
 </a><a class="float-right small" style="font-size: small" href="https://github.com/latex4ei/tex4tum/edit/master/_article/informatics/language/css.md">[edit]</a></h1>
 
 <p>
 
 </p>
 
+
 <!-- Basics -->
+
 <!--    -->
+
+
+
+
+
 <!-- \newcommand{\diff}{\mathop{}\!\mathrm{\vphantom( d}} -->
+
+
+
+
+
 <!-- SI Units -->
 <!--=============================================================== -->
+
+
+
+
+
+
+
+
+
 <!-- KaTeX Tweaks -->
+
+
 <!-- \renewcommand{\boldsymbol}[1]{\mathbf{#1}} -->
+
 <div id="title_def" class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
@@ -187,30 +211,30 @@
 Definition
 </h5>
 <p class="card-text">
-Cascading Style Sheets (<abbr title="Cascading Style Sheets" >CSS</abbr>) is a style sheet language used for describing the presentation of a document written in a markup language like <abbr title="Hypertext Markup Language" >HTML</abbr>.
+Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language like HTML.
 </p>
 </div>
 </div>
 </div>
 <p>Syntax: <code>SELECTOR { PROPERTY: VALUE; }</code></p>
-<h5 class="clp_title text-success" data-toggle="collapse" href="#example11">
-<i class='fa fa-chart-bar'></i> Example <abbr title="Cascading Style Sheets" >CSS</abbr>
+<h5 class="clp_title text-success" data-toggle="collapse" href="#example10">
+<i class='fa fa-chart-bar'></i> Example CSS
 </h5>
-<div id='example11' class='example collapse'>
+<div id='example10' class='example collapse'>
 <div class='card border-success mb-1'>
 <div class='card-body'>
 <p class='card-text'>
-<div class="sourceCode"><pre class="sourceCode css"><code class="sourceCode css">html { <span class="kw">font-family</span>: <span class="dv">sans-serif</span>; }
-
-body { 
-    <span class="kw">margin</span>: <span class="dv">0</span>; 
-    <span class="kw">padding</span>: <span class="dv">1rem</span> <span class="dv">0.5rem</span> <span class="dv">0</span> <span class="dv">0.5rem</span>;  <span class="co">/* t, r, b, l */</span>
-}
-
-<span class="fu">.container</span>{ 
-    <span class="kw">margin</span>: <span class="dv">auto</span>; 
-    <span class="kw">max-width</span>: <span class="dv">960px</span>; 
-}</code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode css"><code class="sourceCode css"><a class="sourceLine" id="cb1-1" title="1">html { <span class="kw">font-family</span>: <span class="dv">sans-serif</span><span class="op">;</span> }</a>
+<a class="sourceLine" id="cb1-2" title="2"></a>
+<a class="sourceLine" id="cb1-3" title="3">body { </a>
+<a class="sourceLine" id="cb1-4" title="4">    <span class="kw">margin</span>: <span class="dv">0</span><span class="op">;</span> </a>
+<a class="sourceLine" id="cb1-5" title="5">    <span class="kw">padding</span>: <span class="dv">1</span><span class="dt">rem</span> <span class="dv">0.5</span><span class="dt">rem</span> <span class="dv">0</span> <span class="dv">0.5</span><span class="dt">rem</span><span class="op">;</span>  <span class="co">/* t, r, b, l */</span></a>
+<a class="sourceLine" id="cb1-6" title="6">}</a>
+<a class="sourceLine" id="cb1-7" title="7"></a>
+<a class="sourceLine" id="cb1-8" title="8"><span class="fu">.container</span>{ </a>
+<a class="sourceLine" id="cb1-9" title="9">    <span class="kw">margin</span>: <span class="bu">auto</span><span class="op">;</span> </a>
+<a class="sourceLine" id="cb1-10" title="10">    <span class="kw">max-width</span>: <span class="dv">960</span><span class="dt">px</span><span class="op">;</span> </a>
+<a class="sourceLine" id="cb1-11" title="11">}</a></code></pre></div>
 <p>
 </div>
 </div>
@@ -225,7 +249,7 @@ body {
 <li><a href="#references">References</a></li>
 </ul>
 <h2 id="box-model">Box Model</h2>
-<p>All <abbr title="Hypertext Markup Language" >HTML</abbr> elements can be considered as boxes with:</p>
+<p>All HTML elements can be considered as boxes with:</p>
 <ul>
 <li><strong>Content:</strong> The content of the box, where text and images appear</li>
 <li><strong>Padding:</strong> Empty area around the content.</li>
@@ -253,7 +277,7 @@ body {
 └───────────────────────┘
  -->
 <h2 id="selectors">Selectors</h2>
-<p>In <abbr title="Cascading Style Sheets" >CSS</abbr>, selectors match elements to which a style applies.</p>
+<p>In CSS, selectors match elements to which a style applies.</p>
 <table>
 <thead>
 <tr class="header">
@@ -270,27 +294,27 @@ body {
 </tr>
 <tr class="even">
 <td><code>E</code></td>
-<td>element of type E, e.g. E=<code>div</code></td>
+<td>element of type E, e.g. E=<code>div</code></td>
 <td>1</td>
 </tr>
 <tr class="odd">
 <td><code>.c</code></td>
-<td>all elements with <code>class=&quot;c&quot;</code></td>
+<td>all elements with <code>class="c"</code></td>
 <td>1</td>
 </tr>
 <tr class="even">
 <td><code>#myid</code></td>
-<td>the element with <code>id=&quot;myid&quot;</code></td>
+<td>the element with <code>id="myid"</code></td>
 <td>1</td>
 </tr>
 <tr class="odd">
 <td><code>E.c</code></td>
-<td>E element whose class is &quot;c&quot;</td>
+<td>E element whose class is “c”</td>
 <td>1</td>
 </tr>
 <tr class="even">
 <td><code>E#myid</code></td>
-<td>E element with id&quot;myid&quot;</td>
+<td>E element with id“myid”</td>
 <td>1</td>
 </tr>
 <tr class="odd">
@@ -319,8 +343,8 @@ body {
 <td>2</td>
 </tr>
 <tr class="even">
-<td><code>E[foo=&quot;bar&quot;]</code></td>
-<td>E element with attribute <code>foo=&quot;bar&quot;</code></td>
+<td><code>E[foo="bar"]</code></td>
+<td>E element with attribute <code>foo="bar"</code></td>
 <td>2</td>
 </tr>
 <tr class="odd">
@@ -350,12 +374,12 @@ body {
 </tr>
 <tr class="even">
 <td><code>E::before</code></td>
-<td>generated content before an E element's content</td>
+<td>generated content before an E element’s content</td>
 <td>2</td>
 </tr>
 <tr class="odd">
 <td><code>E::after</code></td>
-<td>generated content after an E element's content</td>
+<td>generated content after an E element’s content</td>
 <td>2</td>
 </tr>
 </tbody>
@@ -446,7 +470,7 @@ body {
 </tr>
 </tbody>
 </table>
-<p>The Dots per Inch (<abbr title="Dots Per Inch" >DPI</abbr>) refers to the <code>pt</code> per <code>in</code>. The default is <abbr title="Dots Per Inch" >DPI</abbr>=96.</p>
+<p>The Dots per Inch (DPI) refers to the <code>pt</code> per <code>in</code>. The default is DPI=96.</p>
 <h3 id="relative-lengths">Relative Lengths</h3>
 <table>
 <thead>
@@ -483,7 +507,7 @@ body {
 </ul>
 <h2 id="references">References</h2>
 <ul>
-<li><a href="https://www.w3.org/Style/Examples/007/units.en.html"><abbr title="Cascading Style Sheets" >CSS</abbr> Units</a></li>
+<li><a href="https://www.w3.org/Style/Examples/007/units.en.html">CSS Units</a></li>
 </ul>
 
 

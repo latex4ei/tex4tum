@@ -10,7 +10,7 @@
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="/udp">
+    <link rel="canonical" href="http://localhost:4000/udp">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -173,13 +173,37 @@
 
 </p>
 
+
 <!-- Basics -->
+
 <!--    -->
+
+
+
+
+
 <!-- \newcommand{\diff}{\mathop{}\!\mathrm{\vphantom( d}} -->
+
+
+
+
+
 <!-- SI Units -->
 <!--=============================================================== -->
+
+
+
+
+
+
+
+
+
 <!-- KaTeX Tweaks -->
+
+
 <!-- \renewcommand{\boldsymbol}[1]{\mathbf{#1}} -->
+
 <div id="title_def" class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
@@ -187,13 +211,13 @@
 Definition
 </h5>
 <p class="card-text">
-The User Datagram Protocol is an <abbr title="Open Systems Interconnection" >OSI</abbr> layer 4 transport protocol.
+The User Datagram Protocol is an OSI layer 4 transport protocol.
 </p>
 </div>
 </div>
 </div>
 <h2 id="header-structure">Header Structure</h2>
-<p>The header has a fixed size of 8 bytes. The maximum size of the payload is <span class="LaTeX">$2^{16} - 1$</span></p>
+<p>The header has a fixed size of 8 bytes. The maximum size of the payload is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mn>16</mn></msup><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">2^{16} - 1</annotation></semantics></math></p>
 <pre><code>0      7 8     15 16    23 24      31
 +--------+--------+--------+--------+
 |     Source      |   Destination   |
@@ -205,7 +229,7 @@ The User Datagram Protocol is an <abbr title="Open Systems Interconnection" >OSI
 |
 |          data octets ...
 +---------------- ...</code></pre>
-<p>In contrast to <abbr title="Transmission Control Protocol" >TCP</abbr>, UDP does not provide sequence numbers to detect the order of the packets.</p>
+<p>In contrast to TCP, UDP does not provide sequence numbers to detect the order of the packets.</p>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://tools.ietf.org/html/rfc768">RFC 768</a></li>

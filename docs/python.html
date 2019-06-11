@@ -10,7 +10,7 @@
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="/python">
+    <link rel="canonical" href="http://localhost:4000/python">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -173,13 +173,37 @@
 
 </p>
 
+
 <!-- Basics -->
+
 <!--    -->
+
+
+
+
+
 <!-- \newcommand{\diff}{\mathop{}\!\mathrm{\vphantom( d}} -->
+
+
+
+
+
 <!-- SI Units -->
 <!--=============================================================== -->
+
+
+
+
+
+
+
+
+
 <!-- KaTeX Tweaks -->
+
+
 <!-- \renewcommand{\boldsymbol}[1]{\mathbf{#1}} -->
+
 <div id="title_def" class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
@@ -192,26 +216,26 @@ Python is a widely used high-level interpreter language that focuses on readabil
 </div>
 </div>
 </div>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="co"># hello beer: drink 0.5 liter in 4 rounds</span>
-<span class="im">import</span> time
-
-LITER_PER_SIP <span class="op">=</span> <span class="fl">37e-3</span>
-
-<span class="kw">def</span> sips2liter( sips ):
-    <span class="cf">return</span> <span class="bu">float</span>( sips ) <span class="op">*</span> LITER_PER_SIP
-
-beer_l <span class="op">=</span> <span class="fl">0.5</span>
-sips_per_round <span class="op">=</span> [<span class="dv">3</span>, <span class="dv">7</span>, <span class="dv">4</span>, <span class="dv">2</span>]
-
-<span class="cf">for</span> sips <span class="kw">in</span> sips_per_round:
-    <span class="bu">print</span>(<span class="st">&quot;I drink </span><span class="sc">{}</span><span class="st"> sips.&quot;</span>.<span class="bu">format</span>(sips)) 
-    time.sleep( sips )
-    beer_l <span class="op">-=</span> sips2liter( sips )
-    <span class="cf">if</span> beer_l <span class="op">&lt;=</span> <span class="dv">0</span>:
-        <span class="bu">print</span>(<span class="st">&quot;My beer is empty!&quot;</span>)
-        <span class="cf">break</span>
-    <span class="cf">else</span>:
-        <span class="bu">print</span>(<span class="st">&quot;I have </span><span class="sc">{:.3f}</span><span class="st"> l beer left.&quot;</span>.<span class="bu">format</span>(beer_l))</code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb1-1" title="1"><span class="co"># hello beer: drink 0.5 liter in 4 rounds</span></a>
+<a class="sourceLine" id="cb1-2" title="2"><span class="im">import</span> time</a>
+<a class="sourceLine" id="cb1-3" title="3"></a>
+<a class="sourceLine" id="cb1-4" title="4">LITER_PER_SIP <span class="op">=</span> <span class="fl">37e-3</span></a>
+<a class="sourceLine" id="cb1-5" title="5"></a>
+<a class="sourceLine" id="cb1-6" title="6"><span class="kw">def</span> sips2liter( sips ):</a>
+<a class="sourceLine" id="cb1-7" title="7">    <span class="cf">return</span> <span class="bu">float</span>( sips ) <span class="op">*</span> LITER_PER_SIP</a>
+<a class="sourceLine" id="cb1-8" title="8"></a>
+<a class="sourceLine" id="cb1-9" title="9">beer_l <span class="op">=</span> <span class="fl">0.5</span></a>
+<a class="sourceLine" id="cb1-10" title="10">sips_per_round <span class="op">=</span> [<span class="dv">3</span>, <span class="dv">7</span>, <span class="dv">4</span>, <span class="dv">2</span>]</a>
+<a class="sourceLine" id="cb1-11" title="11"></a>
+<a class="sourceLine" id="cb1-12" title="12"><span class="cf">for</span> sips <span class="kw">in</span> sips_per_round:</a>
+<a class="sourceLine" id="cb1-13" title="13">    <span class="bu">print</span>(<span class="st">&quot;I drink </span><span class="sc">{}</span><span class="st"> sips.&quot;</span>.<span class="bu">format</span>(sips)) </a>
+<a class="sourceLine" id="cb1-14" title="14">    time.sleep( sips )</a>
+<a class="sourceLine" id="cb1-15" title="15">    beer_l <span class="op">-=</span> sips2liter( sips )</a>
+<a class="sourceLine" id="cb1-16" title="16">    <span class="cf">if</span> beer_l <span class="op">&lt;=</span> <span class="dv">0</span>:</a>
+<a class="sourceLine" id="cb1-17" title="17">        <span class="bu">print</span>(<span class="st">&quot;My beer is empty!&quot;</span>)</a>
+<a class="sourceLine" id="cb1-18" title="18">        <span class="cf">break</span></a>
+<a class="sourceLine" id="cb1-19" title="19">    <span class="cf">else</span>:</a>
+<a class="sourceLine" id="cb1-20" title="20">        <span class="bu">print</span>(<span class="st">&quot;I have </span><span class="sc">{:.3f}</span><span class="st"> l beer left.&quot;</span>.<span class="bu">format</span>(beer_l))</a></code></pre></div>
 <h2 id="data-types">Data Types</h2>
 <table>
 <thead>
@@ -223,7 +247,7 @@ sips_per_round <span class="op">=</span> [<span class="dv">3</span>, <span class
 <tbody>
 <tr class="odd">
 <td>List</td>
-<td><code>[1, 1, &quot;hi&quot;]</code></td>
+<td><code>[1, 1, "hi"]</code></td>
 </tr>
 <tr class="even">
 <td>Tuple</td>
@@ -231,7 +255,7 @@ sips_per_round <span class="op">=</span> [<span class="dv">3</span>, <span class
 </tr>
 <tr class="odd">
 <td>Dictionary</td>
-<td><code>{'a': 1, 'b': &quot;hi&quot;}</code></td>
+<td><code>{'a': 1, 'b': "hi"}</code></td>
 </tr>
 </tbody>
 </table>

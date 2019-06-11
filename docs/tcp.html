@@ -10,7 +10,7 @@
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="/tcp">
+    <link rel="canonical" href="http://localhost:4000/tcp">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -166,7 +166,7 @@
 
 <h1><a data-toggle="collapse" href="#title_def" aria-expanded="false" aria-controls="title_def">
   
-  <abbr title="Transmission Control Protocol" >TCP</abbr>
+  TCP
 </a><a class="float-right small" style="font-size: small" href="https://github.com/latex4ei/tex4tum/edit/master/_article/informatics/network/tcp.md">[edit]</a></h1>
 
 <p>
@@ -177,13 +177,37 @@
 
 </p>
 
+
 <!-- Basics -->
+
 <!--    -->
+
+
+
+
+
 <!-- \newcommand{\diff}{\mathop{}\!\mathrm{\vphantom( d}} -->
+
+
+
+
+
 <!-- SI Units -->
 <!--=============================================================== -->
+
+
+
+
+
+
+
+
+
 <!-- KaTeX Tweaks -->
+
+
 <!-- \renewcommand{\boldsymbol}[1]{\mathbf{#1}} -->
+
 <div id="title_def" class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
@@ -191,7 +215,7 @@
 Definition
 </h5>
 <p class="card-text">
-The Transmission Control Protocol (<abbr title="Transmission Control Protocol" >TCP</abbr>) is one of the main protocols of the Internet protocol suite.
+The Transmission Control Protocol (TCP) is one of the main protocols of the Internet protocol suite.
 </p>
 </div>
 </div>
@@ -246,7 +270,7 @@ The Transmission Control Protocol (<abbr title="Transmission Control Protocol" >
 <dd><p>6 bits (from left to right):</p>
 <ul>
 <li>URG: Urgent Pointer field significant</li>
-<li><abbr title="ACKnowledgement" >ACK</abbr>: Acknowledgment field significant</li>
+<li>ACK: Acknowledgment field significant</li>
 <li>PSH: Push Function</li>
 <li>RST: Reset the connection</li>
 <li>SYN: Synchronize sequence numbers</li>
@@ -257,7 +281,7 @@ The Transmission Control Protocol (<abbr title="Transmission Control Protocol" >
 <dd>16 bits. The number of data octets beginning with the one indicated in the acknowledgment field which the sender of this segment is willing to accept.
 </dd>
 <dt>Checksum</dt>
-<dd>16 bits. The checksum field is the 16 bit one's complement of the one's complement sum of all 16 bit words in the header and text.
+<dd>16 bits. The checksum field is the 16 bit one’s complement of the one’s complement sum of all 16 bit words in the header and text.
 </dd>
 <dt>Options</dt>
 <dd>variable. Options may occupy space at the end of the TCP header and are a multiple of 8 bits in length. All options are included in the checksum. An option may begin on any octet boundary.
@@ -302,11 +326,11 @@ The Transmission Control Protocol (<abbr title="Transmission Control Protocol" >
 </tr>
 <tr class="odd">
 <td>53</td>
-<td><abbr title="Domain Name System" >DNS</abbr></td>
+<td>DNS</td>
 </tr>
 <tr class="even">
 <td>80</td>
-<td><abbr title="Hypertext Transfer Protocol" >HTTP</abbr></td>
+<td>HTTP</td>
 </tr>
 <tr class="odd">
 <td>123</td>
@@ -340,8 +364,8 @@ The Transmission Control Protocol (<abbr title="Transmission Control Protocol" >
 </table>
 <h2 id="references">References</h2>
 <ul>
-<li><a href="https://tools.ietf.org/html/rfc793">IETF: RFC 793, Transmission Control Protocol</a></li>
-<li><a href="https://tools.ietf.org/html/rfc1700">IETF: RFC 1700, Assigned Numbers</a></li>
+<li><p><a href="https://tools.ietf.org/html/rfc793">IETF: RFC 793, Transmission Control Protocol</a></p></li>
+<li><p><a href="https://tools.ietf.org/html/rfc1700">IETF: RFC 1700, Assigned Numbers</a></p></li>
 <li><p><a href="https://www.iana.org">Internet Assigned Numbers Authority (IANA)</a></p></li>
 <li><p><a href="https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers">Wikipedia: List of Ports</a></p></li>
 </ul>

@@ -10,7 +10,7 @@
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="/aes">
+    <link rel="canonical" href="http://localhost:4000/aes">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -166,20 +166,44 @@
 
 <h1><a data-toggle="collapse" href="#title_def" aria-expanded="false" aria-controls="title_def">
   
-  Advanced Encryption Standard (<abbr title="Advanced Encryption Standard" >AES</abbr>)
+  Advanced Encryption Standard (AES)
 </a><a class="float-right small" style="font-size: small" href="https://github.com/latex4ei/tex4tum/edit/master/_article/informatics/algorithm/aes.md">[edit]</a></h1>
 
 <p>
 
 </p>
 
+
 <!-- Basics -->
+
 <!--    -->
+
+
+
+
+
 <!-- \newcommand{\diff}{\mathop{}\!\mathrm{\vphantom( d}} -->
+
+
+
+
+
 <!-- SI Units -->
 <!--=============================================================== -->
+
+
+
+
+
+
+
+
+
 <!-- KaTeX Tweaks -->
+
+
 <!-- \renewcommand{\boldsymbol}[1]{\mathbf{#1}} -->
+
 <div id="title_def" class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
@@ -187,12 +211,12 @@
 Definition
 </h5>
 <p class="card-text">
-The Advanced Encryption Standard (<abbr title="Advanced Encryption Standard" >AES</abbr>), (original name Rijndael) is a specification for the encryption of electronic data established by the U.S. National Institute of Standards and Technology (NIST) in 2001.
+The Advanced Encryption Standard (AES), (original name Rijndael) is a specification for the encryption of electronic data established by the U.S. National Institute of Standards and Technology (NIST) in 2001.
 </p>
 </div>
 </div>
 </div>
-<p><abbr title="Advanced Encryption Standard" >AES</abbr> operates on block sizes of <span class="LaTeX">$32 \times 32$</span> bits.</p>
+<p>AES operates on block sizes of <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>32</mn><mo>×</mo><mn>32</mn></mrow><annotation encoding="application/x-tex">32 \times 32</annotation></semantics></math> bits.</p>
 <table>
 <thead>
 <tr class="header">
@@ -233,14 +257,14 @@ AES 128 High Level Overview
 <ol type="1">
 <li><p><strong>Key Expansion:</strong> Create individual 128bit round keys from the cipher key</p></li>
 <li><p><strong>AddRoundKey:</strong> each byte of the block is combined with a block of the round key using bitwise xor.</p></li>
-<li><strong>Rounds:</strong>
+<li><p><strong>Rounds:</strong></p>
 <ol type="1">
 <li>SubBytes: substitutes every byte of the state with an S-box entry</li>
 <li>ShiftRows: cyclically left shift every row</li>
-<li>MixColumns: takes the four bytes of each column as input and outputs four new bytes, where each input byte affects all four output bytes. Each column is transformed by multiplication with a fixed <span class="LaTeX">$4 \times 4$</span> Matrix.</li>
+<li>MixColumns: takes the four bytes of each column as input and outputs four new bytes, where each input byte affects all four output bytes. Each column is transformed by multiplication with a fixed <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>4</mn><mo>×</mo><mn>4</mn></mrow><annotation encoding="application/x-tex">4 \times 4</annotation></semantics></math> Matrix.</li>
 <li>AddRoundKey: XOR of the 128bit round key and the 128bit block.</li>
 </ol></li>
-<li><strong>Final Round:</strong> (no MixColumns)
+<li><p><strong>Final Round:</strong> (no MixColumns)</p>
 <ol type="1">
 <li>SubBytes</li>
 <li>ShiftRows</li>
@@ -250,7 +274,7 @@ AES 128 High Level Overview
 <!--
 ### MixColumns
 <div data-toggle='collapse' href='#eq_0'>
-$$\vect{ b_{0,j} \ b_{1,j} \ b_{2,j} \ b_{3,j} } = \mat{2&3&1&1 \ 1&2&3&1 \ 1&1&2&3 \ 3&1&1&2} \cdot \vect{ a_{0,j} \ a_{1,j} \ a_{2,j} \ a_{3,j} }$$
+$$\vect{ b_{0,j} \\ b_{1,j} \\ b_{2,j} \\ b_{3,j} } = \mat{2&3&1&1 \\ 1&2&3&1 \\ 1&1&2&3 \\ 3&1&1&2} \cdot \vect{ a_{0,j} \\ a_{1,j} \\ a_{2,j} \\ a_{3,j} }$$
 </div> 
 <div id='eq_0' class='legend collapse'><div class='card border-info w-75 mx-auto'><div class='p-1 small'>
 with the columns $j \in \{0,1,2,3\}$
@@ -347,7 +371,7 @@ with the columns $j \in \{0,1,2,3\}$
 </div>
 <div id="checkboxid-4" class="tab-pane" role="tabpanel">
 <p><strong>Counter (CTR)</strong></p>
-<p>Counter mode turns a block cipher into a stream cipher. It generates the next keystream block by encrypting successive values of a &quot;counter&quot;.</p>
+<p>Counter mode turns a block cipher into a stream cipher. It generates the next keystream block by encrypting successive values of a “counter”.</p>
 <!--<p> Filename="encmode_ctr.svg", path="/res/img/content-images/informatics/security/encmode_ctr.svg" </p>-->
 <figure class="figure">
 <img class="figure-img img-fluid" style="width: 40em;" src="/res/img/content-images/informatics/security/encmode_ctr.svg" alt=""/>
@@ -379,7 +403,7 @@ out  = 7649abac8119b246cee98e9b12e9197d</code></pre>
 <h2 id="references">References</h2>
 <ul>
 <li><p><a href="https://csrc.nist.gov/csrc/media/publications/fips/197/final/documents/fips-197.pdf">NIST FIPS 197: Advanced Encryption Standard</a></p></li>
-<li><p><a href="https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-38a.pdf">NIST Special Publication 800-38A: <abbr title="Advanced Encryption Standard" >AES</abbr> Test Vectors</a></p></li>
+<li><p><a href="https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-38a.pdf">NIST Special Publication 800-38A: AES Test Vectors</a></p></li>
 <li><p><a href="https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation">Wikipedia: Block Cipher Modes</a></p></li>
 </ul>
 

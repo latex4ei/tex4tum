@@ -70,6 +70,12 @@ make sure you have set your environment to utf-8:
 ```bash
 export LC_ALL=en_US.U-8
 ```
+#### Error with Pandoc
+
+In case you are using Pandoc 2.0 or newer, you will need to do some changes to the `_config.yml` under extensions.
+
+* Remove `- normalize`. With pandoc 2.0 this is not necessary anymore.
+* Change `latexmathml` to `mathml`.
 
 ### Build and Test
 

@@ -1,6 +1,6 @@
 ---
 title: Curve
-tag: line, kurve
+tag: line kurve
 ---
 
 A curve is a generalization of a line, in that its curvature need not be zero.

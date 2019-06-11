@@ -10,7 +10,7 @@
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="/jpeg">
+    <link rel="canonical" href="http://localhost:4000/jpeg">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -166,20 +166,44 @@
 
 <h1><a data-toggle="collapse" href="#title_def" aria-expanded="false" aria-controls="title_def">
   
-  <abbr title="Joint Photographic Experts Group" >JPEG</abbr>
+  JPEG
 </a><a class="float-right small" style="font-size: small" href="https://github.com/latex4ei/tex4tum/edit/master/_article/informatics/datastructures/jpeg.md">[edit]</a></h1>
 
 <p>
 
 </p>
 
+
 <!-- Basics -->
+
 <!--    -->
+
+
+
+
+
 <!-- \newcommand{\diff}{\mathop{}\!\mathrm{\vphantom( d}} -->
+
+
+
+
+
 <!-- SI Units -->
 <!--=============================================================== -->
+
+
+
+
+
+
+
+
+
 <!-- KaTeX Tweaks -->
+
+
 <!-- \renewcommand{\boldsymbol}[1]{\mathbf{#1}} -->
+
 <div id="title_def" class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
@@ -187,14 +211,14 @@
 Definition
 </h5>
 <p class="card-text">
-The Joint Photographic Experts Group developed the <abbr title="Joint Photographic Experts Group" >JPEG</abbr> standard <abbr title="International Organization for Standardization" >ISO</abbr>/IEC 10918-1 which is used to encode images.
+The Joint Photographic Experts Group developed the JPEG standard ISO/IEC 10918-1 which is used to encode images.
 </p>
 </div>
 </div>
 </div>
 <h2 id="encoding-process">Encoding Process</h2>
 <ol type="1">
-<li>colors are converted from RGB to <span class="LaTeX">$Y&#39;C_BC_R$</span>, where Y is the brigness and <span class="LaTeX">$C_B$</span> and <span class="LaTeX">$C_R$</span> are the chrominance components of red and blue.</li>
+<li>colors are converted from RGB to <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Y</mi><mi>′</mi><msub><mi>C</mi><mi>B</mi></msub><msub><mi>C</mi><mi>R</mi></msub></mrow><annotation encoding="application/x-tex">Y&#39;C_BC_R</annotation></semantics></math>, where Y is the brigness and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>C</mi><mi>B</mi></msub><annotation encoding="application/x-tex">C_B</annotation></semantics></math> and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>C</mi><mi>R</mi></msub><annotation encoding="application/x-tex">C_R</annotation></semantics></math> are the chrominance components of red and blue.</li>
 </ol>
 <h5 class="clp_title text-warning" data-toggle="collapse" href="#expl3">
 <i class='fa fa-comment-dots'></i> Explanation
@@ -218,13 +242,13 @@ The color space conversion allows greater compression without a significant effe
 <div class='card border-warning mb-1'>
 <div class='card-body'>
 <p class='card-text'>
-Due to the densities of color- and brightness-sensitive receptors in the human eye, humans can see considerably more fine detail in the brightness of an image (the Y' component) than in the hue and color saturation of an image (the Cb and Cr components).
+Due to the densities of color- and brightness-sensitive receptors in the human eye, humans can see considerably more fine detail in the brightness of an image (the Y’ component) than in the hue and color saturation of an image (the Cb and Cr components).
 <p>
 </div>
 </div>
 </div>
 <ol type="1">
-<li>The image is split into blocks of 8×8 pixels, and for each block, each of the Y, <span class="LaTeX">$C_B$</span>, and <span class="LaTeX">$C_R$</span> data undergoes the discrete cosine transform (DCT).</li>
+<li>The image is split into blocks of 8×8 pixels, and for each block, each of the Y, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>C</mi><mi>B</mi></msub><annotation encoding="application/x-tex">C_B</annotation></semantics></math>, and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>C</mi><mi>R</mi></msub><annotation encoding="application/x-tex">C_R</annotation></semantics></math> data undergoes the discrete cosine transform (DCT).</li>
 </ol>
 <h5 class="clp_title text-warning" data-toggle="collapse" href="#expl5">
 <i class='fa fa-comment-dots'></i> Explanation
@@ -248,7 +272,7 @@ If the data for a channel does not represent an integer number of blocks then th
 <div class='card border-warning mb-1'>
 <div class='card-body'>
 <p class='card-text'>
-the magnitudes of the high-frequency components are stored with a lower accuracy than the low-frequency components. The quality setting of the encoder (for example 95 on a scale of 0–100 in the Independent JPEG Group's library) affects to what extent the resolution of each frequency component is reduced.
+the magnitudes of the high-frequency components are stored with a lower accuracy than the low-frequency components. The quality setting of the encoder (for example 95 on a scale of 0–100 in the Independent JPEG Group’s library) affects to what extent the resolution of each frequency component is reduced.
 <p>
 </div>
 </div>

@@ -1,6 +1,6 @@
 ---
 title: Differential Operators
-tags: gradient, rotation, divergence, laplace
+tags: gradient rotation divergence laplace
 ---
 
 A differential operator is an operator.

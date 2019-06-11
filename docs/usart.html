@@ -10,7 +10,7 @@
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="/usart">
+    <link rel="canonical" href="http://localhost:4000/usart">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -166,7 +166,7 @@
 
 <h1><a data-toggle="collapse" href="#title_def" aria-expanded="false" aria-controls="title_def">
   
-  Universal Asynchronous Receiver Transmitter (<abbr title="Universal Asynchronous Receiver Transmitter" >UART</abbr>)
+  Universal Asynchronous Receiver Transmitter (UART)
 </a><a class="float-right small" style="font-size: small" href="https://github.com/latex4ei/tex4tum/edit/master/_article/electronics/bus/usart.md">[edit]</a></h1>
 
 <p>
@@ -176,7 +176,7 @@
 </span>
 
 <span class="badge badge-primary text-white">
-  <i class="fas fa-tag"></i> <abbr title="Universal Asynchronous Receiver Transmitter" >UART</abbr>,
+  <i class="fas fa-tag"></i> UART,
 </span>
 
 <span class="badge badge-primary text-white">
@@ -197,13 +197,37 @@
 
 </p>
 
+
 <!-- Basics -->
+
 <!--    -->
+
+
+
+
+
 <!-- \newcommand{\diff}{\mathop{}\!\mathrm{\vphantom( d}} -->
+
+
+
+
+
 <!-- SI Units -->
 <!--=============================================================== -->
+
+
+
+
+
+
+
+
+
 <!-- KaTeX Tweaks -->
+
+
 <!-- \renewcommand{\boldsymbol}[1]{\mathbf{#1}} -->
+
 <div id="title_def" class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
@@ -211,7 +235,7 @@
 Definition
 </h5>
 <p class="card-text">
-<abbr title="Universal Asynchronous Receiver Transmitter" >UART</abbr> is serial bus.
+UART is serial bus.
 </p>
 </div>
 </div>
@@ -248,10 +272,10 @@ Definition
 <p>Baudrate is the same as frequency or bitrate in bit/s!</p>
 <p><strong>Common Baudrates:</strong></p>
 <ul>
-<li>9'600 bit/s</li>
-<li>38'400 bit/s</li>
-<li>57'600 bit/s</li>
-<li>115'200 bit/s</li>
+<li>9’600 bit/s</li>
+<li>38’400 bit/s</li>
+<li>57’600 bit/s</li>
+<li>115’200 bit/s</li>
 </ul>
 <h5 class="clp_title text-success" data-toggle="collapse" href="#example2">
 <i class='fa fa-chart-bar'></i> Example
@@ -266,7 +290,7 @@ If a baudrate of 9600 bits/s is used with one stop bit and no parity (10 bit per
 </div>
 </div>
 <h2 id="protocol">Protocol</h2>
-<p><abbr title="Universal Asynchronous Receiver Transmitter" >UART</abbr> uses serial transmission of 8 bits framed by start and stop bits.</p>
+<p>UART uses serial transmission of 8 bits framed by start and stop bits.</p>
 <pre class="diagram"><code>       ___     ___ ___ ___ ___ ___ ___ ___ ___ ________
 RX ---    \___/___X___X___X___X___X___X___X___X___/    ---
             S  b0  b1  b2  b3  b4  b5  b6  b7  pr   P
@@ -289,7 +313,7 @@ All operations of the UART hardware are controlled by an internal clock signal w
 <ul>
 <li><strong>Overrun error:</strong> the receiver cannot process the character that just came in before the next one arrives.</li>
 <li><strong>Underrun error</strong> the next character starts delayed which might be intepreted as the end of the transmission.</li>
-<li><strong>Framing error:</strong> receiver does not see a &quot;stop&quot; bit at the expected &quot;stop&quot; bit time.</li>
+<li><strong>Framing error:</strong> receiver does not see a “stop” bit at the expected “stop” bit time.</li>
 <li><strong>Parity error:</strong> the calculated parity of the received data bits disagrees with the received parity bit.</li>
 <li><strong>Break condition:</strong> receiver continuously reads 0 for longer than the full character time</li>
 </ul>

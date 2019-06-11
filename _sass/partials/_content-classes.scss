@@ -21,6 +21,15 @@
 
 
 //
+// interactive image
+// this selection does not work
+//
+
+object[type="image/svg+xml"] svg{
+  cursor: pointer;
+}
+
+//
 // collapse title
 //
 .clp_title {

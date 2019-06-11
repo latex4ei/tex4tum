@@ -1,6 +1,6 @@
 ---
 title: Series
-tag: sum, mean
+tag: sum mean
 ---
 
 ## Arithmetic Sum

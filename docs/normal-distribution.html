@@ -10,7 +10,7 @@
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="/normal-distribution">
+    <link rel="canonical" href="http://localhost:4000/normal-distribution">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -178,13 +178,37 @@
 
 </p>
 
+
 <!-- Basics -->
+
 <!--    -->
+
+
+
+
+
 <!-- \newcommand{\diff}{\mathop{}\!\mathrm{\vphantom( d}} -->
+
+
+
+
+
 <!-- SI Units -->
 <!--=============================================================== -->
+
+
+
+
+
+
+
+
+
 <!-- KaTeX Tweaks -->
+
+
 <!-- \renewcommand{\boldsymbol}[1]{\mathbf{#1}} -->
+
 <div id="title_def" class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
@@ -197,11 +221,7 @@ The normal (or Gaussian) distribution is a very common continuous probability di
 </div>
 </div>
 </div>
-<table style="width:12%;">
-<colgroup>
-<col style="width: 6%" />
-<col style="width: 5%" />
-</colgroup>
+<table>
 <thead>
 <tr class="header">
 <th>Parameters</th>
@@ -211,36 +231,36 @@ The normal (or Gaussian) distribution is a very common continuous probability di
 <tbody>
 <tr class="odd">
 <td>Notation</td>
-<td><span class="LaTeX">$\mathcal N(\mu, \sigma^2), \mu \in {\mathop{\mathbb R}}, \sigma \gt 0$</span></td>
+<td><span class="math inline">$\mathcal N(\mu, \sigma^2), \mu \in \R, \sigma \gt 0$</span></td>
 </tr>
 <tr class="even">
 <td>Mean</td>
-<td><span class="LaTeX">$\mu$</span></td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>μ</mi><annotation encoding="application/x-tex">\mu</annotation></semantics></math></td>
 </tr>
 <tr class="odd">
 <td>Variance</td>
-<td><span class="LaTeX">$\sigma^2$</span></td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>σ</mi><mn>2</mn></msup><annotation encoding="application/x-tex">\sigma^2</annotation></semantics></math></td>
 </tr>
 <tr class="even">
-<td><abbr title="Probability Density Function" >PDF</abbr></td>
-<td><span class="LaTeX">$f_X (x) = \frac{1}{\sqrt{2 \pi \sigma^2}} e^{-\frac{(x-\mu)^2}{2 \sigma^2}}$</span>, <span class="LaTeX">$x \in {\mathop{\mathbb R}}$</span></td>
+<td>PDF</td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mi>X</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mfrac><mn>1</mn><msqrt><mrow><mn>2</mn><mi>π</mi><msup><mi>σ</mi><mn>2</mn></msup></mrow></msqrt></mfrac><msup><mi>e</mi><mrow><mo>−</mo><mfrac><mrow><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>−</mo><mi>μ</mi><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup></mrow><mrow><mn>2</mn><msup><mi>σ</mi><mn>2</mn></msup></mrow></mfrac></mrow></msup></mrow><annotation encoding="application/x-tex">f_X (x) = \frac{1}{\sqrt{2 \pi \sigma^2}} e^{-\frac{(x-\mu)^2}{2 \sigma^2}}</annotation></semantics></math>, <span class="math inline">$x \in \R$</span></td>
 </tr>
 </tbody>
 </table>
 <h2 id="probability-density">Probability Density</h2>
 <div data-toggle="collapse" href="#eq_0">
-<p><span class="LaTeX">$$f_X (x) = \frac{1}{\sqrt{2 \pi \sigma^2}} e^{-\frac{(x-\mu)^2}{2 \sigma^2}}$$</span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mi>X</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mfrac><mn>1</mn><msqrt><mrow><mn>2</mn><mi>π</mi><msup><mi>σ</mi><mn>2</mn></msup></mrow></msqrt></mfrac><msup><mi>e</mi><mrow><mo>−</mo><mfrac><mrow><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>−</mo><mi>μ</mi><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup></mrow><mrow><mn>2</mn><msup><mi>σ</mi><mn>2</mn></msup></mrow></mfrac></mrow></msup></mrow><annotation encoding="application/x-tex">f_X (x) = \frac{1}{\sqrt{2 \pi \sigma^2}} e^{-\frac{(x-\mu)^2}{2 \sigma^2}}</annotation></semantics></math></p>
 </div>
 <div id="eq_0" class="legend collapse">
 <div class="card border-info w-75 mx-auto">
 <div class="p-1 small">
-<p>with the mean <span class="LaTeX">$\mu$</span>, the standard deviation <span class="LaTeX">$\sigma$</span>.</p>
+<p>with the mean <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>μ</mi><annotation encoding="application/x-tex">\mu</annotation></semantics></math>, the standard deviation <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>σ</mi><annotation encoding="application/x-tex">\sigma</annotation></semantics></math>.</p>
 </div>
 </div>
 </div>
 <h2 id="properties">Properties</h2>
 <ul>
-<li>It is symmetric around the point <span class="LaTeX">$x=\mu$</span> which is at the same time the mode, the median and the mean of the distribution.</li>
+<li>It is symmetric around the point <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><mi>μ</mi></mrow><annotation encoding="application/x-tex">x=\mu</annotation></semantics></math> which is at the same time the mode, the median and the mean of the distribution.</li>
 <li>The area under the curve and over the x-axis is equal to one.</li>
 </ul>
 

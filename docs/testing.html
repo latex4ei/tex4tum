@@ -10,7 +10,7 @@
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="/testing">
+    <link rel="canonical" href="http://localhost:4000/testing">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -173,13 +173,37 @@
 
 </p>
 
+
 <!-- Basics -->
+
 <!--    -->
+
+
+
+
+
 <!-- \newcommand{\diff}{\mathop{}\!\mathrm{\vphantom( d}} -->
+
+
+
+
+
 <!-- SI Units -->
 <!--=============================================================== -->
+
+
+
+
+
+
+
+
+
 <!-- KaTeX Tweaks -->
+
+
 <!-- \renewcommand{\boldsymbol}[1]{\mathbf{#1}} -->
+
 <div id="title_def" class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
@@ -194,42 +218,42 @@ A statistical hypothesis test is a method of statistical inference. Commonly, tw
 </div>
 <h2 id="parameters-and-terms">Parameters and Terms</h2>
 <ul>
-<li>Null hypothesis <span class="LaTeX">$H_0$</span>: will be assumed to be true</li>
-<li>Alternative hypothesis <span class="LaTeX">$H_1$</span></li>
-<li>The significance level <span class="LaTeX">$\alpha$</span>: the probability threshold below which the null hypothesis will be rejected. Common values are 5% and 1%.</li>
+<li>Null hypothesis <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>H</mi><mn>0</mn></msub><annotation encoding="application/x-tex">H_0</annotation></semantics></math>: will be assumed to be true</li>
+<li>Alternative hypothesis <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>H</mi><mn>1</mn></msub><annotation encoding="application/x-tex">H_1</annotation></semantics></math></li>
+<li>The significance level <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>α</mi><annotation encoding="application/x-tex">\alpha</annotation></semantics></math>: the probability threshold below which the null hypothesis will be rejected. Common values are 5% and 1%.</li>
 </ul>
 <table>
 <thead>
 <tr class="header">
 <th>Decision ╲ Reality</th>
-<th><span class="LaTeX">$H_1$</span> false (<span class="LaTeX">$H_0$</span> true)</th>
-<th><span class="LaTeX">$H_1$</span> true (<span class="LaTeX">$H_0$</span> false)</th>
+<th><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>H</mi><mn>1</mn></msub><annotation encoding="application/x-tex">H_1</annotation></semantics></math> false (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>H</mi><mn>0</mn></msub><annotation encoding="application/x-tex">H_0</annotation></semantics></math> true)</th>
+<th><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>H</mi><mn>1</mn></msub><annotation encoding="application/x-tex">H_1</annotation></semantics></math> true (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>H</mi><mn>0</mn></msub><annotation encoding="application/x-tex">H_0</annotation></semantics></math> false)</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><span class="LaTeX">$H_1$</span> rejected</td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>H</mi><mn>1</mn></msub><annotation encoding="application/x-tex">H_1</annotation></semantics></math> rejected</td>
 <td><strong>T</strong>rue <strong>N</strong>egative</td>
 <td><strong>F</strong>alse <strong>N</strong>egative (Type 2)</td>
 </tr>
 <tr class="even">
-<td>(<span class="LaTeX">$H_0$</span> accepted)</td>
-<td><span class="LaTeX">${\mathrm{P}}= 1-\alpha$</span></td>
-<td><span class="LaTeX">${\mathrm{P}}= \beta$</span></td>
+<td>(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>H</mi><mn>0</mn></msub><annotation encoding="application/x-tex">H_0</annotation></semantics></math> accepted)</td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathvariant="normal"><mi>P</mi></mstyle><mo>=</mo><mn>1</mn><mo>−</mo><mi>α</mi></mrow><annotation encoding="application/x-tex">\mathrm{P}= 1-\alpha</annotation></semantics></math></td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathvariant="normal"><mi>P</mi></mstyle><mo>=</mo><mi>β</mi></mrow><annotation encoding="application/x-tex">\mathrm{P}= \beta</annotation></semantics></math></td>
 </tr>
 <tr class="odd">
-<td><span class="LaTeX">$H_1$</span> accepted</td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>H</mi><mn>1</mn></msub><annotation encoding="application/x-tex">H_1</annotation></semantics></math> accepted</td>
 <td><strong>F</strong>alse <strong>P</strong>ositive (Type 1)</td>
 <td><strong>T</strong>rue <strong>P</strong>ositive</td>
 </tr>
 <tr class="even">
-<td>(<span class="LaTeX">$H_0$</span> rejected)</td>
-<td><span class="LaTeX">${\mathrm{P}}= \alpha$</span></td>
-<td><span class="LaTeX">${\mathrm{P}}= 1-\beta$</span></td>
+<td>(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>H</mi><mn>0</mn></msub><annotation encoding="application/x-tex">H_0</annotation></semantics></math> rejected)</td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathvariant="normal"><mi>P</mi></mstyle><mo>=</mo><mi>α</mi></mrow><annotation encoding="application/x-tex">\mathrm{P}= \alpha</annotation></semantics></math></td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathvariant="normal"><mi>P</mi></mstyle><mo>=</mo><mn>1</mn><mo>−</mo><mi>β</mi></mrow><annotation encoding="application/x-tex">\mathrm{P}= 1-\beta</annotation></semantics></math></td>
 </tr>
 </tbody>
 </table>
-<p><span class="LaTeX">$p$</span> is the probability that a given result would occur if the null hypothesis is true.</p>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>p</mi><annotation encoding="application/x-tex">p</annotation></semantics></math> is the probability that a given result would occur if the null hypothesis is true.</p>
 <h2 id="power-of-a-test-1-β">Power of a test (1 − β)</h2>
 <h2 id="mean-tests">Mean Tests</h2>
 <p>Tests whether the means of independent sample sets are significantly different.</p>

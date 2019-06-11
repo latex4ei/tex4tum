@@ -10,7 +10,7 @@
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="/maxwell">
+    <link rel="canonical" href="http://localhost:4000/maxwell">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -173,13 +173,37 @@
 
 </p>
 
+
 <!-- Basics -->
+
 <!--    -->
+
+
+
+
+
 <!-- \newcommand{\diff}{\mathop{}\!\mathrm{\vphantom( d}} -->
+
+
+
+
+
 <!-- SI Units -->
 <!--=============================================================== -->
+
+
+
+
+
+
+
+
+
 <!-- KaTeX Tweaks -->
+
+
 <!-- \renewcommand{\boldsymbol}[1]{\mathbf{#1}} -->
+
 <div id="title_def" class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
@@ -192,12 +216,7 @@ The Maxwell Equations are 4 fundamental equations that describe the relation bet
 </div>
 </div>
 </div>
-<table style="width:17%;">
-<colgroup>
-<col style="width: 5%" />
-<col style="width: 5%" />
-<col style="width: 5%" />
-</colgroup>
+<table>
 <thead>
 <tr class="header">
 <th>Name</th>
@@ -207,29 +226,29 @@ The Maxwell Equations are 4 fundamental equations that describe the relation bet
 </thead>
 <tbody>
 <tr class="odd">
-<td>Gauss's law:</td>
-<td><span class="LaTeX">$${\mathop{\circ\!\!\!\iint}}_{\partial \Omega} {\boldsymbol E} \cdot {\,\text{d}}A = \frac{1}{\epsilon_0} \iiint_{\Omega} \rho {\,\text{d}}V$$</span></td>
-<td><span class="LaTeX">$${\text{div}}{\boldsymbol D} = \varrho$$</span></td>
+<td>Gauss’s law:</td>
+<td><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mo>∘∬</mo><mrow><mi>∂</mi><mi>Ω</mi></mrow></msub><mstyle mathvariant="bold"><mi>𝐄</mi></mstyle><mo>⋅</mo><mspace width="0.167em"></mspace><mtext mathvariant="normal">d</mtext><mi>A</mi><mo>=</mo><mfrac><mn>1</mn><msub><mi>ϵ</mi><mn>0</mn></msub></mfrac><msub><mo>∭</mo><mi>Ω</mi></msub><mi>ρ</mi><mspace width="0.167em"></mspace><mtext mathvariant="normal">d</mtext><mi>V</mi></mrow><annotation encoding="application/x-tex">\mathop{\circ\!\!\!\iint}_{\partial \Omega} \boldsymbol E \cdot \,\text{d}A = \frac{1}{\epsilon_0} \iiint_{\Omega} \rho \,\text{d}V</annotation></semantics></math></td>
+<td><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">div</mtext><mstyle mathvariant="bold"><mi>𝐃</mi></mstyle><mo>=</mo><mo>𝜚</mo></mrow><annotation encoding="application/x-tex">\text{div}\boldsymbol D = \varrho</annotation></semantics></math></td>
 </tr>
 <tr class="even">
-<td>Faraday's law of induction</td>
-<td><span class="LaTeX">$$\oint_{\partial A} {\boldsymbol E} \cdot {\,\text{d}}{\boldsymbol s} = - \iint_{A} \frac{\partial {\boldsymbol B}}{\partial t} \cdot {\,\text{d}}{\boldsymbol A}$$</span></td>
-<td><span class="LaTeX">$${\text{rot}}{\boldsymbol E} + \frac{\partial {\boldsymbol B}}{\partial t} = 0$$</span></td>
+<td>Faraday’s law of induction</td>
+<td><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mo>∮</mo><mrow><mi>∂</mi><mi>A</mi></mrow></msub><mstyle mathvariant="bold"><mi>𝐄</mi></mstyle><mo>⋅</mo><mspace width="0.167em"></mspace><mtext mathvariant="normal">d</mtext><mstyle mathvariant="bold"><mi>𝐬</mi></mstyle><mo>=</mo><mo>−</mo><msub><mo>∬</mo><mi>A</mi></msub><mfrac><mrow><mi>∂</mi><mstyle mathvariant="bold"><mi>𝐁</mi></mstyle></mrow><mrow><mi>∂</mi><mi>t</mi></mrow></mfrac><mo>⋅</mo><mspace width="0.167em"></mspace><mtext mathvariant="normal">d</mtext><mstyle mathvariant="bold"><mi>𝐀</mi></mstyle></mrow><annotation encoding="application/x-tex">\oint_{\partial A} \boldsymbol E \cdot \,\text{d}\boldsymbol s = - \iint_{A} \frac{\partial \boldsymbol B}{\partial t} \cdot \,\text{d}\boldsymbol A</annotation></semantics></math></td>
+<td><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">rot</mtext><mstyle mathvariant="bold"><mi>𝐄</mi></mstyle><mo>+</mo><mfrac><mrow><mi>∂</mi><mstyle mathvariant="bold"><mi>𝐁</mi></mstyle></mrow><mrow><mi>∂</mi><mi>t</mi></mrow></mfrac><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\text{rot}\boldsymbol E + \frac{\partial \boldsymbol B}{\partial t} = 0</annotation></semantics></math></td>
 </tr>
 <tr class="odd">
-<td>Gauss's law for magnetism</td>
-<td><span class="LaTeX">$${\mathop{\circ\!\!\!\iint}}_{\partial \Omega} {\boldsymbol B} \cdot {\,\text{d}}A = 0$$</span></td>
-<td><span class="LaTeX">$${\text{div}}{\boldsymbol B} = 0$$</span></td>
+<td>Gauss’s law for magnetism</td>
+<td><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mo>∘∬</mo><mrow><mi>∂</mi><mi>Ω</mi></mrow></msub><mstyle mathvariant="bold"><mi>𝐁</mi></mstyle><mo>⋅</mo><mspace width="0.167em"></mspace><mtext mathvariant="normal">d</mtext><mi>A</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\mathop{\circ\!\!\!\iint}_{\partial \Omega} \boldsymbol B \cdot \,\text{d}A = 0</annotation></semantics></math></td>
+<td><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">div</mtext><mstyle mathvariant="bold"><mi>𝐁</mi></mstyle><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\text{div}\boldsymbol B = 0</annotation></semantics></math></td>
 </tr>
 <tr class="even">
-<td>Ampère's law</td>
-<td><span class="LaTeX">$$\oint_{\partial A} {\boldsymbol H} \cdot {\,\text{d}}{\boldsymbol s} = \iint_{A} {\boldsymbol j} \cdot {\,\text{d}}{\boldsymbol A} + \iint_{A} \frac{\partial {\boldsymbol D}}{\partial t} \cdot {\,\text{d}}{\boldsymbol A}$$</span></td>
-<td><span class="LaTeX">$${\text{rot}}{\boldsymbol H} = {\boldsymbol j} + \frac{\partial {\boldsymbol D}}{\partial t}$$</span></td>
+<td>Ampère’s law</td>
+<td><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mo>∮</mo><mrow><mi>∂</mi><mi>A</mi></mrow></msub><mstyle mathvariant="bold"><mi>𝐇</mi></mstyle><mo>⋅</mo><mspace width="0.167em"></mspace><mtext mathvariant="normal">d</mtext><mstyle mathvariant="bold"><mi>𝐬</mi></mstyle><mo>=</mo><msub><mo>∬</mo><mi>A</mi></msub><mstyle mathvariant="bold"><mi>𝐣</mi></mstyle><mo>⋅</mo><mspace width="0.167em"></mspace><mtext mathvariant="normal">d</mtext><mstyle mathvariant="bold"><mi>𝐀</mi></mstyle><mo>+</mo><msub><mo>∬</mo><mi>A</mi></msub><mfrac><mrow><mi>∂</mi><mstyle mathvariant="bold"><mi>𝐃</mi></mstyle></mrow><mrow><mi>∂</mi><mi>t</mi></mrow></mfrac><mo>⋅</mo><mspace width="0.167em"></mspace><mtext mathvariant="normal">d</mtext><mstyle mathvariant="bold"><mi>𝐀</mi></mstyle></mrow><annotation encoding="application/x-tex">\oint_{\partial A} \boldsymbol H \cdot \,\text{d}\boldsymbol s = \iint_{A} \boldsymbol j \cdot \,\text{d}\boldsymbol A + \iint_{A} \frac{\partial \boldsymbol D}{\partial t} \cdot \,\text{d}\boldsymbol A</annotation></semantics></math></td>
+<td><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">rot</mtext><mstyle mathvariant="bold"><mi>𝐇</mi></mstyle><mo>=</mo><mstyle mathvariant="bold"><mi>𝐣</mi></mstyle><mo>+</mo><mfrac><mrow><mi>∂</mi><mstyle mathvariant="bold"><mi>𝐃</mi></mstyle></mrow><mrow><mi>∂</mi><mi>t</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\text{rot}\boldsymbol H = \boldsymbol j + \frac{\partial \boldsymbol D}{\partial t}</annotation></semantics></math></td>
 </tr>
 </tbody>
 </table>
-<h2 id="gausss-law">Gauss's law</h2>
-<p>Explanation: The differential form states that if there exists electric charge somewhere, then the divergence of <span class="LaTeX">$D$</span> at that point is nonzero, otherwise it is equal to zero. The integral form states that the amount of charge inside a volume <span class="LaTeX">$V$</span> of enclosed charge is equal to the total amount of Electric Flux <span class="LaTeX">$D$</span> exiting the surface <span class="LaTeX">$S$</span>.</p>
+<h2 id="gausss-law">Gauss’s law</h2>
+<p>Explanation: The differential form states that if there exists electric charge somewhere, then the divergence of <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>D</mi><annotation encoding="application/x-tex">D</annotation></semantics></math> at that point is nonzero, otherwise it is equal to zero. The integral form states that the amount of charge inside a volume <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>V</mi><annotation encoding="application/x-tex">V</annotation></semantics></math> of enclosed charge is equal to the total amount of Electric Flux <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>D</mi><annotation encoding="application/x-tex">D</annotation></semantics></math> exiting the surface <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>S</mi><annotation encoding="application/x-tex">S</annotation></semantics></math>.</p>
 
 
     </main>

@@ -10,7 +10,7 @@
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="/low-pass">
+    <link rel="canonical" href="http://localhost:4000/low-pass">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -173,13 +173,37 @@
 
 </p>
 
+
 <!-- Basics -->
+
 <!--    -->
+
+
+
+
+
 <!-- \newcommand{\diff}{\mathop{}\!\mathrm{\vphantom( d}} -->
+
+
+
+
+
 <!-- SI Units -->
 <!--=============================================================== -->
+
+
+
+
+
+
+
+
+
 <!-- KaTeX Tweaks -->
+
+
 <!-- \renewcommand{\boldsymbol}[1]{\mathbf{#1}} -->
+
 <div id="title_def" class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
@@ -192,7 +216,7 @@ A low-pass filter (LPF) is a filter that passes signals with a frequency lower t
 </div>
 </div>
 </div>
-<p>Click on the values to change them! E.g. change &quot;10k&quot; to &quot;20k&quot;. All equations and figures in the step response will adjust immediately!</p>
+<p>Click on the values to change them! E.g. change “10k” to “20k”. All equations and figures in the step response will adjust immediately!</p>
 <p><select id="Filter_Select" onchange="RC_loadSVG()"> <option value="RC">RC</option> <option value="LR">LR</option> </select></p>
 <figure>
 <object class="img-fluid" id="RC_obj" data="res/img/dynamic-images/rc.svg" type="image/svg+xml">
@@ -201,7 +225,7 @@ A low-pass filter (LPF) is a filter that passes signals with a frequency lower t
 Circuit of low-pass filter
 </figcaption>
 </figure>
-<p>Cut-Off Frequency: <span class="LaTeX">$f_c = \frac{1}{2\pi R C} =$</span> <tspan id="F1_val">159 Hz</tspan><br> Time-Constant <tspan title="Time Constant"><span class="LaTeX">$\tau$</span></tspan> <span class="LaTeX">$= RC = \frac{1}{2\pi f_C} =$</span> <tspan id="RC_tau_val">6.28ms</tspan><br> Amplitude at <tspan title="Cut-Off Frequency"><span class="LaTeX">$f_c$</span></tspan> is <span class="LaTeX">$U(f_c)=\frac{U(0)}{\sqrt{2}} =$</span> <tspan id="A1_val">3.54 V</tspan><br> Dynamic: <span class="LaTeX">$I_C = C \cdot \dot U_C$</span></p>
+<p>Cut-Off Frequency: <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mi>c</mi></msub><mo>=</mo><mfrac><mn>1</mn><mrow><mn>2</mn><mi>π</mi><mi>R</mi><mi>C</mi></mrow></mfrac><mo>=</mo></mrow><annotation encoding="application/x-tex">f_c = \frac{1}{2\pi R C} =</annotation></semantics></math> <tspan id="F1_val">159 Hz</tspan><br> Time-Constant <tspan title="Time Constant"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>τ</mi><annotation encoding="application/x-tex">\tau</annotation></semantics></math></tspan> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>=</mo><mi>R</mi><mi>C</mi><mo>=</mo><mfrac><mn>1</mn><mrow><mn>2</mn><mi>π</mi><msub><mi>f</mi><mi>C</mi></msub></mrow></mfrac><mo>=</mo></mrow><annotation encoding="application/x-tex">= RC = \frac{1}{2\pi f_C} =</annotation></semantics></math> <tspan id="RC_tau_val">6.28ms</tspan><br> Amplitude at <tspan title="Cut-Off Frequency"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>f</mi><mi>c</mi></msub><annotation encoding="application/x-tex">f_c</annotation></semantics></math></tspan> is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>f</mi><mi>c</mi></msub><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mfrac><mrow><mi>U</mi><mo stretchy="false" form="prefix">(</mo><mn>0</mn><mo stretchy="false" form="postfix">)</mo></mrow><msqrt><mn>2</mn></msqrt></mfrac><mo>=</mo></mrow><annotation encoding="application/x-tex">U(f_c)=\frac{U(0)}{\sqrt{2}} =</annotation></semantics></math> <tspan id="A1_val">3.54 V</tspan><br> Dynamic: <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>I</mi><mi>C</mi></msub><mo>=</mo><mi>C</mi><mo>⋅</mo><msub><mover><mi>U</mi><mo accent="true">̇</mo></mover><mi>C</mi></msub></mrow><annotation encoding="application/x-tex">I_C = C \cdot \dot U_C</annotation></semantics></math></p>
 <h2 id="filter-response">Filter Response:</h2>
 <p><select id="Response_Select" onchange="RC_updateGraph()"> <option value="SR">Step Response</option> <option value="FR">Frequency Response</option> </select></p>
 <figure>
@@ -210,7 +234,7 @@ Circuit of low-pass filter
 <figcaption class="figure-caption">
 </figcaption>
 </figure>
-<p><span class="LaTeX">$V_{\mathrm{out}} = V_{\mathrm{max}} \left( 1 - \exp( - t/\tau) \right)$</span><br> <span class="LaTeX">$V_{\mathrm{out}}$</span> will reach <span class="LaTeX">$V_{\mathrm{max}}$</span> after 3 to <span class="LaTeX">$4 \tau$</span>.</p>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mstyle mathvariant="normal"><mi>o</mi><mi>u</mi><mi>t</mi></mstyle></msub><mo>=</mo><msub><mi>V</mi><mstyle mathvariant="normal"><mi>m</mi><mi>a</mi><mi>x</mi></mstyle></msub><mrow><mo stretchy="true" form="prefix">(</mo><mn>1</mn><mo>−</mo><mo>exp</mo><mo stretchy="false" form="prefix">(</mo><mo>−</mo><mi>t</mi><mi>/</mi><mi>τ</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">V_{\mathrm{out}} = V_{\mathrm{max}} \left( 1 - \exp( - t/\tau) \right)</annotation></semantics></math><br> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>V</mi><mstyle mathvariant="normal"><mi>o</mi><mi>u</mi><mi>t</mi></mstyle></msub><annotation encoding="application/x-tex">V_{\mathrm{out}}</annotation></semantics></math> will reach <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>V</mi><mstyle mathvariant="normal"><mi>m</mi><mi>a</mi><mi>x</mi></mstyle></msub><annotation encoding="application/x-tex">V_{\mathrm{max}}</annotation></semantics></math> after 3 to <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>4</mn><mi>τ</mi></mrow><annotation encoding="application/x-tex">4 \tau</annotation></semantics></math>.</p>
 <script type="text/javascript">
 var RC_obj;
 var RC_graph;

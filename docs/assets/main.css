@@ -20,9 +20,6 @@ main h4 {
 main h5 {
   margin-top: 0.7em; }
 
-main table {
-  width: auto; }
-
 .collapsed {
   cursor: pointer; }
 
@@ -35,6 +32,13 @@ main table {
 .tabbox .card-header {
   border-bottom: 1px solid rgba(0, 0, 0, 0.125);
   padding: 0.25rem 0.25rem 0.75rem 0.25rem; }
+
+.tabbox .card-body {
+  overflow-x: auto;
+  overflow-y: hidden; }
+
+.tabbox .card-body .tab-content {
+  display: inline-block; }
 
 /*!
  * Bootstrap v4.0.0-beta (https://getbootstrap.com)
@@ -6387,6 +6391,12 @@ li > ol {
 /** Table
  *  ===================================================
  */
+table {
+  display: block;
+  overflow-x: auto;
+  overflow-y: hidden;
+  width: 100%; }
+
 main td, main th {
   border-bottom: 0.1rem solid #d1d1d1;
   text-align: left;
@@ -6424,7 +6434,9 @@ pre {
     border-left: 0.3rem solid #00778a;
     display: block;
     padding: .5rem 1rem;
-    white-space: pre; }
+    white-space: pre;
+    overflow-x: auto;
+    overflow-y: hidden; }
 
 pre.diagram {
   line-height: 1.0rem; }

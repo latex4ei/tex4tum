@@ -10,7 +10,7 @@
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="/float">
+    <link rel="canonical" href="http://localhost:4000/float">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -173,13 +173,37 @@
 
 </p>
 
+
 <!-- Basics -->
+
 <!--    -->
+
+
+
+
+
 <!-- \newcommand{\diff}{\mathop{}\!\mathrm{\vphantom( d}} -->
+
+
+
+
+
 <!-- SI Units -->
 <!--=============================================================== -->
+
+
+
+
+
+
+
+
+
 <!-- KaTeX Tweaks -->
+
+
 <!-- \renewcommand{\boldsymbol}[1]{\mathbf{#1}} -->
+
 <div id="title_def" class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
@@ -192,7 +216,7 @@ Floats represents a
 </div>
 </div>
 </div>
-<p><span class="LaTeX">$$ (-1)^s \cdot 1.m \cdot 2^{e-127} $$</span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mo>−</mo><mn>1</mn><msup><mo stretchy="false" form="postfix">)</mo><mi>s</mi></msup><mo>⋅</mo><mn>1</mn><mi>.</mi><mi>m</mi><mo>⋅</mo><msup><mn>2</mn><mrow><mi>e</mi><mo>−</mo><mn>127</mn></mrow></msup></mrow><annotation encoding="application/x-tex"> (-1)^s \cdot 1.m \cdot 2^{e-127} </annotation></semantics></math></p>
 <table>
 <thead>
 <tr class="header">
@@ -225,7 +249,7 @@ Floats represents a
 </table>
 <p>Example -7 = 1.11 * 2^2</p>
 <h2 id="special-numbers">Special Numbers</h2>
-<p>Floats can also represent signed zeros (<span class="LaTeX">$\pm 0$</span>), infinity <span class="LaTeX">$\pm \infty$</span>, and Not-A-Number (NaN).</p>
+<p>Floats can also represent signed zeros (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>±</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\pm 0</annotation></semantics></math>), infinity <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>±</mo><mi>∞</mi></mrow><annotation encoding="application/x-tex">\pm \infty</annotation></semantics></math>, and Not-A-Number (NaN).</p>
 <table>
 <thead>
 <tr class="header">
@@ -240,16 +264,16 @@ Floats represents a
 <td>Normal</td>
 <td>[0,1]</td>
 <td>[-127,126]</td>
-<td><span class="LaTeX">$[0,2^{23}]$</span></td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">[</mo><mn>0</mn><mo>,</mo><msup><mn>2</mn><mn>23</mn></msup><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">[0,2^{23}]</annotation></semantics></math></td>
 </tr>
 <tr class="even">
-<td><span class="LaTeX">$\pm 0$</span></td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>±</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\pm 0</annotation></semantics></math></td>
 <td>[0,1]</td>
 <td>-128</td>
 <td>0</td>
 </tr>
 <tr class="odd">
-<td><span class="LaTeX">$\pm \infty$</span></td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>±</mo><mi>∞</mi></mrow><annotation encoding="application/x-tex">\pm \infty</annotation></semantics></math></td>
 <td>[0,1]</td>
 <td>127</td>
 <td>0</td>
@@ -264,18 +288,18 @@ Floats represents a
 <td>QNaN</td>
 <td>[0,1]</td>
 <td>127</td>
-<td>!=0 &amp; <abbr title="Most Significant Bit" >MSB</abbr>=1</td>
+<td>!=0 &amp; MSB=1</td>
 </tr>
 <tr class="even">
 <td>SNaN</td>
 <td>[0,1]</td>
 <td>127</td>
-<td>!=0 &amp; <abbr title="Most Significant Bit" >MSB</abbr>=0</td>
+<td>!=0 &amp; MSB=0</td>
 </tr>
 </tbody>
 </table>
 <h2 id="exceptions">Exceptions</h2>
-<p>5 exceptions are supported: • Invalid operation: the result of the operation is a <abbr title="Not a Number" >NaN</abbr> • Division by zero • Overflow: the result of the operation is ±∞ or ±Max depending on the rounding mode • Underflow: the result of the operation is a denormalized number • Inexact result: caused by rounding</p>
+<p>5 exceptions are supported: • Invalid operation: the result of the operation is a NaN • Division by zero • Overflow: the result of the operation is ±∞ or ±Max depending on the rounding mode • Underflow: the result of the operation is a denormalized number • Inexact result: caused by rounding</p>
 <h2 id="subnormal-numbers">Subnormal Numbers</h2>
 <p>If the result of a calculation is smaller than the smallest normal number there are two option:</p>
 <ul>
@@ -283,7 +307,7 @@ Floats represents a
 <li>gradual underflow: subnormal number</li>
 </ul>
 <p>To prevent unwanted behavior by jumping directly to zero, subnormal numbers fill the gap between zero and the smallest normal number.</p>
-<h2 id="not-a-number-nan">Not-A-Number (<abbr title="Not a Number" >NaN</abbr>)</h2>
+<h2 id="not-a-number-nan">Not-A-Number (NaN)</h2>
 
 
     </main>

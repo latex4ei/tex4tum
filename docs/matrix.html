@@ -10,7 +10,7 @@
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="/matrix">
+    <link rel="canonical" href="http://localhost:4000/matrix">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -173,13 +173,37 @@
 
 </p>
 
+
 <!-- Basics -->
+
 <!--    -->
+
+
+
+
+
 <!-- \newcommand{\diff}{\mathop{}\!\mathrm{\vphantom( d}} -->
+
+
+
+
+
 <!-- SI Units -->
 <!--=============================================================== -->
+
+
+
+
+
+
+
+
+
 <!-- KaTeX Tweaks -->
+
+
 <!-- \renewcommand{\boldsymbol}[1]{\mathbf{#1}} -->
+
 <div id="title_def" class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
@@ -192,23 +216,20 @@ A Matrix is a table of math objects.
 </div>
 </div>
 </div>
-<p><span class="LaTeX">${\boldsymbol{A}}=(a_{ij}) \in \mathbb K^{m\times n}$</span> has <span class="LaTeX">$m$</span> rows (index <span class="LaTeX">$i$</span>) and <span class="LaTeX">$n$</span> columns (index <span class="LaTeX">$j$</span>)</p>
-<h5 class="clp_title text-success" data-toggle="collapse" href="#example17">
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathvariant="bold"><mi>𝐀</mi></mstyle><mo>=</mo><mo stretchy="false" form="prefix">(</mo><msub><mi>a</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo stretchy="false" form="postfix">)</mo><mo>∈</mo><msup><mstyle mathvariant="double-struck"><mi>𝕂</mi></mstyle><mrow><mi>m</mi><mo>×</mo><mi>n</mi></mrow></msup></mrow><annotation encoding="application/x-tex">\boldsymbol{A}=(a_{ij}) \in \mathbb K^{m\times n}</annotation></semantics></math> has <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>m</mi><annotation encoding="application/x-tex">m</annotation></semantics></math> rows (index <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>i</mi><annotation encoding="application/x-tex">i</annotation></semantics></math>) and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math> columns (index <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>j</mi><annotation encoding="application/x-tex">j</annotation></semantics></math>)</p>
+<h5 class="clp_title text-success" data-toggle="collapse" href="#example16">
 <i class='fa fa-chart-bar'></i> Example
 </h5>
-<div id='example17' class='example collapse'>
+<div id='example16' class='example collapse'>
 <div class='card border-success mb-1'>
 <div class='card-body'>
 <p class='card-text'>
-A matrix <span class="LaTeX">${\boldsymbol{A}} \in \mathbb K^{2\times 3}$</span> could be <span class="LaTeX">${\boldsymbol{A}} = {\begin{bmatrix}  a &amp; b &amp; c \\ d &amp; e &amp; f \end{bmatrix}}$</span>.
+A matrix <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathvariant="bold"><mi>𝐀</mi></mstyle><mo>∈</mo><msup><mstyle mathvariant="double-struck"><mi>𝕂</mi></mstyle><mrow><mn>2</mn><mo>×</mo><mn>3</mn></mrow></msup></mrow><annotation encoding="application/x-tex">\boldsymbol{A} \in \mathbb K^{2\times 3}</annotation></semantics></math> could be <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathvariant="bold"><mi>𝐀</mi></mstyle><mo>=</mo><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center"><mi>a</mi></mtd><mtd columnalign="center"><mi>b</mi></mtd><mtd columnalign="center"><mi>c</mi></mtd></mtr><mtr><mtd columnalign="center"><mi>d</mi></mtd><mtd columnalign="center"><mi>e</mi></mtd><mtd columnalign="center"><mi>f</mi></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow></mrow><annotation encoding="application/x-tex">\boldsymbol{A} = \begin{bmatrix}  a &amp; b &amp; c \\ d &amp; e &amp; f \end{bmatrix}</annotation></semantics></math>.
 <p>
 </div>
 </div>
 </div>
-<table style="width:17%;">
-<colgroup>
-<col style="width: 16%" />
-</colgroup>
+<table>
 <thead>
 <tr class="header">
 <th>Dimension</th>
@@ -216,10 +237,10 @@ A matrix <span class="LaTeX">${\boldsymbol{A}} \in \mathbb K^{2\times 3}$</span>
 </thead>
 <tbody>
 <tr class="odd">
-<td><span class="LaTeX">$\dim \mathbb K = n = {\text{rang}}{\boldsymbol{A}} + \dim{\,\text{ker}}{\boldsymbol{A}}$</span></td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>dim</mo><mstyle mathvariant="double-struck"><mi>𝕂</mi></mstyle><mo>=</mo><mi>n</mi><mo>=</mo><mtext mathvariant="normal">rang</mtext><mstyle mathvariant="bold"><mi>𝐀</mi></mstyle><mo>+</mo><mo>dim</mo><mspace width="0.167em"></mspace><mtext mathvariant="normal">ker</mtext><mstyle mathvariant="bold"><mi>𝐀</mi></mstyle></mrow><annotation encoding="application/x-tex">\dim \mathbb K = n = \text{rang}\boldsymbol{A} + \dim\,\text{ker}\boldsymbol{A}</annotation></semantics></math></td>
 </tr>
 <tr class="even">
-<td><span class="LaTeX">${\text{rang}}{\boldsymbol{A}} = {\text{rang}}{\boldsymbol{A}}^{\top}$</span></td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">rang</mtext><mstyle mathvariant="bold"><mi>𝐀</mi></mstyle><mo>=</mo><mtext mathvariant="normal">rang</mtext><msup><mstyle mathvariant="bold"><mi>𝐀</mi></mstyle><mi>⊤</mi></msup></mrow><annotation encoding="application/x-tex">\text{rang}\boldsymbol{A} = \text{rang}\boldsymbol{A}^{\top}</annotation></semantics></math></td>
 </tr>
 </tbody>
 </table>
@@ -230,21 +251,16 @@ A matrix <span class="LaTeX">${\boldsymbol{A}} \in \mathbb K^{2\times 3}$</span>
 <li><a href="#special-22-matrices">Special 2×2 Matrices</a></li>
 </ul>
 <h2 id="calculations">Calculations</h2>
-<p>For two general matrices <span class="LaTeX">${\boldsymbol{A}}$</span> and <span class="LaTeX">${\boldsymbol{B}}$</span>:</p>
+<p>For two general matrices <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="bold"><mi>𝐀</mi></mstyle><annotation encoding="application/x-tex">\boldsymbol{A}</annotation></semantics></math> and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="bold"><mi>𝐁</mi></mstyle><annotation encoding="application/x-tex">\boldsymbol{B}</annotation></semantics></math>:</p>
 <ul>
-<li><span class="LaTeX">$({\boldsymbol{A}} + {\boldsymbol{B}})^\top = {\boldsymbol{A}}^\top + {\boldsymbol{B}}^\top$</span></li>
-<li><span class="LaTeX">$({\boldsymbol{A}} \cdot {\boldsymbol{B}})^\top = {\boldsymbol{B}}^\top \cdot {\boldsymbol{A}}^\top$</span></li>
-<li><span class="LaTeX">${({\boldsymbol{A}}^\top)}^{-1} = {({\boldsymbol{A}}^{-1})}^\top$</span></li>
-<li><span class="LaTeX">$({\boldsymbol{A}} \cdot {\boldsymbol{B}})^{-1} = {\boldsymbol{B}}^{-1}{\boldsymbol{A}}^{-1}$</span></li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mstyle mathvariant="bold"><mi>𝐀</mi></mstyle><mo>+</mo><mstyle mathvariant="bold"><mi>𝐁</mi></mstyle><msup><mo stretchy="false" form="postfix">)</mo><mi>⊤</mi></msup><mo>=</mo><msup><mstyle mathvariant="bold"><mi>𝐀</mi></mstyle><mi>⊤</mi></msup><mo>+</mo><msup><mstyle mathvariant="bold"><mi>𝐁</mi></mstyle><mi>⊤</mi></msup></mrow><annotation encoding="application/x-tex">(\boldsymbol{A} + \boldsymbol{B})^\top = \boldsymbol{A}^\top + \boldsymbol{B}^\top</annotation></semantics></math></li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mstyle mathvariant="bold"><mi>𝐀</mi></mstyle><mo>⋅</mo><mstyle mathvariant="bold"><mi>𝐁</mi></mstyle><msup><mo stretchy="false" form="postfix">)</mo><mi>⊤</mi></msup><mo>=</mo><msup><mstyle mathvariant="bold"><mi>𝐁</mi></mstyle><mi>⊤</mi></msup><mo>⋅</mo><msup><mstyle mathvariant="bold"><mi>𝐀</mi></mstyle><mi>⊤</mi></msup></mrow><annotation encoding="application/x-tex">(\boldsymbol{A} \cdot \boldsymbol{B})^\top = \boldsymbol{B}^\top \cdot \boldsymbol{A}^\top</annotation></semantics></math></li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mrow><mo stretchy="false" form="prefix">(</mo><msup><mstyle mathvariant="bold"><mi>𝐀</mi></mstyle><mi>⊤</mi></msup><mo stretchy="false" form="postfix">)</mo></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mo>=</mo><msup><mrow><mo stretchy="false" form="prefix">(</mo><msup><mstyle mathvariant="bold"><mi>𝐀</mi></mstyle><mrow><mo>−</mo><mn>1</mn></mrow></msup><mo stretchy="false" form="postfix">)</mo></mrow><mi>⊤</mi></msup></mrow><annotation encoding="application/x-tex">{(\boldsymbol{A}^\top)}^{-1} = {(\boldsymbol{A}^{-1})}^\top</annotation></semantics></math></li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mstyle mathvariant="bold"><mi>𝐀</mi></mstyle><mo>⋅</mo><mstyle mathvariant="bold"><mi>𝐁</mi></mstyle><msup><mo stretchy="false" form="postfix">)</mo><mrow><mo>−</mo><mn>1</mn></mrow></msup><mo>=</mo><msup><mstyle mathvariant="bold"><mi>𝐁</mi></mstyle><mrow><mo>−</mo><mn>1</mn></mrow></msup><msup><mstyle mathvariant="bold"><mi>𝐀</mi></mstyle><mrow><mo>−</mo><mn>1</mn></mrow></msup></mrow><annotation encoding="application/x-tex">(\boldsymbol{A} \cdot \boldsymbol{B})^{-1} = \boldsymbol{B}^{-1}\boldsymbol{A}^{-1}</annotation></semantics></math></li>
 </ul>
 <h3 id="norms">Norms</h3>
-<p><span class="LaTeX">${\boldsymbol{A}} \in {\mathop{\mathbb K}}^{m \times n}, i\in[1,m], j\in[1,n]$</span></p>
-<table style="width:31%;">
-<colgroup>
-<col style="width: 12%" />
-<col style="width: 8%" />
-<col style="width: 9%" />
-</colgroup>
+<p><span class="math inline">$\boldsymbol{A} \in \K^{m \times n}, i\in[1,m], j\in[1,n]$</span></p>
+<table>
 <thead>
 <tr class="header">
 <th>Norm</th>
@@ -255,50 +271,46 @@ A matrix <span class="LaTeX">${\boldsymbol{A}} \in \mathbb K^{2\times 3}$</span>
 <tbody>
 <tr class="odd">
 <td>Gesamtnorm</td>
-<td><span class="LaTeX">${\left\lVert{{\boldsymbol{A}}}\right\rVert}_G$</span></td>
-<td><span class="LaTeX">$\sqrt{mn}\cdot{\tiny\begin{matrix}\ \normalsize \max \[1em] \scriptsize i,j \end{matrix}}{\left\vert{a_{ij}}\right\vert}$</span></td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mrow><mo stretchy="true" form="prefix">∥</mo><mstyle mathvariant="bold"><mi>𝐀</mi></mstyle><mo stretchy="true" form="postfix">∥</mo></mrow><mi>G</mi></msub><annotation encoding="application/x-tex">\left\lVert{\boldsymbol{A}}\right\rVert_G</annotation></semantics></math></td>
+<td><span class="math inline">$\sqrt{mn}\cdot\tiny\begin{matrix}\\ \normalsize \max \\[1em] \scriptsize i,j \end{matrix}\left\vert{a_{ij}}\right\vert$</span></td>
 </tr>
 <tr class="even">
 <td>Zeilennorm (max Zeilensumme)</td>
-<td><span class="LaTeX">${\left\lVert{{\boldsymbol{A}}}\right\rVert}_\infty$</span></td>
-<td><span class="LaTeX">$= {\tiny\begin{matrix}\ \normalsize \max \[1em] \scriptsize i \end{matrix}}\sum\limits_{j=1}^n{\left\vert{a_{ij}}\right\vert}$</span></td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mrow><mo stretchy="true" form="prefix">∥</mo><mstyle mathvariant="bold"><mi>𝐀</mi></mstyle><mo stretchy="true" form="postfix">∥</mo></mrow><mi>∞</mi></msub><annotation encoding="application/x-tex">\left\lVert{\boldsymbol{A}}\right\rVert_\infty</annotation></semantics></math></td>
+<td><span class="math inline">$= \tiny\begin{matrix}\\ \normalsize \max \\[1em] \scriptsize i \end{matrix}\sum\limits_{j=1}^n\left\vert{a_{ij}}\right\vert$</span></td>
 </tr>
 <tr class="odd">
 <td>Spaltennorm (max Spaltensumme)</td>
-<td><span class="LaTeX">${\left\lVert{{\boldsymbol{A}}}\right\rVert}_1$</span></td>
-<td><span class="LaTeX">$= {\tiny\begin{matrix}\ \normalsize \max \[1em] \scriptsize j \end{matrix}}\sum\limits_{i=1}^m{\left\vert{a_{ij}}\right\vert}$</span></td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mrow><mo stretchy="true" form="prefix">∥</mo><mstyle mathvariant="bold"><mi>𝐀</mi></mstyle><mo stretchy="true" form="postfix">∥</mo></mrow><mn>1</mn></msub><annotation encoding="application/x-tex">\left\lVert{\boldsymbol{A}}\right\rVert_1</annotation></semantics></math></td>
+<td><span class="math inline">$= \tiny\begin{matrix}\\ \normalsize \max \\[1em] \scriptsize j \end{matrix}\sum\limits_{i=1}^m\left\vert{a_{ij}}\right\vert$</span></td>
 </tr>
 <tr class="even">
-<td><span class="LaTeX">${\tiny\begin{matrix}\ \normalsize \text{Frobeniusnorm} \[1em] \scriptsize \text{euklidische Norm} \end{matrix}}$</span></td>
-<td><span class="LaTeX">${\left\lVert{{\boldsymbol{A}}}\right\rVert}_E$</span></td>
-<td><span class="LaTeX">$= \sqrt{\sum\limits_{i=1}\sum\limits_{j=1}{\left\vert{a_{ij}}\right\vert}^2}$</span></td>
+<td><span class="math inline">$\tiny\begin{matrix}\\ \normalsize \text{Frobeniusnorm} \\[1em] \scriptsize \text{euklidische Norm} \end{matrix}$</span></td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mrow><mo stretchy="true" form="prefix">∥</mo><mstyle mathvariant="bold"><mi>𝐀</mi></mstyle><mo stretchy="true" form="postfix">∥</mo></mrow><mi>E</mi></msub><annotation encoding="application/x-tex">\left\lVert{\boldsymbol{A}}\right\rVert_E</annotation></semantics></math></td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>=</mo><msqrt><mrow><munder><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow></munder><munder><mo>∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow></munder><msup><mrow><mo stretchy="true" form="prefix">|</mo><msub><mi>a</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo stretchy="true" form="postfix">|</mo></mrow><mn>2</mn></msup></mrow></msqrt></mrow><annotation encoding="application/x-tex">= \sqrt{\sum\limits_{i=1}\sum\limits_{j=1}\left\vert{a_{ij}}\right\vert^2}</annotation></semantics></math></td>
 </tr>
 <tr class="odd">
 <td>Spektralnorm, Hilbertnorm</td>
-<td><span class="LaTeX">${\left\lVert{{\boldsymbol{A}}}\right\rVert}_\lambda$</span></td>
-<td><span class="LaTeX">$= \sqrt{\lambda_\text{max}({\boldsymbol{A}}^\top\cdot{\boldsymbol{A}})}$</span></td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mrow><mo stretchy="true" form="prefix">∥</mo><mstyle mathvariant="bold"><mi>𝐀</mi></mstyle><mo stretchy="true" form="postfix">∥</mo></mrow><mi>λ</mi></msub><annotation encoding="application/x-tex">\left\lVert{\boldsymbol{A}}\right\rVert_\lambda</annotation></semantics></math></td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>=</mo><msqrt><mrow><msub><mi>λ</mi><mtext mathvariant="normal">max</mtext></msub><mo stretchy="false" form="prefix">(</mo><msup><mstyle mathvariant="bold"><mi>𝐀</mi></mstyle><mi>⊤</mi></msup><mo>⋅</mo><mstyle mathvariant="bold"><mi>𝐀</mi></mstyle><mo stretchy="false" form="postfix">)</mo></mrow></msqrt></mrow><annotation encoding="application/x-tex">= \sqrt{\lambda_\text{max}(\boldsymbol{A}^\top\cdot\boldsymbol{A})}</annotation></semantics></math></td>
 </tr>
 </tbody>
 </table>
-<p><span class="LaTeX">$\left({\left\lVert{{\boldsymbol{A}}}\right\rVert}_M = \frac{{\left\lVert{{\boldsymbol{A}}}\right\rVert}_G}{\sqrt{mn}}\right)$</span></p>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">(</mo><msub><mrow><mo stretchy="true" form="prefix">∥</mo><mstyle mathvariant="bold"><mi>𝐀</mi></mstyle><mo stretchy="true" form="postfix">∥</mo></mrow><mi>M</mi></msub><mo>=</mo><mfrac><msub><mrow><mo stretchy="true" form="prefix">∥</mo><mstyle mathvariant="bold"><mi>𝐀</mi></mstyle><mo stretchy="true" form="postfix">∥</mo></mrow><mi>G</mi></msub><msqrt><mrow><mi>m</mi><mi>n</mi></mrow></msqrt></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\left(\left\lVert{\boldsymbol{A}}\right\rVert_M = \frac{\left\lVert{\boldsymbol{A}}\right\rVert_G}{\sqrt{mn}}\right)</annotation></semantics></math></p>
 <h3 id="eigenvalues-and-eigenvectors">Eigenvalues and Eigenvectors</h3>
-<p>Eigenvalues: <span class="LaTeX">$\det({\boldsymbol{A}} - \lambda {\boldsymbol{1}}) = 0$</span> <br> Eigenvectors: <span class="LaTeX">${\,\text{ker}}({\boldsymbol{A}} - \lambda_i {\boldsymbol{1}}) = {\boldsymbol v}_i$</span></p>
+<p>Eigenvalues: <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>det</mo><mo stretchy="false" form="prefix">(</mo><mstyle mathvariant="bold"><mi>𝐀</mi></mstyle><mo>−</mo><mi>λ</mi><mstyle mathvariant="bold"><mn>1</mn></mstyle><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\det(\boldsymbol{A} - \lambda \boldsymbol{1}) = 0</annotation></semantics></math> <br> Eigenvectors: <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mspace width="0.167em"></mspace><mtext mathvariant="normal">ker</mtext><mo stretchy="false" form="prefix">(</mo><mstyle mathvariant="bold"><mi>𝐀</mi></mstyle><mo>−</mo><msub><mi>λ</mi><mi>i</mi></msub><mstyle mathvariant="bold"><mn>1</mn></mstyle><mo stretchy="false" form="postfix">)</mo><mo>=</mo><msub><mstyle mathvariant="bold"><mi>𝐯</mi></mstyle><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">\,\text{ker}(\boldsymbol{A} - \lambda_i \boldsymbol{1}) = \boldsymbol v_i</annotation></semantics></math></p>
 <div data-toggle="collapse" href="#eq_0">
-<p><span class="LaTeX">$${\boldsymbol{A}} {\boldsymbol v} = \lambda {\boldsymbol v}$ \qquad $\det {\boldsymbol{A}} = \prod \lambda_i$ \qquad\ ${\,\text{Sp}}{\boldsymbol{A}} = \sum a_{ii} = \sum \lambda_i$$</span></p>
+<p><span class="math display">$$\boldsymbol{A} \boldsymbol v = \lambda \boldsymbol v$ \qquad $\det \boldsymbol{A} = \prod \lambda_i$ \qquad\ $\,\text{Sp}\boldsymbol{A} = \sum a_{ii} = \sum \lambda_i$$</span></p>
 </div>
 <div id="eq_0" class="legend collapse">
 <div class="card border-info w-75 mx-auto">
 <div class="p-1 small">
-<p>with the Eigenvalue <span class="LaTeX">$\lambda$</span> and the Eigenvector <span class="LaTeX">${\boldsymbol v}$</span>.</p>
+<p>with the Eigenvalue <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>λ</mi><annotation encoding="application/x-tex">\lambda</annotation></semantics></math> and the Eigenvector <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="bold"><mi>𝐯</mi></mstyle><annotation encoding="application/x-tex">\boldsymbol v</annotation></semantics></math>.</p>
 </div>
 </div>
 </div>
 <h2 id="quadratic-matrices">Quadratic Matrices</h2>
-<table style="width:25%;">
-<colgroup>
-<col style="width: 18%" />
-<col style="width: 6%" />
-</colgroup>
+<table>
 <thead>
 <tr class="header">
 <th>Properties</th>
@@ -308,30 +320,30 @@ A matrix <span class="LaTeX">${\boldsymbol{A}} \in \mathbb K^{2\times 3}$</span>
 <tbody>
 <tr class="odd">
 <td>regular</td>
-<td><span class="LaTeX">$\Leftrightarrow \det ({\boldsymbol{A}}) \ne 0 \Leftrightarrow {\text{rang}}{\boldsymbol{A}} = n$</span></td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>⇔</mo><mo>det</mo><mo stretchy="false" form="prefix">(</mo><mstyle mathvariant="bold"><mi>𝐀</mi></mstyle><mo stretchy="false" form="postfix">)</mo><mo>≠</mo><mn>0</mn><mo>⇔</mo><mtext mathvariant="normal">rang</mtext><mstyle mathvariant="bold"><mi>𝐀</mi></mstyle><mo>=</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">\Leftrightarrow \det (\boldsymbol{A}) \ne 0 \Leftrightarrow \text{rang}\boldsymbol{A} = n</annotation></semantics></math></td>
 </tr>
 <tr class="even">
 <td>singular</td>
-<td><span class="LaTeX">$\Leftrightarrow \det ({\boldsymbol{A}}) = 0 \Leftrightarrow {\text{rang}}{\boldsymbol{A}} \ne n$</span></td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>⇔</mo><mo>det</mo><mo stretchy="false" form="prefix">(</mo><mstyle mathvariant="bold"><mi>𝐀</mi></mstyle><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0</mn><mo>⇔</mo><mtext mathvariant="normal">rang</mtext><mstyle mathvariant="bold"><mi>𝐀</mi></mstyle><mo>≠</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">\Leftrightarrow \det (\boldsymbol{A}) = 0 \Leftrightarrow \text{rang}\boldsymbol{A} \ne n</annotation></semantics></math></td>
 </tr>
 <tr class="odd">
 <td>orthogonal</td>
-<td><span class="LaTeX">$\Leftrightarrow {\boldsymbol{A}}^\top={\boldsymbol{A}}^{-1} {\Rightarrow}\det({\boldsymbol{A}}) = \pm 1$</span></td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>⇔</mo><msup><mstyle mathvariant="bold"><mi>𝐀</mi></mstyle><mi>⊤</mi></msup><mo>=</mo><msup><mstyle mathvariant="bold"><mi>𝐀</mi></mstyle><mrow><mo>−</mo><mn>1</mn></mrow></msup><mo>⇒</mo><mo>det</mo><mo stretchy="false" form="prefix">(</mo><mstyle mathvariant="bold"><mi>𝐀</mi></mstyle><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mo>±</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\Leftrightarrow \boldsymbol{A}^\top=\boldsymbol{A}^{-1} \Rightarrow\det(\boldsymbol{A}) = \pm 1</annotation></semantics></math></td>
 </tr>
 <tr class="even">
 <td>symmetric</td>
-<td><span class="LaTeX">${\boldsymbol{A}}={\boldsymbol{A}}^\top$</span> schiefsymmetrisch: <span class="LaTeX">${\boldsymbol{A}}=-{\boldsymbol{A}}^\top$</span></td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathvariant="bold"><mi>𝐀</mi></mstyle><mo>=</mo><msup><mstyle mathvariant="bold"><mi>𝐀</mi></mstyle><mi>⊤</mi></msup></mrow><annotation encoding="application/x-tex">\boldsymbol{A}=\boldsymbol{A}^\top</annotation></semantics></math> schiefsymmetrisch: <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathvariant="bold"><mi>𝐀</mi></mstyle><mo>=</mo><mo>−</mo><msup><mstyle mathvariant="bold"><mi>𝐀</mi></mstyle><mi>⊤</mi></msup></mrow><annotation encoding="application/x-tex">\boldsymbol{A}=-\boldsymbol{A}^\top</annotation></semantics></math></td>
 </tr>
 </tbody>
 </table>
 <h3 id="determinant">Determinant</h3>
-<p>The determinant of a square matrix <span class="LaTeX">${\boldsymbol{A}}$</span> is denoted <span class="LaTeX">$\det({\boldsymbol{A}})$</span>, <span class="LaTeX">$\det {\boldsymbol{A}}$</span>, or <span class="LaTeX">$|A|$</span>. Geometrically, it can be viewed as the volume scaling factor of the linear transformation described by the matrix.</p>
-<p>If <span class="LaTeX">${\boldsymbol{A}}$</span> has <span class="LaTeX">$\ge 2$</span> lin. dependent rows/columns <span class="LaTeX">$\Rightarrow |A|=0$</span>.</p>
-<p><span class="LaTeX">$$\det\begin{pmatrix}A&amp;0\C&amp;D\end{pmatrix}=\det\begin{pmatrix}A&amp;B\0&amp;D\end{pmatrix}=\det(A)\cdot\det(D)$$</span></p>
-<p><span class="LaTeX">$|A|=\sum\limits_{i=1}^n (-1)^{i+j} \cdot a_{ij} \cdot |A_{ij}|$</span></p>
+<p>The determinant of a square matrix <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="bold"><mi>𝐀</mi></mstyle><annotation encoding="application/x-tex">\boldsymbol{A}</annotation></semantics></math> is denoted <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>det</mo><mo stretchy="false" form="prefix">(</mo><mstyle mathvariant="bold"><mi>𝐀</mi></mstyle><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\det(\boldsymbol{A})</annotation></semantics></math>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>det</mo><mstyle mathvariant="bold"><mi>𝐀</mi></mstyle></mrow><annotation encoding="application/x-tex">\det \boldsymbol{A}</annotation></semantics></math>, or <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mi>A</mi><mo stretchy="false" form="prefix">|</mo></mrow><annotation encoding="application/x-tex">|A|</annotation></semantics></math>. Geometrically, it can be viewed as the volume scaling factor of the linear transformation described by the matrix.</p>
+<p>If <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="bold"><mi>𝐀</mi></mstyle><annotation encoding="application/x-tex">\boldsymbol{A}</annotation></semantics></math> has <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>≥</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">\ge 2</annotation></semantics></math> lin. dependent rows/columns <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>⇒</mo><mo stretchy="false" form="prefix">|</mo><mi>A</mi><mo stretchy="false" form="prefix">|</mo><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\Rightarrow |A|=0</annotation></semantics></math>.</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>det</mo><mrow><mo stretchy="true" form="prefix">(</mo><mtable><mtr><mtd columnalign="center"><mi>A</mi></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center"><mi>C</mi></mtd><mtd columnalign="center"><mi>D</mi></mtd></mtr></mtable><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mo>det</mo><mrow><mo stretchy="true" form="prefix">(</mo><mtable><mtr><mtd columnalign="center"><mi>A</mi></mtd><mtd columnalign="center"><mi>B</mi></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mi>D</mi></mtd></mtr></mtable><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mo>det</mo><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mo stretchy="false" form="postfix">)</mo><mo>⋅</mo><mo>det</mo><mo stretchy="false" form="prefix">(</mo><mi>D</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\det\begin{pmatrix}A&amp;0\\C&amp;D\end{pmatrix}=\det\begin{pmatrix}A&amp;B\\0&amp;D\end{pmatrix}=\det(A)\cdot\det(D)</annotation></semantics></math></p>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mi>A</mi><mo stretchy="false" form="prefix">|</mo><mo>=</mo><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mo stretchy="false" form="prefix">(</mo><mo>−</mo><mn>1</mn><msup><mo stretchy="false" form="postfix">)</mo><mrow><mi>i</mi><mo>+</mo><mi>j</mi></mrow></msup><mo>⋅</mo><msub><mi>a</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo>⋅</mo><mo stretchy="false" form="prefix">|</mo><msub><mi>A</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo stretchy="false" form="prefix">|</mo></mrow><annotation encoding="application/x-tex">|A|=\sum\limits_{i=1}^n (-1)^{i+j} \cdot a_{ij} \cdot |A_{ij}|</annotation></semantics></math></p>
 <h3 id="inverse-matrix">Inverse Matrix</h3>
-<p>An <span class="LaTeX">$n \times n$</span> square matrix <span class="LaTeX">${\boldsymbol{A}}$</span> is called invertible (nonsingular) if there exists an <span class="LaTeX">$n \times n$</span> square matrix <span class="LaTeX">${\boldsymbol{B}}$</span> such that</p>
-<p><span class="LaTeX">$${\boldsymbol{A}} \cdot {\boldsymbol{B}} = {\boldsymbol{B}} \cdot {\boldsymbol{A}} = {\boldsymbol{1}}_n$$</span></p>
+<p>An <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>×</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">n \times n</annotation></semantics></math> square matrix <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="bold"><mi>𝐀</mi></mstyle><annotation encoding="application/x-tex">\boldsymbol{A}</annotation></semantics></math> is called invertible (nonsingular) if there exists an <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>×</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">n \times n</annotation></semantics></math> square matrix <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="bold"><mi>𝐁</mi></mstyle><annotation encoding="application/x-tex">\boldsymbol{B}</annotation></semantics></math> such that</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathvariant="bold"><mi>𝐀</mi></mstyle><mo>⋅</mo><mstyle mathvariant="bold"><mi>𝐁</mi></mstyle><mo>=</mo><mstyle mathvariant="bold"><mi>𝐁</mi></mstyle><mo>⋅</mo><mstyle mathvariant="bold"><mi>𝐀</mi></mstyle><mo>=</mo><msub><mstyle mathvariant="bold"><mn>1</mn></mstyle><mi>n</mi></msub></mrow><annotation encoding="application/x-tex">\boldsymbol{A} \cdot \boldsymbol{B} = \boldsymbol{B} \cdot \boldsymbol{A} = \boldsymbol{1}_n</annotation></semantics></math></p>
 <h5 class="clp_title text-warning" data-toggle="collapse" href="#expl15">
 <i class='fa fa-comment-dots'></i> Explanation
 </h5>
@@ -339,34 +351,34 @@ A matrix <span class="LaTeX">${\boldsymbol{A}} \in \mathbb K^{2\times 3}$</span>
 <div class='card border-warning mb-1'>
 <div class='card-body'>
 <p class='card-text'>
-Eine Matrix heißt singulär, wenn ihre Spaltenvektoren linear abhängig voneinander sind. Daraus folgt, dass der Bildraum mindestens eine Dimension weniger hat als der Abbildungsraum, da die Spaltenvektoren den <span class="LaTeX">${\mathop{\mathbb R}}^n$</span> nicht mehr erzeugen können und keine Basis mehr zum <span class="LaTeX">${\mathop{\mathbb R}}^n$</span> darstellen. Hat man nun einen Bildpunkt im <span class="LaTeX">${\mathop{\mathbb R}}^{n-1}$</span> gegeben, so lässt sich nicht mehr sagen, von wo aus dem <span class="LaTeX">${\mathop{\mathbb R}}^n$</span> dieser Punkt auf den Bildraum <span class="LaTeX">${\mathop{\mathbb R}}^{n-1}$</span> abgebildet worden ist, da er ja durch unendlich verschiedene Linearkombination der Spaltenvektoren erreicht werden kann. Die Abbildung lässt sich deshalb nicht mehr umkehren, die Matrix ist nicht invertierbar, die Determinante ist null.
+Eine Matrix heißt singulär, wenn ihre Spaltenvektoren linear abhängig voneinander sind. Daraus folgt, dass der Bildraum mindestens eine Dimension weniger hat als der Abbildungsraum, da die Spaltenvektoren den <span class="math inline">$\R^n$</span> nicht mehr erzeugen können und keine Basis mehr zum <span class="math inline">$\R^n$</span> darstellen. Hat man nun einen Bildpunkt im <span class="math inline">$\R^{n-1}$</span> gegeben, so lässt sich nicht mehr sagen, von wo aus dem <span class="math inline">$\R^n$</span> dieser Punkt auf den Bildraum <span class="math inline">$\R^{n-1}$</span> abgebildet worden ist, da er ja durch unendlich verschiedene Linearkombination der Spaltenvektoren erreicht werden kann. Die Abbildung lässt sich deshalb nicht mehr umkehren, die Matrix ist nicht invertierbar, die Determinante ist null.
 <p>
 </div>
 </div>
 </div>
-<h3 id="rotation-matrix-of-mathopmathbb-r3">Rotation Matrix of <span class="LaTeX">${\mathop{\mathbb R}}^3$</span></h3>
-<p>for rotations in a right-handed coordinate system <span class="LaTeX">$XYZ$</span>.</p>
-<p><span class="LaTeX">$$\begin{matrix} 
+<h3 id="rotation-matrix-of-r3">Rotation Matrix of <span class="math inline">$\R^3$</span></h3>
+<p>for rotations in a right-handed coordinate system <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi><mi>Y</mi><mi>Z</mi></mrow><annotation encoding="application/x-tex">XYZ</annotation></semantics></math>.</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="center"><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mo>cos</mo><mi>α</mi></mtd><mtd columnalign="center"><mo>−</mo><mo>sin</mo><mi>α</mi></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mo>sin</mo><mi>α</mi></mtd><mtd columnalign="center"><mo>cos</mo><mi>α</mi></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow></mtd><mtd columnalign="center"><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center"><mo>cos</mo><mi>α</mi></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mo>sin</mo><mi>α</mi></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center"><mo>−</mo><mo>sin</mo><mi>α</mi></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mo>cos</mo><mi>α</mi></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow></mtd><mtd columnalign="center"><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center"><mo>cos</mo><mi>α</mi></mtd><mtd columnalign="center"><mo>−</mo><mo>sin</mo><mi>α</mi></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center"><mo>sin</mo><mi>α</mi></mtd><mtd columnalign="center"><mo>cos</mo><mi>α</mi></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow></mtd></mtr><mtr><mtd columnalign="center"><msub><mstyle mathvariant="bold"><mi>𝐑</mi></mstyle><mi>x</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>α</mi><mo stretchy="false" form="postfix">)</mo></mtd><mtd columnalign="center"><msub><mstyle mathvariant="bold"><mi>𝐑</mi></mstyle><mi>y</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>α</mi><mo stretchy="false" form="postfix">)</mo></mtd><mtd columnalign="center"><msub><mstyle mathvariant="bold"><mi>𝐑</mi></mstyle><mi>z</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>α</mi><mo stretchy="false" form="postfix">)</mo></mtd></mtr></mtable><annotation encoding="application/x-tex">\begin{matrix} 
 \begin{bmatrix}
-1 &amp;   0         &amp; 0           \
-0 &amp; \cos \alpha &amp; -\sin \alpha \
+1 &amp;   0         &amp; 0           \\
+0 &amp; \cos \alpha &amp; -\sin \alpha \\
 0 &amp; \sin \alpha &amp;  \cos \alpha
 \end{bmatrix} &amp;
 \begin{bmatrix}
-\cos \alpha  &amp; 0 &amp; \sin \alpha \
-   0         &amp; 1 &amp;  0          \
+\cos \alpha  &amp; 0 &amp; \sin \alpha \\
+   0         &amp; 1 &amp;  0          \\
 -\sin \alpha &amp; 0 &amp; \cos \alpha
 \end{bmatrix} &amp;
 \begin{bmatrix}
-\cos \alpha &amp;-\sin \alpha &amp; 0\
-\sin \alpha &amp; \cos \alpha &amp; 0\
+\cos \alpha &amp;-\sin \alpha &amp; 0\\
+\sin \alpha &amp; \cos \alpha &amp; 0\\
     0       &amp;     0       &amp; 1
-\end{bmatrix} \
-{\boldsymbol{R}}_x(\alpha) &amp;
-{\boldsymbol{R}}_y(\alpha) &amp;
-{\boldsymbol{R}}_{z}(\alpha)
+\end{bmatrix} \\
+\boldsymbol{R}_x(\alpha) &amp;
+\boldsymbol{R}_y(\alpha) &amp;
+\boldsymbol{R}_{z}(\alpha)
 \end{matrix}
-$$</span></p>
+</annotation></semantics></math></p>
 <h5 class="clp_title text-warning" data-toggle="collapse" href="#expl16">
 <i class='fa fa-comment-dots'></i> Explanation
 </h5>
@@ -374,24 +386,24 @@ $$</span></p>
 <div class='card border-warning mb-1'>
 <div class='card-body'>
 <p class='card-text'>
-Bei einer Rotationsmatrix stehen die Spaltenvektoren senkrecht aufeinander (orthogonal). Deshalb ist der Bildraum nicht verzerrt da nur die Richtung der Einheitsvektoren verändert wird, allerdings nicht ihre Stellung zueinander. Somit entspricht eine orthogonale Abbildungsmatrix einer Drehung des Koordinatensystems in eine andere Richtung (bezüglich <span class="LaTeX">$n$</span> Freiheitsgraden).
+Bei einer Rotationsmatrix stehen die Spaltenvektoren senkrecht aufeinander (orthogonal). Deshalb ist der Bildraum nicht verzerrt da nur die Richtung der Einheitsvektoren verändert wird, allerdings nicht ihre Stellung zueinander. Somit entspricht eine orthogonale Abbildungsmatrix einer Drehung des Koordinatensystems in eine andere Richtung (bezüglich <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math> Freiheitsgraden).
 <p>
 </div>
 </div>
 </div>
 <h2 id="special-22-matrices">Special 2×2 Matrices</h2>
-<p>For a <span class="LaTeX">$2 \times 2$</span> matrix <span class="LaTeX">${\boldsymbol{A}} = {\begin{bmatrix} a &amp; b \ c &amp; d \end{bmatrix}}$</span> the following rules hold:</p>
-<p>Determinant: <span class="LaTeX">$\det({\boldsymbol{A}}) = ad - bc$</span></p>
-<p>Trace (ger. „Spur“): <span class="LaTeX">${\,\text{Sp}}({\boldsymbol{A}}) = a+d$</span></p>
-<p>Inverse: <span class="LaTeX">$\displaystyle{\begin{bmatrix} a &amp; b \ c &amp; d \end{bmatrix}}^{-1} = \frac{1}{\det {\boldsymbol{A}}} {\begin{bmatrix} d &amp; -b \ -c &amp; a \end{bmatrix}}$</span></p>
+<p>For a <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mo>×</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">2 \times 2</annotation></semantics></math> matrix <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathvariant="bold"><mi>𝐀</mi></mstyle><mo>=</mo><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center"><mi>a</mi></mtd><mtd columnalign="center"><mi>b</mi></mtd></mtr><mtr><mtd columnalign="center"><mi>c</mi></mtd><mtd columnalign="center"><mi>d</mi></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow></mrow><annotation encoding="application/x-tex">\boldsymbol{A} = \begin{bmatrix} a &amp; b \\ c &amp; d \end{bmatrix}</annotation></semantics></math> the following rules hold:</p>
+<p>Determinant: <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>det</mo><mo stretchy="false" form="prefix">(</mo><mstyle mathvariant="bold"><mi>𝐀</mi></mstyle><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>a</mi><mi>d</mi><mo>−</mo><mi>b</mi><mi>c</mi></mrow><annotation encoding="application/x-tex">\det(\boldsymbol{A}) = ad - bc</annotation></semantics></math></p>
+<p>Trace (ger. „Spur“): <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mspace width="0.167em"></mspace><mtext mathvariant="normal">Sp</mtext><mo stretchy="false" form="prefix">(</mo><mstyle mathvariant="bold"><mi>𝐀</mi></mstyle><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>a</mi><mo>+</mo><mi>d</mi></mrow><annotation encoding="application/x-tex">\,\text{Sp}(\boldsymbol{A}) = a+d</annotation></semantics></math></p>
+<p>Inverse: <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center"><mi>a</mi></mtd><mtd columnalign="center"><mi>b</mi></mtd></mtr><mtr><mtd columnalign="center"><mi>c</mi></mtd><mtd columnalign="center"><mi>d</mi></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mo>=</mo><mfrac><mn>1</mn><mrow><mo>det</mo><mstyle mathvariant="bold"><mi>𝐀</mi></mstyle></mrow></mfrac><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center"><mi>d</mi></mtd><mtd columnalign="center"><mo>−</mo><mi>b</mi></mtd></mtr><mtr><mtd columnalign="center"><mo>−</mo><mi>c</mi></mtd><mtd columnalign="center"><mi>a</mi></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow></mrow><annotation encoding="application/x-tex">\displaystyle\begin{bmatrix} a &amp; b \\ c &amp; d \end{bmatrix}^{-1} = \frac{1}{\det \boldsymbol{A}} \begin{bmatrix} d &amp; -b \\ -c &amp; a \end{bmatrix}</annotation></semantics></math></p>
 <p><strong>Eigenvalues:</strong></p>
 <div data-toggle="collapse" href="#eq_1">
-<p><span class="LaTeX">$$\lambda_{1/2} = \frac{{\,\text{Sp}}{\boldsymbol{A}}}{2} \pm \sqrt{ \left( \frac{{\,\text{Sp}}{\boldsymbol{A}}}{2} \right)^2 - \det {\boldsymbol{A}} }$$</span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>λ</mi><mrow><mn>1</mn><mi>/</mi><mn>2</mn></mrow></msub><mo>=</mo><mfrac><mrow><mspace width="0.167em"></mspace><mtext mathvariant="normal">Sp</mtext><mstyle mathvariant="bold"><mi>𝐀</mi></mstyle></mrow><mn>2</mn></mfrac><mo>±</mo><msqrt><mrow><msup><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mrow><mspace width="0.167em"></mspace><mtext mathvariant="normal">Sp</mtext><mstyle mathvariant="bold"><mi>𝐀</mi></mstyle></mrow><mn>2</mn></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mn>2</mn></msup><mo>−</mo><mo>det</mo><mstyle mathvariant="bold"><mi>𝐀</mi></mstyle></mrow></msqrt></mrow><annotation encoding="application/x-tex">\lambda_{1/2} = \frac{\,\text{Sp}\boldsymbol{A}}{2} \pm \sqrt{ \left( \frac{\,\text{Sp}\boldsymbol{A}}{2} \right)^2 - \det \boldsymbol{A} }</annotation></semantics></math></p>
 </div>
 <div id="eq_1" class="legend collapse">
 <div class="card border-info w-75 mx-auto">
 <div class="p-1 small">
-<p>with <span class="LaTeX">${\boldsymbol{A}} = {\begin{bmatrix} a &amp; b \ c &amp; d \end{bmatrix}}$</span>, and <span class="LaTeX">${\,\text{Sp}}({\boldsymbol{A}}) = a+d$</span>.</p>
+<p>with <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathvariant="bold"><mi>𝐀</mi></mstyle><mo>=</mo><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center"><mi>a</mi></mtd><mtd columnalign="center"><mi>b</mi></mtd></mtr><mtr><mtd columnalign="center"><mi>c</mi></mtd><mtd columnalign="center"><mi>d</mi></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow></mrow><annotation encoding="application/x-tex">\boldsymbol{A} = \begin{bmatrix} a &amp; b \\ c &amp; d \end{bmatrix}</annotation></semantics></math>, and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mspace width="0.167em"></mspace><mtext mathvariant="normal">Sp</mtext><mo stretchy="false" form="prefix">(</mo><mstyle mathvariant="bold"><mi>𝐀</mi></mstyle><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>a</mi><mo>+</mo><mi>d</mi></mrow><annotation encoding="application/x-tex">\,\text{Sp}(\boldsymbol{A}) = a+d</annotation></semantics></math>.</p>
 </div>
 </div>
 </div>

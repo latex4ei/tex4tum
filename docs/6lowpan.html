@@ -10,7 +10,7 @@
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="/6lowpan">
+    <link rel="canonical" href="http://localhost:4000/6lowpan">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -173,13 +173,37 @@
 
 </p>
 
+
 <!-- Basics -->
+
 <!--    -->
+
+
+
+
+
 <!-- \newcommand{\diff}{\mathop{}\!\mathrm{\vphantom( d}} -->
+
+
+
+
+
 <!-- SI Units -->
 <!--=============================================================== -->
+
+
+
+
+
+
+
+
+
 <!-- KaTeX Tweaks -->
+
+
 <!-- \renewcommand{\boldsymbol}[1]{\mathbf{#1}} -->
+
 <div id="title_def" class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
@@ -187,7 +211,7 @@
 Definition
 </h5>
 <p class="card-text">
-The 6LoWPAN (<abbr title="Internet Protocol version 6" >IPv6</abbr> over Low-power Wireless Personal Area Networks) is an adaptation Layer that enables the use of <abbr title="Internet Protocol version 6" >IPv6</abbr> over low-power IEEE 802.15.4 radio links. In most cases, the 6LoWPAN network is connected to the <abbr title="Internet Protocol version 6" >IPv6</abbr> network using an edge router.
+The 6LoWPAN (IPv6 over Low-power Wireless Personal Area Networks) is an adaptation Layer that enables the use of IPv6 over low-power IEEE 802.15.4 radio links. In most cases, the 6LoWPAN network is connected to the IPv6 network using an edge router.
 </p>
 </div>
 </div>
@@ -204,7 +228,7 @@ Support for 64-bit/16-bit 802.15.4 addressing
 <li><a href="#references">References</a></li>
 </ul>
 <h2 id="header-format">Header Format</h2>
-<p>The 6LoWPAN protocol uses the first byte of the IEEE 802.15.4 encapsulation header stack as a special <em>Dispatch Byte</em>. This Dispatch Byte indicates that the following bytes are a LoWPAN header instead of an <abbr title="Internet Protocol version 6" >IPv6</abbr> header.</p>
+<p>The 6LoWPAN protocol uses the first byte of the IEEE 802.15.4 encapsulation header stack as a special <em>Dispatch Byte</em>. This Dispatch Byte indicates that the following bytes are a LoWPAN header instead of an IPv6 header.</p>
 <table>
 <thead>
 <tr class="header">
@@ -221,18 +245,18 @@ Support for 64-bit/16-bit 802.15.4 addressing
 </tr>
 <tr class="even">
 <td><code>01 000001</code></td>
-<td><abbr title="Internet Protocol version 6" >IPv6</abbr></td>
-<td>Uncompressed <abbr title="Internet Protocol version 6" >IPv6</abbr></td>
+<td>IPv6</td>
+<td>Uncompressed IPv6</td>
 </tr>
 <tr class="odd">
 <td><code>01 000010</code></td>
 <td>HC1</td>
-<td>HC1 compressed <abbr title="Internet Protocol version 6" >IPv6</abbr></td>
+<td>HC1 compressed IPv6</td>
 </tr>
 <tr class="even">
 <td><code>01 1xxxxx</code></td>
 <td>IPHC</td>
-<td>IPHC compressed <abbr title="Internet Protocol version 6" >IPv6</abbr></td>
+<td>IPHC compressed IPv6</td>
 </tr>
 <tr class="odd">
 <td><code>10 xxxxxx</code></td>
@@ -263,17 +287,17 @@ Support for 64-bit/16-bit 802.15.4 addressing
 
 <div class="tab-pane active" id="checkboxid-0" role="tabpanel">
 <p>IPHC/NHC compression was defined in <a href="https://tools.ietf.org/html/rfc6282">RFC 6282</a> in 2011 and updates the older HC1/HC2 compression.</p>
-<p>Structure of a typical 6LoWPAN frame with <abbr title="Internet Protocol version 6" >IPv6</abbr>+UDP:</p>
+<p>Structure of a typical 6LoWPAN frame with IPv6+UDP:</p>
 <pre class="diagram"><code>+--------+---  -  -  ---+----------+---  -  -  ---+--------
-|  IPHC  | Inline <abbr title="Internet Protocol version 6" >IPv6</abbr>  | UDP NHC  | Inline UDP   | Payload
+|  IPHC  | Inline IPv6  | UDP NHC  | Inline UDP   | Payload
 |(2 byte)|  (variable)  | (1 Byte) |  (variable)  |
 +--------+---  -  -  ---+----------+---  -  -  ---+--------</code></pre>
 <h4 id="iphc-format-2-bytes">IPHC Format (2 Bytes)</h4>
-<p>The frame starts with 2 IPHC bytes, where the first byte <em>is</em> the LoWPAN dispatch byte. Therefore the first byte starts with <code>011</code> to indicate IPHC compression. The remaining bits specify the <abbr title="Internet Protocol version 6" >IPv6</abbr> compression.</p>
+<p>The frame starts with 2 IPHC bytes, where the first byte <em>is</em> the LoWPAN dispatch byte. Therefore the first byte starts with <code>011</code> to indicate IPHC compression. The remaining bits specify the IPv6 compression.</p>
 <pre class="diagram"><code>  0                                       1
   0   1   2   3   4   5   6   7   8   9   0   1   2   3   4   5
 +---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
-| 0 | 1 | 1 |  TF   |NH | HLIM  |CID|SAC|  SAM  | M |<abbr title="Digital/Analog Converter" >DAC</abbr>|  DAM  |
+| 0 | 1 | 1 |  TF   |NH | HLIM  |CID|SAC|  SAM  | M |DAC|  DAM  |
 +---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+</code></pre>
 <h5 class="clp_title text-warning" data-toggle="collapse" href="#expl7">
 <i class='fa fa-comment-dots'></i> Explanation of IPHC dispatch byte:
@@ -308,7 +332,7 @@ Support for 64-bit/16-bit 802.15.4 addressing
 <li>10: 16 bits. The first 112 bits of the address are the first 64 bits of the link-local prefix padded with zeros. The following 64 bits are 0000:00ff:fe00:XXXX, where XXXX are the 16 bits carried in-line.</li>
 <li>11: 0 bits. The address is fully elided.</li>
 </ul>
-<p>If SAC/<abbr title="Digital/Analog Converter" >DAC</abbr>=1:</p>
+<p>If SAC/DAC=1:</p>
 <ul>
 <li>00: The UNSPECIFIED address, ::</li>
 <li>01: 64 bits. The address is derived using context information and the 64 bits carried in-line.</li>
@@ -325,7 +349,7 @@ Support for 64-bit/16-bit 802.15.4 addressing
 </dd>
 </dl>
 <h4 id="context-identifier-extension-cie">Context Identifier Extension (CIE)</h4>
-<p>In case CID = 1 in the IPHC bytes, an additional CIE byte directly follows the two IPHC bytes. This CIE byte is used to identify previously exchanged <abbr title="Internet Protocol version 6" >IPv6</abbr> contexts by a 4 bit Source Context Identifier (SCI) and a 4 bit Destination Context Identifier (DCI) instead of 128 bit for each address.</p>
+<p>In case CID = 1 in the IPHC bytes, an additional CIE byte directly follows the two IPHC bytes. This CIE byte is used to identify previously exchanged IPv6 contexts by a 4 bit Source Context Identifier (SCI) and a 4 bit Destination Context Identifier (DCI) instead of 128 bit for each address.</p>
 <pre class="diagram"><code>  0   1   2   3   4   5   6   7
 +---+---+---+---+---+---+---+---+
 |      SCI      |      DCI      |
@@ -333,7 +357,7 @@ Support for 64-bit/16-bit 802.15.4 addressing
 <h4 id="nhc-format">NHC Format</h4>
 <p>Compression formats for different next headers are identified by a variable-length bit-pattern (within one Byte) immediately following the IPHC compressed header.</p>
 <h4 id="udp-lowpan_nhc-format">UDP LOWPAN_NHC Format</h4>
-<p>Bits 0 through 4 represent the NHC ID and '11110' indicates the specific UDP header compression ID.</p>
+<p>Bits 0 through 4 represent the NHC ID and ‘11110’ indicates the specific UDP header compression ID.</p>
 <pre class="diagram"><code>  0   1   2   3   4   5   6   7
 +---+---+---+---+---+---+---+---+
 | 1 | 1 | 1 | 1 | 0 | C |   P   |
@@ -360,7 +384,7 @@ Support for 64-bit/16-bit 802.15.4 addressing
 </div>
 <div class="tab-pane" id="checkboxid-1" role="tabpanel">
 <p>The HC1/HC2 compression was defined in <a href="https://tools.ietf.org/html/rfc4944">RFC 4944</a> in 2007 and is not recommended anymore. It uses two bytes – HC1 for IPv6 and HC2 for UDP – to specify how headers are compressed.</p>
-<p>With this compression it is possible to achieve a very small 7 byte frame for <abbr title="Internet Protocol version 6" >IPv6</abbr> + UDP if all compression mechanisms are used:</p>
+<p>With this compression it is possible to achieve a very small 7 byte frame for IPv6 + UDP if all compression mechanisms are used:</p>
 <ol type="1">
 <li>Dispatch Byte (1 Byte)</li>
 <li>HC1 Byte (1 Byte)</li>
@@ -369,10 +393,10 @@ Support for 64-bit/16-bit 802.15.4 addressing
 <li>UDP Header (3 Byte)</li>
 </ol>
 <h4 id="hc1-compression-byte">HC1 Compression Byte</h4>
-<p>The HC1 byte is used to compress the <abbr title="Internet Protocol version 6" >IPv6</abbr> header.</p>
+<p>The HC1 byte is used to compress the IPv6 header.</p>
 <pre><code>  0   1   2   3   4   5   6   7    
 +---+---+---+---+---+---+---+---+ 
-| <abbr title="Internet Protocol" >IP</abbr>-SA | <abbr title="Internet Protocol" >IP</abbr>-DA |TF |  NH   |HC2| 
+| IP-SA | IP-DA |TF |  NH   |HC2| 
 +---+---+---+---+---+---+---+---+ </code></pre>
 <h5 class="clp_title text-warning" data-toggle="collapse" href="#expl9">
 <i class='fa fa-comment-dots'></i> Explanation of HC1 Byte
@@ -417,13 +441,13 @@ Support for 64-bit/16-bit 802.15.4 addressing
 <p class='card-text'>
 <dl>
 <dt>SP – 1 bit</dt>
-<dd>UDP source port (bit 0): - 0: Not compressed, carried &quot;in-line&quot; - 1: Compressed to 4 bits.
+<dd>UDP source port (bit 0): - 0: Not compressed, carried “in-line” - 1: Compressed to 4 bits.
 </dd>
 <dt>DP – 1 bit</dt>
-<dd>UDP destination port (bit 1): - 0: Not compressed, carried &quot;in-line&quot; - 1: Compressed to 4 bits.
+<dd>UDP destination port (bit 1): - 0: Not compressed, carried “in-line” - 1: Compressed to 4 bits.
 </dd>
 <dt>LC – 1 bit</dt>
-<dd>Length (bit 2): - 0: Not compressed, carried &quot;in-line&quot; - 1: length computed from IPv6 header length
+<dd>Length (bit 2): - 0: Not compressed, carried “in-line” - 1: length computed from IPv6 header length
 </dd>
 <dt>Rest – bit 3 to 7</dt>
 <dd>Reserved for future use.
@@ -441,14 +465,14 @@ Support for 64-bit/16-bit 802.15.4 addressing
 <h3 id="routing">Routing</h3>
 <p>6LoWPAN supports two routing methods on different layers.</p>
 <ul>
-<li>Route-over: on layer 3 with <abbr title="Internet Protocol" >IP</abbr> addresses (RPL protocol)</li>
-<li>Mesh-under: on layer 2 with <abbr title="Media Access Control" >MAC</abbr> addresses</li>
+<li>Route-over: on layer 3 with IP addresses (RPL protocol)</li>
+<li>Mesh-under: on layer 2 with MAC addresses</li>
 </ul>
 <h2 id="references">References</h2>
 <ul>
-<li><a href="https://tools.ietf.org/html/rfc4944">IETF RFC 4994: Transmission of <abbr title="Internet Protocol version 6" >IPv6</abbr> Packets over IEEE 802.15.4 Networks</a></li>
-<li><a href="https://tools.ietf.org/html/rfc6282">IETF RFC 6282: Compression Format for <abbr title="Internet Protocol version 6" >IPv6</abbr> Datagrams over IEEE 802.15.4-Based Networks</a></li>
-<li><p><a href="https://tools.ietf.org/html/rfc8025">IETF RFC 8025: <abbr title="Internet Protocol version 6" >IPv6</abbr> over Low-Power Wireless Personal Area Network (6LoWPAN) Paging Dispatch</a></p></li>
+<li><p><a href="https://tools.ietf.org/html/rfc4944">IETF RFC 4994: Transmission of IPv6 Packets over IEEE 802.15.4 Networks</a></p></li>
+<li><p><a href="https://tools.ietf.org/html/rfc6282">IETF RFC 6282: Compression Format for IPv6 Datagrams over IEEE 802.15.4-Based Networks</a></p></li>
+<li><p><a href="https://tools.ietf.org/html/rfc8025">IETF RFC 8025: IPv6 over Low-Power Wireless Personal Area Network (6LoWPAN) Paging Dispatch</a></p></li>
 <li><p><a href="https://www.ietf.org/proceedings/74/slides/6lowpan-2.pdf">IETF Slides</a></p></li>
 </ul>
 

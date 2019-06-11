@@ -10,7 +10,7 @@
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="/numbers">
+    <link rel="canonical" href="http://localhost:4000/numbers">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -173,13 +173,37 @@
 
 </p>
 
+
 <!-- Basics -->
+
 <!--    -->
+
+
+
+
+
 <!-- \newcommand{\diff}{\mathop{}\!\mathrm{\vphantom( d}} -->
+
+
+
+
+
 <!-- SI Units -->
 <!--=============================================================== -->
+
+
+
+
+
+
+
+
+
 <!-- KaTeX Tweaks -->
+
+
 <!-- \renewcommand{\boldsymbol}[1]{\mathbf{#1}} -->
+
 <div id="title_def" class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
@@ -278,31 +302,31 @@ This is a converter for showing numbers in different number systems.
 <td>U8, Char</td>
 <td style="text-align: right;">0</td>
 <td>..</td>
-<td style="text-align: left;"><span class="LaTeX">$255 = 2^8 - 1$</span></td>
+<td style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>255</mn><mo>=</mo><msup><mn>2</mn><mn>8</mn></msup><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">255 = 2^8 - 1</annotation></semantics></math></td>
 </tr>
 <tr class="even">
 <td>U16</td>
 <td style="text-align: right;">0</td>
 <td>..</td>
-<td style="text-align: left;"><span class="LaTeX">$65535 = 2^{16} -1$</span></td>
+<td style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>65535</mn><mo>=</mo><msup><mn>2</mn><mn>16</mn></msup><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">65535 = 2^{16} -1</annotation></semantics></math></td>
 </tr>
 <tr class="odd">
 <td>U32</td>
 <td style="text-align: right;">0</td>
 <td>..</td>
-<td style="text-align: left;"><span class="LaTeX">$4\,294\,967\,295$</span></td>
+<td style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>4</mn><mspace width="0.167em"></mspace><mn>294</mn><mspace width="0.167em"></mspace><mn>967</mn><mspace width="0.167em"></mspace><mn>295</mn></mrow><annotation encoding="application/x-tex">4\,294\,967\,295</annotation></semantics></math></td>
 </tr>
 <tr class="even">
 <td>U64</td>
 <td style="text-align: right;">0</td>
 <td>..</td>
-<td style="text-align: left;"><span class="LaTeX">$18\;446\;744\;073\;709\;551\;615$</span></td>
+<td style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>18</mn><mspace width="0.278em"></mspace><mn>446</mn><mspace width="0.278em"></mspace><mn>744</mn><mspace width="0.278em"></mspace><mn>073</mn><mspace width="0.278em"></mspace><mn>709</mn><mspace width="0.278em"></mspace><mn>551</mn><mspace width="0.278em"></mspace><mn>615</mn></mrow><annotation encoding="application/x-tex">18\;446\;744\;073\;709\;551\;615</annotation></semantics></math></td>
 </tr>
 <tr class="odd">
-<td>U<span class="LaTeX">$x$</span></td>
+<td>U<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math></td>
 <td style="text-align: right;">0</td>
 <td>..</td>
-<td style="text-align: left;"><span class="LaTeX">$2^x - 1$</span></td>
+<td style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mi>x</mi></msup><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">2^x - 1</annotation></semantics></math></td>
 </tr>
 <tr class="even">
 <td>I8</td>
@@ -323,14 +347,14 @@ This is a converter for showing numbers in different number systems.
 <td style="text-align: left;">2.147.483.647</td>
 </tr>
 <tr class="odd">
-<td>I<span class="LaTeX">$x$</span></td>
-<td style="text-align: right;"><span class="LaTeX">$-2^{(x-1)}$</span></td>
+<td>I<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math></td>
+<td style="text-align: right;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>−</mo><msup><mn>2</mn><mrow><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>−</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo></mrow></msup></mrow><annotation encoding="application/x-tex">-2^{(x-1)}</annotation></semantics></math></td>
 <td>..</td>
-<td style="text-align: left;"><span class="LaTeX">$2^{(x-1)} - 1$</span></td>
+<td style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mrow><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>−</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo></mrow></msup><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">2^{(x-1)} - 1</annotation></semantics></math></td>
 </tr>
 </tbody>
 </table>
-<p>Useful approximations: <span class="LaTeX">$2^{10} \approx 1k$</span> <span class="LaTeX">$2^{20} \approx 1M$</span> <span class="LaTeX">$2^{30} \approx 1G$</span></p>
+<p>Useful approximations: <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mn>10</mn></msup><mo>≈</mo><mn>1</mn><mi>k</mi></mrow><annotation encoding="application/x-tex">2^{10} \approx 1k</annotation></semantics></math> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mn>20</mn></msup><mo>≈</mo><mn>1</mn><mi>M</mi></mrow><annotation encoding="application/x-tex">2^{20} \approx 1M</annotation></semantics></math> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mn>30</mn></msup><mo>≈</mo><mn>1</mn><mi>G</mi></mrow><annotation encoding="application/x-tex">2^{30} \approx 1G</annotation></semantics></math></p>
 <h2 id="complement">2-Complement</h2>
 <script type="text/javascript">
     function calculateNumber(e){

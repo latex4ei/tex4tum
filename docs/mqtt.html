@@ -10,7 +10,7 @@
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="/mqtt">
+    <link rel="canonical" href="http://localhost:4000/mqtt">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -173,13 +173,37 @@
 
 </p>
 
+
 <!-- Basics -->
+
 <!--    -->
+
+
+
+
+
 <!-- \newcommand{\diff}{\mathop{}\!\mathrm{\vphantom( d}} -->
+
+
+
+
+
 <!-- SI Units -->
 <!--=============================================================== -->
+
+
+
+
+
+
+
+
+
 <!-- KaTeX Tweaks -->
+
+
 <!-- \renewcommand{\boldsymbol}[1]{\mathbf{#1}} -->
+
 <div id="title_def" class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
@@ -187,7 +211,7 @@
 Definition
 </h5>
 <p class="card-text">
-MQTT is a publish-subscribe-based &quot;lightweight&quot; messaging protocol for use on top of the <abbr title="Transmission Control Protocol" >TCP</abbr>/<abbr title="Internet Protocol" >IP</abbr> protocol.
+MQTT is a publish-subscribe-based “lightweight” messaging protocol for use on top of the TCP/IP protocol.
 </p>
 </div>
 </div>
@@ -196,14 +220,14 @@ MQTT is a publish-subscribe-based &quot;lightweight&quot; messaging protocol for
 <h2 id="features">Features</h2>
 <ul>
 <li>Simple to implement (especially at the sensor side)</li>
-<li><abbr title="Quality of Service" >QoS</abbr> Support</li>
+<li>QoS Support</li>
 <li>Lightweight and bandwidth efficient</li>
 <li>Session awareness</li>
 </ul>
 <h2 id="methods">Methods</h2>
 <ul>
 <li><code>Connect</code>: Waits for a connection to be established with the server.</li>
-<li><code>Disconnect</code>: Waits for the MQTT client to finish any work it must do, and for the <abbr title="Transmission Control Protocol" >TCP</abbr>/<abbr title="Internet Protocol" >IP</abbr> session to disconnect.</li>
+<li><code>Disconnect</code>: Waits for the MQTT client to finish any work it must do, and for the TCP/IP session to disconnect.</li>
 <li><code>Subscribe</code>: Waits for completion of the Subscribe or UnSubscribe method.</li>
 <li><code>UnSubscribe</code>: Requests the server unsubscribe the client from one or more topics.</li>
 <li><code>Publish</code>: Returns immediately to the application thread after passing the request to the MQTT client.</li>
@@ -211,7 +235,7 @@ MQTT is a publish-subscribe-based &quot;lightweight&quot; messaging protocol for
 <li>Keepalive: if no interaction has happened with the broker for a certain amount of time, the client ”pings” the broker (PINGREQ), which “pings it back” (PINGREP).</li>
 </ul>
 <h2 id="publishsubscribe">Publish/Subscribe</h2>
-<p>Sensor publish to topic e.g. <code>deib/antlab/room5/temperature</code> to MQTT broker.</p>
+<p>Sensor publish to topic e.g. <code>deib/antlab/room5/temperature</code> to MQTT broker.</p>
 <p>Clients subscribe on topic. Wildcards (+) allowed for subscription on single topic level.</p>
 <h2 id="protocol">Protocol</h2>
 <p>CONNECT message fields:</p>
@@ -234,10 +258,10 @@ MQTT is a publish-subscribe-based &quot;lightweight&quot; messaging protocol for
 </tr>
 <tr class="even">
 <td>topicName</td>
-<td><code>&quot;matteo/temp&quot;</code></td>
+<td><code>"matteo/temp"</code></td>
 </tr>
 <tr class="odd">
-<td><abbr title="Quality of Service" >QoS</abbr></td>
+<td>QoS</td>
 <td><code>1</code></td>
 </tr>
 <tr class="even">
@@ -246,7 +270,7 @@ MQTT is a publish-subscribe-based &quot;lightweight&quot; messaging protocol for
 </tr>
 <tr class="odd">
 <td>Payload</td>
-<td><code>&quot;temperature:30&quot;</code></td>
+<td><code>"temperature:30"</code></td>
 </tr>
 <tr class="even">
 <td>dupFlag</td>
@@ -255,15 +279,15 @@ MQTT is a publish-subscribe-based &quot;lightweight&quot; messaging protocol for
 </tbody>
 </table>
 <ul>
-<li><abbr title="Quality of Service" >QoS</abbr>
+<li>QoS
 <ul>
-<li>0: at most once: transmitt without <abbr title="ACKnowledgement" >ACK</abbr></li>
-<li>1: at least once: re-transmit until <abbr title="ACKnowledgement" >ACK</abbr></li>
+<li>0: at most once: transmitt without ACK</li>
+<li>1: at least once: re-transmit until ACK</li>
 <li>2: exactly once: broker ckecks for duplicate</li>
 </ul></li>
 </ul>
 <h2 id="references">References</h2>
-<p><abbr title="International Organization for Standardization" >ISO</abbr>/IEC 20922</p>
+<p>ISO/IEC 20922</p>
 <ul>
 <li>http://docs.oasis-open.org/mqtt/mqtt/v3.1.1/mqtt-v3.1.1.html</li>
 <li>http://mqtt.org/</li>

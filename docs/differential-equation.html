@@ -10,7 +10,7 @@
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="/differential-equation">
+    <link rel="canonical" href="http://localhost:4000/differential-equation">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -173,13 +173,37 @@
 
 </p>
 
+
 <!-- Basics -->
+
 <!--    -->
+
+
+
+
+
 <!-- \newcommand{\diff}{\mathop{}\!\mathrm{\vphantom( d}} -->
+
+
+
+
+
 <!-- SI Units -->
 <!--=============================================================== -->
+
+
+
+
+
+
+
+
+
 <!-- KaTeX Tweaks -->
+
+
 <!-- \renewcommand{\boldsymbol}[1]{\mathbf{#1}} -->
+
 <div id="title_def" class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
@@ -194,225 +218,197 @@ A differential equation is a mathematical equation that relates some function wi
 </div>
 <h2 id="differential-equation-of-n-th-order">Differential Equation of n-th Order</h2>
 <div data-toggle="collapse" href="#eq_0">
-<p><span class="LaTeX">$$a_n y^{(n)} + ... + a_1 y&#39; + a_0 y = b_m x^{(m)} + ... + b_1 x&#39; + b_0 x$$</span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mi>n</mi></msub><msup><mi>y</mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo stretchy="false" form="postfix">)</mo></mrow></msup><mo>+</mo><mi>.</mi><mi>.</mi><mi>.</mi><mo>+</mo><msub><mi>a</mi><mn>1</mn></msub><mi>y</mi><mi>′</mi><mo>+</mo><msub><mi>a</mi><mn>0</mn></msub><mi>y</mi><mo>=</mo><msub><mi>b</mi><mi>m</mi></msub><msup><mi>x</mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>m</mi><mo stretchy="false" form="postfix">)</mo></mrow></msup><mo>+</mo><mi>.</mi><mi>.</mi><mi>.</mi><mo>+</mo><msub><mi>b</mi><mn>1</mn></msub><mi>x</mi><mi>′</mi><mo>+</mo><msub><mi>b</mi><mn>0</mn></msub><mi>x</mi></mrow><annotation encoding="application/x-tex">a_n y^{(n)} + ... + a_1 y&#39; + a_0 y = b_m x^{(m)} + ... + b_1 x&#39; + b_0 x</annotation></semantics></math></p>
 </div>
 <div id="eq_0" class="legend collapse">
 <div class="card border-info w-75 mx-auto">
 <div class="p-1 small">
-<p>with the unknown function <span class="LaTeX">$y$</span> and its <span class="LaTeX">$n$</span> derivates <span class="LaTeX">$y&#39;,y&#39;&#39;,...$</span>, the known function <span class="LaTeX">$x$</span> and the coefficients <span class="LaTeX">$a_i, b_j$</span></p>
+<p>with the unknown function <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>y</mi><annotation encoding="application/x-tex">y</annotation></semantics></math> and its <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math> derivates <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi><mi>′</mi><mo>,</mo><mi>y</mi><mi>″</mi><mo>,</mo><mi>.</mi><mi>.</mi><mi>.</mi></mrow><annotation encoding="application/x-tex">y&#39;,y&#39;&#39;,...</annotation></semantics></math>, the known function <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math> and the coefficients <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mi>i</mi></msub><mo>,</mo><msub><mi>b</mi><mi>j</mi></msub></mrow><annotation encoding="application/x-tex">a_i, b_j</annotation></semantics></math></p>
 </div>
 </div>
 </div>
 <h3 id="dgl-systeme">DGL-Systeme</h3>
 <p>Jede DGL lässt sich reduzieren auf ein DGL-System 1. Ordnung:</p>
 <ol type="1">
-<li><p>Substituiere <span class="LaTeX">$x_i := y^{(i-1)}$</span> und drücke <span class="LaTeX">$\dot x_i$</span> durch <span class="LaTeX">$x_1,...,x_n$</span> aus.</br> <span class="LaTeX">${\Rightarrow}$</span>  mit <span class="LaTeX">${\boldsymbol x}_{{\rm}ges} = {\boldsymbol x}_{{\rm}hom} + {\boldsymbol x}_{{\rm}part}$</span></br> Hom. Lösung: 1. Bestimme EW <span class="LaTeX">$\lambda_i$</span> und Basis aus EV <span class="LaTeX">${\boldsymbol b}_i$</span> von <span class="LaTeX">${\boldsymbol{A}}$</span></p></li>
-<li><p><span class="LaTeX">${\boldsymbol x}_{{\rm}hom} = {\boldsymbol c} \cdot e^{(x-x_0){\boldsymbol{A}}} = \sum\limits_{i = 0}^n c_i \cdot e^{\lambda_i x} \cdot {\boldsymbol b}_i$</span></p></li>
+<li><p>Substituiere <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mi>i</mi></msub><mo>:=</mo><msup><mi>y</mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>i</mi><mo>−</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo></mrow></msup></mrow><annotation encoding="application/x-tex">x_i := y^{(i-1)}</annotation></semantics></math> und drücke <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mover><mi>x</mi><mo accent="true">̇</mo></mover><mi>i</mi></msub><annotation encoding="application/x-tex">\dot x_i</annotation></semantics></math> durch <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><mi>.</mi><mi>.</mi><mi>.</mi><mo>,</mo><msub><mi>x</mi><mi>n</mi></msub></mrow><annotation encoding="application/x-tex">x_1,...,x_n</annotation></semantics></math> aus.</br> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>⇒</mo><annotation encoding="application/x-tex">\Rightarrow</annotation></semantics></math>  mit <span class="math inline">$\boldsymbol x_{\rm ges} = \boldsymbol x_{\rm hom} + \boldsymbol x_{\rm part}$</span></br> Hom. Lösung: 1. Bestimme EW <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>λ</mi><mi>i</mi></msub><annotation encoding="application/x-tex">\lambda_i</annotation></semantics></math> und Basis aus EV <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mstyle mathvariant="bold"><mi>𝐛</mi></mstyle><mi>i</mi></msub><annotation encoding="application/x-tex">\boldsymbol b_i</annotation></semantics></math> von <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="bold"><mi>𝐀</mi></mstyle><annotation encoding="application/x-tex">\boldsymbol{A}</annotation></semantics></math></p></li>
+<li><p><span class="math inline">$\boldsymbol x_{\rm hom} = \boldsymbol c \cdot e^{(x-x_0)\boldsymbol{A}} = \sum\limits_{i = 0}^n c_i \cdot e^{\lambda_i x} \cdot \boldsymbol b_i$</span></p></li>
 <li><p>Bestimmung der Konstanten durch einsetzen der Anfangsbedingungen!</p></li>
 </ol>
 <h2 id="lösen-von-homogenen-dgls-2.-ordnung">Lösen von homogenen DGLs 2. Ordnung</h2>
-<p>Gegeben: Homogene Differnetialgleichungen der Form <span class="LaTeX">${\boldsymbol \dot x} = {\boldsymbol{A}} {\boldsymbol x}$</span> mit Anfangswerten <span class="LaTeX">$x_{0,1}$</span> und <span class="LaTeX">$x_{0,2}$</span></p>
-<p>Depending on the Eigenvalues <span class="LaTeX">$\lambda_1, \lambda_2 \in {\mathop{\mathbb R}}$</span></p>
-<h3 id="if-eigenvalues-are-real-and-inequal-large-lambda_1-ne-lambda_2">1. If Eigenvalues are real and inequal: <span class="LaTeX">$\Large \lambda_1 \ne \lambda_2$</span></h3>
-<p><span class="LaTeX">$$\bigl| \lambda_1 \bigr| &lt; \bigl|\lambda_2 \bigr|   {\Rightarrow}{\boldsymbol q}_2 \text{,,schneller&#39;&#39;} $$</span></p>
-<p><span class="LaTeX">$${\boldsymbol x}(t) = x_{0,1} \cdot \exp(\lambda_1 t) \cdot {\boldsymbol q}_1 + x_{0,2} \cdot \exp(\lambda_2 t) \cdot {\boldsymbol q}_2$$</span></p>
+<p>Gegeben: Homogene Differnetialgleichungen der Form <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathvariant="bold"><mover><mi>𝐱</mi><mo accent="true">̇</mo></mover></mstyle><mo>=</mo><mstyle mathvariant="bold"><mi>𝐀</mi></mstyle><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle></mrow><annotation encoding="application/x-tex">\boldsymbol \dot x = \boldsymbol{A} \boldsymbol x</annotation></semantics></math> mit Anfangswerten <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mrow><mn>0</mn><mo>,</mo><mn>1</mn></mrow></msub><annotation encoding="application/x-tex">x_{0,1}</annotation></semantics></math> und <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mrow><mn>0</mn><mo>,</mo><mn>2</mn></mrow></msub><annotation encoding="application/x-tex">x_{0,2}</annotation></semantics></math></p>
+<p>Depending on the Eigenvalues <span class="math inline">$\lambda_1, \lambda_2 \in \R$</span></p>
+<h3 id="if-eigenvalues-are-real-and-inequal-large-lambda_1-ne-lambda_2">1. If Eigenvalues are real and inequal: <span class="math inline">$\Large \lambda_1 \ne \lambda_2$</span></h3>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo minsize="1.2" maxsize="1.2" stretchy="false" form="prefix">|</mo><msub><mi>λ</mi><mn>1</mn></msub><mo minsize="1.2" maxsize="1.2" stretchy="false" form="prefix">|</mo><mo>&lt;</mo><mo minsize="1.2" maxsize="1.2" stretchy="false" form="prefix">|</mo><msub><mi>λ</mi><mn>2</mn></msub><mo minsize="1.2" maxsize="1.2" stretchy="false" form="prefix">|</mo><mo>⇒</mo><msub><mstyle mathvariant="bold"><mi>𝐪</mi></mstyle><mn>2</mn></msub><mtext mathvariant="normal">,,schneller”</mtext></mrow><annotation encoding="application/x-tex">\bigl| \lambda_1 \bigr| &lt; \bigl|\lambda_2 \bigr|   \Rightarrow\boldsymbol q_2 \text{,,schneller&#39;&#39;} </annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><msub><mi>x</mi><mrow><mn>0</mn><mo>,</mo><mn>1</mn></mrow></msub><mo>⋅</mo><mo>exp</mo><mo stretchy="false" form="prefix">(</mo><msub><mi>λ</mi><mn>1</mn></msub><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>⋅</mo><msub><mstyle mathvariant="bold"><mi>𝐪</mi></mstyle><mn>1</mn></msub><mo>+</mo><msub><mi>x</mi><mrow><mn>0</mn><mo>,</mo><mn>2</mn></mrow></msub><mo>⋅</mo><mo>exp</mo><mo stretchy="false" form="prefix">(</mo><msub><mi>λ</mi><mn>2</mn></msub><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>⋅</mo><msub><mstyle mathvariant="bold"><mi>𝐪</mi></mstyle><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">\boldsymbol x(t) = x_{0,1} \cdot \exp(\lambda_1 t) \cdot \boldsymbol q_1 + x_{0,2} \cdot \exp(\lambda_2 t) \cdot \boldsymbol q_2</annotation></semantics></math></p>
 <style>.img-fluid{height: 4.5em;}</style>
-<table style="width:81%;">
-<colgroup>
-<col style="width: 18%" />
-<col style="width: 12%" />
-<col style="width: 12%" />
-<col style="width: 12%" />
-<col style="width: 25%" />
-</colgroup>
+<table>
 <thead>
 <tr class="header">
-<th>Matrix <span class="LaTeX">$\Lambda$</span></th>
+<th>Matrix <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>Λ</mi><annotation encoding="application/x-tex">\Lambda</annotation></semantics></math></th>
 <th>Eigenwerte</th>
-<th><span class="LaTeX">${\boldsymbol x} = 0$</span></th>
+<th><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\boldsymbol x = 0</annotation></semantics></math></th>
 <th>Name</th>
 <th>Portrait</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><span class="LaTeX">${\begin{bmatrix} \lambda_1 &amp; 0 \\ 0 &amp; \lambda_2 \end{bmatrix}}$</span></td>
-<td><span class="LaTeX">$\lambda_1 \lt 0 \lt \lambda_2$</span></td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center"><msub><mi>λ</mi><mn>1</mn></msub></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><msub><mi>λ</mi><mn>2</mn></msub></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">\begin{bmatrix} \lambda_1 &amp; 0 \\ 0 &amp; \lambda_2 \end{bmatrix}</annotation></semantics></math></td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>λ</mi><mn>1</mn></msub><mo>&lt;</mo><mn>0</mn><mo>&lt;</mo><msub><mi>λ</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">\lambda_1 \lt 0 \lt \lambda_2</annotation></semantics></math></td>
 <td>instable</td>
 <td>Sattelpunkt</td>
 <td><img class='img-fluid' src='/res/img/content-images/math/dgl/PP_Sadle.svg'></td>
 </tr>
 <tr class="even">
 <td></td>
-<td><span class="LaTeX">$\lambda_2 \lt 0, \lambda_1 \lt 0$</span></td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>λ</mi><mn>2</mn></msub><mo>&lt;</mo><mn>0</mn><mo>,</mo><msub><mi>λ</mi><mn>1</mn></msub><mo>&lt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\lambda_2 \lt 0, \lambda_1 \lt 0</annotation></semantics></math></td>
 <td>stable</td>
 <td>Knoten 2</td>
 <td><img class='img-fluid' src='/res/img/content-images/math/dgl/PP_stableNode.svg'></td>
 </tr>
 <tr class="odd">
 <td></td>
-<td><span class="LaTeX">$0 \lt \lambda_1, 0 \lt \lambda_2$</span></td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>&lt;</mo><msub><mi>λ</mi><mn>1</mn></msub><mo>,</mo><mn>0</mn><mo>&lt;</mo><msub><mi>λ</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">0 \lt \lambda_1, 0 \lt \lambda_2</annotation></semantics></math></td>
 <td>instable</td>
 <td>Knoten 2</td>
 <td><img class='img-fluid' src='/res/img/content-images/math/dgl/PP_unstableNode.svg'></td>
 </tr>
 <tr class="even">
-<td><span class="LaTeX">${\begin{bmatrix} 0 &amp; 0 \ 0 &amp; \lambda_2 \end{bmatrix}}$</span></td>
-<td><span class="LaTeX">$\lambda_1 = 0,\ \lambda_2 \lt 0$</span></td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><msub><mi>λ</mi><mn>2</mn></msub></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">\begin{bmatrix} 0 &amp; 0 \\ 0 &amp; \lambda_2 \end{bmatrix}</annotation></semantics></math></td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>λ</mi><mn>1</mn></msub><mo>=</mo><mn>0</mn><mo>,</mo><mspace width="0.222em"></mspace><msub><mi>λ</mi><mn>2</mn></msub><mo>&lt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\lambda_1 = 0,\ \lambda_2 \lt 0</annotation></semantics></math></td>
 <td>stabil</td>
 <td>Kamm</td>
 <td><img class='img-fluid' src='/res/img/content-images/math/dgl/PP_stableLine.svg'></td>
 </tr>
 <tr class="odd">
 <td></td>
-<td><span class="LaTeX">$\lambda_1 = 0,\ \lambda_2 \gt 0$</span></td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>λ</mi><mn>1</mn></msub><mo>=</mo><mn>0</mn><mo>,</mo><mspace width="0.222em"></mspace><msub><mi>λ</mi><mn>2</mn></msub><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\lambda_1 = 0,\ \lambda_2 \gt 0</annotation></semantics></math></td>
 <td>instable</td>
 <td>Kamm</td>
 <td><img class='img-fluid' src='/res/img/content-images/math/dgl/PP_unstableLine.svg'></td>
 </tr>
 </tbody>
 </table>
-<h3 id="if-eigenvalues-are-real-and-equal-large-lambda_1-lambda_2">2. If Eigenvalues are real and equal: <span class="LaTeX">$\Large \lambda_1 = \lambda_2$</span></h3>
-<p><span class="LaTeX">$${\boldsymbol{Q}}&#39; = {\begin{bmatrix}  {\boldsymbol q}&#39;_1 &amp; {\boldsymbol q}&#39;_2 \end{bmatrix}} = {\begin{bmatrix}  -a_{12} &amp; -a_{12} \\ \frac{a_{11} - a_{22}}{2} &amp; \frac{a_{11} - a_{22}}{2} -1  \end{bmatrix}} = {\begin{bmatrix}  {\begin{pmatrix} \text{Eigen-} \\ \text{vektor} \end{pmatrix}} &amp; {\begin{pmatrix} \text{Haupt-} \ \text{vektor} \end{pmatrix}} \end{bmatrix}}$$</span></p>
-<p><span class="LaTeX">$${\boldsymbol x}(t) = \left[ {\boldsymbol{1}} + ({\boldsymbol{A}} - \lambda {\boldsymbol{1}}) \cdot t \right] \cdot \exp(\lambda t) \cdot {\begin{pmatrix} x_{0,1} \ x_{0,2} \end{pmatrix}}$$</span></p>
-<table style="width:81%;">
-<colgroup>
-<col style="width: 18%" />
-<col style="width: 12%" />
-<col style="width: 12%" />
-<col style="width: 12%" />
-<col style="width: 25%" />
-</colgroup>
+<h3 id="if-eigenvalues-are-real-and-equal-large-lambda_1-lambda_2">2. If Eigenvalues are real and equal: <span class="math inline">$\Large \lambda_1 = \lambda_2$</span></h3>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathvariant="bold"><mi>𝐐</mi></mstyle><mi>′</mi><mo>=</mo><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center"><mstyle mathvariant="bold"><mi>𝐪</mi></mstyle><msub><mi>′</mi><mn>1</mn></msub></mtd><mtd columnalign="center"><mstyle mathvariant="bold"><mi>𝐪</mi></mstyle><msub><mi>′</mi><mn>2</mn></msub></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow><mo>=</mo><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center"><mo>−</mo><msub><mi>a</mi><mn>12</mn></msub></mtd><mtd columnalign="center"><mo>−</mo><msub><mi>a</mi><mn>12</mn></msub></mtd></mtr><mtr><mtd columnalign="center"><mfrac><mrow><msub><mi>a</mi><mn>11</mn></msub><mo>−</mo><msub><mi>a</mi><mn>22</mn></msub></mrow><mn>2</mn></mfrac></mtd><mtd columnalign="center"><mfrac><mrow><msub><mi>a</mi><mn>11</mn></msub><mo>−</mo><msub><mi>a</mi><mn>22</mn></msub></mrow><mn>2</mn></mfrac><mo>−</mo><mn>1</mn></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow><mo>=</mo><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center"><mrow><mo stretchy="true" form="prefix">(</mo><mtable><mtr><mtd columnalign="center"><mtext mathvariant="normal">Eigen-</mtext></mtd></mtr><mtr><mtd columnalign="center"><mtext mathvariant="normal">vektor</mtext></mtd></mtr></mtable><mo stretchy="true" form="postfix">)</mo></mrow></mtd><mtd columnalign="center"><mrow><mo stretchy="true" form="prefix">(</mo><mtable><mtr><mtd columnalign="center"><mtext mathvariant="normal">Haupt-</mtext></mtd></mtr><mtr><mtd columnalign="center"><mtext mathvariant="normal">vektor</mtext></mtd></mtr></mtable><mo stretchy="true" form="postfix">)</mo></mrow></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow></mrow><annotation encoding="application/x-tex">\boldsymbol{Q}&#39; = \begin{bmatrix}  \boldsymbol q&#39;_1 &amp; \boldsymbol q&#39;_2 \end{bmatrix} = \begin{bmatrix}  -a_{12} &amp; -a_{12} \\ \frac{a_{11} - a_{22}}{2} &amp; \frac{a_{11} - a_{22}}{2} -1  \end{bmatrix} = \begin{bmatrix}  \begin{pmatrix} \text{Eigen-} \\ \text{vektor} \end{pmatrix} &amp; \begin{pmatrix} \text{Haupt-} \\ \text{vektor} \end{pmatrix} \end{bmatrix}</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mrow><mo stretchy="true" form="prefix">[</mo><mstyle mathvariant="bold"><mn>1</mn></mstyle><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mstyle mathvariant="bold"><mi>𝐀</mi></mstyle><mo>−</mo><mi>λ</mi><mstyle mathvariant="bold"><mn>1</mn></mstyle><mo stretchy="false" form="postfix">)</mo><mo>⋅</mo><mi>t</mi><mo stretchy="true" form="postfix">]</mo></mrow><mo>⋅</mo><mo>exp</mo><mo stretchy="false" form="prefix">(</mo><mi>λ</mi><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>⋅</mo><mrow><mo stretchy="true" form="prefix">(</mo><mtable><mtr><mtd columnalign="center"><msub><mi>x</mi><mrow><mn>0</mn><mo>,</mo><mn>1</mn></mrow></msub></mtd></mtr><mtr><mtd columnalign="center"><msub><mi>x</mi><mrow><mn>0</mn><mo>,</mo><mn>2</mn></mrow></msub></mtd></mtr></mtable><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">\boldsymbol x(t) = \left[ \boldsymbol{1} + (\boldsymbol{A} - \lambda \boldsymbol{1}) \cdot t \right] \cdot \exp(\lambda t) \cdot \begin{pmatrix} x_{0,1} \\ x_{0,2} \end{pmatrix}</annotation></semantics></math></p>
+<table>
 <thead>
 <tr class="header">
-<th>Matrix <span class="LaTeX">$\Lambda$</span></th>
+<th>Matrix <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>Λ</mi><annotation encoding="application/x-tex">\Lambda</annotation></semantics></math></th>
 <th>Eigenwerte</th>
-<th><span class="LaTeX">${\boldsymbol x} = 0$</span></th>
+<th><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\boldsymbol x = 0</annotation></semantics></math></th>
 <th>Name</th>
 <th>Portrait</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><span class="LaTeX">${\begin{bmatrix} \lambda &amp; 0 \ 0 &amp; \lambda \end{bmatrix}}$</span></td>
-<td><span class="LaTeX">$\lambda \lt 0$</span></td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center"><mi>λ</mi></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mi>λ</mi></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">\begin{bmatrix} \lambda &amp; 0 \\ 0 &amp; \lambda \end{bmatrix}</annotation></semantics></math></td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>λ</mi><mo>&lt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\lambda \lt 0</annotation></semantics></math></td>
 <td>stabil</td>
 <td>Knoten 1</td>
 <td><img class='img-fluid' src='/res/img/content-images/math/dgl/PP_stableStarNode.svg'></td>
 </tr>
 <tr class="even">
 <td></td>
-<td><span class="LaTeX">$\lambda \gt 0$</span></td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>λ</mi><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\lambda \gt 0</annotation></semantics></math></td>
 <td>instable</td>
 <td>Knoten 1</td>
 <td><img class='img-fluid' src='/res/img/content-images/math/dgl/PP_unstableStarNode.svg'></td>
 </tr>
 <tr class="odd">
-<td><span class="LaTeX">${\begin{bmatrix} \lambda &amp; 1 \ 0 &amp; \lambda \end{bmatrix}}$</span></td>
-<td><span class="LaTeX">$\lambda \lt 0$</span></td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center"><mi>λ</mi></mtd><mtd columnalign="center"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mi>λ</mi></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">\begin{bmatrix} \lambda &amp; 1 \\ 0 &amp; \lambda \end{bmatrix}</annotation></semantics></math></td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>λ</mi><mo>&lt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\lambda \lt 0</annotation></semantics></math></td>
 <td>stabil</td>
 <td>Knoten 3</td>
 <td><img class='img-fluid' src='/res/img/content-images/math/dgl/PP_stableWhirlNode.svg'></td>
 </tr>
 <tr class="even">
 <td></td>
-<td><span class="LaTeX">$\lambda \gt 0$</span></td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>λ</mi><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\lambda \gt 0</annotation></semantics></math></td>
 <td>instable</td>
 <td>Knoten 3</td>
 <td><img class='img-fluid' src='/res/img/content-images/math/dgl/PP_unstableWhirlNode.svg'></td>
 </tr>
 <tr class="odd">
-<td><span class="LaTeX">${\begin{bmatrix} 0 &amp; 0 \ 0 &amp; 0  \end{bmatrix}}$</span></td>
-<td><span class="LaTeX">$\lambda = 0$</span></td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">\begin{bmatrix} 0 &amp; 0 \\ 0 &amp; 0  \end{bmatrix}</annotation></semantics></math></td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>λ</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\lambda = 0</annotation></semantics></math></td>
 <td>stabil</td>
 <td>Ruheebene</td>
 <td><img class='img-fluid' src='/res/img/content-images/math/dgl/PP_stableZero.svg'></td>
 </tr>
 <tr class="even">
-<td><span class="LaTeX">${\begin{bmatrix} 0 &amp; 1 \ 0 &amp; 0  \end{bmatrix}}$</span></td>
-<td><span class="LaTeX">$\lambda = 0$</span></td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">\begin{bmatrix} 0 &amp; 1 \\ 0 &amp; 0  \end{bmatrix}</annotation></semantics></math></td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>λ</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\lambda = 0</annotation></semantics></math></td>
 <td>instable</td>
 <td>Ruhegerade</td>
 <td><img class='img-fluid' src='/res/img/content-images/math/dgl/PP_unstableZero.svg'> }</td>
 </tr>
 </tbody>
 </table>
-<h3 id="if-eigenvalues-are-complex-and-equal-large-boldsymbollambda_1-boldsymbollambda_2">3. If Eigenvalues are complex and equal: <span class="LaTeX">$\Large {\boldsymbol{\lambda}}_1 = {\boldsymbol{\lambda}}^*_2$</span></h3>
-<p><span class="LaTeX">$${\boldsymbol{\lambda}}_1 = {\boldsymbol{\lambda}}^*_2 = \alpha + \beta j \in {\mathop{\mathbb C}}$$</span></p>
-<p><span class="LaTeX">$${\boldsymbol{Q}}&#39; = {\begin{bmatrix} \Re{{\boldsymbol q}_1} &amp; \Im{{\boldsymbol q}_1} \end{bmatrix}} = {\begin{bmatrix}  {\boldsymbol q}_r &amp; {\boldsymbol q}_j \end{bmatrix}}$$</span></p>
-<p><span class="LaTeX">$$\begin{array}{rl} {\boldsymbol x}(t) &amp; = x_{0,1} \cdot e^{\alpha t} \cdot \left[ \cos (\beta t) {\boldsymbol q}_r - \sin(\beta t) \cdot {\boldsymbol q}_j \right] + \ &amp; +\, x_{0,2} \cdot e^{\alpha t} \cdot \left[ \sin (\beta t) {\boldsymbol q}_r + \cos(\beta t) \cdot {\boldsymbol q}_j \right] \end{array}$$</span></p>
-<table style="width:81%;">
-<colgroup>
-<col style="width: 18%" />
-<col style="width: 12%" />
-<col style="width: 12%" />
-<col style="width: 12%" />
-<col style="width: 25%" />
-</colgroup>
+<h3 id="if-eigenvalues-are-complex-and-equal-large-boldsymbollambda_1-boldsymbollambda_2">3. If Eigenvalues are complex and equal: <span class="math inline">$\Large \boldsymbol{\lambda}_1 = \boldsymbol{\lambda}^*_2$</span></h3>
+<p><span class="math display">$$\boldsymbol{\lambda}_1 = \boldsymbol{\lambda}^*_2 = \alpha + \beta j \in \C$$</span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathvariant="bold"><mi>𝐐</mi></mstyle><mi>′</mi><mo>=</mo><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center"><mi>ℜ</mi><msub><mstyle mathvariant="bold"><mi>𝐪</mi></mstyle><mn>1</mn></msub></mtd><mtd columnalign="center"><mi>ℑ</mi><msub><mstyle mathvariant="bold"><mi>𝐪</mi></mstyle><mn>1</mn></msub></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow><mo>=</mo><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center"><msub><mstyle mathvariant="bold"><mi>𝐪</mi></mstyle><mi>r</mi></msub></mtd><mtd columnalign="center"><msub><mstyle mathvariant="bold"><mi>𝐪</mi></mstyle><mi>j</mi></msub></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow></mrow><annotation encoding="application/x-tex">\boldsymbol{Q}&#39; = \begin{bmatrix} \Re{\boldsymbol q_1} &amp; \Im{\boldsymbol q_1} \end{bmatrix} = \begin{bmatrix}  \boldsymbol q_r &amp; \boldsymbol q_j \end{bmatrix}</annotation></semantics></math></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right"><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mtd><mtd columnalign="left"><mo>=</mo><msub><mi>x</mi><mrow><mn>0</mn><mo>,</mo><mn>1</mn></mrow></msub><mo>⋅</mo><msup><mi>e</mi><mrow><mi>α</mi><mi>t</mi></mrow></msup><mo>⋅</mo><mrow><mo stretchy="true" form="prefix">[</mo><mo>cos</mo><mo stretchy="false" form="prefix">(</mo><mi>β</mi><mi>t</mi><mo stretchy="false" form="postfix">)</mo><msub><mstyle mathvariant="bold"><mi>𝐪</mi></mstyle><mi>r</mi></msub><mo>−</mo><mo>sin</mo><mo stretchy="false" form="prefix">(</mo><mi>β</mi><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>⋅</mo><msub><mstyle mathvariant="bold"><mi>𝐪</mi></mstyle><mi>j</mi></msub><mo stretchy="true" form="postfix">]</mo></mrow><mo>+</mo></mtd></mtr><mtr><mtd columnalign="right"></mtd><mtd columnalign="left"><mo>+</mo><mspace width="0.167em"></mspace><msub><mi>x</mi><mrow><mn>0</mn><mo>,</mo><mn>2</mn></mrow></msub><mo>⋅</mo><msup><mi>e</mi><mrow><mi>α</mi><mi>t</mi></mrow></msup><mo>⋅</mo><mrow><mo stretchy="true" form="prefix">[</mo><mo>sin</mo><mo stretchy="false" form="prefix">(</mo><mi>β</mi><mi>t</mi><mo stretchy="false" form="postfix">)</mo><msub><mstyle mathvariant="bold"><mi>𝐪</mi></mstyle><mi>r</mi></msub><mo>+</mo><mo>cos</mo><mo stretchy="false" form="prefix">(</mo><mi>β</mi><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>⋅</mo><msub><mstyle mathvariant="bold"><mi>𝐪</mi></mstyle><mi>j</mi></msub><mo stretchy="true" form="postfix">]</mo></mrow></mtd></mtr></mtable><annotation encoding="application/x-tex">\begin{array}{rl} \boldsymbol x(t) &amp; = x_{0,1} \cdot e^{\alpha t} \cdot \left[ \cos (\beta t) \boldsymbol q_r - \sin(\beta t) \cdot \boldsymbol q_j \right] + \\ &amp; +\, x_{0,2} \cdot e^{\alpha t} \cdot \left[ \sin (\beta t) \boldsymbol q_r + \cos(\beta t) \cdot \boldsymbol q_j \right] \end{array}</annotation></semantics></math></p>
+<table>
 <thead>
 <tr class="header">
-<th>Matrix <span class="LaTeX">$\Lambda$</span></th>
+<th>Matrix <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>Λ</mi><annotation encoding="application/x-tex">\Lambda</annotation></semantics></math></th>
 <th>Eigenwerte</th>
-<th><span class="LaTeX">${\boldsymbol x} = 0$</span></th>
+<th><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\boldsymbol x = 0</annotation></semantics></math></th>
 <th>Name</th>
 <th>Portrait</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><span class="LaTeX">${\begin{bmatrix} \alpha &amp; -\beta \\  \beta &amp; \alpha \end{bmatrix}}$</span></td>
-<td><span class="LaTeX">$\alpha \lt 0,\ \beta \ne 0$</span></td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center"><mi>α</mi></mtd><mtd columnalign="center"><mo>−</mo><mi>β</mi></mtd></mtr><mtr><mtd columnalign="center"><mi>β</mi></mtd><mtd columnalign="center"><mi>α</mi></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">\begin{bmatrix} \alpha &amp; -\beta \\ \beta &amp; \alpha \end{bmatrix}</annotation></semantics></math></td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi><mo>&lt;</mo><mn>0</mn><mo>,</mo><mspace width="0.222em"></mspace><mi>β</mi><mo>≠</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\alpha \lt 0,\ \beta \ne 0</annotation></semantics></math></td>
 <td>stabil</td>
 <td>Strudel</td>
 <td><img class='img-fluid' src='/res/img/content-images/math/dgl/PP_stableFocus.svg'></td>
 </tr>
 <tr class="even">
 <td></td>
-<td><span class="LaTeX">$\alpha \gt 0,\ \beta \ne 0$</span></td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi><mo>&gt;</mo><mn>0</mn><mo>,</mo><mspace width="0.222em"></mspace><mi>β</mi><mo>≠</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\alpha \gt 0,\ \beta \ne 0</annotation></semantics></math></td>
 <td>instable</td>
 <td>Strudel</td>
 <td><img class='img-fluid' src='/res/img/content-images/math/dgl/PP_unstableFocus.svg'></td>
 </tr>
 <tr class="odd">
-<td><span class="LaTeX">${\begin{bmatrix} 0 &amp; -\beta \\  \beta &amp; 0 \end{bmatrix}}$</span></td>
-<td><span class="LaTeX">$\alpha = 0,\ \beta \ne 0$</span></td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mo>−</mo><mi>β</mi></mtd></mtr><mtr><mtd columnalign="center"><mi>β</mi></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">\begin{bmatrix} 0 &amp; -\beta \\ \beta &amp; 0 \end{bmatrix}</annotation></semantics></math></td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi><mo>=</mo><mn>0</mn><mo>,</mo><mspace width="0.222em"></mspace><mi>β</mi><mo>≠</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\alpha = 0,\ \beta \ne 0</annotation></semantics></math></td>
 <td>stabil</td>
 <td>Wirbel</td>
 <td><img class='img-fluid' src='/res/img/content-images/math/dgl/PP_Whirl.svg'></td>
 </tr>
 </tbody>
 </table>
-<p>Zeitverlauf immer von <span class="LaTeX">${\boldsymbol q}_j$</span> nach <span class="LaTeX">${\boldsymbol q}_r$</span> bzw. von <span class="LaTeX">${\boldsymbol q}_r$</span> nach <span class="LaTeX">$-{\boldsymbol q}_j$</span></p>
+<p>Zeitverlauf immer von <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mstyle mathvariant="bold"><mi>𝐪</mi></mstyle><mi>j</mi></msub><annotation encoding="application/x-tex">\boldsymbol q_j</annotation></semantics></math> nach <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mstyle mathvariant="bold"><mi>𝐪</mi></mstyle><mi>r</mi></msub><annotation encoding="application/x-tex">\boldsymbol q_r</annotation></semantics></math> bzw. von <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mstyle mathvariant="bold"><mi>𝐪</mi></mstyle><mi>r</mi></msub><annotation encoding="application/x-tex">\boldsymbol q_r</annotation></semantics></math> nach <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>−</mo><msub><mstyle mathvariant="bold"><mi>𝐪</mi></mstyle><mi>j</mi></msub></mrow><annotation encoding="application/x-tex">-\boldsymbol q_j</annotation></semantics></math></p>
 <h2 id="lösung-für-inhomogene-dgl">Lösung für inhomogene DGL</h2>
-<p>Inhomogene DGL (<span class="LaTeX">${\boldsymbol v} \ne 0$</span>) mit singulärer Matrix <span class="LaTeX">${\boldsymbol{A}}$</span> (nicht entkoppelbar):</p>
-<table style="width:76%;">
-<colgroup>
-<col style="width: 26%" />
-<col style="width: 12%" />
-<col style="width: 12%" />
-<col style="width: 12%" />
-<col style="width: 12%" />
-</colgroup>
+<p>Inhomogene DGL (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathvariant="bold"><mi>𝐯</mi></mstyle><mo>≠</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\boldsymbol v \ne 0</annotation></semantics></math>) mit singulärer Matrix <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="bold"><mi>𝐀</mi></mstyle><annotation encoding="application/x-tex">\boldsymbol{A}</annotation></semantics></math> (nicht entkoppelbar):</p>
+<table>
 <thead>
 <tr class="header">
-<th>Matrix <span class="LaTeX">$\Lambda$</span></th>
+<th>Matrix <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>Λ</mi><annotation encoding="application/x-tex">\Lambda</annotation></semantics></math></th>
 <th>Eigenwerte</th>
-<th><span class="LaTeX">${\boldsymbol x} = 0$</span></th>
+<th><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\boldsymbol x = 0</annotation></semantics></math></th>
 <th>Name</th>
 <th>Portrait</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><span class="LaTeX">${\begin{bmatrix} 0 &amp; 0 \ 0 &amp; \lambda_2 \end{bmatrix}}$</span></td>
-<td><span class="LaTeX">$\lambda_1 = 0, \lambda_2 \lt 0$</span></td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><msub><mi>λ</mi><mn>2</mn></msub></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">\begin{bmatrix} 0 &amp; 0 \\ 0 &amp; \lambda_2 \end{bmatrix}</annotation></semantics></math></td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>λ</mi><mn>1</mn></msub><mo>=</mo><mn>0</mn><mo>,</mo><msub><mi>λ</mi><mn>2</mn></msub><mo>&lt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\lambda_1 = 0, \lambda_2 \lt 0</annotation></semantics></math></td>
 <td>instable</td>
 <td>Kamm</td>
 <td><img class='img-fluid' src='/res/img/content-images/math/dgl/PP_unstableLine2.svg'></td>
 </tr>
 <tr class="even">
-<td><span class="LaTeX">${\begin{bmatrix} 0 &amp; 1 \ 0 &amp; 0  \end{bmatrix}}$</span></td>
-<td><span class="LaTeX">$\lambda = 0$</span></td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">\begin{bmatrix} 0 &amp; 1 \\ 0 &amp; 0  \end{bmatrix}</annotation></semantics></math></td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>λ</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\lambda = 0</annotation></semantics></math></td>
 <td>instable</td>
 <td>Knoten</td>
 <td><img class='img-fluid' src='/res/img/content-images/math/dgl/PP_unstableZero2.svg'></td>

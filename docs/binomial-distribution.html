@@ -10,7 +10,7 @@
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="/binomial-distribution">
+    <link rel="canonical" href="http://localhost:4000/binomial-distribution">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -178,13 +178,37 @@
 
 </p>
 
+
 <!-- Basics -->
+
 <!--    -->
+
+
+
+
+
 <!-- \newcommand{\diff}{\mathop{}\!\mathrm{\vphantom( d}} -->
+
+
+
+
+
 <!-- SI Units -->
 <!--=============================================================== -->
+
+
+
+
+
+
+
+
+
 <!-- KaTeX Tweaks -->
+
+
 <!-- \renewcommand{\boldsymbol}[1]{\mathbf{#1}} -->
+
 <div id="title_def" class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
@@ -197,7 +221,7 @@ Repeated Bernoulli trials, such as repeated coin tosses.
 </div>
 </div>
 </div>
-<p><strong>Urn Model:</strong> 1 urn with <span class="LaTeX">$N$</span> balls (<span class="LaTeX">$pN$</span> red and <span class="LaTeX">$(1-p)N$</span> black). Probability to draw <span class="LaTeX">$k$</span> red balls with <span class="LaTeX">$n$</span> trials while putting the ball back after each trial.</p>
+<p><strong>Urn Model:</strong> 1 urn with <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>N</mi><annotation encoding="application/x-tex">N</annotation></semantics></math> balls (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mi>N</mi></mrow><annotation encoding="application/x-tex">pN</annotation></semantics></math> red and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mi>p</mi><mo stretchy="false" form="postfix">)</mo><mi>N</mi></mrow><annotation encoding="application/x-tex">(1-p)N</annotation></semantics></math> black). Probability to draw <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>k</mi><annotation encoding="application/x-tex">k</annotation></semantics></math> red balls with <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math> trials while putting the ball back after each trial.</p>
 <table>
 <thead>
 <tr class="header">
@@ -208,34 +232,34 @@ Repeated Bernoulli trials, such as repeated coin tosses.
 <tbody>
 <tr class="odd">
 <td>Notation</td>
-<td><span class="LaTeX">$\text{B}(n, p)$</span></td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">B</mtext><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo>,</mo><mi>p</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\text{B}(n, p)</annotation></semantics></math></td>
 </tr>
 <tr class="even">
 <td>Support</td>
-<td><span class="LaTeX">$k \in \{0, 1, ..., n \}$</span></td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo>∈</mo><mo stretchy="false" form="prefix">{</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mi>.</mi><mi>.</mi><mi>.</mi><mo>,</mo><mi>n</mi><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">k \in \{0, 1, ..., n \}</annotation></semantics></math></td>
 </tr>
 <tr class="odd">
 <td>Mean</td>
-<td><span class="LaTeX">$n \cdot p$</span></td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>⋅</mo><mi>p</mi></mrow><annotation encoding="application/x-tex">n \cdot p</annotation></semantics></math></td>
 </tr>
 <tr class="even">
 <td>Variance</td>
-<td><span class="LaTeX">$np(1-p)$</span></td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mi>p</mi><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mi>p</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">np(1-p)</annotation></semantics></math></td>
 </tr>
 <tr class="odd">
 <td>PMF</td>
-<td><span class="LaTeX">$f(k, n, p) = \binom{n}{k} p^k (1-p)^{n-k}$</span></td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mi>k</mi><mo>,</mo><mi>n</mi><mo>,</mo><mi>p</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><mfrac linethickness="0"><mi>n</mi><mi>k</mi></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><msup><mi>p</mi><mi>k</mi></msup><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mi>p</mi><msup><mo stretchy="false" form="postfix">)</mo><mrow><mi>n</mi><mo>−</mo><mi>k</mi></mrow></msup></mrow><annotation encoding="application/x-tex">f(k, n, p) = \binom{n}{k} p^k (1-p)^{n-k}</annotation></semantics></math></td>
 </tr>
 </tbody>
 </table>
 <h2 id="probability-mass-function">Probability Mass Function</h2>
 <div data-toggle="collapse" href="#eq_0">
-<p><span class="LaTeX">$$f(k, n, p) = {\mathrm{P}}( X = k ) = \binom{n}{k} p^k (1-p)^{n-k}$$</span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mi>k</mi><mo>,</mo><mi>n</mi><mo>,</mo><mi>p</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mstyle mathvariant="normal"><mi>P</mi></mstyle><mo stretchy="false" form="prefix">(</mo><mi>X</mi><mo>=</mo><mi>k</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><mfrac linethickness="0"><mi>n</mi><mi>k</mi></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><msup><mi>p</mi><mi>k</mi></msup><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mi>p</mi><msup><mo stretchy="false" form="postfix">)</mo><mrow><mi>n</mi><mo>−</mo><mi>k</mi></mrow></msup></mrow><annotation encoding="application/x-tex">f(k, n, p) = \mathrm{P}( X = k ) = \binom{n}{k} p^k (1-p)^{n-k}</annotation></semantics></math></p>
 </div>
 <div id="eq_0" class="legend collapse">
 <div class="card border-info w-75 mx-auto">
 <div class="p-1 small">
-<p>with the number of trials <span class="LaTeX">$n$</span>, the number of successes <span class="LaTeX">$k$</span>, and the success probability <span class="LaTeX">$p$</span>.</p>
+<p>with the number of trials <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>, the number of successes <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>k</mi><annotation encoding="application/x-tex">k</annotation></semantics></math>, and the success probability <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>p</mi><annotation encoding="application/x-tex">p</annotation></semantics></math>.</p>
 </div>
 </div>
 </div>
@@ -254,16 +278,16 @@ Binomial Distribution B(k, n, p) over k for n = <span id="bd_n">30</span> and p 
 <label>Input for n</label><br> <input type="range" id="n_range" min="0" max="40" value="30" step="1" list="tickmarks" oninput="update(this)">
 </div>
 </div>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="im">import</span> numpy <span class="im">as</span> np
-<span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt
-<span class="im">import</span> scipy.stats <span class="im">as</span> st
-
-n <span class="op">=</span> <span class="dv">30</span><span class="op">;</span> p1 <span class="op">=</span> <span class="dv">1</span><span class="op">/</span><span class="fl">6.0</span><span class="op">;</span> p2 <span class="op">=</span> <span class="fl">0.5</span><span class="op">;</span>
-
-lx <span class="op">=</span> np.arange(<span class="dv">0</span>,n<span class="op">+</span><span class="dv">1</span>)
-plt.plot(lx, st.binom.pmf(lx, n, p1), label<span class="op">=</span><span class="st">&#39;n= 30, p= 1/6 &#39;</span> )
-plt.plot(lx, st.binom.pmf(lx, n, p2), label<span class="op">=</span><span class="st">&#39;n= 30, p= 1/2 &#39;</span> )
-plt.show()</code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb1-1" title="1"><span class="im">import</span> numpy <span class="im">as</span> np</a>
+<a class="sourceLine" id="cb1-2" title="2"><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</a>
+<a class="sourceLine" id="cb1-3" title="3"><span class="im">import</span> scipy.stats <span class="im">as</span> st</a>
+<a class="sourceLine" id="cb1-4" title="4"></a>
+<a class="sourceLine" id="cb1-5" title="5">n <span class="op">=</span> <span class="dv">30</span><span class="op">;</span> p1 <span class="op">=</span> <span class="dv">1</span><span class="op">/</span><span class="fl">6.0</span><span class="op">;</span> p2 <span class="op">=</span> <span class="fl">0.5</span><span class="op">;</span></a>
+<a class="sourceLine" id="cb1-6" title="6"></a>
+<a class="sourceLine" id="cb1-7" title="7">lx <span class="op">=</span> np.arange(<span class="dv">0</span>,n<span class="op">+</span><span class="dv">1</span>)</a>
+<a class="sourceLine" id="cb1-8" title="8">plt.plot(lx, st.binom.pmf(lx, n, p1), label<span class="op">=</span><span class="st">&#39;n= 30, p= 1/6 &#39;</span> )</a>
+<a class="sourceLine" id="cb1-9" title="9">plt.plot(lx, st.binom.pmf(lx, n, p2), label<span class="op">=</span><span class="st">&#39;n= 30, p= 1/2 &#39;</span> )</a>
+<a class="sourceLine" id="cb1-10" title="10">plt.show()</a></code></pre></div>
 <h2 id="references">References</h2>
 <ul>
 <li><a href="https://blog.cloudera.com/blog/2015/12/common-probability-distributions-the-data-scientists-crib-sheet/">Common Probability Distributions: The Data Scientist’s Crib Sheet</a></li>
