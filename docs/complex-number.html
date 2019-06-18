@@ -10,7 +10,7 @@
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="http://localhost:4000/complex-number">
+    <link rel="canonical" href="/complex-number">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -106,8 +106,7 @@
                     <h6 class="dropdown-header">Display Options</h6>
                     <div class="form-check dropdown-item">
                         <label class="form-check-label">
-                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox"
-                                checked="checked" onchange="Options.changeOption(this)">
+                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox" onchange="Options.changeOption(this)">
                             Definitions
                         </label>
                     </div>
@@ -177,37 +176,13 @@
 
 </p>
 
-
 <!-- Basics -->
-
 <!--    -->
-
-
-
-
-
 <!-- \newcommand{\diff}{\mathop{}\!\mathrm{\vphantom( d}} -->
-
-
-
-
-
 <!-- SI Units -->
 <!--=============================================================== -->
-
-
-
-
-
-
-
-
-
 <!-- KaTeX Tweaks -->
-
-
 <!-- \renewcommand{\boldsymbol}[1]{\mathbf{#1}} -->
-
 <div id="title_def" class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
@@ -221,12 +196,12 @@ Complex numbers extend the concept of the one-dimensional number line to the two
 </div>
 </div>
 <div data-toggle="collapse" href="#eq_0">
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathvariant="bold"><mi>𝐳</mi></mstyle><mo>:=</mo><mi>a</mi><mo>+</mo><mi>b</mi><mtext mathvariant="normal">i</mtext><mo>=</mo><mi>r</mi><mo>⋅</mo><mo>exp</mo><mo stretchy="false" form="prefix">(</mo><mtext mathvariant="normal">i</mtext><mi>φ</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\boldsymbol{z} := a + b\text{i}= r \cdot \exp(\text{i}\varphi)</annotation></semantics></math></p>
+<p><span class="LaTeX">$${\boldsymbol{z}} := a + b{\text{i}}= r \cdot \exp({\text{i}}\varphi)$$</span></p>
 </div>
 <div id="eq_0" class="legend collapse">
 <div class="card border-info w-75 mx-auto">
 <div class="p-1 small">
-<p>with Imaginary Unit <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">i</mtext><mo>=</mo><msqrt><mrow><mo>−</mo><mn>1</mn></mrow></msqrt></mrow><annotation encoding="application/x-tex">\text{i}= \sqrt{-1}</annotation></semantics></math>.</p>
+<p>with Imaginary Unit <span class="LaTeX">${\text{i}}= \sqrt{-1}$</span>.</p>
 </div>
 </div>
 </div>
@@ -237,25 +212,25 @@ Complex numbers extend the concept of the one-dimensional number line to the two
 Complex Plane
 </figcaption>
 </figure>
-<p><strong>Polarkoordinaten:</strong> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathvariant="bold"><mi>𝐳</mi></mstyle><mo>=</mo><mi>r</mi><mo>⋅</mo><mo stretchy="false" form="prefix">(</mo><mo>cos</mo><mo stretchy="false" form="prefix">(</mo><mi>φ</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mstyle mathvariant="bold"><mi>𝐢</mi></mstyle><mo>sin</mo><mo stretchy="false" form="prefix">(</mo><mi>φ</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>r</mi><mo>⋅</mo><msup><mi>e</mi><mrow><mi>φ</mi><mstyle mathvariant="bold"><mi>𝐢</mi></mstyle></mrow></msup></mrow><annotation encoding="application/x-tex">\boldsymbol{z} = r \cdot (\cos(\varphi)+\mathbf{i}\sin(\varphi))=r\cdot e^{\varphi \mathbf{i}}</annotation></semantics></math></p>
+<p><strong>Polarkoordinaten:</strong> <span class="LaTeX">${\boldsymbol{z}} = r \cdot (\cos(\varphi)+\mathbf{i}\sin(\varphi))=r\cdot e^{\varphi \mathbf{i}}$</span></p>
 <div data-toggle="collapse" href="#eq_1">
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><mo>=</mo><mo stretchy="false" form="prefix">|</mo><mstyle mathvariant="bold"><mi>𝐳</mi></mstyle><mo stretchy="false" form="prefix">|</mo><mo>=</mo><msqrt><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>+</mo><msup><mi>b</mi><mn>2</mn></msup></mrow></msqrt><mi>φ</mi><mo>=</mo><mo>arg</mo><mo stretchy="false" form="prefix">(</mo><mstyle mathvariant="bold"><mi>𝐳</mi></mstyle><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mrow><mo stretchy="true" form="prefix">{</mo><mtable><mtr><mtd columnalign="left"><mo>+</mo><mo>arccos</mo><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mi>a</mi><mi>r</mi></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mo>,</mo></mtd><mtd columnalign="left"><mi>b</mi><mo>≥</mo><mn>0</mn></mtd></mtr><mtr><mtd columnalign="left"><mo>−</mo><mo>arccos</mo><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mi>a</mi><mi>r</mi></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mo>,</mo></mtd><mtd columnalign="left"><mi>b</mi><mo>&lt;</mo><mn>0</mn></mtd></mtr></mtable></mrow></mrow><annotation encoding="application/x-tex">r=|\boldsymbol{z}|=\sqrt{a^2+b^2}\varphi=\arg(\boldsymbol{z})=\begin{cases}+\arccos \left( \frac{a}{r}\right),  &amp; b \ge 0 \\  -\arccos \left( \frac{a}{r}\right), &amp; b&lt;0 \end{cases}</annotation></semantics></math></p>
+<p><span class="LaTeX">$$r=|{\boldsymbol{z}}|=\sqrt{a^2+b^2}\varphi=\arg({\boldsymbol{z}})=\begin{cases}+\arccos \left( \frac{a}{r}\right),  &amp; b \ge 0 \\  -\arccos \left( \frac{a}{r}\right), &amp; b&lt;0 \end{cases}$$</span></p>
 </div>
 <div id="eq_1" class="legend collapse">
 <div class="card border-info w-75 mx-auto">
 <div class="p-1 small">
-<p>with <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>φ</mi><mo>∈</mo><mo stretchy="false" form="prefix">[</mo><mn>0</mn><mo>,</mo><mn>2</mn><mi>π</mi><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">\varphi \in [0, 2 \pi]</annotation></semantics></math></p>
+<p>with <span class="LaTeX">$\varphi \in [0, 2 \pi]$</span></p>
 </div>
 </div>
 </div>
 <h2 id="rules">Rules</h2>
-<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mtext mathvariant="normal">i</mtext><mrow><mn>2</mn><mi>n</mi></mrow></msup><mo>=</mo><mo>−</mo><msup><mn>1</mn><mi>n</mi></msup></mrow><annotation encoding="application/x-tex">\text{i}^{2n} = -1^n</annotation></semantics></math>    <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mtext mathvariant="normal">i</mtext><mrow><mn>2</mn><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msup><mo>=</mo><mo>−</mo><msup><mtext mathvariant="normal">i</mtext><mi>n</mi></msup></mrow><annotation encoding="application/x-tex">\text{i}^{2n+1} = -\text{i}^n</annotation></semantics></math>    <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mtext mathvariant="normal">i</mtext><mrow><mo>−</mo><mn>1</mn></mrow></msup><mo>=</mo><mo>−</mo><mtext mathvariant="normal">i</mtext></mrow><annotation encoding="application/x-tex">\text{i}^{-1} = -\text{i}</annotation></semantics></math></p>
-<p>Conjugate: <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mstyle mathvariant="bold"><mi>𝐳</mi></mstyle><mo>*</mo></msup><mo>=</mo><mi>a</mi><mo>−</mo><mi>b</mi><mtext mathvariant="normal">i</mtext></mrow><annotation encoding="application/x-tex">\boldsymbol{z}^{*} = a - b\text{i}</annotation></semantics></math>     <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>exp</mo><mo stretchy="false" form="prefix">(</mo><mover><mrow><mi>i</mi><mi>φ</mi></mrow><mo accent="true">¯</mo></mover><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mo>exp</mo><mo stretchy="false" form="prefix">(</mo><mrow><mo>−</mo><mi>i</mi><mi>φ</mi></mrow><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\exp(\overline{i\varphi}) = \exp({-i\varphi})</annotation></semantics></math> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathvariant="bold"><mi>𝐳</mi></mstyle><mover><mstyle mathvariant="bold"><mi>𝐳</mi></mstyle><mo accent="true">¯</mo></mover><mo>=</mo><msup><mrow><mo stretchy="true" form="prefix">|</mo><mstyle mathvariant="bold"><mi>𝐳</mi></mstyle><mo stretchy="true" form="postfix">|</mo></mrow><mn>2</mn></msup><mo>=</mo><msup><mi>a</mi><mn>2</mn></msup><mo>+</mo><msup><mi>b</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\boldsymbol{z} \overline{\boldsymbol{z}} = \left\vert{\boldsymbol{z}}\right\vert^2 = a^2+b^2</annotation></semantics></math></p>
-<p>Inverse: <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mstyle mathvariant="bold"><mi>𝐳</mi></mstyle><mrow><mo>−</mo><mn>1</mn></mrow></msup><mo>=</mo><mfrac><msup><mstyle mathvariant="bold"><mi>𝐳</mi></mstyle><mo>*</mo></msup><msup><mstyle mathvariant="bold"><mi>𝐳</mi></mstyle><mo>*</mo></msup></mfrac><mstyle mathvariant="bold"><mi>𝐳</mi></mstyle><mo>=</mo><mfrac><mrow><mi>a</mi><mo>−</mo><mi>b</mi><mtext mathvariant="normal">i</mtext></mrow><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>+</mo><msup><mi>b</mi><mn>2</mn></msup></mrow></mfrac></mrow><annotation encoding="application/x-tex">\displaystyle \boldsymbol{z}^{-1} = \frac{\boldsymbol{z}^{*}}{\boldsymbol{z}^{*}} \boldsymbol{z}=\frac{a - b\text{i}}{a^2+b^2}</annotation></semantics></math></p>
-<p><strong>Multiplikation:</strong> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mstyle mathvariant="bold"><mi>𝐳</mi></mstyle><mn>1</mn></msub><mo>⋅</mo><msub><mstyle mathvariant="bold"><mi>𝐳</mi></mstyle><mn>2</mn></msub><mo>=</mo><msub><mi>r</mi><mn>1</mn></msub><msub><mi>r</mi><mn>2</mn></msub><mo stretchy="false" form="prefix">(</mo><mo>cos</mo><mo stretchy="false" form="prefix">(</mo><msub><mi>φ</mi><mn>1</mn></msub><mo>+</mo><msub><mi>φ</mi><mn>2</mn></msub><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mstyle mathvariant="bold"><mi>𝐢</mi></mstyle><mo>sin</mo><mo stretchy="false" form="prefix">(</mo><msub><mi>φ</mi><mn>1</mn></msub><mo>+</mo><msub><mi>φ</mi><mn>2</mn></msub><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\boldsymbol{z}_1\cdot \boldsymbol{z}_2=r_1r_2 ( \cos ( \varphi_1 + \varphi_2) + \mathbf{i} \sin (\varphi_1 + \varphi_2))</annotation></semantics></math></p>
-<p><strong>Division:</strong> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><msub><mstyle mathvariant="bold"><mi>𝐳</mi></mstyle><mn>1</mn></msub><msub><mstyle mathvariant="bold"><mi>𝐳</mi></mstyle><mn>2</mn></msub></mfrac><mo>=</mo><mfrac><msub><mi>r</mi><mn>1</mn></msub><msub><mi>r</mi><mn>2</mn></msub></mfrac><mo stretchy="false" form="prefix">(</mo><mo>cos</mo><mo stretchy="false" form="prefix">(</mo><msub><mi>φ</mi><mn>1</mn></msub><mo>−</mo><msub><mi>φ</mi><mn>2</mn></msub><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mstyle mathvariant="bold"><mi>𝐢</mi></mstyle><mo>sin</mo><mo stretchy="false" form="prefix">(</mo><msub><mi>φ</mi><mn>1</mn></msub><mo>−</mo><msub><mi>φ</mi><mn>2</mn></msub><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\frac{\boldsymbol{z}_1}{\boldsymbol{z}_2}=\frac{r_1}{r_2} ( \cos ( \varphi_1 - \varphi_2) + \mathbf{i} \sin (\varphi_1 - \varphi_2))</annotation></semantics></math></p>
-<p><strong>n-te Potenz:</strong> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mstyle mathvariant="bold"><mi>𝐳</mi></mstyle><mi>n</mi></msup><mo>=</mo><msup><mi>r</mi><mi>n</mi></msup><mo>⋅</mo><msup><mi>e</mi><mrow><mi>n</mi><mi>φ</mi><mstyle mathvariant="bold"><mi>𝐢</mi></mstyle></mrow></msup><mo>=</mo><msup><mi>r</mi><mi>n</mi></msup><mo stretchy="false" form="prefix">(</mo><mo>cos</mo><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mi>φ</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mstyle mathvariant="bold"><mi>𝐢</mi></mstyle><mo>sin</mo><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mi>φ</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\boldsymbol{z}^n=r^n\cdot e^{n\varphi \mathbf{i}}= r^n (\cos (n \varphi) + \mathbf{i} \sin (n \varphi))</annotation></semantics></math></p>
-<p><strong>Logarithmus:</strong> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>ln</mo><mo stretchy="false" form="prefix">(</mo><mstyle mathvariant="bold"><mi>𝐳</mi></mstyle><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mo>ln</mo><mo stretchy="false" form="prefix">(</mo><mi>r</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mstyle mathvariant="bold"><mi>𝐢</mi></mstyle><mo stretchy="false" form="prefix">(</mo><mi>φ</mi><mo>+</mo><mn>2</mn><mi>k</mi><mi>π</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\ln(\boldsymbol{z})=\ln(r) + \mathbf{i}(\varphi + 2k\pi)</annotation></semantics></math> (Nicht eindeutig!)</p>
+<p><span class="LaTeX">${\text{i}}^{2n} = -1^n$</span>    <span class="LaTeX">${\text{i}}^{2n+1} = -{\text{i}}^n$</span>    <span class="LaTeX">${\text{i}}^{-1} = -{\text{i}}$</span></p>
+<p>Conjugate: <span class="LaTeX">${\boldsymbol{z}^{*}} = a - b{\text{i}}$</span>     <span class="LaTeX">$\exp(\overline{i\varphi}) = \exp({-i\varphi})$</span> <span class="LaTeX">${\boldsymbol{z}} {\overline{{\boldsymbol{z}}}} = {\left\vert{{\boldsymbol{z}}}\right\vert}^2 = a^2+b^2$</span></p>
+<p>Inverse: <span class="LaTeX">$\displaystyle {\boldsymbol{z}}^{-1} = \frac{{\boldsymbol{z}^{*}}}{{\boldsymbol{z}^{*}}} {\boldsymbol{z}}=\frac{a - b{\text{i}}}{a^2+b^2}$</span></p>
+<p><strong>Multiplikation:</strong> <span class="LaTeX">${\boldsymbol{z}}_1\cdot {\boldsymbol{z}}_2=r_1r_2 ( \cos ( \varphi_1 + \varphi_2) + \mathbf{i} \sin (\varphi_1 + \varphi_2))$</span></p>
+<p><strong>Division:</strong> <span class="LaTeX">$\frac{{\boldsymbol{z}}_1}{{\boldsymbol{z}}_2}=\frac{r_1}{r_2} ( \cos ( \varphi_1 - \varphi_2) + \mathbf{i} \sin (\varphi_1 - \varphi_2))$</span></p>
+<p><strong>n-te Potenz:</strong> <span class="LaTeX">${\boldsymbol{z}}^n=r^n\cdot e^{n\varphi \mathbf{i}}= r^n (\cos (n \varphi) + \mathbf{i} \sin (n \varphi))$</span></p>
+<p><strong>Logarithmus:</strong> <span class="LaTeX">$\ln({\boldsymbol{z}})=\ln(r) + \mathbf{i}(\varphi + 2k\pi)$</span> (Nicht eindeutig!)</p>
 
 
     </main>

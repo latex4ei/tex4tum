@@ -10,7 +10,7 @@
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="http://localhost:4000/osi">
+    <link rel="canonical" href="/osi">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -106,8 +106,7 @@
                     <h6 class="dropdown-header">Display Options</h6>
                     <div class="form-check dropdown-item">
                         <label class="form-check-label">
-                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox"
-                                checked="checked" onchange="Options.changeOption(this)">
+                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox" onchange="Options.changeOption(this)">
                             Definitions
                         </label>
                     </div>
@@ -173,37 +172,13 @@
 
 </p>
 
-
 <!-- Basics -->
-
 <!--    -->
-
-
-
-
-
 <!-- \newcommand{\diff}{\mathop{}\!\mathrm{\vphantom( d}} -->
-
-
-
-
-
 <!-- SI Units -->
 <!--=============================================================== -->
-
-
-
-
-
-
-
-
-
 <!-- KaTeX Tweaks -->
-
-
 <!-- \renewcommand{\boldsymbol}[1]{\mathbf{#1}} -->
-
 <div id="title_def" class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
@@ -247,7 +222,7 @@ The Open Systems Interconnection model (OSI model) is a conceptual model that ch
 </tr>
 <tr class="odd">
 <td>3</td>
-<td>Network</td>
+<td><a href="/network" >Network</a></td>
 <td>Packet</td>
 </tr>
 <tr class="even">
@@ -267,11 +242,11 @@ The Open Systems Interconnection model (OSI model) is a conceptual model that ch
 <h2 id="presentation">Presentation</h2>
 <p>Translation of data between a networking service and an application; including character encoding, data compression and encryption/decryption</p>
 <h2 id="session">Session</h2>
-<p>Managing communication sessions, i.e. continuous exchange of information in the form of multiple back-and-forth transmissions between two nodes.</p>
+<p>Managing communication sessions, i.e. continuous exchange of information in the form of multiple back-and-forth transmissions between two nodes.</p>
 <h2 id="transport-layer">Transport Layer</h2>
-<p>Reliable transmission of data segments between points on a network, including segmentation, acknowledgement and multiplexing</p>
+<p>Reliable transmission of data segments between points on a <a href="/network" >network</a>, including segmentation, acknowledgement and multiplexing</p>
 <h2 id="network-layer">Network Layer</h2>
-<p>Structuring and managing a multi-node network, including addressing, routing and traffic control</p>
+<p>Structuring and managing a multi-node <a href="/network" >network</a>, including addressing, routing and traffic control</p>
 <h2 id="link-layer">Link Layer</h2>
 <p>Reliable transmission of data frames between two nodes connected by a physical layer</p>
 <h2 id="physical-layer">Physical Layer</h2>

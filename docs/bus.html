@@ -10,7 +10,7 @@
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="http://localhost:4000/bus">
+    <link rel="canonical" href="/bus">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -106,8 +106,7 @@
                     <h6 class="dropdown-header">Display Options</h6>
                     <div class="form-check dropdown-item">
                         <label class="form-check-label">
-                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox"
-                                checked="checked" onchange="Options.changeOption(this)">
+                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox" onchange="Options.changeOption(this)">
                             Definitions
                         </label>
                     </div>
@@ -171,37 +170,13 @@
 
 </p>
 
-
 <!-- Basics -->
-
 <!--    -->
-
-
-
-
-
 <!-- \newcommand{\diff}{\mathop{}\!\mathrm{\vphantom( d}} -->
-
-
-
-
-
 <!-- SI Units -->
 <!--=============================================================== -->
-
-
-
-
-
-
-
-
-
 <!-- KaTeX Tweaks -->
-
-
 <!-- \renewcommand{\boldsymbol}[1]{\mathbf{#1}} -->
-
 <div id="title_def" class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
@@ -209,7 +184,7 @@
 Definition
 </h5>
 <p class="card-text">
-A bus is a communication system that transfers data between components inside a computer.
+A bus is a communication system that transfers data between components inside a <a href="/computer" >computer</a>.
 </p>
 </div>
 </div>
@@ -237,19 +212,19 @@ A bus is a communication system that transfers data between components inside a 
 <td></td>
 </tr>
 <tr class="odd">
-<td>I2C</td>
+<td><a href="i2c" title="Inter-Integrated Circuit ">I2C</a></td>
 <td>2</td>
 <td>100 kbit/s .. 1.0 Mbps</td>
 <td></td>
 </tr>
 <tr class="even">
-<td>UART</td>
+<td><a href="usart" title="Universal Asynchronous Receiver Transmitter ">UART</a></td>
 <td>2</td>
 <td>9.6 .. 500 kbit/s</td>
 <td></td>
 </tr>
 <tr class="odd">
-<td>SPI</td>
+<td><a href="spi" title="Serial Peripheral Interface ">SPI</a></td>
 <td>4</td>
 <td>1.0 Mbit/s</td>
 <td></td>
@@ -273,37 +248,37 @@ A bus is a communication system that transfers data between components inside a 
 <td></td>
 </tr>
 <tr class="odd">
-<td>USB 1.0</td>
+<td><a href="usb" title="Universal Serial Bus ">USB</a> 1.0</td>
 <td>4</td>
 <td>12 Mbit/s</td>
 <td></td>
 </tr>
 <tr class="even">
-<td>USB 2.0</td>
+<td><a href="usb" title="Universal Serial Bus ">USB</a> 2.0</td>
 <td>4</td>
 <td>480 Mbit/s</td>
 <td></td>
 </tr>
 <tr class="odd">
-<td>USB 3.0</td>
+<td><a href="usb" title="Universal Serial Bus ">USB</a> 3.0</td>
 <td>9</td>
 <td>5.0 Gbit/s</td>
 <td></td>
 </tr>
 <tr class="even">
-<td>USB 3.1</td>
+<td><a href="usb" title="Universal Serial Bus ">USB</a> 3.1</td>
 <td>9</td>
 <td>10 Gbit/s</td>
 <td></td>
 </tr>
 <tr class="odd">
-<td>USB 3.2</td>
+<td><a href="usb" title="Universal Serial Bus ">USB</a> 3.2</td>
 <td>9</td>
 <td>20 Gbit/s</td>
 <td></td>
 </tr>
 <tr class="even">
-<td>USB C</td>
+<td><a href="usb" title="Universal Serial Bus ">USB</a> C</td>
 <td>12</td>
 <td>20 Gbit/s</td>
 <td></td>
@@ -408,10 +383,10 @@ A bus is a communication system that transfers data between components inside a 
 <div class='card-body'>
 <p class='card-text'>
 <ul>
-<li>HD: <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mspace width="0.167em"></mspace><mn>280</mn><mo>×</mo><mn>720</mn></mrow><annotation encoding="application/x-tex">1\,280 \times 720</annotation></semantics></math></li>
-<li>FHD: <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mspace width="0.167em"></mspace><mn>920</mn><mo>×</mo><mn>1</mn><mspace width="0.167em"></mspace><mn>080</mn></mrow><annotation encoding="application/x-tex">1\,920 \times 1\,080</annotation></semantics></math></li>
-<li>QHD: <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mspace width="0.167em"></mspace><mn>560</mn><mo>×</mo><mn>1</mn><mspace width="0.167em"></mspace><mn>440</mn></mrow><annotation encoding="application/x-tex">2\,560 \times 1\,440</annotation></semantics></math></li>
-<li>4K UHD: <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn><mspace width="0.167em"></mspace><mn>840</mn><mo>×</mo><mn>2</mn><mspace width="0.167em"></mspace><mn>160</mn></mrow><annotation encoding="application/x-tex">3\,840 \times 2\,160</annotation></semantics></math>
+<li>HD: <span class="LaTeX">$1\,280 \times 720$</span></li>
+<li>FHD: <span class="LaTeX">$1\,920 \times 1\,080$</span></li>
+<li>QHD: <span class="LaTeX">$2\,560 \times 1\,440$</span></li>
+<li>4K UHD: <span class="LaTeX">$3\,840 \times 2\,160$</span>
 <p>
 </div>
 </div>

@@ -10,7 +10,7 @@
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="http://localhost:4000/datastructures">
+    <link rel="canonical" href="/datastructures">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -106,8 +106,7 @@
                     <h6 class="dropdown-header">Display Options</h6>
                     <div class="form-check dropdown-item">
                         <label class="form-check-label">
-                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox"
-                                checked="checked" onchange="Options.changeOption(this)">
+                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox" onchange="Options.changeOption(this)">
                             Definitions
                         </label>
                     </div>
@@ -171,37 +170,13 @@
 
 </p>
 
-
 <!-- Basics -->
-
 <!--    -->
-
-
-
-
-
 <!-- \newcommand{\diff}{\mathop{}\!\mathrm{\vphantom( d}} -->
-
-
-
-
-
 <!-- SI Units -->
 <!--=============================================================== -->
-
-
-
-
-
-
-
-
-
 <!-- KaTeX Tweaks -->
-
-
 <!-- \renewcommand{\boldsymbol}[1]{\mathbf{#1}} -->
-
 <h2 id="primitive-data-structures">Primitive Data Structures</h2>
 <table>
 <thead>
@@ -219,7 +194,7 @@
 </tr>
 <tr class="even">
 <td>Integer</td>
-<td>A number without a fractional component</td>
+<td>A number without a fractional <a href="/component" >component</a></td>
 <td>42</td>
 </tr>
 <tr class="odd">
@@ -230,16 +205,16 @@
 <tr class="even">
 <td>Character</td>
 <td>A single character</td>
-<td>‘a’</td>
+<td>'a'</td>
 </tr>
 <tr class="odd">
 <td>String</td>
 <td>A sequence of characters</td>
-<td>“Hello”</td>
+<td>&quot;Hello&quot;</td>
 </tr>
 </tbody>
 </table>
-<p>Some languages include also complex numbers, sets, tuples.</p>
+<p>Some languages include also <a href="/complex-number" >complex numbers</a>, sets, tuples.</p>
 <h2 id="container-advanced-abstract-data-types">Container (Advanced abstract data types)</h2>
 <p>A container is an abstrac data type which instances are collections of other objects. There are two types of containers:</p>
 <ul>
@@ -257,15 +232,15 @@
 <h3 id="list-vector">List = Vector</h3>
 <p>A list is a chain of elements. Each element has a pointer to the next element, thus it does not matter where elements are stored. Elements can be inserted and removed dynamically at each position in the list.</p>
 <h3 id="stack">Stack</h3>
-<p>A stack is a LIFO storage. Elements are added (push) and the latest added element is removed first (pop).</p>
+<p>A stack is a <abbr title="Last In First Out" >LIFO</abbr> storage. Elements are added (push) and the latest added element is removed first (pop).</p>
 <h3 id="queue">Queue</h3>
-<p>A stack is a FIFO storage. Elements are added (push) and the oldest added element is removed first (po)</p>
+<p>A stack is a <abbr title="First In First Out" >FIFO</abbr> storage. Elements are added (push) and the oldest added element is removed first (po)</p>
 <h3 id="hash-tables">Hash Tables</h3>
 <p>A hash table can grow dynamically put performs better than a list. Elements are stored as key-value pair.</p>
 <h3 id="associative-array-map-dictionary">Associative array = Map = Dictionary</h3>
 <p>An associative array is an abstract data type composed of (key, value) pairs, such that each possible key appears at most once in the collection.</p>
 <h3 id="tree">Tree</h3>
-<p>A tree is a hierarchical data structure. It consists of nodes and each node can have one or more child nodes (recursion).</p>
+<p>A <a href="/tree" >tree</a> is a hierarchical data structure. It consists of nodes and each node can have one or more child nodes (recursion).</p>
 <h3 id="graph">Graph</h3>
 <p>A graph is an abstract data type that is meant to implement the undirected graph and directed graph concepts from mathematics.</p>
 

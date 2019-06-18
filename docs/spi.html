@@ -10,7 +10,7 @@
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="http://localhost:4000/spi">
+    <link rel="canonical" href="/spi">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -106,8 +106,7 @@
                     <h6 class="dropdown-header">Display Options</h6>
                     <div class="form-check dropdown-item">
                         <label class="form-check-label">
-                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox"
-                                checked="checked" onchange="Options.changeOption(this)">
+                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox" onchange="Options.changeOption(this)">
                             Definitions
                         </label>
                     </div>
@@ -189,37 +188,13 @@
 
 </p>
 
-
 <!-- Basics -->
-
 <!--    -->
-
-
-
-
-
 <!-- \newcommand{\diff}{\mathop{}\!\mathrm{\vphantom( d}} -->
-
-
-
-
-
 <!-- SI Units -->
 <!--=============================================================== -->
-
-
-
-
-
-
-
-
-
 <!-- KaTeX Tweaks -->
-
-
 <!-- \renewcommand{\boldsymbol}[1]{\mathbf{#1}} -->
-
 <div id="title_def" class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
@@ -227,7 +202,7 @@
 Definition
 </h5>
 <p class="card-text">
-SPI is serial bus.
+<abbr title="Serial Peripheral Interface" >SPI</abbr> is serial <a href="/bus" >bus</a>.
 </p>
 </div>
 </div>
@@ -269,10 +244,10 @@ Connection
 <h2 id="protocol">Protocol</h2>
 <pre class="diagram"><code>For CPOL=0, CPHA=0 (capture on rising edge):
            ___ ___ ___ ___ ___ ___ ___ ___       
-MOSI ··XXXX___X___X___X___X___X___X___X___XXXXXX··
+<abbr title="Master Out, Slave In" >MOSI</abbr> ··XXXX___X___X___X___X___X___X___X___XXXXXX··
             |   |   |   |   |   |   |   | 
            ___ ___ ___ ___ ___ ___ ___ ___      
-MISO ··XXXX___X___X___X___X___X___X___X___XXXXXX··
+<abbr title="Master In, Slave Out" >MISO</abbr> ··XXXX___X___X___X___X___X___X___X___XXXXXX··
             |   |   |   |   |   |   |   | 
             |_  |_  |_  |_  |_  |_  |_  |_   
 SCLK ··_____/ \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_____··
@@ -289,7 +264,7 @@ SS1  ··   \_________________________________/   ··</code></pre>
 </ul></li>
 <li>CPHA determines the phase of the clock and the timing of the data bits.
 <ul>
-<li>CPHA=0: The first bit must be on the MOSI line before the leading clock edge.</li>
+<li>CPHA=0: The first bit must be on the <abbr title="Master Out, Slave In" >MOSI</abbr> line before the leading clock edge.</li>
 <li>CPHA=1: The sender changes the data on the leading edge, while the receiver captures the data on the trailing edge.</li>
 </ul></li>
 </ul>

@@ -106,8 +106,7 @@
                     <h6 class="dropdown-header">Display Options</h6>
                     <div class="form-check dropdown-item">
                         <label class="form-check-label">
-                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox"
-                                checked="checked" onchange="Options.changeOption(this)">
+                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox" onchange="Options.changeOption(this)">
                             Definitions
                         </label>
                     </div>
@@ -203,7 +202,7 @@ A file system manages the abstraction of grouped data blocks that belong to a si
 </thead>
 <tbody>
 <tr class="odd">
-<td><abbr title="File Allocation Table" >FAT</abbr></td>
+<td>FAT</td>
 <td>all</td>
 <td>simple</td>
 </tr>
@@ -229,7 +228,7 @@ A file system manages the abstraction of grouped data blocks that belong to a si
 </tr>
 </tbody>
 </table>
-<h2 id="file-allocation-table-fat">File Allocation Table (<abbr title="File Allocation Table" >FAT</abbr>)</h2>
+<h2 id="file-allocation-table-fat">File Allocation Table (FAT)</h2>
 <p>The <abbr title="File Allocation Table" >FAT</abbr> is table that stores information about each Block. The information can be: * the block is defect * the block is free * pointer to the next block of a file * last block of a file</p>
 <h2 id="index-nodes-i-nodes">Index Nodes (I-Nodes)</h2>
 <p>Each file has an I-Node that stores: * Counter of references (links) to that file</p>
@@ -241,7 +240,7 @@ I-Nodes
 </figcaption>
 </figure>
 <h2 id="journaling">Journaling</h2>
-<p>Journaling helps to avoid corruption of the file system. Before actually performing changes to the file system, the action is written to a Journal and then executed. If the operating system crashes during the execution of the action, the action can be repeated from the Journal (after reboot).</p>
+<p>Journaling helps to avoid corruption of the file system. Before actually performing changes to the file system, the action is written to a Journal and then executed. If the <a href="/operating-system" >operating system</a> crashes during the execution of the action, the action can be repeated from the Journal (after reboot).</p>
 <h2 id="snapshots">Snapshots</h2>
 <p>Snapshots provide immutable (read only) copies of the file system at a single point in time.</p>
 <h2 id="fragmentation">Fragmentation</h2>

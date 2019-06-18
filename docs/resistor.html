@@ -10,7 +10,7 @@
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="http://localhost:4000/resistor">
+    <link rel="canonical" href="/resistor">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -106,8 +106,7 @@
                     <h6 class="dropdown-header">Display Options</h6>
                     <div class="form-check dropdown-item">
                         <label class="form-check-label">
-                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox"
-                                checked="checked" onchange="Options.changeOption(this)">
+                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox" onchange="Options.changeOption(this)">
                             Definitions
                         </label>
                     </div>
@@ -177,37 +176,13 @@
 
 </p>
 
-
 <!-- Basics -->
-
 <!--    -->
-
-
-
-
-
 <!-- \newcommand{\diff}{\mathop{}\!\mathrm{\vphantom( d}} -->
-
-
-
-
-
 <!-- SI Units -->
 <!--=============================================================== -->
-
-
-
-
-
-
-
-
-
 <!-- KaTeX Tweaks -->
-
-
 <!-- \renewcommand{\boldsymbol}[1]{\mathbf{#1}} -->
-
 <div id="title_def" class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
@@ -215,7 +190,7 @@
 Definition
 </h5>
 <p class="card-text">
-A resistor is a electrical component.
+A resistor is a electrical <a href="/component" >component</a>.
 </p>
 </div>
 </div>
@@ -238,7 +213,7 @@ A resistor is a electrical component.
 </tr>
 <tr class="odd">
 <td>Equation</td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi><mo>=</mo><mi>R</mi><mo>⋅</mo><mi>I</mi></mrow><annotation encoding="application/x-tex">U = R \cdot I</annotation></semantics></math></td>
+<td><span class="LaTeX">$U = R \cdot I$</span></td>
 </tr>
 </tbody>
 </table>

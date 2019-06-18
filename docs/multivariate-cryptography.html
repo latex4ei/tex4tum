@@ -10,7 +10,7 @@
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="http://localhost:4000/multivariate-cryptography">
+    <link rel="canonical" href="/multivariate-cryptography">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -106,8 +106,7 @@
                     <h6 class="dropdown-header">Display Options</h6>
                     <div class="form-check dropdown-item">
                         <label class="form-check-label">
-                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox"
-                                checked="checked" onchange="Options.changeOption(this)">
+                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox" onchange="Options.changeOption(this)">
                             Definitions
                         </label>
                     </div>
@@ -173,37 +172,13 @@
 
 </p>
 
-
 <!-- Basics -->
-
 <!--    -->
-
-
-
-
-
 <!-- \newcommand{\diff}{\mathop{}\!\mathrm{\vphantom( d}} -->
-
-
-
-
-
 <!-- SI Units -->
 <!--=============================================================== -->
-
-
-
-
-
-
-
-
-
 <!-- KaTeX Tweaks -->
-
-
 <!-- \renewcommand{\boldsymbol}[1]{\mathbf{#1}} -->
-
 <div id="title_def" class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
@@ -211,34 +186,34 @@
 Definition
 </h5>
 <p class="card-text">
-Multivariate cryptography is the generic term for asymmetric cryptographic primitives based on multivariate polynomials over a finite field <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="double-struck"><mi>𝔽</mi></mstyle><annotation encoding="application/x-tex">\mathbb F</annotation></semantics></math>.
+Multivariate cryptography is the generic term for asymmetric cryptographic primitives based on multivariate polynomials over a finite field <span class="LaTeX">$\mathbb F$</span>.
 </p>
 </div>
 </div>
 </div>
 <h2 id="properties">Properties</h2>
 <ul>
-<li>Simple vector and matrix multiplications</li>
-<li>Large private and public key, very small signature</li>
+<li>Simple vector and <a href="/matrix" >matrix</a> multiplications</li>
+<li>Large private and public key, very small <a href="/signature" >signature</a></li>
 </ul>
 <h2 id="the-multivariate-quadratic-mq-system">The Multivariate Quadratic (MQ) System</h2>
-<p>Given <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>m</mi><annotation encoding="application/x-tex">m</annotation></semantics></math> quadratic polynomials</p>
+<p>Given <span class="LaTeX">$m$</span> quadratic polynomials</p>
 <div data-toggle="collapse" href="#eq_0">
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>p</mi><mn>1</mn></msub><mo stretchy="false" form="prefix">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><mi>.</mi><mi>.</mi><mi>.</mi><mo>,</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false" form="postfix">)</mo><mo>,</mo><mi>.</mi><mi>.</mi><mi>.</mi><mo>,</mo><msub><mi>p</mi><mi>m</mi></msub><mo stretchy="false" form="prefix">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><mi>.</mi><mi>.</mi><mi>.</mi><mo>,</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">p_1(x_1,..., x_n), ..., p_m(x_1,..., x_n)</annotation></semantics></math></p>
+<p><span class="LaTeX">$$p_1(x_1,..., x_n), ..., p_m(x_1,..., x_n)$$</span></p>
 </div>
 <div id="eq_0" class="legend collapse">
 <div class="card border-info w-75 mx-auto">
 <div class="p-1 small">
-<p>with polynomial <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>p</mi><annotation encoding="application/x-tex">p</annotation></semantics></math> of <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math> variables <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math></p>
+<p>with polynomial <span class="LaTeX">$p$</span> of <span class="LaTeX">$n$</span> variables <span class="LaTeX">$x$</span></p>
 </div>
 </div>
 </div>
-<p>in <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math> variables <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><mi>.</mi><mi>.</mi><mi>.</mi><mo>,</mo><msub><mi>x</mi><mi>n</mi></msub></mrow><annotation encoding="application/x-tex">x = x_1,..., x_n</annotation></semantics></math> over a finite field <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mstyle mathvariant="double-struck"><mi>𝔽</mi></mstyle><mi>q</mi></msub><annotation encoding="application/x-tex">\mathbb F_q</annotation></semantics></math>, find a vector <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><annotation encoding="application/x-tex">\boldsymbol x</annotation></semantics></math> such that</p>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>p</mi><mn>1</mn></msub><mo stretchy="false" form="prefix">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>.</mi><mi>.</mi><mi>.</mi><mo>=</mo><msub><mi>p</mi><mi>m</mi></msub><mo stretchy="false" form="prefix">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">p_1(x_0) = ... = p_m(x_0) = 0</annotation></semantics></math></p>
+<p>in <span class="LaTeX">$n$</span> variables <span class="LaTeX">$x = x_1,..., x_n$</span> over a finite field <span class="LaTeX">$\mathbb F_q$</span>, find a vector <span class="LaTeX">${\boldsymbol x}$</span> such that</p>
+<p><span class="LaTeX">$$p_1(x_0) = ... = p_m(x_0) = 0$$</span></p>
 <p>Solving MQ polynomial systems is worst case NP-hard and in general doubly exponential over any finite field.</p>
 <h2 id="construction">Construction</h2>
-<p>The private key consists of two affine transformations, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>S</mi><annotation encoding="application/x-tex">S</annotation></semantics></math> and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>T</mi><annotation encoding="application/x-tex">T</annotation></semantics></math>, and an easy to invert quadratic map <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mi>′</mi><mo>:</mo><msup><mi>F</mi><mi>m</mi></msup><mo>→</mo><msup><mi>F</mi><mi>n</mi></msup></mrow><annotation encoding="application/x-tex">P&#39;:F^{m}\rightarrow F^{n}</annotation></semantics></math>.</p>
-<p>The triple <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><msup><mi>S</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mo>,</mo><msup><mrow><mi>P</mi><mi>′</mi></mrow><mrow><mo>−</mo><mn>1</mn></mrow></msup><mo>,</mo><msup><mi>T</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(S^{-1},{P&#39;}^{-1},T^{-1})</annotation></semantics></math> is the private key, also known as the trapdoor. The public key is the composition <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo>=</mo><mi>S</mi><mo>∘</mo><mi>P</mi><mi>′</mi><mo>∘</mo><mi>T</mi></mrow><annotation encoding="application/x-tex">P=S\circ P&#39;\circ T</annotation></semantics></math> which is by assumption hard to invert without the knowledge of …</p>
+<p>The private key consists of two affine transformations, <span class="LaTeX">$S$</span> and <span class="LaTeX">$T$</span>, and an easy to invert quadratic map <span class="LaTeX">$P&#39;:F^{m}\rightarrow F^{n}$</span>.</p>
+<p>The triple <span class="LaTeX">$(S^{-1},{P&#39;}^{-1},T^{-1})$</span> is the private key, also known as the trapdoor. The public key is the composition <span class="LaTeX">$P=S\circ P&#39;\circ T$</span> which is by assumption hard to invert without the knowledge of ...</p>
 <h2 id="implementations">Implementations</h2>
 <p>Crypto-Systems based on multivariate cryptography:</p>
 <ul>

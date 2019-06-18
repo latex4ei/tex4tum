@@ -10,7 +10,7 @@
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="http://localhost:4000/op-amp">
+    <link rel="canonical" href="/op-amp">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -106,8 +106,7 @@
                     <h6 class="dropdown-header">Display Options</h6>
                     <div class="form-check dropdown-item">
                         <label class="form-check-label">
-                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox"
-                                checked="checked" onchange="Options.changeOption(this)">
+                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox" onchange="Options.changeOption(this)">
                             Definitions
                         </label>
                     </div>
@@ -185,37 +184,13 @@
 
 </p>
 
-
 <!-- Basics -->
-
 <!--    -->
-
-
-
-
-
 <!-- \newcommand{\diff}{\mathop{}\!\mathrm{\vphantom( d}} -->
-
-
-
-
-
 <!-- SI Units -->
 <!--=============================================================== -->
-
-
-
-
-
-
-
-
-
 <!-- KaTeX Tweaks -->
-
-
 <!-- \renewcommand{\boldsymbol}[1]{\mathbf{#1}} -->
-
 <div class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
@@ -237,7 +212,7 @@ An operational amplifier (short op-amp) is a DC-coupled high-gain electronic vol
 Voltage Follower
 </figcaption>
 </figure>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mstyle mathvariant="normal"><mi>o</mi><mi>u</mi><mi>t</mi></mstyle></msub><mo>=</mo><msub><mi>V</mi><mstyle mathvariant="normal"><mi>i</mi><mi>n</mi></mstyle></msub></mrow><annotation encoding="application/x-tex">V_{\mathrm{out}} = V_{\mathrm{in}}</annotation></semantics></math> Provides current at the output without loading the input.</p>
+<p><span class="LaTeX">$$V_{\mathrm{out}} = V_{\mathrm{in}}$$</span> Provides current at the output without loading the input.</p>
 <h2 id="non-inverting-amplifier">Non-Inverting Amplifier</h2>
 <!--<p> Filename="opamp_noninv.svg", path="/res/img/content-images/electrical/circuits/opamp_noninv.svg" </p>-->
 <figure class="figure">
@@ -247,12 +222,12 @@ Non-Inverting Amplifier
 </figcaption>
 </figure>
 <div data-toggle="collapse" href="#eq_0">
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mstyle mathvariant="normal"><mi>o</mi><mi>u</mi><mi>t</mi></mstyle></msub><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><mn>1</mn><mo>+</mo><mfrac><msub><mi>R</mi><mn>2</mn></msub><msub><mi>R</mi><mn>1</mn></msub></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><msub><mi>V</mi><mstyle mathvariant="normal"><mi>i</mi><mi>n</mi></mstyle></msub></mrow><annotation encoding="application/x-tex">V_{\mathrm{out}} = \left(1 + \frac{R_2}{R_1} \right) V_{\mathrm{in}}</annotation></semantics></math></p>
+<p><span class="LaTeX">$$V_{\mathrm{out}} = \left(1 + \frac{R_2}{R_1} \right) V_{\mathrm{in}}$$</span></p>
 </div>
 <div id="eq_0" class="legend collapse">
 <div class="card border-info w-75 mx-auto">
 <div class="p-1 small">
-<p>with resistances <span class="math inline">$R_1, R_2 \in \R$</span> and the voltages <span class="math inline">$V_{\mathrm{in}}, V_{\mathrm{out}} \in \R$</span>.</p>
+<p>with resistances <span class="LaTeX">$R_1, R_2 \in {\mathop{\mathbb R}}$</span> and the voltages <span class="LaTeX">$V_{\mathrm{in}}, V_{\mathrm{out}} \in {\mathop{\mathbb R}}$</span>.</p>
 </div>
 </div>
 </div>
@@ -265,12 +240,12 @@ Inverting Amplifier
 </figcaption>
 </figure>
 <div data-toggle="collapse" href="#eq_1">
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mstyle mathvariant="normal"><mi>o</mi><mi>u</mi><mi>t</mi></mstyle></msub><mo>=</mo><mo>−</mo><mfrac><msub><mi>R</mi><mn>2</mn></msub><msub><mi>R</mi><mn>1</mn></msub></mfrac><msub><mi>V</mi><mstyle mathvariant="normal"><mi>i</mi><mi>n</mi></mstyle></msub></mrow><annotation encoding="application/x-tex">V_{\mathrm{out}} = -\frac{R_2}{R_1} V_{\mathrm{in}}</annotation></semantics></math></p>
+<p><span class="LaTeX">$$V_{\mathrm{out}} = -\frac{R_2}{R_1} V_{\mathrm{in}}$$</span></p>
 </div>
 <div id="eq_1" class="legend collapse">
 <div class="card border-info w-75 mx-auto">
 <div class="p-1 small">
-<p>with resistances <span class="math inline">$R_1, R_2 \in \R$</span> and the voltages <span class="math inline">$V_{\mathrm{in}}, V_{\mathrm{out}} \in \R$</span>.</p>
+<p>with resistances <span class="LaTeX">$R_1, R_2 \in {\mathop{\mathbb R}}$</span> and the voltages <span class="LaTeX">$V_{\mathrm{in}}, V_{\mathrm{out}} \in {\mathop{\mathbb R}}$</span>.</p>
 </div>
 </div>
 </div>
@@ -283,12 +258,12 @@ Differential Amplifier
 </figcaption>
 </figure>
 <div data-toggle="collapse" href="#eq_2">
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mstyle mathvariant="normal"><mi>o</mi><mi>u</mi><mi>t</mi></mstyle></msub><mo>=</mo><mfrac><msub><mi>R</mi><mn>2</mn></msub><msub><mi>R</mi><mn>1</mn></msub></mfrac><mrow><mo stretchy="true" form="prefix">(</mo><mo>−</mo><msub><mi>V</mi><mn>1</mn></msub><mo>+</mo><msub><mi>V</mi><mn>2</mn></msub><mfrac><msub><mi>R</mi><mn>4</mn></msub><mrow><msub><mi>R</mi><mn>4</mn></msub><mo>+</mo><msub><mi>R</mi><mn>3</mn></msub></mrow></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mo>+</mo><mfrac><msub><mi>R</mi><mn>4</mn></msub><mrow><msub><mi>R</mi><mn>4</mn></msub><mo>+</mo><msub><mi>R</mi><mn>3</mn></msub></mrow></mfrac><msub><mi>V</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">V_{\mathrm{out}} = \frac{R_2}{R_1}\left(- V_1 + V_2 \frac{R_4}{R_4 + R_3}\right) + \frac{R_4}{R_4 + R_3} V_2</annotation></semantics></math></p>
+<p><span class="LaTeX">$$V_{\mathrm{out}} = \frac{R_2}{R_1}\left(- V_1 + V_2 \frac{R_4}{R_4 + R_3}\right) + \frac{R_4}{R_4 + R_3} V_2$$</span></p>
 </div>
 <div id="eq_2" class="legend collapse">
 <div class="card border-info w-75 mx-auto">
 <div class="p-1 small">
-<p>with resistances <span class="math inline">$R_1, R_2, R_3, R_4 \in \R$</span> and the voltages <span class="math inline">$V_{\mathrm{in}}, V_{\mathrm{out}} \in \R$</span>.</p>
+<p>with resistances <span class="LaTeX">$R_1, R_2, R_3, R_4 \in {\mathop{\mathbb R}}$</span> and the voltages <span class="LaTeX">$V_{\mathrm{in}}, V_{\mathrm{out}} \in {\mathop{\mathbb R}}$</span>.</p>
 </div>
 </div>
 </div>
@@ -300,7 +275,7 @@ Differential Amplifier
 Schmitt Trigger
 </figcaption>
 </figure>
-<p>Offset: <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mstyle mathvariant="normal"><mi>r</mi><mi>e</mi><mi>f</mi></mstyle></msub><mfrac><msub><mi>R</mi><mn>2</mn></msub><mrow><msub><mi>R</mi><mn>1</mn></msub><mo>+</mo><msub><mi>R</mi><mn>2</mn></msub></mrow></mfrac></mrow><annotation encoding="application/x-tex">V_{\mathrm{ref}} \frac{R_2}{R_1 + R_2}</annotation></semantics></math><br> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>V</mi><mo>+</mo></msup><mo>=</mo><mo stretchy="false" form="prefix">(</mo><msub><mi>V</mi><mrow><mi>i</mi><mi>n</mi></mrow></msub><mo>−</mo><msub><mi>V</mi><mrow><mi>o</mi><mi>u</mi><mi>t</mi></mrow></msub><mo stretchy="false" form="postfix">)</mo><mfrac><msub><mi>R</mi><mn>4</mn></msub><mrow><msub><mi>R</mi><mn>3</mn></msub><mo>+</mo><msub><mi>R</mi><mn>4</mn></msub></mrow></mfrac></mrow><annotation encoding="application/x-tex">V^{+} = (V_{in} - V_{out}) \frac{R_4}{R_3 + R_4}</annotation></semantics></math><br> Bias: <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Δ</mi><mi>V</mi></mrow><annotation encoding="application/x-tex">\Delta V</annotation></semantics></math></p>
+<p>Offset: <span class="LaTeX">$V_{\mathrm{ref}} \frac{R_2}{R_1 + R_2}$</span><br> <span class="LaTeX">$V^{+} = (V_{in} - V_{out}) \frac{R_4}{R_3 + R_4}$</span><br> Bias: <span class="LaTeX">$\Delta V$</span></p>
 
 
     </main>

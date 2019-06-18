@@ -10,7 +10,7 @@
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="http://localhost:4000/dns">
+    <link rel="canonical" href="/dns">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -106,8 +106,7 @@
                     <h6 class="dropdown-header">Display Options</h6>
                     <div class="form-check dropdown-item">
                         <label class="form-check-label">
-                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox"
-                                checked="checked" onchange="Options.changeOption(this)">
+                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox" onchange="Options.changeOption(this)">
                             Definitions
                         </label>
                     </div>
@@ -173,37 +172,13 @@
 
 </p>
 
-
 <!-- Basics -->
-
 <!--    -->
-
-
-
-
-
 <!-- \newcommand{\diff}{\mathop{}\!\mathrm{\vphantom( d}} -->
-
-
-
-
-
 <!-- SI Units -->
 <!--=============================================================== -->
-
-
-
-
-
-
-
-
-
 <!-- KaTeX Tweaks -->
-
-
 <!-- \renewcommand{\boldsymbol}[1]{\mathbf{#1}} -->
-
 <div id="title_def" class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
@@ -211,7 +186,7 @@
 Definition
 </h5>
 <p class="card-text">
-The Domain Name System (DNS) is a hierarchical decentralized naming system for computers connected to the Internet <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. It allows to access servers by name instead of an IP address which is hard to remember.
+The Domain Name System (DNS) is a hierarchical decentralized naming system for computers connected to the Internet <a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a>. It allows to access servers by name instead of an <abbr title="Internet Protocol" >IP</abbr> address which is hard to remember.
 </p>
 </div>
 </div>
@@ -283,30 +258,30 @@ The Domain Name System (DNS) is a hierarchical decentralized naming system for c
 <tr class="odd">
 <td><code>URL</code></td>
 <td>URL</td>
-<td>redirect (HTTP 301) domain to URL</td>
+<td>redirect (<a href="/http" >HTTP</a> 301) domain to URL</td>
 </tr>
 </tbody>
 </table>
 <h3 id="dname">DNAME</h3>
-<p>The DNAME record provides redirection for a subtree of the domain name tree in the DNS <a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>. Note that a <code>DNAME</code> entry that maps <code>mydomain.com</code> to <code>public.com</code> will also map <code>sub.mydomain.com</code> to <code>sub.public.com</code>.</p>
+<p>The DNAME record provides redirection for a subtree of the domain name <a href="/tree" >tree</a> in the <abbr title="Domain Name System" >DNS</abbr> <a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a>. Note that a <code>DNAME</code> entry that maps <code>mydomain.com</code> to <code>public.com</code> will also map <code>sub.mydomain.com</code> to <code>sub.public.com</code>.</p>
 <h3 id="alias">ALIAS</h3>
 <p>The <code>ALIAS</code> type is not part of the DNS standard and should only be used to map an Apex domain to another domain because <code>CNAME</code> cannot be used for this task.</p>
 <h2 id="rules-for-setting-up-a-dns-entry">Rules for setting up a DNS entry</h2>
 <ul>
-<li>use an <code>A</code> and <code>AAAA</code> record if your destination is a server with one static and fixed IP address (this is the most common case)</li>
+<li>use an <code>A</code> and <code>AAAA</code> record if your destination is a server with one static and fixed <abbr title="Internet Protocol" >IP</abbr> address (this is the most common case)</li>
 <li>use a <code>CNAME</code> record if you want to alias a name to another name, and you don’t need other records (such as <code>MX</code> records for emails) for the same name</li>
 <li>use an <code>ALIAS</code> record if you are trying to alias the root domain or if you need other records for the same name</li>
 </ul>
 <h2 id="propagation-time">Propagation Time</h2>
-<p>Changes propagate within the network in about 24 hours. TTL of records: 5 minutes to 24 hours.</p>
+<p>Changes propagate within the <a href="/network" >network</a> in about 24 hours. <abbr title="Time To Live" >TTL</abbr> of records: 5 minutes to 24 hours.</p>
 <h2 id="dns-softwre">DNS Softwre</h2>
 <p>Linux: <code>dig DOMAIN</code>, <code>host DOMAIN</code>, <code>nslookup DOMAIN</code></p>
 <h2 id="references">References</h2>
-<section class="footnotes" role="doc-endnotes">
+<section class="footnotes">
 <hr />
 <ol>
-<li id="fn1" role="doc-endnote"><p><a href="https://tools.ietf.org/html/rfc1035">RFC 1035</a>, <em>Domain Names - Implementation and Specification</em> , 1987<a href="#fnref1" class="footnote-back" role="doc-backlink">↩</a></p></li>
-<li id="fn2" role="doc-endnote"><p><a href="https://tools.ietf.org/html/rfc6672">RFC 6672</a>, <em>DNAME Redirection in the DNS</em>, 2012<a href="#fnref2" class="footnote-back" role="doc-backlink">↩</a></p></li>
+<li id="fn1"><p><a href="https://tools.ietf.org/html/rfc1035">RFC 1035</a>, <em>Domain Names - Implementation and Specification</em> , 1987<a href="#fnref1">↩</a></p></li>
+<li id="fn2"><p><a href="https://tools.ietf.org/html/rfc6672">RFC 6672</a>, <em>DNAME Redirection in the DNS</em>, 2012<a href="#fnref2">↩</a></p></li>
 </ol>
 </section>
 

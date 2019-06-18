@@ -10,7 +10,7 @@
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="http://localhost:4000/signature">
+    <link rel="canonical" href="/signature">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -106,8 +106,7 @@
                     <h6 class="dropdown-header">Display Options</h6>
                     <div class="form-check dropdown-item">
                         <label class="form-check-label">
-                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox"
-                                checked="checked" onchange="Options.changeOption(this)">
+                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox" onchange="Options.changeOption(this)">
                             Definitions
                         </label>
                     </div>
@@ -173,37 +172,13 @@
 
 </p>
 
-
 <!-- Basics -->
-
 <!--    -->
-
-
-
-
-
 <!-- \newcommand{\diff}{\mathop{}\!\mathrm{\vphantom( d}} -->
-
-
-
-
-
 <!-- SI Units -->
 <!--=============================================================== -->
-
-
-
-
-
-
-
-
-
 <!-- KaTeX Tweaks -->
-
-
 <!-- \renewcommand{\boldsymbol}[1]{\mathbf{#1}} -->
-
 <div id="title_def" class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
@@ -218,7 +193,7 @@ A digital signature is a mathematical scheme for demonstrating the authenticity 
 </div>
 <h2 id="working-principles-and-implementations">Working Principles and Implementations</h2>
 <ul>
-<li>Prime Factorization: RSA</li>
+<li>Prime Factorization: <a href="/rsa" >RSA</a></li>
 <li>Elliptic Curves: Secp256k1</li>
 <li>Hash based Signatures: SPHINCS</li>
 <li>Multivariate:<br />
@@ -226,9 +201,9 @@ A digital signature is a mathematical scheme for demonstrating the authenticity 
 <li>Code-based: (one-time, large keys)</li>
 </ul>
 <h3 id="factorization-based-signature">Factorization based Signature</h3>
-<p>Given a modulus <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><mo>=</mo><mi>p</mi><mi>q</mi></mrow><annotation encoding="application/x-tex">N = pq</annotation></semantics></math>, where p and q a prime. Further a public key <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>e</mi><annotation encoding="application/x-tex">e</annotation></semantics></math> and a private key <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>d</mi><annotation encoding="application/x-tex">d</annotation></semantics></math>.</p>
-<p>To sign a message, m, the signer computes a signature, σ, such that <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>σ</mi><mo>≡</mo><msup><mi>m</mi><mi>d</mi></msup><mo stretchy="false" form="prefix">(</mo><mi>m</mi><mi>o</mi><mi>d</mi><mi>N</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">σ ≡ m^d (mod N)</annotation></semantics></math>.</p>
-<p>To verify a message, the receiver checks that <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>σ</mi><mi>e</mi></msup><mo>≡</mo><mi>m</mi><mo stretchy="false" form="prefix">(</mo><mi>m</mi><mi>o</mi><mi>d</mi><mi>N</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">σ^e ≡ m (mod N)</annotation></semantics></math>.</p>
+<p>Given a modulus <span class="LaTeX">$N = pq$</span>, where p and q a prime. Further a public key <span class="LaTeX">$e$</span> and a private key <span class="LaTeX">$d$</span>.</p>
+<p>To sign a message, m, the signer computes a signature, σ, such that <span class="LaTeX">$σ ≡ m^d (mod N)$</span>.</p>
+<p>To verify a message, the receiver checks that <span class="LaTeX">$σ^e ≡ m (mod N)$</span>.</p>
 <h2 id="usage">Usage</h2>
 <p>Alice wants to send a document to Bob. Bob wants proof (signature) that the document is from Alice. Bob knows the public key of Alice.</p>
 <h3 id="signing">Signing</h3>

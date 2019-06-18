@@ -10,7 +10,7 @@
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="http://localhost:4000/integral">
+    <link rel="canonical" href="/integral">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -106,8 +106,7 @@
                     <h6 class="dropdown-header">Display Options</h6>
                     <div class="form-check dropdown-item">
                         <label class="form-check-label">
-                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox"
-                                checked="checked" onchange="Options.changeOption(this)">
+                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox" onchange="Options.changeOption(this)">
                             Definitions
                         </label>
                     </div>
@@ -173,37 +172,13 @@
 
 </p>
 
-
 <!-- Basics -->
-
 <!--    -->
-
-
-
-
-
 <!-- \newcommand{\diff}{\mathop{}\!\mathrm{\vphantom( d}} -->
-
-
-
-
-
 <!-- SI Units -->
 <!--=============================================================== -->
-
-
-
-
-
-
-
-
-
 <!-- KaTeX Tweaks -->
-
-
 <!-- \renewcommand{\boldsymbol}[1]{\mathbf{#1}} -->
-
 <div id="title_def" class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
@@ -211,41 +186,41 @@
 Definition
 </h5>
 <p class="card-text">
-An integral is a function <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>F</mi><annotation encoding="application/x-tex">F</annotation></semantics></math> of which a given function <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>f</mi><annotation encoding="application/x-tex">f</annotation></semantics></math> is the derivative. The integral describes displacement, area, volume, and other concepts that arise by calculating the infinite sum of rectangles of infinitesimal width. The symbol <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mspace width="0.167em"></mspace><mtext mathvariant="normal">d</mtext><mi>x</mi></mrow><annotation encoding="application/x-tex">\,\text{d}x</annotation></semantics></math> was taken to represent an infinitesimally “small piece” of the independent variable <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>.
+An integral is a function <span class="LaTeX">$F$</span> of which a given function <span class="LaTeX">$f$</span> is the derivative. The integral describes displacement, area, volume, and other concepts that arise by calculating the infinite sum of rectangles of infinitesimal width. The symbol <span class="LaTeX">${\,\text{d}}x$</span> was taken to represent an infinitesimally &quot;small piece&quot; of the independent variable <span class="LaTeX">$x$</span>.
 </p>
 </div>
 </div>
 </div>
 <p><strong>Indefinite integral:</strong></p>
 <div data-toggle="collapse" href="#eq_0">
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mo>∫</mo><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mspace width="0.167em"></mspace><mtext mathvariant="normal">d</mtext><mi>x</mi></mrow><annotation encoding="application/x-tex">F(x)=\int f(x)\,\text{d}x</annotation></semantics></math></p>
+<p><span class="LaTeX">$$F(x)=\int f(x){\,\text{d}}x$$</span></p>
 </div>
 <div id="eq_0" class="legend collapse">
 <div class="card border-info w-75 mx-auto">
 <div class="p-1 small">
-<p>with the function <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>f</mi><annotation encoding="application/x-tex">f</annotation></semantics></math> of a real variable <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>.</p>
+<p>with the function <span class="LaTeX">$f$</span> of a real variable <span class="LaTeX">$x$</span>.</p>
 </div>
 </div>
 </div>
 <p><strong>Definite integral:</strong></p>
 <div data-toggle="collapse" href="#eq_1">
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mo>∫</mo><mi>a</mi><mi>b</mi></msubsup><mspace width="0.167em"></mspace><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mspace width="0.167em"></mspace><mtext mathvariant="normal">d</mtext><mi>x</mi><mo>=</mo><msubsup><mrow><mo stretchy="true" form="prefix">[</mo><mi>F</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="true" form="postfix">]</mo></mrow><mi>a</mi><mi>b</mi></msubsup><mo>=</mo><mi>F</mi><mo stretchy="false" form="prefix">(</mo><mi>b</mi><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mi>F</mi><mo stretchy="false" form="prefix">(</mo><mi>a</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\int_{a}^{b}\,f(x)\,\text{d}x = \left[F(x)\right]_{a}^{b}=F(b)-F(a)</annotation></semantics></math></p>
+<p><span class="LaTeX">$$\int_{a}^{b}\,f(x){\,\text{d}}x = \left[F(x)\right]_{a}^{b}=F(b)-F(a)$$</span></p>
 </div>
 <div id="eq_1" class="legend collapse">
 <div class="card border-info w-75 mx-auto">
 <div class="p-1 small">
-<p>with the interval <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">[</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">[a, b]</annotation></semantics></math> of the real line.</p>
+<p>with the interval <span class="LaTeX">$[a, b]$</span> of the real line.</p>
 </div>
 </div>
 </div>
-<h5 class="clp_title text-success" data-toggle="collapse" href="#example18">
+<h5 class="clp_title text-success" data-toggle="collapse" href="#example19">
 <i class='fa fa-chart-bar'></i> Example
 </h5>
-<div id='example18' class='example collapse'>
+<div id='example19' class='example collapse'>
 <div class='card border-success mb-1'>
 <div class='card-body'>
 <p class='card-text'>
-Given <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">f(x) = x^2</annotation></semantics></math>, then <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mo>∫</mo><mn>1</mn><mn>2</mn></msubsup><msup><mi>x</mi><mn>2</mn></msup><mspace width="0.167em"></mspace><mtext mathvariant="normal">d</mtext><mi>x</mi><mo>=</mo><msubsup><mrow><mo stretchy="true" form="prefix">[</mo><mfrac><mn>1</mn><mn>3</mn></mfrac><msup><mi>x</mi><mn>3</mn></msup><mo stretchy="true" form="postfix">]</mo></mrow><mn>1</mn><mn>2</mn></msubsup><mo>=</mo><mfrac><mn>8</mn><mn>3</mn></mfrac><mo>−</mo><mfrac><mn>1</mn><mn>3</mn></mfrac><mo>=</mo><mfrac><mn>7</mn><mn>3</mn></mfrac><mo>=</mo><mn>2</mn><mfrac><mn>1</mn><mn>3</mn></mfrac></mrow><annotation encoding="application/x-tex">\int_1^2 x^2 \,\text{d}x = \left[ \frac{1}{3}x^3 \right]_1^2 = \frac{8}{3} - \frac{1}{3} = \frac{7}{3} = 2 \frac{1}{3}</annotation></semantics></math>
+Given <span class="LaTeX">$f(x) = x^2$</span>, then <span class="LaTeX">$\int_1^2 x^2 {\,\text{d}}x = \left[ \frac{1}{3}x^3 \right]_1^2 = \frac{8}{3} - \frac{1}{3} = \frac{7}{3} = 2 \frac{1}{3}$</span>
 <p>
 </div>
 </div>
@@ -262,93 +237,93 @@ Given <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semanti
 <table>
 <thead>
 <tr class="header">
-<th><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mi>C</mi></mrow><annotation encoding="application/x-tex">F(x) - C</annotation></semantics></math></th>
-<th><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">f(x)</annotation></semantics></math></th>
-<th><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mi>′</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">f&#39;(x)</annotation></semantics></math></th>
+<th><span class="LaTeX">$F(x) - C$</span></th>
+<th><span class="LaTeX">$f(x)$</span></th>
+<th><span class="LaTeX">$f&#39;(x)$</span></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mn>1</mn><mrow><mi>q</mi><mo>+</mo><mn>1</mn></mrow></mfrac><msup><mi>x</mi><mrow><mi>q</mi><mo>+</mo><mn>1</mn></mrow></msup></mrow><annotation encoding="application/x-tex">\frac{1}{q+1}x^{q+1}</annotation></semantics></math></td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>x</mi><mi>q</mi></msup><annotation encoding="application/x-tex">x^q</annotation></semantics></math></td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>q</mi><msup><mi>x</mi><mrow><mi>q</mi><mo>−</mo><mn>1</mn></mrow></msup></mrow><annotation encoding="application/x-tex">qx^{q-1}</annotation></semantics></math></td>
+<td><span class="LaTeX">$\frac{1}{q+1}x^{q+1}$</span></td>
+<td><span class="LaTeX">$x^q$</span></td>
+<td><span class="LaTeX">$qx^{q-1}$</span></td>
 </tr>
 <tr class="even">
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mrow><mn>2</mn><msqrt><mrow><mi>a</mi><msup><mi>x</mi><mn>3</mn></msup></mrow></msqrt></mrow><mn>3</mn></mfrac><annotation encoding="application/x-tex">\frac{2\sqrt{ax^3}}{3}</annotation></semantics></math></td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msqrt><mrow><mi>a</mi><mi>x</mi></mrow></msqrt><annotation encoding="application/x-tex">\sqrt{ax}</annotation></semantics></math></td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mi>a</mi><mrow><mn>2</mn><msqrt><mrow><mi>a</mi><mi>x</mi></mrow></msqrt></mrow></mfrac><annotation encoding="application/x-tex">\frac{a}{2\sqrt{ax}}</annotation></semantics></math></td>
+<td><span class="LaTeX">$\frac{2\sqrt{ax^3}}{3}$</span></td>
+<td><span class="LaTeX">$\sqrt{ax}$</span></td>
+<td><span class="LaTeX">$\frac{a}{2\sqrt{ax}}$</span></td>
 </tr>
 <tr class="odd">
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>ln</mo><mo stretchy="false" form="prefix">(</mo><mi>a</mi><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mi>x</mi></mrow><annotation encoding="application/x-tex">x\ln(ax) -x</annotation></semantics></math></td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>ln</mo><mo stretchy="false" form="prefix">(</mo><mi>a</mi><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\ln(ax)</annotation></semantics></math></td>
-<td><span class="math inline">$\textstyle \frac{1}{x}$</span></td>
+<td><span class="LaTeX">$x\ln(ax) -x$</span></td>
+<td><span class="LaTeX">$\ln(ax)$</span></td>
+<td><span class="LaTeX">$\textstyle \frac{1}{x}$</span></td>
 </tr>
 <tr class="even">
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mn>1</mn><msup><mi>a</mi><mn>2</mn></msup></mfrac><msup><mi>e</mi><mrow><mi>a</mi><mi>x</mi></mrow></msup><mo stretchy="false" form="prefix">(</mo><mi>a</mi><mi>x</mi><mo>−</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\frac{1}{a^2} e^{ax}(ax- 1)</annotation></semantics></math></td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>⋅</mo><msup><mi>e</mi><mrow><mi>a</mi><mi>x</mi></mrow></msup></mrow><annotation encoding="application/x-tex">x \cdot e^{ax}</annotation></semantics></math></td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>e</mi><mrow><mi>a</mi><mi>x</mi></mrow></msup><mo stretchy="false" form="prefix">(</mo><mi>a</mi><mi>x</mi><mo>+</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">e^{ax}(ax+1)</annotation></semantics></math></td>
+<td><span class="LaTeX">$\frac{1}{a^2} e^{ax}(ax- 1)$</span></td>
+<td><span class="LaTeX">$x \cdot e^{ax}$</span></td>
+<td><span class="LaTeX">$e^{ax}(ax+1)$</span></td>
 </tr>
 <tr class="odd">
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><msup><mi>a</mi><mi>x</mi></msup><mrow><mo>ln</mo><mo stretchy="false" form="prefix">(</mo><mi>a</mi><mo stretchy="false" form="postfix">)</mo></mrow></mfrac><annotation encoding="application/x-tex">\frac{a^x}{\ln(a)}</annotation></semantics></math></td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>a</mi><mi>x</mi></msup><annotation encoding="application/x-tex">a^x</annotation></semantics></math></td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>a</mi><mi>x</mi></msup><mo>ln</mo><mo stretchy="false" form="prefix">(</mo><mi>a</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">a^x \ln(a)</annotation></semantics></math></td>
+<td><span class="LaTeX">$\frac{a^x}{\ln(a)}$</span></td>
+<td><span class="LaTeX">$a^x$</span></td>
+<td><span class="LaTeX">$a^x \ln(a)$</span></td>
 </tr>
 <tr class="even">
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>−</mo><mo>cos</mo><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">-\cos(x)</annotation></semantics></math></td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>sin</mo><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\sin(x)</annotation></semantics></math></td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>cos</mo><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\cos(x)</annotation></semantics></math></td>
+<td><span class="LaTeX">$-\cos(x)$</span></td>
+<td><span class="LaTeX">$\sin(x)$</span></td>
+<td><span class="LaTeX">$\cos(x)$</span></td>
 </tr>
 <tr class="odd">
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>sin</mo><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\sin(x)</annotation></semantics></math></td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>cos</mo><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\cos(x)</annotation></semantics></math></td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>−</mo><mo>sin</mo><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">-\sin(x)</annotation></semantics></math></td>
+<td><span class="LaTeX">$\sin(x)$</span></td>
+<td><span class="LaTeX">$\cos(x)$</span></td>
+<td><span class="LaTeX">$-\sin(x)$</span></td>
 </tr>
 <tr class="even">
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>−</mo><mo>ln</mo><mrow><mo stretchy="true" form="prefix">|</mo><mo>cos</mo><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="true" form="postfix">|</mo></mrow></mrow><annotation encoding="application/x-tex">-\ln \left\vert{\cos(x)}\right\vert</annotation></semantics></math></td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>tan</mo><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\tan(x)</annotation></semantics></math></td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mn>1</mn><mrow><msup><mo>cos</mo><mn>2</mn></msup><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow></mfrac><annotation encoding="application/x-tex">\frac{1}{\cos^2(x)}</annotation></semantics></math></td>
+<td><span class="LaTeX">$-\ln {\left\vert{\cos(x)}\right\vert}$</span></td>
+<td><span class="LaTeX">$\tan(x)$</span></td>
+<td><span class="LaTeX">$\frac{1}{\cos^2(x)}$</span></td>
 </tr>
 <tr class="odd">
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>ln</mo><mrow><mo stretchy="true" form="prefix">|</mo><mo>sin</mo><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="true" form="postfix">|</mo></mrow></mrow><annotation encoding="application/x-tex">\ln \left\vert{\sin(x)}\right\vert</annotation></semantics></math></td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>cot</mo><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\cot(x)</annotation></semantics></math></td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mrow><mo>−</mo><mn>1</mn></mrow><mrow><msup><mo>sin</mo><mn>2</mn></msup><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow></mfrac><annotation encoding="application/x-tex">\frac{-1}{\sin^2(x)}</annotation></semantics></math></td>
+<td><span class="LaTeX">$\ln {\left\vert{\sin(x)}\right\vert}$</span></td>
+<td><span class="LaTeX">$\cot(x)$</span></td>
+<td><span class="LaTeX">$\frac{-1}{\sin^2(x)}$</span></td>
 </tr>
 <tr class="even">
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>arcsin</mo><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><msqrt><mrow><mn>1</mn><mo>−</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></msqrt></mrow><annotation encoding="application/x-tex">x\arcsin (x)+\sqrt{1-x^2}</annotation></semantics></math></td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>arcsin</mo><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\arcsin(x)</annotation></semantics></math></td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mn>1</mn><msqrt><mrow><mn>1</mn><mo>−</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></msqrt></mfrac><annotation encoding="application/x-tex">\frac{1}{\sqrt{1-x^2}}</annotation></semantics></math></td>
+<td><span class="LaTeX">$x\arcsin (x)+\sqrt{1-x^2}$</span></td>
+<td><span class="LaTeX">$\arcsin(x)$</span></td>
+<td><span class="LaTeX">$\frac{1}{\sqrt{1-x^2}}$</span></td>
 </tr>
 <tr class="odd">
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>arccos</mo><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>−</mo><msqrt><mrow><mn>1</mn><mo>−</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></msqrt></mrow><annotation encoding="application/x-tex">x\arccos (x)-\sqrt{1-x^2}</annotation></semantics></math></td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>arccos</mo><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\arccos(x)</annotation></semantics></math></td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>−</mo><mfrac><mn>1</mn><msqrt><mrow><mn>1</mn><mo>−</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></msqrt></mfrac></mrow><annotation encoding="application/x-tex">-\frac{1}{\sqrt{1-x^2}}</annotation></semantics></math></td>
+<td><span class="LaTeX">$x\arccos (x)-\sqrt{1-x^2}$</span></td>
+<td><span class="LaTeX">$\arccos(x)$</span></td>
+<td><span class="LaTeX">$-\frac{1}{\sqrt{1-x^2}}$</span></td>
 </tr>
 <tr class="even">
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>arctan</mo><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>ln</mo><mrow><mo stretchy="true" form="prefix">|</mo><mn>1</mn><mo>+</mo><msup><mi>x</mi><mn>2</mn></msup><mo stretchy="true" form="postfix">|</mo></mrow></mrow><annotation encoding="application/x-tex">x\arctan (x)-\frac{1}{2} \ln \left\vert{1+ x^2}\right\vert</annotation></semantics></math></td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>arctan</mo><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\arctan(x)</annotation></semantics></math></td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mn>1</mn><mrow><mn>1</mn><mo>+</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac><annotation encoding="application/x-tex">\frac{1}{1+x^2}</annotation></semantics></math></td>
+<td><span class="LaTeX">$x\arctan (x)-\frac{1}{2} \ln {\left\vert{1+ x^2}\right\vert}$</span></td>
+<td><span class="LaTeX">$\arctan(x)$</span></td>
+<td><span class="LaTeX">$\frac{1}{1+x^2}$</span></td>
 </tr>
 <tr class="odd">
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>arctan</mo><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>ln</mo><mrow><mo stretchy="true" form="prefix">|</mo><mn>1</mn><mo>+</mo><msup><mi>x</mi><mn>2</mn></msup><mo stretchy="true" form="postfix">|</mo></mrow></mrow><annotation encoding="application/x-tex">x\arctan (x)+\frac{1}{2} \ln \left\vert{1+ x^2}\right\vert</annotation></semantics></math></td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">arccot</mtext><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\text{arccot}(x)</annotation></semantics></math></td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>−</mo><mfrac><mn>1</mn><mrow><mn>1</mn><mo>+</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac></mrow><annotation encoding="application/x-tex">-\frac{1}{1+x^2}</annotation></semantics></math></td>
+<td><span class="LaTeX">$x\arctan (x)+\frac{1}{2} \ln {\left\vert{1+ x^2}\right\vert}$</span></td>
+<td><span class="LaTeX">${\text{arccot}}(x)$</span></td>
+<td><span class="LaTeX">$-\frac{1}{1+x^2}$</span></td>
 </tr>
 <tr class="even">
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>cosh</mo><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\cosh(x)</annotation></semantics></math></td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>sinh</mo><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\sinh(x)</annotation></semantics></math></td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>cosh</mo><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\cosh (x)</annotation></semantics></math></td>
+<td><span class="LaTeX">$\cosh(x)$</span></td>
+<td><span class="LaTeX">$\sinh(x)$</span></td>
+<td><span class="LaTeX">$\cosh (x)$</span></td>
 </tr>
 <tr class="odd">
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>sinh</mo><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\sinh(x)</annotation></semantics></math></td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>cosh</mo><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\cosh(x)</annotation></semantics></math></td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>sinh</mo><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\sinh (x)</annotation></semantics></math></td>
+<td><span class="LaTeX">$\sinh(x)$</span></td>
+<td><span class="LaTeX">$\cosh(x)$</span></td>
+<td><span class="LaTeX">$\sinh (x)$</span></td>
 </tr>
 </tbody>
 </table>
 <h2 id="trigonometry">Trigonometry</h2>
-<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∫</mo><mi>x</mi><mo>cos</mo><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mspace width="0.167em"></mspace><mtext mathvariant="normal">d</mtext><mi>x</mi><mo>=</mo><mo>cos</mo><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mi>x</mi><mo>sin</mo><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\int x \cos(x) \,\text{d}x = \cos(x) + x \sin(x)</annotation></semantics></math><br> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∫</mo><mi>x</mi><mo>sin</mo><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mspace width="0.167em"></mspace><mtext mathvariant="normal">d</mtext><mi>x</mi><mo>=</mo><mo>sin</mo><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mi>x</mi><mo>cos</mo><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\int x \sin(x) \,\text{d}x = \sin(x) - x \cos(x)</annotation></semantics></math><br> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∫</mo><msup><mo>sin</mo><mn>2</mn></msup><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mspace width="0.167em"></mspace><mtext mathvariant="normal">d</mtext><mi>x</mi><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo minsize="1.2" maxsize="1.2" stretchy="false" form="prefix">(</mo><mi>x</mi><mo>−</mo><mo>sin</mo><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>cos</mo><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo minsize="1.2" maxsize="1.2" stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\int \sin^2(x) \,\text{d}x = \frac12 \bigl(x - \sin(x)\cos(x) \bigr)</annotation></semantics></math><br> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∫</mo><msup><mo>cos</mo><mn>2</mn></msup><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mspace width="0.167em"></mspace><mtext mathvariant="normal">d</mtext><mi>x</mi><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo minsize="1.2" maxsize="1.2" stretchy="false" form="prefix">(</mo><mi>x</mi><mo>+</mo><mo>sin</mo><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>cos</mo><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo minsize="1.2" maxsize="1.2" stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\int \cos^2(x) \,\text{d}x = \frac12 \bigl(x + \sin(x)\cos(x) \bigr)</annotation></semantics></math><br> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∫</mo><mo>cos</mo><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>sin</mo><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mo>−</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><msup><mo>cos</mo><mn>2</mn></msup><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\int \cos(x)\sin(x) = -\frac12 \cos^2(x)</annotation></semantics></math></p>
+<p><span class="LaTeX">$\int x \cos(x) {\,\text{d}}x = \cos(x) + x \sin(x)$</span><br> <span class="LaTeX">$\int x \sin(x) {\,\text{d}}x = \sin(x) - x \cos(x)$</span><br> <span class="LaTeX">$\int \sin^2(x) {\,\text{d}}x = \frac12 \bigl(x - \sin(x)\cos(x) \bigr)$</span><br> <span class="LaTeX">$\int \cos^2(x) {\,\text{d}}x = \frac12 \bigl(x + \sin(x)\cos(x) \bigr)$</span><br> <span class="LaTeX">$\int \cos(x)\sin(x) = -\frac12 \cos^2(x)$</span></p>
 <h2 id="line-integrals">Line Integrals</h2>
-<p>Given a curve <span class="math inline">$\boldsymbol \gamma:[a,b] \rightarrow \R^n, t \mapsto \boldsymbol \gamma(t)$</span>.</p>
+<p>Given a <a href="/curve" >curve</a> <span class="LaTeX">${\boldsymbol \gamma}:[a,b] \rightarrow {\mathop{\mathbb R}}^n, t \mapsto {\boldsymbol \gamma}(t)$</span>.</p>
 <div class="card tabbox">
 <div class="card-header">
 <ul class="nav nav-tabs card-header-tabs ml-0" role="tablist">
@@ -364,24 +339,24 @@ Given <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semanti
 <div class="tab-content">
 <div id="checkboxid-0" class="tab-pane active" role="tabpanel">
 <div data-toggle="collapse" href="#eq_2">
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><munder><mo>∫</mo><mi>γ</mi></munder><mi>f</mi><mspace width="0.167em"></mspace><mtext mathvariant="normal">d</mtext><mi>s</mi><mo>:=</mo><munderover><mo>∫</mo><mi>a</mi><mi>b</mi></munderover><mi>f</mi><mo minsize="1.2" maxsize="1.2" stretchy="false" form="prefix">(</mo><mstyle mathvariant="bold"><mi>𝛄</mi></mstyle><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo minsize="1.2" maxsize="1.2" stretchy="false" form="postfix">)</mo><mo>⋅</mo><mrow><mo stretchy="true" form="prefix">∥</mo><mstyle mathvariant="bold"><mover><mi>𝛄</mi><mo accent="true">̇</mo></mover></mstyle><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="true" form="postfix">∥</mo></mrow><mspace width="0.167em"></mspace><mtext mathvariant="normal">d</mtext><mi>t</mi></mrow><annotation encoding="application/x-tex">\int\limits_\gamma f \,\text{d}s := \int\limits^b_a f\bigl(\boldsymbol \gamma(t)\bigr) \cdot \left\lVert{\boldsymbol  {\dot{\gamma}} (t)}\right\rVert \,\text{d}t</annotation></semantics></math></p>
+<p><span class="LaTeX">$$\int\limits_\gamma f {\,\text{d}}s := \int\limits^b_a f\bigl({\boldsymbol \gamma(t)}\bigr) \cdot {\left\lVert{{\boldsymbol  {\dot{\gamma}} }(t)}\right\rVert} {\,\text{d}}t$$</span></p>
 </div>
 <div id="eq_2" class="legend collapse">
 <div class="card border-info w-75 mx-auto">
 <div class="p-1 small">
-<p>with the scalar field <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">f(\boldsymbol x)</annotation></semantics></math> along a curve <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathvariant="bold"><mi>𝛄</mi></mstyle><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\boldsymbol \gamma(t)</annotation></semantics></math> and the elementary arc length <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mspace width="0.167em"></mspace><mtext mathvariant="normal">d</mtext><mi>s</mi></mrow><annotation encoding="application/x-tex">\,\text{d}s</annotation></semantics></math>.</p>
+<p>with the scalar field <span class="LaTeX">$f({\boldsymbol x})$</span> along a curve <span class="LaTeX">${\boldsymbol \gamma}(t)$</span> and the elementary arc length <span class="LaTeX">${\,\text{d}}s$</span>.</p>
 </div>
 </div>
 </div>
 </div>
 <div id="checkboxid-1" class="tab-pane" role="tabpanel">
 <div data-toggle="collapse" href="#eq_3">
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∫</mo><mstyle mathvariant="bold"><mi>𝐯</mi></mstyle><mstyle mathvariant="bold"><mo>⋅</mo></mstyle><mspace width="0.167em"></mspace><mtext mathvariant="normal">d</mtext><mstyle mathvariant="bold"><mi>𝐬</mi></mstyle><mo>:=</mo><munderover><mo>∫</mo><mi>a</mi><mi>b</mi></munderover><mstyle mathvariant="bold"><mi>𝐯</mi></mstyle><mo minsize="1.2" maxsize="1.2" stretchy="false" form="prefix">(</mo><mstyle mathvariant="bold"><mi>𝛄</mi></mstyle><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><msup><mo minsize="1.2" maxsize="1.2" stretchy="false" form="postfix">)</mo><mi>⊤</mi></msup><mstyle mathvariant="bold"><mo>⋅</mo></mstyle><mstyle mathvariant="bold"><mover><mi>𝛄</mi><mo accent="true">̇</mo></mover></mstyle><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mspace width="0.222em"></mspace><mspace width="0.167em"></mspace><mtext mathvariant="normal">d</mtext><mi>t</mi></mrow><annotation encoding="application/x-tex">\int \boldsymbol v \pmb{\cdot}\,\text{d}\boldsymbol s := \int\limits^b_a \boldsymbol v \bigl(\boldsymbol \gamma(t)\bigr)^\top \boldsymbol \cdot \boldsymbol  {\dot{\gamma}} (t) \ \,\text{d}t</annotation></semantics></math></p>
+<p><span class="LaTeX">$$\int {\boldsymbol v} {\pmb{\cdot}}{\,\text{d}}{\boldsymbol s} := \int\limits^b_a {\boldsymbol v} \bigl({\boldsymbol \gamma}(t)\bigr)^\top \boldsymbol \cdot {\boldsymbol  {\dot{\gamma}} }(t) \ {\,\text{d}}t$$</span></p>
 </div>
 <div id="eq_3" class="legend collapse">
 <div class="card border-info w-75 mx-auto">
 <div class="p-1 small">
-<p>with the vector field <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathvariant="bold"><mi>𝐯</mi></mstyle><mo stretchy="false" form="prefix">(</mo><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\boldsymbol v(\boldsymbol x)</annotation></semantics></math>, the curve <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="bold"><mi>𝛄</mi></mstyle><annotation encoding="application/x-tex">\boldsymbol \gamma</annotation></semantics></math>, and <span class="math inline">$\boldsymbol x, \boldsymbol v, \boldsymbol \gamma \in \R^n$</span>.</p>
+<p>with the vector field <span class="LaTeX">${\boldsymbol v}({\boldsymbol x})$</span>, the curve <span class="LaTeX">${\boldsymbol \gamma}$</span>, and <span class="LaTeX">${\boldsymbol x}, {\boldsymbol v}, {\boldsymbol \gamma} \in {\mathop{\mathbb R}}^n$</span>.</p>
 </div>
 </div>
 </div>
@@ -391,7 +366,7 @@ Given <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semanti
 </div>
 <p></br></p>
 <h2 id="surface-integrals">Surface Integrals</h2>
-<p>Given a surface <span class="math inline">$\boldsymbol \phi: B \subseteq \R^2 \rightarrow \R^3, (u,w) \mapsto \boldsymbol \phi(u,w)$</span>.</p>
+<p>Given a surface <span class="LaTeX">${\boldsymbol \phi}: B \subseteq {\mathop{\mathbb R}}^2 \rightarrow {\mathop{\mathbb R}}^3, (u,w) \mapsto {\boldsymbol \phi}(u,w)$</span>.</p>
 <div class="card tabbox">
 <div class="card-header">
 <ul class="nav nav-tabs card-header-tabs ml-0" role="tablist">
@@ -407,24 +382,24 @@ Given <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semanti
 <div class="tab-content">
 <div id="checkboxid-2" class="tab-pane active" role="tabpanel">
 <div data-toggle="collapse" href="#eq_4">
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mo>∬</mo><mstyle mathvariant="bold"><mi>𝛟</mi></mstyle></msub><mi>f</mi><mspace width="0.167em"></mspace><mtext mathvariant="normal">d</mtext><mi>O</mi><mo>:=</mo><msub><mo>∬</mo><mi>B</mi></msub><mi>f</mi><mo minsize="1.2" maxsize="1.2" stretchy="false" form="prefix">(</mo><mstyle mathvariant="bold"><mi>𝛟</mi></mstyle><mo stretchy="false" form="prefix">(</mo><mi>u</mi><mo>,</mo><mi>w</mi><mo stretchy="false" form="postfix">)</mo><mo minsize="1.2" maxsize="1.2" stretchy="false" form="postfix">)</mo><mo>⋅</mo><mrow><mo stretchy="true" form="prefix">∥</mo><msub><mstyle mathvariant="bold"><mi>𝛟</mi></mstyle><mi>u</mi></msub><mo>×</mo><msub><mstyle mathvariant="bold"><mi>𝛟</mi></mstyle><mi>w</mi></msub><mo stretchy="true" form="postfix">∥</mo></mrow><mspace width="0.167em"></mspace><mtext mathvariant="normal">d</mtext><mi>u</mi><mspace width="0.167em"></mspace><mtext mathvariant="normal">d</mtext><mi>w</mi></mrow><annotation encoding="application/x-tex">\iint_{\boldsymbol \phi} f \,\text{d}O := \iint_B f\bigl(\boldsymbol \phi(u,w)\bigr) \cdot \left\lVert{ \boldsymbol \phi_u \times \boldsymbol \phi_w }\right\rVert \,\text{d}u \,\text{d}w </annotation></semantics></math></p>
+<p><span class="LaTeX">$$\iint_{{\boldsymbol \phi}} f {\,\text{d}}O := \iint_B f\bigl({\boldsymbol \phi}(u,w)\bigr) \cdot {\left\lVert{ {\boldsymbol \phi}_u \times {\boldsymbol \phi}_w }\right\rVert} {\,\text{d}}u {\,\text{d}}w $$</span></p>
 </div>
 <div id="eq_4" class="legend collapse">
 <div class="card border-info w-75 mx-auto">
 <div class="p-1 small">
-<p>with the scalar field <span class="math inline">$f:D\subseteq \R^3 \rightarrow \R, \boldsymbol x \mapsto f(\boldsymbol x)$</span>, the surface <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="bold"><mi>𝛟</mi></mstyle><annotation encoding="application/x-tex">\boldsymbol \phi</annotation></semantics></math>.</p>
+<p>with the scalar field <span class="LaTeX">$f:D\subseteq {\mathop{\mathbb R}}^3 \rightarrow {\mathop{\mathbb R}}, {\boldsymbol x} \mapsto f({\boldsymbol x})$</span>, the surface <span class="LaTeX">${\boldsymbol \phi}$</span>.</p>
 </div>
 </div>
 </div>
 </div>
 <div id="checkboxid-3" class="tab-pane" role="tabpanel">
 <div data-toggle="collapse" href="#eq_5">
-<p><span class="math display">$$\iint_{\boldsymbol \phi} \boldsymbol v \pmb{\cdot}\,\text{d}\boldsymbol O := \iint_B \boldsymbol v\Bigl(\boldsymbol \phi(u,w)\Bigr)^\top \pmb{\cdot}\Bigl( \boldsymbol \phi_u \times \boldsymbol \phi_w \Bigr) \,\text{d}u \,\text{d}w$$</span></p>
+<p><span class="LaTeX">$$\iint_{{\boldsymbol \phi}} {\boldsymbol v} {\pmb{\cdot}}{\,\text{d}}{\boldsymbol O} := \iint_B {\boldsymbol v}\Bigl({\boldsymbol \phi}(u,w)\Bigr)^\top {\pmb{\cdot}}\Bigl( {\boldsymbol \phi}_u \times {\boldsymbol \phi}_w \Bigr) {\,\text{d}}u {\,\text{d}}w$$</span></p>
 </div>
 <div id="eq_5" class="legend collapse">
 <div class="card border-info w-75 mx-auto">
 <div class="p-1 small">
-<p>with the vector field <span class="math inline">$\boldsymbol v:D\subseteq \R^3 \rightarrow \R^3, \boldsymbol x \mapsto \boldsymbol v(\boldsymbol x)$</span>, the curve <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="bold"><mi>𝛄</mi></mstyle><annotation encoding="application/x-tex">\boldsymbol \gamma</annotation></semantics></math>, and <span class="math inline">$\boldsymbol x, \boldsymbol v, \boldsymbol \gamma \in \R^n$</span>.</p>
+<p>with the vector field <span class="LaTeX">${\boldsymbol v}:D\subseteq {\mathop{\mathbb R}}^3 \rightarrow {\mathop{\mathbb R}}^3, {\boldsymbol x} \mapsto {\boldsymbol v}({\boldsymbol x})$</span>, the curve <span class="LaTeX">${\boldsymbol \gamma}$</span>, and <span class="LaTeX">${\boldsymbol x}, {\boldsymbol v}, {\boldsymbol \gamma} \in {\mathop{\mathbb R}}^n$</span>.</p>
 </div>
 </div>
 </div>
@@ -435,9 +410,9 @@ Given <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semanti
 <p></br></p>
 <h2 id="integral-rules">Integral Rules</h2>
 <h3 id="integral-gauß">Integral Gauß</h3>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><munder><mo>∭</mo><mi>V</mi></munder><mtext mathvariant="normal">div</mtext><mspace width="0.278em"></mspace><mstyle mathvariant="bold"><mi>𝐯</mi></mstyle><mspace width="0.167em"></mspace><mtext mathvariant="normal">d</mtext><mi>V</mi><mo>=</mo><munder><mo>∬</mo><mrow><mi>∂</mi><mi>V</mi></mrow></munder><mspace width="-0.167em"></mspace><mspace width="-0.167em"></mspace><mspace width="-0.167em"></mspace><mspace width="-0.167em"></mspace><mspace width="-0.167em"></mspace><mspace width="-0.167em"></mspace><mspace width="-0.167em"></mspace><mspace width="-0.167em"></mspace><mspace width="-0.167em"></mspace><mo>○</mo><mspace width="0.222em"></mspace><mstyle mathvariant="bold"><mi>𝐯</mi></mstyle><mstyle mathvariant="bold"><mo>⋅</mo></mstyle><mspace width="0.167em"></mspace><mtext mathvariant="normal">d</mtext><mi>A</mi></mrow><annotation encoding="application/x-tex">\iiint\limits_V \text{div}\; \boldsymbol v \,\text{d}V = \iint\limits_{\partial V}\!\!\!\!\!\!\!\!\!\bigcirc \ \boldsymbol v \pmb{\cdot}\,\text{d}A</annotation></semantics></math></p>
+<p><span class="LaTeX">$$\iiint\limits_V {\text{div}}\; {\boldsymbol v} {\,\text{d}}V = \iint\limits_{\partial V}\!\!\!\!\!\!\!\!\!\bigcirc \ {\boldsymbol v} {\pmb{\cdot}}{\,\text{d}}A$$</span></p>
 <h3 id="integral-stokes">Integral Stokes</h3>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><munder><mo>∬</mo><mi>A</mi></munder><mtext mathvariant="normal">rot</mtext><mspace width="0.278em"></mspace><mstyle mathvariant="bold"><mi>𝐯</mi></mstyle><mspace width="0.167em"></mspace><mtext mathvariant="normal">d</mtext><mi>A</mi><mo>=</mo><munder><mo>∮</mo><mrow><mi>∂</mi><mi>A</mi></mrow></munder><mstyle mathvariant="bold"><mi>𝐯</mi></mstyle><mspace width="0.167em"></mspace><mtext mathvariant="normal">d</mtext><mstyle mathvariant="bold"><mi>𝐬</mi></mstyle></mrow><annotation encoding="application/x-tex">\iint\limits_{A} \text{rot}\; \boldsymbol v \,\text{d}A = \oint\limits_{\partial A} \boldsymbol v \,\text{d}\boldsymbol s</annotation></semantics></math></p>
+<p><span class="LaTeX">$$\iint\limits_{A} {\text{rot}}\; {\boldsymbol v} {\,\text{d}}A = \oint\limits_{\partial A} {\boldsymbol v} {\,\text{d}}{\boldsymbol s}$$</span></p>
 
 
     </main>

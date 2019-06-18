@@ -10,7 +10,7 @@
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="http://localhost:4000/series">
+    <link rel="canonical" href="/series">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -106,8 +106,7 @@
                     <h6 class="dropdown-header">Display Options</h6>
                     <div class="form-check dropdown-item">
                         <label class="form-check-label">
-                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox"
-                                checked="checked" onchange="Options.changeOption(this)">
+                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox" onchange="Options.changeOption(this)">
                             Definitions
                         </label>
                     </div>
@@ -177,128 +176,104 @@
 
 </p>
 
-
 <!-- Basics -->
-
 <!--    -->
-
-
-
-
-
 <!-- \newcommand{\diff}{\mathop{}\!\mathrm{\vphantom( d}} -->
-
-
-
-
-
 <!-- SI Units -->
 <!--=============================================================== -->
-
-
-
-
-
-
-
-
-
 <!-- KaTeX Tweaks -->
-
-
 <!-- \renewcommand{\boldsymbol}[1]{\mathbf{#1}} -->
-
 <h2 id="arithmetic-sum">Arithmetic Sum</h2>
 <div data-toggle="collapse" href="#eq_0">
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><munderover><mo>∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mi>k</mi><mo>=</mo><mfrac><mrow><mi>n</mi><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo>+</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo></mrow><mn>2</mn></mfrac></mrow><annotation encoding="application/x-tex">\sum \limits_{k=1}^{n} k = \frac{n (n+1)}{2}</annotation></semantics></math></p>
+<p><span class="LaTeX">$$\sum \limits_{k=1}^{n} k = \frac{n (n+1)}{2}$$</span></p>
 </div>
 <div id="eq_0" class="legend collapse">
 <div class="card border-info w-75 mx-auto">
 <div class="p-1 small">
-<p>with <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo>,</mo><mi>n</mi><mo>∈</mo><mstyle mathvariant="double-struck"><mi>ℕ</mi></mstyle></mrow><annotation encoding="application/x-tex">k,n \in \mathbb{N}</annotation></semantics></math></p>
+<p>with <span class="LaTeX">$k,n \in \mathbb{N}$</span></p>
 </div>
 </div>
 </div>
 <h2 id="geometric-sum">Geometric Sum</h2>
 <div data-toggle="collapse" href="#eq_1">
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><munderover><mo>∑</mo><mrow><mi>k</mi><mo>=</mo><mn>0</mn></mrow><mi>n</mi></munderover><msup><mi>q</mi><mi>k</mi></msup><mo>=</mo><mfrac><mrow><mn>1</mn><mo>−</mo><msup><mi>q</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msup></mrow><mrow><mn>1</mn><mo>−</mo><mi>q</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\sum \limits_{k=0}^{n} q^k = \frac{1 - q^{n+1}}{1-q}</annotation></semantics></math></p>
+<p><span class="LaTeX">$$\sum \limits_{k=0}^{n} q^k = \frac{1 - q^{n+1}}{1-q}$$</span></p>
 </div>
 <div id="eq_1" class="legend collapse">
 <div class="card border-info w-75 mx-auto">
 <div class="p-1 small">
-<p>with <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo>,</mo><mi>n</mi><mo>∈</mo><mstyle mathvariant="double-struck"><mi>ℕ</mi></mstyle></mrow><annotation encoding="application/x-tex">k,n \in \mathbb{N}</annotation></semantics></math> and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>q</mi><mo>∈</mo><mstyle mathvariant="double-struck"><mi>ℤ</mi></mstyle></mrow><annotation encoding="application/x-tex">q \in \mathbb{Z}</annotation></semantics></math></p>
+<p>with <span class="LaTeX">$k,n \in \mathbb{N}$</span> and <span class="LaTeX">$q \in \mathbb{Z}$</span></p>
 </div>
 </div>
 </div>
 <h2 id="exponential-row">Exponential row</h2>
 <div data-toggle="collapse" href="#eq_2">
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><munderover><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mn>0</mn></mrow><mo accent="false">∞</mo></munderover><mfrac><msup><mstyle mathvariant="bold"><mi>𝐳</mi></mstyle><mi>n</mi></msup><mrow><mi>n</mi><mi>!</mi></mrow></mfrac><mo>=</mo><msup><mi>e</mi><mstyle mathvariant="bold"><mi>𝐳</mi></mstyle></msup></mrow><annotation encoding="application/x-tex">\sum\limits_{n = 0}^{\infty} \frac{\boldsymbol{z}^n}{n!} = e^{\boldsymbol{z}}</annotation></semantics></math></p>
+<p><span class="LaTeX">$$\sum\limits_{n = 0}^{\infty} \frac{{\boldsymbol{z}}^n}{n!} = e^{{\boldsymbol{z}}}$$</span></p>
 </div>
 <div id="eq_2" class="legend collapse">
 <div class="card border-info w-75 mx-auto">
 <div class="p-1 small">
-<p>with <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>∈</mo><mstyle mathvariant="double-struck"><mi>ℕ</mi></mstyle></mrow><annotation encoding="application/x-tex">n \in \mathbb{N}</annotation></semantics></math> and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathvariant="bold"><mi>𝐳</mi></mstyle><mo>∈</mo><mstyle mathvariant="double-struck"><mi>ℂ</mi></mstyle></mrow><annotation encoding="application/x-tex">\boldsymbol{z} \in \mathbb{C}</annotation></semantics></math></p>
+<p>with <span class="LaTeX">$n \in \mathbb{N}$</span> and <span class="LaTeX">${\boldsymbol{z}} \in \mathbb{C}$</span></p>
 </div>
 </div>
 </div>
 <h2 id="taylorpolynom">Taylorpolynom</h2>
-<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>T</mi><mrow><mi>m</mi><mo>,</mo><mi>f</mi><mo>,</mo><msub><mi>x</mi><mn>0</mn></msub></mrow></msub><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">T_{m,f,x_0}(x)</annotation></semantics></math> is a row for <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>→</mo><mi>∞</mi></mrow><annotation encoding="application/x-tex">m \rightarrow \infty</annotation></semantics></math>.</p>
+<p><span class="LaTeX">$T_{m,f,x_0}(x)$</span> is a row for <span class="LaTeX">$m \rightarrow \infty$</span>.</p>
 <div data-toggle="collapse" href="#eq_3">
-<p><span class="math display">$$_{m,f,x_0}(x)= \sum_{i=0}^{m} \underbrace{\frac{f^{(i)}(x_0)}{i!}}_{a_i} (x-x_0)^i }$$</span></p>
+<p><span class="LaTeX">$$_{m,f,x_0}(x)= \sum_{i=0}^{m} \underbrace{\frac{f^{(i)}(x_0)}{i!}}_{a_i} (x-x_0)^i }$$</span></p>
 </div>
 <div id="eq_3" class="legend collapse">
 <div class="card border-info w-75 mx-auto">
 <div class="p-1 small">
-<p>with <span class="math inline">$x \in \R$</span>, function <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>f</mi><annotation encoding="application/x-tex">f</annotation></semantics></math>, and order <span class="math inline">$m \in \N$</span>.</p>
+<p>with <span class="LaTeX">$x \in {\mathop{\mathbb R}}$</span>, function <span class="LaTeX">$f$</span>, and order <span class="LaTeX">$m \in {\mathop{\mathbb N}}$</span>.</p>
 </div>
 </div>
 </div>
-<p>Konvergenzradius <span class="math inline">$R=\tiny\begin{matrix}\\ \normalsize \lim \\[1em] \scriptsize i\rightarrow \infty \end{matrix} \left\vert{\frac{a_i}{a_{i+1}}}\right\vert$</span></p>
+<p>Konvergenzradius <span class="LaTeX">$R={\tiny\begin{matrix}\\ \normalsize \lim \\[1em] \scriptsize i\rightarrow \infty \end{matrix}} {\left\vert{\frac{a_i}{a_{i+1}}}\right\vert}$</span></p>
 <h2 id="taylor-series">Taylor series</h2>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mstyle mathvariant="bold"><mi>𝐳</mi></mstyle><mo stretchy="false" form="postfix">)</mo><mo>=</mo><munderover><mo>∑</mo><mrow><mi>k</mi><mo>=</mo><mn>0</mn></mrow><mo accent="false">∞</mo></munderover><mfrac><mrow><msup><mstyle mathvariant="bold"><mi>𝐟</mi></mstyle><mrow><mo stretchy="false" form="prefix">(</mo><mi>k</mi><mo stretchy="false" form="postfix">)</mo></mrow></msup><mrow><mo stretchy="true" form="prefix">(</mo><msub><mstyle mathvariant="bold"><mi>𝐳</mi></mstyle><mn>0</mn></msub><mo stretchy="true" form="postfix">)</mo></mrow></mrow><mrow><mi>k</mi><mi>!</mi></mrow></mfrac><mo stretchy="false" form="prefix">(</mo><mstyle mathvariant="bold"><mi>𝐳</mi></mstyle><mo>−</mo><msub><mstyle mathvariant="bold"><mi>𝐳</mi></mstyle><mn>0</mn></msub><msup><mo stretchy="false" form="postfix">)</mo><mi>k</mi></msup></mrow><annotation encoding="application/x-tex">f(\boldsymbol{z}) = \sum\limits_{k = 0}^{\infty} \frac{\boldsymbol{f}^{(k)}\left(\boldsymbol{z}_0\right)}{k!} (\boldsymbol{z} - \boldsymbol{z}_0)^k</annotation></semantics></math></p>
+<p><span class="LaTeX">$$f({\boldsymbol{z}}) = \sum\limits_{k = 0}^{\infty} \frac{{\boldsymbol{f}}^{(k)}\left({\boldsymbol{z}}_0\right)}{k!} ({\boldsymbol{z}} - {\boldsymbol{z}}_0)^k$$</span></p>
 <table>
 <thead>
 <tr class="header">
-<th><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mstyle mathvariant="bold"><mi>𝐳</mi></mstyle><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">f(\boldsymbol{z})</annotation></semantics></math></th>
+<th><span class="LaTeX">$f({\boldsymbol{z}})$</span></th>
 <th>Taylor series</th>
 <th>Conditions</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>e</mi><mstyle mathvariant="bold"><mi>𝐳</mi></mstyle></msup><annotation encoding="application/x-tex">e^\boldsymbol{z}</annotation></semantics></math></td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mn>0</mn></mrow><mi>∞</mi></msubsup><mfrac><msup><mstyle mathvariant="bold"><mi>𝐳</mi></mstyle><mi>n</mi></msup><mrow><mi>n</mi><mi>!</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\sum_{n=0}^\infty \frac{\boldsymbol{z}^n}{n!}</annotation></semantics></math></td>
-<td><span class="math inline">$\forall \boldsymbol{z} \in \C$</span></td>
+<td><span class="LaTeX">$e^{\boldsymbol{z}}$</span></td>
+<td><span class="LaTeX">$\sum_{n=0}^\infty \frac{{\boldsymbol{z}}^n}{n!}$</span></td>
+<td><span class="LaTeX">$\forall {\boldsymbol{z}} \in {\mathop{\mathbb C}}$</span></td>
 </tr>
 <tr class="even">
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>ln</mo><mo stretchy="false" form="prefix">(</mo><mstyle mathvariant="bold"><mi>𝐳</mi></mstyle><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\ln(\boldsymbol{z})</annotation></semantics></math></td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi>∞</mi></msubsup><mfrac><mrow><mo stretchy="false" form="prefix">(</mo><mo>−</mo><mn>1</mn><msup><mo stretchy="false" form="postfix">)</mo><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msup></mrow><mi>n</mi></mfrac><mo stretchy="false" form="prefix">(</mo><mstyle mathvariant="bold"><mi>𝐳</mi></mstyle><mo>−</mo><mn>1</mn><msup><mo stretchy="false" form="postfix">)</mo><mi>n</mi></msup></mrow><annotation encoding="application/x-tex">\sum_{n=1}^\infty \frac{(-1)^{n+1}}{n}(\boldsymbol{z}-1)^n</annotation></semantics></math></td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>&lt;</mo><mstyle mathvariant="bold"><mi>𝐳</mi></mstyle><mo>≤</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">0\lt\boldsymbol{z}\le2</annotation></semantics></math></td>
+<td><span class="LaTeX">$\ln({\boldsymbol{z}})$</span></td>
+<td><span class="LaTeX">$\sum_{n=1}^\infty \frac{(-1)^{n+1}}{n}({\boldsymbol{z}}-1)^n$</span></td>
+<td><span class="LaTeX">$0\lt{\boldsymbol{z}}\le2$</span></td>
 </tr>
 <tr class="odd">
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mn>1</mn><mrow><mn>1</mn><mo>−</mo><mstyle mathvariant="bold"><mi>𝐳</mi></mstyle></mrow></mfrac><annotation encoding="application/x-tex">\frac{1}{1-\boldsymbol{z}}</annotation></semantics></math></td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mn>0</mn></mrow><mi>∞</mi></msubsup><msup><mstyle mathvariant="bold"><mi>𝐳</mi></mstyle><mi>n</mi></msup></mrow><annotation encoding="application/x-tex">\sum^\infty_{n=0} \boldsymbol{z}^n</annotation></semantics></math></td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo stretchy="true" form="prefix">|</mo><mstyle mathvariant="bold"><mi>𝐳</mi></mstyle><mo stretchy="true" form="postfix">|</mo></mrow><mo>&lt;</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\left\vert{\boldsymbol{z}}\right\vert \lt 1</annotation></semantics></math></td>
+<td><span class="LaTeX">$\frac{1}{1-{\boldsymbol{z}}}$</span></td>
+<td><span class="LaTeX">$\sum^\infty_{n=0} {\boldsymbol{z}}^n$</span></td>
+<td><span class="LaTeX">${\left\vert{{\boldsymbol{z}}}\right\vert} \lt 1$</span></td>
 </tr>
 <tr class="even">
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>sin</mo><mstyle mathvariant="bold"><mi>𝐳</mi></mstyle></mrow><annotation encoding="application/x-tex">\sin \boldsymbol{z}</annotation></semantics></math></td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mn>0</mn></mrow><mi>∞</mi></msubsup><mfrac><mrow><mo stretchy="false" form="prefix">(</mo><mo>−</mo><mn>1</mn><msup><mo stretchy="false" form="postfix">)</mo><mi>n</mi></msup></mrow><mrow><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mi>n</mi><mo>+</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mi>!</mi></mrow></mfrac><msup><mstyle mathvariant="bold"><mi>𝐳</mi></mstyle><mrow><mn>2</mn><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msup></mrow><annotation encoding="application/x-tex">\sum^{\infty}_{n=0} \frac{(-1)^n}{(2n+1)!} \boldsymbol{z}^{2n+1}</annotation></semantics></math></td>
-<td><span class="math inline">$\forall \boldsymbol{z} \in \C$</span></td>
+<td><span class="LaTeX">$\sin {\boldsymbol{z}}$</span></td>
+<td><span class="LaTeX">$\sum^{\infty}_{n=0} \frac{(-1)^n}{(2n+1)!} {\boldsymbol{z}}^{2n+1}$</span></td>
+<td><span class="LaTeX">$\forall {\boldsymbol{z}} \in {\mathop{\mathbb C}}$</span></td>
 </tr>
 <tr class="odd">
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>cos</mo><mstyle mathvariant="bold"><mi>𝐳</mi></mstyle></mrow><annotation encoding="application/x-tex">\cos \boldsymbol{z}</annotation></semantics></math></td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mn>0</mn></mrow><mi>∞</mi></msubsup><mfrac><mrow><mo stretchy="false" form="prefix">(</mo><mo>−</mo><mn>1</mn><msup><mo stretchy="false" form="postfix">)</mo><mi>n</mi></msup></mrow><mrow><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mi>n</mi><mo stretchy="false" form="postfix">)</mo><mi>!</mi></mrow></mfrac><msup><mstyle mathvariant="bold"><mi>𝐳</mi></mstyle><mrow><mn>2</mn><mi>n</mi></mrow></msup></mrow><annotation encoding="application/x-tex">\sum^{\infty}_{n=0} \frac{(-1)^n}{(2n)!} \boldsymbol{z}^{2n}</annotation></semantics></math></td>
-<td><span class="math inline">$\forall \boldsymbol{z} \in \C$</span></td>
+<td><span class="LaTeX">$\cos {\boldsymbol{z}}$</span></td>
+<td><span class="LaTeX">$\sum^{\infty}_{n=0} \frac{(-1)^n}{(2n)!} {\boldsymbol{z}}^{2n}$</span></td>
+<td><span class="LaTeX">$\forall {\boldsymbol{z}} \in {\mathop{\mathbb C}}$</span></td>
 </tr>
 <tr class="even">
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>sinh</mo><mstyle mathvariant="bold"><mi>𝐳</mi></mstyle></mrow><annotation encoding="application/x-tex">\sinh \boldsymbol{z}</annotation></semantics></math></td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mn>0</mn></mrow><mi>∞</mi></msubsup><mfrac><msup><mstyle mathvariant="bold"><mi>𝐳</mi></mstyle><mrow><mn>2</mn><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msup><mrow><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mi>n</mi><mo>+</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mi>!</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\sum^{\infty}_{n=0} \frac{\boldsymbol{z}^{2n+1}}{(2n+1)!}</annotation></semantics></math></td>
-<td><span class="math inline">$\forall \boldsymbol{z} \in \C$</span></td>
+<td><span class="LaTeX">$\sinh {\boldsymbol{z}}$</span></td>
+<td><span class="LaTeX">$\sum^{\infty}_{n=0} \frac{{\boldsymbol{z}}^{2n+1}}{(2n+1)!}$</span></td>
+<td><span class="LaTeX">$\forall {\boldsymbol{z}} \in {\mathop{\mathbb C}}$</span></td>
 </tr>
 <tr class="odd">
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>cosh</mo><mstyle mathvariant="bold"><mi>𝐳</mi></mstyle></mrow><annotation encoding="application/x-tex">\cosh \boldsymbol{z}</annotation></semantics></math></td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mn>0</mn></mrow><mi>∞</mi></msubsup><mfrac><msup><mstyle mathvariant="bold"><mi>𝐳</mi></mstyle><mrow><mn>2</mn><mi>n</mi></mrow></msup><mrow><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mi>n</mi><mo stretchy="false" form="postfix">)</mo><mi>!</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\sum^{\infty}_{n=0} \frac{\boldsymbol{z}^{2n}}{(2n)!}</annotation></semantics></math></td>
-<td><span class="math inline">$\forall \boldsymbol{z} \in \C$</span></td>
+<td><span class="LaTeX">$\cosh {\boldsymbol{z}}$</span></td>
+<td><span class="LaTeX">$\sum^{\infty}_{n=0} \frac{{\boldsymbol{z}}^{2n}}{(2n)!}$</span></td>
+<td><span class="LaTeX">$\forall {\boldsymbol{z}} \in {\mathop{\mathbb C}}$</span></td>
 </tr>
 </tbody>
 </table>

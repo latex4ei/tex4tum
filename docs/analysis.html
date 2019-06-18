@@ -10,7 +10,7 @@
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="http://localhost:4000/analysis">
+    <link rel="canonical" href="/analysis">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -106,8 +106,7 @@
                     <h6 class="dropdown-header">Display Options</h6>
                     <div class="form-check dropdown-item">
                         <label class="form-check-label">
-                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox"
-                                checked="checked" onchange="Options.changeOption(this)">
+                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox" onchange="Options.changeOption(this)">
                             Definitions
                         </label>
                     </div>
@@ -171,45 +170,21 @@
 
 </p>
 
-
 <!-- Basics -->
-
 <!--    -->
-
-
-
-
-
 <!-- \newcommand{\diff}{\mathop{}\!\mathrm{\vphantom( d}} -->
-
-
-
-
-
 <!-- SI Units -->
 <!--=============================================================== -->
-
-
-
-
-
-
-
-
-
 <!-- KaTeX Tweaks -->
-
-
 <!-- \renewcommand{\boldsymbol}[1]{\mathbf{#1}} -->
-
 <h2 id="functions">Functions</h2>
 <div data-toggle="collapse" href="#eq_0">
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathvariant="bold"><mi>𝐟</mi></mstyle><mo>:</mo><msup><mstyle mathvariant="double-struck"><mi>𝔻</mi></mstyle><mi>n</mi></msup><mo>→</mo><msup><mstyle mathvariant="double-struck"><mi>𝕎</mi></mstyle><mi>m</mi></msup><mo>,</mo><mspace width="0.222em"></mspace><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><mo>↦</mo><mstyle mathvariant="bold"><mi>𝐟</mi></mstyle><mo stretchy="false" form="prefix">(</mo><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\boldsymbol f:\mathbb D^n \rightarrow \mathbb W^m,\ \boldsymbol x \mapsto \boldsymbol f(\boldsymbol x)</annotation></semantics></math></p>
+<p><span class="LaTeX">$${\boldsymbol f}:\mathbb D^n \rightarrow \mathbb W^m,\ {\boldsymbol x} \mapsto {\boldsymbol f}({\boldsymbol x})$$</span></p>
 </div>
 <div id="eq_0" class="legend collapse">
 <div class="card border-info w-75 mx-auto">
 <div class="p-1 small">
-<p>with function <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>f</mi><annotation encoding="application/x-tex">f</annotation></semantics></math></p>
+<p>with function <span class="LaTeX">$f$</span></p>
 </div>
 </div>
 </div>
@@ -223,19 +198,19 @@
 <tbody>
 <tr class="odd">
 <td>Function</td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo>:</mo><mstyle mathvariant="double-struck"><mi>𝔻</mi></mstyle><mo>→</mo><mstyle mathvariant="double-struck"><mi>𝕎</mi></mstyle></mrow><annotation encoding="application/x-tex">f:\mathbb D \rightarrow \mathbb W</annotation></semantics></math></td>
+<td><span class="LaTeX">$f:\mathbb D \rightarrow \mathbb W$</span></td>
 </tr>
 <tr class="even">
 <td>Scalarfield</td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ϕ</mi><mo>:</mo><msup><mstyle mathvariant="double-struck"><mi>𝔻</mi></mstyle><mi>n</mi></msup><mo>→</mo><mstyle mathvariant="double-struck"><mi>𝕎</mi></mstyle></mrow><annotation encoding="application/x-tex">\phi:\mathbb D^n \rightarrow \mathbb W</annotation></semantics></math></td>
+<td><span class="LaTeX">$\phi:\mathbb D^n \rightarrow \mathbb W$</span></td>
 </tr>
 <tr class="odd">
-<td>Curve</td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathvariant="bold"><mi>𝐫</mi></mstyle><mo>:</mo><mstyle mathvariant="double-struck"><mi>𝔻</mi></mstyle><mo>→</mo><msup><mstyle mathvariant="double-struck"><mi>𝕎</mi></mstyle><mi>m</mi></msup></mrow><annotation encoding="application/x-tex">\boldsymbol r: \mathbb D \rightarrow \mathbb W^m</annotation></semantics></math></td>
+<td><a href="/curve" >Curve</a></td>
+<td><span class="LaTeX">${\boldsymbol r}: \mathbb D \rightarrow \mathbb W^m$</span></td>
 </tr>
 <tr class="even">
 <td>Vectorfield</td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathvariant="bold"><mi>𝐅</mi></mstyle><mo>:</mo><msup><mstyle mathvariant="double-struck"><mi>𝔻</mi></mstyle><mi>n</mi></msup><mo>→</mo><msup><mstyle mathvariant="double-struck"><mi>𝕎</mi></mstyle><mi>n</mi></msup></mrow><annotation encoding="application/x-tex">\boldsymbol F:\mathbb D^n \rightarrow \mathbb W^n</annotation></semantics></math></td>
+<td><span class="LaTeX">${\boldsymbol F}:\mathbb D^n \rightarrow \mathbb W^n$</span></td>
 </tr>
 </tbody>
 </table>
@@ -249,19 +224,19 @@
 <tbody>
 <tr class="odd">
 <td><strong>Bild</strong></td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mi>D</mi><mo stretchy="false" form="postfix">)</mo><mo>:=</mo><mo stretchy="false" form="prefix">{</mo><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mspace width="0.278em"></mspace><mo stretchy="false" form="postfix">|</mo><mspace width="0.278em"></mspace><mi>x</mi><mo>∈</mo><mi>D</mi><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">f(D) := \{ f(x) \;\vert\; x\in D \}</annotation></semantics></math></td>
+<td><span class="LaTeX">$f(D) := \{ f(x) \;\vert\; x\in D \}$</span></td>
 </tr>
 <tr class="even">
 <td><strong>Kern</strong></td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mspace width="0.167em"></mspace><mtext mathvariant="normal">ker</mtext><mi>f</mi><mo>:=</mo><mo stretchy="false" form="prefix">{</mo><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><mspace width="0.278em"></mspace><mo stretchy="false" form="postfix">|</mo><mspace width="0.278em"></mspace><mstyle mathvariant="bold"><mi>𝐟</mi></mstyle><mo stretchy="false" form="prefix">(</mo><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mstyle mathvariant="bold"><mn>0</mn></mstyle><mo stretchy="false" form="postfix">}</mo></mrow><annotation encoding="application/x-tex">\,\text{ker}f := \{ \boldsymbol x \;\vert\; \boldsymbol f(\boldsymbol x) = \boldsymbol 0 \}</annotation></semantics></math></td>
+<td><span class="LaTeX">${\,\text{ker}}f := \{ {\boldsymbol x} \;\vert\; {\boldsymbol f}({\boldsymbol x}) = {\boldsymbol 0} \}$</span></td>
 </tr>
 <tr class="odd">
 <td><strong>Komposition</strong></td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo>∘</mo><mi>g</mi><mo>:=</mo><mi>f</mi><mo minsize="1.2" maxsize="1.2" stretchy="false" form="prefix">(</mo><mi>g</mi><mo stretchy="false" form="prefix">(</mo><mo stretchy="false" form="postfix">)</mo><mo minsize="1.2" maxsize="1.2" stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">f \circ g := f\bigl( g() \bigr)</annotation></semantics></math></td>
+<td><span class="LaTeX">$f \circ g := f\bigl( g() \bigr)$</span></td>
 </tr>
 <tr class="even">
 <td><strong>Fixpunkt</strong></td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>:=</mo><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mi>a</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">a := f(a)</annotation></semantics></math></td>
+<td><span class="LaTeX">$a := f(a)$</span></td>
 </tr>
 </tbody>
 </table>
@@ -275,11 +250,11 @@
 <tbody>
 <tr class="odd">
 <td><strong>Injektiv</strong></td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>f</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>x</mi><mn>2</mn></msub><mo stretchy="false" form="postfix">)</mo><mo>⇒</mo><msub><mi>x</mi><mn>1</mn></msub><mo>=</mo><msub><mi>x</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">f(x_1)=f(x_2) \Rightarrow x_1=x_2</annotation></semantics></math></td>
+<td><span class="LaTeX">$f(x_1)=f(x_2) \Rightarrow x_1=x_2$</span></td>
 </tr>
 <tr class="even">
 <td><strong>Surjektiv</strong></td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∀</mo><mi>y</mi><mo>∈</mo><mstyle mathvariant="double-struck"><mi>𝕎</mi></mstyle><mo>∃</mo><mi>x</mi><mo>∈</mo><mstyle mathvariant="double-struck"><mi>𝔻</mi></mstyle><mo>:</mo><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>y</mi></mrow><annotation encoding="application/x-tex">\forall y\in \mathbb W \exists x\in \mathbb D:f(x)=y</annotation></semantics></math></td>
+<td><span class="LaTeX">$\forall y\in \mathbb W \exists x\in \mathbb D:f(x)=y$</span></td>
 </tr>
 <tr class="odd">
 <td><strong>Bijektiv</strong></td>
@@ -287,33 +262,33 @@
 </tr>
 </tbody>
 </table>
-<h2 id="funktionen-fmathbb-d-rightarrow-mathbb-w-x-mapsto-fx">Funktionen <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo>:</mo><mstyle mathvariant="double-struck"><mi>𝔻</mi></mstyle><mo>→</mo><mstyle mathvariant="double-struck"><mi>𝕎</mi></mstyle><mo>,</mo><mspace width="0.222em"></mspace><mi>x</mi><mo>↦</mo><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">f:\mathbb D \rightarrow \mathbb W,\ x \mapsto f(x)</annotation></semantics></math></h2>
-<p>Eine Funktion <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>f</mi><annotation encoding="application/x-tex">f</annotation></semantics></math> ist eine Abbildung, die jedem Element <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math> einer Definitionsmenge <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>D</mi><annotation encoding="application/x-tex">D</annotation></semantics></math> genau ein Element <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>y</mi><annotation encoding="application/x-tex">y</annotation></semantics></math> einer Wertemenge <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>W</mi><annotation encoding="application/x-tex">W</annotation></semantics></math> zuordnet.</p>
+<h2 id="funktionen-fmathbb-d-rightarrow-mathbb-w-x-mapsto-fx">Funktionen <span class="LaTeX">$f:\mathbb D \rightarrow \mathbb W,\ x \mapsto f(x)$</span></h2>
+<p>Eine Funktion <span class="LaTeX">$f$</span> ist eine Abbildung, die jedem Element <span class="LaTeX">$x$</span> einer Definitionsmenge <span class="LaTeX">$D$</span> genau ein Element <span class="LaTeX">$y$</span> einer Wertemenge <span class="LaTeX">$W$</span> zuordnet.</p>
 <h3 id="symmetry">Symmetry</h3>
-<p><strong>Achsensym.</strong>(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>g</mi><annotation encoding="application/x-tex">g</annotation></semantics></math>): <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mo>−</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">f(-x)=f(x)</annotation></semantics></math><br />
-<strong>Punktsym.</strong>(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>u</mi><annotation encoding="application/x-tex">u</annotation></semantics></math>): <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mo>−</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mo>−</mo><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">f(-x)=-f(x)</annotation></semantics></math></p>
+<p><strong>Achsensym.</strong>(<span class="LaTeX">$g$</span>): <span class="LaTeX">$f(-x)=f(x)$</span><br />
+<strong>Punktsym.</strong>(<span class="LaTeX">$u$</span>): <span class="LaTeX">$f(-x)=-f(x)$</span></p>
 <table>
 <thead>
 <tr class="header">
-<th><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>g</mi><mn>1</mn></msub><mo>±</mo><msub><mi>g</mi><mn>2</mn></msub><mo>=</mo><msub><mi>g</mi><mn>3</mn></msub></mrow><annotation encoding="application/x-tex">g_1 \pm g_2 = g_3</annotation></semantics></math></th>
-<th><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>u</mi><mn>1</mn></msub><mo>±</mo><msub><mi>u</mi><mn>2</mn></msub><mo>=</mo><msub><mi>u</mi><mn>3</mn></msub></mrow><annotation encoding="application/x-tex">u_1 \pm u_2 = u_3</annotation></semantics></math></th>
+<th><span class="LaTeX">$g_1 \pm g_2 = g_3$</span></th>
+<th><span class="LaTeX">$u_1 \pm u_2 = u_3$</span></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>g</mi><mn>1</mn></msub><mo>⋅</mo><msub><mi>g</mi><mn>2</mn></msub><mo>=</mo><msub><mi>g</mi><mn>3</mn></msub></mrow><annotation encoding="application/x-tex">g_1 \cdot g_2=g_3</annotation></semantics></math></td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>u</mi><mn>1</mn></msub><mo>⋅</mo><msub><mi>u</mi><mn>2</mn></msub><mo>=</mo><msub><mi>g</mi><mn>3</mn></msub></mrow><annotation encoding="application/x-tex">u_1 \cdot u_2 = g_3</annotation></semantics></math></td>
+<td><span class="LaTeX">$g_1 \cdot g_2=g_3$</span></td>
+<td><span class="LaTeX">$u_1 \cdot u_2 = g_3$</span></td>
 </tr>
 </tbody>
 </table>
-<h3 id="extrema-monotonie-und-krümmung-von-f">Extrema, Monotonie und Krümmung von <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>f</mi><annotation encoding="application/x-tex">f</annotation></semantics></math></h3>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mi>′</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false" form="postfix">)</mo><mover><mo>=</mo><mo accent="false">!</mo></mover><mn>0</mn><mrow><mo stretchy="true" form="prefix">{</mo><mtable><mtr><mtd columnalign="left"><mi>f</mi><mi>″</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false" form="postfix">)</mo><mo>&lt;</mo><mn>0</mn><mspace width="0.222em"></mspace><mo>→</mo><mspace width="0.222em"></mspace><mtext mathvariant="normal">Maximum (lokal)</mtext></mtd></mtr><mtr><mtd columnalign="left"><mi>f</mi><mi>″</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false" form="postfix">)</mo><mo>&gt;</mo><mn>0</mn><mspace width="0.222em"></mspace><mo>→</mo><mspace width="0.222em"></mspace><mtext mathvariant="normal">Minimum (lokal)</mtext></mtd></mtr></mtable></mrow></mrow><annotation encoding="application/x-tex">f&#39;(x_0)\overset{!}{=}0  \begin{cases}f&#39;&#39;(x_0)&lt;0 \ \rightarrow \ \text{Maximum (lokal)} \\ f&#39;&#39;(x_0)&gt;0 \ \rightarrow \ \text{Minimum (lokal)}\end{cases}</annotation></semantics></math></p>
-<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mi>″</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0</mn><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> und </mtext><mspace width="0.333em"></mspace></mrow><mi>f</mi><mi>‴</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false" form="postfix">)</mo><mo>≠</mo><mn>0</mn><mo>→</mo><msub><mi>x</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">f&#39;&#39;(x_0)=0 \text{ und } f&#39;&#39;&#39;(x_0) \ne 0 \rightarrow x_0</annotation></semantics></math> Wendepunkt</p>
-<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mi>′</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mover><msub><mi></mi><mrow><mo stretchy="false" form="prefix">(</mo><mo>&gt;</mo><mo stretchy="false" form="postfix">)</mo></mrow></msub><msub><mi></mi><mo>≥</mo></msub></mover><mspace width="-0.167em"></mspace><mspace width="-0.167em"></mspace><mi>/</mi><mspace width="-0.167em"></mspace><mspace width="-0.167em"></mspace><mover><msub><mi></mi><mrow><mo stretchy="false" form="prefix">(</mo><mo>&lt;</mo><mo stretchy="false" form="postfix">)</mo></mrow></msub><msub><mi></mi><mo>≤</mo></msub></mover><mn>0</mn><mspace width="0.222em"></mspace><mo>→</mo></mrow><annotation encoding="application/x-tex">f&#39;(x) \stackrel{_\ge}{_{(\gt)}}\!\! / \!\! \stackrel{_\le}{_{(\lt)}} 0 \ \rightarrow</annotation></semantics></math>  <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>f</mi><annotation encoding="application/x-tex">f</annotation></semantics></math> (streng) Monoton steigend/fallend. <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>∈</mo><mo stretchy="false" form="prefix">[</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">x\in[a,b]</annotation></semantics></math></p>
-<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mi>″</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mover><msub><mi></mi><mrow><mo stretchy="false" form="prefix">(</mo><mo>&gt;</mo><mo stretchy="false" form="postfix">)</mo></mrow></msub><msub><mi></mi><mo>≥</mo></msub></mover><mspace width="-0.167em"></mspace><mspace width="-0.167em"></mspace><mi>/</mi><mspace width="-0.167em"></mspace><mspace width="-0.167em"></mspace><mover><msub><mi></mi><mrow><mo stretchy="false" form="prefix">(</mo><mo>&lt;</mo><mo stretchy="false" form="postfix">)</mo></mrow></msub><msub><mi></mi><mo>≤</mo></msub></mover><mn>0</mn><mspace width="0.222em"></mspace><mo>→</mo></mrow><annotation encoding="application/x-tex">f&#39;&#39;(x) \stackrel{_\ge}{_{(\gt)}}\!\! / \!\! \stackrel{_\le}{_{(\lt)}} 0 \ \rightarrow</annotation></semantics></math>  <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>f</mi><annotation encoding="application/x-tex">f</annotation></semantics></math> (strikt) konvex/konkav. <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>∈</mo><mo stretchy="false" form="prefix">[</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">x\in[a,b]</annotation></semantics></math></p>
-<h2 id="asymptoten-und-grenzwerte-von-f">Asymptoten und Grenzwerte von <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>f</mi><annotation encoding="application/x-tex">f</annotation></semantics></math></h2>
-<p>Horizontal: <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>c</mi><mo>±</mo></msub><mo>=</mo><munder><mo>lim</mo><mrow><mi>x</mi><mo>→</mo><mo>±</mo><mi>∞</mi></mrow></munder><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">c_\pm =\lim\limits_{x\rightarrow\pm \infty} f(x)</annotation></semantics></math> Vertikal: <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∃</mo><mspace width="0.167em"></mspace><mrow><mtext mathvariant="normal">Nullst. </mtext><mspace width="0.333em"></mspace></mrow><mi>a</mi><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> des Nenners </mtext><mspace width="0.333em"></mspace></mrow></mrow><annotation encoding="application/x-tex">\exists\,\text{Nullst. } a \text{ des Nenners }</annotation></semantics></math>\ Polynomasymptote <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">P(x)</annotation></semantics></math>: <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>:=</mo><mfrac><mrow><mi>A</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><mrow><mi>Q</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow></mfrac><mo>=</mo><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mo minsize="1.8" maxsize="1.8" stretchy="false" form="prefix">(</mo><mfrac><mrow><mi>B</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><mrow><mi>Q</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow></mfrac><mo>→</mo><mn>0</mn><mo minsize="1.8" maxsize="1.8" stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">f(x):=\frac{A(x)}{Q(x)}=P(x)+ \Big(\frac{B(x)}{Q(x)}\rightarrow 0\Big)</annotation></semantics></math></p>
-<p><strong>Regel von L’Hospital</strong>: <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><munder><mo>lim</mo><mrow><mi>x</mi><mo>→</mo><mi>a</mi></mrow></munder><mfrac><mrow><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><mrow><mi>g</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow></mfrac><mo>→</mo><mrow><mo stretchy="true" form="prefix">[</mo><mfrac><mn>0</mn><mn>0</mn></mfrac><mo stretchy="true" form="postfix">]</mo></mrow><mspace width="-0.167em"></mspace><mi>/</mi><mspace width="-0.167em"></mspace><mrow><mo stretchy="true" form="prefix">[</mo><mfrac><mi>∞</mi><mi>∞</mi></mfrac><mo stretchy="true" form="postfix">]</mo></mrow><mo>=</mo><munder><mo>lim</mo><mrow><mi>x</mi><mo>→</mo><mi>a</mi></mrow></munder><mfrac><mrow><mi>f</mi><mi>′</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><mrow><mi>g</mi><mi>′</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow></mfrac></mrow><annotation encoding="application/x-tex">\lim\limits_{x \rightarrow a} \frac{f(x)}{g(x)} \rightarrow \left[ \frac{0}{0} \right]\!/\!\left[ \frac{\infty}{\infty} \right] = \lim\limits_{x \rightarrow a} \frac{f&#39;(x)}{g&#39;(x)}</annotation></semantics></math></p>
+<h3 id="extrema-monotonie-und-krümmung-von-f">Extrema, Monotonie und Krümmung von <span class="LaTeX">$f$</span></h3>
+<p><span class="LaTeX">$$f&#39;(x_0)\overset{!}{=}0  \begin{cases}f&#39;&#39;(x_0)&lt;0 \ \rightarrow \ \text{Maximum (lokal)} \\ f&#39;&#39;(x_0)&gt;0 \ \rightarrow \ \text{Minimum (lokal)}\end{cases}$$</span></p>
+<p><span class="LaTeX">$f&#39;&#39;(x_0)=0 \text{ und } f&#39;&#39;&#39;(x_0) \ne 0 \rightarrow x_0$</span> Wendepunkt</p>
+<p><span class="LaTeX">$f&#39;(x) \stackrel{_\ge}{_{(\gt)}}\!\! / \!\! \stackrel{_\le}{_{(\lt)}} 0 \ \rightarrow$</span>  <span class="LaTeX">$f$</span> (streng) Monoton steigend/fallend. <span class="LaTeX">$x\in[a,b]$</span></p>
+<p><span class="LaTeX">$f&#39;&#39;(x) \stackrel{_\ge}{_{(\gt)}}\!\! / \!\! \stackrel{_\le}{_{(\lt)}} 0 \ \rightarrow$</span>  <span class="LaTeX">$f$</span> (strikt) konvex/konkav. <span class="LaTeX">$x\in[a,b]$</span></p>
+<h2 id="asymptoten-und-grenzwerte-von-f">Asymptoten und Grenzwerte von <span class="LaTeX">$f$</span></h2>
+<p>Horizontal: <span class="LaTeX">$c_\pm =\lim\limits_{x{\rightarrow}\pm \infty} f(x)$</span> Vertikal: <span class="LaTeX">$\exists\,\text{Nullst. } a \text{ des Nenners }$</span>\ Polynomasymptote <span class="LaTeX">$P(x)$</span>: <span class="LaTeX">$f(x):=\frac{A(x)}{Q(x)}=P(x)+ \Big(\frac{B(x)}{Q(x)}{\rightarrow}0\Big)$</span></p>
+<p><strong>Regel von L'Hospital</strong>: <span class="LaTeX">$\lim\limits_{x \rightarrow a} \frac{f(x)}{g(x)} \rightarrow \left[ \frac{0}{0} \right]\!/\!\left[ \frac{\infty}{\infty} \right] = \lim\limits_{x \rightarrow a} \frac{f&#39;(x)}{g&#39;(x)}$</span></p>
 <table>
 <thead>
 <tr class="header">
@@ -323,19 +298,19 @@
 </thead>
 <tbody>
 <tr class="odd">
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><munder><mo>lim</mo><mrow><mi>x</mi><mo>→</mo><mi>∞</mi></mrow></munder><mfrac><mn>1</mn><msup><mi>x</mi><mi>n</mi></msup></mfrac><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\lim\limits_{x \rightarrow\infty} \frac{1}{x^n} = 0</annotation></semantics></math></td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><munder><mo>lim</mo><mrow><mi>n</mi><mo>→</mo><mi>∞</mi></mrow></munder><mroot><mi>n</mi><mi>n</mi></mroot><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\lim\limits_{n \rightarrow\infty} \sqrt[n]{n} = 1</annotation></semantics></math></td>
+<td><span class="LaTeX">$\lim\limits_{x {\rightarrow}\infty} \frac{1}{x^n} = 0$</span></td>
+<td><span class="LaTeX">$\lim\limits_{n {\rightarrow}\infty} \sqrt[n]{n} = 1$</span></td>
 </tr>
 <tr class="even">
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><munder><mo>lim</mo><mrow><mi>x</mi><mo>→</mo><mi>∞</mi></mrow></munder><mi>x</mi><mo>⋅</mo><msup><mi>e</mi><mrow><mo>−</mo><mi>x</mi></mrow></msup><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\lim\limits_{x \rightarrow\infty} x \cdot e^{-x} = 0</annotation></semantics></math></td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><munder><mo>lim</mo><mrow><mi>x</mi><mo>→</mo><mn>0</mn></mrow></munder><mfrac><mrow><mo>sin</mo><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><mi>x</mi></mfrac><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\lim\limits_{x \rightarrow 0} \frac{\sin(x)}{x} = 1</annotation></semantics></math></td>
+<td><span class="LaTeX">$\lim\limits_{x {\rightarrow}\infty} x \cdot e^{-x} = 0$</span></td>
+<td><span class="LaTeX">$\lim\limits_{x {\rightarrow}0} \frac{\sin(x)}{x} = 1$</span></td>
 </tr>
 </tbody>
 </table>
-<h3 id="wichtige-sätze-für-stetige-fkt.-f-ab-rightarrow-mathbb-r-f-mapsto-fx">Wichtige Sätze für <em>stetige</em> Fkt. <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo>:</mo><mo stretchy="false" form="prefix">[</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false" form="postfix">]</mo><mo>→</mo><mstyle mathvariant="double-struck"><mi>ℝ</mi></mstyle><mo>,</mo><mi>f</mi><mo>↦</mo><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">f: [a,b] \rightarrow \mathbb R, f \mapsto f(x)</annotation></semantics></math></h3>
-<p><strong>Zwischenwertsatz:</strong> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∀</mo><mi>y</mi><mo>∈</mo><mo stretchy="false" form="prefix">[</mo><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mi>a</mi><mo stretchy="false" form="postfix">)</mo><mo>,</mo><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mi>b</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">]</mo><mspace width="0.222em"></mspace><mo>∃</mo><mi>x</mi><mo>∈</mo><mo stretchy="false" form="prefix">[</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false" form="postfix">]</mo><mo>:</mo><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>y</mi></mrow><annotation encoding="application/x-tex">\forall y \in [f(a),f(b)]\ \exists x\in [a,b]:f(x)=y</annotation></semantics></math></p>
-<p><strong>Mittelwertsatz:</strong> Falls <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>f</mi><annotation encoding="application/x-tex">f</annotation></semantics></math> diffbar, dann <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∃</mo><msub><mi>x</mi><mn>0</mn></msub><mo>:</mo><mi>f</mi><mi>′</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mfrac><mrow><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mi>b</mi><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mi>a</mi><mo stretchy="false" form="postfix">)</mo></mrow><mrow><mi>b</mi><mo>−</mo><mi>a</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\exists x_0:f&#39;(x_0)=\frac{f(b)-f(a)}{b-a}</annotation></semantics></math></p>
-<p><strong>Satz von Rolle:</strong> Falls <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mi>a</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mi>b</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">f(a)=f(b)</annotation></semantics></math>, dann <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∃</mo><msub><mi>x</mi><mn>0</mn></msub><mo>:</mo><mi>f</mi><mi>′</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\exists x_0: f&#39; (x_0) = 0</annotation></semantics></math></p>
+<h3 id="wichtige-sätze-für-stetige-fkt.-f-ab-rightarrow-mathbb-r-f-mapsto-fx">Wichtige Sätze für <em>stetige</em> Fkt. <span class="LaTeX">$f: [a,b] \rightarrow \mathbb R, f \mapsto f(x)$</span></h3>
+<p><strong>Zwischenwertsatz:</strong> <span class="LaTeX">$\forall y \in [f(a),f(b)]\ \exists x\in [a,b]:f(x)=y$</span></p>
+<p><strong>Mittelwertsatz:</strong> Falls <span class="LaTeX">$f$</span> diffbar, dann <span class="LaTeX">$\exists x_0:f&#39;(x_0)=\frac{f(b)-f(a)}{b-a}$</span></p>
+<p><strong>Satz von Rolle:</strong> Falls <span class="LaTeX">$f(a)=f(b)$</span>, dann <span class="LaTeX">$\exists x_0: f&#39; (x_0) = 0$</span></p>
 <h2 id="subfolders-and-articles"><i class="fa fa-list-ul"></i> Subfolders and Articles</h2>
 <ul>
 <li><a href="convolution.html">Convolution</a></li>

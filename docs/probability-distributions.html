@@ -106,8 +106,7 @@
                     <h6 class="dropdown-header">Display Options</h6>
                     <div class="form-check dropdown-item">
                         <label class="form-check-label">
-                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox"
-                                checked="checked" onchange="Options.changeOption(this)">
+                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox" onchange="Options.changeOption(this)">
                             Definitions
                         </label>
                     </div>
@@ -202,11 +201,7 @@
 <h3 id="bernoulli">Bernoulli</h3>
 <p>One trial with two possible outcomes <span class="LaTeX">$k \in \{0, 1\}$</span>, such as a coin toss.</p>
 <p><strong>Urn Model:</strong> 1 urn with <span class="LaTeX">$N$</span> balls (<span class="LaTeX">$p$</span> red and <span class="LaTeX">$N-p$</span> black). Probability to draw the red ball (<span class="LaTeX">$k=1$</span>) with one trial.</p>
-<table style="width:56%;">
-<colgroup>
-<col style="width: 19%" />
-<col style="width: 36%" />
-</colgroup>
+<table>
 <thead>
 <tr class="header">
 <th>Parameters</th>
@@ -231,8 +226,8 @@
 <td><span class="LaTeX">$p(1-p)=pq$</span></td>
 </tr>
 <tr class="odd">
-<td><abbr title="Probability Density Function" >PDF</abbr></td>
-<td><span class="LaTeX">$f(k, p)=\begin{cases} p &amp; \text{if } k=1,\ q=1-p &amp; \text{if } k=0. \end{cases}$</span></td>
+<td>PDF</td>
+<td><span class="LaTeX">$f(k, p)=\begin{cases} p &amp; \text{if } k=1,\\ q=1-p &amp; \text{if } k=0. \end{cases}$</span></td>
 </tr>
 </tbody>
 </table>
@@ -264,7 +259,7 @@
 <td><span class="LaTeX">$np(1-p)$</span></td>
 </tr>
 <tr class="odd">
-<td><abbr title="Probability Density Function" >PDF</abbr></td>
+<td>PDF</td>
 <td><span class="LaTeX">$f(k, n, p) = \binom{n}{k} p^k (1-p)^{n-k}$</span></td>
 </tr>
 </tbody>
@@ -274,12 +269,12 @@
 <p>Models 1 urn with <span class="LaTeX">$N$</span> balls where balls are <em>not</em> put back after each trial.</p>
 <h3 id="poisson-distribution">Poisson Distribution</h3>
 <p>Number of events in a time period given an event rate <span class="LaTeX">$\lambda$</span>.</p>
-<p>Corresponds to a Binomial distribution for infinite trials in infinitesimal small time slices, such as number of emails per hour.</p>
+<p>Corresponds to a <a href="/binomial-distribution" >Binomial distribution</a> for infinite trials in infinitesimal small time slices, such as number of emails per hour.</p>
 <h3 id="geometric-distribution">Geometric Distribution</h3>
-<p>Amount of failures <span class="LaTeX">$k$</span> before first success in a Binomial Distribution.</p>
+<p>Amount of failures <span class="LaTeX">$k$</span> before first success in a <a href="/binomial-distribution" >Binomial Distribution</a>.</p>
 <p><strong>Urn Model:</strong> 1 urn with <span class="LaTeX">$N$</span> balls (<span class="LaTeX">$p$</span> red and <span class="LaTeX">$N-p$</span> black). Probability to draw <span class="LaTeX">$k$</span> black balls, before the first red ball is drawn.</p>
 <h3 id="negative-binomial">Negative Binomial</h3>
-<p>Amount of failures <span class="LaTeX">$k$</span> before <span class="LaTeX">$r$</span> successes in a Binomial Distribution.</p>
+<p>Amount of failures <span class="LaTeX">$k$</span> before <span class="LaTeX">$r$</span> successes in a <a href="/binomial-distribution" >Binomial Distribution</a>.</p>
 <h3 id="exponential">Exponential</h3>
 <p>Time until an event that occurs at rate <span class="LaTeX">$\lambda$</span>.</p>
 <p>Corresponds to a Geometric for infinite trials of infinitesimal small time slices, such as seconds till the next email arrives.</p>

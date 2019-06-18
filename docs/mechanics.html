@@ -10,7 +10,7 @@
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="http://localhost:4000/mechanics">
+    <link rel="canonical" href="/mechanics">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -106,8 +106,7 @@
                     <h6 class="dropdown-header">Display Options</h6>
                     <div class="form-check dropdown-item">
                         <label class="form-check-label">
-                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox"
-                                checked="checked" onchange="Options.changeOption(this)">
+                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox" onchange="Options.changeOption(this)">
                             Definitions
                         </label>
                     </div>
@@ -171,37 +170,13 @@
 
 </p>
 
-
 <!-- Basics -->
-
 <!--    -->
-
-
-
-
-
 <!-- \newcommand{\diff}{\mathop{}\!\mathrm{\vphantom( d}} -->
-
-
-
-
-
 <!-- SI Units -->
 <!--=============================================================== -->
-
-
-
-
-
-
-
-
-
 <!-- KaTeX Tweaks -->
-
-
 <!-- \renewcommand{\boldsymbol}[1]{\mathbf{#1}} -->
-
 <div id="title_def" class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
@@ -229,15 +204,15 @@ Mechanics describe the behavior of physical bodies when they are subject to forc
 <tbody>
 <tr class="odd">
 <td>Gravitation</td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mstyle mathvariant="bold"><mi>𝐅</mi></mstyle><mi>G</mi></msub><mo>=</mo><mo>−</mo><mi>G</mi><mfrac><mrow><msub><mi>m</mi><mn>1</mn></msub><msub><mi>m</mi><mn>2</mn></msub></mrow><msup><mi>r</mi><mn>2</mn></msup></mfrac><mfrac><mstyle mathvariant="bold"><mi>𝐫</mi></mstyle><mrow><mo stretchy="true" form="prefix">|</mo><mi>r</mi><mo stretchy="true" form="postfix">|</mo></mrow></mfrac><mo>≈</mo><mstyle mathvariant="bold"><mi>𝐠</mi></mstyle><mi>m</mi></mrow><annotation encoding="application/x-tex">\boldsymbol F_G=-G\frac{m_1m_2}{r^2}\frac{\boldsymbol r}{\left\vert{r}\right\vert}\approx \boldsymbol g m</annotation></semantics></math></td>
+<td><span class="LaTeX">${\boldsymbol F}_G=-G\frac{m_1m_2}{r^2}\frac{{\boldsymbol r}}{{\left\vert{r}\right\vert}}\approx {\boldsymbol g} m$</span></td>
 </tr>
 <tr class="even">
 <td>Friction</td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mstyle mathvariant="bold"><mi>𝐅</mi></mstyle><mi>R</mi></msub><mo>=</mo><mi>μ</mi><msub><mstyle mathvariant="bold"><mi>𝐅</mi></mstyle><mi>N</mi></msub></mrow><annotation encoding="application/x-tex">\boldsymbol F_R=\mu \boldsymbol F_N</annotation></semantics></math></td>
+<td><span class="LaTeX">${\boldsymbol F}_R=\mu {\boldsymbol F}_N$</span></td>
 </tr>
 <tr class="odd">
 <td>Coulomb</td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mstyle mathvariant="bold"><mi>𝐅</mi></mstyle><mrow><mi>e</mi><mi>l</mi></mrow></msub><mo>=</mo><mfrac><mn>1</mn><mrow><mn>4</mn><mi>π</mi><mi>ε</mi></mrow></mfrac><mfrac><mrow><msub><mi>q</mi><mn>1</mn></msub><msub><mi>q</mi><mn>2</mn></msub></mrow><msup><mi>r</mi><mn>2</mn></msup></mfrac><mfrac><mstyle mathvariant="bold"><mi>𝐫</mi></mstyle><mrow><mo stretchy="false" form="prefix">|</mo><mi>r</mi><mo stretchy="false" form="prefix">|</mo></mrow></mfrac></mrow><annotation encoding="application/x-tex">\boldsymbol F_{el}=\frac{1}{4\pi\varepsilon}\frac{q_1q_2}{r^2}\frac{\boldsymbol r}{|r|}</annotation></semantics></math></td>
+<td><span class="LaTeX">${\boldsymbol F}_{el}=\frac{1}{4\pi\varepsilon}\frac{q_1q_2}{r^2}\frac{{\boldsymbol r}}{|r|}$</span></td>
 </tr>
 </tbody>
 </table>

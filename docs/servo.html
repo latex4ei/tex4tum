@@ -10,7 +10,7 @@
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="http://localhost:4000/servo">
+    <link rel="canonical" href="/servo">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -106,8 +106,7 @@
                     <h6 class="dropdown-header">Display Options</h6>
                     <div class="form-check dropdown-item">
                         <label class="form-check-label">
-                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox"
-                                checked="checked" onchange="Options.changeOption(this)">
+                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox" onchange="Options.changeOption(this)">
                             Definitions
                         </label>
                     </div>
@@ -181,37 +180,13 @@
 
 </p>
 
-
 <!-- Basics -->
-
 <!--    -->
-
-
-
-
-
 <!-- \newcommand{\diff}{\mathop{}\!\mathrm{\vphantom( d}} -->
-
-
-
-
-
 <!-- SI Units -->
 <!--=============================================================== -->
-
-
-
-
-
-
-
-
-
 <!-- KaTeX Tweaks -->
-
-
 <!-- \renewcommand{\boldsymbol}[1]{\mathbf{#1}} -->
-
 <div id="title_def" class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
@@ -219,7 +194,7 @@
 Definition
 </h5>
 <p class="card-text">
-A Servo Motor is a cheap rotary actuator used for radio control and small-scale robotics.
+A Servo Motor is a cheap rotary <a href="/actuator" >actuator</a> used for radio control and small-scale robotics.
 </p>
 </div>
 </div>
@@ -236,7 +211,7 @@ A Servo Motor is a cheap rotary actuator used for radio control and small-scale 
 <tbody>
 <tr class="odd">
 <td>Yellow</td>
-<td>PWM Signal</td>
+<td>PWM <a href="/signal" >Signal</a></td>
 </tr>
 <tr class="even">
 <td>Red</td>
@@ -255,14 +230,14 @@ A Servo Motor is a cheap rotary actuator used for radio control and small-scale 
 <figcaption class="figure-caption">
 </figcaption>
 </figure>
-<p>The angle of the servo is determined by the width of the PWM signal that is applied to the control wire. Most servos expect to see a pulse every 20 ms. The angle is calculated as the fraction of the pulse width</p>
+<p>The angle of the servo is determined by the width of the PWM <a href="/signal" >signal</a> that is applied to the control wire. Most servos expect to see a pulse every 20 ms. The angle is calculated as the fraction of the pulse width</p>
 <div data-toggle="collapse" href="#eq_0">
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mi>w</mi><mo>=</mo><mn>1.0</mn><mspace width="0.167em"></mspace><mstyle mathvariant="normal"><mi>m</mi><mi>s</mi></mstyle><mo>+</mo><mn>1.0</mn><mspace width="0.167em"></mspace><mstyle mathvariant="normal"><mi>m</mi><mi>s</mi></mstyle><mo>⋅</mo><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mi>α</mi><msub><mi>α</mi><mtext mathvariant="normal">max</mtext></msub></mfrac><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">pw = 1.0\,\mathrm{ms} + 1.0\,\mathrm{ms} \cdot \left( \frac{\alpha}{\alpha_{\text{max}}}\right)</annotation></semantics></math></p>
+<p><span class="LaTeX">$$pw = {1.0\,\mathrm{ms}} + {1.0\,\mathrm{ms}} \cdot \left( \frac{\alpha}{\alpha_{\text{max}}}\right)$$</span></p>
 </div>
 <div id="eq_0" class="legend collapse">
 <div class="card border-info w-75 mx-auto">
 <div class="p-1 small">
-<p>with the pulsewidth <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mi>w</mi></mrow><annotation encoding="application/x-tex">pw</annotation></semantics></math>, the current angle <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>α</mi><annotation encoding="application/x-tex">\alpha</annotation></semantics></math> .</p>
+<p>with the pulsewidth <span class="LaTeX">$pw$</span>, the current angle <span class="LaTeX">$\alpha$</span> .</p>
 </div>
 </div>
 </div>
@@ -274,14 +249,14 @@ A Servo Motor is a cheap rotary actuator used for radio control and small-scale 
 <div class='card border-success mb-1'>
 <div class='card-body'>
 <p class='card-text'>
-A pulsewidth of <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mi>w</mi><mo>=</mo><mn>1.5</mn><mspace width="0.167em"></mspace><mstyle mathvariant="normal"><mi>m</mi><mi>s</mi></mstyle></mrow><annotation encoding="application/x-tex">pw = 1.5\,\mathrm{ms}</annotation></semantics></math> will turn a servo with a maximum angle <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>α</mi><mo>max</mo></msub><mo>=</mo><mn>180</mn><mspace width="0.167em"></mspace><mstyle mathvariant="normal"><mtext mathvariant="normal">deg</mtext><mspace width="0.167em"></mspace></mstyle></mrow><annotation encoding="application/x-tex">\alpha_{\max} = 180\,\mathrm{\text{deg}\,}</annotation></semantics></math> to <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi><mo>=</mo><mn>90</mn></mrow><annotation encoding="application/x-tex">\alpha = 90</annotation></semantics></math>° (neutral position).
+A pulsewidth of <span class="LaTeX">$pw = {1.5\,\mathrm{ms}}$</span> will turn a servo with a maximum angle <span class="LaTeX">$\alpha_{\max} = {180\,\mathrm{{\text{deg}{\,}}}}$</span> to <span class="LaTeX">$\alpha = 90$</span>° (neutral position).
 <p>
 </div>
 </div>
 </div>
 <h2 id="references">References</h2>
 <ul>
-<li>Jameco Electronics, <a href="https://www.jameco.com/jameco/workshop/howitworks/how-servo-motors-work.html">How do Servo Motors Work</a></li>
+<li>Jameco <a href="/electronics" >Electronics</a>, <a href="https://www.jameco.com/jameco/workshop/howitworks/how-servo-motors-work.html">How do Servo Motors Work</a></li>
 </ul>
 
 

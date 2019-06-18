@@ -10,7 +10,7 @@
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="http://localhost:4000/frequency-analysis">
+    <link rel="canonical" href="/frequency-analysis">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -106,8 +106,7 @@
                     <h6 class="dropdown-header">Display Options</h6>
                     <div class="form-check dropdown-item">
                         <label class="form-check-label">
-                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox"
-                                checked="checked" onchange="Options.changeOption(this)">
+                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox" onchange="Options.changeOption(this)">
                             Definitions
                         </label>
                     </div>
@@ -173,37 +172,13 @@
 
 </p>
 
-
 <!-- Basics -->
-
 <!--    -->
-
-
-
-
-
 <!-- \newcommand{\diff}{\mathop{}\!\mathrm{\vphantom( d}} -->
-
-
-
-
-
 <!-- SI Units -->
 <!--=============================================================== -->
-
-
-
-
-
-
-
-
-
 <!-- KaTeX Tweaks -->
-
-
 <!-- \renewcommand{\boldsymbol}[1]{\mathbf{#1}} -->
-
 <table>
 <thead>
 <tr class="header">
@@ -236,52 +211,52 @@
 <tbody>
 <tr class="odd">
 <td>Linearity</td>
-<td style="text-align: right;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mi>β</mi><mi>g</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\alpha f(t) + \beta g(t)</annotation></semantics></math></td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mspace width="0.222em"></mspace><mo>∘</mo><mspace width="0.222em"></mspace><mspace width="-0.167em"></mspace><mspace width="-0.167em"></mspace><mspace width="-0.167em"></mspace><mspace width="-0.167em"></mspace><mo>−</mo><mspace width="-0.167em"></mspace><mspace width="-0.167em"></mspace><mspace width="-0.167em"></mspace><mo>•</mo><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mi>α</mi><mi>F</mi><mo stretchy="false" form="prefix">(</mo><mi>s</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mi>β</mi><mi>G</mi><mo stretchy="false" form="prefix">(</mo><mi>s</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\ \circ\:\!\!\!\!-\!\!\!\bullet\ \ \alpha F(s) + \beta G(s)</annotation></semantics></math></td>
+<td style="text-align: right;"><span class="LaTeX">$\alpha f(t) + \beta g(t)$</span></td>
+<td><span class="LaTeX">${\ \circ\:\!\!\!\!-\!\!\!\bullet\ }\ \alpha F(s) + \beta G(s)$</span></td>
 </tr>
 <tr class="even">
 <td>Shift Time</td>
-<td style="text-align: right;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo>−</mo><mi>τ</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">x(t - \tau)</annotation></semantics></math></td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mspace width="0.222em"></mspace><mo>∘</mo><mspace width="0.222em"></mspace><mspace width="-0.167em"></mspace><mspace width="-0.167em"></mspace><mspace width="-0.167em"></mspace><mspace width="-0.167em"></mspace><mo>−</mo><mspace width="-0.167em"></mspace><mspace width="-0.167em"></mspace><mspace width="-0.167em"></mspace><mo>•</mo><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><msup><mi>e</mi><mrow><mo>−</mo><mi>s</mi><mi>τ</mi></mrow></msup><mi>X</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\ \circ\:\!\!\!\!-\!\!\!\bullet\ \ e^{-s \tau} X(x)</annotation></semantics></math></td>
+<td style="text-align: right;"><span class="LaTeX">$x(t - \tau)$</span></td>
+<td><span class="LaTeX">${\ \circ\:\!\!\!\!-\!\!\!\bullet\ }\ e^{-s \tau} X(x)$</span></td>
 </tr>
 <tr class="odd">
 <td>Shift Frequency</td>
-<td style="text-align: right;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>e</mi><mrow><mi>τ</mi><mi>t</mi></mrow></msup><annotation encoding="application/x-tex">e^{\tau t}</annotation></semantics></math></td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mspace width="0.222em"></mspace><mo>∘</mo><mspace width="0.222em"></mspace><mspace width="-0.167em"></mspace><mspace width="-0.167em"></mspace><mspace width="-0.167em"></mspace><mspace width="-0.167em"></mspace><mo>−</mo><mspace width="-0.167em"></mspace><mspace width="-0.167em"></mspace><mspace width="-0.167em"></mspace><mo>•</mo><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mi>X</mi><mo stretchy="false" form="prefix">(</mo><mi>s</mi><mo>−</mo><mi>τ</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\ \circ\:\!\!\!\!-\!\!\!\bullet\ \ X(s - \tau)</annotation></semantics></math></td>
+<td style="text-align: right;"><span class="LaTeX">$e^{\tau t}$</span></td>
+<td><span class="LaTeX">${\ \circ\:\!\!\!\!-\!\!\!\bullet\ }\ X(s - \tau)$</span></td>
 </tr>
 <tr class="even">
 <td>Stauchung</td>
-<td style="text-align: right;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mi>c</mi><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">f(ct)</annotation></semantics></math></td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mspace width="0.222em"></mspace><mo>∘</mo><mspace width="0.222em"></mspace><mspace width="-0.167em"></mspace><mspace width="-0.167em"></mspace><mspace width="-0.167em"></mspace><mspace width="-0.167em"></mspace><mo>−</mo><mspace width="-0.167em"></mspace><mspace width="-0.167em"></mspace><mspace width="-0.167em"></mspace><mo>•</mo><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mfrac><mn>1</mn><mrow><mo stretchy="true" form="prefix">|</mo><mi>c</mi><mo stretchy="true" form="postfix">|</mo></mrow></mfrac><mi>F</mi><mo minsize="1.2" maxsize="1.2" stretchy="false" form="prefix">(</mo><mfrac><mi>s</mi><mi>c</mi></mfrac><mo minsize="1.2" maxsize="1.2" stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\ \circ\:\!\!\!\!-\!\!\!\bullet\ \ \frac{1}{\left\vert{c}\right\vert} F\bigl(\frac{s}{c}\bigr)</annotation></semantics></math></td>
+<td style="text-align: right;"><span class="LaTeX">$f(ct)$</span></td>
+<td><span class="LaTeX">${\ \circ\:\!\!\!\!-\!\!\!\bullet\ }\ \frac{1}{{\left\vert{c}\right\vert}} F\bigl(\frac{s}{c}\bigr)$</span></td>
 </tr>
 <tr class="odd">
 <td>Ableitung</td>
-<td style="text-align: right;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>f</mi><mrow><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo stretchy="false" form="postfix">)</mo></mrow></msup><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">f^{(n)}(t)</annotation></semantics></math></td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mspace width="0.222em"></mspace><mo>∘</mo><mspace width="0.222em"></mspace><mspace width="-0.167em"></mspace><mspace width="-0.167em"></mspace><mspace width="-0.167em"></mspace><mspace width="-0.167em"></mspace><mo>−</mo><mspace width="-0.167em"></mspace><mspace width="-0.167em"></mspace><mspace width="-0.167em"></mspace><mo>•</mo><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><msup><mi>s</mi><mi>n</mi></msup><mi>F</mi><mo stretchy="false" form="prefix">(</mo><mi>s</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\ \circ\:\!\!\!\!-\!\!\!\bullet\ \ s^n F(s)</annotation></semantics></math></td>
+<td style="text-align: right;"><span class="LaTeX">$f^{(n)}(t)$</span></td>
+<td><span class="LaTeX">${\ \circ\:\!\!\!\!-\!\!\!\bullet\ }\ s^n F(s)$</span></td>
 </tr>
 <tr class="even">
-<td>Integral</td>
-<td style="text-align: right;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mo>∫</mo><mrow><mo>−</mo><mi>∞</mi></mrow><mi>t</mi></msubsup><mi>τ</mi><mspace width="0.167em"></mspace><mtext mathvariant="normal">d</mtext><mi>τ</mi></mrow><annotation encoding="application/x-tex">\int_{-\infty}^t \tau \,\text{d}\tau</annotation></semantics></math></td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mspace width="0.222em"></mspace><mo>∘</mo><mspace width="0.222em"></mspace><mspace width="-0.167em"></mspace><mspace width="-0.167em"></mspace><mspace width="-0.167em"></mspace><mspace width="-0.167em"></mspace><mo>−</mo><mspace width="-0.167em"></mspace><mspace width="-0.167em"></mspace><mspace width="-0.167em"></mspace><mo>•</mo><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mfrac><mn>1</mn><mi>s</mi></mfrac><mi>X</mi><mo stretchy="false" form="prefix">(</mo><mi>s</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\ \circ\:\!\!\!\!-\!\!\!\bullet\ \ \frac{1}{s} X(s)</annotation></semantics></math></td>
+<td><a href="/integral" >Integral</a></td>
+<td style="text-align: right;"><span class="LaTeX">$\int_{-\infty}^t \tau {\,\text{d}}\tau$</span></td>
+<td><span class="LaTeX">${\ \circ\:\!\!\!\!-\!\!\!\bullet\ }\ \frac{1}{s} X(s)$</span></td>
 </tr>
 <tr class="odd">
 <td>Faltung</td>
-<td style="text-align: right;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>f</mi><mo>*</mo><mi>g</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(f * g)(t)</annotation></semantics></math></td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mspace width="0.222em"></mspace><mo>∘</mo><mspace width="0.222em"></mspace><mspace width="-0.167em"></mspace><mspace width="-0.167em"></mspace><mspace width="-0.167em"></mspace><mspace width="-0.167em"></mspace><mo>−</mo><mspace width="-0.167em"></mspace><mspace width="-0.167em"></mspace><mspace width="-0.167em"></mspace><mo>•</mo><mspace width="0.222em"></mspace><mspace width="0.222em"></mspace><mi>F</mi><mo stretchy="false" form="prefix">(</mo><mi>s</mi><mo stretchy="false" form="postfix">)</mo><mo>⋅</mo><mi>G</mi><mo stretchy="false" form="prefix">(</mo><mi>s</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\ \circ\:\!\!\!\!-\!\!\!\bullet\ \ F(s) \cdot G(s)</annotation></semantics></math></td>
+<td style="text-align: right;"><span class="LaTeX">$(f * g)(t)$</span></td>
+<td><span class="LaTeX">${\ \circ\:\!\!\!\!-\!\!\!\bullet\ }\ F(s) \cdot G(s)$</span></td>
 </tr>
 </tbody>
 </table>
 <div class="legend collapse">
 <div class="card border-info w-75 mx-auto">
 <div class="p-1 small">
-<p>timefunctions <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo>,</mo><mi>g</mi></mrow><annotation encoding="application/x-tex">f,g</annotation></semantics></math>, frequency functions <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi><mo>,</mo><mi>F</mi><mo>,</mo><mi>G</mi></mrow><annotation encoding="application/x-tex">X,F,G</annotation></semantics></math>, complex number <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="bold"><mi>𝐬</mi></mstyle><annotation encoding="application/x-tex">\boldsymbol{s}</annotation></semantics></math>, time <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>t</mi><annotation encoding="application/x-tex">t</annotation></semantics></math>, time shift <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>τ</mi><annotation encoding="application/x-tex">\tau</annotation></semantics></math>, constant <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>c</mi><annotation encoding="application/x-tex">c</annotation></semantics></math></p>
+<p>timefunctions <span class="LaTeX">$f,g$</span>, frequency functions <span class="LaTeX">$X,F,G$</span>, complex number <span class="LaTeX">${\boldsymbol{s}}$</span>, time <span class="LaTeX">$t$</span>, time shift <span class="LaTeX">$\tau$</span>, constant <span class="LaTeX">$c$</span></p>
 </div>
 </div>
 </div>
-<h5 class="clp_title text-success" data-toggle="collapse" href="#example17">
+<h5 class="clp_title text-success" data-toggle="collapse" href="#example18">
 <i class='fa fa-chart-bar'></i> Example Spectrums
 </h5>
-<div id='example17' class='example collapse'>
+<div id='example18' class='example collapse'>
 <div class='card border-success mb-1'>
 <div class='card-body'>
 <p class='card-text'>
@@ -292,8 +267,8 @@ td{width: 15em; padding-top: 1em!important;}
 <table>
 <thead>
 <tr class="header">
-<th>Time <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">f(t)</annotation></semantics></math></th>
-<th>Frequency <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>X</mi><mo stretchy="false" form="prefix">(</mo><mi>f</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">X(f)</annotation></semantics></math></th>
+<th>Time <span class="LaTeX">$f(t)$</span></th>
+<th>Frequency <span class="LaTeX">$X(f)$</span></th>
 </tr>
 </thead>
 <tbody>
@@ -340,11 +315,11 @@ td{width: 15em; padding-top: 1em!important;}
 </div>
 </div>
 <h2 id="fourierreihe">Fourierreihe</h2>
-<p>Approximation einer <em>periodischen</em> Funktion <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">f(t)</annotation></semantics></math> durch Überlagerung gewichteter Sinus und Cosinus einer Grundfrequenz <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>ω</mi><mn>0</mn></msub><mo>=</mo><mfrac><mn>1</mn><mi>T</mi></mfrac></mrow><annotation encoding="application/x-tex">\omega_0 = \frac{1}{T}</annotation></semantics></math> und deren Oberschwingungen <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><msub><mi>ω</mi><mn>0</mn></msub><mo>,</mo><mn>3</mn><msub><mi>ω</mi><mn>0</mn></msub><mo>,</mo><mi>.</mi><mi>.</mi><mi>.</mi></mrow><annotation encoding="application/x-tex">2\omega_0, 3\omega_0, ...</annotation></semantics></math></p>
+<p>Approximation einer <em>periodischen</em> Funktion <span class="LaTeX">$f(t)$</span> durch Überlagerung gewichteter Sinus und Cosinus einer Grundfrequenz <span class="LaTeX">$\omega_0 = \frac{1}{T}$</span> und deren Oberschwingungen <span class="LaTeX">$2\omega_0, 3\omega_0, ...$</span></p>
 <div class='card border-danger'>
 <div class='card-body'>
 <p class='card-text text-center'>
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><munderover><mo>∑</mo><mrow><mi>k</mi><mo>=</mo><mo>−</mo><mi>∞</mi></mrow><mo accent="false">∞</mo></munderover><msub><mi>c</mi><mi>k</mi></msub><msup><mi>e</mi><mrow><mtext mathvariant="normal">i</mtext><mi>k</mi><msub><mi>ω</mi><mn>0</mn></msub><mi>x</mi></mrow></msup><mspace width="2.0em"></mspace><msub><mi>c</mi><mi>k</mi></msub><mo>=</mo><mfrac><mn>1</mn><mi>T</mi></mfrac><munderover><mo>∫</mo><mrow><mo>−</mo><mfrac><mi>T</mi><mn>2</mn></mfrac></mrow><mfrac><mi>T</mi><mn>2</mn></mfrac></munderover><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><msup><mi>e</mi><mrow><mtext mathvariant="normal">i</mtext><mi>k</mi><msub><mi>ω</mi><mn>0</mn></msub><mi>x</mi></mrow></msup><mspace width="0.167em"></mspace><mtext mathvariant="normal">d</mtext><mi>x</mi></mrow><annotation encoding="application/x-tex">F(x) = \sum\limits_{k=-\infty}^\infty c_k e^{\text{i}k \omega_0 x} \qquad c_k = \frac{1}{T} \int\limits_{-\frac{T}{2}}^{\frac{T}{2}} f(x) e^{\text{i}k \omega_0 x} \,\text{d}x</annotation></semantics></math>
+<span class="LaTeX">$F(x) = \sum\limits_{k=-\infty}^\infty c_k e^{{\text{i}}k \omega_0 x} \qquad c_k = \frac{1}{T} \int\limits_{-\frac{T}{2}}^{\frac{T}{2}} f(x) e^{{\text{i}}k \omega_0 x} {\,\text{d}}x$</span>
 <p>
 </div>
 </div>
@@ -352,17 +327,17 @@ td{width: 15em; padding-top: 1em!important;}
 <div class='card border-danger'>
 <div class='card-body'>
 <p class='card-text text-center'>
-<span class="math inline">$\displaystyle \tiny\begin{matrix}\\ \normalsize  f(t) \\[1em] \scriptsize \text{Zeitbereich} \end{matrix} \ \circ\:\!\!\!\!-\!\!\!\bullet\ \tiny\begin{matrix}\\ \normalsize  F(\omega) \\[1em] \scriptsize \text{Frequenzspektrum} \end{matrix} := \int\limits_{-\infty}^\infty f(t) \exp(-\text{i}\omega t) \,\text{d}t$</span>
+<span class="LaTeX">$\displaystyle {\tiny\begin{matrix}\\ \normalsize  f(t) \\[1em] \scriptsize \text{Zeitbereich} \end{matrix}} {{\ \circ\:\!\!\!\!-\!\!\!\bullet\ }}{\tiny\begin{matrix}\\ \normalsize  F(\omega) \\[1em] \scriptsize \text{Frequenzspektrum} \end{matrix}} := \int\limits_{-\infty}^\infty f(t) \exp(-{\text{i}}\omega t) {\,\text{d}}t$</span>
 <p>
 </div>
 </div>
-<p>Anmerkung: Es gibt unterschiedliche Normungen (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>,</mo><mfrac><mn>1</mn><msqrt><mrow><mn>2</mn><mi>π</mi></mrow></msqrt></mfrac></mrow><annotation encoding="application/x-tex">1, \frac{1}{\sqrt{2\pi}}</annotation></semantics></math>)</p>
-<h2 id="laplaceransformation-lt-boldsymbols-alpha-omegatexti">Laplaceransformation (LT) <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathvariant="bold"><mi>𝐬</mi></mstyle><mo>=</mo><mi>α</mi><mo>+</mo><mi>ω</mi><mtext mathvariant="normal">i</mtext></mrow><annotation encoding="application/x-tex">\boldsymbol{s} = \alpha + \omega\text{i}</annotation></semantics></math></h2>
-LT ist Verallgemeinerung der FT mit Dämpfungsfaktor <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>α</mi><annotation encoding="application/x-tex">\alpha</annotation></semantics></math>
+<p>Anmerkung: Es gibt unterschiedliche Normungen (<span class="LaTeX">$1, \frac{1}{\sqrt{2\pi}}$</span>)</p>
+<h2 id="laplaceransformation-lt-boldsymbols-alpha-omegatexti">Laplaceransformation (LT) <span class="LaTeX">${\boldsymbol{s}} = \alpha + \omega{\text{i}}$</span></h2>
+LT ist Verallgemeinerung der FT mit Dämpfungsfaktor <span class="LaTeX">$\alpha$</span>
 <div class='card border-danger'>
 <div class='card-body'>
 <p class='card-text text-center'>
-<span class="math inline">$\displaystyle \tiny\begin{matrix}\\ \normalsize  f(t) \\[1em] \scriptsize \text{Zeitbereich} \end{matrix} \ \circ\:\!\!\!\!-\!\!\!\bullet\ \tiny\begin{matrix}\\ \normalsize  F(\boldsymbol{s}) = \mathcal L\left(f(t)\right) \\[1em] \scriptsize \text{Frequenzspektrum} \end{matrix} := \int\limits_{0}^\infty f(t) \exp(- \boldsymbol{s} t) \,\text{d}t$</span>
+<span class="LaTeX">$\displaystyle {\tiny\begin{matrix}\\ \normalsize  f(t) \\[1em] \scriptsize \text{Zeitbereich} \end{matrix}} {{\ \circ\:\!\!\!\!-\!\!\!\bullet\ }}{\tiny\begin{matrix}\\ \normalsize  F({\boldsymbol{s}}) = \mathcal L\left(f(t)\right) \\[1em] \scriptsize \text{Frequenzspektrum} \end{matrix}} := \int\limits_{0}^\infty f(t) \exp(- {\boldsymbol{s}} t) {\,\text{d}}t$</span>
 <p>
 </div>
 </div>

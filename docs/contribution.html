@@ -10,7 +10,7 @@
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="http://localhost:4000/contribution">
+    <link rel="canonical" href="/contribution">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -106,8 +106,7 @@
                     <h6 class="dropdown-header">Display Options</h6>
                     <div class="form-check dropdown-item">
                         <label class="form-check-label">
-                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox"
-                                checked="checked" onchange="Options.changeOption(this)">
+                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox" onchange="Options.changeOption(this)">
                             Definitions
                         </label>
                     </div>
@@ -157,37 +156,13 @@
 
 </p>
 
-
 <!-- Basics -->
-
 <!--    -->
-
-
-
-
-
 <!-- \newcommand{\diff}{\mathop{}\!\mathrm{\vphantom( d}} -->
-
-
-
-
-
 <!-- SI Units -->
 <!--=============================================================== -->
-
-
-
-
-
-
-
-
-
 <!-- KaTeX Tweaks -->
-
-
 <!-- \renewcommand{\boldsymbol}[1]{\mathbf{#1}} -->
-
 <div id="title_def" class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
@@ -203,7 +178,7 @@ This article describes how you can contribute or edit articles.
 <p>If you want to contribute or edit an article do the following:</p>
 <ol type="1">
 <li>fork <a href="https://github.com/latex4ei/tex4tum">the repository on github</a> and clone it locally.</li>
-<li>edit the corresponding <code>.md</code> file in the folder ‘<code>_article</code>’ or create a new one.</li>
+<li>edit the corresponding <code>.md</code> file in the folder '<code>_article</code>' or create a new one.</li>
 <li>once finished, push the changes to GitHub and create a pull request.</li>
 </ol>
 <h2 id="what-content-is-suitable-for-tex4tum">What content is suitable for Tex4TUM?</h2>
@@ -218,10 +193,10 @@ This article describes how you can contribute or edit articles.
 <p>The good news first: If you write text, it will be displayed as text. If you want to apply some text formatting you can use <a href="/markdown.html">Markdown</a>. Equations can be typset in TeX surrounded by <code>$</code> without spaces.</p>
 <h3 id="file-structure">File structure</h3>
 <p>Our file structure requires a YAML header (surrounded by <code>---</code>) that states a title and some keywords (tags) that can be used to find the article.</p>
-<h5 class="clp_title text-success" data-toggle="collapse" href="#example22">
+<h5 class="clp_title text-success" data-toggle="collapse" href="#example23">
 <i class='fa fa-chart-bar'></i> File example
 </h5>
-<div id='example22' class='example collapse'>
+<div id='example23' class='example collapse'>
 <div class='card border-success mb-1'>
 <div class='card-body'>
 <p class='card-text'>
@@ -265,55 +240,43 @@ This article describes how you can contribute or edit articles.
 </table>
 <h3 id="own-parsers">Own Parsers</h3>
 <p>We also use our own backend scripts to parse certain content categories, for example, to detect the definition paragraph of an article. Furthermore, we format examples, explanations, and legends. To format a paragraph as example you just need to write <code>Example:</code> before a paragraph. The paragraph is recognized by blank lines, so make sure that you have a blank line before the the <code>Example:</code> marker.</p>
-<h5 class="clp_title text-success" data-toggle="collapse" href="#example23">
+<h5 class="clp_title text-success" data-toggle="collapse" href="#example24">
 <i class='fa fa-chart-bar'></i> Example
 </h5>
-<div id='example23' class='example collapse'>
+<div id='example24' class='example collapse'>
 <div class='card border-success mb-1'>
 <div class='card-body'>
 <p class='card-text'>
-<p>This is an example Text and here is the code that produces it.</br></p>
-<pre><code>Example: This is an example Text and here is the code that produces it.
-```&lt;p&gt;
-  &lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
-
-Besides that you can also mark content using the Liquid Tags described below.
-
-
-### Equations with TeX
-We use [KaTeX](https://khan.github.io/KaTeX/) as TeX interpreter, such that you can typeset math equations simply using `$`.
-For example to display $\sqrt{x^2 + \alpha}$ as inline you write `$\sqrt{x^2 + \alpha}$`. Please note that there must *not* be a space between the `$` and your tex code!
-For display style equations, leave a blank line and surround your tex code by double `$$`s. You may optionally explain used symbols by a line starting with `with` or `where` that directly follows the equation.
-
-The equation (you can click on it)
-
-&lt;div data-toggle=&#39;collapse&#39; href=&#39;#eq_0&#39;&gt;
-$$\oint_{\partial A} \vec E \cdot \diff \vec s$$
-&lt;/div&gt;
-&lt;div id=&#39;eq_0&#39; class=&#39;legend collapse&#39;&gt;&lt;div class=&#39;card border-info w-75 mx-auto&#39;&gt;&lt;div class=&#39;p-1 small&#39;&gt;
-with electric field $\vec E$, surface $A$ and direction $\vec s$
-&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
-
-is written as</code></pre>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mo>∮</mo><mrow><mi>∂</mi><mi>A</mi></mrow></msub><mstyle mathvariant="bold"><mi>𝐄</mi></mstyle><mo>⋅</mo><mspace width="0.167em"></mspace><mtext mathvariant="normal">d</mtext><mstyle mathvariant="bold"><mi>𝐬</mi></mstyle></mrow><annotation encoding="application/x-tex">\oint_{\partial A} \boldsymbol E \cdot \,\text{d}\boldsymbol s</annotation></semantics></math> with electric field <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="bold"><mi>𝐄</mi></mstyle><annotation encoding="application/x-tex">\boldsymbol E</annotation></semantics></math>, surface <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> and direction <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="bold"><mi>𝐬</mi></mstyle><annotation encoding="application/x-tex">\boldsymbol s</annotation></semantics></math></p>
-<pre><code>
-Note: To define new LaTeX commands add them to `res/parser_util/tex_definition.md`
-
-
-
-## Jekyll and Liquid Tags
-Our site is generated using [Jekyll](https://jekyllrb.com/) that manages every step of the conversion to the final HTML files. Thus, Jekyll collects and converts the Markdown files by piping them through Pandoc. However, **before** the conversion, Jekyll allows to substitute dynamic content using Liquid Tags `{% include mycontent.md %}` and Liquid variables `{{ date }}`. These tags allow sophisticated generation of content using backend Ruby scripts.
-
-We created some custom templates, liquid tags and plugins to simplify the development process. The following sections describe how to use these during contribution. Also check our [Demo Pages](demo.html) for some features.
-
-
-### Images
-To include Images use the following commands
-
-**Figures**
-```bash
-{% include figure.html filename=&quot;complex.svg&quot; description=&quot;Description goes here&quot; width=&quot;50%&quot; %}
-</code></pre>
+This is an example Text and here is the code that produces it.</br> <code>Example: This is an example Text and here is the code that produces it.</code>
+<p>
+</div>
+</div>
+</div>
+<p>Besides that you can also mark content using the Liquid Tags described below.</p>
+<h3 id="equations-with-tex">Equations with TeX</h3>
+<p>We use <a href="https://khan.github.io/KaTeX/">KaTeX</a> as TeX interpreter, such that you can typeset math equations simply using <code>$</code>. For example to display <span class="LaTeX">$\sqrt{x^2 + \alpha}$</span> as inline you write <code>$\sqrt{x^2 + \alpha}$</code>. Please note that there must <em>not</em> be a space between the <code>$</code> and your tex code! For display style equations, leave a blank line and surround your tex code by double <code>$$</code>s. You may optionally explain used symbols by a line starting with <code>with</code> or <code>where</code> that directly follows the equation.</p>
+<p>The equation (you can click on it)</p>
+<div data-toggle="collapse" href="#eq_0">
+<p><span class="LaTeX">$$\oint_{\partial A} {\boldsymbol E} \cdot {\,\text{d}}{\boldsymbol s}$$</span></p>
+</div>
+<div id="eq_0" class="legend collapse">
+<div class="card border-info w-75 mx-auto">
+<div class="p-1 small">
+<p>with electric field <span class="LaTeX">${\boldsymbol E}$</span>, surface <span class="LaTeX">$A$</span> and direction <span class="LaTeX">${\boldsymbol s}$</span></p>
+</div>
+</div>
+</div>
+<p>is written as</p>
+<pre><code>$$\oint_{\partial A} \vec E \cdot \diff \vec s$$
+with electric field $\vec E$, surface $A$ and direction $\vec s$</code></pre>
+<p>Note: To define new LaTeX commands add them to <code>res/parser_util/tex_definition.md</code></p>
+<h2 id="jekyll-and-liquid-tags">Jekyll and Liquid Tags</h2>
+<p>Our site is generated using <a href="https://jekyllrb.com/">Jekyll</a> that manages every step of the conversion to the final HTML files. Thus, Jekyll collects and converts the Markdown files by piping them through Pandoc. However, <strong>before</strong> the conversion, Jekyll allows to substitute dynamic content using Liquid Tags <code>{% include mycontent.md %}</code> and Liquid variables <code>{{ date }}</code>. These tags allow sophisticated generation of content using backend Ruby scripts.</p>
+<p>We created some custom templates, liquid tags and plugins to simplify the development process. The following sections describe how to use these during contribution. Also check our <a href="demo.html">Demo Pages</a> for some features.</p>
+<h3 id="images">Images</h3>
+<p>To include Images use the following commands</p>
+<p><strong>Figures</strong></p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash">{<span class="ex">%</span> include figure.html filename=<span class="st">&quot;complex.svg&quot;</span> description=<span class="st">&quot;Description goes here&quot;</span> width=<span class="st">&quot;50%&quot;</span> %}</code></pre></div>
 <p>Output: Image in figure environment with image description</p>
 <!--<p> Filename="complex.svg", path="/res/img/content-images/math/complex.svg" </p>-->
 <figure class="figure">
@@ -323,10 +286,10 @@ Description goes here
 </figcaption>
 </figure>
 <p><strong>Inline Image</strong></p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb4-1" title="1">{<span class="ex">%</span> inlineimage capacitor_symbol.svg %}</a></code></pre></div>
-<p>Output: Inline Image #<Jekyll::StaticFile:0x0000558ebc216ee8>#<Jekyll::StaticFile:0x0000558ebc1feb18>#<Jekyll::StaticFile:0x0000558ebc1fe8e8>#<Jekyll::StaticFile:0x0000558ebc1fe6b8>#<Jekyll::StaticFile:0x0000558ebc1fed48>#<Jekyll::StaticFile:0x0000558ebc1fe488>#<Jekyll::StaticFile:0x0000558ebc1fc2c8>#<Jekyll::StaticFile:0x0000558ebc1d0ad8>#<Jekyll::StaticFile:0x0000558ebc1d0678>#<Jekyll::StaticFile:0x0000558ebc1d08a8>#<Jekyll::StaticFile:0x0000558ebc1ae230>#<Jekyll::StaticFile:0x0000558ebc1ae000>#<Jekyll::StaticFile:0x0000558ebc1aed20>#<Jekyll::StaticFile:0x0000558ebc1aeaf0>#<Jekyll::StaticFile:0x0000558ebc1aef50>#<Jekyll::StaticFile:0x0000558ebc1ae460>#<Jekyll::StaticFile:0x0000558ebbb2c448>#<Jekyll::StaticFile:0x0000558ebbb2d050>#<Jekyll::StaticFile:0x0000558ebbb36d80>#<Jekyll::StaticFile:0x0000558ebbb37820>#<Jekyll::StaticFile:0x0000558ebbb57030>#<Jekyll::StaticFile:0x0000558ebbb57288>#<Jekyll::StaticFile:0x0000558ebc16c3f8>#<Jekyll::StaticFile:0x0000558ebc16c1f0>#<Jekyll::StaticFile:0x0000558ebbc6d870>#<Jekyll::StaticFile:0x0000558ebbc6dc08>#<Jekyll::StaticFile:0x0000558ebbc536a0>#<Jekyll::StaticFile:0x0000558ebbc52cc8>#<Jekyll::StaticFile:0x0000558ebbc52f98>#<Jekyll::StaticFile:0x0000558ebbc52a48>#<Jekyll::StaticFile:0x0000558ebbc531f0>#<Jekyll::StaticFile:0x0000558ebbc53448>#<Jekyll::StaticFile:0x0000558ebc0f4740>#<Jekyll::StaticFile:0x0000558ebc0f4dd0>#<Jekyll::StaticFile:0x0000558ebc0f4510>#<Jekyll::StaticFile:0x0000558ebc0f40b0>#<Jekyll::StaticFile:0x0000558ebc0f42e0>#<Jekyll::StaticFile:0x0000558ebc0fbe28>#<Jekyll::StaticFile:0x0000558ebc0f4ba0>#<Jekyll::StaticFile:0x0000558ebc0f4970>#<Jekyll::StaticFile:0x0000558ebbd1e2b0>#<Jekyll::StaticFile:0x0000558ebbd1e558>#<Jekyll::StaticFile:0x0000558ebbd1e878>#<Jekyll::StaticFile:0x0000558ebc13a1f0>#<Jekyll::StaticFile:0x0000558ebc139b60>#<Jekyll::StaticFile:0x0000558ebc13a628>#<Jekyll::StaticFile:0x0000558ebc139d90>#<Jekyll::StaticFile:0x0000558ebc13a420>#<Jekyll::StaticFile:0x0000558ebc138c38>#<Jekyll::StaticFile:0x0000558ebc139fc0>#<Jekyll::StaticFile:0x0000558ebc138e68>#<Jekyll::StaticFile:0x0000558ebc139930>#<Jekyll::StaticFile:0x0000558ebc1394f8>#<Jekyll::StaticFile:0x0000558ebc139098>#<Jekyll::StaticFile:0x0000558ebc1392c8>#<Jekyll::StaticFile:0x0000558ebc139700>#<Jekyll::StaticFile:0x0000558ebbcb9270>#<Jekyll::StaticFile:0x0000558ebbcb95e0>#<Jekyll::StaticFile:0x0000558ebbcbb4a8>#<Jekyll::StaticFile:0x0000558ebbcb8eb0>#<Jekyll::StaticFile:0x0000558ebbcb9b08>#<Jekyll::StaticFile:0x0000558ebbcba990>#<Jekyll::StaticFile:0x0000558ebc16c628>#<Jekyll::StaticFile:0x0000558ebc16d230>#<Jekyll::StaticFile:0x0000558ebc16cdd0>#<Jekyll::StaticFile:0x0000558ebc16d000>#<Jekyll::StaticFile:0x0000558ebc16cba0>#<Jekyll::StaticFile:0x0000558ebc16d460>#<Jekyll::StaticFile:0x0000558ebc16c970>#<Jekyll::StaticFile:0x0000558ebc16e068>#<Jekyll::StaticFile:0x0000558ebc16efb8>#<Jekyll::StaticFile:0x0000558ebc16f1e8>#<Jekyll::StaticFile:0x0000558ebc16faa8>#<Jekyll::StaticFile:0x0000558ebc16e6f8>#<Jekyll::StaticFile:0x0000558ebc16fcd8>#<Jekyll::StaticFile:0x0000558ebc16de38>#<Jekyll::StaticFile:0x0000558ebc16d7a8>#<Jekyll::StaticFile:0x0000558ebc16f648>#<Jekyll::StaticFile:0x0000558ebc16e298>#<Jekyll::StaticFile:0x0000558ebc16f418>#<Jekyll::StaticFile:0x0000558ebc16e4c8>#<Jekyll::StaticFile:0x0000558ebc16ed88>#<Jekyll::StaticFile:0x0000558ebc16d9d8>#<Jekyll::StaticFile:0x0000558ebc16dc08>#<Jekyll::StaticFile:0x0000558ebc16f878>#<Jekyll::StaticFile:0x0000558ebc16eb58>#<Jekyll::StaticFile:0x0000558ebc16e928>#<Jekyll::StaticFile:0x0000558ebc1adbc8>#<Jekyll::StaticFile:0x0000558ebbadb890>#<Jekyll::StaticFile:0x0000558ebbacc4a8>#<Jekyll::StaticFile:0x0000558ebbadaa80>#<Jekyll::StaticFile:0x0000558ebbadb0e8>#<Jekyll::StaticFile:0x0000558ebbaccb88>#<Jekyll::StaticFile:0x0000558ebbac30d8>#<Jekyll::StaticFile:0x0000558ebbac1490>#<Jekyll::StaticFile:0x0000558ebbac35b0>#<Jekyll::StaticFile:0x0000558ebbacf518>#<Jekyll::StaticFile:0x0000558ebbacfb58>#<Jekyll::StaticFile:0x0000558ebbace938>#<Jekyll::StaticFile:0x0000558ebbac2d18>#<Jekyll::StaticFile:0x0000558ebbace398>#<Jekyll::StaticFile:0x0000558ebbaceed8>#<Jekyll::StaticFile:0x0000558ebbacdd58>#<Jekyll::StaticFile:0x0000558ebbac04c8>#<Jekyll::StaticFile:0x0000558ebbac29f8>#<Jekyll::StaticFile:0x0000558ebbabd020>#<Jekyll::StaticFile:0x0000558ebbaac1f8>#<Jekyll::StaticFile:0x0000558ebbabea60>#<Jekyll::StaticFile:0x0000558ebbabcaf8>#<Jekyll::StaticFile:0x0000558ebbabe650>#<Jekyll::StaticFile:0x0000558ebbabfe88>#<Jekyll::StaticFile:0x0000558ebbabdc28>#<Jekyll::StaticFile:0x0000558ebbabd890>#<Jekyll::StaticFile:0x0000558ebbabfac8>#<Jekyll::StaticFile:0x0000558ebbabc378>#<Jekyll::StaticFile:0x0000558ebc1ae690>#<Jekyll::StaticFile:0x0000558ebc1af6f8>#<Jekyll::StaticFile:0x0000558ebc1af298>#<Jekyll::StaticFile:0x0000558ebc1a8588>#<Jekyll::StaticFile:0x0000558ebc1a9078>#<Jekyll::StaticFile:0x0000558ebc1afea0>#<Jekyll::StaticFile:0x0000558ebc1a9b40>#<Jekyll::StaticFile:0x0000558ebc1a89e8>#<Jekyll::StaticFile:0x0000558ebc1a92a8>#<Jekyll::StaticFile:0x0000558ebc1a8128>#<Jekyll::StaticFile:0x0000558ebc1a8e48>#<Jekyll::StaticFile:0x0000558ebc1a96e0>#<Jekyll::StaticFile:0x0000558ebc1a9910>#<Jekyll::StaticFile:0x0000558ebc1a8358>#<Jekyll::StaticFile:0x0000558ebc1afa40>#<Jekyll::StaticFile:0x0000558ebc1afc70>#<Jekyll::StaticFile:0x0000558ebc1a94b0>#<Jekyll::StaticFile:0x0000558ebc1a87b8>#<Jekyll::StaticFile:0x0000558ebc1a8c18>#<Jekyll::StaticFile:0x0000558ebc1af4c8>#<Jekyll::StaticFile:0x0000558ebc188d78>#<Jekyll::StaticFile:0x0000558ebc1891b0>#<Jekyll::StaticFile:0x0000558ebc188fa8>#<Jekyll::StaticFile:0x0000558ebc1893e0>#<Jekyll::StaticFile:0x0000558ebc188b48>#<Jekyll::StaticFile:0x0000558ebc1ae8c0>#<Jekyll::StaticFile:0x0000558ebc1addd0>#<Jekyll::StaticFile:0x0000558ebc1769c0>#<Jekyll::StaticFile:0x0000558ebc176790>#<Jekyll::StaticFile:0x0000558ebc1c7aa0>#<Jekyll::StaticFile:0x0000558ebc1c71e0>#<Jekyll::StaticFile:0x0000558ebc1c6d80>#<Jekyll::StaticFile:0x0000558ebc1c6b50>#<Jekyll::StaticFile:0x0000558ebc1c6920>#<Jekyll::StaticFile:0x0000558ebc1c7870>#<Jekyll::StaticFile:0x0000558ebc1c7cd0>#<Jekyll::StaticFile:0x0000558ebc1c66f0>#<Jekyll::StaticFile:0x0000558ebc1c7640>#<Jekyll::StaticFile:0x0000558ebc1c6fb0>#<Jekyll::StaticFile:0x0000558ebc1c7410>#<Jekyll::StaticFile:0x0000558ebc1d1280>#<Jekyll::StaticFile:0x0000558ebc1d1050>#<Jekyll::StaticFile:0x0000558ebc1d14b0>#<Jekyll::StaticFile:0x0000558ebc1d0e20>#<Jekyll::StaticFile:0x0000558ebc1dcf40>#<Jekyll::StaticFile:0x0000558ebc1dd170>#<Jekyll::StaticFile:0x0000558ebc1dcd10>#<Jekyll::StaticFile:0x0000558ebb1055f0>#<Jekyll::StaticFile:0x0000558ebaeec688></p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash">{<span class="ex">%</span> inlineimage capacitor_symbol.svg %}</code></pre></div>
+<p>Output: Inline Image #<Jekyll::StaticFile:0x000055eacb0c7478>#<Jekyll::StaticFile:0x000055eacb0cd4e0>#<Jekyll::StaticFile:0x000055eacb0cd8c8>#<Jekyll::StaticFile:0x000055eacb0ce2a0>#<Jekyll::StaticFile:0x000055eacb0ce750>#<Jekyll::StaticFile:0x000055eacb0cde68>#<Jekyll::StaticFile:0x000055eacb0c8d78>#<Jekyll::StaticFile:0x000055eacb0c9818>#<Jekyll::StaticFile:0x000055eacb0c9390>#<Jekyll::StaticFile:0x000055eacb0c9020>#<Jekyll::StaticFile:0x000055eacb0c7130>#<Jekyll::StaticFile:0x000055eaca264188>#<Jekyll::StaticFile:0x000055eaca265998>#<Jekyll::StaticFile:0x000055eaca264598>#<Jekyll::StaticFile:0x000055eaca266118>#<Jekyll::StaticFile:0x000055eaca264a48>#<Jekyll::StaticFile:0x000055eaca265678>#<Jekyll::StaticFile:0x000055eaca265178>#<Jekyll::StaticFile:0x000055eaca264d90>#<Jekyll::StaticFile:0x000055eaca3ccfc0>#<Jekyll::StaticFile:0x000055eaca3cc570>#<Jekyll::StaticFile:0x000055eaca3ce050>#<Jekyll::StaticFile:0x000055eaca661c18>#<Jekyll::StaticFile:0x000055eaca5ea208>#<Jekyll::StaticFile:0x000055eaca5ea780>#<Jekyll::StaticFile:0x000055eaca5e9ce0>#<Jekyll::StaticFile:0x000055eaca5ffb80>#<Jekyll::StaticFile:0x000055eaca5e91c8>#<Jekyll::StaticFile:0x000055eacaf8d030>#<Jekyll::StaticFile:0x000055eacaf8d288>#<Jekyll::StaticFile:0x000055eacaf8cdd8>#<Jekyll::StaticFile:0x000055eacaf93c50>#<Jekyll::StaticFile:0x000055eacaf62ce0>#<Jekyll::StaticFile:0x000055eacaf62920>#<Jekyll::StaticFile:0x000055eaca664170>#<Jekyll::StaticFile:0x000055eaca662f28>#<Jekyll::StaticFile:0x000055eacabd9f38>#<Jekyll::StaticFile:0x000055eacabd9c90>#<Jekyll::StaticFile:0x000055eacac0fd68>#<Jekyll::StaticFile:0x000055eacac0f188>#<Jekyll::StaticFile:0x000055eacac0f890>#<Jekyll::StaticFile:0x000055eacac0f3e0>#<Jekyll::StaticFile:0x000055eacac0f638>#<Jekyll::StaticFile:0x000055eacac0fae8>#<Jekyll::StaticFile:0x000055eacacc1cc0>#<Jekyll::StaticFile:0x000055eacacc1f40>#<Jekyll::StaticFile:0x000055eacacc1a18>#<Jekyll::StaticFile:0x000055eacacc2670>#<Jekyll::StaticFile:0x000055eacacc16a8>#<Jekyll::StaticFile:0x000055eacacc2198>#<Jekyll::StaticFile:0x000055eacacc2940>#<Jekyll::StaticFile:0x000055eacacc23f0>#<Jekyll::StaticFile:0x000055eacad061e0>#<Jekyll::StaticFile:0x000055eacad06438>#<Jekyll::StaticFile:0x000055eacad05f60>#<Jekyll::StaticFile:0x000055eacad34f68>#<Jekyll::StaticFile:0x000055eacad35440>#<Jekyll::StaticFile:0x000055eacad2bee0>#<Jekyll::StaticFile:0x000055eacad34d10>#<Jekyll::StaticFile:0x000055eacad34248>#<Jekyll::StaticFile:0x000055eacad351c0>#<Jekyll::StaticFile:0x000055eacad2bcb0>#<Jekyll::StaticFile:0x000055eacad34a40>#<Jekyll::StaticFile:0x000055eacad34590>#<Jekyll::StaticFile:0x000055eacad35698>#<Jekyll::StaticFile:0x000055eacad358f0>#<Jekyll::StaticFile:0x000055eacad2b800>#<Jekyll::StaticFile:0x000055eacad2ba58>#<Jekyll::StaticFile:0x000055eacac42470>#<Jekyll::StaticFile:0x000055eacac421a0>#<Jekyll::StaticFile:0x000055eacac41a98>#<Jekyll::StaticFile:0x000055eacac41f48>#<Jekyll::StaticFile:0x000055eacac41840>#<Jekyll::StaticFile:0x000055eacac41cf0>#<Jekyll::StaticFile:0x000055eaca663810>#<Jekyll::StaticFile:0x000055eaca666f88>#<Jekyll::StaticFile:0x000055eaca664eb8>#<Jekyll::StaticFile:0x000055eaca667ac8>#<Jekyll::StaticFile:0x000055eaca667820>#<Jekyll::StaticFile:0x000055eaca666330>#<Jekyll::StaticFile:0x000055eaca667488>#<Jekyll::StaticFile:0x000055eaca684df8>#<Jekyll::StaticFile:0x000055eaca685668>#<Jekyll::StaticFile:0x000055eaca685118>#<Jekyll::StaticFile:0x000055eaca67b910>#<Jekyll::StaticFile:0x000055eaca67bb90>#<Jekyll::StaticFile:0x000055eaca6794d0>#<Jekyll::StaticFile:0x000055eaca679fe8>#<Jekyll::StaticFile:0x000055eaca684150>#<Jekyll::StaticFile:0x000055eaca678738>#<Jekyll::StaticFile:0x000055eaca67be10>#<Jekyll::StaticFile:0x000055eaca685e88>#<Jekyll::StaticFile:0x000055eaca6853c0>#<Jekyll::StaticFile:0x000055eaca67b5f0>#<Jekyll::StaticFile:0x000055eaca67a7b8>#<Jekyll::StaticFile:0x000055eaca6844c0>#<Jekyll::StaticFile:0x000055eaca684830>#<Jekyll::StaticFile:0x000055eaca67b2d0>#<Jekyll::StaticFile:0x000055eaca684b28>#<Jekyll::StaticFile:0x000055eaca6621b8>#<Jekyll::StaticFile:0x000055eacadfb5a0>#<Jekyll::StaticFile:0x000055eacadfaf38>#<Jekyll::StaticFile:0x000055eacadfb2d0>#<Jekyll::StaticFile:0x000055eacadfac68>#<Jekyll::StaticFile:0x000055eacadfb9d8>#<Jekyll::StaticFile:0x000055eacae08a48>#<Jekyll::StaticFile:0x000055eacae08138>#<Jekyll::StaticFile:0x000055eacae09b78>#<Jekyll::StaticFile:0x000055eacadfbe60>#<Jekyll::StaticFile:0x000055eacae09dd0>#<Jekyll::StaticFile:0x000055eacae09538>#<Jekyll::StaticFile:0x000055eacae09920>#<Jekyll::StaticFile:0x000055eacae08d18>#<Jekyll::StaticFile:0x000055eacae08750>#<Jekyll::StaticFile:0x000055eacae09088>#<Jekyll::StaticFile:0x000055eacae0a028>#<Jekyll::StaticFile:0x000055eacae08458>#<Jekyll::StaticFile:0x000055eacae0b748>#<Jekyll::StaticFile:0x000055eacae0ba18>#<Jekyll::StaticFile:0x000055eacae0a848>#<Jekyll::StaticFile:0x000055eacae0a5f0>#<Jekyll::StaticFile:0x000055eacae0a398>#<Jekyll::StaticFile:0x000055eacae0af50>#<Jekyll::StaticFile:0x000055eacae0acf8>#<Jekyll::StaticFile:0x000055eacae0b1d0>#<Jekyll::StaticFile:0x000055eacae0aaa0>#<Jekyll::StaticFile:0x000055eacae0b4a0>#<Jekyll::StaticFile:0x000055eaca6608b8>#<Jekyll::StaticFile:0x000055eacaed0cc8>#<Jekyll::StaticFile:0x000055eacaed0f20>#<Jekyll::StaticFile:0x000055eacaedf818>#<Jekyll::StaticFile:0x000055eacaee88a0>#<Jekyll::StaticFile:0x000055eacaee8648>#<Jekyll::StaticFile:0x000055eacaedfe58>#<Jekyll::StaticFile:0x000055eacaedfb38>#<Jekyll::StaticFile:0x000055eacaedf520>#<Jekyll::StaticFile:0x000055eacaee9048>#<Jekyll::StaticFile:0x000055eacaee9cf0>#<Jekyll::StaticFile:0x000055eacaee99f8>#<Jekyll::StaticFile:0x000055eacaee9700>#<Jekyll::StaticFile:0x000055eacaee8198>#<Jekyll::StaticFile:0x000055eacaee83f0>#<Jekyll::StaticFile:0x000055eacaee93b8>#<Jekyll::StaticFile:0x000055eacaee9fc0>#<Jekyll::StaticFile:0x000055eacaee8af8>#<Jekyll::StaticFile:0x000055eacaee8d78>#<Jekyll::StaticFile:0x000055eacaed0a70>#<Jekyll::StaticFile:0x000055eacaed14c0>#<Jekyll::StaticFile:0x000055eacaed1268>#<Jekyll::StaticFile:0x000055eacaed1970>#<Jekyll::StaticFile:0x000055eacaed1718>#<Jekyll::StaticFile:0x000055eacaed1ba0>#<Jekyll::StaticFile:0x000055eaca5e8d68>#<Jekyll::StaticFile:0x000055eaca6613a8>#<Jekyll::StaticFile:0x000055eacaf79a58>#<Jekyll::StaticFile:0x000055eacaf79d50>#<Jekyll::StaticFile:0x000055eaca4b7458>#<Jekyll::StaticFile:0x000055eaca4b7818>#<Jekyll::StaticFile:0x000055eaca4b6a30>#<Jekyll::StaticFile:0x000055eaca4b5360>#<Jekyll::StaticFile:0x000055eaca493b70>#<Jekyll::StaticFile:0x000055eaca46bee0>#<Jekyll::StaticFile:0x000055eaca4916e0>#<Jekyll::StaticFile:0x000055eaca484350>#<Jekyll::StaticFile:0x000055eaca484d78>#<Jekyll::StaticFile:0x000055eaca4908a8>#<Jekyll::StaticFile:0x000055eaca485d18>#<Jekyll::StaticFile:0x000055eaca4848a0>#<Jekyll::StaticFile:0x000055eaca46ba80>#<Jekyll::StaticFile:0x000055eaca492b58>#<Jekyll::StaticFile:0x000055eaca4851d8>#<Jekyll::StaticFile:0x000055eaca4874d8>#<Jekyll::StaticFile:0x000055eaca3d5170>#<Jekyll::StaticFile:0x000055eaca3d47e8>#<Jekyll::StaticFile:0x000055eaca3cf3b0>#<Jekyll::StaticFile:0x000055eaca3d5800>#<Jekyll::StaticFile:0x000055eaca3b47b8>#<Jekyll::StaticFile:0x000055eaca3b4fd8>#<Jekyll::StaticFile:0x000055eac9d3f248>#<Jekyll::StaticFile:0x000055eac9d3ed20>#<Jekyll::StaticFile:0x000055eac9d3e578>#<Jekyll::StaticFile:0x000055eac9b71268>#<Jekyll::StaticFile:0x000055eac9b6c790>#<Jekyll::StaticFile:0x000055eac9afbdd8>#<Jekyll::StaticFile:0x000055eac9b6ef40>#<Jekyll::StaticFile:0x000055eac9b47f58>#<Jekyll::StaticFile:0x000055eac9b46bd0></p>
 <p><strong>SVG Objects</strong></p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb5-1" title="1">{<span class="ex">%</span> include svg-object.html width=<span class="st">&quot;18em&quot;</span> id=<span class="st">&quot;RC_obj&quot;</span> filename=<span class="st">&quot;rc.svg&quot;</span> description=<span class="st">&quot;Circuit of low-pass filter&quot;</span> %}</a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash">{<span class="ex">%</span> include svg-object.html width=<span class="st">&quot;18em&quot;</span> id=<span class="st">&quot;RC_obj&quot;</span> filename=<span class="st">&quot;rc.svg&quot;</span> description=<span class="st">&quot;Circuit of low-pass filter&quot;</span> %}</code></pre></div>
 Output: SVG Object
 <figure>
 <object class="img-fluid" id="RC_obj" data="res/img/dynamic-images/rc.svg" type="image/svg+xml">
@@ -336,7 +299,7 @@ Circuit of low-pass filter
 </figcaption>
 </figure>
 <h3 id="code-listings">Code Listings</h3>
-<p>Verbatime code can be placed inside backticks, e.g. `code` is displayed as <code>code</code>. If you want to highlight code put it in a block of three backticks. Directly after the backticks you can specify the language.</p>
+<p>Verbatime code can be placed inside backticks, e.g. `code` is displayed as <code>code</code>. If you want to highlight code put it in a block of three backticks. Directly after the backticks you can specify the language.</p>
 <figure class="highlight">
 <pre><code class="language-c" data-lang="c"><span></span><span class="lineno">1 </span><span class="err">```</span><span class="n">c</span>
 <span class="lineno">2 </span><span class="kt">int</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
@@ -355,15 +318,15 @@ int main() {
 </code></pre>
 <h3 id="acronyms">Acronyms</h3>
 <p>Acronyms, such as AES, are parsed and linked automatically. If you want to add a new abbreviation just add it to <code>res/parser_util/abbreviations.md</code>. The structure should look like this</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb7-1" title="1"><span class="ex">*</span>[AES]: Advanced Encryption Standard</a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">*</span>[AES]: Advanced Encryption Standard</code></pre></div>
 <h3 id="content-categories">Content Categories</h3>
 <p>We currently support four special categories of content, which visibility is influenced via interactions or the options (see <a href="demo.html">Demo Page</a>)</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb8-1" title="1">{<span class="ex">%</span> definition %}<span class="ex">text</span>{% enddefinition %}</a>
-<a class="sourceLine" id="cb8-2" title="2">{<span class="ex">%</span> example %}<span class="ex">text</span>{% endexample %}</a>
-<a class="sourceLine" id="cb8-3" title="3">{<span class="ex">%</span> explanation %}<span class="ex">text</span>{% endexplanation %}</a>
-<a class="sourceLine" id="cb8-4" title="4">{<span class="ex">%</span> legend %}<span class="ex">text</span>{% endlegend %}</a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash">{<span class="ex">%</span> definition %}<span class="ex">text</span>{% enddefinition %}
+{<span class="ex">%</span> example %}<span class="ex">text</span>{% endexample %}
+{<span class="ex">%</span> explanation %}<span class="ex">text</span>{% endexplanation %}
+{<span class="ex">%</span> legend %}<span class="ex">text</span>{% endlegend %}</code></pre></div>
 <h3 id="emphbox">Emphbox</h3>
-<div class="sourceCode" id="cb9"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb9-1" title="1">{<span class="ex">%</span> emphbox %}<span class="ex">Content</span> in box{% endemphbox %}</a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash">{<span class="ex">%</span> emphbox %}<span class="ex">Content</span> in box{% endemphbox %}</code></pre></div>
 Output:
 <div class='card border-danger'>
 <div class='card-body'>
@@ -374,16 +337,16 @@ Content in box
 </div>
 <h2 id="interactivity-htmlsvg-javascript">Interactivity: HTML/SVG + JavaScript</h2>
 <p>To create interactive content you can directly embedd HTML tags and JavaScript code. An easy to use framework is under development.</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode html"><code class="sourceCode html"><a class="sourceLine" id="cb10-1" title="1">Resistance R = <span class="kw">&lt;span</span><span class="ot"> id=</span><span class="st">&quot;R_val&quot;</span><span class="ot"> onclick=</span><span class="st">&quot;askValue(this.id)&quot;</span><span class="kw">&gt;</span>10k<span class="kw">&lt;/span&gt;</span>Ω</a>
-<a class="sourceLine" id="cb10-2" title="2"></a>
-<a class="sourceLine" id="cb10-3" title="3"><span class="kw">&lt;script</span><span class="ot"> type=</span><span class="st">&quot;text/javascript&quot;</span><span class="kw">&gt;</span></a>
-<a class="sourceLine" id="cb10-4" title="4"> <span class="kw">var</span> R1 <span class="op">=</span> <span class="at">getValue</span>( <span class="va">document</span>.<span class="at">getElementById</span>(<span class="st">&quot;R_val&quot;</span>).<span class="at">textContent</span> )<span class="op">;</span></a>
-<a class="sourceLine" id="cb10-5" title="5"><span class="kw">&lt;/script&gt;</span></a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode html"><code class="sourceCode html">Resistance R = <span class="kw">&lt;span</span><span class="ot"> id=</span><span class="st">&quot;R_val&quot;</span><span class="ot"> onclick=</span><span class="st">&quot;askValue(this.id)&quot;</span><span class="kw">&gt;</span>10k<span class="kw">&lt;/span&gt;</span>Ω
+
+<span class="kw">&lt;script</span><span class="ot"> type=</span><span class="st">&quot;text/javascript&quot;</span><span class="kw">&gt;</span>
+ <span class="kw">var</span> R1 <span class="op">=</span> <span class="at">getValue</span>( <span class="va">document</span>.<span class="at">getElementById</span>(<span class="st">&quot;R_val&quot;</span>).<span class="at">textContent</span> )<span class="op">;</span>
+<span class="kw">&lt;/script&gt;</span></code></pre></div>
 <p>Please ensure that you only have one <code>&lt;script&gt;</code> section <em>at the end</em> of the article! Otherwise our generator scripts might destroy your code.</p>
 <h2 id="preview-your-article">Preview your article</h2>
 <p>When you are done editing, you can preview your article. Follow the instruction of the <a href="https://github.com/latex4ei/tex4tum/blob/master/README.md#contribution">README</a> to install all dependencies</p>
 <p>Run the local server and browse to http://localhost:4000/ with</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb11-1" title="1"><span class="fu">make</span> run</a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">make</span> run</code></pre></div>
 <h2 id="list-of-todos">List of TODOs</h2>
 <p>All lines starting with TODO will be added to the following TODO list.</p>
 <table class="table table-striped">
@@ -480,6 +443,28 @@ http.md
 </tr>
 <tr>
 <td>
+page 58 image
+</td>
+<td>
+ieee-802-15-04.md
+</td>
+<td>
+<a href="/ieee-802-15-04.html">IEEE 802.15.4</a>
+</td>
+</tr>
+<tr>
+<td>
+figure from p 51
+</td>
+<td>
+ieee-802-15-04.md
+</td>
+<td>
+<a href="/ieee-802-15-04.html">IEEE 802.15.4</a>
+</td>
+</tr>
+<tr>
+<td>
 write article
 </td>
 <td>
@@ -487,6 +472,17 @@ mac.md
 </td>
 <td>
 <a href="/mac.html">Media Access Control</a>
+</td>
+</tr>
+<tr>
+<td>
+adjust JS library for blake2b
+</td>
+<td>
+blake2.md
+</td>
+<td>
+<a href="/blake2.html">Blake 2</a>
 </td>
 </tr>
 <tr>
@@ -546,7 +542,7 @@ testing.md
 </tr>
 <tr>
 <td>
-draw image of the process github .md –&gt; jekyll –&gt; scripts –&gt; pandoc –&gt; .html + head.html = webpage
+draw image of the process github .md --&gt; jekyll --&gt; scripts --&gt; pandoc --&gt; .html + head.html = webpage
 </td>
 <td>
 about.md
@@ -575,6 +571,17 @@ demo.md
 </td>
 <td>
 <a href="/demo.html">Demo of Interactive Features</a>
+</td>
+</tr>
+<tr>
+<td>
+place as cards with logo (bootstrap)
+</td>
+<td>
+links.md
+</td>
+<td>
+<a href="/links.html">Links</a>
 </td>
 </tr>
 </tbody>

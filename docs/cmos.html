@@ -10,7 +10,7 @@
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="http://localhost:4000/cmos">
+    <link rel="canonical" href="/cmos">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -106,8 +106,7 @@
                     <h6 class="dropdown-header">Display Options</h6>
                     <div class="form-check dropdown-item">
                         <label class="form-check-label">
-                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox"
-                                checked="checked" onchange="Options.changeOption(this)">
+                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox" onchange="Options.changeOption(this)">
                             Definitions
                         </label>
                     </div>
@@ -188,37 +187,13 @@
 
 </p>
 
-
 <!-- Basics -->
-
 <!--    -->
-
-
-
-
-
 <!-- \newcommand{\diff}{\mathop{}\!\mathrm{\vphantom( d}} -->
-
-
-
-
-
 <!-- SI Units -->
 <!--=============================================================== -->
-
-
-
-
-
-
-
-
-
 <!-- KaTeX Tweaks -->
-
-
 <!-- \renewcommand{\boldsymbol}[1]{\mathbf{#1}} -->
-
 <div id="title_def" class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
@@ -253,51 +228,51 @@ Complementary Metal (Poly-Si) Oxide (SiO2) Semiconductor (CMOS).
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">channel width</td>
-<td><span class="math inline">$W_{\rm n/p}$</span></td>
+<td><span class="LaTeX">$W_{{\rm}n/p}$</span></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">channel length</td>
-<td><span class="math inline">$L_{\rm n/p}$</span></td>
+<td><span class="LaTeX">$L_{{\rm}n/p}$</span></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">gate oxide thickness</td>
-<td><span class="math inline">$t_{\rm ox}$</span></td>
+<td><span class="LaTeX">$t_{{\rm}ox}$</span></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">electron mobility</td>
-<td><span class="math inline">$\mu_{\rm n} \approx 250e-4\,\mathrm{\text{m}\,^{2}/\text{V}\,\text{s}\,}$</span></td>
+<td><span class="LaTeX">$\mu_{{\rm}n} \approx {250e-4\,\mathrm{{\text{m}{\,}}{^{2}}{/}{\text{V}{\,}}{\text{s}{\,}}}}$</span></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"></td>
-<td><span class="math inline">$\mu_{\rm p} \approx 200e-4\,\mathrm{\text{m}\,^{2}/\text{V}\,\text{s}\,}$</span></td>
+<td><span class="LaTeX">$\mu_{{\rm}p} \approx {200e-4\,\mathrm{{\text{m}{\,}}{^{2}}{/}{\text{V}{\,}}{\text{s}{\,}}}}$</span></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">rel. permittivity of gate oxide</td>
-<td><span class="math inline">$\epsilon_{\rm ox} \approx 3,9$</span></td>
+<td><span class="LaTeX">$\epsilon_{{\rm}ox} \approx 3,9$</span></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">dielectric constant</td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>ϵ</mi><mn>0</mn></msub><mo>=</mo><mn>8.8541878</mn><mi>e</mi><mo>−</mo><mn>12</mn><mspace width="0.167em"></mspace><mstyle mathvariant="normal"><mtext mathvariant="normal">A</mtext><mspace width="0.167em"></mspace><mtext mathvariant="normal">s</mtext><mspace width="0.167em"></mspace><mi>/</mi><mtext mathvariant="normal">V</mtext><mspace width="0.167em"></mspace><mtext mathvariant="normal">m</mtext><mspace width="0.167em"></mspace></mstyle></mrow><annotation encoding="application/x-tex">\epsilon_0 = 8.8541878e-12\,\mathrm{\text{A}\,\text{s}\,/\text{V}\,\text{m}\,}</annotation></semantics></math></td>
+<td><span class="LaTeX">$\epsilon_0 = {8.8541878e-12\,\mathrm{{\text{A}{\,}}{\text{s}{\,}}{/}{\text{V}{\,}}{\text{m}{\,}}}}$</span></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">specific oxide capacity</td>
-<td><span class="math inline">$C'_{\rm ox} = \frac{\varepsilon_{\rm ox} \varepsilon_0}{t_{\rm ox}}$</span></td>
+<td><span class="LaTeX">$C&#39;_{{\rm}ox} = \frac{\varepsilon_{{\rm}ox} \varepsilon_0}{t_{{\rm}ox}}$</span></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">oxide capacity</td>
-<td><span class="math inline">$C_{\rm ox} = C'_{\rm ox} \cdot WL$</span></td>
+<td><span class="LaTeX">$C_{{\rm}ox} = C&#39;_{{\rm}ox} \cdot WL$</span></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">gain (also <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>β</mi><annotation encoding="application/x-tex">\beta</annotation></semantics></math>)</td>
-<td><span class="math inline">$K_{\rm n} = \mu_{\rm n} C'_{\rm ox} \frac{W_{\rm n}}{L_{\rm n}}$</span></td>
+<td style="text-align: left;">gain (also <span class="LaTeX">$\beta$</span>)</td>
+<td><span class="LaTeX">$K_{{\rm}n} = \mu_{{\rm}n} C&#39;_{{\rm}ox} \frac{W_{{\rm}n}}{L_{{\rm}n}}$</span></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"></td>
-<td><span class="math inline">$K_{\rm p} = (-1) \mu_{\rm p} C'_{\rm ox} \frac{W_{\rm p}}{L_{\rm p}}$</span></td>
+<td><span class="LaTeX">$K_{{\rm}p} = (-1) \mu_{{\rm}p} C&#39;_{{\rm}ox} \frac{W_{{\rm}p}}{L_{{\rm}p}}$</span></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">propagation delay</td>
-<td><span class="math inline">$t_{\rm pHL} \propto \frac{C_L t_{\rm ox} L_{\rm p}}{W_{\rm p} \mu_{\rm p} \varepsilon_{\rm ox} (V_{\rm DD} - |V_{\rm th}|)}$</span></td>
+<td><span class="LaTeX">$t_{{\rm}pHL} \propto \frac{C_L t_{{\rm}ox} L_{{\rm}p}}{W_{{\rm}p} \mu_{{\rm}p} \varepsilon_{{\rm}ox} (V_{{\rm}DD} - |V_{{\rm}th}|)}$</span></td>
 </tr>
 </tbody>
 </table>
@@ -310,11 +285,11 @@ Power Consumption of a CMOS Inverter
 </figcaption>
 </figure>
 <h3 id="dynamic-power-consumption">Dynamic Power Consumption</h3>
-<p><span class="math display">$$P_{\rm dyn} = P_{\rm cap} + P_{\rm short}$$</span></p>
+<p><span class="LaTeX">$$P_{{\rm}dyn} = P_{{\rm}cap} + P_{{\rm}short}$$</span></p>
 <h3 id="capacitive-power">Capacitive Power</h3>
-<p><span class="math display">$$P_{\rm cap} = \alpha_{01} f C_L V_{\rm DD}^2$$</span></p>
+<p><span class="LaTeX">$$P_{{\rm}cap} = \alpha_{01} f C_L V_{{\rm}DD}^2$$</span></p>
 <h3 id="short-circuit-power">Short Circuit Power</h3>
-<p><span class="math display">$$P_{\rm short} = \alpha_{01} f \beta_n \tau (V_{\rm DD} - 2V_{\rm th})^3$$</span></p>
+<p><span class="LaTeX">$$P_{{\rm}short} = \alpha_{01} f \beta_n \tau (V_{{\rm}DD} - 2V_{{\rm}th})^3$$</span></p>
 
 
     </main>

@@ -10,7 +10,7 @@
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="http://localhost:4000/aes">
+    <link rel="canonical" href="/aes">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -106,8 +106,7 @@
                     <h6 class="dropdown-header">Display Options</h6>
                     <div class="form-check dropdown-item">
                         <label class="form-check-label">
-                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox"
-                                checked="checked" onchange="Options.changeOption(this)">
+                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox" onchange="Options.changeOption(this)">
                             Definitions
                         </label>
                     </div>
@@ -173,37 +172,13 @@
 
 </p>
 
-
 <!-- Basics -->
-
 <!--    -->
-
-
-
-
-
 <!-- \newcommand{\diff}{\mathop{}\!\mathrm{\vphantom( d}} -->
-
-
-
-
-
 <!-- SI Units -->
 <!--=============================================================== -->
-
-
-
-
-
-
-
-
-
 <!-- KaTeX Tweaks -->
-
-
 <!-- \renewcommand{\boldsymbol}[1]{\mathbf{#1}} -->
-
 <div id="title_def" class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
@@ -216,7 +191,7 @@ The Advanced Encryption Standard (AES), (original name Rijndael) is a specificat
 </div>
 </div>
 </div>
-<p>AES operates on block sizes of <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>32</mn><mo>×</mo><mn>32</mn></mrow><annotation encoding="application/x-tex">32 \times 32</annotation></semantics></math> bits.</p>
+<p>AES operates on block sizes of <span class="LaTeX">$32 \times 32$</span> bits.</p>
 <table>
 <thead>
 <tr class="header">
@@ -257,14 +232,14 @@ AES 128 High Level Overview
 <ol type="1">
 <li><p><strong>Key Expansion:</strong> Create individual 128bit round keys from the cipher key</p></li>
 <li><p><strong>AddRoundKey:</strong> each byte of the block is combined with a block of the round key using bitwise xor.</p></li>
-<li><p><strong>Rounds:</strong></p>
+<li><strong>Rounds:</strong>
 <ol type="1">
 <li>SubBytes: substitutes every byte of the state with an S-box entry</li>
 <li>ShiftRows: cyclically left shift every row</li>
-<li>MixColumns: takes the four bytes of each column as input and outputs four new bytes, where each input byte affects all four output bytes. Each column is transformed by multiplication with a fixed <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>4</mn><mo>×</mo><mn>4</mn></mrow><annotation encoding="application/x-tex">4 \times 4</annotation></semantics></math> Matrix.</li>
+<li>MixColumns: takes the four bytes of each column as input and outputs four new bytes, where each input byte affects all four output bytes. Each column is transformed by multiplication with a fixed <span class="LaTeX">$4 \times 4$</span> <a href="/matrix" >Matrix</a>.</li>
 <li>AddRoundKey: XOR of the 128bit round key and the 128bit block.</li>
 </ol></li>
-<li><p><strong>Final Round:</strong> (no MixColumns)</p>
+<li><strong>Final Round:</strong> (no MixColumns)
 <ol type="1">
 <li>SubBytes</li>
 <li>ShiftRows</li>
@@ -371,7 +346,7 @@ with the columns $j \in \{0,1,2,3\}$
 </div>
 <div id="checkboxid-4" class="tab-pane" role="tabpanel">
 <p><strong>Counter (CTR)</strong></p>
-<p>Counter mode turns a block cipher into a stream cipher. It generates the next keystream block by encrypting successive values of a “counter”.</p>
+<p>Counter mode turns a block cipher into a stream cipher. It generates the next keystream block by encrypting successive values of a &quot;counter&quot;.</p>
 <!--<p> Filename="encmode_ctr.svg", path="/res/img/content-images/informatics/security/encmode_ctr.svg" </p>-->
 <figure class="figure">
 <img class="figure-img img-fluid" style="width: 40em;" src="/res/img/content-images/informatics/security/encmode_ctr.svg" alt=""/>

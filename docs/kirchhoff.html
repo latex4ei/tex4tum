@@ -10,7 +10,7 @@
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="http://localhost:4000/kirchhoff">
+    <link rel="canonical" href="/kirchhoff">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -106,8 +106,7 @@
                     <h6 class="dropdown-header">Display Options</h6>
                     <div class="form-check dropdown-item">
                         <label class="form-check-label">
-                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox"
-                                checked="checked" onchange="Options.changeOption(this)">
+                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox" onchange="Options.changeOption(this)">
                             Definitions
                         </label>
                     </div>
@@ -173,58 +172,34 @@
 
 </p>
 
-
 <!-- Basics -->
-
 <!--    -->
-
-
-
-
-
 <!-- \newcommand{\diff}{\mathop{}\!\mathrm{\vphantom( d}} -->
-
-
-
-
-
 <!-- SI Units -->
 <!--=============================================================== -->
-
-
-
-
-
-
-
-
-
 <!-- KaTeX Tweaks -->
-
-
 <!-- \renewcommand{\boldsymbol}[1]{\mathbf{#1}} -->
-
-<h2 id="kirchhoffs-current-law-kcl">Kirchhoff’s current law (KCL)</h2>
+<h2 id="kirchhoffs-current-law-kcl">Kirchhoff's current law (KCL)</h2>
 <p>At any node (junction) in an electrical circuit, the sum of currents flowing into that node is equal to the sum of currents flowing out of that node. This results from the conservation of electric charge.</p>
 <div data-toggle="collapse" href="#eq_0">
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><munderover><mo>∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msub><mi>I</mi><mi>k</mi></msub><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\sum_{k=1}^n I_k = 0</annotation></semantics></math></p>
+<p><span class="LaTeX">$$\sum_{k=1}^n I_k = 0$$</span></p>
 </div>
 <div id="eq_0" class="legend collapse">
 <div class="card border-info w-75 mx-auto">
 <div class="p-1 small">
-<p>with the <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math> currents <span class="math inline">$I_k \in \R$</span> going into a node.</p>
+<p>with the <span class="LaTeX">$n$</span> currents <span class="LaTeX">$I_k \in {\mathop{\mathbb R}}$</span> going into a node.</p>
 </div>
 </div>
 </div>
-<h2 id="kirchhoffs-voltage-law-kvl">Kirchhoff’s voltage law (KVL)</h2>
-<p>The directed sum of the electrical potential differences (voltage) around any closed network is zero.</p>
+<h2 id="kirchhoffs-voltage-law-kvl">Kirchhoff's voltage law (KVL)</h2>
+<p>The directed sum of the electrical potential differences (voltage) around any closed <a href="/network" >network</a> is zero.</p>
 <div data-toggle="collapse" href="#eq_1">
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><munderover><mo>∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msub><mi>V</mi><mi>k</mi></msub><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\sum_{k=1}^n V_k = 0</annotation></semantics></math></p>
+<p><span class="LaTeX">$$\sum_{k=1}^n V_k = 0$$</span></p>
 </div>
 <div id="eq_1" class="legend collapse">
 <div class="card border-info w-75 mx-auto">
 <div class="p-1 small">
-<p>with the <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math> voltages <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>V</mi><mi>k</mi></msub><annotation encoding="application/x-tex">V_k</annotation></semantics></math> for each closed loop.</p>
+<p>with the <span class="LaTeX">$n$</span> voltages <span class="LaTeX">$V_k$</span> for each closed loop.</p>
 </div>
 </div>
 </div>

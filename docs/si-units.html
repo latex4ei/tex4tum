@@ -10,7 +10,7 @@
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="http://localhost:4000/si-units">
+    <link rel="canonical" href="/si-units">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -106,8 +106,7 @@
                     <h6 class="dropdown-header">Display Options</h6>
                     <div class="form-check dropdown-item">
                         <label class="form-check-label">
-                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox"
-                                checked="checked" onchange="Options.changeOption(this)">
+                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox" onchange="Options.changeOption(this)">
                             Definitions
                         </label>
                     </div>
@@ -168,37 +167,13 @@
 
 </p>
 
-
 <!-- Basics -->
-
 <!--    -->
-
-
-
-
-
 <!-- \newcommand{\diff}{\mathop{}\!\mathrm{\vphantom( d}} -->
-
-
-
-
-
 <!-- SI Units -->
 <!--=============================================================== -->
-
-
-
-
-
-
-
-
-
 <!-- KaTeX Tweaks -->
-
-
 <!-- \renewcommand{\boldsymbol}[1]{\mathbf{#1}} -->
-
 <div id="title_def" class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
@@ -225,43 +200,43 @@ The System of International Units is a dimension system that is based on 7 base 
 <td>Length</td>
 <td>L</td>
 <td>Meter</td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">m</mtext><mspace width="0.167em"></mspace></mrow><annotation encoding="application/x-tex">\text{m}\,</annotation></semantics></math></td>
+<td><span class="LaTeX">${{\text{m}{\,}}}$</span></td>
 </tr>
 <tr class="even">
 <td>Mass</td>
 <td>M</td>
 <td>Kilogram</td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">kg</mtext><mspace width="0.167em"></mspace></mrow><annotation encoding="application/x-tex">\text{kg}\,</annotation></semantics></math></td>
+<td><span class="LaTeX">${{\text{kg}{\,}}}$</span></td>
 </tr>
 <tr class="odd">
 <td>Time</td>
 <td>T</td>
 <td>Second</td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">s</mtext><mspace width="0.167em"></mspace></mrow><annotation encoding="application/x-tex">\text{s}\,</annotation></semantics></math></td>
+<td><span class="LaTeX">${{\text{s}{\,}}}$</span></td>
 </tr>
 <tr class="even">
 <td>Current</td>
 <td>I</td>
 <td>Ampere</td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">A</mtext><mspace width="0.167em"></mspace></mrow><annotation encoding="application/x-tex">\text{A}\,</annotation></semantics></math></td>
+<td><span class="LaTeX">${{\text{A}{\,}}}$</span></td>
 </tr>
 <tr class="odd">
 <td>Temperature</td>
 <td>Θ</td>
 <td>Kelvin</td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">s</mtext><mspace width="0.167em"></mspace></mrow><annotation encoding="application/x-tex">\text{s}\,</annotation></semantics></math></td>
+<td><span class="LaTeX">${{\text{s}{\,}}}$</span></td>
 </tr>
 <tr class="even">
 <td>Amount of substance</td>
 <td>N</td>
 <td>Mole</td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">mol</mtext><mspace width="0.167em"></mspace></mrow><annotation encoding="application/x-tex">\text{mol}\,</annotation></semantics></math></td>
+<td><span class="LaTeX">${{\text{mol}{\,}}}$</span></td>
 </tr>
 <tr class="odd">
 <td>Luminous intensity</td>
 <td>J</td>
 <td>Candela</td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">cd</mtext><mspace width="0.167em"></mspace></mrow><annotation encoding="application/x-tex">\text{cd}\,</annotation></semantics></math></td>
+<td><span class="LaTeX">${{\text{cd}{\,}}}$</span></td>
 </tr>
 </tbody>
 </table>
@@ -278,75 +253,75 @@ The System of International Units is a dimension system that is based on 7 base 
 <tbody>
 <tr class="odd">
 <td>Frequency</td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo>=</mo><mfrac><mi>c</mi><mi>λ</mi></mfrac></mrow><annotation encoding="application/x-tex">f = \frac{c}{\lambda}</annotation></semantics></math></td>
+<td><span class="LaTeX">$f = \frac{c}{\lambda}$</span></td>
 <td>Hertz</td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">Hz</mtext><mspace width="0.167em"></mspace><mo>=</mo><mi>/</mi><mtext mathvariant="normal">s</mtext><mspace width="0.167em"></mspace></mrow><annotation encoding="application/x-tex">\text{Hz}\, =  /\text{s}\,</annotation></semantics></math></td>
+<td><span class="LaTeX">${{\text{Hz}{\,}}} = { {/}{\text{s}{\,}}}$</span></td>
 </tr>
 <tr class="even">
 <td>Force</td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathvariant="bold"><mi>𝐅</mi></mstyle><mo>:=</mo><mi>m</mi><mo>⋅</mo><mstyle mathvariant="bold"><mi>𝐚</mi></mstyle></mrow><annotation encoding="application/x-tex">\boldsymbol F := m \cdot \boldsymbol a</annotation></semantics></math></td>
+<td><span class="LaTeX">${\boldsymbol F} := m \cdot {\boldsymbol a}$</span></td>
 <td>Newton</td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">N</mtext><mspace width="0.167em"></mspace><mo>=</mo><mtext mathvariant="normal">kg</mtext><mspace width="0.167em"></mspace><mtext mathvariant="normal">m</mtext><mspace width="0.167em"></mspace><mi>/</mi><mtext mathvariant="normal">s</mtext><msup><mspace width="0.167em"></mspace><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\text{N}\, = \text{kg}\,\text{m}\,/\text{s}\,^{2}</annotation></semantics></math></td>
+<td><span class="LaTeX">${{\text{N}{\,}}} = {{\text{kg}{\,}}{\text{m}{\,}}{/}{\text{s}{\,}}{^{2}}}$</span></td>
 </tr>
 <tr class="odd">
 <td>Pressure</td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo>:=</mo><mfrac><msub><mstyle mathvariant="bold"><mi>𝐅</mi></mstyle><mo>⊥</mo></msub><mi>A</mi></mfrac></mrow><annotation encoding="application/x-tex">p := \frac{\boldsymbol F_\perp}{A}</annotation></semantics></math></td>
+<td><span class="LaTeX">$p := \frac{{\boldsymbol F}_\perp}{A}$</span></td>
 <td>Pascal</td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">Pa</mtext><mspace width="0.167em"></mspace><mo>=</mo><mtext mathvariant="normal">N</mtext><mspace width="0.167em"></mspace><mi>/</mi><mtext mathvariant="normal">m</mtext><msup><mspace width="0.167em"></mspace><mn>2</mn></msup><mo>=</mo><mtext mathvariant="normal">kg</mtext><mspace width="0.167em"></mspace><mi>/</mi><mtext mathvariant="normal">m</mtext><mspace width="0.167em"></mspace><mtext mathvariant="normal">s</mtext><msup><mspace width="0.167em"></mspace><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\text{Pa}\, = \text{N}\,/\text{m}\,^{2} = \text{kg}\,/\text{m}\,\text{s}\,^{2}</annotation></semantics></math></td>
+<td><span class="LaTeX">${{\text{Pa}{\,}}} = {{\text{N}{\,}}{/}{\text{m}{\,}}{^{2}}} = {{\text{kg}{\,}}{/}{\text{m}{\,}}{\text{s}{\,}}{^{2}}}$</span></td>
 </tr>
 <tr class="even">
-<td><span class="math inline">${}^{\textstyle \text{Work,}}_{\textstyle \text{Energy}}$</span></td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>W</mi><mo>:=</mo><mo>∫</mo><mstyle mathvariant="bold"><mi>𝐅</mi></mstyle><mspace width="0.167em"></mspace><mtext mathvariant="normal">d</mtext><mstyle mathvariant="bold"><mi>𝐬</mi></mstyle></mrow><annotation encoding="application/x-tex">W := \int \boldsymbol F \,\text{d}\boldsymbol s</annotation></semantics></math></td>
+<td><span class="LaTeX">${}^{\textstyle \text{Work,}}_{\textstyle \text{Energy}}$</span></td>
+<td><span class="LaTeX">$W := \int {\boldsymbol F} {\,\text{d}}{\boldsymbol s}$</span></td>
 <td>Joule</td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">J</mtext><mspace width="0.167em"></mspace><mo>=</mo><mtext mathvariant="normal">N</mtext><mspace width="0.167em"></mspace><mtext mathvariant="normal">m</mtext><mspace width="0.167em"></mspace><mo>=</mo><mtext mathvariant="normal">kg</mtext><mspace width="0.167em"></mspace><mtext mathvariant="normal">m</mtext><msup><mspace width="0.167em"></mspace><mn>2</mn></msup><mi>/</mi><mtext mathvariant="normal">s</mtext><msup><mspace width="0.167em"></mspace><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\text{J}\, = \text{N}\,\text{m}\, = \text{kg}\,\text{m}\,^{2}/\text{s}\,^{2}</annotation></semantics></math></td>
+<td><span class="LaTeX">${{\text{J}{\,}}} = {{\text{N}{\,}}{\text{m}{\,}}} = {{\text{kg}{\,}}{\text{m}{\,}}{^{2}}{/}{\text{s}{\,}}{^{2}}}$</span></td>
 </tr>
 <tr class="odd">
 <td>Power</td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo>:=</mo><mfrac><mrow><mstyle mathvariant="normal"><mi>d</mi></mstyle><mi>W</mi></mrow><mrow><mstyle mathvariant="normal"><mi>d</mi></mstyle><mi>t</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">P := \frac{\mathrm dW}{\mathrm dt}</annotation></semantics></math></td>
+<td><span class="LaTeX">$P := \frac{\mathrm dW}{\mathrm dt}$</span></td>
 <td>Watt</td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">W</mtext><mspace width="0.167em"></mspace><mo>=</mo><mtext mathvariant="normal">J</mtext><mspace width="0.167em"></mspace><mi>/</mi><mtext mathvariant="normal">s</mtext><mspace width="0.167em"></mspace><mo>=</mo><mtext mathvariant="normal">kg</mtext><mspace width="0.167em"></mspace><mtext mathvariant="normal">m</mtext><msup><mspace width="0.167em"></mspace><mn>2</mn></msup><mi>/</mi><mtext mathvariant="normal">s</mtext><msup><mspace width="0.167em"></mspace><mn>3</mn></msup></mrow><annotation encoding="application/x-tex">\text{W}\, = \text{J}\,/\text{s}\, = \text{kg}\,\text{m}\,^{2}/\text{s}\,^{3}</annotation></semantics></math></td>
+<td><span class="LaTeX">${{\text{W}{\,}}} = {{\text{J}{\,}}{/}{\text{s}{\,}}} = {{\text{kg}{\,}}{\text{m}{\,}}{^{2}}{/}{\text{s}{\,}}{^{3}}}$</span></td>
 </tr>
 <tr class="even">
 <td>Voltage</td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi><mo>:=</mo><mfrac><mi>W</mi><mi>Q</mi></mfrac></mrow><annotation encoding="application/x-tex">U := \frac{W}{Q}</annotation></semantics></math></td>
+<td><span class="LaTeX">$U := \frac{W}{Q}$</span></td>
 <td>Volt</td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">V</mtext><mspace width="0.167em"></mspace><mo>=</mo><mtext mathvariant="normal">W</mtext><mspace width="0.167em"></mspace><mi>/</mi><mtext mathvariant="normal">A</mtext><mspace width="0.167em"></mspace><mo>=</mo><mtext mathvariant="normal">kg</mtext><mspace width="0.167em"></mspace><mtext mathvariant="normal">m</mtext><msup><mspace width="0.167em"></mspace><mn>2</mn></msup><mi>/</mi><mtext mathvariant="normal">A</mtext><mspace width="0.167em"></mspace><mtext mathvariant="normal">s</mtext><msup><mspace width="0.167em"></mspace><mn>3</mn></msup></mrow><annotation encoding="application/x-tex">\text{V}\, = \text{W}\,/\text{A}\, = \text{kg}\,\text{m}\,^{2}/\text{A}\,\text{s}\,^{3}</annotation></semantics></math></td>
+<td><span class="LaTeX">${{\text{V}{\,}}} = {{\text{W}{\,}}{/}{\text{A}{\,}}} = {{\text{kg}{\,}}{\text{m}{\,}}{^{2}}{/}{\text{A}{\,}}{\text{s}{\,}}{^{3}}}$</span></td>
 </tr>
 <tr class="odd">
 <td>Charge</td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Q</mi><mo>:=</mo><mo>∫</mo><mi>I</mi><mspace width="0.167em"></mspace><mtext mathvariant="normal">d</mtext><mi>t</mi></mrow><annotation encoding="application/x-tex">Q:= \int I \,\text{d}t</annotation></semantics></math></td>
+<td><span class="LaTeX">$Q:= \int I {\,\text{d}}t$</span></td>
 <td>Coulomb</td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">C</mtext><mspace width="0.167em"></mspace><mo>=</mo><mtext mathvariant="normal">A</mtext><mspace width="0.167em"></mspace><mtext mathvariant="normal">s</mtext><mspace width="0.167em"></mspace></mrow><annotation encoding="application/x-tex">\text{C}\, = \text{A}\,\text{s}\,</annotation></semantics></math></td>
+<td><span class="LaTeX">${{\text{C}{\,}}} = {{\text{A}{\,}}{\text{s}{\,}}}$</span></td>
 </tr>
 <tr class="even">
 <td>Resistance</td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>R</mi><mo>:=</mo><mfrac><mrow><mspace width="0.167em"></mspace><mtext mathvariant="normal">d</mtext><mi>U</mi></mrow><mrow><mspace width="0.167em"></mspace><mtext mathvariant="normal">d</mtext><mi>I</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">R := \frac{\,\text{d}U}{\,\text{d}I}</annotation></semantics></math></td>
+<td><span class="LaTeX">$R := \frac{{\,\text{d}}U}{{\,\text{d}}I}$</span></td>
 <td>Ohm</td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Ω</mi><mspace width="0.167em"></mspace><mo>=</mo><mtext mathvariant="normal">V</mtext><mspace width="0.167em"></mspace><mi>/</mi><mtext mathvariant="normal">A</mtext><mspace width="0.167em"></mspace><mo>=</mo><mtext mathvariant="normal">kg</mtext><mspace width="0.167em"></mspace><mtext mathvariant="normal">m</mtext><msup><mspace width="0.167em"></mspace><mn>2</mn></msup><mi>/</mi><mtext mathvariant="normal">A</mtext><msup><mspace width="0.167em"></mspace><mn>2</mn></msup><mtext mathvariant="normal">s</mtext><msup><mspace width="0.167em"></mspace><mn>3</mn></msup></mrow><annotation encoding="application/x-tex">\Omega\, = \text{V}\,/\text{A}\, = \text{kg}\,\text{m}\,^{2}/\text{A}\,^{2}\text{s}\,^{3}</annotation></semantics></math></td>
+<td><span class="LaTeX">${{\Omega{\,}}} = {{\text{V}{\,}}{/}{\text{A}{\,}}} = {{\text{kg}{\,}}{\text{m}{\,}}{^{2}}{/}{\text{A}{\,}}{^{2}}{\text{s}{\,}}{^{3}}}$</span></td>
 </tr>
 <tr class="odd">
 <td>Capacitance</td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mo>:=</mo><mfrac><mrow><mspace width="0.167em"></mspace><mtext mathvariant="normal">d</mtext><mi>Q</mi></mrow><mrow><mspace width="0.167em"></mspace><mtext mathvariant="normal">d</mtext><mi>U</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">C:= \frac{\,\text{d}Q}{\,\text{d}U}</annotation></semantics></math></td>
+<td><span class="LaTeX">$C:= \frac{{\,\text{d}}Q}{{\,\text{d}}U}$</span></td>
 <td>Farad</td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">F</mtext><mspace width="0.167em"></mspace><mo>=</mo><mtext mathvariant="normal">C</mtext><mspace width="0.167em"></mspace><mi>/</mi><mtext mathvariant="normal">V</mtext><mspace width="0.167em"></mspace><mo>=</mo><mtext mathvariant="normal">A</mtext><msup><mspace width="0.167em"></mspace><mn>2</mn></msup><mtext mathvariant="normal">s</mtext><msup><mspace width="0.167em"></mspace><mn>4</mn></msup><mi>/</mi><mtext mathvariant="normal">kg</mtext><mspace width="0.167em"></mspace><mtext mathvariant="normal">m</mtext><msup><mspace width="0.167em"></mspace><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\text{F}\, = \text{C}\,/\text{V}\, = \text{A}\,^{2}\text{s}\,^{4}/\text{kg}\,\text{m}\,^{2}</annotation></semantics></math></td>
+<td><span class="LaTeX">${{\text{F}{\,}}} = {{\text{C}{\,}}{/}{\text{V}{\,}}} = {{\text{A}{\,}}{^{2}}{\text{s}{\,}}{^{4}}{/}{\text{kg}{\,}}{\text{m}{\,}}{^{2}}}$</span></td>
 </tr>
 <tr class="even">
 <td>Inductance</td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi><mo>:=</mo><mfrac><mrow><mspace width="0.167em"></mspace><mtext mathvariant="normal">d</mtext><mi>Φ</mi></mrow><mrow><mspace width="0.167em"></mspace><mtext mathvariant="normal">d</mtext><mi>I</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">L := \frac{\,\text{d}\Phi}{\,\text{d}I}</annotation></semantics></math></td>
+<td><span class="LaTeX">$L := \frac{{\,\text{d}}\Phi}{{\,\text{d}}I}$</span></td>
 <td>Henry</td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">H</mtext><mspace width="0.167em"></mspace><mo>=</mo><mtext mathvariant="normal">V</mtext><mspace width="0.167em"></mspace><mtext mathvariant="normal">s</mtext><mspace width="0.167em"></mspace><mi>/</mi><mtext mathvariant="normal">A</mtext><mspace width="0.167em"></mspace><mo>=</mo><mtext mathvariant="normal">kg</mtext><mspace width="0.167em"></mspace><mtext mathvariant="normal">m</mtext><msup><mspace width="0.167em"></mspace><mn>2</mn></msup><mi>/</mi><mtext mathvariant="normal">A</mtext><msup><mspace width="0.167em"></mspace><mn>2</mn></msup><mtext mathvariant="normal">s</mtext><msup><mspace width="0.167em"></mspace><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\text{H}\, = \text{V}\,\text{s}\,/\text{A}\, = \text{kg}\,\text{m}\,^{2}/\text{A}\,^{2}\text{s}\,^{2}</annotation></semantics></math></td>
+<td><span class="LaTeX">${{\text{H}{\,}}} = {{\text{V}{\,}}{\text{s}{\,}}{/}{\text{A}{\,}}} = {{\text{kg}{\,}}{\text{m}{\,}}{^{2}}{/}{\text{A}{\,}}{^{2}}{\text{s}{\,}}{^{2}}}$</span></td>
 </tr>
 <tr class="odd">
-<td><span class="math inline">${}^{\text{Magnetic}}_{\textstyle \text{Flux}}$</span></td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>Φ</mi><mstyle mathvariant="normal"><mi>M</mi></mstyle></msub><mo>:=</mo><mo>∫</mo><mstyle mathvariant="bold"><mi>𝐁</mi></mstyle><mspace width="0.167em"></mspace><mtext mathvariant="normal">d</mtext><mstyle mathvariant="bold"><mi>𝐀</mi></mstyle></mrow><annotation encoding="application/x-tex">\Phi_{\mathrm M} := \int \boldsymbol B \,\text{d}\boldsymbol A</annotation></semantics></math></td>
+<td><span class="LaTeX">${}^{\text{Magnetic}}_{\textstyle \text{Flux}}$</span></td>
+<td><span class="LaTeX">$\Phi_{\mathrm M} := \int {\boldsymbol B} {\,\text{d}}{\boldsymbol A}$</span></td>
 <td>Weber</td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">Wb</mtext><mspace width="0.167em"></mspace><mo>=</mo><mtext mathvariant="normal">V</mtext><mspace width="0.167em"></mspace><mtext mathvariant="normal">s</mtext><mspace width="0.167em"></mspace><mo>=</mo><mtext mathvariant="normal">kg</mtext><mspace width="0.167em"></mspace><mtext mathvariant="normal">m</mtext><msup><mspace width="0.167em"></mspace><mn>2</mn></msup><mi>/</mi><mtext mathvariant="normal">A</mtext><mspace width="0.167em"></mspace><mtext mathvariant="normal">s</mtext><msup><mspace width="0.167em"></mspace><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\text{Wb}\, = \text{V}\,\text{s}\, = \text{kg}\,\text{m}\,^{2}/\text{A}\,\text{s}\,^{2}</annotation></semantics></math></td>
+<td><span class="LaTeX">${{\text{Wb}{\,}}} = {{\text{V}{\,}}{\text{s}{\,}}} = {{\text{kg}{\,}}{\text{m}{\,}}{^{2}}{/}{\text{A}{\,}}{\text{s}{\,}}{^{2}}}$</span></td>
 </tr>
 <tr class="even">
-<td><span class="math inline">${}^{\text{Magnetic}}_{\textstyle \text{Flux Density}}$</span></td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathvariant="bold"><mi>𝐁</mi></mstyle><mo>:=</mo><msub><mi>μ</mi><mn>0</mn></msub><mstyle mathvariant="bold"><mi>𝐇</mi></mstyle></mrow><annotation encoding="application/x-tex">\boldsymbol B := \mu_0 \boldsymbol H</annotation></semantics></math></td>
+<td><span class="LaTeX">${}^{\text{Magnetic}}_{\textstyle \text{Flux Density}}$</span></td>
+<td><span class="LaTeX">${\boldsymbol B} := \mu_0 {\boldsymbol H}$</span></td>
 <td>Tesla</td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">T</mtext><mspace width="0.167em"></mspace><mo>=</mo><mtext mathvariant="normal">Wb</mtext><mspace width="0.167em"></mspace><mi>/</mi><mtext mathvariant="normal">m</mtext><msup><mspace width="0.167em"></mspace><mn>2</mn></msup><mo>=</mo><mtext mathvariant="normal">kg</mtext><mspace width="0.167em"></mspace><mi>/</mi><mtext mathvariant="normal">A</mtext><mspace width="0.167em"></mspace><mtext mathvariant="normal">s</mtext><msup><mspace width="0.167em"></mspace><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\text{T}\, = \text{Wb}\,/\text{m}\,^{2} = \text{kg}\,/\text{A}\,\text{s}\,^{2}</annotation></semantics></math></td>
+<td><span class="LaTeX">${{\text{T}{\,}}} = {{\text{Wb}{\,}}{/}{\text{m}{\,}}{^{2}}} = {{\text{kg}{\,}}{/}{\text{A}{\,}}{\text{s}{\,}}{^{2}}}$</span></td>
 </tr>
 </tbody>
 </table>
@@ -354,7 +329,7 @@ The System of International Units is a dimension system that is based on 7 base 
 <table>
 <thead>
 <tr class="header">
-<th style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mn>10</mn><mo>±</mo></msup><annotation encoding="application/x-tex">10^{\pm}</annotation></semantics></math></th>
+<th style="text-align: left;"><span class="LaTeX">$10^{\pm}$</span></th>
 <th>1</th>
 <th>2</th>
 <th>3</th>

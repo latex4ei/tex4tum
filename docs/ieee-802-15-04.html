@@ -106,8 +106,7 @@
                     <h6 class="dropdown-header">Display Options</h6>
                     <div class="form-check dropdown-item">
                         <label class="form-check-label">
-                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox"
-                                checked="checked" onchange="Options.changeOption(this)">
+                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox" onchange="Options.changeOption(this)">
                             Definitions
                         </label>
                     </div>
@@ -187,7 +186,7 @@
 Definition
 </h5>
 <p class="card-text">
-IEEE 802.15.4 is the standard for “Wireless Medium Access Control (<abbr title="Media Access Control" >MAC</abbr>) and Physical Layer (PHY) Specifications for Low-Rate Wireless Personal Area Networks (LR-WPANs)”
+IEEE 802.15.4 is the standard for “Wireless Medium Access Control (MAC) and Physical Layer (PHY) Specifications for Low-Rate Wireless Personal Area Networks (LR-WPANs)”
 </p>
 </div>
 </div>
@@ -199,7 +198,7 @@ IEEE 802.15.4 is the standard for “Wireless Medium Access Control (<abbr title
 <li><a href="#device-types">Device Types</a></li>
 <li><a href="#topologies">Topologies</a></li>
 <li><a href="#physical-layer-1-phy">Physical Layer 1 (PHY)</a></li>
-<li><a href="#medium-access-layer-2-mac">Medium Access Layer 2 (<abbr title="Media Access Control" >MAC</abbr>)</a></li>
+<li><a href="#medium-access-layer-2-mac">Medium Access Layer 2 (MAC)</a></li>
 <li><a href="#link-layer-security">Link layer security</a></li>
 <li><a href="#references">References</a></li>
 </ul>
@@ -227,13 +226,13 @@ Beacon                               Beacon</code></pre>
 |  Sync. header  |  PHY header  |     PHY payload       |
 |     (SHR)      |    (PHR)     |        (PSDU)         |
 +-------------------------------------------------------+</code></pre>
-<p>A cyclic redundancy check (<abbr title="Cyclic Redundancy Check" >CRC</abbr>) is used to detect errors in every PSDU.</p>
+<p>A cyclic redundancy check (CRC) is used to detect errors in every PSDU.</p>
 <h3 id="access-methods">Access Methods</h3>
 <ul>
 <li>Unslotted CSMA-CA used in nonbeacon-enabled PANs</li>
 <li>Slotted CSMA-CA used in beacon-enabled PANs</li>
-<li>TSCH CCA used in non-shared slots in a TSCH <abbr title="Personal Area Network" >PAN</abbr></li>
-<li>TSCH CSMA-CA used for shared slots in a TSCH <abbr title="Personal Area Network" >PAN</abbr></li>
+<li>TSCH CCA used in non-shared slots in a TSCH PAN</li>
+<li>TSCH CSMA-CA used for shared slots in a TSCH PAN</li>
 <li>CSMA-CA with PCA in for critical events</li>
 <li>LECIM ALOHA with PCA</li>
 </ul>
@@ -254,7 +253,7 @@ Beacon                               Beacon</code></pre>
 <div class="card-body">
 <div class="tab-content">
 <div id="checkboxid-0" class="tab-pane active" role="tabpanel">
-<p>A full-Function Device (FFD) is a device that is capable of serving as a personal area network (<abbr title="Personal Area Network" >PAN</abbr>) coordinator.</p>
+<p>A full-Function Device (FFD) is a device that is capable of serving as a personal area <a href="/network" >network</a> (PAN) coordinator.</p>
 </div>
 <div id="checkboxid-1" class="tab-pane" role="tabpanel">
 <p>A Reduced-Function Device (RFD) is a device that is not capable of serving as a coordinator and is intended for applications that are extremely simple.</p>
@@ -266,7 +265,7 @@ Beacon                               Beacon</code></pre>
 <h2 id="topologies">Topologies</h2>
 <ul>
 <li>Star</li>
-<li><abbr title="Peer-To-Peer" >P2P</abbr> / Mesh</li>
+<li>P2P / Mesh</li>
 </ul>
 <h2 id="physical-layer-1-phy">Physical Layer 1 (PHY)</h2>
 <h3 id="features">Features</h3>
@@ -284,7 +283,7 @@ Beacon                               Beacon</code></pre>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Modulation</td>
+<td><a href="/modulation" >Modulation</a></td>
 <td>BPSK</td>
 <td>O-QPSK</td>
 </tr>
@@ -322,14 +321,14 @@ Beacon                               Beacon</code></pre>
 <li>30 channels available in the 915MHz bands</li>
 <li>16 channels available in the 2.4GHz bands</li>
 </ul>
-<h2 id="medium-access-layer-2-mac">Medium Access Layer 2 (<abbr title="Media Access Control" >MAC</abbr>)</h2>
+<h2 id="medium-access-layer-2-mac">Medium Access Layer 2 (MAC)</h2>
 <ul>
 <li>4 types of <abbr title="Media Access Control" >MAC</abbr> frames: Data, Beacon, Ack, Command</li>
 <li>typically 25 bytes <abbr title="Media Access Control" >MAC</abbr> header</li>
 </ul>
 <h3 id="beacon-enabled">Beacon Enabled</h3>
 <ul>
-<li><abbr title="Personal Area Network" >PAN</abbr> Coordinator sends beacons. The beacon interval defines one superframe. Each superframe is divided into 16 time slots.</li>
+<li>PAN Coordinator sends beacons. The beacon interval defines one superframe. Each superframe is divided into 16 time slots.</li>
 </ul>
 <p>Slots: * Contention Access Period (CAP): competetive access with CSMA/CA or ALOHA, collisions possible * Contention Free Period (CFP): slots are asigned to individual devices</p>
 <ul>
@@ -346,7 +345,7 @@ Beacon                               Beacon</code></pre>
 </ul>
 <h2 id="link-layer-security">Link layer security</h2>
 <ul>
-<li><abbr title="Advanced Encryption Standard" >AES</abbr>-128</li>
+<li><a href="aes" title="Advanced Encryption Standard ">AES</a>-128</li>
 </ul>
 <h2 id="references">References</h2>
 <ul>

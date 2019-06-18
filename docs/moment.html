@@ -10,7 +10,7 @@
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="http://localhost:4000/moment">
+    <link rel="canonical" href="/moment">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -106,8 +106,7 @@
                     <h6 class="dropdown-header">Display Options</h6>
                     <div class="form-check dropdown-item">
                         <label class="form-check-label">
-                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox"
-                                checked="checked" onchange="Options.changeOption(this)">
+                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox" onchange="Options.changeOption(this)">
                             Definitions
                         </label>
                     </div>
@@ -173,37 +172,13 @@
 
 </p>
 
-
 <!-- Basics -->
-
 <!--    -->
-
-
-
-
-
 <!-- \newcommand{\diff}{\mathop{}\!\mathrm{\vphantom( d}} -->
-
-
-
-
-
 <!-- SI Units -->
 <!--=============================================================== -->
-
-
-
-
-
-
-
-
-
 <!-- KaTeX Tweaks -->
-
-
 <!-- \renewcommand{\boldsymbol}[1]{\mathbf{#1}} -->
-
 <div id="title_def" class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
@@ -216,24 +191,24 @@ A moment is a specific quantitative measure of the shape of a function.
 </div>
 </div>
 </div>
-<p>The <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>-th moment of a continuous function <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">f(x)</annotation></semantics></math> of a real variable <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math> about a value <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>c</mi><annotation encoding="application/x-tex">c</annotation></semantics></math> is</p>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>μ</mi><mi>n</mi></msub><mo>=</mo><msubsup><mo>∫</mo><mrow><mo>−</mo><mi>∞</mi></mrow><mi>∞</mi></msubsup><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>−</mo><mi>c</mi><msup><mo stretchy="false" form="postfix">)</mo><mi>n</mi></msup><mspace width="0.167em"></mspace><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mspace width="0.167em"></mspace><mtext mathvariant="normal">d</mtext><mi>x</mi></mrow><annotation encoding="application/x-tex">\mu _{n}=\int _{-\infty }^{\infty }(x-c)^{n}\,f(x)\,\text{d}x</annotation></semantics></math></p>
-<h2 id="mean-n-1">Mean (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">n = 1</annotation></semantics></math>)</h2>
+<p>The <span class="LaTeX">$n$</span>-th moment of a continuous function <span class="LaTeX">$f(x)$</span> of a real variable <span class="LaTeX">$x$</span> about a value <span class="LaTeX">$c$</span> is</p>
+<p><span class="LaTeX">$$\mu _{n}=\int _{-\infty }^{\infty }(x-c)^{n}\,f(x){\,\text{d}}x$$</span></p>
+<h2 id="mean-n-1">Mean (<span class="LaTeX">$n = 1$</span>)</h2>
 <p>discrete:</p>
 <div data-toggle="collapse" href="#eq_0">
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>μ</mi><mn>1</mn></msub><mo>=</mo><mo>∑</mo><msub><mi>x</mi><mi>i</mi></msub><mo>⋅</mo><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\mu_1 =\sum x_i \cdot P(x)</annotation></semantics></math></p>
+<p><span class="LaTeX">$$\mu_1 =\sum x_i \cdot P(x)$$</span></p>
 </div>
 <div id="eq_0" class="legend collapse">
 <div class="card border-info w-75 mx-auto">
 <div class="p-1 small">
-<p>with result <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math> and probability function <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">P()</annotation></semantics></math></p>
+<p>with result <span class="LaTeX">$x$</span> and probability function <span class="LaTeX">$P()$</span></p>
 </div>
 </div>
 </div>
 <p>continuous:</p>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mo>μ</mo><mn>1</mn></msub><mo>=</mo><msub><mo>∫</mo><mstyle mathvariant="double-struck"><mi>ℝ</mi></mstyle></msub><mi>x</mi><mo>⋅</mo><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mspace width="0.167em"></mspace><mtext mathvariant="normal">d</mtext><mi>x</mi></mrow><annotation encoding="application/x-tex">\mathop{\mu}_1 = \int _{\mathbb {R}} x \cdot f(x)\,\text{d}x</annotation></semantics></math></p>
+<p><span class="LaTeX">$${\mathop{\mu}}_1 = \int _{\mathbb {R}} x \cdot f(x){\,\text{d}}x$$</span></p>
 <h2 id="variance">Variance</h2>
-<p>discrete: <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>μ</mi><mn>2</mn></msub><mo>=</mo><mo>∑</mo><mi>x</mi><mo>⋅</mo><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\mu_2 =\sum x \cdot P(x)</annotation></semantics></math></p>
+<p>discrete: <span class="LaTeX">$$\mu_2 =\sum x \cdot P(x)$$</span></p>
 <h2 id="central-moments-comparison">Central Moments Comparison</h2>
 <table>
 <thead>

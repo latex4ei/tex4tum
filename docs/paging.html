@@ -106,8 +106,7 @@
                     <h6 class="dropdown-header">Display Options</h6>
                     <div class="form-check dropdown-item">
                         <label class="form-check-label">
-                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox"
-                                checked="checked" onchange="Options.changeOption(this)">
+                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox" onchange="Options.changeOption(this)">
                             Definitions
                         </label>
                     </div>
@@ -204,10 +203,10 @@ R-Bit | is page referenced |
 M-Bit | is page modified (dirty) |
 X-Bit | is page data executable |</div>
 <h2 id="page-fault">Page Fault</h2>
-<p>Event that occurs when a program tries to reference a page not currently present in <abbr title="Random Access Memory" >RAM</abbr>.</p>
+<p>Event that occurs when a program tries to reference a page not currently present in <a href="ram" title="Random Access Memory ">RAM</a>.</p>
 <h3 id="page-replacement-algorithm">Page Replacement Algorithm</h3>
 <ul>
-<li>First-In-First-Out (<abbr title="First In First Out" >FIFO</abbr>):</li>
+<li>First-In-First-Out (FIFO):</li>
 <li>Second-chance: <abbr title="First In First Out" >FIFO</abbr> variant, where a page is only replaced if the R-Bit is not set.</li>
 <li>Clock: <abbr title="First In First Out" >FIFO</abbr> variant, circular list of pages</li>
 <li>Least recently used (LRU) Cons: expensive to implement</li>

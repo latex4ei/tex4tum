@@ -10,7 +10,7 @@
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="http://localhost:4000/ip">
+    <link rel="canonical" href="/ip">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -106,8 +106,7 @@
                     <h6 class="dropdown-header">Display Options</h6>
                     <div class="form-check dropdown-item">
                         <label class="form-check-label">
-                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox"
-                                checked="checked" onchange="Options.changeOption(this)">
+                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox" onchange="Options.changeOption(this)">
                             Definitions
                         </label>
                     </div>
@@ -185,37 +184,13 @@
 
 </p>
 
-
 <!-- Basics -->
-
 <!--    -->
-
-
-
-
-
 <!-- \newcommand{\diff}{\mathop{}\!\mathrm{\vphantom( d}} -->
-
-
-
-
-
 <!-- SI Units -->
 <!--=============================================================== -->
-
-
-
-
-
-
-
-
-
 <!-- KaTeX Tweaks -->
-
-
 <!-- \renewcommand{\boldsymbol}[1]{\mathbf{#1}} -->
-
 <div id="title_def" class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
@@ -223,7 +198,7 @@
 Definition
 </h5>
 <p class="card-text">
-The Internet Protocol (IP) is the basic communication protocol in the Internet layer. IP has the task of delivering packets from the source host to the destination host solely based on the IP addresses in the packet headers.
+The Internet Protocol (IP) is the basic communication protocol in the Internet layer. <abbr title="Internet Protocol" >IP</abbr> has the task of delivering packets from the source host to the destination host solely based on the <abbr title="Internet Protocol" >IP</abbr> addresses in the packet headers.
 </p>
 </div>
 </div>
@@ -281,10 +256,10 @@ The Internet Protocol (IP) is the basic communication protocol in the Internet l
 <li>leading zeros within a group may be omitted</li>
 <li>consecutive groups of only zeros may be replace by <code>::</code>. This replacement is only allowed once within an address.</li>
 </ul>
-<h5 class="clp_title text-success" data-toggle="collapse" href="#example14">
+<h5 class="clp_title text-success" data-toggle="collapse" href="#example15">
 <i class='fa fa-chart-bar'></i> Example
 </h5>
-<div id='example14' class='example collapse'>
+<div id='example15' class='example collapse'>
 <div class='card border-success mb-1'>
 <div class='card-body'>
 <p class='card-text'>
@@ -303,7 +278,7 @@ Initial address: <code>2001:0db8:0000:0000:0000:ff00:0042:8329</code></br> Remov
 </div>
 <p></br></p>
 <h3 id="subnets">Subnets</h3>
-<p>Subnets share a certain number of identical most-significant bits in their IP addresses (net prefix). The number <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math> of these bits is either noted as <code>/n</code> behind an IP address or as a subnet mask.</p>
+<p>Subnets share a certain number of identical most-significant bits in their <abbr title="Internet Protocol" >IP</abbr> addresses (net prefix). The number <span class="LaTeX">$n$</span> of these bits is either noted as <code>/n</code> behind an <abbr title="Internet Protocol" >IP</abbr> address or as a subnet mask.</p>
 <ul>
 <li>Prefix: <code>x.x.x.x/24</code>: 24 bits for the network, 8 bits for the host</li>
 <li>Subnetmask: <code>255.255.255.0</code>: 24 bits for the network, 8 bits for the host</li>
@@ -334,11 +309,11 @@ Initial address: <code>2001:0db8:0000:0000:0000:ff00:0042:8329</code></br> Remov
 <div id="checkboxid-3" class="tab-pane" role="tabpanel">
 <ul>
 <li><code>0.0.0.0/8</code> (broadcast)</li>
-<li><code>10.0.0.0/8</code> (private network)</li>
+<li><code>10.0.0.0/8</code> (private <a href="/network" >network</a>)</li>
 <li><code>100.64.0.0/10</code></li>
 <li><code>127.0.0.0/8</code> (local net)</li>
-<li><code>172.16.0.0/12</code> (private network)</li>
-<li><code>192.168.0.0/16</code> (private network)</li>
+<li><code>172.16.0.0/12</code> (private <a href="/network" >network</a>)</li>
+<li><code>192.168.0.0/16</code> (private <a href="/network" >network</a>)</li>
 <li><code>224.0.0.0</code> – <code>255.255.255.254</code> (future use)</li>
 <li><code>255.255.255.255</code> (limited broadcast)</li>
 </ul>
@@ -363,7 +338,7 @@ Initial address: <code>2001:0db8:0000:0000:0000:ff00:0042:8329</code></br> Remov
 <div class="tab-content">
 
 <div class="tab-pane active" id="checkboxid-4" role="tabpanel">
-<p>The IPv6 header has a fixed size of 40 bytes.</p>
+<p>The <abbr title="Internet Protocol version 6" >IPv6</abbr> header has a fixed size of 40 bytes.</p>
 <pre class="diagram"><code> 0                   1                   2                   3
  0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
@@ -402,7 +377,7 @@ Initial address: <code>2001:0db8:0000:0000:0000:ff00:0042:8329</code></br> Remov
 <dd>Set different priorities of IPv6 packets. The default value must be zero for all 8 bits.
 </dd>
 <dt>Flow Label – 20 bit</dt>
-<dd>May be used by a source to label sequences of packets for which it requests special handling by the IPv6 routers, such as non-default quality of service or “real-time” service. Hosts or routers that do not support the functions of the Flow Label field are required to set the field to zero when originating a packet, pass the field on unchanged when forwarding a packet, and ignore the field when receiving a packet.
+<dd>May be used by a source to label sequences of packets for which it requests special handling by the IPv6 routers, such as non-default quality of service or &quot;real-time&quot; service. Hosts or routers that do not support the functions of the Flow Label field are required to set the field to zero when originating a packet, pass the field on unchanged when forwarding a packet, and ignore the field when receiving a packet.
 </dd>
 <dt>Payload Length – 16-bit unsigned integer</dt>
 <dd>Length of the IPv6 payload, i.e., the rest of the packet following this IPv6 header, in octets.
@@ -471,7 +446,7 @@ Initial address: <code>2001:0db8:0000:0000:0000:ff00:0042:8329</code></br> Remov
 </dl>
 <ul>
 <li>Bit 0: reserved, must be zero</li>
-<li>Bit 1: (DF) 0 = May Fragment, 1 = Don’t Fragment.</li>
+<li>Bit 1: (DF) 0 = May Fragment, 1 = Don't Fragment.</li>
 <li>Bit 2: (MF) 0 = Last Fragment, 1 = More Fragments.</li>
 </ul>
 <dl>
@@ -485,7 +460,7 @@ Initial address: <code>2001:0db8:0000:0000:0000:ff00:0042:8329</code></br> Remov
 <dd>This field indicates the next level protocol used in the data portion of the internet datagram. Protocol numbers were defined in <a href="https://tools.ietf.org/html/rfc1700">RFC 1700</a> but are now maintained by <a href="https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml">IANA</a>. Most important numbers are 1 (ICMP), 6 (TCP), and 17 (UDP).
 </dd>
 <dt>Header Checksum – 16 bits</dt>
-<dd>A checksum on the header only. Since some header fields change (e.g., time to live), this is recomputed and verified at each point that the internet header is processed. The checksum field is the 16 bit one’s complement of the one’s complement sum of all 16 bit words in the header. For purposes of computing the checksum, the value of the checksum field is zero.
+<dd>A checksum on the header only. Since some header fields change (e.g., time to live), this is recomputed and verified at each point that the internet header is processed. The checksum field is the 16 bit one's complement of the one's complement sum of all 16 bit words in the header. For purposes of computing the checksum, the value of the checksum field is zero.
 </dd>
 <dt>Source Address – 32 bit</dt>
 <dd>Address of the originator of the packet.
@@ -507,7 +482,7 @@ Initial address: <code>2001:0db8:0000:0000:0000:ff00:0042:8329</code></br> Remov
 </div>
 <p></br></p>
 <h2 id="ip-protocol-numbers">IP protocol numbers</h2>
-<p>The protocol number is used in the <em>Protocol</em> field of the IPv4 header and the <em>Next Header</em> field of the IPv6 header.</p>
+<p>The protocol number is used in the <em>Protocol</em> field of the IPv4 header and the <em>Next Header</em> field of the <abbr title="Internet Protocol version 6" >IPv6</abbr> header.</p>
 <table>
 <thead>
 <tr class="header">
@@ -536,14 +511,14 @@ Initial address: <code>2001:0db8:0000:0000:0000:ff00:0042:8329</code></br> Remov
 <tr class="odd">
 <td>0x06</td>
 <td>6</td>
-<td>TCP</td>
+<td><a href="/tcp" >TCP</a></td>
 <td>Transmission Control Protocol</td>
 <td><a href="https://tools.ietf.org/html/rfc793">RFC 793</a></td>
 </tr>
 <tr class="even">
 <td>0x11</td>
 <td>17</td>
-<td>UDP</td>
+<td><a href="/udp" >UDP</a></td>
 <td>User Datagram Protocol</td>
 <td><a href="https://tools.ietf.org/html/rfc768">RFC 768</a></td>
 </tr>

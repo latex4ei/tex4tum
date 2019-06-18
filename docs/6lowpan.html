@@ -10,7 +10,7 @@
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="http://localhost:4000/6lowpan">
+    <link rel="canonical" href="/6lowpan">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -106,8 +106,7 @@
                     <h6 class="dropdown-header">Display Options</h6>
                     <div class="form-check dropdown-item">
                         <label class="form-check-label">
-                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox"
-                                checked="checked" onchange="Options.changeOption(this)">
+                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox" onchange="Options.changeOption(this)">
                             Definitions
                         </label>
                     </div>
@@ -173,37 +172,13 @@
 
 </p>
 
-
 <!-- Basics -->
-
 <!--    -->
-
-
-
-
-
 <!-- \newcommand{\diff}{\mathop{}\!\mathrm{\vphantom( d}} -->
-
-
-
-
-
 <!-- SI Units -->
 <!--=============================================================== -->
-
-
-
-
-
-
-
-
-
 <!-- KaTeX Tweaks -->
-
-
 <!-- \renewcommand{\boldsymbol}[1]{\mathbf{#1}} -->
-
 <div id="title_def" class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
@@ -211,7 +186,7 @@
 Definition
 </h5>
 <p class="card-text">
-The 6LoWPAN (IPv6 over Low-power Wireless Personal Area Networks) is an adaptation Layer that enables the use of IPv6 over low-power IEEE 802.15.4 radio links. In most cases, the 6LoWPAN network is connected to the IPv6 network using an edge router.
+The 6LoWPAN (IPv6 over Low-power Wireless Personal Area Networks) is an adaptation Layer that enables the use of <abbr title="Internet Protocol version 6" >IPv6</abbr> over low-power <a href="/ieee-802-15-04" >IEEE 802.15.4</a> radio links. In most cases, the 6LoWPAN <a href="/network" >network</a> is connected to the <abbr title="Internet Protocol version 6" >IPv6</abbr> network using an edge router.
 </p>
 </div>
 </div>
@@ -228,7 +203,7 @@ Support for 64-bit/16-bit 802.15.4 addressing
 <li><a href="#references">References</a></li>
 </ul>
 <h2 id="header-format">Header Format</h2>
-<p>The 6LoWPAN protocol uses the first byte of the IEEE 802.15.4 encapsulation header stack as a special <em>Dispatch Byte</em>. This Dispatch Byte indicates that the following bytes are a LoWPAN header instead of an IPv6 header.</p>
+<p>The 6LoWPAN protocol uses the first byte of the <a href="/ieee-802-15-04" >IEEE 802.15.4</a> encapsulation header stack as a special <em>Dispatch Byte</em>. This Dispatch Byte indicates that the following bytes are a LoWPAN header instead of an <abbr title="Internet Protocol version 6" >IPv6</abbr> header.</p>
 <table>
 <thead>
 <tr class="header">
@@ -289,11 +264,11 @@ Support for 64-bit/16-bit 802.15.4 addressing
 <p>IPHC/NHC compression was defined in <a href="https://tools.ietf.org/html/rfc6282">RFC 6282</a> in 2011 and updates the older HC1/HC2 compression.</p>
 <p>Structure of a typical 6LoWPAN frame with IPv6+UDP:</p>
 <pre class="diagram"><code>+--------+---  -  -  ---+----------+---  -  -  ---+--------
-|  IPHC  | Inline IPv6  | UDP NHC  | Inline UDP   | Payload
+|  IPHC  | Inline <abbr title="Internet Protocol version 6" >IPv6</abbr>  | <a href="/udp" >UDP</a> NHC  | Inline UDP   | Payload
 |(2 byte)|  (variable)  | (1 Byte) |  (variable)  |
 +--------+---  -  -  ---+----------+---  -  -  ---+--------</code></pre>
 <h4 id="iphc-format-2-bytes">IPHC Format (2 Bytes)</h4>
-<p>The frame starts with 2 IPHC bytes, where the first byte <em>is</em> the LoWPAN dispatch byte. Therefore the first byte starts with <code>011</code> to indicate IPHC compression. The remaining bits specify the IPv6 compression.</p>
+<p>The frame starts with 2 IPHC bytes, where the first byte <em>is</em> the LoWPAN dispatch byte. Therefore the first byte starts with <code>011</code> to indicate IPHC compression. The remaining bits specify the <abbr title="Internet Protocol version 6" >IPv6</abbr> compression.</p>
 <pre class="diagram"><code>  0                                       1
   0   1   2   3   4   5   6   7   8   9   0   1   2   3   4   5
 +---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
@@ -308,20 +283,54 @@ Support for 64-bit/16-bit 802.15.4 addressing
 <p class='card-text'>
 <dl>
 <dt>TF – 2 bit</dt>
-<dd>Traffic Class and Flow Label (TF), 2 bit - 00: Carried Inline (ECN+DSCP+Flow) - 01: ECN+Flow - 10: ECN+DSCP - 11: Traffic Class and Flow Label are elided.
+<dd>Traffic Class and Flow Label (TF), 2 bit
 </dd>
+</dl>
+<ul>
+<li>00: Carried Inline (ECN+DSCP+Flow)</li>
+<li>01: ECN+Flow</li>
+<li>10: ECN+DSCP</li>
+<li>11: Traffic Class and Flow Label are elided.</li>
+</ul>
+<dl>
 <dt>NH – 1 bit</dt>
-<dd>Next Header compression (NH) - 0: Carried Inline - 1: next header is compressed using LOWPAN_NHC
+<dd>Next Header compression (NH)
 </dd>
+</dl>
+<ul>
+<li>0: Carried Inline</li>
+<li>1: next header is compressed using LOWPAN_NHC</li>
+</ul>
+<dl>
 <dt>HLIM – 2 bit</dt>
-<dd>Hop Limit (HLIM) - 00: Carried Inline. - 01: 1 and elided. - 10: 64 and elided. - 11: 255 and elided.
+<dd>Hop Limit (HLIM)
 </dd>
+</dl>
+<ul>
+<li>00: Carried Inline.</li>
+<li>01: 1 and elided.</li>
+<li>10: 64 and elided.</li>
+<li>11: 255 and elided.</li>
+</ul>
+<dl>
 <dt>CID – 1 bit</dt>
-<dd>Context Identifier Extension (CID) - 0: No 1-byte CID identifier - 1: 1-byte identifier follows
+<dd>Context Identifier Extension (CID)
 </dd>
+</dl>
+<ul>
+<li>0: No 1-byte CID identifier</li>
+<li>1: 1-byte identifier follows</li>
+</ul>
+<dl>
 <dt>SAC/DAC – 1 bit each</dt>
-<dd>Source/Destination Address Compression - 0: Stateless - 1: Context-based
+<dd>Source/Destination Address Compression
 </dd>
+</dl>
+<ul>
+<li>0: Stateless</li>
+<li>1: Context-based</li>
+</ul>
+<dl>
 <dt>SAM/DAM – 2 bit each</dt>
 <dd>Source/Destination Address Mode</br> If SAC/DAC=0:
 </dd>
@@ -341,15 +350,19 @@ Support for 64-bit/16-bit 802.15.4 addressing
 </ul>
 <dl>
 <dt>M – 1 bit</dt>
-<dd>Multicast Destination (M) - 0: Destination is not multicast - 1: Destination is multicast
+<dd>Multicast Destination (M)
+</dd>
+</dl>
+<ul>
+<li>0: Destination is not multicast</li>
+<li>1: Destination is multicast
 <p>
 </div>
 </div>
-</div>
-</dd>
-</dl>
+</div></li>
+</ul>
 <h4 id="context-identifier-extension-cie">Context Identifier Extension (CIE)</h4>
-<p>In case CID = 1 in the IPHC bytes, an additional CIE byte directly follows the two IPHC bytes. This CIE byte is used to identify previously exchanged IPv6 contexts by a 4 bit Source Context Identifier (SCI) and a 4 bit Destination Context Identifier (DCI) instead of 128 bit for each address.</p>
+<p>In case CID = 1 in the IPHC bytes, an additional CIE byte directly follows the two IPHC bytes. This CIE byte is used to identify previously exchanged <abbr title="Internet Protocol version 6" >IPv6</abbr> contexts by a 4 bit Source Context Identifier (SCI) and a 4 bit Destination Context Identifier (DCI) instead of 128 bit for each address.</p>
 <pre class="diagram"><code>  0   1   2   3   4   5   6   7
 +---+---+---+---+---+---+---+---+
 |      SCI      |      DCI      |
@@ -357,7 +370,7 @@ Support for 64-bit/16-bit 802.15.4 addressing
 <h4 id="nhc-format">NHC Format</h4>
 <p>Compression formats for different next headers are identified by a variable-length bit-pattern (within one Byte) immediately following the IPHC compressed header.</p>
 <h4 id="udp-lowpan_nhc-format">UDP LOWPAN_NHC Format</h4>
-<p>Bits 0 through 4 represent the NHC ID and ‘11110’ indicates the specific UDP header compression ID.</p>
+<p>Bits 0 through 4 represent the NHC ID and '11110' indicates the specific <a href="/udp" >UDP</a> header compression ID.</p>
 <pre class="diagram"><code>  0   1   2   3   4   5   6   7
 +---+---+---+---+---+---+---+---+
 | 1 | 1 | 1 | 1 | 0 | C |   P   |
@@ -371,29 +384,41 @@ Support for 64-bit/16-bit 802.15.4 addressing
 <p class='card-text'>
 <dl>
 <dt>C</dt>
-<dd>Checksum: - 0: All 16 bits of Checksum are carried in-line. - 1: All 16 bits of Checksum are elided with higher-layer end-to-end integrity checks.
+<dd>Checksum:
 </dd>
+</dl>
+<ul>
+<li>0: All 16 bits of Checksum are carried in-line.</li>
+<li>1: All 16 bits of Checksum are elided with higher-layer end-to-end integrity checks.</li>
+</ul>
+<dl>
 <dt>P</dt>
-<dd>Ports: - 00: 16 bits. Source Port and Destination Port are carried in-line. - 01: All 16 bits for Source Port are carried in-line. First 8 bits of Destination Port is 0xf0 and elided. The remaining 8 bits of Destination Port are carried in-line. - 10: First 8 bits of Source Port are 0xf0 and elided. The remaining 8 bits of Source Port are carried in-line. All 16 bits for Destination Port are carried in-line. - 11: First 12 bits of both Source Port and Destination Port are 0xf0b and elided. The remaining 4 bits for each are carried in-line.
+<dd>Ports:
+</dd>
+</dl>
+<ul>
+<li>00: 16 bits. Source Port and Destination Port are carried in-line.</li>
+<li>01: All 16 bits for Source Port are carried in-line. First 8 bits of Destination Port is 0xf0 and elided. The remaining 8 bits of Destination Port are carried in-line.</li>
+<li>10: First 8 bits of Source Port are 0xf0 and elided. The remaining 8 bits of Source Port are carried in-line. All 16 bits for Destination Port are carried in-line.</li>
+<li>11: First 12 bits of both Source Port and Destination Port are 0xf0b and elided. The remaining 4 bits for each are carried in-line.
 <p>
 </div>
 </div>
-</div>
-</dd>
-</dl>
+</div></li>
+</ul>
 </div>
 <div class="tab-pane" id="checkboxid-1" role="tabpanel">
-<p>The HC1/HC2 compression was defined in <a href="https://tools.ietf.org/html/rfc4944">RFC 4944</a> in 2007 and is not recommended anymore. It uses two bytes – HC1 for IPv6 and HC2 for UDP – to specify how headers are compressed.</p>
-<p>With this compression it is possible to achieve a very small 7 byte frame for IPv6 + UDP if all compression mechanisms are used:</p>
+<p>The HC1/HC2 compression was defined in <a href="https://tools.ietf.org/html/rfc4944">RFC 4944</a> in 2007 and is not recommended anymore. It uses two bytes – HC1 for <abbr title="Internet Protocol version 6" >IPv6</abbr> and HC2 for <a href="/udp" >UDP</a> – to specify how headers are compressed.</p>
+<p>With this compression it is possible to achieve a very small 7 byte frame for <abbr title="Internet Protocol version 6" >IPv6</abbr> + <a href="/udp" >UDP</a> if all compression mechanisms are used:</p>
 <ol type="1">
 <li>Dispatch Byte (1 Byte)</li>
 <li>HC1 Byte (1 Byte)</li>
 <li>HC2 Byte (1 Byte)</li>
 <li>HopLimit (1 Byte)</li>
-<li>UDP Header (3 Byte)</li>
+<li><a href="/udp" >UDP</a> Header (3 Byte)</li>
 </ol>
 <h4 id="hc1-compression-byte">HC1 Compression Byte</h4>
-<p>The HC1 byte is used to compress the IPv6 header.</p>
+<p>The HC1 byte is used to compress the <abbr title="Internet Protocol version 6" >IPv6</abbr> header.</p>
 <pre><code>  0   1   2   3   4   5   6   7    
 +---+---+---+---+---+---+---+---+ 
 | IP-SA | IP-DA |TF |  NH   |HC2| 
@@ -407,27 +432,61 @@ Support for 64-bit/16-bit 802.15.4 addressing
 <p class='card-text'>
 <dl>
 <dt>IP-SA – 2 bit</dt>
-<dd>IPv6 source address (bits 0 and 1): - 00: Prefix in-line, Interface identifier - 01: Prefix compressed (link-local prefix assumed). - 10: Interface identifier carried in-line - 11: Interface identifier elided
+<dd>IPv6 source address (bits 0 and 1):
 </dd>
+</dl>
+<ul>
+<li>00: Prefix in-line, Interface identifier</li>
+<li>01: Prefix compressed (link-local prefix assumed).</li>
+<li>10: Interface identifier carried in-line</li>
+<li>11: Interface identifier elided</li>
+</ul>
+<dl>
 <dt>IP-DA – 2 bit</dt>
-<dd>IPv6 destination address (bits 2 and 3): - 00: Prefix carried in-line - 01: Prefix compressed (link-local prefix assumed). - 10: Interface identifier carried in-line - 11: Interface identifier elided
+<dd>IPv6 destination address (bits 2 and 3):
 </dd>
+</dl>
+<ul>
+<li>00: Prefix carried in-line</li>
+<li>01: Prefix compressed (link-local prefix assumed).</li>
+<li>10: Interface identifier carried in-line</li>
+<li>11: Interface identifier elided</li>
+</ul>
+<dl>
 <dt>TF – 1 bit</dt>
-<dd>Traffic Class and Flow Label (bit 4): - 0: not compressed; full 8 bits for TC and 20 bits for FL - 1: Traffic Class and Flow Label are zero
+<dd>Traffic Class and Flow Label (bit 4):
 </dd>
+</dl>
+<ul>
+<li>0: not compressed; full 8 bits for TC and 20 bits for FL</li>
+<li>1: Traffic Class and Flow Label are zero</li>
+</ul>
+<dl>
 <dt>NH – 2 bit</dt>
-<dd>Next Header (bits 5 and 6): - 00: not compressed; full 8 bits are sent - 01: UDP - 10: ICMP - 11: TCP
+<dd>Next Header (bits 5 and 6):
 </dd>
+</dl>
+<ul>
+<li>00: not compressed; full 8 bits are sent</li>
+<li>01: <a href="/udp" >UDP</a></li>
+<li>10: ICMP</li>
+<li>11: <a href="/tcp" >TCP</a></li>
+</ul>
+<dl>
 <dt>HC2 – 1 bit</dt>
-<dd>HC2 encoding(bit 7): - 0: no more header compression bits - 1: HC1 compression byte follows immediately
+<dd>HC2 encoding(bit 7):
+</dd>
+</dl>
+<ul>
+<li>0: no more header compression bits</li>
+<li>1: HC1 compression byte follows immediately
 <p>
 </div>
 </div>
-</div>
-</dd>
-</dl>
+</div></li>
+</ul>
 <h4 id="hc2-compression-byte">HC2 compression byte</h4>
-<p>The HC2 byte is used to compress the UDP header.</p>
+<p>The HC2 byte is used to compress the <a href="/udp" >UDP</a> header.</p>
 <pre><code>  0   1   2   3   4   5   6   7  
 +---+---+---+---+---+---+---+---+
 |SP |DP |LC | - | - | - | - | - |
@@ -441,13 +500,13 @@ Support for 64-bit/16-bit 802.15.4 addressing
 <p class='card-text'>
 <dl>
 <dt>SP – 1 bit</dt>
-<dd>UDP source port (bit 0): - 0: Not compressed, carried “in-line” - 1: Compressed to 4 bits.
+<dd>UDP source port (bit 0): - 0: Not compressed, carried &quot;in-line&quot; - 1: Compressed to 4 bits.
 </dd>
 <dt>DP – 1 bit</dt>
-<dd>UDP destination port (bit 1): - 0: Not compressed, carried “in-line” - 1: Compressed to 4 bits.
+<dd>UDP destination port (bit 1): - 0: Not compressed, carried &quot;in-line&quot; - 1: Compressed to 4 bits.
 </dd>
 <dt>LC – 1 bit</dt>
-<dd>Length (bit 2): - 0: Not compressed, carried “in-line” - 1: length computed from IPv6 header length
+<dd>Length (bit 2): - 0: Not compressed, carried &quot;in-line&quot; - 1: length computed from IPv6 header length
 </dd>
 <dt>Rest – bit 3 to 7</dt>
 <dd>Reserved for future use.
@@ -465,13 +524,13 @@ Support for 64-bit/16-bit 802.15.4 addressing
 <h3 id="routing">Routing</h3>
 <p>6LoWPAN supports two routing methods on different layers.</p>
 <ul>
-<li>Route-over: on layer 3 with IP addresses (RPL protocol)</li>
-<li>Mesh-under: on layer 2 with MAC addresses</li>
+<li>Route-over: on layer 3 with <abbr title="Internet Protocol" >IP</abbr> addresses (<a href="/rpl" >RPL</a> protocol)</li>
+<li>Mesh-under: on layer 2 with <abbr title="Media Access Control" >MAC</abbr> addresses</li>
 </ul>
 <h2 id="references">References</h2>
 <ul>
-<li><p><a href="https://tools.ietf.org/html/rfc4944">IETF RFC 4994: Transmission of IPv6 Packets over IEEE 802.15.4 Networks</a></p></li>
-<li><p><a href="https://tools.ietf.org/html/rfc6282">IETF RFC 6282: Compression Format for IPv6 Datagrams over IEEE 802.15.4-Based Networks</a></p></li>
+<li><a href="https://tools.ietf.org/html/rfc4944">IETF RFC 4994: Transmission of IPv6 Packets over IEEE 802.15.4 Networks</a></li>
+<li><a href="https://tools.ietf.org/html/rfc6282">IETF RFC 6282: Compression Format for IPv6 Datagrams over IEEE 802.15.4-Based Networks</a></li>
 <li><p><a href="https://tools.ietf.org/html/rfc8025">IETF RFC 8025: IPv6 over Low-Power Wireless Personal Area Network (6LoWPAN) Paging Dispatch</a></p></li>
 <li><p><a href="https://www.ietf.org/proceedings/74/slides/6lowpan-2.pdf">IETF Slides</a></p></li>
 </ul>

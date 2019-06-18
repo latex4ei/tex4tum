@@ -10,7 +10,7 @@
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="http://localhost:4000/mqtt">
+    <link rel="canonical" href="/mqtt">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -106,8 +106,7 @@
                     <h6 class="dropdown-header">Display Options</h6>
                     <div class="form-check dropdown-item">
                         <label class="form-check-label">
-                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox"
-                                checked="checked" onchange="Options.changeOption(this)">
+                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox" onchange="Options.changeOption(this)">
                             Definitions
                         </label>
                     </div>
@@ -173,37 +172,13 @@
 
 </p>
 
-
 <!-- Basics -->
-
 <!--    -->
-
-
-
-
-
 <!-- \newcommand{\diff}{\mathop{}\!\mathrm{\vphantom( d}} -->
-
-
-
-
-
 <!-- SI Units -->
 <!--=============================================================== -->
-
-
-
-
-
-
-
-
-
 <!-- KaTeX Tweaks -->
-
-
 <!-- \renewcommand{\boldsymbol}[1]{\mathbf{#1}} -->
-
 <div id="title_def" class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
@@ -211,7 +186,7 @@
 Definition
 </h5>
 <p class="card-text">
-MQTT is a publish-subscribe-based “lightweight” messaging protocol for use on top of the TCP/IP protocol.
+MQTT is a publish-subscribe-based &quot;lightweight&quot; messaging protocol for use on top of the TCP/IP protocol.
 </p>
 </div>
 </div>
@@ -235,7 +210,7 @@ MQTT is a publish-subscribe-based “lightweight” messaging protocol for use o
 <li>Keepalive: if no interaction has happened with the broker for a certain amount of time, the client ”pings” the broker (PINGREQ), which “pings it back” (PINGREP).</li>
 </ul>
 <h2 id="publishsubscribe">Publish/Subscribe</h2>
-<p>Sensor publish to topic e.g. <code>deib/antlab/room5/temperature</code> to MQTT broker.</p>
+<p>Sensor publish to topic e.g. <code>deib/antlab/room5/temperature</code> to MQTT broker.</p>
 <p>Clients subscribe on topic. Wildcards (+) allowed for subscription on single topic level.</p>
 <h2 id="protocol">Protocol</h2>
 <p>CONNECT message fields:</p>
@@ -258,7 +233,7 @@ MQTT is a publish-subscribe-based “lightweight” messaging protocol for use o
 </tr>
 <tr class="even">
 <td>topicName</td>
-<td><code>"matteo/temp"</code></td>
+<td><code>&quot;matteo/temp&quot;</code></td>
 </tr>
 <tr class="odd">
 <td>QoS</td>
@@ -270,7 +245,7 @@ MQTT is a publish-subscribe-based “lightweight” messaging protocol for use o
 </tr>
 <tr class="odd">
 <td>Payload</td>
-<td><code>"temperature:30"</code></td>
+<td><code>&quot;temperature:30&quot;</code></td>
 </tr>
 <tr class="even">
 <td>dupFlag</td>

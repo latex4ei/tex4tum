@@ -10,7 +10,7 @@
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="http://localhost:4000/uri">
+    <link rel="canonical" href="/uri">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -106,8 +106,7 @@
                     <h6 class="dropdown-header">Display Options</h6>
                     <div class="form-check dropdown-item">
                         <label class="form-check-label">
-                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox"
-                                checked="checked" onchange="Options.changeOption(this)">
+                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox" onchange="Options.changeOption(this)">
                             Definitions
                         </label>
                     </div>
@@ -185,37 +184,13 @@
 
 </p>
 
-
 <!-- Basics -->
-
 <!--    -->
-
-
-
-
-
 <!-- \newcommand{\diff}{\mathop{}\!\mathrm{\vphantom( d}} -->
-
-
-
-
-
 <!-- SI Units -->
 <!--=============================================================== -->
-
-
-
-
-
-
-
-
-
 <!-- KaTeX Tweaks -->
-
-
 <!-- \renewcommand{\boldsymbol}[1]{\mathbf{#1}} -->
-
 <div id="title_def" class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
@@ -239,7 +214,7 @@ A Uniform Resource Identifier (URI) is a string of characters used to identify a
 <h2 id="syntax">Syntax</h2>
 <pre><code>scheme:[//[user[:password]@]host[:port]][/path][?query][#fragment]</code></pre>
 <ul>
-<li>scheme: <code>http</code>, <code>ftp</code>, <code>file</code>, <code>coap</code>, etc.</li>
+<li>scheme: <code><a href="/http" >http</a></code>, <code>ftp</code>, <code>file</code>, <code>coap</code>, etc.</li>
 <li>query: a sequence of key-value pairs. E.g. <code>key1=value1&amp;key2=value2</code></li>
 </ul>
 <p><strong>Example</strong></p>
@@ -275,13 +250,13 @@ fragment: <code id="uri-fragment"></code>
 <p><input id="uri-decoded" type="text" oninput="encChar(this)" placeholder="why encode?"></p>
 </div>
 <div class="col-2">
-<span> ⇦ enc/dec ⇨ </span>
+<span> ⇦ enc/dec ⇨</span>
 </div>
 <div class="col-5">
 <p><input id="uri-encoded" type="text" oninput="decChar(this)" placeholder="Why%20encode%3F"></p>
 </div>
 </div>
-<p>The characters allowed in a URI are either <em>reserved</em>, <em>unreserved</em> or <em>percent-encoded</em> (e.g. <code>%3F</code> for a <code>?</code>).</p>
+<p>The characters allowed in a <abbr title="Uniform Resource Identifier" >URI</abbr> are either <em>reserved</em>, <em>unreserved</em> or <em>percent-encoded</em> (e.g. <code>%3F</code> for a <code>?</code>).</p>
 <ul>
 <li>reserved characters: <code>: / ? # [ ] @ !  $  &amp;  '  (  ) *  +  ,  ;  =</code></li>
 <li>unreserved characters: <code>a-z</code>, <code>A-Z</code>, <code>0-9</code>, <code>- _ . ~</code></li>
@@ -316,7 +291,7 @@ fragment: <code id="uri-fragment"></code>
 <td style="text-align: left;"><code>%5F</code></td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;"><code>"</code></td>
+<td style="text-align: right;"><code>&quot;</code></td>
 <td style="text-align: left;"><code>%22</code></td>
 <td style="text-align: right;"><code>:</code></td>
 <td style="text-align: left;"><code>%3A</code></td>
@@ -398,7 +373,7 @@ fragment: <code id="uri-fragment"></code>
 </tbody>
 </table>
 <h2 id="relationship-to-urn-and-url">Relationship to URN and URL</h2>
-<p>URN and URL are types of URIs. A Uniform Resource Name (URN) can be compared to a person’s name, while a Uniform Resource Locator (URL) can be compared to their street address. In other words, a URN identifies an item and a URL provides a method for finding it.</p>
+<p>URN and <abbr title="Uniform Resource Locator" >URL</abbr> are types of URIs. A Uniform Resource Name (URN) can be compared to a person's name, while a Uniform Resource Locator (URL) can be compared to their street address. In other words, a URN identifies an item and a <abbr title="Uniform Resource Locator" >URL</abbr> provides a method for finding it.</p>
 <p>Example URNs:</p>
 <ul>
 <li><code>urn:uuid:6e8bc430-9c3a-11d9-9669-0800200c9a66</code></li>

@@ -10,7 +10,7 @@
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="http://localhost:4000/cryptography">
+    <link rel="canonical" href="/cryptography">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -106,8 +106,7 @@
                     <h6 class="dropdown-header">Display Options</h6>
                     <div class="form-check dropdown-item">
                         <label class="form-check-label">
-                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox"
-                                checked="checked" onchange="Options.changeOption(this)">
+                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox" onchange="Options.changeOption(this)">
                             Definitions
                         </label>
                     </div>
@@ -173,37 +172,13 @@
 
 </p>
 
-
 <!-- Basics -->
-
 <!--    -->
-
-
-
-
-
 <!-- \newcommand{\diff}{\mathop{}\!\mathrm{\vphantom( d}} -->
-
-
-
-
-
 <!-- SI Units -->
 <!--=============================================================== -->
-
-
-
-
-
-
-
-
-
 <!-- KaTeX Tweaks -->
-
-
 <!-- \renewcommand{\boldsymbol}[1]{\mathbf{#1}} -->
-
 <div id="title_def" class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
@@ -217,26 +192,26 @@ Cryptography is a technique for secure communication in the presence of third pa
 </div>
 </div>
 <h2 id="encryption">Encryption</h2>
-<p>Encryption converts a plaintext <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>m</mi><annotation encoding="application/x-tex">m</annotation></semantics></math> (input) to a ciphertext <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>c</mi><annotation encoding="application/x-tex">c</annotation></semantics></math> (output)</p>
+<p>Encryption converts a plaintext <span class="LaTeX">$m$</span> (input) to a ciphertext <span class="LaTeX">$c$</span> (output)</p>
 <h2 id="cryptanalysis">Cryptanalysis</h2>
 <p>Cryptanalysis is the study of methods for obtaining the meaning of encrypted information.</p>
 <h2 id="cryptographic-primitives">Cryptographic primitives</h2>
-<p>Cryptographic primitives provide fundamental cryptographic properties, which are used to develop more complex tools called cryptosystems.</p>
+<p>Cryptographic primitives provide fundamental cryptographic properties, which are used to develop more complex <a href="/tools" >tools</a> called cryptosystems.</p>
 <ul>
 <li>hash: confirm the integrity of data</li>
 <li>signatures: confirm the author of a message</li>
 <li>symmetric encryption: encryption and decryption of data with the same key</li>
 <li>asymmetric encryption: en/decryption with private key, de/encryption with public key</li>
 <li>commitment scheme: commit to a chosen value while keeping it hidden to others</li>
-<li>Oblivious transfer: e.g. authenticated dictionary</li>
+<li>Oblivious transfer: e.g. authenticated dictionary</li>
 <li>pseudo-random generator: generate non-predictable random numbers</li>
 </ul>
 <h2 id="cryptographic-properties">Cryptographic properties</h2>
 <p>Confusion: each bit of the ciphertext should depend on several parts of the key to make the relationship between the ciphertext and the key as complex as possible. Confusion look-up tables are very non-linear and good at destroying patterns.</p>
 <p>Diffusion: spreads every part of the input to every part of the output. A change of a single bit of the plaintext should statistically change half of the bits in the ciphertext.</p>
-<p>Confusion and Diffusion are often achieved by series of substitutions (S-Box) and permutations (P-Box).</p>
+<p>Confusion and Diffusion are often achieved by <a href="/series" >series</a> of substitutions (S-Box) and permutations (P-Box).</p>
 <h1 id="cryptographic-problems">Cryptographic Problems</h1>
-<p>Cryptographic primitives are based on mathematical problems where most of the instances must be hard to solve and are easy to solve if some additional information (e.g. the key) is known.</p>
+<p>Cryptographic primitives are based on mathematical problems where most of the instances must be hard to solve and are easy to solve if some additional information (e.g. the key) is known.</p>
 <ul>
 <li>Factorization</li>
 <li>Discrete Logarithm</li>

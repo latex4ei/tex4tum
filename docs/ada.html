@@ -10,7 +10,7 @@
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="http://localhost:4000/ada">
+    <link rel="canonical" href="/ada">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -106,8 +106,7 @@
                     <h6 class="dropdown-header">Display Options</h6>
                     <div class="form-check dropdown-item">
                         <label class="form-check-label">
-                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox"
-                                checked="checked" onchange="Options.changeOption(this)">
+                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox" onchange="Options.changeOption(this)">
                             Definitions
                         </label>
                     </div>
@@ -173,37 +172,13 @@
 
 </p>
 
-
 <!-- Basics -->
-
 <!--    -->
-
-
-
-
-
 <!-- \newcommand{\diff}{\mathop{}\!\mathrm{\vphantom( d}} -->
-
-
-
-
-
 <!-- SI Units -->
 <!--=============================================================== -->
-
-
-
-
-
-
-
-
-
 <!-- KaTeX Tweaks -->
-
-
 <!-- \renewcommand{\boldsymbol}[1]{\mathbf{#1}} -->
-
 <div id="title_def" class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
@@ -211,7 +186,7 @@
 Definition
 </h5>
 <p class="card-text">
-Ada is a programming language intended for real-time safety-critical systems.
+Ada is a programming <a href="/language" >language</a> intended for real-time safety-critical systems.
 </p>
 </div>
 </div>
@@ -243,15 +218,15 @@ Ada is a programming language intended for real-time safety-critical systems.
 <li>Pointer: <code>Access</code></li>
 <li>Composite: <code>Array</code>, <code>Record</code>, <code>Task</code></li>
 </ul>
-<div class="sourceCode" id="cb1"><pre class="sourceCode ada"><code class="sourceCode ada"><a class="sourceLine" id="cb1-1" title="1"><span class="kw">type</span> Day_type   <span class="kw">is</span> <span class="kw">range</span>    <span class="dv">1</span> ..   <span class="dv">31</span>;</a>
-<a class="sourceLine" id="cb1-2" title="2"><span class="kw">type</span> Month_type <span class="kw">is</span> <span class="kw">range</span>    <span class="dv">1</span> ..   <span class="dv">12</span>;</a>
-<a class="sourceLine" id="cb1-3" title="3"><span class="kw">type</span> Year_type  <span class="kw">is</span> <span class="kw">range</span> <span class="dv">1800</span> .. <span class="dv">2100</span>;</a>
-<a class="sourceLine" id="cb1-4" title="4"></a>
-<a class="sourceLine" id="cb1-5" title="5"><span class="kw">type</span> Date <span class="kw">is</span> <span class="kw">record</span></a>
-<a class="sourceLine" id="cb1-6" title="6">   Day   : Day_type;</a>
-<a class="sourceLine" id="cb1-7" title="7">   Month : Month_type;</a>
-<a class="sourceLine" id="cb1-8" title="8">   Year  : Year_type;</a>
-<a class="sourceLine" id="cb1-9" title="9"><span class="kw">end record</span>;</a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode ada"><code class="sourceCode ada"><span class="kw">type</span> Day_type   <span class="kw">is</span> <span class="kw">range</span>    <span class="dv">1</span> ..   <span class="dv">31</span>;
+<span class="kw">type</span> Month_type <span class="kw">is</span> <span class="kw">range</span>    <span class="dv">1</span> ..   <span class="dv">12</span>;
+<span class="kw">type</span> Year_type  <span class="kw">is</span> <span class="kw">range</span> <span class="dv">1800</span> .. <span class="dv">2100</span>;
+
+<span class="kw">type</span> Date <span class="kw">is</span> <span class="kw">record</span>
+   Day   : Day_type;
+   Month : Month_type;
+   Year  : Year_type;
+<span class="kw">end record</span>;</code></pre></div>
 <h2 id="references">References</h2>
 <ul>
 <li><p>ISO/IEC 8652: Information technology—Programming languages—Ada</p></li>

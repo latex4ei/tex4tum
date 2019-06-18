@@ -10,7 +10,7 @@
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="http://localhost:4000/rpl">
+    <link rel="canonical" href="/rpl">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -106,8 +106,7 @@
                     <h6 class="dropdown-header">Display Options</h6>
                     <div class="form-check dropdown-item">
                         <label class="form-check-label">
-                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox"
-                                checked="checked" onchange="Options.changeOption(this)">
+                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox" onchange="Options.changeOption(this)">
                             Definitions
                         </label>
                     </div>
@@ -173,37 +172,13 @@
 
 </p>
 
-
 <!-- Basics -->
-
 <!--    -->
-
-
-
-
-
 <!-- \newcommand{\diff}{\mathop{}\!\mathrm{\vphantom( d}} -->
-
-
-
-
-
 <!-- SI Units -->
 <!--=============================================================== -->
-
-
-
-
-
-
-
-
-
 <!-- KaTeX Tweaks -->
-
-
 <!-- \renewcommand{\boldsymbol}[1]{\mathbf{#1}} -->
-
 <div id="title_def" class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
@@ -211,15 +186,21 @@
 Definition
 </h5>
 <p class="card-text">
-The Routing Protocol for Low-Power and Lossy Networks (RPL, pronounced “ripple”), is an IPv6 Routing Protocol that provides point-to-point, multipoint-to-point and point-to-multipoint traffic.
+The Routing Protocol for Low-Power and Lossy Networks (RPL, pronounced “ripple”), is an <abbr title="Internet Protocol version 6" >IPv6</abbr> Routing Protocol that provides point-to-point, multipoint-to-point and point-to-multipoint traffic.
 </p>
 </div>
 </div>
 </div>
 <h2 id="dodag">DODAG</h2>
-<p>RPL organizes the network topology as a Destination Oriented Directed Acyclic Graph (DODAG)<sup>[1]</sup>. The DODAG is a hierarchical structure based on the ranks of each node. The rank is a measure for a certain routing metric (e.g. link quality) to a selected root node.</p>
+<p>RPL organizes the <a href="/network" >network</a> topology as a Destination Oriented Directed Acyclic Graph (DODAG)<sup>[1]</sup>. The DODAG is a hierarchical structure based on the ranks of each node. The rank is a measure for a certain routing metric (e.g. link quality) to a selected root node.</p>
 <h3 id="control-messages">Control Messages</h3>
-<p>There are four types of control messages in RPL: * DODAG Information Solicitation (DIS) * DODAG Information Object (DIO) * Destination Advertisement Object (DAO) * Destination Advertisement Object Acknowledgement (DAO-ACK)</p>
+<p>There are four types of control messages in RPL:</p>
+<ul>
+<li>DODAG Information Solicitation (DIS)</li>
+<li>DODAG Information Object (DIO)</li>
+<li>Destination Advertisement Object (DAO)</li>
+<li>Destination Advertisement Object Acknowledgement (DAO-ACK)</li>
+</ul>
 <h2 id="mechanisms">Mechanisms</h2>
 <h3 id="dodag-formation">DODAG Formation</h3>
 <p>The root node periodically broadcasts DIO messages. All receiving nodes calculate their rank based on the received DIO messages. When the rank is known, a node sends a DAO message to its determined parent. A node that has selected a parant will also broadcast DIO messages including its own rank.</p>
@@ -233,12 +214,12 @@ The Routing Protocol for Low-Power and Lossy Networks (RPL, pronounced “ripple
 <p>An isolated node that wants to join an existing DODAG broadcasts DIS messages. When a DODAG node receives a DIS message it will reply with a unicast DIO message.</p>
 <h3 id="dodag-repair">DODAG Repair</h3>
 <p>There are two types of repair procedures in case a link or node fails.</p>
-<h3 id="local-repair">Local repair</h3>
-<p>When a link or neighboring node failure is detected and the node has no other router in the ‘up’ direction,</p>
-<h3 id="global-repair">Global repair</h3>
-<p>Can be triggered only from the root and has a cost of additional control traffic in the network.</p>
+<ul>
+<li><strong>Local repair</strong> When a link or neighboring node failure is detected and the node has no other router in the ‘up’ direction,</li>
+<li><strong>Global repair</strong> Can be triggered only from the root node and has a cost of additional control traffic in the <a href="/network" >network</a>.</li>
+</ul>
 <h2 id="references">References</h2>
-<p>[1]: <a href="https://tools.ietf.org/html/rfc6550">RFC 6550: RPL</a></p>
+<p>[1]: <a href="https://tools.ietf.org/html/rfc6550">RFC 6550: RPL</a> [2]: <a href="https://www.net.in.tum.de/fileadmin/TUM/NET/NET-2011-07-1/NET-2011-07-1_09.pdf">Tsvetko Tsvetkov: “RPL: IPv6 Routing Protocol for Low Power and Lossy Networks”, TUM-IN-NET, 2011</a></p>
 
 
     </main>

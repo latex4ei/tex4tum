@@ -10,7 +10,7 @@
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="http://localhost:4000/bool">
+    <link rel="canonical" href="/bool">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -106,8 +106,7 @@
                     <h6 class="dropdown-header">Display Options</h6>
                     <div class="form-check dropdown-item">
                         <label class="form-check-label">
-                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox"
-                                checked="checked" onchange="Options.changeOption(this)">
+                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox" onchange="Options.changeOption(this)">
                             Definitions
                         </label>
                     </div>
@@ -173,37 +172,13 @@
 
 </p>
 
-
 <!-- Basics -->
-
 <!--    -->
-
-
-
-
-
 <!-- \newcommand{\diff}{\mathop{}\!\mathrm{\vphantom( d}} -->
-
-
-
-
-
 <!-- SI Units -->
 <!--=============================================================== -->
-
-
-
-
-
-
-
-
-
 <!-- KaTeX Tweaks -->
-
-
 <!-- \renewcommand{\boldsymbol}[1]{\mathbf{#1}} -->
-
 <div id="title_def" class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
@@ -211,7 +186,7 @@
 Definition
 </h5>
 <p class="card-text">
-The boolean algebra <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mrow><mn>0</mn><mo>,</mo><mn>1</mn></mrow><mo>;</mo><mo>⋅</mo><mo>,</mo><mo>+</mo><mo>,</mo><mover><mi>x</mi><mo accent="true">¯</mo></mover><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">({0,1};\cdot , +, \overline{x})</annotation></semantics></math>
+The boolean algebra <span class="LaTeX">$({0,1};\cdot , +, \overline{x})$</span>
 </p>
 </div>
 </div>
@@ -226,79 +201,79 @@ The boolean algebra <math display="inline" xmlns="http://www.w3.org/1998/Math/Ma
 <tbody>
 <tr class="odd">
 <td>Kommutativ</td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>⋅</mo><mi>y</mi><mo>=</mo><mi>y</mi><mo>⋅</mo><mi>x</mi></mrow><annotation encoding="application/x-tex">x \cdot y = y \cdot x</annotation></semantics></math></td>
+<td><span class="LaTeX">$x \cdot y = y \cdot x$</span></td>
 </tr>
 <tr class="even">
 <td></td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>+</mo><mi>y</mi><mo>=</mo><mi>y</mi><mo>+</mo><mi>x</mi></mrow><annotation encoding="application/x-tex">x + y = y + x</annotation></semantics></math></td>
+<td><span class="LaTeX">$x + y = y + x$</span></td>
 </tr>
 <tr class="odd">
 <td>Assoziativ</td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>⋅</mo><mo stretchy="false" form="prefix">(</mo><mi>y</mi><mo>⋅</mo><mi>z</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>⋅</mo><mi>y</mi><mo stretchy="false" form="postfix">)</mo><mo>⋅</mo><mi>z</mi></mrow><annotation encoding="application/x-tex">x \cdot (y \cdot z) = (x \cdot y) \cdot z</annotation></semantics></math></td>
+<td><span class="LaTeX">$x \cdot (y \cdot z) = (x \cdot y) \cdot z$</span></td>
 </tr>
 <tr class="even">
 <td></td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mi>y</mi><mo>+</mo><mi>z</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>+</mo><mi>y</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mi>z</mi></mrow><annotation encoding="application/x-tex">x + (y + z) = (x + y) + z</annotation></semantics></math></td>
+<td><span class="LaTeX">$x + (y + z) = (x + y) + z$</span></td>
 </tr>
 <tr class="odd">
 <td>Distributiv</td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>⋅</mo><mo stretchy="false" form="prefix">(</mo><mi>y</mi><mo>+</mo><mi>z</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>x</mi><mo>⋅</mo><mi>y</mi><mo>+</mo><mi>x</mi><mo>⋅</mo><mi>z</mi></mrow><annotation encoding="application/x-tex">x \cdot (y + z) = x \cdot y + x \cdot z</annotation></semantics></math></td>
+<td><span class="LaTeX">$x \cdot (y + z) = x \cdot y + x \cdot z$</span></td>
 </tr>
 <tr class="even">
 <td></td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mi>y</mi><mo>⋅</mo><mi>z</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>+</mo><mi>y</mi><mo stretchy="false" form="postfix">)</mo><mo>⋅</mo><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>+</mo><mi>z</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">x + (y \cdot z) = (x + y) \cdot (x + z)</annotation></semantics></math></td>
+<td><span class="LaTeX">$x + (y \cdot z) = (x + y) \cdot (x + z)$</span></td>
 </tr>
 <tr class="odd">
 <td>Indempotenz</td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>⋅</mo><mi>x</mi><mo>=</mo><mi>x</mi></mrow><annotation encoding="application/x-tex">x \cdot x = x</annotation></semantics></math></td>
+<td><span class="LaTeX">$x \cdot x = x$</span></td>
 </tr>
 <tr class="even">
 <td></td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>+</mo><mi>x</mi><mo>=</mo><mi>x</mi></mrow><annotation encoding="application/x-tex">x + x = x</annotation></semantics></math></td>
+<td><span class="LaTeX">$x + x = x$</span></td>
 </tr>
 <tr class="odd">
 <td>Absorbtion</td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>⋅</mo><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>+</mo><mi>y</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>x</mi></mrow><annotation encoding="application/x-tex">x \cdot (x+y) = x</annotation></semantics></math></td>
+<td><span class="LaTeX">$x \cdot (x+y) = x$</span></td>
 </tr>
 <tr class="even">
 <td></td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>⋅</mo><mi>y</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>x</mi></mrow><annotation encoding="application/x-tex">x + (x \cdot y) = x</annotation></semantics></math></td>
+<td><span class="LaTeX">$x + (x \cdot y) = x$</span></td>
 </tr>
 <tr class="odd">
 <td>Neutral</td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>⋅</mo><mn>1</mn><mo>=</mo><mi>x</mi></mrow><annotation encoding="application/x-tex">x \cdot 1 = x</annotation></semantics></math></td>
+<td><span class="LaTeX">$x \cdot 1 = x$</span></td>
 </tr>
 <tr class="even">
 <td></td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>+</mo><mn>0</mn><mo>=</mo><mi>x</mi></mrow><annotation encoding="application/x-tex">x + 0 = x</annotation></semantics></math></td>
+<td><span class="LaTeX">$x + 0 = x$</span></td>
 </tr>
 <tr class="odd">
 <td>Dominant</td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>⋅</mo><mn>0</mn><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">x \cdot 0 = 0</annotation></semantics></math></td>
+<td><span class="LaTeX">$x \cdot 0 = 0$</span></td>
 </tr>
 <tr class="even">
 <td></td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>+</mo><mn>1</mn><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">x + 1 = 1</annotation></semantics></math></td>
+<td><span class="LaTeX">$x + 1 = 1$</span></td>
 </tr>
 <tr class="odd">
 <td>Komplement</td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>⋅</mo><mover><mi>x</mi><mo accent="true">¯</mo></mover><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">x \cdot \overline{x} = 0</annotation></semantics></math></td>
+<td><span class="LaTeX">$x \cdot \overline{x} = 0$</span></td>
 </tr>
 <tr class="even">
 <td></td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>+</mo><mover><mi>x</mi><mo accent="true">¯</mo></mover><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">x + \overline{x} = 1</annotation></semantics></math></td>
+<td><span class="LaTeX">$x + \overline{x} = 1$</span></td>
 </tr>
 <tr class="odd">
 <td></td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mover><mi>x</mi><mo accent="true">¯</mo></mover><mo accent="true">¯</mo></mover><mo>=</mo><mi>x</mi></mrow><annotation encoding="application/x-tex">\overline{\overline{x}} = x</annotation></semantics></math></td>
+<td><span class="LaTeX">$\overline{\overline{x}} = x$</span></td>
 </tr>
 <tr class="even">
 <td>De Morgan</td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mrow><mi>x</mi><mo>⋅</mo><mi>y</mi></mrow><mo accent="true">¯</mo></mover><mo>=</mo><mover><mi>x</mi><mo accent="true">¯</mo></mover><mo>+</mo><mover><mi>y</mi><mo accent="true">¯</mo></mover></mrow><annotation encoding="application/x-tex">\overline{x \cdot y} = \overline{x} + \overline{y}</annotation></semantics></math></td>
+<td><span class="LaTeX">$\overline{x \cdot y} = \overline{x} + \overline{y}$</span></td>
 </tr>
 <tr class="odd">
 <td></td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo accent="true">¯</mo></mover><mo>=</mo><mover><mi>x</mi><mo accent="true">¯</mo></mover><mo>⋅</mo><mover><mi>y</mi><mo accent="true">¯</mo></mover></mrow><annotation encoding="application/x-tex">\overline{x + y} = \overline{x} \cdot \overline{y}</annotation></semantics></math></td>
+<td><span class="LaTeX">$\overline{x + y} = \overline{x} \cdot \overline{y}$</span></td>
 </tr>
 </tbody>
 </table>

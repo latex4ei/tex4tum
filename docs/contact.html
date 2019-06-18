@@ -10,7 +10,7 @@
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="http://localhost:4000/contact">
+    <link rel="canonical" href="/contact">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -106,8 +106,7 @@
                     <h6 class="dropdown-header">Display Options</h6>
                     <div class="form-check dropdown-item">
                         <label class="form-check-label">
-                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox"
-                                checked="checked" onchange="Options.changeOption(this)">
+                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox" onchange="Options.changeOption(this)">
                             Definitions
                         </label>
                     </div>
@@ -157,50 +156,26 @@
 
 </p>
 
-
 <!-- Basics -->
-
 <!--    -->
-
-
-
-
-
 <!-- \newcommand{\diff}{\mathop{}\!\mathrm{\vphantom( d}} -->
-
-
-
-
-
 <!-- SI Units -->
 <!--=============================================================== -->
-
-
-
-
-
-
-
-
-
 <!-- KaTeX Tweaks -->
-
-
 <!-- \renewcommand{\boldsymbol}[1]{\mathbf{#1}} -->
-
 <h1 id="contact-form">Contact Form</h1>
 <form class="py-3">
 <div class="form-group">
 <p><label for="inputMail">Email address</label> <input v-model="email" type="email" class="form-control" id="inputMail" aria-describedby="emailHelp"
-placeholder="Enter your email"> <small id="emailHelp" class="form-text text-muted"> We’ll never share your email with anyone else.</small></p>
+placeholder="Enter your email"> <small id="emailHelp" class="form-text text-muted"> We'll never share your email with anyone else.</small></p>
 </div>
 <div class="form-group">
 <p><label for="inputText">Subject</label> <input v-model="subject" type="text" class="form-control" id="inputText" placeholder="Enter Subject"></p>
 </div>
 <div class="form-group">
 <label for="inputMailText">Message</label>
-<textarea v-model="message" class="form-control" id="inputMailText" rows="5"
-placeholder="Enter your message"></textarea>
+<textarea v-model="message" class="form-control" id="inputMailText" rows="5" placeholder="Enter your message">
+</textarea>
 </div>
 <button type="submit" class="btn btn-primary">
 Submit

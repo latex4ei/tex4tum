@@ -10,7 +10,7 @@
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="http://localhost:4000/vcf">
+    <link rel="canonical" href="/vcf">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -106,8 +106,7 @@
                     <h6 class="dropdown-header">Display Options</h6>
                     <div class="form-check dropdown-item">
                         <label class="form-check-label">
-                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox"
-                                checked="checked" onchange="Options.changeOption(this)">
+                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox" onchange="Options.changeOption(this)">
                             Definitions
                         </label>
                     </div>
@@ -177,37 +176,13 @@
 
 </p>
 
-
 <!-- Basics -->
-
 <!--    -->
-
-
-
-
-
 <!-- \newcommand{\diff}{\mathop{}\!\mathrm{\vphantom( d}} -->
-
-
-
-
-
 <!-- SI Units -->
 <!--=============================================================== -->
-
-
-
-
-
-
-
-
-
 <!-- KaTeX Tweaks -->
-
-
 <!-- \renewcommand{\boldsymbol}[1]{\mathbf{#1}} -->
-
 <div id="title_def" class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
@@ -227,11 +202,11 @@ A vCard is a file format standard for electronic business cards.
 </ul>
 <h3 id="format">Format</h3>
 <p>The format in general is <code>&lt;PROPERTY&gt;:&lt;VALUE&gt;\n</code></p>
-<p>Required properties: * BEGIN:VCARD * VERSION:3.0 * N:Doe;John;;Dr; * FN:Dr. John Doe * END:VCARD</p>
-<h5 class="clp_title text-success" data-toggle="collapse" href="#example8">
+<p>Required properties: * BEGIN:VCARD * VERSION:3.0 * N:Doe;John;;Dr; * FN:Dr. John Doe * END:VCARD</p>
+<h5 class="clp_title text-success" data-toggle="collapse" href="#example9">
 <i class='fa fa-chart-bar'></i> Example
 </h5>
-<div id='example8' class='example collapse'>
+<div id='example9' class='example collapse'>
 <div class='card border-success mb-1'>
 <div class='card-body'>
 <p class='card-text'>
@@ -241,7 +216,7 @@ N:Gump;Forrest;;Mr.;
 FN:Forrest Gump
 ORG:Bubba Gump Shrimp Co.
 TITLE:Shrimp Man
-PHOTO;VALUE=URI;TYPE=GIF:http://www.example.com/dir_photos/my_photo.gif
+PHOTO;VALUE=<a href="uri" title="Uniform Resource Identifier ">URI</a>;TYPE=GIF:http://www.example.com/dir_photos/my_photo.gif
 TEL;TYPE=WORK,VOICE:(111) 555-1212
 TEL;TYPE=HOME,VOICE:(404) 555-1212
 ADR;TYPE=WORK,PREF:;;100 Waters Edge;Baytown;LA;30314;United States of Amer

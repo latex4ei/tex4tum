@@ -10,7 +10,7 @@
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="http://localhost:4000/probability">
+    <link rel="canonical" href="/probability">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -106,8 +106,7 @@
                     <h6 class="dropdown-header">Display Options</h6>
                     <div class="form-check dropdown-item">
                         <label class="form-check-label">
-                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox"
-                                checked="checked" onchange="Options.changeOption(this)">
+                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox" onchange="Options.changeOption(this)">
                             Definitions
                         </label>
                     </div>
@@ -173,37 +172,13 @@
 
 </p>
 
-
 <!-- Basics -->
-
 <!--    -->
-
-
-
-
-
 <!-- \newcommand{\diff}{\mathop{}\!\mathrm{\vphantom( d}} -->
-
-
-
-
-
 <!-- SI Units -->
 <!--=============================================================== -->
-
-
-
-
-
-
-
-
-
 <!-- KaTeX Tweaks -->
-
-
 <!-- \renewcommand{\boldsymbol}[1]{\mathbf{#1}} -->
-
 <div id="title_def" class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
@@ -226,58 +201,58 @@ Probabilities denote the chance that an event occurs, it is not any kind of guar
 </thead>
 <tbody>
 <tr class="odd">
-<td>Sample Space <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>Ω</mi><annotation encoding="application/x-tex">\Omega</annotation></semantics></math></td>
+<td>Sample Space <span class="LaTeX">$\Omega$</span></td>
 <td>nonempty set of outputs of experiment</td>
 </tr>
 <tr class="even">
-<td>Sigma Algebra <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathvariant="double-struck"><mi>𝔽</mi></mstyle><mo>⊆</mo><msup><mn>2</mn><mi>Ω</mi></msup></mrow><annotation encoding="application/x-tex">\mathbb F \subseteq 2^\Omega</annotation></semantics></math></td>
+<td>Sigma <a href="/algebra" >Algebra</a> <span class="LaTeX">$\mathbb F \subseteq 2^\Omega$</span></td>
 <td>set of subsets of outputs (events)</td>
 </tr>
 <tr class="odd">
-<td>Probability <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathvariant="normal"><mi>P</mi></mstyle><mo>:</mo><mstyle mathvariant="double-struck"><mi>𝔽</mi></mstyle><mo>↦</mo><mo stretchy="false" form="prefix">[</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">\mathrm{P}: \mathbb F \mapsto [0,1]</annotation></semantics></math></td>
+<td>Probability <span class="LaTeX">${\mathrm{P}}: \mathbb F \mapsto [0,1]$</span></td>
 <td></td>
 </tr>
 <tr class="even">
-<td>Random Variable <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="italic">𝑋</mtext><mo>:</mo><mi>Ω</mi><mo>↦</mo><mstyle mathvariant="double-struck"><mi>𝕏</mi></mstyle></mrow><annotation encoding="application/x-tex">\textit{X}: \Omega \mapsto \mathbb X</annotation></semantics></math></td>
-<td>mapped subsets of <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>Ω</mi><annotation encoding="application/x-tex">\Omega</annotation></semantics></math></td>
+<td>Random Variable <span class="LaTeX">${\textit{X}}: \Omega \mapsto \mathbb X$</span></td>
+<td>mapped subsets of <span class="LaTeX">$\Omega$</span></td>
 </tr>
 <tr class="odd">
-<td>Observations: <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><mi>…</mi><mo>,</mo><msub><mi>x</mi><mi>N</mi></msub></mrow><annotation encoding="application/x-tex">x_1, \ldots, x_N</annotation></semantics></math></td>
-<td>single values of <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtext mathvariant="italic">𝑋</mtext><annotation encoding="application/x-tex">\textit{X}</annotation></semantics></math></td>
+<td>Observations: <span class="LaTeX">$x_1, \ldots, x_N$</span></td>
+<td>single values of <span class="LaTeX">${\textit{X}}$</span></td>
 </tr>
 <tr class="even">
-<td>Observation Space <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="double-struck"><mi>𝕏</mi></mstyle><annotation encoding="application/x-tex">\mathbb X</annotation></semantics></math></td>
-<td>possible observations of <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtext mathvariant="italic">𝑋</mtext><annotation encoding="application/x-tex">\textit{X}</annotation></semantics></math></td>
+<td>Observation Space <span class="LaTeX">$\mathbb X$</span></td>
+<td>possible observations of <span class="LaTeX">${\textit{X}}$</span></td>
 </tr>
 <tr class="odd">
-<td>Unknown parameter <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>θ</mi><mo>∈</mo><mi>Θ</mi></mrow><annotation encoding="application/x-tex">\theta \in \Theta</annotation></semantics></math></td>
+<td>Unknown parameter <span class="LaTeX">$\theta \in \Theta$</span></td>
 <td>parameter of propability function</td>
 </tr>
 <tr class="even">
-<td>Estimator <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="italic">𝑇</mtext><mo>:</mo><mstyle mathvariant="double-struck"><mi>𝕏</mi></mstyle><mo>↦</mo><mi>Θ</mi></mrow><annotation encoding="application/x-tex">\textit{T}: \mathbb X \mapsto \Theta</annotation></semantics></math></td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="italic">𝑇</mtext><mo stretchy="false" form="prefix">(</mo><mtext mathvariant="italic">𝑋</mtext><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mover><mi>θ</mi><mo accent="true">̂</mo></mover></mrow><annotation encoding="application/x-tex">\textit{T}(\textit{X}) = \hat{\theta}</annotation></semantics></math>, finds <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>θ</mi><mo accent="true">̂</mo></mover><annotation encoding="application/x-tex">\hat{\theta}</annotation></semantics></math> from <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtext mathvariant="italic">𝑋</mtext><annotation encoding="application/x-tex">\textit{X}</annotation></semantics></math></td>
+<td>Estimator <span class="LaTeX">${\textit{T}}: \mathbb X \mapsto \Theta$</span></td>
+<td><span class="LaTeX">${\textit{T}}({\textit{X}}) = \hat{\theta}$</span>, finds <span class="LaTeX">$\hat{\theta}$</span> from <span class="LaTeX">${\textit{X}}$</span></td>
 </tr>
 </tbody>
 </table>
 <h2 id="conditional-probabilty">Conditional Probabilty</h2>
-The probability for an event <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> given that the event <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math> already occured is
+The probability for an event <span class="LaTeX">$A$</span> given that the event <span class="LaTeX">$B$</span> already occured is
 <div data-toggle="collapse" href="#eq_0">
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mstyle mathvariant="normal"><mi>P</mi></mstyle><mi>B</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mstyle mathvariant="normal"><mi>P</mi></mstyle><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mo stretchy="false" form="prefix">|</mo><mi>B</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mfrac><mrow><mstyle mathvariant="normal"><mi>P</mi></mstyle><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mo>∩</mo><mi>B</mi><mo stretchy="false" form="postfix">)</mo></mrow><mrow><mstyle mathvariant="normal"><mi>P</mi></mstyle><mo stretchy="false" form="prefix">(</mo><mi>B</mi><mo stretchy="false" form="postfix">)</mo></mrow></mfrac></mrow><annotation encoding="application/x-tex">\mathrm{P}_B(A) = \mathrm{P}(A|B) = \frac{\mathrm{P}(A \cap B)}{\mathrm{P}(B)}</annotation></semantics></math></p>
+<p><span class="LaTeX">$${\mathrm{P}}_B(A) = {\mathrm{P}}(A|B) = \frac{{\mathrm{P}}(A \cap B)}{{\mathrm{P}}(B)}$$</span></p>
 </div>
 <div id="eq_0" class="legend collapse">
 <div class="card border-info w-75 mx-auto">
 <div class="p-1 small">
-<p>with events <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>,</mo><mi>B</mi></mrow><annotation encoding="application/x-tex">A,B</annotation></semantics></math>.</p>
+<p>with events <span class="LaTeX">$A,B$</span>.</p>
 </div>
 </div>
 </div>
-<p>Multiplication: <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathvariant="normal"><mi>P</mi></mstyle><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mo>∩</mo><mi>B</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mstyle mathvariant="normal"><mi>P</mi></mstyle><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mo stretchy="false" form="prefix">|</mo><mi>B</mi><mo stretchy="false" form="postfix">)</mo><mstyle mathvariant="normal"><mi>P</mi></mstyle><mo stretchy="false" form="prefix">(</mo><mi>B</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mstyle mathvariant="normal"><mi>P</mi></mstyle><mo stretchy="false" form="prefix">(</mo><mi>B</mi><mo stretchy="false" form="prefix">|</mo><mi>A</mi><mo stretchy="false" form="postfix">)</mo><mstyle mathvariant="normal"><mi>P</mi></mstyle><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\mathrm{P}(A \cap B) = \mathrm{P}(A|B)\mathrm{P}(B) = \mathrm{P}(B|A)\mathrm{P}(A)</annotation></semantics></math></p>
-<p>Bayes’ law: <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathvariant="normal"><mi>P</mi></mstyle><mo stretchy="false" form="prefix">(</mo><msub><mi>B</mi><mi>k</mi></msub><mo stretchy="false" form="prefix">|</mo><mi>A</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mfrac><mrow><mstyle mathvariant="normal"><mi>P</mi></mstyle><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mo stretchy="false" form="prefix">|</mo><msub><mi>B</mi><mi>k</mi></msub><mo stretchy="false" form="postfix">)</mo><mstyle mathvariant="normal"><mi>P</mi></mstyle><mo stretchy="false" form="prefix">(</mo><msub><mi>B</mi><mi>k</mi></msub><mo stretchy="false" form="postfix">)</mo></mrow><mrow><munder><mo>∑</mo><mrow><mi>i</mi><mo>∈</mo><mi>I</mi></mrow></munder><mstyle mathvariant="normal"><mi>P</mi></mstyle><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mo stretchy="false" form="prefix">|</mo><msub><mi>B</mi><mi>i</mi></msub><mo stretchy="false" form="postfix">)</mo><mstyle mathvariant="normal"><mi>P</mi></mstyle><mo stretchy="false" form="prefix">(</mo><msub><mi>B</mi><mi>i</mi></msub><mo stretchy="false" form="postfix">)</mo></mrow></mfrac></mrow><annotation encoding="application/x-tex">\mathrm{P}(B_k | A) = \frac{\mathrm{P}(A | B_k)\mathrm{P}(B_k)}{\sum\limits_{i \in I} \mathrm{P}(A|B_i) \mathrm{P}(B_i)}</annotation></semantics></math></p>
-<p>Total probabilty: <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathvariant="normal"><mi>P</mi></mstyle><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><munder><mo>∑</mo><mrow><mi>i</mi><mo>∈</mo><mi>I</mi></mrow></munder><mstyle mathvariant="normal"><mi>P</mi></mstyle><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mo stretchy="false" form="prefix">|</mo><msub><mi>B</mi><mi>i</mi></msub><mo stretchy="false" form="postfix">)</mo><mstyle mathvariant="normal"><mi>P</mi></mstyle><mo stretchy="false" form="prefix">(</mo><msub><mi>B</mi><mi>i</mi></msub><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\mathrm{P}(A) = \sum\limits_{i \in I} \mathrm{P}(A|B_i)\mathrm{P}(B_i)</annotation></semantics></math></p>
+<p>Multiplication: <span class="LaTeX">${\mathrm{P}}(A \cap B) = {\mathrm{P}}(A|B){\mathrm{P}}(B) = {\mathrm{P}}(B|A){\mathrm{P}}(A)$</span></p>
+<p>Bayes' law: <span class="LaTeX">$${\mathrm{P}}(B_k | A) = \frac{{\mathrm{P}}(A | B_k){\mathrm{P}}(B_k)}{\sum\limits_{i \in I} {\mathrm{P}}(A|B_i) {\mathrm{P}}(B_i)}$$</span></p>
+<p>Total probabilty: <span class="LaTeX">${\mathrm{P}}(A) = \sum\limits_{i \in I} {\mathrm{P}}(A|B_i){\mathrm{P}}(B_i)$</span></p>
 <h2 id="random-variables">Random Variables</h2>
-<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="italic">𝑋</mtext><mo>:</mo><mi>Ω</mi><mo>↦</mo><mi>Ω</mi><mi>′</mi></mrow><annotation encoding="application/x-tex">\textit{X}: \Omega \mapsto \Omega&#39;</annotation></semantics></math> is a random variable if for all events <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mi>′</mi><mo>∈</mo><mstyle mathvariant="double-struck"><mi>𝔽</mi></mstyle><mi>′</mi></mrow><annotation encoding="application/x-tex">A&#39; \in \mathbb F&#39;</annotation></semantics></math> there exists an event <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>∈</mo><mstyle mathvariant="double-struck"><mi>𝔽</mi></mstyle></mrow><annotation encoding="application/x-tex">A \in \mathbb F</annotation></semantics></math> such that <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo stretchy="true" form="prefix">{</mo><mi>ω</mi><mo>∈</mo><mi>Ω</mi><mo stretchy="false" form="prefix">|</mo><mtext mathvariant="italic">𝑋</mtext><mo stretchy="false" form="prefix">(</mo><mi>ω</mi><mo stretchy="false" form="postfix">)</mo><mo>∈</mo><mi>A</mi><mi>′</mi><mo stretchy="true" form="postfix">}</mo></mrow><mo>∈</mo><mstyle mathvariant="double-struck"><mi>𝔽</mi></mstyle></mrow><annotation encoding="application/x-tex">\left\{\omega \in \Omega|\textit{X}(\omega) \in A&#39;\right\} \in \mathbb F</annotation></semantics></math>.</p>
+<p><span class="LaTeX">${\textit{X}}: \Omega \mapsto \Omega&#39;$</span> is a random variable if for all events <span class="LaTeX">$A&#39; \in \mathbb F&#39;$</span> there exists an event <span class="LaTeX">$A \in \mathbb F$</span> such that <span class="LaTeX">$\left\{\omega \in \Omega|{\textit{X}}(\omega) \in A&#39;\right\} \in \mathbb F$</span>.</p>
 <h2 id="distribution">Distribution</h2>
-<p><strong>PDF:</strong> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mtext mathvariant="italic">𝑋</mtext></msub><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mfrac><mrow><mspace width="0.167em"></mspace><mtext mathvariant="normal">d</mtext><msub><mi>F</mi><mtext mathvariant="italic">𝑋</mtext></msub><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><mrow><mspace width="0.167em"></mspace><mtext mathvariant="normal">d</mtext><mi>x</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">f_{\textit{X}}(x) = \frac{\,\text{d}F_{\textit{X}}(x)}{\,\text{d}x}</annotation></semantics></math> <strong>CDF:</strong> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>F</mi><mtext mathvariant="italic">𝑋</mtext></msub><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><munderover><mo>∫</mo><mrow><mo>−</mo><mi>∞</mi></mrow><mi>x</mi></munderover><mrow><msub><mi>f</mi><mtext mathvariant="italic">𝑋</mtext></msub><mo stretchy="false" form="prefix">(</mo><mi>ξ</mi><mo stretchy="false" form="postfix">)</mo><mspace width="0.167em"></mspace><mtext mathvariant="normal">d</mtext><mi>ξ</mi></mrow></mrow><annotation encoding="application/x-tex">F_{\textit{X}}(x) = \int\limits_{-\infty}^{x}{f_{\textit{X}}(\xi)\,\text{d}\xi}</annotation></semantics></math></p>
+<p><strong>PDF:</strong> <span class="LaTeX">$f_{{\textit{X}}}(x) = \frac{{\,\text{d}}F_{{\textit{X}}}(x)}{{\,\text{d}}x}$</span> <strong>CDF:</strong> <span class="LaTeX">$F_{{\textit{X}}}(x) = \int\limits_{-\infty}^{x}{f_{{\textit{X}}}(\xi){\,\text{d}}\xi}$</span></p>
 
 
     </main>

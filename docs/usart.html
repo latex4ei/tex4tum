@@ -10,7 +10,7 @@
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="http://localhost:4000/usart">
+    <link rel="canonical" href="/usart">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -106,8 +106,7 @@
                     <h6 class="dropdown-header">Display Options</h6>
                     <div class="form-check dropdown-item">
                         <label class="form-check-label">
-                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox"
-                                checked="checked" onchange="Options.changeOption(this)">
+                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox" onchange="Options.changeOption(this)">
                             Definitions
                         </label>
                     </div>
@@ -197,37 +196,13 @@
 
 </p>
 
-
 <!-- Basics -->
-
 <!--    -->
-
-
-
-
-
 <!-- \newcommand{\diff}{\mathop{}\!\mathrm{\vphantom( d}} -->
-
-
-
-
-
 <!-- SI Units -->
 <!--=============================================================== -->
-
-
-
-
-
-
-
-
-
 <!-- KaTeX Tweaks -->
-
-
 <!-- \renewcommand{\boldsymbol}[1]{\mathbf{#1}} -->
-
 <div id="title_def" class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
@@ -235,7 +210,7 @@
 Definition
 </h5>
 <p class="card-text">
-UART is serial bus.
+<abbr title="Universal Asynchronous Receiver Transmitter" >UART</abbr> is serial <a href="/bus" >bus</a>.
 </p>
 </div>
 </div>
@@ -267,15 +242,15 @@ UART is serial bus.
 </tr>
 </tbody>
 </table>
-<p>Note: TX signal of the sender is connected to the RX signal at the receiver!</p>
+<p>Note: TX <a href="/signal" >signal</a> of the sender is connected to the RX signal at the receiver!</p>
 <h3 id="baudrate">Baudrate</h3>
 <p>Baudrate is the same as frequency or bitrate in bit/s!</p>
 <p><strong>Common Baudrates:</strong></p>
 <ul>
-<li>9’600 bit/s</li>
-<li>38’400 bit/s</li>
-<li>57’600 bit/s</li>
-<li>115’200 bit/s</li>
+<li>9'600 bit/s</li>
+<li>38'400 bit/s</li>
+<li>57'600 bit/s</li>
+<li>115'200 bit/s</li>
 </ul>
 <h5 class="clp_title text-success" data-toggle="collapse" href="#example2">
 <i class='fa fa-chart-bar'></i> Example
@@ -313,7 +288,7 @@ All operations of the UART hardware are controlled by an internal clock signal w
 <ul>
 <li><strong>Overrun error:</strong> the receiver cannot process the character that just came in before the next one arrives.</li>
 <li><strong>Underrun error</strong> the next character starts delayed which might be intepreted as the end of the transmission.</li>
-<li><strong>Framing error:</strong> receiver does not see a “stop” bit at the expected “stop” bit time.</li>
+<li><strong>Framing error:</strong> receiver does not see a &quot;stop&quot; bit at the expected &quot;stop&quot; bit time.</li>
 <li><strong>Parity error:</strong> the calculated parity of the received data bits disagrees with the received parity bit.</li>
 <li><strong>Break condition:</strong> receiver continuously reads 0 for longer than the full character time</li>
 </ul>

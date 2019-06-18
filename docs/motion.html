@@ -10,7 +10,7 @@
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="http://localhost:4000/motion">
+    <link rel="canonical" href="/motion">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -106,8 +106,7 @@
                     <h6 class="dropdown-header">Display Options</h6>
                     <div class="form-check dropdown-item">
                         <label class="form-check-label">
-                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox"
-                                checked="checked" onchange="Options.changeOption(this)">
+                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox" onchange="Options.changeOption(this)">
                             Definitions
                         </label>
                     </div>
@@ -181,37 +180,13 @@
 
 </p>
 
-
 <!-- Basics -->
-
 <!--    -->
-
-
-
-
-
 <!-- \newcommand{\diff}{\mathop{}\!\mathrm{\vphantom( d}} -->
-
-
-
-
-
 <!-- SI Units -->
 <!--=============================================================== -->
-
-
-
-
-
-
-
-
-
 <!-- KaTeX Tweaks -->
-
-
 <!-- \renewcommand{\boldsymbol}[1]{\mathbf{#1}} -->
-
 <div id="title_def" class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
@@ -224,11 +199,11 @@ Motion is a change in position of an object over time.
 </div>
 </div>
 </div>
-<h2 id="newtons-laws-of-motion">Newton’s Laws of Motion</h2>
+<h2 id="newtons-laws-of-motion">Newton's Laws of Motion</h2>
 <ol type="1">
-<li>If the vector sum of all forces acting on an object is zero, then the velocity of the object is constant. <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∑</mo><mstyle mathvariant="bold"><mi>𝐅</mi></mstyle><mo>=</mo><mn>0</mn><mspace width="0.278em"></mspace><mo>⇔</mo><mspace width="0.278em"></mspace><mfrac><mrow><mspace width="0.167em"></mspace><mtext mathvariant="normal">d</mtext><mstyle mathvariant="bold"><mi>𝐯</mi></mstyle></mrow><mrow><mspace width="0.167em"></mspace><mtext mathvariant="normal">d</mtext><mi>t</mi></mrow></mfrac><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\sum \boldsymbol F = 0 \; \Leftrightarrow \; \frac{\,\text{d}\boldsymbol v }{ \,\text{d}t } = 0</annotation></semantics></math></li>
-<li>If an object is accelerating, then there is a force on it. <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathvariant="bold"><mi>𝐅</mi></mstyle><mo>=</mo><mi>m</mi><mo>⋅</mo><mstyle mathvariant="bold"><mi>𝐚</mi></mstyle></mrow><annotation encoding="application/x-tex">\boldsymbol F = m \cdot \boldsymbol a</annotation></semantics></math></li>
-<li>If one object <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> exerts a force <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>F</mi><mi>A</mi></msub><annotation encoding="application/x-tex">F_A</annotation></semantics></math> on a second object <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>, then <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math> simultaneously exerts a force <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>F</mi><mi>B</mi></msub><mo>=</mo><mo>−</mo><msub><mi>F</mi><mi>A</mi></msub></mrow><annotation encoding="application/x-tex">F_B = - F_A</annotation></semantics></math> on <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>, and the two forces are equal in magnitude and opposite in direction.</li>
+<li>If the vector sum of all forces acting on an object is zero, then the velocity of the object is constant. <span class="LaTeX">$$\sum {\boldsymbol F} = 0 \; \Leftrightarrow \; \frac{{\,\text{d}}{\boldsymbol v} }{ {\,\text{d}}t } = 0$$</span></li>
+<li>If an object is accelerating, then there is a force on it. <span class="LaTeX">$${\boldsymbol F} = m \cdot {\boldsymbol a}$$</span></li>
+<li>If one object <span class="LaTeX">$A$</span> exerts a force <span class="LaTeX">$F_A$</span> on a second object <span class="LaTeX">$B$</span>, then <span class="LaTeX">$B$</span> simultaneously exerts a force <span class="LaTeX">$F_B = - F_A$</span> on <span class="LaTeX">$A$</span>, and the two forces are equal in magnitude and opposite in direction.</li>
 </ol>
 <h2 id="classical-mechanics">Classical Mechanics</h2>
 <table>
@@ -236,49 +211,49 @@ Motion is a change in position of an object over time.
 <tr class="header">
 <th><strong>Motion</strong></th>
 <th>Translation</th>
-<th>{ Rotation} (Radius <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>r</mi><annotation encoding="application/x-tex">r</annotation></semantics></math>)</th>
+<th>{ Rotation} (Radius <span class="LaTeX">$r$</span>)</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>Strecke/Winkel</td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><annotation encoding="application/x-tex">\boldsymbol x</annotation></semantics></math></td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathvariant="bold"><mi>𝛗</mi></mstyle><mo>=</mo><mfrac><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><mi>r</mi></mfrac></mrow><annotation encoding="application/x-tex">\boldsymbol \varphi = \frac{\boldsymbol x}{r}</annotation></semantics></math></td>
+<td><span class="LaTeX">${\boldsymbol x}$</span></td>
+<td><span class="LaTeX">${\boldsymbol \varphi} = \frac{{\boldsymbol x}}{r}$</span></td>
 </tr>
 <tr class="even">
 <td>Geschwindigkeit</td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathvariant="bold"><mi>𝐯</mi></mstyle><mo>=</mo><mover><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><mo accent="true">̇</mo></mover></mrow><annotation encoding="application/x-tex">\boldsymbol v = \dot{\boldsymbol x}</annotation></semantics></math></td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathvariant="bold"><mi>𝛚</mi></mstyle><mo>=</mo><mover><mstyle mathvariant="bold"><mi>𝛗</mi></mstyle><mo accent="true">̇</mo></mover><mo>=</mo><mfrac><mstyle mathvariant="bold"><mi>𝐯</mi></mstyle><mi>r</mi></mfrac></mrow><annotation encoding="application/x-tex">\boldsymbol \omega = \dot{\boldsymbol \varphi} = \frac{\boldsymbol v}{r}</annotation></semantics></math></td>
+<td><span class="LaTeX">${\boldsymbol v} = \dot{{\boldsymbol x}}$</span></td>
+<td><span class="LaTeX">${\boldsymbol \omega} = \dot{{\boldsymbol \varphi}} = \frac{{\boldsymbol v}}{r}$</span></td>
 </tr>
 <tr class="odd">
 <td>Beschleunigung</td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathvariant="bold"><mi>𝐚</mi></mstyle><mo>=</mo><mover><mstyle mathvariant="bold"><mi>𝐯</mi></mstyle><mo accent="true">̇</mo></mover><mo>=</mo><mover><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><mo accent="true">̈</mo></mover></mrow><annotation encoding="application/x-tex">\boldsymbol a = \dot{\boldsymbol v} = \ddot{\boldsymbol x}</annotation></semantics></math></td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathvariant="bold"><mi>𝛂</mi></mstyle><mo>=</mo><mover><mstyle mathvariant="bold"><mi>𝛚</mi></mstyle><mo accent="true">̇</mo></mover><mo>=</mo><mover><mstyle mathvariant="bold"><mi>𝛗</mi></mstyle><mo accent="true">̈</mo></mover><mo>=</mo><mfrac><mstyle mathvariant="bold"><mi>𝐚</mi></mstyle><mi>r</mi></mfrac></mrow><annotation encoding="application/x-tex">\boldsymbol \alpha = \dot{\boldsymbol \omega} = \ddot{\boldsymbol \varphi} = \frac{\boldsymbol a}{r}</annotation></semantics></math></td>
+<td><span class="LaTeX">${\boldsymbol a} = \dot{{\boldsymbol v}} = \ddot{{\boldsymbol x}}$</span></td>
+<td><span class="LaTeX">${\boldsymbol \alpha} = \dot{{\boldsymbol \omega}} = \ddot{{\boldsymbol \varphi}} = \frac{{\boldsymbol a}}{r}$</span></td>
 </tr>
 <tr class="even">
 <td>Masse/Trägh.</td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>m</mi><annotation encoding="application/x-tex">m</annotation></semantics></math></td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Θ</mi><mo>=</mo><msub><mo>∫</mo><mi>V</mi></msub><msubsup><mstyle mathvariant="bold"><mi>𝐫</mi></mstyle><mo>⊥</mo><mn>2</mn></msubsup><mspace width="0.167em"></mspace><mtext mathvariant="normal">d</mtext><mi>m</mi></mrow><annotation encoding="application/x-tex">\Theta = \int_V \boldsymbol r^2_\perp \,\text{d}m</annotation></semantics></math></td>
+<td><span class="LaTeX">$m$</span></td>
+<td><span class="LaTeX">$\Theta = \int_V {\boldsymbol r}^2_\perp {\,\text{d}}m$</span></td>
 </tr>
 <tr class="odd">
 <td>Impuls/Drall</td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathvariant="bold"><mi>𝐩</mi></mstyle><mo>=</mo><mi>m</mi><mstyle mathvariant="bold"><mi>𝐯</mi></mstyle></mrow><annotation encoding="application/x-tex">\boldsymbol p =m \boldsymbol v</annotation></semantics></math></td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathvariant="bold"><mi>𝐋</mi></mstyle><mo>=</mo><mstyle mathvariant="bold"><mi>𝚯</mi></mstyle><mstyle mathvariant="bold"><mi>𝛚</mi></mstyle><mo>=</mo><mstyle mathvariant="bold"><mi>𝐫</mi></mstyle><mo>×</mo><mstyle mathvariant="bold"><mi>𝐩</mi></mstyle></mrow><annotation encoding="application/x-tex">\boldsymbol L = \boldsymbol{\Theta }\boldsymbol \omega = \boldsymbol r \times \boldsymbol p</annotation></semantics></math></td>
+<td><span class="LaTeX">${\boldsymbol p} =m {\boldsymbol v}$</span></td>
+<td><span class="LaTeX">${\boldsymbol L} = {\boldsymbol{\Theta}} {\boldsymbol \omega} = {\boldsymbol r} \times {\boldsymbol p}$</span></td>
 </tr>
 <tr class="even">
 <td>Kraft/Moment</td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathvariant="bold"><mi>𝐅</mi></mstyle><mo>=</mo><mover><mstyle mathvariant="bold"><mi>𝐩</mi></mstyle><mo accent="true">̇</mo></mover><mo>=</mo><mi>m</mi><mstyle mathvariant="bold"><mi>𝐚</mi></mstyle></mrow><annotation encoding="application/x-tex">\boldsymbol F = \dot{\boldsymbol p} = m \boldsymbol a</annotation></semantics></math></td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathvariant="bold"><mi>𝐌</mi></mstyle><mo>=</mo><mover><mstyle mathvariant="bold"><mi>𝐋</mi></mstyle><mo accent="true">̇</mo></mover><mo>=</mo><mstyle mathvariant="bold"><mi>𝚯</mi></mstyle><mstyle mathvariant="bold"><mi>𝛂</mi></mstyle><mo>=</mo><mstyle mathvariant="bold"><mi>𝐫</mi></mstyle><mo>×</mo><mstyle mathvariant="bold"><mi>𝐅</mi></mstyle></mrow><annotation encoding="application/x-tex">\boldsymbol M = \dot{\boldsymbol L} = \boldsymbol{\Theta }\boldsymbol \alpha = \boldsymbol r \times \boldsymbol F</annotation></semantics></math></td>
+<td><span class="LaTeX">${\boldsymbol F} = \dot{{\boldsymbol p}} = m {\boldsymbol a}$</span></td>
+<td><span class="LaTeX">${\boldsymbol M} = \dot{{\boldsymbol L}} = {\boldsymbol{\Theta}} {\boldsymbol \alpha} = {\boldsymbol r} \times {\boldsymbol F}$</span></td>
 </tr>
 <tr class="odd">
 <td>Energie</td>
-<td><span class="math inline">$E_{\rm kin}=\frac12mv^2$</span></td>
-<td><span class="math inline">$E_{\rm rot}=\frac12 \Theta \omega ^2$</span></td>
+<td><span class="LaTeX">$E_{{\rm}kin}=\frac12mv^2$</span></td>
+<td><span class="LaTeX">$E_{{\rm}rot}=\frac12 \Theta \omega ^2$</span></td>
 </tr>
 <tr class="even">
 <td>Leistung</td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo>=</mo><mstyle mathvariant="bold"><mi>𝐅</mi></mstyle><mstyle mathvariant="bold"><mo>⋅</mo></mstyle><mstyle mathvariant="bold"><mi>𝐯</mi></mstyle></mrow><annotation encoding="application/x-tex">P = \boldsymbol F \pmb{\cdot}\boldsymbol v</annotation></semantics></math></td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo>=</mo><mstyle mathvariant="bold"><mi>𝐌</mi></mstyle><mstyle mathvariant="bold"><mo>⋅</mo></mstyle><mstyle mathvariant="bold"><mi>𝛚</mi></mstyle></mrow><annotation encoding="application/x-tex">P = \boldsymbol M \pmb{\cdot}\boldsymbol \omega</annotation></semantics></math></td>
+<td><span class="LaTeX">$P = {\boldsymbol F} {\pmb{\cdot}}{\boldsymbol v}$</span></td>
+<td><span class="LaTeX">$P = {\boldsymbol M} {\pmb{\cdot}}{\boldsymbol \omega}$</span></td>
 </tr>
 </tbody>
 </table>

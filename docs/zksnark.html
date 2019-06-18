@@ -10,7 +10,7 @@
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="http://localhost:4000/zksnark">
+    <link rel="canonical" href="/zksnark">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -106,8 +106,7 @@
                     <h6 class="dropdown-header">Display Options</h6>
                     <div class="form-check dropdown-item">
                         <label class="form-check-label">
-                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox"
-                                checked="checked" onchange="Options.changeOption(this)">
+                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox" onchange="Options.changeOption(this)">
                             Definitions
                         </label>
                     </div>
@@ -173,37 +172,13 @@
 
 </p>
 
-
 <!-- Basics -->
-
 <!--    -->
-
-
-
-
-
 <!-- \newcommand{\diff}{\mathop{}\!\mathrm{\vphantom( d}} -->
-
-
-
-
-
 <!-- SI Units -->
 <!--=============================================================== -->
-
-
-
-
-
-
-
-
-
 <!-- KaTeX Tweaks -->
-
-
 <!-- \renewcommand{\boldsymbol}[1]{\mathbf{#1}} -->
-
 <div id="title_def" class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
@@ -231,9 +206,9 @@ A protocol is used to exchange information about the solution and can be proven 
 </div>
 </div>
 </div>
-<p>zkSNARKs as currently implemented, have 4 main ingredients: 1. Encode your problem as a polynomial <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mi>h</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>w</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mi>v</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">t(x)h(x) = w(x)v(x)</annotation></semantics></math> 1. chooses a secret single evaluation point <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>s</mi><annotation encoding="application/x-tex">s</annotation></semantics></math> to reduce the problem to <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi><mo stretchy="false" form="prefix">(</mo><mi>s</mi><mo stretchy="false" form="postfix">)</mo><mi>h</mi><mo stretchy="false" form="prefix">(</mo><mi>s</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>w</mi><mo stretchy="false" form="prefix">(</mo><mi>s</mi><mo stretchy="false" form="postfix">)</mo><mi>v</mi><mo stretchy="false" form="prefix">(</mo><mi>s</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">t(s)h(s) = w(s)v(s)</annotation></semantics></math> 1. Homomorphic encryption: the prover computes <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="prefix">(</mo><mi>s</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">)</mo><mo>,</mo><mi>E</mi><mo stretchy="false" form="prefix">(</mo><mi>h</mi><mo stretchy="false" form="prefix">(</mo><mi>s</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">)</mo><mo>,</mo><mi>E</mi><mo stretchy="false" form="prefix">(</mo><mi>w</mi><mo stretchy="false" form="prefix">(</mo><mi>s</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">)</mo><mo>,</mo><mi>E</mi><mo stretchy="false" form="prefix">(</mo><mi>v</mi><mo stretchy="false" form="prefix">(</mo><mi>s</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">E(t(s)), E(h(s)), E(w(s)), E(v(s))</annotation></semantics></math> without knowing <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>s</mi><annotation encoding="application/x-tex">s</annotation></semantics></math> 1. Zero Knowledge: multiplying with a number so that the verifier can still check their correct structure without knowing the actual encoded values</p>
+<p>zkSNARKs as currently implemented, have 4 main ingredients: 1. Encode your problem as a polynomial <span class="LaTeX">$t(x)h(x) = w(x)v(x)$</span> 1. chooses a secret single evaluation point <span class="LaTeX">$s$</span> to reduce the problem to <span class="LaTeX">$t(s)h(s) = w(s)v(s)$</span> 1. Homomorphic encryption: the prover computes <span class="LaTeX">$E(t(s)), E(h(s)), E(w(s)), E(v(s))$</span> without knowing <span class="LaTeX">$s$</span> 1. Zero Knowledge: multiplying with a number so that the verifier can still check their correct structure without knowing the actual encoded values</p>
 <h2 id="process">Process</h2>
-<p>The prover knows some secret numbers <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math> and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>y</mi><annotation encoding="application/x-tex">y</annotation></semantics></math> and computes their product, but sends only the encrypted versions <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>=</mo><mi>E</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>,</mo><mi>b</mi><mo>=</mo><mi>E</mi><mo stretchy="false" form="prefix">(</mo><mi>y</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">a = E(x), b = E(y)</annotation></semantics></math> and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi><mo>=</mo><mi>E</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mi>y</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">c = E(xy)</annotation></semantics></math> to the verifier. The verifier now checks that <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>a</mi><mi>b</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(ab)%n ≡ c%n</annotation></semantics></math> and the only thing the verifier learns is the encrypted version of the product and that the product was correctly computed, but she neither knows the two factors nor the actual product.</p>
+<p>The prover knows some secret numbers <span class="LaTeX">$x$</span> and <span class="LaTeX">$y$</span> and computes their product, but sends only the encrypted versions <span class="LaTeX">$a = E(x), b = E(y)$</span> and <span class="LaTeX">$c = E(xy)$</span> to the verifier. The verifier now checks that <span class="LaTeX">$(ab)$</span> and the only thing the verifier learns is the encrypted version of the product and that the product was correctly computed, but she neither knows the two factors nor the actual product.</p>
 <h2 id="abbreviation">Abbreviation</h2>
 <ul>
 <li><strong>zero-knowledge:</strong> the verifier learns nothing apart from the validity of the statement</li>
@@ -243,7 +218,7 @@ A protocol is used to exchange information about the solution and can be proven 
 <li><strong>of Knowledge:</strong> not possible for the prover to construct a proof</li>
 </ul>
 <h2 id="from-interactive-to-non-interactive">From interactive to non-interactive</h2>
-<p>You can convert an interactive protocol into a non-interactive one by simply using a strong hash function to pick the challenge. The hash will convert any publicly choosen, changing input into a pseudo-random output.</p>
+<p>You can convert an interactive protocol into a non-interactive one by simply using a strong <a href="/hash" >hash function</a> to pick the challenge. The hash will convert any publicly choosen, changing input into a pseudo-random output.</p>
 
 
     </main>

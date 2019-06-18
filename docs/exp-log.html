@@ -10,7 +10,7 @@
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="http://localhost:4000/exp-log">
+    <link rel="canonical" href="/exp-log">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -106,8 +106,7 @@
                     <h6 class="dropdown-header">Display Options</h6>
                     <div class="form-check dropdown-item">
                         <label class="form-check-label">
-                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox"
-                                checked="checked" onchange="Options.changeOption(this)">
+                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox" onchange="Options.changeOption(this)">
                             Definitions
                         </label>
                     </div>
@@ -173,37 +172,13 @@
 
 </p>
 
-
 <!-- Basics -->
-
 <!--    -->
-
-
-
-
-
 <!-- \newcommand{\diff}{\mathop{}\!\mathrm{\vphantom( d}} -->
-
-
-
-
-
 <!-- SI Units -->
 <!--=============================================================== -->
-
-
-
-
-
-
-
-
-
 <!-- KaTeX Tweaks -->
-
-
 <!-- \renewcommand{\boldsymbol}[1]{\mathbf{#1}} -->
-
 <div id="title_def" class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
@@ -211,102 +186,102 @@
 Definition
 </h5>
 <p class="card-text">
-Exponentiation <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>b</mi><mi>n</mi></msup><annotation encoding="application/x-tex">b^n</annotation></semantics></math> corresponds to <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math> repeated multiplication of the base <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>b</mi><annotation encoding="application/x-tex">b</annotation></semantics></math>:
+Exponentiation <span class="LaTeX">$b^n$</span> corresponds to <span class="LaTeX">$n$</span> repeated multiplication of the base <span class="LaTeX">$b$</span>:
 </p>
 </div>
 </div>
 </div>
 <div data-toggle="collapse" href="#eq_0">
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>b</mi><mi>n</mi></msup><mo>=</mo><munder><munder><mrow><mi>b</mi><mo>×</mo><mi>…</mi><mo>×</mo><mi>b</mi></mrow><mo accent="true">⏟</mo></munder><mrow><mi>n</mi><mspace width="0.167em"></mspace><mtext mathvariant="normal">times</mtext></mrow></munder></mrow><annotation encoding="application/x-tex">b^{n} = \underbrace{b \times \dots \times b}_{n\,{\textrm {times}}}</annotation></semantics></math></p>
+<p><span class="LaTeX">$$b^{n} = \underbrace{b \times \dots \times b}_{n\,{\textrm {times}}}$$</span></p>
 </div>
 <div id="eq_0" class="legend collapse">
 <div class="card border-info w-75 mx-auto">
 <div class="p-1 small">
-<p>with <span class="math inline">$b \in \R$</span> and <span class="math inline">$n \in \N$</span>.</p>
+<p>with <span class="LaTeX">$b \in {\mathop{\mathbb R}}$</span> and <span class="LaTeX">$n \in {\mathop{\mathbb N}}$</span>.</p>
 </div>
 </div>
 </div>
 <h3 id="rules">Rules</h3>
-<p>For <span class="math inline">$n, m \in \Z$</span></p>
+<p>For <span class="LaTeX">$n, m \in \Z$</span></p>
 <table>
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">Sum</td>
-<td style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>b</mi><mrow><mi>m</mi><mo>+</mo><mi>n</mi></mrow></msup><mo>=</mo><msup><mi>b</mi><mi>m</mi></msup><mo>⋅</mo><msup><mi>b</mi><mi>n</mi></msup></mrow><annotation encoding="application/x-tex">\displaystyle b^{m+n} = b^{m} \cdot b^{n}</annotation></semantics></math></td>
+<td style="text-align: left;"><span class="LaTeX">$\displaystyle b^{m+n} = b^{m} \cdot b^{n}$</span></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"></td>
-<td style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mrow><mo stretchy="true" form="prefix">(</mo><msup><mi>b</mi><mi>m</mi></msup><mo stretchy="true" form="postfix">)</mo></mrow><mi>n</mi></msup><mo>=</mo><msup><mi>b</mi><mrow><mi>m</mi><mo>⋅</mo><mi>n</mi></mrow></msup></mrow><annotation encoding="application/x-tex">\left( b^{m} \right)^{n} = b^{m \cdot n}</annotation></semantics></math></td>
+<td style="text-align: left;"><span class="LaTeX">$\left( b^{m} \right)^{n} = b^{m \cdot n}$</span></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Product</td>
-<td style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>b</mi><mo>⋅</mo><mi>c</mi><msup><mo stretchy="false" form="postfix">)</mo><mi>n</mi></msup><mo>=</mo><msup><mi>b</mi><mi>n</mi></msup><mo>⋅</mo><msup><mi>c</mi><mi>n</mi></msup></mrow><annotation encoding="application/x-tex">(b \cdot c)^{n} = b^{n} \cdot c^{n}</annotation></semantics></math></td>
+<td style="text-align: left;"><span class="LaTeX">$(b \cdot c)^{n} = b^{n} \cdot c^{n}$</span></td>
 </tr>
 </tbody>
 </table>
 <h2 id="exponential-function">Exponential Function</h2>
 <div data-toggle="collapse" href="#eq_1">
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>exp</mo><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>≡</mo><msup><mi>e</mi><mi>x</mi></msup><mo>:=</mo><munder><mo>lim</mo><mrow><mi>n</mi><mo>→</mo><mi>∞</mi></mrow></munder><msup><mrow><mo stretchy="true" form="prefix">(</mo><mn>1</mn><mo>+</mo><mfrac><mi>x</mi><mi>n</mi></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mi>n</mi></msup><mo>=</mo><munderover><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mn>0</mn></mrow><mo accent="false">∞</mo></munderover><mfrac><msup><mi>x</mi><mi>n</mi></msup><mrow><mi>n</mi><mi>!</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\exp(x) \equiv e^x := \lim\limits_{n \rightarrow \infty} \left( 1 + \frac{x}{n} \right)^n = \sum\limits_{n = 0}^{\infty} \frac{x^n}{n!}</annotation></semantics></math></p>
+<p><span class="LaTeX">$$\exp(x) \equiv e^x := \lim\limits_{n \rightarrow \infty} \left( 1 + \frac{x}{n} \right)^n = \sum\limits_{n = 0}^{\infty} \frac{x^n}{n!}$$</span></p>
 </div>
 <div id="eq_1" class="legend collapse">
 <div class="card border-info w-75 mx-auto">
 <div class="p-1 small">
-<p>with the exponential function <span class="math inline">$\exp: \R \rightarrow\R$</span>, the argument <span class="math inline">$x \in \R$</span>, the Euler number <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathvariant="normal"><mi>e</mi></mstyle><mo>=</mo><mn>2</mn><mo>,</mo><mn>718281828</mn><mi>.</mi><mi>.</mi></mrow><annotation encoding="application/x-tex">\mathrm{e} = 2,718281828..</annotation></semantics></math></p>
+<p>with the exponential function <span class="LaTeX">$\exp: {\mathop{\mathbb R}}{\rightarrow}{\mathop{\mathbb R}}$</span>, the argument <span class="LaTeX">$x \in {\mathop{\mathbb R}}$</span>, the Euler number <span class="LaTeX">$\mathrm{e} = 2,718281828..$</span></p>
 </div>
 </div>
 </div>
 <strong>For complex numbers:</strong>
 <div data-toggle="collapse" href="#eq_2">
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mstyle mathvariant="normal"><mi>e</mi></mstyle><mstyle mathvariant="bold"><mi>𝐳</mi></mstyle></msup><mo>=</mo><msup><mstyle mathvariant="normal"><mi>e</mi></mstyle><mrow><mi>a</mi><mo>+</mo><mi>b</mi><mtext mathvariant="normal">i</mtext></mrow></msup><mo>=</mo><msup><mstyle mathvariant="normal"><mi>e</mi></mstyle><mi>a</mi></msup><mo>⋅</mo><mo stretchy="false" form="prefix">(</mo><mo>cos</mo><mi>b</mi><mo>+</mo><mtext mathvariant="normal">i</mtext><mo>sin</mo><mi>b</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\mathrm{e}^{\boldsymbol{z}} = \mathrm{e}^{a + b\text{i}} = \mathrm{e}^a \cdot ( \cos b + \text{i}\sin b )</annotation></semantics></math></p>
+<p><span class="LaTeX">$${\mathrm{e}}^{{\boldsymbol{z}}} = {\mathrm{e}}^{a + b{\text{i}}} = {\mathrm{e}}^a \cdot ( \cos b + {\text{i}}\sin b )$$</span></p>
 </div>
 <div id="eq_2" class="legend collapse">
 <div class="card border-info w-75 mx-auto">
 <div class="p-1 small">
-<p>with <span class="math inline">$\boldsymbol{z} \in \C$</span>, <span class="math inline">$a, b \in \R$</span> and the imaginary unit <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtext mathvariant="normal">i</mtext><annotation encoding="application/x-tex">\text{i}</annotation></semantics></math>.</p>
+<p>with <span class="LaTeX">${\boldsymbol{z}} \in {\mathop{\mathbb C}}$</span>, <span class="LaTeX">$a, b \in {\mathop{\mathbb R}}$</span> and the imaginary unit <span class="LaTeX">${\text{i}}$</span>.</p>
 </div>
 </div>
 </div>
 <h2 id="logarithm">Logarithm</h2>
 <p>The logarithm is the inverse function to exponentiation.</p>
 <div data-toggle="collapse" href="#eq_3">
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mo>log</mo><mi>b</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>y</mi><mspace width="2.0em"></mspace><mtext mathvariant="normal">exactly if</mtext><mspace width="2.0em"></mspace><msup><mi>b</mi><mi>y</mi></msup><mo>=</mo><mi>x</mi></mrow><annotation encoding="application/x-tex">\log_{b}(x) = y \qquad  \text{exactly if} \qquad b^{y} = x</annotation></semantics></math></p>
+<p><span class="LaTeX">$$\log_{b}(x) = y \qquad  \text{exactly if} \qquad b^{y} = x$$</span></p>
 </div>
 <div id="eq_3" class="legend collapse">
 <div class="card border-info w-75 mx-auto">
 <div class="p-1 small">
-<p>with <span class="math inline">$b, x, y \in \R$</span></p>
+<p>with <span class="LaTeX">$b, x, y \in {\mathop{\mathbb R}}$</span></p>
 </div>
 </div>
 </div>
 <h3 id="calculation-rules">Calculation Rules</h3>
-<p>For <span class="math inline">$b, x, y \in \R$</span></p>
+<p>For <span class="LaTeX">$b, x, y \in {\mathop{\mathbb R}}$</span></p>
 <table>
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">Product</td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mo>log</mo><mi>b</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>⋅</mo><mi>y</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><msub><mo>log</mo><mi>b</mi></msub><mi>x</mi><mo>+</mo><msub><mo>log</mo><mi>b</mi></msub><mi>y</mi></mrow><annotation encoding="application/x-tex">\displaystyle \log_{b}(x \cdot y) = \log_{b} x + \log_{b} y</annotation></semantics></math></td>
+<td><span class="LaTeX">$\displaystyle \log_{b}(x \cdot y) = \log_{b} x + \log_{b} y$</span></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Quotient</td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mo>log</mo><mi>b</mi></msub><mfrac><mi>x</mi><mi>y</mi></mfrac><mo>=</mo><msub><mo>log</mo><mi>b</mi></msub><mi>x</mi><mo>−</mo><msub><mo>log</mo><mi>b</mi></msub><mi>y</mi></mrow><annotation encoding="application/x-tex">\displaystyle \log_{b} \frac{x}{y} = \log_{b} x - \log_{b} y</annotation></semantics></math></td>
+<td><span class="LaTeX">$\displaystyle \log_{b} \frac{x}{y} = \log_{b} x - \log_{b} y$</span></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Power</td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mo>log</mo><mi>b</mi></msub><mrow><mo stretchy="true" form="prefix">(</mo><msup><mi>x</mi><mi>p</mi></msup><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mi>p</mi><mo>⋅</mo><msub><mo>log</mo><mi>b</mi></msub><mi>x</mi></mrow><annotation encoding="application/x-tex">\displaystyle \log_{b} \left( x^{p} \right) = p \cdot \log_{b}x</annotation></semantics></math></td>
+<td><span class="LaTeX">$\displaystyle \log_{b} \left( x^{p} \right) = p \cdot \log_{b}x$</span></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Root</td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mo>log</mo><mi>b</mi></msub><mroot><mi>x</mi><mi>p</mi></mroot><mo>=</mo><mfrac><mrow><msub><mo>log</mo><mi>b</mi></msub><mi>x</mi></mrow><mi>p</mi></mfrac></mrow><annotation encoding="application/x-tex">\displaystyle \log_{b} \sqrt[p]{x} = \frac{\log_b x}{p}</annotation></semantics></math></td>
+<td><span class="LaTeX">$\displaystyle \log_{b} \sqrt[p]{x} = \frac{\log_b x}{p}$</span></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Change base</td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mo>log</mo><mi>b</mi></msub><mi>x</mi><mo>=</mo><mfrac><mrow><msub><mo>log</mo><mi>k</mi></msub><mi>x</mi></mrow><mrow><msub><mo>log</mo><mi>k</mi></msub><mi>b</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\displaystyle \log_{b} x = \frac{\log_{k} x}{ \log_{k} b }</annotation></semantics></math></td>
+<td><span class="LaTeX">$\displaystyle \log_{b} x = \frac{\log_{k} x}{ \log_{k} b }$</span></td>
 </tr>
 </tbody>
 </table>
-<p>Other notations: <span class="math inline">$\log_2 \equiv \lb$</span>, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mo>log</mo><mstyle mathvariant="normal"><mi>e</mi></mstyle></msub><mo>≡</mo><mo>ln</mo></mrow><annotation encoding="application/x-tex">\log_{\mathrm{e}} \equiv \ln</annotation></semantics></math>, , <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mo>log</mo><mn>10</mn></msub><mo>≡</mo><mo>lg</mo></mrow><annotation encoding="application/x-tex">\log_{10} \equiv \lg</annotation></semantics></math></p>
+<p>Other notations: <span class="LaTeX">$\log_2 \equiv \lb$</span>, <span class="LaTeX">$\log_{{\mathrm{e}}} \equiv \ln$</span>, , <span class="LaTeX">$\log_{10} \equiv \lg$</span></p>
 <h3 id="taylor-series">Taylor Series</h3>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>ln</mo><mo stretchy="false" form="prefix">(</mo><mi>z</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mfrac><mrow><mo stretchy="false" form="prefix">(</mo><mi>z</mi><mo>−</mo><mn>1</mn><msup><mo stretchy="false" form="postfix">)</mo><mn>1</mn></msup></mrow><mn>1</mn></mfrac><mo>−</mo><mfrac><mrow><mo stretchy="false" form="prefix">(</mo><mi>z</mi><mo>−</mo><mn>1</mn><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup></mrow><mn>2</mn></mfrac><mo>+</mo><mfrac><mrow><mo stretchy="false" form="prefix">(</mo><mi>z</mi><mo>−</mo><mn>1</mn><msup><mo stretchy="false" form="postfix">)</mo><mn>3</mn></msup></mrow><mn>3</mn></mfrac><mo>−</mo><mfrac><mrow><mo stretchy="false" form="prefix">(</mo><mi>z</mi><mo>−</mo><mn>1</mn><msup><mo stretchy="false" form="postfix">)</mo><mn>4</mn></msup></mrow><mn>4</mn></mfrac><mo>+</mo><mi>⋯</mi></mrow><annotation encoding="application/x-tex">\ln(z)={\frac {(z-1)^{1}}{1}}-{\frac {(z-1)^{2}}{2}}+{\frac {(z-1)^{3}}{3}}-{\frac {(z-1)^{4}}{4}}+\cdots</annotation></semantics></math></p>
+<p><span class="LaTeX">$$\ln(z)={\frac {(z-1)^{1}}{1}}-{\frac {(z-1)^{2}}{2}}+{\frac {(z-1)^{3}}{3}}-{\frac {(z-1)^{4}}{4}}+\cdots$$</span></p>
 
 
     </main>

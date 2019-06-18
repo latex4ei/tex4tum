@@ -10,7 +10,7 @@
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="http://localhost:4000/coap">
+    <link rel="canonical" href="/coap">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -106,8 +106,7 @@
                     <h6 class="dropdown-header">Display Options</h6>
                     <div class="form-check dropdown-item">
                         <label class="form-check-label">
-                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox"
-                                checked="checked" onchange="Options.changeOption(this)">
+                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox" onchange="Options.changeOption(this)">
                             Definitions
                         </label>
                     </div>
@@ -173,37 +172,13 @@
 
 </p>
 
-
 <!-- Basics -->
-
 <!--    -->
-
-
-
-
-
 <!-- \newcommand{\diff}{\mathop{}\!\mathrm{\vphantom( d}} -->
-
-
-
-
-
 <!-- SI Units -->
 <!--=============================================================== -->
-
-
-
-
-
-
-
-
-
 <!-- KaTeX Tweaks -->
-
-
 <!-- \renewcommand{\boldsymbol}[1]{\mathbf{#1}} -->
-
 <div id="title_def" class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
@@ -239,19 +214,19 @@ The Constrained Application Protocol (CoAP) is a specialized web transfer protoc
 </ul>
 <h3 id="options">Options</h3>
 <pre><code>0 1 2 3 4 5 6 7</code></pre>
-<p>+-+-+-+-+-+-+-+-+ | delta |length | 1 byte +—————+  delta ext.   0-2 byte +—————+  length ext.   0-2 byte +—————+   value   0 or more bytes +—————+</p>
+<p>+-+-+-+-+-+-+-+-+ | delta |length | 1 byte +---------------+  delta ext.   0-2 byte +---------------+  length ext.   0-2 byte +---------------+   value   0 or more bytes +---------------+</p>
 <h2 id="features">Features</h2>
 <ul>
 <li>Embedded web transfer protocol (<code>coap://</code>)</li>
-<li>UDP binding with reliability and multicast support</li>
+<li><a href="/udp" >UDP</a> binding with reliability and multicast support</li>
 <li>GET, POST, PUT, DELETE methods</li>
-<li>URI support</li>
+<li><a href="uri" title="Uniform Resource Identifier ">URI</a> support</li>
 <li>4 byte header</li>
-<li>Subset of MIME types and HTTP response codes</li>
+<li>Subset of MIME types and <a href="/http" >HTTP</a> response codes</li>
 </ul>
 <p>REST request: <code>CON GET /light</code></p>
 <ul>
-<li>Problem: REST paradigm is often “PULL” type Solution: COAP observation Fragmentation at application layer to avoid fragmentation at IPv6 layer.</li>
+<li>Problem: REST paradigm is often “PULL” type Solution: COAP observation Fragmentation at application layer to avoid fragmentation at <abbr title="Internet Protocol version 6" >IPv6</abbr> layer.</li>
 </ul>
 <h2 id="references">References</h2>
 <p><a href="https://tools.ietf.org/html/rfc7252">RFC 7252</a></p>

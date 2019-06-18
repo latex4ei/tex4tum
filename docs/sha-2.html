@@ -10,7 +10,7 @@
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="http://localhost:4000/sha-2">
+    <link rel="canonical" href="/sha-2">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -106,8 +106,7 @@
                     <h6 class="dropdown-header">Display Options</h6>
                     <div class="form-check dropdown-item">
                         <label class="form-check-label">
-                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox"
-                                checked="checked" onchange="Options.changeOption(this)">
+                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox" onchange="Options.changeOption(this)">
                             Definitions
                         </label>
                     </div>
@@ -178,37 +177,13 @@
 
 </p>
 
-
 <!-- Basics -->
-
 <!--    -->
-
-
-
-
-
 <!-- \newcommand{\diff}{\mathop{}\!\mathrm{\vphantom( d}} -->
-
-
-
-
-
 <!-- SI Units -->
 <!--=============================================================== -->
-
-
-
-
-
-
-
-
-
 <!-- KaTeX Tweaks -->
-
-
 <!-- \renewcommand{\boldsymbol}[1]{\mathbf{#1}} -->
-
 <div id="title_def" class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
@@ -216,7 +191,7 @@
 Definition
 </h5>
 <p class="card-text">
-The Secure Hash Algorithm 2 (SHA2) is a set of 6 cryptographic hash functions with 224, 256, 384 or 512 bits.
+The Secure Hash <a href="/algorithm" >Algorithm</a> 2 (SHA2) is a set of 6 cryptographic hash functions with 224, 256, 384 or 512 bits.
 </p>
 </div>
 </div>
@@ -262,10 +237,10 @@ The Secure Hash Algorithm 2 (SHA2) is a set of 6 cryptographic hash functions wi
 </tr>
 </tbody>
 </table>
-<p>Applications: TLS/SSL, PGP, SSH, S/MIME, and IPsec.</p>
+<p>Applications: TLS/SSL, PGP, <abbr title="Secure Shell" >SSH</abbr>, S/MIME, and IPsec.</p>
 <div class="row">
 <div class="col-md-auto pr-0">
-<p>SHA2-256 (" <input id="number-input" style="width: 5em;" oninput="calcSHA(this)" placeholder="Input" value=""> ") =</p>
+<p>SHA2-256 (&quot; <input id="number-input" style="width: 5em;" oninput="calcSHA(this)" placeholder="Input" value=""> &quot;) =</p>
 </div>
 <div class="col pl-0">
 <p>
@@ -284,18 +259,18 @@ One round of the SHA2 compression
 </figure>
 <ol type="1">
 <li><p>Padding: ensure that the message length is a multiple of 512 bits</p></li>
-<li><p>Block decomposition: Parse the message into <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>N</mi><annotation encoding="application/x-tex">N</annotation></semantics></math> 512-bit blocks <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>M</mi><mi>i</mi></msub><annotation encoding="application/x-tex">M_i</annotation></semantics></math></p></li>
+<li><p>Block decomposition: Parse the message into <span class="LaTeX">$N$</span> 512-bit blocks <span class="LaTeX">$M_i$</span></p></li>
 <li><p>Hash computation: Process one block at a time an iteratively compute</p>
 <ol type="1">
-<li>Create 64 chunks <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>w</mi><mi>i</mi></msub><annotation encoding="application/x-tex">w_i</annotation></semantics></math> of 32 bit and copy the block into it</li>
-<li>Initialize the internal state <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">[</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo>,</mo><mi>d</mi><mo>,</mo><mi>e</mi><mo>,</mo><mi>f</mi><mo>,</mo><mi>g</mi><mo>,</mo><mi>h</mi><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">[a, b, c, d, e, f, g, h]</annotation></semantics></math></li>
-<li>For every chunk <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>w</mi><mi>i</mi></msub><annotation encoding="application/x-tex">w_i</annotation></semantics></math>:</li>
+<li>Create 64 chunks <span class="LaTeX">$w_i$</span> of 32 bit and copy the block into it</li>
+<li>Initialize the internal state <span class="LaTeX">$[a, b, c, d, e, f, g, h]$</span></li>
+<li>For every chunk <span class="LaTeX">$w_i$</span>:</li>
 </ol>
 <ul>
-<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">CH</mtext><mo stretchy="false" form="prefix">(</mo><mi>e</mi><mo>,</mo><mi>f</mi><mo>,</mo><mi>g</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mi>e</mi><mo>∧</mo><mi>f</mi><mo stretchy="false" form="postfix">)</mo><mo>⊕</mo><mo stretchy="false" form="prefix">(</mo><mo>¬</mo><mi>e</mi><mo>∧</mo><mi>g</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\text{CH}( e, f, g ) = (e \land f) \oplus (\neg e \land g)</annotation></semantics></math></li>
-<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">Ma</mtext><mo stretchy="false" form="prefix">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mi>a</mi><mo>∧</mo><mi>b</mi><mo stretchy="false" form="postfix">)</mo><mo>⊕</mo><mo stretchy="false" form="prefix">(</mo><mi>a</mi><mo>∧</mo><mi>c</mi><mo stretchy="false" form="postfix">)</mo><mo>⊕</mo><mo stretchy="false" form="prefix">(</mo><mi>b</mi><mo>∧</mo><mi>c</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\text{Ma}( a, b, c) = (a \land b) \oplus (a \land c) \oplus ( b \land c)</annotation></semantics></math></li>
-<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>Σ</mi><mn>0</mn></msub><mo stretchy="false" form="prefix">(</mo><mi>a</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mi>a</mi><mo>⋙</mo><mn>2</mn><mo stretchy="false" form="postfix">)</mo><mo>⊕</mo><mo stretchy="false" form="prefix">(</mo><mi>a</mi><mo>⋙</mo><mn>13</mn><mo stretchy="false" form="postfix">)</mo><mo>⊕</mo><mo stretchy="false" form="prefix">(</mo><mi>a</mi><mo>⋙</mo><mn>22</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\Sigma_{0}(a) = (a \ggg 2) \oplus (a \ggg 13) \oplus (a \ggg 22)</annotation></semantics></math></li>
-<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>Σ</mi><mn>1</mn></msub><mo stretchy="false" form="prefix">(</mo><mi>e</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mi>e</mi><mo>⋙</mo><mn>6</mn><mo stretchy="false" form="postfix">)</mo><mo>⊕</mo><mo stretchy="false" form="prefix">(</mo><mi>e</mi><mo>⋙</mo><mn>11</mn><mo stretchy="false" form="postfix">)</mo><mo>⊕</mo><mo stretchy="false" form="prefix">(</mo><mi>e</mi><mo>⋙</mo><mn>25</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\Sigma_{1}(e) = (e \ggg 6) \oplus (e \ggg 11) \oplus (e \ggg 25)</annotation></semantics></math></li>
+<li><span class="LaTeX">$\text{CH}( e, f, g ) = (e \land f) \oplus (\neg e \land g)$</span></li>
+<li><span class="LaTeX">$\text{Ma}( a, b, c) = (a \land b) \oplus (a \land c) \oplus ( b \land c)$</span></li>
+<li><span class="LaTeX">$\Sigma_{0}(a) = (a \ggg 2) \oplus (a \ggg 13) \oplus (a \ggg 22)$</span></li>
+<li><span class="LaTeX">$\Sigma_{1}(e) = (e \ggg 6) \oplus (e \ggg 11) \oplus (e \ggg 25)$</span></li>
 </ul></li>
 </ol>
 <!--    $$H_i = H_{i-1} + C(M_i)$$

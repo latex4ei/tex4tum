@@ -10,7 +10,7 @@
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="http://localhost:4000/constants">
+    <link rel="canonical" href="/constants">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -106,8 +106,7 @@
                     <h6 class="dropdown-header">Display Options</h6>
                     <div class="form-check dropdown-item">
                         <label class="form-check-label">
-                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox"
-                                checked="checked" onchange="Options.changeOption(this)">
+                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox" onchange="Options.changeOption(this)">
                             Definitions
                         </label>
                     </div>
@@ -168,37 +167,13 @@
 
 </p>
 
-
 <!-- Basics -->
-
 <!--    -->
-
-
-
-
-
 <!-- \newcommand{\diff}{\mathop{}\!\mathrm{\vphantom( d}} -->
-
-
-
-
-
 <!-- SI Units -->
 <!--=============================================================== -->
-
-
-
-
-
-
-
-
-
 <!-- KaTeX Tweaks -->
-
-
 <!-- \renewcommand{\boldsymbol}[1]{\mathbf{#1}} -->
-
 <div id="title_def" class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
@@ -221,55 +196,55 @@ A physical constant is a physical quantity that is generally believed to be both
 <tbody>
 <tr class="odd">
 <td>Lichtgeschwindigkeit</td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mstyle mathvariant="normal"><mi>c</mi></mstyle><mn>0</mn></msub><mo>≡</mo><mfrac><mn>1</mn><msqrt><mrow><msub><mi>ε</mi><mn>0</mn></msub><msub><mi>μ</mi><mn>0</mn></msub></mrow></msqrt></mfrac><mo>:=</mo><mn>299</mn><mn>792</mn><mn>458</mn><mspace width="0.167em"></mspace><mstyle mathvariant="normal"><mtext mathvariant="normal">m</mtext><mspace width="0.167em"></mspace><mi>/</mi><mtext mathvariant="normal">s</mtext><mspace width="0.167em"></mspace></mstyle></mrow><annotation encoding="application/x-tex">\mathrm{c}_0 \equiv \frac{1}{\sqrt{\varepsilon_0 \mu_0}} := 299 792 458\,\mathrm{\text{m}\,/\text{s}\,}</annotation></semantics></math></td>
+<td><span class="LaTeX">$\mathrm{c}_0 \equiv \frac{1}{\sqrt{\varepsilon_0 \mu_0}} := {299 792 458\,\mathrm{{\text{m}{\,}}{/}{\text{s}{\,}}}}$</span></td>
 </tr>
 <tr class="even">
 <td>Elementarladung</td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathvariant="normal"><mi>e</mi></mstyle><mo>≈</mo><mn>1.602</mn><mn>177</mn><mi>e</mi><mo>−</mo><mn>19</mn><mspace width="0.167em"></mspace><mstyle mathvariant="normal"><mtext mathvariant="normal">C</mtext><mspace width="0.167em"></mspace></mstyle></mrow><annotation encoding="application/x-tex">\mathrm{e} \approx 1.602 177e-19\,\mathrm{\text{C}\,}</annotation></semantics></math></td>
+<td><span class="LaTeX">$\mathrm{e} \approx {1.602 177e-19\,\mathrm{{\text{C}{\,}}}}$</span></td>
 </tr>
 <tr class="odd">
-<td><span class="smallcaps">Planck</span>-Konst.</td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>h</mi><mo>≈</mo><mn>6</mn><mo>,</mo><mn>626</mn><mn>069</mn><mn>57</mn><mi>e</mi><mo>−</mo><mn>34</mn><mspace width="0.167em"></mspace><mstyle mathvariant="normal"><mtext mathvariant="normal">J</mtext><mspace width="0.167em"></mspace><mtext mathvariant="normal">s</mtext><mspace width="0.167em"></mspace></mstyle></mrow><annotation encoding="application/x-tex">h \approx 6,626 069 57e-34\,\mathrm{\text{J}\,\text{s}\,}</annotation></semantics></math></td>
+<td><span style="font-variant: small-caps;">Planck</span>-Konst.</td>
+<td><span class="LaTeX">$h \approx {6,626 069 57e-34\,\mathrm{{\text{J}{\,}}{\text{s}{\,}}}}$</span></td>
 </tr>
 <tr class="even">
 <td></td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ℏ</mi><mo>≡</mo><mfrac><mi>h</mi><mrow><mn>2</mn><mi>π</mi></mrow></mfrac><mo>≈</mo><mn>1.05457</mn><mi>e</mi><mo>−</mo><mn>34</mn><mspace width="0.167em"></mspace><mstyle mathvariant="normal"><mtext mathvariant="normal">J</mtext><mspace width="0.167em"></mspace><mtext mathvariant="normal">s</mtext><mspace width="0.167em"></mspace></mstyle></mrow><annotation encoding="application/x-tex">\hbar \equiv \frac{h}{2 \pi} \approx 1.05457e-34\,\mathrm{\text{J}\,\text{s}\,}</annotation></semantics></math></td>
+<td><span class="LaTeX">$\hbar \equiv \frac{h}{2 \pi} \approx {1.05457e-34\,\mathrm{{\text{J}{\,}}{\text{s}{\,}}}}$</span></td>
 </tr>
 <tr class="odd">
 <td>Elektr. Feldkonst.</td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>ε</mi><mn>0</mn></msub><mo>=</mo><mn>8.854</mn><mn>188</mn><mi>e</mi><mo>−</mo><mn>12</mn><mspace width="0.167em"></mspace><mstyle mathvariant="normal"><mtext mathvariant="normal">F</mtext><mspace width="0.167em"></mspace><mi>/</mi><mtext mathvariant="normal">m</mtext><mspace width="0.167em"></mspace></mstyle></mrow><annotation encoding="application/x-tex">\varepsilon_0 = 8.854 188e-12\,\mathrm{\text{F}\,/\text{m}\,}</annotation></semantics></math></td>
+<td><span class="LaTeX">$\varepsilon_0 = {8.854 188e-12\,\mathrm{{\text{F}{\,}}{/}{\text{m}{\,}}}}$</span></td>
 </tr>
 <tr class="even">
 <td>Magn. Feldkonst.</td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>μ</mi><mn>0</mn></msub><mo>:=</mo><mn>4</mn><mi>π</mi><mo>×</mo><mi>e</mi><mo>−</mo><mn>7</mn><mspace width="0.167em"></mspace><mstyle mathvariant="normal"><mtext mathvariant="normal">H</mtext><mspace width="0.167em"></mspace><mi>/</mi><mtext mathvariant="normal">m</mtext><mspace width="0.167em"></mspace></mstyle></mrow><annotation encoding="application/x-tex">\mu_0 := 4\pi \times e-7\,\mathrm{\text{H}\,/\text{m}\,}</annotation></semantics></math></td>
+<td><span class="LaTeX">$\mu_0 := 4\pi \times {e-7\,\mathrm{{\text{H}{\,}}{/}{\text{m}{\,}}}}$</span></td>
 </tr>
 <tr class="odd">
-<td><span class="smallcaps">Avogadro</span>-Konst.</td>
-<td><span class="math inline">$N_{\rm A} \approx 6.022 141e23\,\mathrm{/\text{mol}\,}$</span></td>
+<td><span style="font-variant: small-caps;">Avogadro</span>-Konst.</td>
+<td><span class="LaTeX">$N_{{\rm}A} \approx {6.022 141e23\,\mathrm{{/}{\text{mol}{\,}}}}$</span></td>
 </tr>
 <tr class="even">
 <td>Atomare Masse</td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathvariant="normal"><mi>u</mi></mstyle><mo>≈</mo><mn>1.660</mn><mn>539</mn><mi>e</mi><mo>−</mo><mn>27</mn><mspace width="0.167em"></mspace><mstyle mathvariant="normal"><mtext mathvariant="normal">kg</mtext><mspace width="0.167em"></mspace></mstyle></mrow><annotation encoding="application/x-tex">\mathrm{u} \approx 1.660 539e-27\,\mathrm{\text{kg}\,}</annotation></semantics></math></td>
+<td><span class="LaTeX">$\mathrm{u} \approx {1.660 539e-27\,\mathrm{{\text{kg}{\,}}}}$</span></td>
 </tr>
 <tr class="odd">
 <td>Elektronenmasse</td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>m</mi><mi>e</mi></msub><mo>≈</mo><mn>9</mn><mo>,</mo><mn>109</mn><mn>383</mn><mi>e</mi><mo>−</mo><mn>31</mn><mspace width="0.167em"></mspace><mstyle mathvariant="normal"><mtext mathvariant="normal">kg</mtext><mspace width="0.167em"></mspace></mstyle></mrow><annotation encoding="application/x-tex">m_e \approx 9,109 383e-31\,\mathrm{\text{kg}\,}</annotation></semantics></math></td>
+<td><span class="LaTeX">$m_e \approx {9,109 383e-31\,\mathrm{{\text{kg}{\,}}}}$</span></td>
 </tr>
 <tr class="even">
 <td>Protonenmasse</td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>m</mi><mi>p</mi></msub><mo>≈</mo><mn>1</mn><mo>,</mo><mn>674</mn><mn>927</mn><mi>e</mi><mo>−</mo><mn>27</mn><mspace width="0.167em"></mspace><mstyle mathvariant="normal"><mtext mathvariant="normal">kg</mtext><mspace width="0.167em"></mspace></mstyle></mrow><annotation encoding="application/x-tex">m_p \approx 1,674 927e-27\,\mathrm{\text{kg}\,}</annotation></semantics></math></td>
+<td><span class="LaTeX">$m_p \approx {1,674 927e-27\,\mathrm{{\text{kg}{\,}}}}$</span></td>
 </tr>
 <tr class="odd">
 <td>Neutronenmasse</td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>m</mi><mi>n</mi></msub><mo>≈</mo><mn>1</mn><mo>,</mo><mn>672</mn><mn>622</mn><mi>e</mi><mo>−</mo><mn>27</mn><mspace width="0.167em"></mspace><mstyle mathvariant="normal"><mtext mathvariant="normal">kg</mtext><mspace width="0.167em"></mspace></mstyle></mrow><annotation encoding="application/x-tex">m_n \approx 1,672 622e-27\,\mathrm{\text{kg}\,}</annotation></semantics></math></td>
+<td><span class="LaTeX">$m_n \approx {1,672 622e-27\,\mathrm{{\text{kg}{\,}}}}$</span></td>
 </tr>
 <tr class="even">
 <td>Gravitationskonst.</td>
-<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathvariant="normal"><mi>G</mi></mstyle><mo>≈</mo><mn>6</mn><mo>,</mo><mn>673</mn><mn>84</mn><mi>e</mi><mo>−</mo><mn>11</mn><mspace width="0.167em"></mspace><mstyle mathvariant="normal"><mtext mathvariant="normal">kg</mtext><mspace width="0.167em"></mspace><mi>/</mi><mtext mathvariant="normal">s</mtext><msup><mspace width="0.167em"></mspace><mn>2</mn></msup></mstyle></mrow><annotation encoding="application/x-tex">\mathrm{G} \approx 6,673 84e-11\,\mathrm{\text{kg}\,/\text{s}\,^{2}}</annotation></semantics></math></td>
+<td><span class="LaTeX">$\mathrm{G} \approx {6,673 84e-11\,\mathrm{{\text{kg}{\,}}{/}{\text{s}{\,}}{^{2}}}}$</span></td>
 </tr>
 <tr class="odd">
-<td><span class="smallcaps">Boltzmann</span>-Konst.</td>
-<td><span class="math inline">$k_{\rm B} \approx 1.380 655e-23\,\mathrm{\text{J}\,/\text{K}\,}$</span></td>
+<td><span style="font-variant: small-caps;">Boltzmann</span>-Konst.</td>
+<td><span class="LaTeX">$k_{{\rm}B} \approx {1.380 655e-23\,\mathrm{{\text{J}{\,}}{/}{\text{K}{\,}}}}$</span></td>
 </tr>
 </tbody>
 </table>

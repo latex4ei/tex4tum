@@ -10,7 +10,7 @@
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="http://localhost:4000/sha-3">
+    <link rel="canonical" href="/sha-3">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -106,8 +106,7 @@
                     <h6 class="dropdown-header">Display Options</h6>
                     <div class="form-check dropdown-item">
                         <label class="form-check-label">
-                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox"
-                                checked="checked" onchange="Options.changeOption(this)">
+                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox" onchange="Options.changeOption(this)">
                             Definitions
                         </label>
                     </div>
@@ -178,37 +177,13 @@
 
 </p>
 
-
 <!-- Basics -->
-
 <!--    -->
-
-
-
-
-
 <!-- \newcommand{\diff}{\mathop{}\!\mathrm{\vphantom( d}} -->
-
-
-
-
-
 <!-- SI Units -->
 <!--=============================================================== -->
-
-
-
-
-
-
-
-
-
 <!-- KaTeX Tweaks -->
-
-
 <!-- \renewcommand{\boldsymbol}[1]{\mathbf{#1}} -->
-
 <div id="title_def" class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
@@ -216,7 +191,7 @@
 Definition
 </h5>
 <p class="card-text">
-The Secure Hash Algorithm 3 (SHA-3) is a set of 6 cryptographic hash functions as a subset of the Keccak algorithm.
+The Secure Hash <a href="/algorithm" >Algorithm</a> 3 (SHA-3) is a set of 6 cryptographic hash functions as a subset of the Keccak algorithm.
 </p>
 </div>
 </div>
@@ -265,7 +240,7 @@ The Secure Hash Algorithm 3 (SHA-3) is a set of 6 cryptographic hash functions a
 </table>
 <div class="row">
 <div class="col-md-auto pr-0">
-<p>SHA3-256 (" <input id="number-input" style="width: 5em;" oninput="calcSHA3(this)" placeholder="Input" value=""> ") =</p>
+<p>SHA3-256 (&quot; <input id="number-input" style="width: 5em;" oninput="calcSHA3(this)" placeholder="Input" value=""> &quot;) =</p>
 </div>
 <div class="col pl-0">
 <p>
@@ -274,7 +249,7 @@ The Secure Hash Algorithm 3 (SHA-3) is a set of 6 cryptographic hash functions a
 </div>
 </div>
 <h2 id="working-principle">Working Principle</h2>
-<p>In contrast to SHA-2, SHA-3 is based on sponge construction in which data is “absorbed” into the sponge, then the result is “squeezed” out. In the absorbing phase, message blocks are XORed into a subset of the state, which is then transformed as a whole using a permutation function <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>f</mi><annotation encoding="application/x-tex">f</annotation></semantics></math>.</p>
+<p>In contrast to <a href="sha-2" title="Secure Hash Algorithm 2 ">SHA-2</a>, SHA-3 is based on sponge construction in which data is &quot;absorbed&quot; into the sponge, then the result is &quot;squeezed&quot; out. In the absorbing phase, message blocks are XORed into a subset of the state, which is then transformed as a whole using a permutation function <span class="LaTeX">$f$</span>.</p>
 <h2 id="references">References</h2>
 <ul>
 <li><p><a href="https://en.wikipedia.org/wiki/SHA-3">Wikipedia: SHA-3</a></p></li>

@@ -10,7 +10,7 @@
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="http://localhost:4000/differential-operators">
+    <link rel="canonical" href="/differential-operators">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -106,8 +106,7 @@
                     <h6 class="dropdown-header">Display Options</h6>
                     <div class="form-check dropdown-item">
                         <label class="form-check-label">
-                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox"
-                                checked="checked" onchange="Options.changeOption(this)">
+                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox" onchange="Options.changeOption(this)">
                             Definitions
                         </label>
                     </div>
@@ -189,37 +188,13 @@
 
 </p>
 
-
 <!-- Basics -->
-
 <!--    -->
-
-
-
-
-
 <!-- \newcommand{\diff}{\mathop{}\!\mathrm{\vphantom( d}} -->
-
-
-
-
-
 <!-- SI Units -->
 <!--=============================================================== -->
-
-
-
-
-
-
-
-
-
 <!-- KaTeX Tweaks -->
-
-
 <!-- \renewcommand{\boldsymbol}[1]{\mathbf{#1}} -->
-
 <div id="title_def" class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
@@ -235,18 +210,18 @@ A differential operator is an operator.
 <table>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;"><strong>Gradient</strong> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">grad</mtext><mi>f</mi></mrow><annotation encoding="application/x-tex">\text{grad}f</annotation></semantics></math></td>
-<td style="text-align: left;"><strong>Rotation</strong> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">rot</mtext><mstyle mathvariant="bold"><mi>𝐟</mi></mstyle></mrow><annotation encoding="application/x-tex">\text{rot}\boldsymbol f</annotation></semantics></math></td>
+<td style="text-align: left;"><strong>Gradient</strong> <span class="LaTeX">${\text{grad}}f$</span></td>
+<td style="text-align: left;"><strong>Rotation</strong> <span class="LaTeX">${\text{rot}}{\boldsymbol f}$</span></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><strong>Divergenz</strong> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">div</mtext><mstyle mathvariant="bold"><mi>𝐟</mi></mstyle></mrow><annotation encoding="application/x-tex">\text{div}\boldsymbol f</annotation></semantics></math></td>
-<td style="text-align: left;"><strong>Laplace</strong> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Δ</mi><mspace width="0.167em"></mspace><mi>f</mi><mo>=</mo><mspace width="0.167em"></mspace><mtext mathvariant="normal">Sp</mtext><msub><mstyle mathvariant="bold"><mi>𝐇</mi></mstyle><mi>f</mi></msub><mo stretchy="false" form="prefix">(</mo><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\Delta\, f = \,\text{Sp}\boldsymbol{H}_f(\boldsymbol x)</annotation></semantics></math></td>
+<td style="text-align: left;"><strong>Divergenz</strong> <span class="LaTeX">${\text{div}}{\boldsymbol f}$</span></td>
+<td style="text-align: left;"><strong>Laplace</strong> <span class="LaTeX">$\Delta\, f = {\,\text{Sp}}{\boldsymbol{H}}_f({\boldsymbol x})$</span></td>
 </tr>
 </tbody>
 </table>
 <h2 id="gradient">Gradient</h2>
-<p><span class="math inline">$\mathrm{grad}\; f: \R \rightarrow \R^3$</span></p>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">grad</mtext><mi>f</mi><mo>=</mo><mstyle mathvariant="bold"><mi>∇</mi></mstyle><mi>f</mi><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><mtable><mtr><mtd columnalign="center"><mfrac><mrow><mi>∂</mi><mi>f</mi></mrow><mrow><mi>∂</mi><msub><mi>x</mi><mn>1</mn></msub></mrow></mfrac></mtd></mtr><mtr><mtd columnalign="center"><mi>⋮</mi></mtd></mtr><mtr><mtd columnalign="center"><mfrac><mrow><mi>∂</mi><mi>f</mi></mrow><mrow><mi>∂</mi><msub><mi>x</mi><mi>n</mi></msub></mrow></mfrac></mtd></mtr></mtable><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">\text{grad}f = \boldsymbol \nabla f = \begin{pmatrix} \frac{\partial f}{\partial x_1} \\ \vdots \\ \frac{\partial f}{\partial x_n}  \end{pmatrix}</annotation></semantics></math></p>
+<p><span class="LaTeX">$\mathrm{grad}\; f: {\mathop{\mathbb R}}\rightarrow {\mathop{\mathbb R}}^3$</span></p>
+<p><span class="LaTeX">$${\text{grad}}f = {\boldsymbol \nabla} f = {\begin{pmatrix} \frac{\partial f}{\partial x_1} \\ \vdots \\ \frac{\partial f}{\partial x_n}  \end{pmatrix}}$$</span></p>
 <h5 class="clp_title text-warning" data-toggle="collapse" href="#expl17">
 <i class='fa fa-comment-dots'></i> Explanation
 </h5>
@@ -260,7 +235,7 @@ Der Gradient zeigt an, wie groß und in welcher Richtung die größte Steigung i
 </div>
 </div>
 <h2 id="rotation">Rotation</h2>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">rot</mtext><mstyle mathvariant="bold"><mi>𝐟</mi></mstyle><mo>=</mo><mstyle mathvariant="bold"><mi>∇</mi></mstyle><mo>×</mo><mstyle mathvariant="bold"><mi>𝐟</mi></mstyle><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><mtable><mtr><mtd columnalign="center"><mfrac><mi>∂</mi><mrow><mi>∂</mi><msub><mi>x</mi><mn>1</mn></msub></mrow></mfrac></mtd></mtr><mtr><mtd columnalign="center"><mover><mo>:</mo><mo accent="true">̇</mo></mover></mtd></mtr><mtr><mtd columnalign="center"><mfrac><mi>∂</mi><mrow><mi>∂</mi><msub><mi>x</mi><mi>n</mi></msub></mrow></mfrac></mtd></mtr></mtable><mo stretchy="true" form="postfix">)</mo></mrow><mo>×</mo><mrow><mo stretchy="true" form="prefix">(</mo><mtable><mtr><mtd columnalign="center"><msub><mi>f</mi><mn>1</mn></msub></mtd></mtr><mtr><mtd columnalign="center"><mover><mo>:</mo><mo accent="true">̇</mo></mover></mtd></mtr><mtr><mtd columnalign="center"><msub><mi>f</mi><mi>n</mi></msub></mtd></mtr></mtable><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">\text{rot}\boldsymbol f = \boldsymbol \nabla \times \boldsymbol f = \begin{pmatrix} \frac{\partial}{\partial x_1} \\ \dot : \\ \frac{\partial}{\partial x_n}  \end{pmatrix} \times \begin{pmatrix}  f_1 \\ \dot : \\ f_n  \end{pmatrix}</annotation></semantics></math></p>
+<p><span class="LaTeX">$${\text{rot}}{\boldsymbol f} = {\boldsymbol \nabla} \times {\boldsymbol f} = {\begin{pmatrix} \frac{\partial}{\partial x_1} \\ \dot : \\ \frac{\partial}{\partial x_n}  \end{pmatrix}} \times {\begin{pmatrix}  f_1 \\ \dot : \\ f_n  \end{pmatrix}}$$</span></p>
 <h5 class="clp_title text-warning" data-toggle="collapse" href="#expl18">
 <i class='fa fa-comment-dots'></i> Explanation
 </h5>
@@ -274,7 +249,7 @@ Die Rotation zeigt an, wie stark und um welche Achse sich ein Schaufelrad in ein
 </div>
 </div>
 <h2 id="divergenz">Divergenz</h2>
-<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">div</mtext><mi>f</mi><mo>=</mo><mstyle mathvariant="bold"><mi>∇</mi></mstyle><mo>⋅</mo><mstyle mathvariant="bold"><mi>𝐟</mi></mstyle><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><mtable><mtr><mtd columnalign="center"><mfrac><mi>∂</mi><mrow><mi>∂</mi><msub><mi>x</mi><mn>1</mn></msub></mrow></mfrac></mtd></mtr><mtr><mtd columnalign="center"><mi>⋮</mi></mtd></mtr><mtr><mtd columnalign="center"><mfrac><mi>∂</mi><mrow><mi>∂</mi><msub><mi>x</mi><mi>n</mi></msub></mrow></mfrac></mtd></mtr></mtable><mo stretchy="true" form="postfix">)</mo></mrow><mo>⋅</mo><mrow><mo stretchy="true" form="prefix">(</mo><mtable><mtr><mtd columnalign="center"><msub><mi>f</mi><mn>1</mn></msub></mtd></mtr><mtr><mtd columnalign="center"><mi>⋮</mi></mtd></mtr><mtr><mtd columnalign="center"><msub><mi>f</mi><mi>n</mi></msub></mtd></mtr></mtable><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">\text{div}f = \boldsymbol \nabla \cdot \boldsymbol f = \begin{pmatrix} \frac{\partial}{\partial x_1} \\ \vdots \\ \frac{\partial}{\partial x_n}  \end{pmatrix} \cdot \begin{pmatrix}  f_1 \\ \vdots \\ f_n \end{pmatrix}</annotation></semantics></math></p>
+<p><span class="LaTeX">$${\text{div}}f = {\boldsymbol \nabla} \cdot {\boldsymbol f} = {\begin{pmatrix} \frac{\partial}{\partial x_1} \\ \vdots \\ \frac{\partial}{\partial x_n}  \end{pmatrix}} \cdot {\begin{pmatrix}  f_1 \\ \vdots \\ f_n \end{pmatrix}}$$</span></p>
 <h5 class="clp_title text-warning" data-toggle="collapse" href="#expl19">
 <i class='fa fa-comment-dots'></i> Explanation
 </h5>
@@ -288,7 +263,7 @@ Die Divergenz gibt an, wie stark (Strömungs-) Vektoren in einem Punkt auseinand
 </div>
 </div>
 <h2 id="laplace">Laplace</h2>
-<p><span class="math display">$$\tiny\begin{matrix}\\ \normalsize \nabla^2 \\[1em] \scriptsize \nabla \cdot (\nabla f) \end{matrix} f = \begin{pmatrix} \frac{\partial}{\partial x_1} \\ \vdots \\ \frac{\partial}{\partial x_n}  \end{pmatrix} \cdot \begin{pmatrix} \frac{\partial f}{\partial x_1} \\ \vdots \\ \frac{\partial f}{\partial x_n}  \end{pmatrix}$$</span></p>
+<p><span class="LaTeX">$${\tiny\begin{matrix}\\ \normalsize \nabla^2 \\[1em] \scriptsize \nabla \cdot (\nabla f) \end{matrix}} f = {\begin{pmatrix} \frac{\partial}{\partial x_1} \\ \vdots \\ \frac{\partial}{\partial x_n}  \end{pmatrix}} \cdot {\begin{pmatrix} \frac{\partial f}{\partial x_1} \\ \vdots \\ \frac{\partial f}{\partial x_n}  \end{pmatrix}}$$</span></p>
 <h5 class="clp_title text-warning" data-toggle="collapse" href="#expl20">
 <i class='fa fa-comment-dots'></i> Explanation
 </h5>

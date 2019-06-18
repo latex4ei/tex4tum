@@ -10,7 +10,7 @@
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="http://localhost:4000/rounding">
+    <link rel="canonical" href="/rounding">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -106,8 +106,7 @@
                     <h6 class="dropdown-header">Display Options</h6>
                     <div class="form-check dropdown-item">
                         <label class="form-check-label">
-                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox"
-                                checked="checked" onchange="Options.changeOption(this)">
+                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox" onchange="Options.changeOption(this)">
                             Definitions
                         </label>
                     </div>
@@ -168,37 +167,13 @@
 
 </p>
 
-
 <!-- Basics -->
-
 <!--    -->
-
-
-
-
-
 <!-- \newcommand{\diff}{\mathop{}\!\mathrm{\vphantom( d}} -->
-
-
-
-
-
 <!-- SI Units -->
 <!--=============================================================== -->
-
-
-
-
-
-
-
-
-
 <!-- KaTeX Tweaks -->
-
-
 <!-- \renewcommand{\boldsymbol}[1]{\mathbf{#1}} -->
-
 <div id="title_def" class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
@@ -236,10 +211,10 @@ No measurement of a physical quantity is infinite accurate and it is important t
 </tr>
 </tbody>
 </table>
-<h5 class="clp_title text-success" data-toggle="collapse" href="#example19">
+<h5 class="clp_title text-success" data-toggle="collapse" href="#example20">
 <i class='fa fa-chart-bar'></i> Example
 </h5>
-<div id='example19' class='example collapse'>
+<div id='example20' class='example collapse'>
 <div class='card border-success mb-1'>
 <div class='card-body'>
 <p class='card-text'>
@@ -253,7 +228,7 @@ No measurement of a physical quantity is infinite accurate and it is important t
 <tr class="header">
 <th>Number</th>
 <th>Sign. Fig.</th>
-<th>Dec. Pl.</th>
+<th>Dec. Pl.</th>
 </tr>
 </thead>
 <tbody>
@@ -279,22 +254,22 @@ No measurement of a physical quantity is infinite accurate and it is important t
 <p>Multiplication/Division: round to the lowest amount of significant figures Addition/Subtraction: round to the lowest amount of decimal places Square root: round to the significant figures of the input Logarithm: round the result</p>
 <p>Rules: * Round each value exactly once. Only use the digit right to the digit to be rounded to estimate the rounded result. If you apply rounding rules to the same value twice, you do something wrong.</p>
 <ul>
-<li><p>Only round the result! In a series of calculations, carry extra digits through to the final result, THEN round. Do not round intermediate values when used for calculations!</p></li>
-<li><p>round at once. Only use the digit right to the digit to be rounded to estimate the rounded result.</p></li>
+<li><p>Only round the result! In a <a href="/series" >series</a> of calculations, carry extra digits through to the final result, THEN round. Do not round intermediate values when used for calculations!</p></li>
+<li>round at once. Only use the digit right to the digit to be rounded to estimate the rounded result.</li>
 <li><p>if you continue calculation, calculate with the value <em>before</em> the rounding or with at least two significant figures more but use the rounded value when estimating the significant figures of your new result.</p></li>
 </ul>
 <p>If an equations contains multiplication and addition: 1. Calculate the equation without any rounding, this is your correct result 2. Calculate the equation with rounding after each operation, this is your wrong but correctly rounded result. You can also just calculate the number of significant digits for each operation by appling the rounding rules after each operation without calculating the resulting value. 3. Round the result from 1. to the significant figures obtained from 2.</p>
 <h2 id="scientific-notation-of-numbers">Scientific Notation of Numbers</h2>
-<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>167</mn><mo>=</mo><mn>1.67</mn><mo>×</mo><msup><mn>10</mn><mn>2</mn></msup><mo>=</mo><mn>1.67</mn><mstyle mathvariant="normal"><mi>E</mi></mstyle><mn>2</mn></mrow><annotation encoding="application/x-tex">167 = 1.67 \times 10^2 = 1.67\mathrm{E}2</annotation></semantics></math></p>
-<p>Rules: 1. Determine the maginitude in <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1000</mn><mo>=</mo><msup><mn>10</mn><mn>3</mn></msup></mrow><annotation encoding="application/x-tex">1000 = 10^3</annotation></semantics></math> 2. Round the number to significant figures</p>
-<h5 class="clp_title text-success" data-toggle="collapse" href="#example20">
+<p><span class="LaTeX">$167 = 1.67 \times 10^2 = 1.67\mathrm{E}2$</span></p>
+<p>Rules: 1. Determine the maginitude in <span class="LaTeX">$1000 = 10^3$</span> 2. Round the number to significant figures</p>
+<h5 class="clp_title text-success" data-toggle="collapse" href="#example21">
 <i class='fa fa-chart-bar'></i> Example
 </h5>
-<div id='example20' class='example collapse'>
+<div id='example21' class='example collapse'>
 <div class='card border-success mb-1'>
 <div class='card-body'>
 <p class='card-text'>
-For the number 0.012345, which shall be rounded to 4 significant figures. 1. <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.012345</mn><mo>=</mo><mn>12.345</mn><mo>⋅</mo><msup><mn>10</mn><mrow><mo>−</mo><mn>3</mn></mrow></msup></mrow><annotation encoding="application/x-tex">0.012345 = 12.345 \cdot 10^{-3}</annotation></semantics></math> 2. <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>12.345</mn><mo>⋅</mo><msup><mn>10</mn><mrow><mo>−</mo><mn>3</mn></mrow></msup><mo>≈</mo><mn>12.35</mn><mo>⋅</mo><msup><mn>10</mn><mrow><mo>−</mo><mn>3</mn></mrow></msup></mrow><annotation encoding="application/x-tex">12.345 \cdot 10^{-3} \approx 12.35 \cdot 10^{-3}</annotation></semantics></math>
+For the number 0.012345, which shall be rounded to 4 significant figures. 1. <span class="LaTeX">$0.012345 = 12.345 \cdot 10^{-3}$</span> 2. <span class="LaTeX">$12.345 \cdot 10^{-3} \approx 12.35 \cdot 10^{-3}$</span>
 <p>
 </div>
 </div>

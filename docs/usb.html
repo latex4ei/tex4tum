@@ -10,7 +10,7 @@
     <meta name="description" content="Interactive Knowledge Base for Engineers
 "/>
     <link rel="shortcut icon" href="/res/img/Logo.png"/>
-    <link rel="canonical" href="http://localhost:4000/usb">
+    <link rel="canonical" href="/usb">
 
     <!-- Brower bar color for mobile devices (TUM blue) -->
     <meta name="theme-color" content="#005293">
@@ -106,8 +106,7 @@
                     <h6 class="dropdown-header">Display Options</h6>
                     <div class="form-check dropdown-item">
                         <label class="form-check-label">
-                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox"
-                                checked="checked" onchange="Options.changeOption(this)">
+                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox" onchange="Options.changeOption(this)">
                             Definitions
                         </label>
                     </div>
@@ -181,37 +180,13 @@
 
 </p>
 
-
 <!-- Basics -->
-
 <!--    -->
-
-
-
-
-
 <!-- \newcommand{\diff}{\mathop{}\!\mathrm{\vphantom( d}} -->
-
-
-
-
-
 <!-- SI Units -->
 <!--=============================================================== -->
-
-
-
-
-
-
-
-
-
 <!-- KaTeX Tweaks -->
-
-
 <!-- \renewcommand{\boldsymbol}[1]{\mathbf{#1}} -->
-
 <div id="title_def" class="definition collapse">
 <div class="card border-primary mb-1">
 <div class="card-body">
@@ -219,11 +194,18 @@
 Definition
 </h5>
 <p class="card-text">
-The USB is serial bus commonly used in computers.
+The <abbr title="Universal Serial Bus" >USB</abbr> is serial <a href="/bus" >bus</a> commonly used in computers.
 </p>
 </div>
 </div>
 </div>
+<h2 id="table-of-contents"><i class="fa fa-list-ul"></i> Table of Contents</h2>
+<ul>
+<li><a href="#overview">Overview</a></li>
+<li><a href="#usb-20">USB 2.0</a></li>
+<li><a href="#usb-30">USB 3.0</a></li>
+<li><a href="#references">References</a></li>
+</ul>
 <h2 id="overview">Overview</h2>
 <table>
 <thead>
@@ -261,7 +243,7 @@ The USB is serial bus commonly used in computers.
 </tr>
 </tbody>
 </table>
-<p>Maximum devices: 127. Cable length: <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>&lt;</mo><mn>5</mn><mspace width="0.167em"></mspace><mstyle mathvariant="normal"><mi>m</mi></mstyle></mrow><annotation encoding="application/x-tex">\lt 5\,\mathrm{m}</annotation></semantics></math></p>
+<p>Maximum devices: 127. Cable length: <span class="LaTeX">$\lt {5\,\mathrm{m}}$</span></p>
 <!--<p> Filename="usb-connectors.svg", path="/res/img/content-images/connectors/usb-connectors.svg" </p>-->
 <figure class="figure">
 <img class="figure-img img-fluid" style="width: 20em;" src="/res/img/content-images/connectors/usb-connectors.svg" alt="USB Connectors"/>
@@ -290,13 +272,13 @@ USB Connectors
 <td>2</td>
 <td>D-</td>
 <td>White</td>
-<td>Inverted Signal</td>
+<td>Inverted <a href="/signal" >Signal</a></td>
 </tr>
 <tr class="odd">
 <td>3</td>
 <td>D+</td>
 <td>Green</td>
-<td>Signal</td>
+<td><a href="/signal" >Signal</a></td>
 </tr>
 <tr class="even">
 <td>4</td>
@@ -332,7 +314,7 @@ USB Connectors
 </tr>
 </tbody>
 </table>
-<p>The practical speed is 280 Mbit/s due to bus access constraints.</p>
+<p>The practical speed is 280 Mbit/s due to <a href="/bus" >bus</a> access constraints.</p>
 <h3 id="pinout">Pinout</h3>
 <table style="text-align: center;">
 <caption>
@@ -557,7 +539,7 @@ N/A
 GND_DRAIN
 </td>
 <td style="text-align: left;">
-Ground for signal return
+Ground for <a href="/signal" >signal</a> return
 </td>
 </tr>
 <tr>
@@ -623,6 +605,10 @@ Ground for DPWR return (Powered-B only)
 </tr>
 </tbody>
 </table>
+<h2 id="references">References</h2>
+<ul>
+<li>USB-C</li>
+</ul>
 
 
     </main>
