@@ -63,32 +63,41 @@ The frame starts with 2 IPHC bytes, where the first byte *is* the LoWPAN dispatc
 
 TF – 2 bit
 : Traffic Class and Flow Label (TF), 2 bit
-	- 00: Carried Inline (ECN+DSCP+Flow) 
-	- 01: ECN+Flow
-	- 10: ECN+DSCP
-	- 11: Traffic Class and Flow Label are elided.
+
+  - 00: Carried Inline (ECN+DSCP+Flow) 
+  - 01: ECN+Flow
+  - 10: ECN+DSCP
+  - 11: Traffic Class and Flow Label are elided.
 
 NH – 1 bit
 : Next Header compression (NH)
-	- 0: Carried Inline
-	- 1: next header is compressed using LOWPAN_NHC
+
+  - 0: Carried Inline
+  - 1: next header is compressed using LOWPAN_NHC
+
 
 HLIM – 2 bit
 : Hop Limit (HLIM)
-	- 00: Carried Inline. 
-	- 01: 1 and elided. 
-	- 10: 64 and elided.
-	- 11: 255 and elided.
+
+  - 00: Carried Inline. 
+  - 01: 1 and elided. 
+  - 10: 64 and elided.
+  - 11: 255 and elided.
+
 
 CID – 1 bit
 : Context Identifier Extension (CID)
-	- 0: No 1-byte CID identifier
-	- 1: 1-byte identifier follows
+
+  - 0: No 1-byte CID identifier
+  - 1: 1-byte identifier follows
+
 
 SAC/DAC – 1 bit each
 : Source/Destination Address Compression
-	- 0: Stateless
-	- 1: Context-based
+
+  - 0: Stateless
+  - 1: Context-based
+
 
 SAM/DAM – 2 bit each
 : Source/Destination Address Mode</br>
@@ -113,8 +122,9 @@ SAM/DAM – 2 bit each
 
 M – 1 bit
 : Multicast Destination (M)
-	- 0: Destination  is not multicast 
-	- 1: Destination  is multicast
+
+  - 0: Destination  is not multicast 
+  - 1: Destination  is multicast
 
 
 #### Context Identifier Extension (CIE)
@@ -148,12 +158,14 @@ UDP header compression ID.
 ##### Explanation of UDP LOWPAN_NHC Byte
 C
 : Checksum:
+
   - 0: All 16 bits of Checksum are carried in-line.
   - 1: All 16 bits of Checksum are elided with higher-layer 
        end-to-end integrity checks.
 
 P
 : Ports:
+
   - 00: 16 bits. Source Port and Destination Port are carried in-line.
   - 01:  All 16 bits for Source Port are carried in-line.  First 8
          bits of Destination Port is 0xf0 and elided.  The remaining 8
@@ -196,34 +208,43 @@ The HC1 byte is used to compress the IPv6 header.
 
 IP-SA – 2 bit
 :   IPv6 source address (bits 0 and 1):
+
   - 00: Prefix in-line, Interface identifier
   - 01: Prefix compressed (link-local prefix assumed).
   - 10: Interface identifier carried in-line
   - 11: Interface identifier elided
 
+
 IP-DA – 2 bit
 :   IPv6 destination address (bits 2 and 3):
+
   - 00: Prefix carried in-line
   - 01: Prefix compressed (link-local prefix assumed).
   - 10: Interface identifier carried in-line
   - 11: Interface identifier elided
 
+
 TF – 1 bit
 :   Traffic Class and Flow Label (bit 4):
+
   - 0: not compressed; full 8 bits for TC and 20 bits for FL
   - 1: Traffic Class and Flow Label are zero
 
+
 NH – 2 bit
 :   Next Header (bits 5 and 6):
+
   - 00: not compressed; full 8 bits are sent
   - 01: UDP
   - 10: ICMP
   - 11: TCP
 
+
 HC2 – 1 bit 
 :	HC2 encoding(bit 7):
-	- 0: no more header compression bits
-	- 1: HC1 compression byte follows immediately
+
+  - 0: no more header compression bits
+  - 1: HC1 compression byte follows immediately
 
 
 #### HC2 compression byte

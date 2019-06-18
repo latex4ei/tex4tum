@@ -11,10 +11,12 @@ RPL organizes the network topology as a Destination Oriented Directed Acyclic Gr
 
 ### Control Messages
 There are four types of control messages in RPL:
+
 * DODAG Information Solicitation (DIS)
 * DODAG Information Object (DIO)
 * Destination Advertisement Object (DAO)
 * Destination Advertisement Object Acknowledgement (DAO-ACK)
+
 
 
 ## Mechanisms
@@ -35,12 +37,10 @@ An isolated node that wants to join an existing DODAG broadcasts DIS messages. W
 There are two types of repair procedures in case a link or node fails.
 
 
-### Local repair 
+* **Local repair**
 When a link or neighboring node failure is detected and the node has no other router in the ‘up’ direction, 
-
-
-### Global repair
-Can be triggered only from the root and has a cost of additional control traffic in the network.
+* **Global repair**
+Can be triggered only from the root node and has a cost of additional control traffic in the network.
 
 
 
@@ -48,5 +48,7 @@ Can be triggered only from the root and has a cost of additional control traffic
 ## References
 
 [1]: [RFC 6550: RPL](https://tools.ietf.org/html/rfc6550)
+[2]: [Tsvetko Tsvetkov: “RPL: IPv6 Routing Protocol for Low Power and Lossy Networks”, TUM-IN-NET, 2011](https://www.net.in.tum.de/fileadmin/TUM/NET/NET-2011-07-1/NET-2011-07-1_09.pdf)
+
 
 [^rpl]: [RFC 6550: RPL](https://tools.ietf.org/html/rfc6550)

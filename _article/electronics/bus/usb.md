@@ -182,3 +182,9 @@ The practical speed is 280 Mbit/s due to bus access constraints.
 </tbody>
 </table>
 
+
+
+## References
+
+* USB-C
+
