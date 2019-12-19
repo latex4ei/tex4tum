@@ -13,7 +13,7 @@ addons:
       - zlib1g-dev
 
 before_install:
-  - yes | gem update --system --force` # Required as we use ruby < 2.6
+  - yes | gem update --system --force # Required as we use ruby < 2.6
   - gem install jekyll bundler
 
 # Assume bundler is being used, therefore
