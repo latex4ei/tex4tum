@@ -1,7 +1,7 @@
 sudo: false # route your build to the container-based infrastructure for a faster build
 language: ruby
 rvm:
-- 2.5.1
+  - 2.5.1
 
 addons:
   apt:
@@ -13,6 +13,7 @@ addons:
       - zlib1g-dev
 
 before_install:
+  - yes | gem update --system --force # Required as we use ruby < 2.6
   - gem install jekyll bundler
 
 # Assume bundler is being used, therefore
