@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<?xml-stylesheet href="./t4t_svg.css" type="text/css"?>
-<svg xmlns="http://www.w3.org/2000/svg" height="81.179mm" width="90.956mm" version="1.1" viewBox="0 0 90.956261 81.178749">
- <rect stroke-linejoin="round" style="paint-order:normal" class="mo-rot-ccw" height="31.75" width="33.262" stroke="#e37222" y="16.631" x=".52917" stroke-width="1.0583" fill="#e37222"/>
- <rect style="paint-order:normal" class="hl-prim" height="23.435" width="23.435" y="-7.2266e-8" x="42.107" fill="#b3b3b3"/>
- <rect stroke-linejoin="round" style="paint-order:normal" class="mo-move-l1" height="19.17" width="20.821" stroke="#000000" y="61.919" x="70.045" stroke-width=".52267" fill="#737272"/>
- <g class="move-l05"><path d="m59.531 44.137c2.6458-5.2917 5.2917-5.2917 7.9375 0s5.2917 5.2917 7.9375 0 5.2917-5.2917 7.9375 0 5.2917 5.2917 7.9375 0 5.2917-5.2917 7.9375 0 5.2917 5.2917 7.9375 0 5.2917-5.2917 7.9375 0 5.2917 5.2917 7.9375 0" stroke="#000000" stroke-width=".26458px" fill="none"/></g>
-</svg>

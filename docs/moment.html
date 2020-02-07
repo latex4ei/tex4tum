@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 
     <!-- KaTeX CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
 </head>
 
 
@@ -207,7 +207,7 @@ A moment is a specific quantitative measure of the shape of a function.
 </div>
 <p>continuous:</p>
 <p><span class="LaTeX">$${\mathop{\mu}}_1 = \int _{\mathbb {R}} x \cdot f(x){\,\text{d}}x$$</span></p>
-<h2 id="variance">Variance</h2>
+<h2 id="variance-n-2">Variance (<span class="LaTeX">$n = 2$</span>)</h2>
 <p>discrete: <span class="LaTeX">$$\mu_2 =\sum x \cdot P(x)$$</span></p>
 <h2 id="central-moments-comparison">Central Moments Comparison</h2>
 <table>
@@ -307,15 +307,18 @@ A moment is a specific quantitative measure of the shape of a function.
   <script src="/assets/js/options.js"></script>
 
   <!-- KaTeX JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
 
   <!-- jQuery (req. for BootStrap) -->
-  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 
-  <!-- Bootstrap + Requirements -->
-  <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+  <!-- Bootstrap 4.4.1 + Requirements -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+  <script src="/assets/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"></script>
+
+
+ -->
 
   <!-- Fuse + Own Adapter -->
   <script src="https://cdn.jsdelivr.net/fuse/2.6.1/fuse.min.js"></script>
@@ -346,8 +349,8 @@ A moment is a specific quantitative measure of the shape of a function.
 
 
   <!-- Mermaid -->
-  <link rel="stylesheet" href="https://cdn.rawgit.com/knsv/mermaid/7.0.0/dist/mermaid.css">
-  <script type="text/javascript" src="https://cdn.rawgit.com/knsv/mermaid/7.0.0/dist/mermaid.min.js"></script>
+<!--   <link rel="stylesheet" href="https://cdn.rawgit.com/knsv/mermaid/7.0.0/dist/mermaid.css">
+  <script type="text/javascript" src="https://cdn.rawgit.com/knsv/mermaid/7.0.0/dist/mermaid.min.js"></script> -->
 
 <!-- ================================================== -->
 

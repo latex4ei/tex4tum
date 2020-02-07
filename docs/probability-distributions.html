@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 
     <!-- KaTeX CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
 </head>
 
 
@@ -160,13 +160,16 @@
 	
 		
 		
+	
+		
+		
 	 /
 </p>
 
 <h1><a data-toggle="collapse" href="#title_def" aria-expanded="false" aria-controls="title_def">
   
   Probability Distributions
-</a><a class="float-right small" style="font-size: small" href="https://github.com/latex4ei/tex4tum/edit/master/_article/math/statistics/probability-distributions.md">[edit]</a></h1>
+</a><a class="float-right small" style="font-size: small" href="https://github.com/latex4ei/tex4tum/edit/master/_article/math/statistics/probability-distributions/probability-distributions.md">[edit]</a></h1>
 
 <p>
 
@@ -179,6 +182,14 @@
 <!--=============================================================== -->
 <!-- KaTeX Tweaks -->
 <!-- \renewcommand{\boldsymbol}[1]{\mathbf{#1}} -->
+<h2 id="table-of-contents"><i class="fa fa-list-ul"></i> Table of Contents</h2>
+<ul>
+<li><a href="#classification">Classification</a></li>
+<li><a href="#urn-model">Urn Model</a></li>
+<li><a href="#-icon-fa-list-ul--subfolders-and-articles"><i class="fa fa-list-ul"></i> Subfolders and Articles</a></li>
+<li><a href="#distributions">Distributions</a></li>
+<li><a href="#references">References</a></li>
+</ul>
 <h2 id="classification">Classification</h2>
 <ul>
 <li>Domain: Discrete vs Continuous</li>
@@ -194,6 +205,13 @@
 <li>The number of drawn balls <span class="LaTeX">$n$</span></li>
 <li>The number of drawn balls in a particular color <span class="LaTeX">$k$</span>.</li>
 <li>Wheter balls are put back into the urn after each trial.</li>
+</ul>
+<h2 id="subfolders-and-articles"><i class="fa fa-list-ul"></i> Subfolders and Articles</h2>
+<ul>
+<li><a href="binomial-distribution.html">Binomial Distribution</a></li>
+<li><a href="exponential-distribution.html">Exponential Distribution</a></li>
+<li><a href="negative-binomial-distribution.html">Negative Binomial Distribution</a></li>
+<li><a href="normal-distribution.html">Normal Distribution</a></li>
 </ul>
 <h2 id="distributions">Distributions</h2>
 <h3 id="uniform">Uniform</h3>
@@ -371,15 +389,18 @@
   <script src="/assets/js/options.js"></script>
 
   <!-- KaTeX JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
 
   <!-- jQuery (req. for BootStrap) -->
-  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 
-  <!-- Bootstrap + Requirements -->
-  <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+  <!-- Bootstrap 4.4.1 + Requirements -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+  <script src="/assets/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"></script>
+
+
+ -->
 
   <!-- Fuse + Own Adapter -->
   <script src="https://cdn.jsdelivr.net/fuse/2.6.1/fuse.min.js"></script>
@@ -410,8 +431,8 @@
 
 
   <!-- Mermaid -->
-  <link rel="stylesheet" href="https://cdn.rawgit.com/knsv/mermaid/7.0.0/dist/mermaid.css">
-  <script type="text/javascript" src="https://cdn.rawgit.com/knsv/mermaid/7.0.0/dist/mermaid.min.js"></script>
+<!--   <link rel="stylesheet" href="https://cdn.rawgit.com/knsv/mermaid/7.0.0/dist/mermaid.css">
+  <script type="text/javascript" src="https://cdn.rawgit.com/knsv/mermaid/7.0.0/dist/mermaid.min.js"></script> -->
 
 <!-- ================================================== -->
 

@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 
     <!-- KaTeX CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
 </head>
 
 
@@ -186,40 +186,157 @@
 Definition
 </h5>
 <p class="card-text">
-The Routing Protocol for Low-Power and Lossy Networks (RPL, pronounced “ripple”), is an <abbr title="Internet Protocol version 6" >IPv6</abbr> Routing Protocol that provides point-to-point, multipoint-to-point and point-to-multipoint traffic.
+The Routing Protocol for Low-Power and Lossy Networks (RPL, pronounced “ripple”), is a Distance Vector <abbr title="Internet Protocol version 6" >IPv6</abbr> Routing Protocol that provides point-to-point, multipoint-to-point and point-to-multipoint traffic.
 </p>
 </div>
 </div>
 </div>
+<h2 id="table-of-contents"><i class="fa fa-list-ul"></i> Table of Contents</h2>
+<ul>
+<li><a href="#routing-requirements-for-lln">Routing Requirements for LLN</a></li>
+<li><a href="#dodag">DODAG</a></li>
+<li><a href="#mechanisms">Mechanisms</a></li>
+<li><a href="#references">References</a></li>
+</ul>
+<h2 id="routing-requirements-for-lln">Routing Requirements for LLN</h2>
+<p>In Low-Power and Lossy Networks (LLN) we have additional routing requirements compared to the stable Internet of servers.</p>
+<ul>
+<li>Unicast/Multicast/Broadcast: There might be messages that need to be send to several nodes instead of one server.</li>
+<li>Adaptive routing: support for dynamic recreation of paths based on changing availability</li>
+<li>Constraint-based routing: efficient use of limited resources (power, bandwidth)</li>
+<li>Data Collection: for Sensor networks, the protocol needs to support efficient multipoint-to-point routing.</li>
+<li>Scalability: LLNs are composed of a very large number of nodes (up to 1000)</li>
+<li>Automatic Configuration: The protocol needs to autoconfigure without user interaction</li>
+<li>Security: Physical control signals should always be authenticated and encrypted.</li>
+</ul>
 <h2 id="dodag">DODAG</h2>
-<p>RPL organizes the <a href="/network" >network</a> topology as a Destination Oriented Directed Acyclic Graph (DODAG)<sup>[1]</sup>. The DODAG is a hierarchical structure based on the ranks of each node. The rank is a measure for a certain routing metric (e.g. link quality) to a selected root node.</p>
+<p>RPL organizes the <a href="/network" >network</a> topology as a Destination Oriented Directed Acyclic Graph (DODAG)<sup>[1]</sup>. The DODAG is a hierarchical structure based on the ranks of each node. The rank is a measure for a certain routing metric (e.g. link quality) with respect to a selected DODAG root node. The rank of each node is determined by an <em>objective function</em> and a set of metrics/constraints.</p>
 <h3 id="control-messages">Control Messages</h3>
 <p>There are four types of control messages in RPL:</p>
 <ul>
-<li>DODAG Information Solicitation (DIS)</li>
-<li>DODAG Information Object (DIO)</li>
-<li>Destination Advertisement Object (DAO)</li>
+<li>DODAG Information Solicitation (DIS): Used to request a DIO from a RPL node, i.e neighbor discovery</li>
+<li>DODAG Information Object (DIO): Used for path creation and upward routing</li>
+<li>Destination Advertisement Object (DAO): Used for path creation and upward routing</li>
 <li>Destination Advertisement Object Acknowledgement (DAO-ACK)</li>
 </ul>
+<div class="card tabbox">
+<div class="card-header">
+<ul class="nav nav-tabs card-header-tabs ml-0" role="tablist">
+<li class="nav-item">
+<a class="nav-link active" data-toggle="tab" href="#checkboxid-0" role="tab">DIS</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" data-toggle="tab" href="#checkboxid-1" role="tab">DIO</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" data-toggle="tab" href="#checkboxid-2" role="tab">DAO</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" data-toggle="tab" href="#checkboxid-3" role="tab">DAO-ACK</a>
+</li>
+</ul>
+</div>
+<div class="card-body">
+<div class="tab-content">
+<div id="checkboxid-0" class="tab-pane active" role="tabpanel">
+<pre class="diagram"><code> 0                   1                   2
+ 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+|     Flags     |   Reserved    |   Option(s)...
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+</code></pre>
+</div>
+<div id="checkboxid-1" class="tab-pane" role="tabpanel">
+<pre class="diagram"><code> 0                   1                   2                   3
+ 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+| RPLInstanceID |Version Number |             Rank              |
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+|G|0| MOP | Prf |     DTSN      |     Flags     |   Reserved    |
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+|                                                               |
++                                                               +
+|                                                               |
++                            DODAGID                            +
+|                                                               |
++                                                               +
+|                                                               |
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+|   Option(s)...
++-+-+-+-+-+-+-+-+</code></pre>
+</div>
+<div id="checkboxid-2" class="tab-pane" role="tabpanel">
+<pre class="diagram"><code> 0                   1                   2                   3
+ 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+| RPLInstanceID |K|D|   Flags   |   Reserved    | DAOSequence   |
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+|                                                               |
++                                                               +
+|                                                               |
++                            DODAGID*                           +
+|                                                               |
++                                                               +
+|                                                               |
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+|   Option(s)...
++-+-+-+-+-+-+-+-+</code></pre>
+</div>
+<div id="checkboxid-2" class="tab-pane" role="tabpanel">
+<p>-ACK</p>
+<pre class="diagram"><code> 0                   1                   2                   3
+ 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+| RPLInstanceID |D|  Reserved   |  DAOSequence  |    Status     |
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+|                                                               |
++                                                               +
+|                                                               |
++                            DODAGID*                           +
+|                                                               |
++                                                               +
+|                                                               |
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+|   Option(s)...
++-+-+-+-+-+-+-+-+</code></pre>
+</div>
+</div>
+</div>
+</div>
+<p></br></p>
 <h2 id="mechanisms">Mechanisms</h2>
+<p>There are three types of nodes in a RPL network: 1. The root node 2. Routing nodes 3. Leaf nodes</p>
 <h3 id="dodag-formation">DODAG Formation</h3>
-<p>The root node periodically broadcasts DIO messages. All receiving nodes calculate their rank based on the received DIO messages. When the rank is known, a node sends a DAO message to its determined parent. A node that has selected a parant will also broadcast DIO messages including its own rank.</p>
+<ol type="1">
+<li>The root starts to periodically broadcast the information about the graph using the DIO message.</li>
+<li>All receiving nodes (=neighbor set) decide whether to join the DODAG.</li>
+<li>In case a node wants to join, it calculates its own rank based on the received DIO messages and an objective function.
+<ul>
+<li>When the rank is known, a node sends a DAO message to its determined parent.</li>
+</ul></li>
+<li>If the node is configured as a router, it will also start broadcasting DIO messages, with the updated information about the graph.</li>
+<li>A node that has selected a parant will also broadcast DIO messages including its own rank.</li>
+</ol>
+<p>Estimating and broadcasting ranks ensures that loops are detected and avoided.</p>
 <figure>
 <object class="img-fluid" id="dodag" data="res/img/dynamic-images/rpl-ani.svg" type="image/svg+xml">
 </object>
 <figcaption class="figure-caption">
 </figcaption>
 </figure>
+<p>Rules: * The parent set <span class="LaTeX">$P_x$</span> of any node <span class="LaTeX">$x$</span> must be a subset of its neighbor set. * The preferred parent <span class="LaTeX">$p_x$</span> of <span class="LaTeX">$x$</span> must be a member of its parent set <span class="LaTeX">$p_x \in P_x$</span>. * The Ranks of the parent nodes of a given node must be smaller than that of the Rank of the node.</p>
 <h3 id="dodag-join">DODAG Join</h3>
 <p>An isolated node that wants to join an existing DODAG broadcasts DIS messages. When a DODAG node receives a DIS message it will reply with a unicast DIO message.</p>
 <h3 id="dodag-repair">DODAG Repair</h3>
 <p>There are two types of repair procedures in case a link or node fails.</p>
 <ul>
 <li><strong>Local repair</strong> When a link or neighboring node failure is detected and the node has no other router in the ‘up’ direction,</li>
-<li><strong>Global repair</strong> Can be triggered only from the root node and has a cost of additional control traffic in the <a href="/network" >network</a>.</li>
+</ul>
+<p>In this case the graph may start to diverge from its optimal structure.</p>
+<ul>
+<li><strong>Global repair</strong> Can be triggered only from the DODAG root node and causes additional control traffic in the <a href="/network" >network</a>. In this case each node will re-execute the objective function for determingin its rank and selecting a parent.</li>
 </ul>
 <h2 id="references">References</h2>
-<p>[1]: <a href="https://tools.ietf.org/html/rfc6550">RFC 6550: RPL</a> [2]: <a href="https://www.net.in.tum.de/fileadmin/TUM/NET/NET-2011-07-1/NET-2011-07-1_09.pdf">Tsvetko Tsvetkov: “RPL: IPv6 Routing Protocol for Low Power and Lossy Networks”, TUM-IN-NET, 2011</a></p>
+<p>[1]: <a href="https://tools.ietf.org/html/rfc6550">RFC 6550: RPL</a></br> [2]: <a href="https://www.net.in.tum.de/fileadmin/TUM/NET/NET-2011-07-1/NET-2011-07-1_09.pdf">Tsvetko Tsvetkov: “RPL: IPv6 Routing Protocol for Low Power and Lossy Networks”, TUM-IN-NET, 2011</a></p>
 
 
     </main>
@@ -286,15 +403,18 @@ The Routing Protocol for Low-Power and Lossy Networks (RPL, pronounced “ripple
   <script src="/assets/js/options.js"></script>
 
   <!-- KaTeX JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
 
   <!-- jQuery (req. for BootStrap) -->
-  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 
-  <!-- Bootstrap + Requirements -->
-  <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+  <!-- Bootstrap 4.4.1 + Requirements -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+  <script src="/assets/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"></script>
+
+
+ -->
 
   <!-- Fuse + Own Adapter -->
   <script src="https://cdn.jsdelivr.net/fuse/2.6.1/fuse.min.js"></script>
@@ -325,8 +445,8 @@ The Routing Protocol for Low-Power and Lossy Networks (RPL, pronounced “ripple
 
 
   <!-- Mermaid -->
-  <link rel="stylesheet" href="https://cdn.rawgit.com/knsv/mermaid/7.0.0/dist/mermaid.css">
-  <script type="text/javascript" src="https://cdn.rawgit.com/knsv/mermaid/7.0.0/dist/mermaid.min.js"></script>
+<!--   <link rel="stylesheet" href="https://cdn.rawgit.com/knsv/mermaid/7.0.0/dist/mermaid.css">
+  <script type="text/javascript" src="https://cdn.rawgit.com/knsv/mermaid/7.0.0/dist/mermaid.min.js"></script> -->
 
 <!-- ================================================== -->
 

@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 
     <!-- KaTeX CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
 </head>
 
 
@@ -226,11 +226,17 @@ C is an imperative, procedural <a href="/computer" >computer</a> programming <a 
 <div class='card-body'>
 <p class='card-text'>
 <figure class="highlight">
-<pre><code class="language-c" data-lang="c"><span></span><span class="lineno">1 </span><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
-<span class="lineno">2 </span>  <span class="k">if</span> <span class="p">(</span><span class="n">a</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">){</span>
-<span class="lineno">3 </span>      <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hello World&quot;</span><span class="p">);</span>
-<span class="lineno">4 </span>  <span class="p">}</span>
-<span class="lineno">5 </span><span class="p">}</span></code></pre>
+<pre><code class="language-c" data-lang="c"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="code"><pre><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">a</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">){</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">"Hello World"</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></pre>
 </figure>
 <p>
 </div>
@@ -322,15 +328,18 @@ C is an imperative, procedural <a href="/computer" >computer</a> programming <a 
   <script src="/assets/js/options.js"></script>
 
   <!-- KaTeX JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
 
   <!-- jQuery (req. for BootStrap) -->
-  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 
-  <!-- Bootstrap + Requirements -->
-  <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+  <!-- Bootstrap 4.4.1 + Requirements -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+  <script src="/assets/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"></script>
+
+
+ -->
 
   <!-- Fuse + Own Adapter -->
   <script src="https://cdn.jsdelivr.net/fuse/2.6.1/fuse.min.js"></script>
@@ -361,8 +370,8 @@ C is an imperative, procedural <a href="/computer" >computer</a> programming <a 
 
 
   <!-- Mermaid -->
-  <link rel="stylesheet" href="https://cdn.rawgit.com/knsv/mermaid/7.0.0/dist/mermaid.css">
-  <script type="text/javascript" src="https://cdn.rawgit.com/knsv/mermaid/7.0.0/dist/mermaid.min.js"></script>
+<!--   <link rel="stylesheet" href="https://cdn.rawgit.com/knsv/mermaid/7.0.0/dist/mermaid.css">
+  <script type="text/javascript" src="https://cdn.rawgit.com/knsv/mermaid/7.0.0/dist/mermaid.min.js"></script> -->
 
 <!-- ================================================== -->
 

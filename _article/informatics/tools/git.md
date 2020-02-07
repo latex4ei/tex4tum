@@ -20,11 +20,6 @@ It is stored in the same directory as the project itself, in a subdirectory call
 
 
 
-## Usage
-1. clone a git repository: `git clone git://...` or create one `git init`
-1. Commit 
-
-
 
 ### Commit Object
 A Commit Object is a set files. 
@@ -47,27 +42,26 @@ Tags are pointers to a certain commit. They use a name which is more memorizeabl
 
 
 
-## Commands
+## Creating and Cloning
+There are two ways to create a repository:
 
-| Command    | Description |
-|------------|---------------------------------------------------|
-| `git init` | creates a new repository in the current directory |
+1. **Online**: You create the repository on the website (e.g. github.com) and afterwads clone the empty repository with `git clone git://...` 
+1. **Offline**: You create a new repository in the current directory with  `git init`
 
 
 
+## Diagnose and Information
 
 | Changes | |
 |---|---|
 | `git status` | lists modified and untracked files |
 | `git diff HEAD` | shows changes between working dir and HEAD |
 
-### Undo local changes
-To undo local changes use `git checkout -- <FILE>`. If `<FILE>` is already staged (happens if you do `git add`), you can use `git reset HEAD <FILE>` and then `git checkout -- <FILE>`
 
 
-### Undo local commits
-If you already commited changes but you want to reset them to version of the `origin`, you can use `git reset --hard origin/master`
 
+
+## Commiting Changes
 
 ### Merge master into feature branch
 ```
@@ -76,12 +70,34 @@ git rebase master
 git push -f
 ```
 
-
-
 ### Link code lines in issues
 * view file, click on start line number 
 * hold shift, click on end line
 * press `y` to create permanent URL (hash)
+
+
+
+
+
+
+## Repairing and Restoring
+
+
+### Undo changes
+
+* **Local changes:** To undo local changes use `git checkout -- <FILE>`. If `<FILE>` is already staged (happens if you do `git add`), you can use `git reset HEAD <FILE>` and then `git checkout -- <FILE>`
+* **Committed changes:** If you already commited changes but you want to reset them to version of the `origin`, you can use `git reset --hard origin/master`
+
+
+### Recover deleted files
+
+* **Local deletes**: You can view delted files with `git ls-files --deleted`. Afterwards you can recover delted files with `git checkout -- <FILE>`
+* **Committed deletes**: If the deletion has been committed, find the commit where it happened, then recover the file from this commit.
+```
+git rev-list -n 1 HEAD -- <file>
+git checkout <commit>^ -- <file>
+```
+
 
 
 
