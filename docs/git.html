@@ -43,7 +43,7 @@
 
     <!-- sticky right: search bar  -->
     
-    <form class="form-inline ml-auto order-lg-3" role="search">
+    <form class="form-inline order-lg-3" role="search">
         <div id="search" class="search-container">
             <input class="form-control search-input w-100" type="search" placeholder="&#xf002; Search (fuzzy)"
                 tabindex="1">
@@ -105,31 +105,20 @@
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <h6 class="dropdown-header">Display Options</h6>
                     <div class="form-check dropdown-item">
-                        <label class="form-check-label">
-                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox" onchange="Options.changeOption(this)">
-                            Definitions
-                        </label>
+                        <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox" onchange="Options.changeOption(this)">
+                        <label class="form-check-label" for="checkbox_definition">Definitions</label>
                     </div>
                     <div class="form-check dropdown-item">
-                        <label class="form-check-label">
-                            <input class="form-check-input" id="checkbox_example" name="disp_opt" type="checkbox"
-                                onchange="Options.changeOption(this)">
-                            Examples
-                        </label>
+                        <input class="form-check-input" id="checkbox_example" name="disp_opt" type="checkbox" onchange="Options.changeOption(this)">
+                        <label class="form-check-label">Examples</label for="checkbox_example">
                     </div>
                     <div class="form-check dropdown-item">
-                        <label class="form-check-label">
-                            <input class="form-check-input" id="checkbox_explanation" name="disp_opt" type="checkbox"
-                                onchange="Options.changeOption(this)">
-                            Explanations
-                        </label>
+                        <input class="form-check-input" id="checkbox_explanation" name="disp_opt" type="checkbox" onchange="Options.changeOption(this)">
+                        <label class="form-check-label">Explanations</label for="checkbox_explanation">
                     </div>
                     <div class="form-check dropdown-item">
-                        <label class="form-check-label">
-                            <input class="form-check-input" id="checkbox_legend" name="disp_opt" type="checkbox"
-                                onchange="Options.changeOption(this)">
-                            Legends
-                        </label>
+                        <input class="form-check-input" id="checkbox_legend" name="disp_opt" type="checkbox" onchange="Options.changeOption(this)">
+                        <label class="form-check-label">Legends</label for ="checkbox_legend">
                     </div>
                 </div>
             </li>
@@ -201,11 +190,6 @@ Git is an open-source version control system. It is used to manage a set of file
 <li><strong>Head:</strong> a named pointer to the current branch</li>
 </ul>
 <p>Repository: It is stored in the same directory as the project itself, in a subdirectory called <code>.git</code>.</p>
-<h2 id="usage">Usage</h2>
-<ol type="1">
-<li>clone a git repository: <code>git clone git://...</code> or create one <code>git init</code></li>
-<li>Commit</li>
-</ol>
 <h3 id="commit-object">Commit Object</h3>
 <p>A Commit Object is a set files. It can be referred by its partial or full SHA1 name or relative to a head. The postfix <code>^</code> refers to the parent of a head.</p>
 <p>Head: simply a named reference to a commit object. By default, there is a head in every repository called <em>master</em>.</p>
@@ -214,21 +198,13 @@ Git is an open-source version control system. It is used to manage a set of file
 <p>The index (= Stage = Cache)</p>
 <h3 id="tag">Tag</h3>
 <p>Tags are pointers to a certain commit. They use a name which is more memorizeable than the hash of the commit.</p>
-<h2 id="commands">Commands</h2>
-<table>
-<thead>
-<tr class="header">
-<th>Command</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><code>git init</code></td>
-<td>creates a new repository in the current directory</td>
-</tr>
-</tbody>
-</table>
+<h2 id="creating-and-cloning">Creating and Cloning</h2>
+<p>There are two ways to create a repository:</p>
+<ol type="1">
+<li><strong>Online</strong>: You create the repository on the website (e.g. github.com) and afterwads clone the empty repository with <code>git clone git://...</code></li>
+<li><strong>Offline</strong>: You create a new repository in the current directory with <code>git init</code></li>
+</ol>
+<h2 id="diagnose-and-information">Diagnose and Information</h2>
 <table>
 <thead>
 <tr class="header">
@@ -247,10 +223,7 @@ Git is an open-source version control system. It is used to manage a set of file
 </tr>
 </tbody>
 </table>
-<h3 id="undo-local-changes">Undo local changes</h3>
-<p>To undo local changes use <code>git checkout -- &lt;FILE&gt;</code>. If <code>&lt;FILE&gt;</code> is already staged (happens if you do <code>git add</code>), you can use <code>git reset HEAD &lt;FILE&gt;</code> and then <code>git checkout -- &lt;FILE&gt;</code></p>
-<h3 id="undo-local-commits">Undo local commits</h3>
-<p>If you already commited changes but you want to reset them to version of the <code>origin</code>, you can use <code>git reset --hard origin/master</code></p>
+<h2 id="commiting-changes">Commiting Changes</h2>
 <h3 id="merge-master-into-feature-branch">Merge master into feature branch</h3>
 <pre><code>git fetch origin master:master
 git rebase master
@@ -260,6 +233,19 @@ git push -f</code></pre>
 <li>view file, click on start line number</li>
 <li>hold shift, click on end line</li>
 <li>press <code>y</code> to create permanent URL (hash)</li>
+</ul>
+<h2 id="repairing-and-restoring">Repairing and Restoring</h2>
+<h3 id="undo-changes">Undo changes</h3>
+<ul>
+<li><strong>Local changes:</strong> To undo local changes use <code>git checkout -- &lt;FILE&gt;</code>. If <code>&lt;FILE&gt;</code> is already staged (happens if you do <code>git add</code>), you can use <code>git reset HEAD &lt;FILE&gt;</code> and then <code>git checkout -- &lt;FILE&gt;</code></li>
+<li><strong>Committed changes:</strong> If you already commited changes but you want to reset them to version of the <code>origin</code>, you can use <code>git reset --hard origin/master</code></li>
+</ul>
+<h3 id="recover-deleted-files">Recover deleted files</h3>
+<ul>
+<li><strong>Local deletes</strong>: You can view delted files with <code>git ls-files --deleted</code>. Afterwards you can recover delted files with <code>git checkout -- &lt;FILE&gt;</code></li>
+<li><p><strong>Committed deletes</strong>: If the deletion has been committed, find the commit where it happened, then recover the file from this commit.</p>
+<pre><code>git rev-list -n 1 HEAD -- &lt;file&gt;
+git checkout &lt;commit&gt;^ -- &lt;file&gt;</code></pre></li>
 </ul>
 
 

@@ -43,7 +43,7 @@
 
     <!-- sticky right: search bar  -->
     
-    <form class="form-inline ml-auto order-lg-3" role="search">
+    <form class="form-inline order-lg-3" role="search">
         <div id="search" class="search-container">
             <input class="form-control search-input w-100" type="search" placeholder="&#xf002; Search (fuzzy)"
                 tabindex="1">
@@ -105,31 +105,20 @@
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                     <h6 class="dropdown-header">Display Options</h6>
                     <div class="form-check dropdown-item">
-                        <label class="form-check-label">
-                            <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox" onchange="Options.changeOption(this)">
-                            Definitions
-                        </label>
+                        <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox" onchange="Options.changeOption(this)">
+                        <label class="form-check-label" for="checkbox_definition">Definitions</label>
                     </div>
                     <div class="form-check dropdown-item">
-                        <label class="form-check-label">
-                            <input class="form-check-input" id="checkbox_example" name="disp_opt" type="checkbox"
-                                onchange="Options.changeOption(this)">
-                            Examples
-                        </label>
+                        <input class="form-check-input" id="checkbox_example" name="disp_opt" type="checkbox" onchange="Options.changeOption(this)">
+                        <label class="form-check-label">Examples</label for="checkbox_example">
                     </div>
                     <div class="form-check dropdown-item">
-                        <label class="form-check-label">
-                            <input class="form-check-input" id="checkbox_explanation" name="disp_opt" type="checkbox"
-                                onchange="Options.changeOption(this)">
-                            Explanations
-                        </label>
+                        <input class="form-check-input" id="checkbox_explanation" name="disp_opt" type="checkbox" onchange="Options.changeOption(this)">
+                        <label class="form-check-label">Explanations</label for="checkbox_explanation">
                     </div>
                     <div class="form-check dropdown-item">
-                        <label class="form-check-label">
-                            <input class="form-check-input" id="checkbox_legend" name="disp_opt" type="checkbox"
-                                onchange="Options.changeOption(this)">
-                            Legends
-                        </label>
+                        <input class="form-check-input" id="checkbox_legend" name="disp_opt" type="checkbox" onchange="Options.changeOption(this)">
+                        <label class="form-check-label">Legends</label for ="checkbox_legend">
                     </div>
                 </div>
             </li>
