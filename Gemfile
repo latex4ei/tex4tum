@@ -10,7 +10,7 @@ ruby RUBY_VERSION
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
 gem "jekyll"
-gem "sass"
+gem "sass"   # reached end-of-life, update to "sassc"
 gem "rspec"
 
 gem "html-proofer"
@@ -23,9 +23,6 @@ gem "jekyll-pandoc"
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
-  gem 'bootstrap', '~> 4.1.3'
-  #gem 'bootstrap-sass', '~>  3.3.6'
-  #, git: 'https://github.com/twbs/bootstrap-rubygem'
   gem 'autoprefixer-rails'
   gem 'jekyll-assets'
 end

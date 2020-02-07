@@ -97,6 +97,16 @@ make test
 make deploy
 ```
 
+### Folder Overview
+
+* `_article`: the content source files in Markdown (input)
+* `_layout`: Three HTML layouts for normal pages and start page
+* `_plugins`: Our Ruby scripts for processing Markdown source files
+* `_sass`: Bootstrap SASS and custom CSS3 files
+* `_site`: The rendered website in HTML (output)
+* `res`: static files such as images and code
+
+
 ### Customizing Bootstrap
 
 Copy variables from `_variables.scss` to the `_custom.scss` file to override default values without modifying source files.
