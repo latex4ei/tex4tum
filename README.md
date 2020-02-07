@@ -103,7 +103,7 @@ make deploy
 * `_layout`: Three HTML layouts for normal pages and start page
 * `_plugins`: Our Ruby scripts for processing Markdown source files
 * `_sass`: Bootstrap SASS and custom CSS3 files
-* `_site`: The rendered website in HTML (output)
+* `docs`: The rendered website in HTML (output)
 * `res`: static files such as images and code
 
 
