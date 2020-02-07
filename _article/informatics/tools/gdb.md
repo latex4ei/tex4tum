@@ -15,11 +15,12 @@ GDB is a tool for debugging programs. It consists of a server and a client. The 
 
 ## Commands
 
-| Usage                | Description                           | 
-|----------------------|---------------------------------------|
-| `b` *file:line*      | set breakpoint in file at line        |
-| `run [`*arglist*`]`  | start your program [with arglist]     |
-| `p` *expr*           | display the value of an expression    |
+| Usage                | Description                             | 
+|----------------------|-----------------------------------------|
+| `b` *file:line*      | set breakpoint in file at line          |
+| `run [`*arglist*`]`  | start your program [with arglist]       |
+| `p` *expr*           | display the value of an expression      |
+| `i` *command*        | display `info` for command, e.g. `i b`  |
 
 
 

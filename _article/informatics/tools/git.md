@@ -65,6 +65,19 @@ Tags are pointers to a certain commit. They use a name which is more memorizeabl
 To undo local changes use `git checkout -- <FILE>`. If `<FILE>` is already staged (happens if you do `git add`), you can use `git reset HEAD <FILE>` and then `git checkout -- <FILE>`
 
 
+### Undo local commits
+If you already commited changes but you want to reset them to version of the `origin`, you can use `git reset --hard origin/master`
+
+
+### Merge master into feature branch
+```
+git fetch origin master:master
+git rebase master
+git push -f
+```
+
+
+
 ### Link code lines in issues
 * view file, click on start line number 
 * hold shift, click on end line

@@ -3,21 +3,27 @@ title: Inter-Integrated Circuit (I2C)
 tags: [bus, I2C, SDA, SCK]
 ---
 
-I2C is serial bus used to attach lower-speed peripheral ICs to processors and microcontrollers in short-distance.
+I2C is a serial bus used to attach lower-speed peripheral ICs to processors and microcontrollers in short-distance.
 
 
 ## Specification
 
-I2C uses only two bidirectional open collector or open drain lines, *SDA* and *SCK*, which are pulled up with resistors. Typical voltages used are +5 V or +3.3 V.
+I2C uses only two bidirectional open collector or open drain lines, *SDA* and *SCK*, which are pulled up with resistors. Typical voltages used are $V_{DD} = +\SI{5}{V}$ or $V_{DD} = +\SI{3.3}{V}$.
 
 
-Transmission Speeds
+
+### Transmission Speeds
+I2C supports different transmission speeds. The possible speed depends on the value of the pull-up resistors and the capacity of the wires. If a lower resistance is used, the signal is faster pulled-up to $V_{DD}$ (which allows faster speeds) but also dissipates more energy through heat.
 
 | Mode           | Speed      |
 |----------------|------------|
 | Standard Mode  | 100 kbit/s |
 | Fast Mode      | 400 kbit/s |
 | Fast Mode Plus | 1.0 Mbit/s |
+
+
+TODO: table for selecting resistors.
+
 
 
 ## Protocol

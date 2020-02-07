@@ -19,7 +19,7 @@ continuous:
 $$\operatorname \mu_1 = \int _{\mathbb {R}} x \cdot f(x)\diff x$$
 
 
-## Variance
+## Variance ($n = 2$)
 
 discrete:
 $$\mu_2 =\sum x \cdot P(x)$$

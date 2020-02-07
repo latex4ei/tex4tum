@@ -37,6 +37,8 @@ A single attacker pretends to have several identities which subvert the election
 
 
 
+
+
 ## Crypto Primitives
 
 * One-way hash: SHA-256, MD5, RIPEMD-160
