@@ -88,6 +88,15 @@ $link-hover-color: $tum_emph_green;
    cursor: pointer;
 }
 
+
+//
+// Inputs (fix in navbar)
+//
+
+.dropdown-item .form-check-label {
+    margin-left: 1.5rem;
+}
+
 //
 // Cards
 //

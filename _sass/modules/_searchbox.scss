@@ -1,10 +1,12 @@
 
 #search {
   height: 2em;
-  margin-right: 5em;
-  min-width: 15em;
+  padding-right: 1em;
+  margin-left: auto;
+  min-width: 12em;
+  max-width: 30em;
+  width: 100%;
   text-align: baseline;
-  float: right;
 }
 
 .search-input {
@@ -53,3 +55,10 @@
   }
 }
 
+@media (min-width: 60rem) {
+  nav form.form-inline {
+    &:focus-within {
+      flex-grow: 1;
+    }
+  }
+}
