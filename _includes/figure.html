@@ -3,8 +3,9 @@
 
 <!--<p> Filename="{{ image.name }}", path="{{ image.path }}" </p>-->
 <figure class="figure">
-<img class="figure-img img-fluid" style="width: {{ include.width | default: 'auto' }};" src="{{ image.path }}" alt="{{ include.description }}"/><figcaption class="figure-caption">{{ include.description }}</figcaption>
+    <img class="figure-img img-fluid" style="width: {{ include.width | default: 'auto' }};" src="{{ image.path }}"
+        alt="{{ include.description }}" />
+    <figcaption class="figure-caption">{{ include.description }}</figcaption>
 </figure>
 {% endif %}
 {% endfor %}
-

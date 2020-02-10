@@ -1,33 +1,34 @@
-sudo: false # route your build to the container-based infrastructure for a faster build
+services: docker
 language: ruby
+dist: bionic
 rvm:
   - 2.5.1
 
-addons:
-  apt:
-    packages:
-      - make
-      - pandoc
-      - libxslt-dev
-      - libxml2-dev
-      - zlib1g-dev
+env:
+  - DOCKER_COMPOSE_VERSION=1.25.3
 
 before_install:
-  - yes | gem update --system --force # Required as we use ruby < 2.6
-  - gem install jekyll bundler
+  - sudo rm /usr/local/bin/docker-compose
+  - curl -L https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-`uname -s`-`uname -m` > docker-compose
+  - chmod +x docker-compose
+  - sudo mv docker-compose /usr/local/bin
 
-# Assume bundler is being used, therefore
-# the `install` step will run `bundle install` by default.
+install:
+  - cd docker
+  - docker-compose build
+  - docker-compose run -d --name tex4tum tex4tum bash
+  - docker ps -a
+
 script:
-  - make
+  - docker exec tex4tum bash -c "bundle install && make test && make clean && make build"
   - echo "# This branch is for deployment only" >> _site/README.md
 
 # Deploy to gh-pages branch
 deploy:
   provider: pages
-  skip-cleanup: true
-  github-token: $GITHUB_TOKEN  # Set in travis-ci.org dashboard, marked secure
-  local-dir: _site
+  cleanup: true
+  token: $GITHUB_TOKEN  # Set in travis-ci.org dashboard, marked secure
+  local_dir: _site
   on:
     branch: master
 

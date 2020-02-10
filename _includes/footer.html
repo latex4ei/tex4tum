@@ -1,88 +1,89 @@
 <footer>
-  <div class="container">
-    <div class="row">
-      <div class="col-auto">
-        <img class="img-fluid" style="width: 4em;" src="{{ "./res/img/Logo.png" | relative_url }}" alt="Logo">
-      </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-auto">
+                <img class="img-fluid" style="width: 4em;" src="{{ "./res/img/Logo.png" | relative_url }}" alt="Logo">
+            </div>
 
-      <div class="col-sm-5 col-lg-3">
-        <h3>{{ site.title | escape }}</h3>
-        <ul class="contact-list">
-          <li><a href="mailto:{{ site.email }}">{% icon fa-envelope %} {{ site.email }}</a></li>
-          <li><a href="http://latex4ei.de">{% icon fa-globe %} latex4ei.de</a></li>
-        </ul>
-      </div>
+            <div class="col-sm-5 col-lg-3">
+                <h3>{{ site.title | escape }}</h3>
+                <ul class="contact-list">
+                    <li><a href="mailto:{{ site.email }}">{% icon fa-envelope %} {{ site.email }}</a></li>
+                    <li><a href="http://latex4ei.de">{% icon fa-globe %} latex4ei.de</a></li>
+                </ul>
+            </div>
 
-      <div class="col-sm-3 col-lg-2">
-        <ul class="social-media-list">
-          {% for entry in site.data.social %}
-          <li>{% include icon-social.html data=entry %}</li>
-          {% endfor %}
-        </ul>
-      </div>
+            <div class="col-sm-3 col-lg-2">
+                <ul class="social-media-list">
+                    {% for entry in site.data.social %}
+                    <li>{% include icon-social.html data=entry %}</li>
+                    {% endfor %}
+                </ul>
+            </div>
 
-      <div class="col-lg-5">
-        <p>{{ site.description | escape }}</p>
-      </div>
+            <div class="col-lg-5">
+                <p>{{ site.description | escape }}</p>
+            </div>
+        </div>
     </div>
-  </div>
 </footer>
 
 
 <!-- Load Javascript at the end for faster page loading -->
 <!-- ================================================== -->
 
-  <!-- Own javascript -->
-  <script src="{{ "./assets/js/latex4ei.js" | relative_url }}"></script>
-  <script src="{{ "./assets/js/options.js" | relative_url }}"></script>
+<!-- Own javascript -->
+<script src="{{ "./assets/js/latex4ei.js" | relative_url }}"></script>
+<script src="{{ "./assets/js/options.js" | relative_url }}"></script>
 
-  <!-- KaTeX JS -->
-  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+<!-- KaTeX JS -->
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"
+    integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz"
+    crossorigin="anonymous"></script>
 
-  <!-- jQuery (req. for BootStrap) -->
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<!-- jQuery (req. for BootStrap) -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
 
-  <!-- Bootstrap 4.4.1 + Requirements -->
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<!-- Bootstrap 4.4.1 + Requirements -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
 
-  <script src="{{ "./assets/js/bootstrap.min.js" | relative_url }}" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"></script>
+<script src="{{ "./assets/js/bootstrap.min.js" | relative_url }}"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"></script>
 
+<!-- Fuse + Own Adapter -->
+<script src="https://cdn.jsdelivr.net/fuse/2.6.1/fuse.min.js"></script>
+<script src="{{ "./assets/js/search_index.json" | relative_url }}"></script>
+<script src="{{ "./assets/js/t4t_search.js" | relative_url }}"></script>
 
- -->
+<script type="text/javascript">
+    window.onload = function () {
+        // render KaTeX
+        renderMath();
 
-  <!-- Fuse + Own Adapter -->
-  <script src="https://cdn.jsdelivr.net/fuse/2.6.1/fuse.min.js"></script>
-  <script src="{{ "./assets/js/search_index.json" | relative_url }}"></script>
-  <script src="{{ "./assets/js/t4t_search.js" | relative_url }}"></script>
-
-  <script type="text/javascript">
-      window.onload = function () {
-          // render KaTeX
-          renderMath();
-
-          // fix navbar hiding anchor jumps
-          window.addEventListener("hashchange", function() { scrollBy(0, -100) } );
-
-
-          Options.loadOptions();
-
-          var opts = {
-              data: search_index,
-              numResults: 10,
-              searchPath: '/search?q=',
-              directPath: '.',
-              container: document.getElementsByClassName('search-container')
-          };
-          autocomplete(opts);
-      };
-  </script>
+        // fix navbar hiding anchor jumps
+        window.addEventListener("hashchange", function () { scrollBy(0, -100) });
 
 
-  <!-- Mermaid -->
+        Options.loadOptions();
+
+        var opts = {
+            data: search_index,
+            numResults: 10,
+            searchPath: '/search?q=',
+            directPath: '.',
+            container: document.getElementsByClassName('search-container')
+        };
+        autocomplete(opts);
+    };
+</script>
+
+
+<!-- Mermaid -->
 <!--   <link rel="stylesheet" href="https://cdn.rawgit.com/knsv/mermaid/7.0.0/dist/mermaid.css">
   <script type="text/javascript" src="https://cdn.rawgit.com/knsv/mermaid/7.0.0/dist/mermaid.min.js"></script> -->
 
 <!-- ================================================== -->
-
-
-
