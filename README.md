@@ -52,7 +52,11 @@ Setup and install dependencies locally
 make install
 ```
 
-or use our [Dockerfile](docker/)
+or use our [Dockerfile](docker/) container
+
+```shell
+docker-compose up       # Now you can access the website at localhost:4000
+```
 
 #### Error nokogiri
 

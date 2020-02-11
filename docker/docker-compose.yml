@@ -7,4 +7,5 @@ services:
     environment:
       JEKYLL_ENV: production
     ports:
-      - '8080:4000'
+      - '4000:4000'
+    command: bash -c "bundle install && bundle exec jekyll serve --host 0.0.0.0"
