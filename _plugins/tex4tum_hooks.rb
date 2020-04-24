@@ -249,7 +249,7 @@ module Jekyll
 
       # double check if wee need a TOC
       if (num_of_secs > MIN_HEADINGS_FOR_LOCAL_TOC )
-        text = text.sub(%r{(?:^|\n)(\s*#+\s+.*?)\s*(?:\n|$)}) {|match| "\n\n"+toc_string+"\n\n"+match }
+        text = text.sub(%r{(?:^|\n)(\n#+ +.*?)\s*(?:\n|$)}) {|match| "\n\n"+toc_string+"\n\n"+match }
       end
 
       return text

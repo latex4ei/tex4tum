@@ -15,6 +15,8 @@ $$ (-1)^s \cdot 1.m \cdot 2^{e-127} $$
 Example -7 = 1.11 * 2^2
 
 
+
+
 ## Special Numbers
 Floats can also represent signed zeros ($\pm 0$), infinity $\pm \infty$, and Not-A-Number (NaN).
 
@@ -30,11 +32,12 @@ Floats can also represent signed zeros ($\pm 0$), infinity $\pm \infty$, and Not
 
 ## Exceptions
 5 exceptions are supported:
-• Invalid operation: the result of the operation is a NaN
-• Division by zero
-• Overflow: the result of the operation is ±∞ or ±Max depending on the rounding mode
-• Underflow: the result of the operation is a denormalized number
-• Inexact result: caused by rounding
+
+* Invalid operation: the result of the operation is a NaN
+* Division by zero
+* Overflow: the result of the operation is ±∞ or ±MAX depending on the rounding mode
+* Underflow: the result of the operation is a denormalized number
+* Inexact result: caused by rounding
 
 
 ## Subnormal Numbers
@@ -47,3 +50,9 @@ To prevent unwanted behavior by jumping directly to zero, subnormal numbers fill
 
 
 ## Not-A-Number (NaN)
+
+
+## References
+
+* IEEE: [IEEE-754-2019 Standard](https://standards.ieee.org/content/ieee-standards/en/standard/754-2019.html), 2019
+* David Goldberg: [What Every Computer Scientist Should Know About Floating-Point Arithmetic](https://docs.oracle.com/cd/E19957-01/806-3568/ncg_goldberg.html), 1991

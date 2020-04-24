@@ -4,7 +4,7 @@ title: Go
 Go is a compiled, statically typed programming language developed by Google.
 
 
-{% highlight go linenos %}
+```go
 // hello beer: drink 0.5 liter in 4 rounds
 package main
 
@@ -38,18 +38,13 @@ func main(){
 		}
 	}
 }
-{% endhighlight %}
+```
 
 Run your own program at the [Go Playground](https://play.golang.org/)!
 
 
-## Features
-* object oriented 
-* platform independent 
-* easy concurrency 
 
-
-## Overview
+## Important Basics
 * every code file starts with the `package` statement
 * program entry is function `main` in package "main".
 * types can be implicit `x := "hello"` or explicit `var x string = "hello"`
@@ -57,8 +52,39 @@ Run your own program at the [Go Playground](https://play.golang.org/)!
 * files must end with a blank line
 * Go supports complex numbers: `var z complex = 5 + 3i`
 * concurrent tasks are created with `go test()`
+* omits some common features such as inheritance, generics, assertions, pointer arithmetic, and implicit type conversions.
 
 
+## Data Types
+In Go you can define distinct new types such as `type ipv4addr uint32`
+
+* Integers: `int`,`uint`, `int8`, `int16`, `int32`, `int64`, `uint8`, `uint16`, `uint32`, `uint64` 
+* Floats: `float32`, `float64`, `complex64`, `complex128`
+* Others: `byte, bool, string`
+
+
+### Collections
+* Arrays: `var a [10]int`, Length via `len(a)`
+* Slices: `p := []int{2, 3, 5, 7, 11, 13}`
+* Maps: `map[string]int{"Alice": 2, "Bob": 13}`
+
+
+
+## Control Flow
+```go
+if answer != 42 {
+    return "Wrong answer"
+}
+
+switch score {
+	case 0, 1, 3:
+		fmt.Println("Terrible")
+	case 4, 5:
+		fmt.Println("Awesome")
+	default:
+		fmt.Println("Unknown")
+}
+```
 
 ## Example: Hello World
 {% highlight go %}

@@ -4,7 +4,9 @@ title: Algorithm
 
 An algorithm is an unambiguous specification of how to solve a class of problems.
 
-Example: Find the largest number
+### Example Algorithm
+
+Task: Find the largest number in a list of numbers.
 ```
 Algorithm LargestNumber
   Input: A list of numbers L.
