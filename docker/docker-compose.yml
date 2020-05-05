@@ -3,7 +3,7 @@ services:
   tex4tum:
     build: .
     volumes:
-      - $TRAVIS_BUILD_DIR:/srv/jekyll
+      - ..:/srv/jekyll
     environment:
       JEKYLL_ENV: production
     ports:
