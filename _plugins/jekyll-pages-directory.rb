@@ -1,37 +1,36 @@
+# frozen_string_literal: true
+
 module Jekyll
   class PagesDirGenerator < Generator
     def generate(site)
       pages_dir = site.config['pages'] || './_pages'
       all_raw_paths = Dir["#{pages_dir}/**/*"]
       all_raw_paths.each do |f|
+        next unless File.file?(File.join(site.source, '/', f))
 
-        if File.file?(File.join(site.source, '/', f))
-          filename = f.match(/[^\/]*$/)[0]
-          clean_filepath = f.gsub(/^#{pages_dir}\//, '')
-          clean_dir = extract_directory(clean_filepath)
+        filename = f.match(%r{[^/]*$})[0]
+        clean_filepath = f.gsub(%r{^#{pages_dir}/}, '')
+        clean_dir = extract_directory(clean_filepath)
 
-          site.pages << PagesDirPage.new(site,
-                                         site.source,
-                                         clean_dir,
-                                         filename,
-                                         pages_dir)
-
-        end
+        site.pages << PagesDirPage.new(site,
+                                       site.source,
+                                       clean_dir,
+                                       filename,
+                                       pages_dir)
       end
     end
 
     def extract_directory(filepath)
-      dir_match = filepath.match(/(.*\/)[^\/]*$/)
+      dir_match = filepath.match(%r{(.*/)[^/]*$})
       if dir_match
-        return dir_match[1]
+        dir_match[1]
       else
-        return ''
+        ''
       end
     end
   end
 
   class PagesDirPage < Page
-
     def initialize(site, base, dir, name, pagesdir)
       @site = site
       @base = base
@@ -41,7 +40,7 @@ module Jekyll
       process(name)
       read_yaml(File.join(base, pagesdir, dir), name)
 
-      data.default_proc = proc do |hash, key|
+      data.default_proc = proc do |_hash, key|
         site.frontmatter_defaults.find(File.join(dir, name), type, key)
       end
 

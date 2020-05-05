@@ -3,7 +3,8 @@ GEM
   specs:
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
-    autoprefixer-rails (9.7.3)
+    ast (2.4.0)
+    autoprefixer-rails (9.7.4)
       execjs
     colorator (1.1.0)
     concurrent-ruby (1.1.5)
@@ -31,6 +32,7 @@ GEM
     http_parser.rb (0.6.0)
     i18n (1.7.0)
       concurrent-ruby (~> 1.0)
+    jaro_winkler (1.5.4)
     jekyll (4.0.0)
       addressable (~> 2.4)
       colorator (~> 1.0)
@@ -78,6 +80,8 @@ GEM
       nokogiri (~> 1.8, >= 1.8.4)
     pandoc-ruby (2.0.2)
     parallel (1.19.1)
+    parser (2.7.1.2)
+      ast (~> 2.4.0)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
     public_suffix (4.0.1)
@@ -88,7 +92,8 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.10.0)
       ffi (~> 1.0)
-    rouge (3.14.0)
+    rexml (3.2.4)
+    rouge (3.15.0)
     rspec (3.9.0)
       rspec-core (~> 3.9.0)
       rspec-expectations (~> 3.9.0)
@@ -101,7 +106,16 @@ GEM
     rspec-mocks (3.9.0)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.9.0)
-    rspec-support (3.9.0)
+    rspec-support (3.9.2)
+    rubocop (0.82.0)
+      jaro_winkler (~> 1.5.1)
+      parallel (~> 1.10)
+      parser (>= 2.7.0.1)
+      rainbow (>= 2.2.2, < 4.0)
+      rexml
+      ruby-progressbar (~> 1.7)
+      unicode-display_width (>= 1.4.0, < 2.0)
+    ruby-progressbar (1.10.1)
     safe_yaml (1.0.5)
     sass (3.7.4)
       sass-listen (~> 4.0.0)
@@ -139,7 +153,7 @@ DEPENDENCIES
   jekyll-pandoc
   pygments.rb
   rspec
-  sass
+  rubocop
 
 RUBY VERSION
    ruby 2.5.1p57

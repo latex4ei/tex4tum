@@ -11,8 +11,16 @@ test: all
 	bundle exec htmlproofer ./_site --only-4xx --check-favicon --check-html
 	bundle exec rspec
 
+format:
+	rubocop -a
+
+check_format:
+	rubocop
+
 install:
-	curl -sL https://deb.nodesource.com/setup_11.x | sudo -E bash -
+	sudo apt update
+	sudo apt install -y curl ruby-full build-essential pandoc
+	curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
 	sudo apt install -y nodejs
 	sudo apt install ruby ruby-dev pandoc -y
 	sudo gem install jekyll bundler

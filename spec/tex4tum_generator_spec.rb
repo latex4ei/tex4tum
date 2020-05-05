@@ -1,1 +1,3 @@
-require "spec_helper"
+# frozen_string_literal: true
+
+require 'spec_helper'

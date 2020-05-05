@@ -31,7 +31,7 @@ The articles are based on the cheat sheets from [www.latex4ei.de](http://www.lat
 * Solve math equations (Math JS)
 * Topic Concepts
 * Summary/Concept boxes (e.g. for buses: speed, wires, range)
-* consistent JS framework for interactive content 
+* consistent JS framework for interactive content
 * Improved search: Sorting results, reaction to no results (forward to wolfram alpha)
 * More content
 
@@ -90,8 +90,14 @@ make run
 # No acronyms replacement to improve build time
 make draft
 
+# Format the code
+make format
+
 # Run all tests
 make test
+
+# Run rubocop checks
+make check
 
 # Build for production and copy to gh-pages folder
 make deploy
