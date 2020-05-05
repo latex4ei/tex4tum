@@ -16,10 +16,7 @@ RUN gem install jekyll rspec html-proofer pygments.rb jekyll-pandoc
 
 RUN mkdir -p $JEKYLL_VAR_DIR $JEKYLL_DATA_DIR && rm -rf /root/.gem /home/jekyll/.gem $BUNDLE_HOME/cache $GEM_HOME/cache
 
-RUN echo 'C.UTF-8 UTF-8' >>/etc/locale.gen && locale-gen && update-locale LANG=C.UTF-8
-
-ENV LC_ALL C.UTF-8
-ENV LANGUAGE C.UTF-8
+ENV LANG C.UTF-8
 
 WORKDIR /srv/jekyll
 VOLUME /srv/jekyll
