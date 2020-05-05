@@ -46,10 +46,16 @@ The articles are based on the cheat sheets from [www.latex4ei.de](http://www.lat
 
 ### Setup
 
-Setup and install dependencies
+Setup and install dependencies locally
 
 ```bash
 make install
+```
+
+or use our [Dockerfile](docker/) container
+
+```shell
+docker-compose up       # Now you can access the website at localhost:4000
 ```
 
 #### Error nokogiri
@@ -70,6 +76,7 @@ make sure you have set your environment to utf-8:
 ```bash
 export LC_ALL=en_US.U-8
 ```
+
 #### Error with Pandoc
 
 In case you are using Pandoc 2.0 or newer, you will need to do some changes to the `_config.yml` under extensions.
@@ -111,7 +118,6 @@ make deploy
 * `_sass`: Bootstrap SASS and custom CSS3 files
 * `docs`: The rendered website in HTML (output)
 * `res`: static files such as images and code
-
 
 ### Customizing Bootstrap
 

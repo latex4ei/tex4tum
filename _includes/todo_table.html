@@ -1,18 +1,18 @@
 <table class="table table-striped">
-<thead>
-<tr>
-<th>ToDo</th>
-<th>Source File</th>
-<th>Page Reference</th>
-</tr>
-</thead>
-<tbody>
-  {% for entry in site.data.todos %}
-  <tr>
-  <td>{{ entry.todo }}</td>
-  <td>{{ entry.file }}</td>
-  <td><a href="{{ entry.link | relative_url }}">{{ entry.name }}</a></td>
-  </tr>
-  {% endfor %}
-</tbody>
+    <thead>
+        <tr>
+            <th>ToDo</th>
+            <th>Source File</th>
+            <th>Page Reference</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for entry in site.data.todos %}
+        <tr>
+            <td>{{ entry.todo }}</td>
+            <td>{{ entry.file }}</td>
+            <td><a href="{{ entry.link | relative_url }}">{{ entry.name }}</a></td>
+        </tr>
+        {% endfor %}
+    </tbody>
 </table>
