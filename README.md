@@ -105,9 +105,6 @@ make test
 
 # Run rubocop checks
 make check
-
-# Build for production and copy to gh-pages folder
-make deploy
 ```
 
 ### Folder Overview

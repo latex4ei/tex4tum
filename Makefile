@@ -35,8 +35,3 @@ rebuild: clean build
 update:
 	bundle update
 
-deploy:
-	cp -rf _site/* docs/
-	@echo "Finished Deployment"
-	@echo "Now add a commit with the changes in docs folder"
-	@echo "Don't forget to tag this commit"
