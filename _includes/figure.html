@@ -1,7 +1,6 @@
 {% for image in site.static_files %}
 {% if image.name contains include.filename %}
 
-<!--<p> Filename="{{ image.name }}", path="{{ image.path }}" </p>-->
 <figure class="figure">
     <img class="figure-img img-fluid" style="width: {{ include.width | default: 'auto' }};" src="{{ image.path }}"
         alt="{{ include.description }}" />

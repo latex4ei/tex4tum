@@ -8,7 +8,7 @@ draft:
 	bundle exec jekyll serve --unpublished
 
 test: build
-	bundle exec htmlproofer ./_site --only-4xx --check-favicon --check-html
+	bundle exec htmlproofer ./_site --only-4xx --check-favicon --check-html --disable-external
 	bundle exec rspec
 
 format:
