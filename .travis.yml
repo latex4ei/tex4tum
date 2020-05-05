@@ -21,7 +21,7 @@ install:
 
 script:
   - docker exec tex4tum bash -c "bundle install && make build"
-  - cd .. && echo "# This branch is for deployment only" >> _site/README.md
+  - docker exec tex4tum bash -c "echo '# This branch is for deployment only' >> _site/README.md"
 
 # Deploy to gh-pages branch
 deploy:
