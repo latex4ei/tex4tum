@@ -8,4 +8,4 @@ services:
       JEKYLL_ENV: production
     ports:
       - '4000:4000'
-    command: bash -c "bundle install && bundle exec jekyll serve --host 0.0.0.0"
+    command: bash -c "pandoc -v && bundle install && bundle exec jekyll serve --host 0.0.0.0"

@@ -305,4 +305,5 @@ module Jekyll
       AcronymParser.new.generate(site)
     end
   end
+
 end

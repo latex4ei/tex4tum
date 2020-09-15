@@ -16,6 +16,8 @@ RUN gem install jekyll rspec html-proofer pygments.rb jekyll-pandoc
 
 RUN mkdir -p $JEKYLL_VAR_DIR $JEKYLL_DATA_DIR && rm -rf /root/.gem /home/jekyll/.gem $BUNDLE_HOME/cache $GEM_HOME/cache
 
+RUN TEMP_DEB="$(mktemp)" && wget -O "$TEMP_DEB" "https://github.com/jgm/pandoc/releases/download/2.10.1/pandoc-2.10.1-1-amd64.deb" && dpkg -i "$TEMP_DEB" && rm -f "$TEMP_DEB"
+
 ENV LANG C.UTF-8
 
 WORKDIR /srv/jekyll
