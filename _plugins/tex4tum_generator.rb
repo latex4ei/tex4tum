@@ -25,16 +25,22 @@ module Jekyll
         # relevant_content = add_abbreviations(relevant_content)   # Pandoc does not support abbreviations.
         relevant_content = add_latex_definitions(relevant_content)
 
+        # DEBUG
+        # if document.data['title'].eql?('Trigonometry')
+        #   puts relevant_content
+        # end
+
+
         document.content = relevant_content + sep + rest # put together
       end
 
       # site.pages contains only main.scss
       # site.posts is empty
 
-      # site.pages.each do |page|
-      #   page.content = replaceClasses(page.content)
-      #   #puts page.content
-      # end
+      #site.pages.each do |page|
+        #page.content = replaceClasses(page.content)
+        #puts page.content
+      #end
 
       site.data['todos'] = todos
     end

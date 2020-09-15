@@ -231,6 +231,12 @@ module Jekyll
         head, main, foot = doc.output.partition(%r{\n\s*<main .*?</main>\s*\n}m)
 
         # puts "\n\n\n\nmain:\n===================\n", main
+        # DEBUG
+        # if doc.data['title'].eql?('Trigonometry')
+        #   puts main
+        # end
+
+
         main.scan(%r{<(?:p|div|li|td|code)>[^<]+?<|>[^<]+?</(?:p|div|li|td|code)>}) do |innerHTML|
           newHTML = innerHTML
           newHTML = insert_reference(newHTML, doc.data['title'])
