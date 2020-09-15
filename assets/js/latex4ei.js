@@ -8,25 +8,46 @@ window.onload = function () {
 
 // renders math with KaTeX
 function renderMath() {
-    var math = document.getElementsByClassName("LaTeX");  // LaTeX, math
 
-    Array.prototype.forEach.call(math, function (el) {
-        inner = el.innerHTML;
-        if (inner[1] == "$") {
-            tex = el.innerHTML.split("$")[2].replace(/&amp;/g, '&');
-            displaystyle = true;
-            font_size='\\large '
-        } else {
-            tex = el.innerHTML.split("$")[1].replace(/&amp;/g, '&');
-            displaystyle = false;
-            font_size=''
-        }
+    // Old rendering for Pandoc "latexmathml" option
+    // var math = document.getElementsByClassName("LaTeX");  // LaTeX, math
+    // Array.prototype.forEach.call(math, function (el) {
+    //     inner = el.innerHTML;
+    //     if (inner[1] == "$") {
+    //         tex = el.innerHTML.split("$")[2].replace(/&amp;/g, '&');
+    //         displaystyle = true;
+    //         font_size='\\large '
+    //     } else {
+    //         tex = el.innerHTML.split("$")[1].replace(/&amp;/g, '&');
+    //         displaystyle = false;
+    //         font_size=''
+    //     }
+    //     try {
+    //         katex.render(font_size+tex, el, {displayMode: displaystyle});
+    //     } catch (err) {
+    //         el.innerHTML = "ERROR: " + err;
+    //     }
+    // });
+
+
+    // render elements from Pandoc "katex" option, class names are "math inline" and "math display"
+    // var mathels = [];
+    // mathels = Array.prototype.concat.apply(mathels, document.getElementsByClassName("math inline"));
+    // mathels = Array.prototype.concat.apply(mathels, document.getElementsByClassName("math display"));
+
+
+    mathin = document.getElementsByClassName("math inline");
+    Array.prototype.forEach.call(mathin, function (el) {
         try {
-            katex.render(font_size+tex, el, {displayMode: displaystyle});
-        } catch (err) {
-            el.innerHTML = "ERROR: " + err;
-            //el.innerHTML = inner;
-        }
+            katex.render(el.innerHTML, el, {displayMode: false});
+        } catch (err) { el.innerHTML = "ERROR: " + err; }
+    });
+
+    mathdis = document.getElementsByClassName("math display");
+    Array.prototype.forEach.call(mathdis, function (el) {
+        try {
+            katex.render(el.innerHTML, el, {displayMode: true});
+        } catch (err) { el.innerHTML = "ERROR: " + err; }
     });
 }
 
