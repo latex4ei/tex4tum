@@ -39,14 +39,14 @@ function renderMath() {
     mathin = document.getElementsByClassName("math inline");
     Array.prototype.forEach.call(mathin, function (el) {
         try {
-            katex.render(el.innerHTML, el, {displayMode: false});
+            katex.render(el.innerHTML.replace(/&amp;/g, '&'), el, {displayMode: false});
         } catch (err) { el.innerHTML = "ERROR: " + err; }
     });
 
     mathdis = document.getElementsByClassName("math display");
     Array.prototype.forEach.call(mathdis, function (el) {
         try {
-            katex.render(el.innerHTML, el, {displayMode: true});
+            katex.render(el.innerHTML.replace(/&amp;/g, '&'), el, {displayMode: true});
         } catch (err) { el.innerHTML = "ERROR: " + err; }
     });
 }

@@ -88,9 +88,9 @@ title: Tex4TUM
 <p class="card-text">Checkout these pages for some nice interactive demos</p>
 <a href="./reflection.html" class="card-link">Reflection</a>
 <a href="./trigonometry.html" class="card-link">Trigonometry</a>
-<a href="./servo.html" class="card-link">Servo</a>
-<a href="./low-pass.html" class="card-link">Low Pass Filter</a>
-<a href="./maxwell.html" class="card-link">Maxwell Equations</a>
+<a href="./quadcopter.html" class="card-link">Quadcopter</a>
+<a href="./uri.html" class="card-link">URI</a>
+<a href="./binomial-distribution.html" class="card-link">Binomial Distribution</a>
 </div>
 </div>
 

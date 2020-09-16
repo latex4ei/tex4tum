@@ -232,7 +232,7 @@ module Jekyll
 
         # puts "\n\n\n\nmain:\n===================\n", main
         # DEBUG
-        # if doc.data['title'].eql?('Trigonometry')
+        # if doc.data['title'].eql?('Kalman Filter')
         #   puts main
         # end
 

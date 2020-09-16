@@ -26,7 +26,7 @@ module Jekyll
         relevant_content = add_latex_definitions(relevant_content)
 
         # DEBUG
-        # if document.data['title'].eql?('Trigonometry')
+        # if document.data['title'].eql?('Kalman Filter')
         #   puts relevant_content
         # end
 
