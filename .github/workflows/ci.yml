@@ -1,0 +1,19 @@
+name: CI
+
+on: [push, pull_request]
+
+jobs:
+  super-lint:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Super-Linter
+      uses: github/super-linter@v3.10.2
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        VALIDATE_MD: false # TODO enable and fix issues
+        VALIDATE_CSS: false # TODO enable and fix issues
+        VALIDATE_DOCKERFILE_HADOLINT: false # TODO enable and fix issues
+        VALIDATE_HTML: false # TODO enable and fix issues
+        VALIDATE_JAVASCRIPT_STANDARD: false # TODO enable and configure eslint
+        VALIDATE_RUBY: false # TODO enable and fix issues

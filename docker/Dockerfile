@@ -4,9 +4,11 @@ ENV JEKYLL_VAR_DIR=/var/jekyll
 ENV JEKYLL_DATA_DIR=/srv/jekyll
 ENV JEKYLL_ENV=development
 
-RUN apt-get update
-RUN curl -sL https://deb.nodesource.com/setup_14.x | bash -
-RUN apt-get install -y nodejs pandoc cmake locales
+RUN apt-get update && \
+    curl -sL https://deb.nodesource.com/setup_14.x | bash - && \
+    apt-get install -y --no-install-recommends \
+    nodejs pandoc cmake locales && \
+    rm -rf /var/lib/apt/lists/*
 
 RUN echo "gem: --no-ri --no-rdoc" >~/.gemrc
 RUN unset GEM_HOME && unset GEM_BIN && yes | gem update --system
