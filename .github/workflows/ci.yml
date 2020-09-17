@@ -13,7 +13,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         VALIDATE_MD: false # TODO enable and fix issues
         VALIDATE_CSS: false # TODO enable and fix issues
-        DOCKERFILE_HADOLINT: false # TODO enable and fix issues
+        VALIDATE_DOCKERFILE_HADOLINT: false # TODO enable and fix issues
         VALIDATE_HTML: false # TODO enable and fix issues
         VALIDATE_JAVASCRIPT_STANDARD: false # TODO enable and configure eslint
         VALIDATE_RUBY: false # TODO enable and fix issues
