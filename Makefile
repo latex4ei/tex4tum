@@ -11,11 +11,9 @@ test: build
 	bundle exec htmlproofer ./_site --only-4xx --check-favicon --check-html --disable-external
 	bundle exec rspec
 
-format:
+check:
+	standard --fix
 	rubocop -aSE
-
-check_format:
-	rubocop
 
 install:
 	sudo apt update

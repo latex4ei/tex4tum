@@ -18,7 +18,7 @@ gem 'html-proofer'
 gem 'jekyll-pandoc'
 gem 'pygments.rb'
 
-gem 'rubocop', require: false
+gem 'rubocop'
 
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
 # uncomment the line below. To upgrade, run `bundle update github-pages`.
