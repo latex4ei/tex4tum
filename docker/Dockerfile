@@ -10,16 +10,16 @@ RUN apt-get update && \
     nodejs pandoc cmake locales && \
     rm -rf /var/lib/apt/lists/*
 
-RUN echo "gem: --no-ri --no-rdoc" >~/.gemrc
-RUN unset GEM_HOME && unset GEM_BIN && yes | gem update --system
-
-RUN unset GEM_HOME && unset GEM_BIN && yes | gem install --force bundler
-RUN gem install jekyll rspec html-proofer pygments.rb jekyll-pandoc
-RUN npm install -g standard
-
-RUN mkdir -p $JEKYLL_VAR_DIR $JEKYLL_DATA_DIR && rm -rf /root/.gem /home/jekyll/.gem $BUNDLE_HOME/cache $GEM_HOME/cache
+RUN echo "gem: --no-ri --no-rdoc" >~/.gemrc && \
+    unset GEM_HOME && unset GEM_BIN && yes | gem update --system && \
+    unset GEM_HOME && unset GEM_BIN && yes | gem install --force bundler && \
+    gem install jekyll rspec html-proofer pygments.rb jekyll-pandoc && \
+    npm install -g standard
 
 RUN TEMP_DEB="$(mktemp)" && wget -O "$TEMP_DEB" "https://github.com/jgm/pandoc/releases/download/2.10.1/pandoc-2.10.1-1-amd64.deb" && dpkg -i "$TEMP_DEB" && rm -f "$TEMP_DEB"
+
+RUN mkdir -p $JEKYLL_VAR_DIR $JEKYLL_DATA_DIR && \
+    rm -rf /root/.gem /home/jekyll/.gem $BUNDLE_HOME/cache $GEM_HOME/cache
 
 ENV LANG C.UTF-8
 

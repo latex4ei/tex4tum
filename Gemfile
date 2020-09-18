@@ -15,7 +15,6 @@ gem 'jekyll'
 gem 'rspec'
 
 gem 'html-proofer'
-gem 'jekyll-pandoc'
 gem 'pygments.rb'
 
 gem 'rubocop'
@@ -26,6 +25,7 @@ gem 'rubocop'
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
-  gem 'autoprefixer-rails'
-  gem 'jekyll-assets'
+    gem 'jekyll-pandoc'
+    gem 'autoprefixer-rails'
+    #gem 'bootstrap'
 end

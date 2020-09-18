@@ -65,7 +65,6 @@ highlighter: rouge
 plugins:
   #- bootstrap
   - autoprefixer-rails
-  - jekyll-assets
   - jekyll-pandoc
 exclude:
   # here starts the excludes for gh-pages build
