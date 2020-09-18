@@ -52,8 +52,6 @@ module Jekyll
       File.write(site.dest + '/assets/js/search_index.json', json_string)
     end
 
-    private
-
     JS_PATH = '/assets/js/t4t_search.js'
   end
 
@@ -236,7 +234,6 @@ module Jekyll
         #   puts main
         # end
 
-
         main.scan(%r{<(?:p|div|li|td|code)>[^<]+?<|>[^<]+?</(?:p|div|li|td|code)>}) do |innerHTML|
           newHTML = innerHTML
           newHTML = insert_reference(newHTML, doc.data['title'])
@@ -254,7 +251,7 @@ module Jekyll
         key = match[0]
         value = match[1]
 
-        text = text.gsub(/(?<=[\s]|^)#{key}(?=[\s,.]|$)/) { '<abbr title="' + value + '" >' + key + '</abbr>' }
+        text = text.gsub(/(?<=\s|^)#{key}(?=[\s,.]|$)/) { '<abbr title="' + value + '" >' + key + '</abbr>' }
       end
       text
     end
@@ -273,8 +270,6 @@ module Jekyll
       end
       text
     end
-
-    private
 
     ACRONYMS = File.read('./res/parser_util/abbreviations.md', encoding: 'utf-8')
     ABBREVIATION_REGEXP = /(\*\[([^\]]+)\]:\s*([^\n]+)\n)/.freeze
@@ -305,5 +300,4 @@ module Jekyll
       AcronymParser.new.generate(site)
     end
   end
-
 end

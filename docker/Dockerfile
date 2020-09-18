@@ -15,6 +15,7 @@ RUN unset GEM_HOME && unset GEM_BIN && yes | gem update --system
 
 RUN unset GEM_HOME && unset GEM_BIN && yes | gem install --force bundler
 RUN gem install jekyll rspec html-proofer pygments.rb jekyll-pandoc
+RUN npm install -g standard
 
 RUN mkdir -p $JEKYLL_VAR_DIR $JEKYLL_DATA_DIR && rm -rf /root/.gem /home/jekyll/.gem $BUNDLE_HOME/cache $GEM_HOME/cache
 

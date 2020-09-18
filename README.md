@@ -99,14 +99,11 @@ make run
 # No acronyms replacement to improve build time
 make draft
 
-# Format the code
-make format
+# Run checks and formatters
+make check
 
 # Run all tests
 make test
-
-# Run rubocop checks
-make check
 ```
 
 ### Folder Overview
