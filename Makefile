@@ -12,7 +12,7 @@ test: build
 	bundle exec rspec
 
 format:
-	rubocop -a
+	rubocop -aSE
 
 check_format:
 	rubocop
@@ -34,4 +34,3 @@ rebuild: clean build
 
 update:
 	bundle update
-

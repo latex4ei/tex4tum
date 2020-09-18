@@ -30,17 +30,16 @@ module Jekyll
         #   puts relevant_content
         # end
 
-
         document.content = relevant_content + sep + rest # put together
       end
 
       # site.pages contains only main.scss
       # site.posts is empty
 
-      #site.pages.each do |page|
-        #page.content = replaceClasses(page.content)
-        #puts page.content
-      #end
+      # site.pages.each do |page|
+      # page.content = replaceClasses(page.content)
+      # puts page.content
+      # end
 
       site.data['todos'] = todos
     end
@@ -113,8 +112,7 @@ module Jekyll
 
     def markDefinition(content)
       # idea: find a definition and show it when the heading is clicked
-      content = content.sub(DEFINITION_REGEXP) { '{% definition title_def%}' + Regexp.last_match(1) + '{% enddefinition %}' + "\n\n" }
-      content
+      content.sub(DEFINITION_REGEXP) { '{% definition title_def%}' + Regexp.last_match(1) + '{% enddefinition %}' + "\n\n" }
     end
 
     def replaceClasses(content)

@@ -164,10 +164,9 @@ module Jekyll
 
       # tabbox is CSS3 only tab solution
       # final = "<div class=\"tabbox\">\n<ul class=\"nav nav-tabs ml-0\" role=\"tablist\">"+tablabels+"</ul>\</div>\n<div class=\"tab-content\">"+text+'</div>'
-      final = "<div class=\"card tabbox\"><div class=\"card-header\">\n<ul class=\"nav nav-tabs card-header-tabs ml-0\" role=\"tablist\">" + tablabels + "</ul>\</div>\n<div class=\"card-body\"><div class=\"tab-content\">" + text + '</div></div></div></div></br>'
+      "<div class=\"card tabbox\"><div class=\"card-header\">\n<ul class=\"nav nav-tabs card-header-tabs ml-0\" role=\"tablist\">" + tablabels + "</ul>\</div>\n<div class=\"card-body\"><div class=\"tab-content\">" + text + '</div></div></div></div></br>'
 
       # puts 'final: '+final
-      final
     end
   end
 end
