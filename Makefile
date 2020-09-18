@@ -15,6 +15,10 @@ check:
 	standard --fix
 	rubocop -aSE
 
+format:
+	standard --fix || true
+	rubocop -aSE || true
+
 install:
 	sudo apt update
 	sudo apt install -y curl ruby-full build-essential pandoc

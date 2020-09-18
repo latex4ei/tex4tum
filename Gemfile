@@ -25,7 +25,7 @@ gem 'rubocop'
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
-    gem 'jekyll-pandoc'
-    gem 'autoprefixer-rails'
-    #gem 'bootstrap'
+  gem 'autoprefixer-rails'
+  gem 'jekyll-pandoc'
+  # gem 'bootstrap'
 end

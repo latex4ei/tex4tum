@@ -99,6 +99,9 @@ make run
 # No acronyms replacement to improve build time
 make draft
 
+# Run formatters
+make format
+
 # Run checks and formatters
 make check
 

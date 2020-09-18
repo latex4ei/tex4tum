@@ -13,7 +13,7 @@ RUN apt-get update && \
 RUN echo "gem: --no-ri --no-rdoc" >~/.gemrc && \
     unset GEM_HOME && unset GEM_BIN && yes | gem update --system && \
     unset GEM_HOME && unset GEM_BIN && yes | gem install --force bundler && \
-    gem install jekyll rspec html-proofer pygments.rb jekyll-pandoc && \
+    gem install jekyll rspec html-proofer pygments.rb jekyll-pandoc rubocop && \
     npm install -g standard
 
 RUN TEMP_DEB="$(mktemp)" && wget -O "$TEMP_DEB" "https://github.com/jgm/pandoc/releases/download/2.10.1/pandoc-2.10.1-1-amd64.deb" && dpkg -i "$TEMP_DEB" && rm -f "$TEMP_DEB"
