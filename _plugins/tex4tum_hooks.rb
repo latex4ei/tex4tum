@@ -47,7 +47,7 @@ module Jekyll
       json_string = 'search_index = ' + $index_array.to_json
 
       js_text = File.read(site.dest + JS_PATH)
-      js_text = js_text.gsub(/var search_index = [^\n]+/, 'var ' + json_string)
+      js_text = js_text.gsub(/const search_index = [^\n]+/, 'var ' + json_string)
       File.write(site.dest + JS_PATH, js_text)
       File.write(site.dest + '/assets/js/search_index.json', json_string)
     end
