@@ -120,6 +120,10 @@ There are three types of nodes in a RPL network:
 
 
 ### DODAG Formation
+The following interactive diagram visualizes the creation of the DODAG:
+
+{% include svg-object.html id="dodag" filename="rpl-v3.svg" %}
+
 1. The root starts to periodically broadcast the information about the graph using the DIO message.
 2. All receiving nodes (=neighbor set) decide whether to join the DODAG.
 3. In case a node wants to join, it calculates its own rank based on the received DIO messages and an objective function. 
@@ -129,10 +133,7 @@ There are three types of nodes in a RPL network:
 
 Estimating and broadcasting ranks ensures that loops are detected and avoided.
 
-
-{% include svg-object.html id="dodag" filename="rpl-ani.svg" %}
-
-Rules:
+#### Further Rules:
 * The parent set $P_x$ of any node $x$ must be a subset of its neighbor set.
 * The preferred parent $p_x$ of $x$ must be a member of its parent set $p_x \in P_x$.
 * The Ranks of the parent nodes of a given node must be smaller than that of the Rank of the node.
