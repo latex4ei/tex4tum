@@ -210,7 +210,9 @@ module Jekyll
       end
 
       # double check if wee need a TOC
-      if num_of_secs > MIN_HEADINGS_FOR_LOCAL_TOC
+      if text.include?('{{LOCAL_TOC}}')
+        text = text.sub(/\{\{LOCAL_TOC\}\}/) { |match| "\n\n" + toc_string + "\n\n" }
+      elsif num_of_secs > MIN_HEADINGS_FOR_LOCAL_TOC
         text = text.sub(/(?:^|\n)(\n#+ +.*?)\s*(?:\n|$)/) { |match| "\n\n" + toc_string + "\n\n" + match }
       end
 

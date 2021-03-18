@@ -2,10 +2,9 @@
 title: Binomial Distribution
 ---
 
-Repeated Bernoulli trials, such as repeated coin tosses.
+The Binomial Distribution is the discrete probability distribution of the number of successes in a sequence of repeated Bernoulli trials, such as repeated coin tosses.
 
-
-**Urn Model:** 1 urn with $N$ balls ($pN$ red and $(1-p)N$ black). Probability to draw $k$ red balls with $n$ trials while putting the ball back after each trial.
+<div class="float-right">
 
 | Parameters  |                           |
 |-------------|---------------------------|
@@ -15,11 +14,28 @@ Repeated Bernoulli trials, such as repeated coin tosses.
 | Variance    | $np(1-p)$                 |
 | PMF         | $f(k, n, p) = \binom{n}{k} p^k (1-p)^{n-k}$ |
 
+</div>
+
+
 
 ## Probability Mass Function
 
 $$f(k, n, p) = \P( X = k ) = \binom{n}{k} p^k (1-p)^{n-k}$$
 with the number of trials $n$, the number of successes $k$, and the success probability $p$.
+
+
+### Explanation of the Terms
+The term $p^k$ gives us the probability to get exactly $k$ successes in a row of $k$ trials. Since we have $n$ trials and not $k$, the term $(1-p)^{n-k}$ gives us the probability to get only misses (or failures) for the remaining $n-k$ trials. Since the successes can appear anywhere among the $n$ trials, we multiply by the term $\binom{n}{k}$, which corresponds to the number of possible permutations of $k$ successes within the $n$ trials.
+
+
+
+### Example Coin Tosses
+Imagine we toss a fair coin 10 times. The outcome of each toss is either head or tail. The binomial distribution gives us the probability to get a certain amount of heads (or tails).
+
+For example, we can ask: What is the probability to get 7 heads? Answer:
+
+$$P(k=7, n=10, p=0.5) = \binom{10}{7} 0.5^7 (1-0.5)^{10-7} = 0.117$$
+
 
 
 
@@ -37,6 +53,47 @@ with the number of trials $n$, the number of successes $k$, and the success prob
 </div>
 
 
+
+## Cumulative Distribution Function
+The cumulative distribution function states the probability to get *at least* $k$ successes.
+
+$$F(k;n,p)=\Pr(X\leq k)=\sum_{i=0}^{\lfloor k\rfloor }{n \choose i}p^{i}(1-p)^{n-i}$$
+where $\lfloor k\rfloor$ is the greatest integer less than or equal to k.
+
+
+
+
+## Urn Model
+We have 1 urn with $N$ balls ($pN$ red and $(1-p)N$ black). The binomial distribution describes the probability to draw $k$ red balls from the urn with $n$ trials while putting the balls back into the urn after each trial.
+
+
+### Example Urn
+Imagine an urn with 20 balls, 8 are red and 12 are black. We draw 15 times from the urn. What is the probability to get 9 black balls? Answer:
+
+$$P(k=6, n=15, p=0.4) = P(k=9, n=15, p=0.6) = \binom{15}{6} 0.4^6 \cdot 0.6^9 = 0.206$$
+
+Note that in the urn model, $n$ is not the number of balls in the urn but the number of draws.
+
+
+
+## Properties
+
+* **Sum of Binomials:** The sum of two binomial distributions is again a binomial distribution. If $X ~ B(n, p)$ and $Y ~ B(m, p)$ are independent binomial variables with the same probability $p$, then $X + Y ~ B(n+m, p)$
+
+* **Normal Approximation:** If $n$ is large enough, $B(n, p)$ can be approximated as normal distribution $\mathcal{N}(np,\; np(1-p))$. As a rule of thumb, $n$ is large enough if 
+$n \gt 9\left(\frac{1-p}{p}\right)\ \text{and}\ n \gt 9\left(\frac{p}{1-p}\right)$
+
+* The binomial distribution is the generalization of the Bernoulli trial, which can be expressed as a binomial distribution with $n = 1$.
+
+
+
+
+## Implementations
+
+{% tabbox %}
+
+#### Python
+
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
@@ -49,6 +106,38 @@ plt.plot(lx, st.binom.pmf(lx, n, p1), label='n= 30, p= 1/6 ' )
 plt.plot(lx, st.binom.pmf(lx, n, p2), label='n= 30, p= 1/2 ' )
 plt.show()
 ```
+
+
+#### Matlab
+
+```matlab
+N = 10; 
+p = 0.5;
+
+x = 0:N;
+y = binopdf(x,N,p);
+
+figure
+bar(x,y,1)
+xlabel('Observation')
+ylabel('Probability')
+```
+
+#### R
+
+```
+N <- 20
+p <- 0.5
+
+x <- 0:N
+y <- dbinom(x, size=N, prob=0.2) 
+
+plot(x, y)
+```
+
+
+{% endtabbox %}
+
 
 
 ## References
