@@ -7,7 +7,7 @@ on:
     branches: [ master ]
 
 jobs:
-  super-lint:
+  build:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
@@ -21,10 +21,6 @@ jobs:
       run : |
         docker exec tex4tum bash -c "bundle install && make build"
         docker exec tex4tum bash -c "echo '# This branch is for deployment only' >> _site/README.md"
-    - name: Prepare Deployment
-      if: github.ref == 'refs/heads/master'
-      run: |
-        apt-get update && apt-get install -y rsync
     - name: Deploy
       if: github.ref == 'refs/heads/master'
       uses: JamesIves/github-pages-deploy-action@4.1.0
