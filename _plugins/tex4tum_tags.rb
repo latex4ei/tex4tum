@@ -72,7 +72,7 @@ module Jekyll
 
     def render(context)
       @@example_idx += 1
-      ''"<h5 class='clp_title text-success' data-toggle='collapse' href='#example#{@@example_idx}'><i class='fa fa-chart-bar'></i> #{@heading}</h5>
+      ''"<h5 class='clp_title text-success' data-bs-toggle='collapse' href='#example#{@@example_idx}'><i class='fa fa-chart-bar'></i> #{@heading}</h5>
   <div id='example#{@@example_idx}' class='example collapse'><div class='card border-success mb-1'><div class='card-body'><p class='card-text'>#{super}<p>
   </div></div></div>"''
     end
@@ -94,11 +94,11 @@ module Jekyll
       @@expl_id += 1
       # First class element is required for JS
       # "<div class='explanation card border-warning mb-1'><div class='card-body'><h5 class='card-title text-warning'>Explanation</h5><p class='card-text'>#{super}<p></div></div>"
-      ''"<h5 class='clp_title text-warning' data-toggle='collapse' href='#expl#{@@expl_id}'><i class='fa fa-comment-dots'></i> #{@heading}</h5>
+      ''"<h5 class='clp_title text-warning' data-bs-toggle='collapse' href='#expl#{@@expl_id}'><i class='fa fa-comment-dots'></i> #{@heading}</h5>
   <div id='expl#{@@expl_id}' class='explanation collapse'><div class='card border-warning mb-1'><div class='card-body'>
   <p class='card-text'>#{super}<p>
   </div></div></div>"''
-      # <h5 class='card-title text-warning' data-toggle='collapse' href='#expl#{@expl_id}>Explanation</h5>
+      # <h5 class='card-title text-warning' data-bs-toggle='collapse' href='#expl#{@expl_id}>Explanation</h5>
     end
   end
 
@@ -139,7 +139,7 @@ module Jekyll
       level = text[/#+/].length
       # puts 'Length: '+level.to_s
 
-      prelabelhtml = '<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#checkboxid" role="tab">'
+      prelabelhtml = '<li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#checkboxid" role="tab">'
       postlabelhtml = '</a></li>'
 
       pretabhtml = '<div class="tab-pane" id="checkboxid" role="tabpanel">'
@@ -163,8 +163,8 @@ module Jekyll
       end
 
       # tabbox is CSS3 only tab solution
-      # final = "<div class=\"tabbox\">\n<ul class=\"nav nav-tabs ml-0\" role=\"tablist\">"+tablabels+"</ul>\</div>\n<div class=\"tab-content\">"+text+'</div>'
-      "<div class=\"card tabbox\"><div class=\"card-header\">\n<ul class=\"nav nav-tabs card-header-tabs ml-0\" role=\"tablist\">" + tablabels + "</ul>\</div>\n<div class=\"card-body\"><div class=\"tab-content\">" + text + '</div></div></div></div></br>'
+      # final = "<div class=\"tabbox\">\n<ul class=\"nav nav-tabs ms-0\" role=\"tablist\">"+tablabels+"</ul>\</div>\n<div class=\"tab-content\">"+text+'</div>'
+      "<div class=\"card tabbox\"><div class=\"card-header\">\n<ul class=\"nav nav-tabs card-header-tabs ms-0\" role=\"tablist\">" + tablabels + "</ul>\</div>\n<div class=\"card-body\"><div class=\"tab-content\">" + text + '</div></div></div></div></br>'
 
       # puts 'final: '+final
     end

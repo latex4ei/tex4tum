@@ -140,7 +140,7 @@ module Jekyll
         equation = match[1]
         # attention! use block style .sub(x) { y } instead of .sub(x, y) to avoid replacing \\ with \ (newline \\ will be an escape sequence for \)
         # see https://stackoverflow.com/questions/1542214/weird-backslash-substitution-in-ruby
-        equation_par = equation_par.sub(equation) { "<div data-toggle='collapse' href='\#eq_#{eq_num}'>" + "\n" + equation + "\n" + '</div>' }
+        equation_par = equation_par.sub(equation) { "<div data-bs-toggle='collapse' href='\#eq_#{eq_num}'>" + "\n" + equation + "\n" + '</div>' }
         equation_par = equation_par.sub(match[2]) { '{% ' + "legend eq_#{eq_num}" + '%}' + "\n" + match[2] + "\n" + '{% endlegend %}' }
         content = content.sub(match[0]) { equation_par }
         eq_num += 1
