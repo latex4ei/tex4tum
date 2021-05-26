@@ -4,7 +4,7 @@ title: Binomial Distribution
 
 The Binomial Distribution is the discrete probability distribution of the number of successes in a sequence of repeated Bernoulli trials, such as repeated coin tosses.
 
-<div class="float-right">
+<div class="float-end">
 
 | Parameters  |                           |
 |-------------|---------------------------|
