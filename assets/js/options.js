@@ -8,18 +8,14 @@ const Options = (function () {
   // Private Methods:
   const showClass = function (className, isVisible) {
     if (isVisible) {
-      $(`.${className}`).collapse('show')
+      for (const el of document.querySelectorAll(`.${className}`)){
+        el.classList.add('show')
+      }
     } else {
-      $(`.${className}`).collapse('hide')
+      for (const el of document.querySelectorAll(`.${className}`)){
+        el.classList.remove('show')
+      }
     }
-    // el = document.getElementsByClassName(className);
-    // for (i = 0; i < el.length; i++) {
-    //     if (isVisible) {
-    //         el[i].style.display = 'block';
-    //     } else {
-    //         el[i].style.display = 'none';
-    //     }
-    // }
   }
 
   const setCookie = function (key, value, expiredays) {
