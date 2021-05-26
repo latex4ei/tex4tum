@@ -86,7 +86,7 @@ git push -f
 ### Undo changes
 
 * **Local changes:** To undo local changes use `git checkout -- <FILE>`. If `<FILE>` is already staged (happens if you do `git add`), you can use `git reset HEAD <FILE>` and then `git checkout -- <FILE>`
-* **Commit staging:** If you want to undo the `commit` command meaning you move changes back to staging (still there bu uncommited), use `git reset --soft HEAD^`.
+* **Commit staging:** If you want to undo the `commit` command meaning you move changes back to staging (still there but uncommited), use `git reset --soft HEAD^`.
 * **Committed changes:** If you already commited changes but you want to reset all changes to the version of the `origin`, you can use `git reset --hard origin/master`
 
 
@@ -100,6 +100,12 @@ git checkout <commit>^ -- <file>
 ```
 
 
+## Testing and Merging Pull Requests
+To checkout a pull request (e.g. #37) locally for testing it, run
+```
+git fetch origin pull/37/head:pr37
+git checkout pr37
+```
 
 
 
