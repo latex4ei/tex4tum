@@ -87,7 +87,7 @@ $navbar-padding-x: 1rem;
 
 
 //
-// Collapse Cards
+// Cards
 //
 .collapsed{ cursor: pointer; }
 [data-bs-toggle="collapse"] { cursor: pointer; }
@@ -95,5 +95,5 @@ $navbar-padding-x: 1rem;
 .collapse .card, .collapsing .card { border-width: 2px; } 
 .card-body{ overflow-x: auto; }
 
-
+//main .card { margin: 1em 0; }
 
