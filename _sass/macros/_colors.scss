@@ -1,19 +1,13 @@
 @import 'tumcolors';
 
 
-// Other base colors
-$gray:         #d1d1d1 !default;
-$gray_light:   #f2f3f4 !default;
-$gray_lighter: #f8f9fa !default;
-
-$bg_tum_orange:    lighten($tum_emph_orange, 40%) !default;
-$bg_tum_blue_dark:  lighten($tum_sec_darkblue, 40%) !default;
 
 
 
 // color assignments
 $bg_code: $gray_light;
 $fg_code: $tum_ext_teal;
+
 
 $bg_thead: $gray_light;   // tum_ext_navy_20
 

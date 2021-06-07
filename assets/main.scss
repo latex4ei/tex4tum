@@ -33,7 +33,6 @@
 
 // Import macros (variable definitions)
 @import 
-  "macros/font",
   "macros/tumcolors"
 ;
 
@@ -42,7 +41,7 @@
 @import
   "partials/base",
   "partials/layout",
-  "partials/syntax-highlighting",
+  //"partials/syntax-highlighting",
   "partials/content-classes"
 ;
 

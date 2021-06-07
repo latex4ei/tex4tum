@@ -86,20 +86,7 @@ function w3IncludeHTML () {
   }
 }
 
-// @TODO Unused
-function addLoadEvent (func) {
-  const oldonload = window.onload
-  if (typeof window.onload !== 'function') {
-    window.onload = func
-  } else {
-    window.onload = function () {
-      if (oldonload) {
-        oldonload()
-      }
-      func()
-    }
-  }
-}
+
 
 // gets the value of a String with prefix
 function getValue (str) {
@@ -187,10 +174,7 @@ function SVG_registerTooltip (svg_obj) {
   svg_obj.addEventListener('mousedown', SVG_showTooltip, false)
 }
 
-// @TODO Unused
-const plot_obj = {
-  svg_obj, func, xmin, xmax
-}
+
 
 // @TODO Unused
 function SVG_showTooltip (event) {

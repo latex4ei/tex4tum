@@ -9,7 +9,7 @@
     {% else %}
     {% assign filelink = ghfull | append: '/raw/gh-pages/' | append: include.filename %}
     {% endif %}
-    <span class="mr-3">
+    <span class="me-3">
         <a href="{{ ghfull }}" target="_blank"> <i class="fab fa-github"></i></a>
         <a href="{{ filelink }}" target="_blank">{{ include.description }}</a>
     </span>

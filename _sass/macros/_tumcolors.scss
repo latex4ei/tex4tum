@@ -65,3 +65,13 @@ $tum_ext_maroon: #9c0d16;
 $tum_ext_maroon_80: #b03d45;
 $tum_ext_maroon_50: #ce868b;
 $tum_ext_maroon_20: #ebcfd0;
+
+
+// Other base colors
+$gray:         #d1d1d1 !default;
+$gray_light:   #f2f3f4 !default;
+$gray_lighter: #f8f9fa !default;
+
+// Background Colors
+$bg_tum_orange:    lighten($tum_emph_orange, 40%) !default;
+$bg_tum_blue_dark:  lighten($tum_sec_darkblue, 40%) !default;

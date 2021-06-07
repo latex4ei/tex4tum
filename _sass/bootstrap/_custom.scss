@@ -10,16 +10,14 @@
 //
 
 
-$theme-colors: (
-  primary: $tum_prim_blue,
-  secondary: $tum_sec_gray,
-  success: $tum_emph_green,
-  info: $tum_emph_lighterblue,
-  warning: $tum_emph_orange,
-  danger: $tum_ext_red,
-  light: $tum_emph_ivory,
-  dark: $tum_sec_gray_dark
-) !default;
+$primary: $tum_sec_darkblue;
+$secondary: $tum_sec_gray;
+$success: $tum_emph_green;
+$info: $tum_emph_lighterblue;
+$warning: $tum_emph_orange;
+$danger: $tum_ext_red;
+$light: $tum_emph_ivory;
+$dark: $tum_sec_gray_dark;
 
 
 //
@@ -32,6 +30,13 @@ $font-family-monospace:  Menlo, Monaco, Consolas, monospace;
 
 $headings-font-family: $font-family-sans-serif;
 
+
+//
+// Links
+//
+$link-decoration: none;
+$link-hover-decoration: none;
+$link-hover-color: $tum_emph_green;
 
 
 //
@@ -60,7 +65,6 @@ $container-max-widths: (
 
 
 
-
 //
 // Tables
 //
@@ -71,51 +75,25 @@ $table-cell-padding-sm: 0.5rem 1.0rem;
 
 
 //
-// Misc
+// Navbar
 //
 
 
 $brand-primary: $tum_emph_lightblue;
-$navbar-border-radius: 0;
 
-$link-hover-decoration: none;
-$link-hover-color: $tum_emph_green;
+.dropdown-item.form-check .form-check-input{ margin-left: 0; }  // fix padding
 
+$navbar-padding-x: 1rem;
 
-
-.collapsed{ cursor: pointer; }
-[data-toggle="collapse"] {
-   cursor: pointer;
-}
-
-
-//
-// Inputs (fix in navbar)
-//
-
-.dropdown-item .form-check-label {
-    margin-left: 1.5rem;
-}
 
 //
 // Cards
 //
+.collapsed{ cursor: pointer; }
+[data-bs-toggle="collapse"] { cursor: pointer; }
 
-$card-border-width: 3px;
+.collapse .card, .collapsing .card { border-width: 2px; } 
+.card-body{ overflow-x: auto; }
 
-// reset for tabbox
-.tabbox.card{
-  border: 1px solid rgba(0, 0, 0, 0.125);
-}
-.tabbox .card-header{
-  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
-  padding: 0.25rem 0.25rem 0.75rem 0.25rem ;
-}
-.tabbox .card-body{
-  overflow-x: auto;
-  overflow-y: hidden;
-  // display: block;
-}
-.tabbox .card-body .tab-content{
-  display: inline-block;
-}
+//main .card { margin: 1em 0; }
+
