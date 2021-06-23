@@ -42,6 +42,7 @@ module Jekyll
     end
   end
 
+  # write global index array to JS file
   class SearchIndex
     def generate(site)
       json_string = 'search_index = ' + $index_array.to_json
@@ -258,6 +259,8 @@ module Jekyll
       text
     end
 
+
+    # insert cross references into arcticles, based on the titles of other articles
     def insert_reference(text, curr_title)
       # puts curr_title
       $index_array.each do |entry|
@@ -285,13 +288,15 @@ module Jekyll
 
   # ============================================================
   Hooks.register :site, :pre_render do |site|
-    puts 'Hook (pre_render): Generating TOC...'
-    TocGenerator.new.generate(site)
+    if ENV['JEKYLL_ENV'] == 'production'
+      puts 'Hook (pre_render): Generating TOC...'
+      TocGenerator.new.generate(site)
+    end
   end
 
   # ============================================================
   Hooks.register :site, :post_write do |site|
-    puts 'Hook :post_write): Generating Search Index...'
+    puts 'Hook (post_write): Generating Search Index...'
     SearchIndex.new.generate(site)
   end
 

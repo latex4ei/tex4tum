@@ -46,8 +46,83 @@ Play with diagrams for better understanding. Click and drag the black ray with t
 
 
 
-### Fast Fuzzy Search
-Find an answer blazingly fast. The fuzzy search in the top bar displays results immediately without slow sever communication. Just hit `tab` to focus the search, then type e.g. "did" to search for "Diode".
+
+## Plots
+
+### Matplotlib Plots
+```{#rectangle .matplotlib}
+fig, ax = plt.subplots()
+N = 100 # sample count
+P = 10  # period
+D = 5   # width of pulse
+sig = np.arange(N) % P < D
+ax.plot(sig)
+```
+
+ 
+### Plotly Test (Python)
+
+```{.plotly_python }
+import numpy as np
+import plotly.express as px
+
+mu1 = 0.0; sig1 = 1.0
+lx = np.arange(-4, 4, 0.05)
+ly = st.norm.pdf(lx,mu1,sig1)
+
+df = pd.DataFrame(dict(values=lx, probability=ly))
+fig = px.line(df, x='values', y='probability')
+```
+
+### Plot Test with Bokeh (Python)
+
+```{.python .bokeh caption='Move around in the plot by using your mouse.'}
+import numpy as np
+from bokeh.plotting import figure
+
+mu1 = 0.0; sig1 = 1.0
+lx = np.arange(-4, 4, 0.05)
+ly = st.norm.pdf(lx,mu1,sig1)
+
+plt = figure(title="Interactive plotting with Bokeh", sizing_mode="scale_width", plot_width=1000, plot_height=500)
+
+plt.line(lx, ly, legend_label="μ = 0, σ = 1", line_width=2)
+
+plt.xaxis.axis_label = "values"
+plt.yaxis.axis_label = "probabilty"
+```
+
+
+### Plotly Plots
+<div id="plotly1"></div>
+
+```plotly
+var trace1 = {
+  x: [1, 2, 3, 4],
+  y: [10, 15, 13, 17],
+  mode: 'markers',
+  type: 'scatter'
+};
+
+var trace2 = {
+  x: [2, 3, 4, 5],
+  y: [16, 5, 11, 9],
+  mode: 'lines',
+  type: 'scatter'
+};
+
+var trace3 = {
+  x: [1, 2, 3, 4],
+  y: [12, 9, 15, 12],
+  mode: 'lines+markers',
+  type: 'scatter'
+};
+
+var data = [trace1, trace2, trace3];
+
+Plotly.newPlot('plotly1', data);
+```
+
 
 
 

@@ -1,11 +1,21 @@
+
+export PLANTUMLJAR:=$(shell locate plantuml.jar)
+
+
 build:
 	JEKYLL_ENV=production bundle exec jekyll build
 
 run:
 	JEKYLL_ENV=production bundle exec jekyll serve
 
+fastrun:
+	bundle exec jekyll serve
+
 draft:
 	bundle exec jekyll serve --unpublished
+
+debug:
+	bundle exec jekyll serve --verbose 
 
 test: build
 	bundle exec htmlproofer ./_site --only-4xx --check-favicon --check-html --disable-external

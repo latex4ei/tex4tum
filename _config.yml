@@ -56,6 +56,12 @@ kramdown:
 pandoc:
   #flags: 'html5, latex_macros, implicit_figures, --form=markdown+footnotes'
   extensions:
+    # - lua-filter: toolchain/filter/imgpath.lua
+    - lua-filter: toolchain/filter/pd-dia.lua
+    - lua-filter: toolchain/filter/pd-include-img.lua
+    - metadata: builddir=_site/
+    - metadata: diadir=res/img/
+    - resource-path: .:/res/img/content-images:/res/img/content-images/electrical
     # - smart
     - katex   # 2020-09: Chrome (temporarily?) dropped MathML, back to latexmathml until fixed. latexmathml|mathml
     - columns: 10000  # prevent pandoc from assigning table widths
@@ -74,6 +80,7 @@ exclude:
   - vendor
   - docker
   - spec
+  - tmp
   - README.md
 sass:
   load_paths:

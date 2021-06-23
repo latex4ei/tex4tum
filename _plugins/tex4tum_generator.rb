@@ -3,6 +3,8 @@
 module Jekyll
   require 'yaml'
 
+  # This class does preprocessing and replaces Markdown/Text structures 
+  # *before* the Markdown Processor (e.g. Pandoc) renders to HTML
   class Tex4TumGenerator < Generator
     safe true
     priority :highest

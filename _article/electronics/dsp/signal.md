@@ -17,12 +17,26 @@ title: Signal
 | Sampling Time      | $T_A = \frac{1}{f_A}$  |
 | Sampling Frequency | $f_A = \frac{1}{T_A}$  |
 
+Table: Symbol Notation.
+
+
+
+### Rectangular Pulse
+```mpl{name=rectangle}
+fig, ax = plt.subplots()
+N = 100 # sample count
+P = 10  # period
+D = 5   # width of pulse
+sig = np.arange(N) % P < D
+ax.plot(sig)
+```
+
 
 
 ## Signal Categories
 
-{% include figure.html width="25em" filename="signal_categories.svg" description="Signal Categories" %}
-
+<!-- {% include figure.html width="25em" filename="signal_categories.svg" description="Signal Categories" %} -->
+![Signal Categories](signal_categories.svg){ width=25em }
 
 Details: If a signal is both value–continuous  and  time–continuous, it is called a  analog signal. A  digital signal,  on the other hand,  is always value–discrete  and  time-discrete and the message contained therein consists of the symbols of a symbol set.
 
@@ -59,6 +73,23 @@ with $T_M$ is the assumed measurement duration during which the signal is observ
 $$P_x = \lim_{T_{\rm M}	\to \infty} \frac{1}{T_{\rm M} } \cdot \int^{T_{\rm M}/2} _{-T_{\rm M}/2} x^2(t)\,{\rm d}t.$$
 
 with $T_M$ is the assumed measurement duration during which the signal is observed, symmetrically with respect to the time origin ($t=0$).  In general, this time interval must be chosen very large; ideally $T_M$ should be towards infinity.
+
+
+### Example Energy and Power Calculations
+
+Now the energy and power of two exemplary signals are calculated. 
+
+![Rectangular Pulse](https://en.lntwww.de/images/2/25/P_ID590_Sig_T_1_2_S3.png)
+
+The upper graphic shows a rectangular pulse $x_1(t)$ with amplitude $A$ and duration $T$.
+
+* The signal energy of this pulse is $E_1 = A^2 \cdot T$.
+* For the signal power, division by $T_{\rm M}$ and limit formation $(T_{\rm M} \to \infty)$ the value is $P_1 = 0$.
+
+For the cosine signal $x_2(t)$ with amplitude $A$ applies according to the sketch below:
+
+* The signal power is $P_2 = A^2/2$, regardless of the frequency.
+* The signal energy $E_2$ (integral over power for all times) is infinite.
 
 
 

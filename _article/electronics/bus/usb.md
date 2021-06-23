@@ -184,7 +184,20 @@ The practical speed is 280 Mbit/s due to bus access constraints.
 
 
 
+## The Protocol
+
+
+### Idle State
+When any client device is connected it switches into one of two idle states:
+
+1. Diff "0" (D- Hi, D+ Lo): Idle Low Speed Device
+1. Diff "1" (D- Lo, D+ Hi): Idle Full Speed Device
+
+All further communication is initiated by the host.
+
+
+
 ## References
 
 * USB-C
-
+* [YouTube: “How does a USB keyboard work?”, 2021](https://www.youtube.com/watch?v=wdgULBpRoXk)
