@@ -10,7 +10,7 @@
     {% assign filelink = ghfull | append: '/raw/gh-pages/' | append: include.filename %}
     {% endif %}
     <span class="me-3">
-        <a href="{{ ghfull }}" target="_blank"> <i class="fab fa-github"></i></a>
-        <a href="{{ filelink }}" target="_blank">{{ include.description }}</a>
+        <a href="{{ ghfull }}" target="_blank" rel="noopener noreferrer"> <i class="fab fa-github"></i></a>
+        <a href="{{ filelink }}" target="_blank" rel="noopener noreferrer">{{ include.description }}</a>
     </span>
 </p>
