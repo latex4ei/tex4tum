@@ -78,3 +78,4 @@ exclude:
 sass:
   load_paths:
     - /usr/local/bundle/gems/bootstrap-5.0.1/assets/stylesheets
+    - /var/lib/gems/2.5.0/gems/bootstrap-5.0.1/assets/stylesheets
