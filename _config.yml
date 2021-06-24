@@ -63,7 +63,7 @@ pandoc:
     #- filter: pandoc-citeproc
 highlighter: rouge
 plugins:
-  #- bootstrap
+  - bootstrap
   - autoprefixer-rails
   - jekyll-pandoc
 exclude:
@@ -72,6 +72,10 @@ exclude:
   - Gemfile.lock
   - Makefile
   - vendor
-  - docs
+  - docker
   - spec
   - README.md
+sass:
+  load_paths:
+    - /usr/local/bundle/gems/bootstrap-5.0.1/assets/stylesheets
+    - /var/lib/gems/2.5.0/gems/bootstrap-5.0.1/assets/stylesheets

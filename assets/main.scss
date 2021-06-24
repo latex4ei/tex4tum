@@ -28,11 +28,11 @@
 }
 
 // Import bootstrap
-@import "bootstrap/custom";
-@import "bootstrap/scss/bootstrap";
+@import 'bootstrap-custom';
+@import "bootstrap";
 
 // Import macros (variable definitions)
-@import 
+@import
   "macros/tumcolors"
 ;
 
@@ -46,9 +46,8 @@
 ;
 
 
-// Import modules (specific CSS) 
+// Import modules (specific CSS)
 @import
   "modules/searchbox"
   //"modules/tabbox"
 ;
-

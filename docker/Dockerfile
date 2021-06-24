@@ -16,7 +16,11 @@ RUN echo "gem: --no-ri --no-rdoc" >~/.gemrc && \
     gem install jekyll rspec html-proofer pygments.rb jekyll-pandoc rubocop && \
     npm install -g standard
 
-RUN TEMP_DEB="$(mktemp)" && wget -O "$TEMP_DEB" "https://github.com/jgm/pandoc/releases/download/2.10.1/pandoc-2.10.1-1-amd64.deb" && dpkg -i "$TEMP_DEB" && rm -f "$TEMP_DEB"
+ENV PANDOC_VERSION="2.14.0.2"
+RUN TEMP_DEB="$(mktemp)" && \
+    wget -O "$TEMP_DEB" "https://github.com/jgm/pandoc/releases/download/$PANDOC_VERSION/pandoc-$PANDOC_VERSION-1-amd64.deb" && \
+    dpkg -i "$TEMP_DEB" && \
+    rm -f "$TEMP_DEB"
 
 RUN mkdir -p $JEKYLL_VAR_DIR $JEKYLL_DATA_DIR && \
     rm -rf /root/.gem /home/jekyll/.gem $BUNDLE_HOME/cache $GEM_HOME/cache

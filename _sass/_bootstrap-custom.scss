@@ -2,7 +2,7 @@
 //
 // Copy variables from `_variables.scss` to this file to override default values
 // without modifying source files.
-@import '../macros/tumcolors';
+@import 'macros/tumcolors';
 
 
 //
@@ -92,8 +92,7 @@ $navbar-padding-x: 1rem;
 .collapsed{ cursor: pointer; }
 [data-bs-toggle="collapse"] { cursor: pointer; }
 
-.collapse .card, .collapsing .card { border-width: 2px; } 
+.collapse .card, .collapsing .card { border-width: 2px; }
 .card-body{ overflow-x: auto; }
 
 //main .card { margin: 1em 0; }
-

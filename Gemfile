@@ -27,5 +27,5 @@ gem 'rubocop'
 group :jekyll_plugins do
   gem 'autoprefixer-rails'
   gem 'jekyll-pandoc'
-  # gem 'bootstrap'
+  gem 'bootstrap', '~> 5.0.1'
 end
