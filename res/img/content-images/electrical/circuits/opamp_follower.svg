@@ -1,0 +1,31 @@
+<svg id="svg4861" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="71.409" viewBox="0 0 187 71.409" width="187" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/">
+	<style id="style3" type="text/css"><![CDATA[
+			text {
+				font-size: 1em;
+			}
+		]]></style>
+	<script id="script5" xlink:href="/home/emu/Dropbox/Privat/Bilder/animatedSVG/op-amp/../latex4ei.js"/>
+	<g id="g5881" transform="translate(-621.5,-509.09)">
+		<g id="g8231-3" transform="matrix(1,0,0,-1,-20,709.69)">
+			<path id="path6710-4-3" style="stroke:#000;stroke-width:1px;fill:none" d="m740 130v40.12l40-20.14z"/>
+			<path id="path6744-7" style="stroke:#000;stroke-width:1px;stroke-linecap:round;fill:none" d="m740 140.1h-10"/>
+			<path id="path6746-6" style="stroke:#000;stroke-width:1px;stroke-linecap:round;fill:none" d="m740 160.1h-10"/>
+			<path id="path6746-8-13" style="stroke:#000;stroke-width:1px;stroke-linecap:round;fill:none" d="m790 150.1h-10"/>
+			<path id="path6744-5-0" style="stroke:#000;stroke-width:1px;stroke-linecap:round;fill:none" d="m750 140h-6"/>
+			<path id="path6744-5-7-8" style="stroke:#000;stroke-width:1px;stroke-linecap:round;fill:none" d="m750 160h-6"/>
+			<path id="path6744-5-75-0" style="stroke:#000;stroke-width:1px;stroke-linecap:round;fill:none" d="m747 143v-6"/>
+		</g>
+		<g id="g7962-0-1" transform="matrix(1,0,0,-1,160,659.59)">
+			<circle id="path8029-9-0" style="stroke-linejoin:round;stroke:#000;stroke-linecap:round;fill:none" transform="scale(-1,1)" cy="90" cx="-465" r="3"/>
+			<path id="path8033-1-9" style="stroke:#000;stroke-width:1px;stroke-linecap:round;fill:none" d="m470 90h-2"/>
+		</g>
+		<path id="path5065" d="m710 549.59h-10v-40h80v50" style="stroke:#000;stroke-linecap:round;stroke-width:1px;fill:none"/>
+		<path id="path5067" d="m770 559.59h30" style="stroke:#000;stroke-linecap:round;stroke-width:1px;fill:none"/>
+		<path id="path5069" d="m710 569.59h-80" style="stroke:#000;stroke-linecap:round;stroke-width:1px;fill:none"/>
+		<g id="g7962-0-1-0-5-2-1-4" transform="matrix(-1,0,0,1,1270,469.59)">
+			<circle id="path8029-9-0-2-4-8-8-2" style="stroke-linejoin:round;stroke:#000;stroke-linecap:round;fill:none" transform="scale(-1,1)" cy="90" cx="-465" r="3"/>
+			<path id="path8033-1-9-6-8-6-2-1" style="stroke:#000;stroke-width:1px;stroke-linecap:round;fill:none" d="m470 90h-2"/>
+		</g>
+		<circle id="path7434-4-0-2-4" style="stroke-linejoin:round;stroke:#000;stroke-linecap:round" transform="scale(1,-1)" cy="-559.59" cx="780" r="2"/>
+	</g>
+</svg>

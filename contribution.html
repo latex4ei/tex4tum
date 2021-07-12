@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- title, description, favicon -->
+    <title>Contribution</title>
+    <meta name="description" content="Interactive Knowledge Base for Engineers
+" />
+    <link rel="shortcut icon" href="/res/img/Logo.png" />
+    <link rel="canonical" href="/contribution">
+
+    <!-- Brower bar color for mobile devices (TUM blue) -->
+    <meta name="theme-color" content="#005293">
+
+    <!-- Load CSS in head, JS after footer -->
+    <!-- Main/Bootstrap -->
+    <link rel="stylesheet" href="/assets/main.css">
+    <link rel="stylesheet" href="/assets/syntax-highlight.css">
+
+    <!-- Fontawesome CSS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+        integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+    <!-- KaTeX CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"
+        integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+</head>
+
+
+<body>
+
+    <!-- Bootstrap 4.0 Navigation Bar -->
+<nav class="navbar sticky-top navbar-dark bg-primary text-white navbar-expand-lg">
+
+    <!-- sticky left: Logo -->
+    <div class="navbar-brand">
+        <a href="/index.html">
+            <img src="/res/img/Logo-inv.png" height="30" alt="Logo">
+        </a>
+    </div>
+
+
+    <!-- sticky right: search bar  -->
+    
+    <form class="form-inline order-lg-3" role="search">
+        <div id="search" class="search-container">
+            <input class="form-control search-input w-100" type="search" placeholder="&#xf002; Search (fuzzy)"
+                tabindex="1">
+            <div class="ac-results-wrapper"></div>
+        </div>
+    </form>
+    
+
+
+    <!-- Toggle button for collapsed items  -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+
+    <!-- Collapsable Items: Links -->
+    <div class="collapse navbar-collapse justify-content-start order-6 order-lg-2" id="navbarResponsive">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="/calculator.html"><i class="fa fa-calculator"></i>
+                    Calc</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/sheets.html"><i class="fa fa-file"></i> Sheets</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    <i class="fa fa-info-circle"></i> Info
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="/about.html"><i class="fa fa-question"></i>
+                        About TeX4TUM</a>
+                    <a class="dropdown-item" href="/team.html"><i class="fa fa-users"></i>
+                        Team</a>
+                    <a class="dropdown-item" href="/demo.html"><i class="fa fa-play-circle"></i>
+                        Feature Demo</a>
+                    <div class="dropdown-divider"></div>
+                    <h6 class="dropdown-header"><i class="fa fa-handshake"></i> Contribute</h6>
+                    <a class="dropdown-item" href="/support.html"><i class="fa fa-life-ring"></i>
+                        Support</a>
+                    <a class="dropdown-item" href="/contribution.html"><i class="fa fa-edit"></i>
+                        Write Article</a>
+                    <a class="dropdown-item" href="/todo.html"><i class="fa fa-tasks"></i> ToDo
+                        List</a>
+                    <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum"><i class="fab fa-github"></i>
+                        Develop Features</a>
+                    <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum/issues"><i class="fa fa-bug"></i>
+                        Report a bug</a>
+                    <a class="dropdown-item" href="/contact.html"><i class="fas fa-user-edit"></i>
+                        Contact</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link btn-group dropdown-toggle" href="/index.html"
+                    id="navbarDropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false"><i class="fa fa-cog"></i> Options</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <h6 class="dropdown-header">Display Options</h6>
+                    <div class="form-check dropdown-item">
+                        <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox"
+                            onchange="Options.changeOption(this)">
+                        <label class="form-check-label" for="checkbox_definition">Definitions</label>
+                    </div>
+                    <div class="form-check dropdown-item">
+                        <input class="form-check-input" id="checkbox_example" name="disp_opt" type="checkbox"
+                            onchange="Options.changeOption(this)">
+                        <label class="form-check-label" for="checkbox_example">Examples</label>
+                    </div>
+                    <div class="form-check dropdown-item">
+                        <input class="form-check-input" id="checkbox_explanation" name="disp_opt" type="checkbox"
+                            onchange="Options.changeOption(this)">
+                        <label class="form-check-label" for="checkbox_explanation">Explanations</label>
+                    </div>
+                    <div class="form-check dropdown-item">
+                        <input class="form-check-input" id="checkbox_legend" name="disp_opt" type="checkbox"
+                            onchange="Options.changeOption(this)">
+                        <label class="form-check-label" for="checkbox_legend">Legends</label>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+
+
+</nav>
+
+
+    <main class="container" aria-label="Content">
+        
+
+
+<h1><a data-bs-toggle="collapse" href="#title_def" aria-expanded="false" aria-controls="title_def">
+        
+        <i class="fas fa-edit"></i>
+        
+        Contribution
+    </a><a class="float-end small" style="font-size: small"
+        href="https://github.com/latex4ei/tex4tum/edit/master/_info/contribution.md">[edit]</a></h1>
+
+<p>
+    
+</p>
+
+<!-- Basics -->
+<!--    -->
+<!-- \newcommand{\diff}{\mathop{}\!\mathrm{\vphantom( d}} -->
+<!-- SI Units -->
+<!--=============================================================== -->
+<!-- KaTeX Tweaks -->
+<div id="title_def" class="definition collapse">
+<div class="card border-primary mb-1">
+<div class="card-body">
+<h5 class="card-title text-primary">
+Definition
+</h5>
+<p class="card-text">
+This article describes how you can contribute or edit articles.
+</p>
+</div>
+</div>
+</div>
+<p>If you want to contribute or edit an article do the following:</p>
+<ol type="1">
+<li>fork <a href="https://github.com/latex4ei/tex4tum">the repository on github</a> and clone it locally.</li>
+<li>edit the corresponding <code>.md</code> file in the folder ‘<code>_article</code>’ or create a new one.</li>
+<li>once finished, push the changes to GitHub and create a pull request.</li>
+</ol>
+<h2 id="what-content-is-suitable-for-tex4tum">What content is suitable for Tex4TUM?</h2>
+<p>Before you start writing, think twice.</p>
+<ol type="1">
+<li>A TeX4TUM article should mostly consist of diagrams, tables, and equations. Text paragraphs should only be used as a last method to explain details and these details should be hidden by default.</li>
+<li>The content should be timeless. Anything that out-dates or updates more frequent than 5 years is <em>not</em> suitable.</li>
+<li>The article should be an overview of knowledge that many engineers frequently need but often forget. The article should not focus on teaching or explaining something to the reader. These contribution guidelines are a good counter example of what should not be a normal TeX4TUM article.</li>
+<li>The content should stick to or inherit a pattern. For example, protocols always illustrate the header format and then explain the fields.</li>
+</ol>
+<h2 id="our-format-syntax">Our Format Syntax</h2>
+<p>The good news first: If you write text, it will be displayed as text. If you want to apply some text formatting you can use <a href="/markdown.html">Markdown</a>. Equations can be typset in TeX surrounded by <code>$</code> without spaces.</p>
+<h3 id="file-structure">File structure</h3>
+<p>Our file structure requires a YAML header (surrounded by <code>---</code>) that states a title and some keywords (tags) that can be used to find the article.</p>
+<h5 class="clp_title text-success" data-bs-toggle="collapse" href="#example22">
+<i class='fa fa-chart-bar'></i> File example
+</h5>
+<div id='example22' class='example collapse'>
+<div class='card border-success mb-1'>
+<div class='card-body'>
+<p class='card-text'>
+<pre><code> ---
+ title: Inter-Integrated Circuit I²C
+ tags: i2c, bus, SDA, SCK
+ ---
+
+ The first paragraph is the definition (hidden by default).
+
+ After the first blank line comes the introduction.
+
+ ## First Heading
+ text</code></pre>
+<p>
+</div>
+</div>
+</div>
+<p>The first paragraph will become the definition, which you should always provide. If you really want to omit a definition, indent the first paragraph by two spaces.</p>
+<h3 id="markdown-for-basic-text">Markdown for Basic Text</h3>
+<p>We use <a href="https://pandoc.org/MANUAL.html">Pandoc</a> as Markdown interpreter with the extension <code>footnotes</code> and <code>backtick_code_blocks</code>. Thus, the following formatting is possible</p>
+<table>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>## Heading</code></td>
+<td style="text-align: left;"><strong>Heading</strong></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>**bold**</code></td>
+<td style="text-align: left;"><strong>bold</strong></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>**italic**</code></td>
+<td style="text-align: left;"><em>italic</em></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>[Link-Text](url)</code></td>
+<td style="text-align: left;"><a href="url">Link-Text</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="own-parsers">Own Parsers</h3>
+<p>We also use our own backend scripts to parse certain content categories, for example, to detect the definition paragraph of an article. Furthermore, we format examples, explanations, and legends. To format a paragraph as example you just need to write <code>Example:</code> before a paragraph. The paragraph is recognized by blank lines, so make sure that you have a blank line before the the <code>Example:</code> marker.</p>
+<h5 class="clp_title text-success" data-bs-toggle="collapse" href="#example23">
+<i class='fa fa-chart-bar'></i> Example
+</h5>
+<div id='example23' class='example collapse'>
+<div class='card border-success mb-1'>
+<div class='card-body'>
+<p class='card-text'>
+<p>This is an example Text and here is the code that produces it.</br></p>
+<pre><code>Example: This is an example Text and here is the code that produces it.
+```&lt;p&gt;
+  &lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+
+Besides that you can also mark content using the Liquid Tags described below.
+
+
+### Equations with TeX
+We use [KaTeX](https://khan.github.io/KaTeX/) as TeX interpreter, such that you can typeset math equations simply using `$`.
+For example to display $\sqrt{x^2 + \alpha}$ as inline you write `$\sqrt{x^2 + \alpha}$`. Please note that there must *not* be a space between the `$` and your tex code!
+For display style equations, leave a blank line and surround your tex code by double `$$`s. You may optionally explain used symbols by a line starting with `with` or `where` that directly follows the equation.
+
+The equation (you can click on it)
+
+&lt;div data-bs-toggle=&#39;collapse&#39; href=&#39;#eq_0&#39;&gt;
+$$\oint_{\partial A} \vec E \cdot \diff \vec s$$
+&lt;/div&gt;
+&lt;div id=&#39;eq_0&#39; class=&#39;legend collapse&#39;&gt;&lt;div class=&#39;card border-info w-75 mx-auto&#39;&gt;&lt;div class=&#39;p-1 small&#39;&gt;
+with electric field $\vec E$, surface $A$ and direction $\vec s$
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+
+is written as</code></pre>
+<p><span class="math display">\oint_{\partial A} \boldsymbol E \cdot \,\text{d}\boldsymbol s</span> with electric field <span class="math inline">\boldsymbol E</span>, surface <span class="math inline">A</span> and direction <span class="math inline">\boldsymbol s</span></p>
+<pre><code>
+Note: To define new LaTeX commands add them to `res/parser_util/tex_definition.md`
+
+
+
+## Jekyll and Liquid Tags
+Our site is generated using [Jekyll](https://jekyllrb.com/) that manages every step of the conversion to the final HTML files. Thus, Jekyll collects and converts the Markdown files by piping them through Pandoc. However, **before** the conversion, Jekyll allows to substitute dynamic content using Liquid Tags `{% include mycontent.md %}` and Liquid variables `{{ date }}`. These tags allow sophisticated generation of content using backend Ruby scripts.
+
+We created some custom templates, liquid tags and plugins to simplify the development process. The following sections describe how to use these during contribution. Also check our [Demo Pages](demo.html) for some features.
+
+
+### Images
+To include Images use the following commands
+
+**Figures**
+```bash
+{% include figure.html filename=&quot;complex.svg&quot; description=&quot;Description goes here&quot; width=&quot;50%&quot; %}
+</code></pre>
+<p>Output: Image in figure environment with image description</p>
+<figure class="figure">
+<img class="figure-img img-fluid" style="width: 50%;" src="/res/img/content-images/math/complex.svg"
+    alt="Description goes here" />
+<figcaption class="figure-caption">
+Description goes here
+</figcaption>
+</figure>
+<p><strong>Inline Image</strong></p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">{%</span> inlineimage capacitor_symbol.svg %}</span></code></pre></div>
+<p>Output: Inline Image #<Jekyll::StaticFile:0x00005609d144b818>#<Jekyll::StaticFile:0x00005609d0febac0>#<Jekyll::StaticFile:0x00005609d0feb8b8>#<Jekyll::StaticFile:0x00005609d0feae68>#<Jekyll::StaticFile:0x00005609d0feb638>#<Jekyll::StaticFile:0x00005609d0feb2c8>#<Jekyll::StaticFile:0x00005609d0feb520>#<Jekyll::StaticFile:0x00005609d144b9f8>#<Jekyll::StaticFile:0x00005609d0ffcaa0>#<Jekyll::StaticFile:0x00005609d0ffcbe0>#<Jekyll::StaticFile:0x00005609d0ffc960>#<Jekyll::StaticFile:0x00005609d13e4d98>#<Jekyll::StaticFile:0x00005609d13e4eb0>#<Jekyll::StaticFile:0x00005609d13e4b68>#<Jekyll::StaticFile:0x00005609d13e4c80>#<Jekyll::StaticFile:0x00005609d13e4fc8>#<Jekyll::StaticFile:0x00005609d13e5400>#<Jekyll::StaticFile:0x00005609d0e92e80>#<Jekyll::StaticFile:0x00005609d0e931f0>#<Jekyll::StaticFile:0x00005609d0e93060>#<Jekyll::StaticFile:0x00005609d0e92ca0>#<Jekyll::StaticFile:0x00005609d0e900e0>#<Jekyll::StaticFile:0x00005609d0e90590>#<Jekyll::StaticFile:0x00005609d13e08d8>#<Jekyll::StaticFile:0x00005609d13e09f0>#<Jekyll::StaticFile:0x00005609d0f97c90>#<Jekyll::StaticFile:0x00005609d0f97dd0>#<Jekyll::StaticFile:0x00005609d10060a0>#<Jekyll::StaticFile:0x00005609d1005ad8>#<Jekyll::StaticFile:0x00005609d1005c68>#<Jekyll::StaticFile:0x00005609d1006208>#<Jekyll::StaticFile:0x00005609d1005df8>#<Jekyll::StaticFile:0x00005609d1005f60>#<Jekyll::StaticFile:0x00005609d13d19c8>#<Jekyll::StaticFile:0x00005609d13d1680>#<Jekyll::StaticFile:0x00005609d13d1ae0>#<Jekyll::StaticFile:0x00005609d13d1798>#<Jekyll::StaticFile:0x00005609d13d18b0>#<Jekyll::StaticFile:0x00005609d13d1d10>#<Jekyll::StaticFile:0x00005609d13d1568>#<Jekyll::StaticFile:0x00005609d13d1bf8>#<Jekyll::StaticFile:0x00005609d104f7a0>#<Jekyll::StaticFile:0x00005609d104fa20>#<Jekyll::StaticFile:0x00005609d104f368>#<Jekyll::StaticFile:0x00005609d13e1ff8>#<Jekyll::StaticFile:0x00005609d13e2750>#<Jekyll::StaticFile:0x00005609d13e1dc8>#<Jekyll::StaticFile:0x00005609d13e2110>#<Jekyll::StaticFile:0x00005609d13e1738>#<Jekyll::StaticFile:0x00005609d13e2548>#<Jekyll::StaticFile:0x00005609d13e0db0>#<Jekyll::StaticFile:0x00005609d13e0ea0>#<Jekyll::StaticFile:0x00005609d13e2228>#<Jekyll::StaticFile:0x00005609d13e1968>#<Jekyll::StaticFile:0x00005609d13e1a80>#<Jekyll::StaticFile:0x00005609d13e1b98>#<Jekyll::StaticFile:0x00005609d13e11e8>#<Jekyll::StaticFile:0x00005609d13e1cb0>#<Jekyll::StaticFile:0x00005609d13e1418>#<Jekyll::StaticFile:0x00005609d13e2340>#<Jekyll::StaticFile:0x00005609d13e1530>#<Jekyll::StaticFile:0x00005609d13e1850>#<Jekyll::StaticFile:0x00005609d13e10d0>#<Jekyll::StaticFile:0x00005609d13e1648>#<Jekyll::StaticFile:0x00005609d13e2430>#<Jekyll::StaticFile:0x00005609d13e1300>#<Jekyll::StaticFile:0x00005609d13e1ee0>#<Jekyll::StaticFile:0x00005609d13e0fb8>#<Jekyll::StaticFile:0x00005609d13e2638>#<Jekyll::StaticFile:0x00005609d102f630>#<Jekyll::StaticFile:0x00005609d102ed70>#<Jekyll::StaticFile:0x00005609d102f3d8>#<Jekyll::StaticFile:0x00005609d102eed8>#<Jekyll::StaticFile:0x00005609d102ebb8>#<Jekyll::StaticFile:0x00005609d102eff0>#<Jekyll::StaticFile:0x00005609d13e0b08>#<Jekyll::StaticFile:0x00005609d0fe8550>#<Jekyll::StaticFile:0x00005609d0fe8410>#<Jekyll::StaticFile:0x00005609d0fe88c0>#<Jekyll::StaticFile:0x00005609d0fe8690>#<Jekyll::StaticFile:0x00005609d0fe87a8>#<Jekyll::StaticFile:0x00005609d0fe82a8>#<Jekyll::StaticFile:0x00005609d0fe8aa0>#<Jekyll::StaticFile:0x00005609d0fea6c0>#<Jekyll::StaticFile:0x00005609d0fe9720>#<Jekyll::StaticFile:0x00005609d0fe9478>#<Jekyll::StaticFile:0x00005609d0fe9b08>#<Jekyll::StaticFile:0x00005609d0fe9838>#<Jekyll::StaticFile:0x00005609d0fe9f90>#<Jekyll::StaticFile:0x00005609d0feabe8>#<Jekyll::StaticFile:0x00005609d0fe9c70>#<Jekyll::StaticFile:0x00005609d0fe9950>#<Jekyll::StaticFile:0x00005609d0fe8f00>#<Jekyll::StaticFile:0x00005609d0fea0a8>#<Jekyll::StaticFile:0x00005609d0fe8c30>#<Jekyll::StaticFile:0x00005609d0fe9608>#<Jekyll::StaticFile:0x00005609d0fe8dc0>#<Jekyll::StaticFile:0x00005609d0fe9e00>#<Jekyll::StaticFile:0x00005609d0fe9298>#<Jekyll::StaticFile:0x00005609d0fea8c8>#<Jekyll::StaticFile:0x00005609d13e4a50>#<Jekyll::StaticFile:0x00005609d0eaa1c0>#<Jekyll::StaticFile:0x00005609d0ea96f8>#<Jekyll::StaticFile:0x00005609d0ea9ab8>#<Jekyll::StaticFile:0x00005609d0ea9928>#<Jekyll::StaticFile:0x00005609d0eaa008>#<Jekyll::StaticFile:0x00005609d0eaa3c8>#<Jekyll::StaticFile:0x00005609d0eab868>#<Jekyll::StaticFile:0x00005609d0eaad28>#<Jekyll::StaticFile:0x00005609d0eab048>#<Jekyll::StaticFile:0x00005609d0eab4d0>#<Jekyll::StaticFile:0x00005609d0eab1d8>#<Jekyll::StaticFile:0x00005609d0eaab70>#<Jekyll::StaticFile:0x00005609d0eab318>#<Jekyll::StaticFile:0x00005609d0eaa6c0>#<Jekyll::StaticFile:0x00005609d0eaa558>#<Jekyll::StaticFile:0x00005609d0eaba48>#<Jekyll::StaticFile:0x00005609d0eaaf08>#<Jekyll::StaticFile:0x00005609d0e342b8>#<Jekyll::StaticFile:0x00005609d0e34150>#<Jekyll::StaticFile:0x00005609d0eabea8>#<Jekyll::StaticFile:0x00005609d0e35050>#<Jekyll::StaticFile:0x00005609d0e1ccf8>#<Jekyll::StaticFile:0x00005609d0e10ca0>#<Jekyll::StaticFile:0x00005609d0e34d30>#<Jekyll::StaticFile:0x00005609d0ea9978>#<Jekyll::StaticFile:0x00005609d0e34010>#<Jekyll::StaticFile:0x00005609d0eabcf0>#<Jekyll::StaticFile:0x00005609d13e51f8>#<Jekyll::StaticFile:0x00005609d13e6af8>#<Jekyll::StaticFile:0x00005609d13e68c8>#<Jekyll::StaticFile:0x00005609d10120f8>#<Jekyll::StaticFile:0x00005609d1011b58>#<Jekyll::StaticFile:0x00005609d1012cd8>#<Jekyll::StaticFile:0x00005609d1012a30>#<Jekyll::StaticFile:0x00005609d1012440>#<Jekyll::StaticFile:0x00005609d10128a0>#<Jekyll::StaticFile:0x00005609d1011860>#<Jekyll::StaticFile:0x00005609d10125a8>#<Jekyll::StaticFile:0x00005609d10116a8>#<Jekyll::StaticFile:0x00005609d1011f90>#<Jekyll::StaticFile:0x00005609d1012288>#<Jekyll::StaticFile:0x00005609d1012710>#<Jekyll::StaticFile:0x00005609d1012bc0>#<Jekyll::StaticFile:0x00005609d1011c98>#<Jekyll::StaticFile:0x00005609d10119c8>#<Jekyll::StaticFile:0x00005609d1011dd8>#<Jekyll::StaticFile:0x00005609d13e69e0>#<Jekyll::StaticFile:0x00005609d13e6dc8>#<Jekyll::StaticFile:0x00005609d13e6cb0>#<Jekyll::StaticFile:0x00005609d13e70e8>#<Jekyll::StaticFile:0x00005609d13e6fd0>#<Jekyll::StaticFile:0x00005609d13e6eb8>#<Jekyll::StaticFile:0x00005609d13e50e0>#<Jekyll::StaticFile:0x00005609d13e52e8>#<Jekyll::StaticFile:0x00005609d13e56f8>#<Jekyll::StaticFile:0x00005609d13e55e0>#<Jekyll::StaticFile:0x00005609d13e99b0>#<Jekyll::StaticFile:0x00005609d13e9550>#<Jekyll::StaticFile:0x00005609d13e9320>#<Jekyll::StaticFile:0x00005609d13e8ee8>#<Jekyll::StaticFile:0x00005609d13e9be0>#<Jekyll::StaticFile:0x00005609d13e9780>#<Jekyll::StaticFile:0x00005609d13e9668>#<Jekyll::StaticFile:0x00005609d13e9438>#<Jekyll::StaticFile:0x00005609d13e9000>#<Jekyll::StaticFile:0x00005609d13e9230>#<Jekyll::StaticFile:0x00005609d13e9898>#<Jekyll::StaticFile:0x00005609d13e8cb8>#<Jekyll::StaticFile:0x00005609d13e8dd0>#<Jekyll::StaticFile:0x00005609d13e9118>#<Jekyll::StaticFile:0x00005609d13e9ac8>#<Jekyll::StaticFile:0x00005609d0ffd270>#<Jekyll::StaticFile:0x00005609d0ffd540>#<Jekyll::StaticFile:0x00005609d0ffcfc8>#<Jekyll::StaticFile:0x00005609d0ffdbf8>#<Jekyll::StaticFile:0x00005609d01cfd88>#<Jekyll::StaticFile:0x00005609d01cfec8>#<Jekyll::StaticFile:0x00005609d01d1728>#<Jekyll::StaticFile:0x00005609d01d1840></p>
+<p><strong>SVG Objects</strong></p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">{%</span> include svg-object.html width=<span class="st">&quot;18em&quot;</span> id=<span class="st">&quot;RC_obj&quot;</span> filename=<span class="st">&quot;rc.svg&quot;</span> description=<span class="st">&quot;Circuit of low-pass filter&quot;</span> %}</span></code></pre></div>
+Output: SVG Object
+<figure>
+<object class="img-fluid" id="RC_obj" style="width: 18em;" data="res/img/dynamic-images/rc.svg" type="image/svg+xml">
+</object>
+<figcaption class="figure-caption">
+Circuit of low-pass filter
+</figcaption>
+</figure>
+<h3 id="code-listings">Code Listings</h3>
+<p>Verbatime code can be placed inside backticks, e.g. `code` is displayed as <code>code</code>. If you want to highlight code put it in a block of three backticks. Directly after the backticks you can specify the language.</p>
+<figure class="highlight">
+<pre><code class="language-c" data-lang="c"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="code"><pre><span class="err">```</span><span class="n">c</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"Hello World"</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="err">```</span>
+</pre></td></tr></tbody></table></code></pre>
+</figure>
+<p>As an alternative we also support advanced syntax highlighting using the following liquid tag</p>
+<pre><code>{% highlight c linenos %}
+int main() {
+    if (a &lt; 3){
+        printf(&quot;Hello World&quot;);
+    }
+}
+{% endhighlight %}
+</code></pre>
+<h3 id="acronyms">Acronyms</h3>
+<p>Acronyms, such as AES, are parsed and linked automatically. If you want to add a new abbreviation just add it to <code>res/parser_util/abbreviations.md</code>. The structure should look like this</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">*[AES]:</span> Advanced Encryption Standard</span></code></pre></div>
+<h3 id="content-categories">Content Categories</h3>
+<p>We currently support four special categories of content, which visibility is influenced via interactions or the options (see <a href="demo.html">Demo Page</a>)</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">{%</span> definition %}text{% enddefinition %}</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="ex">{%</span> example %}text{% endexample %}</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="ex">{%</span> explanation %}text{% endexplanation %}</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="ex">{%</span> legend %}text{% endlegend %}</span></code></pre></div>
+<h3 id="emphbox">Emphbox</h3>
+<div class="sourceCode" id="cb9"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">{%</span> emphbox %}Content in box{% endemphbox %}</span></code></pre></div>
+Output:
+<div class='card border-danger'>
+<div class='card-body'>
+<p class='card-text text-center'>
+Content in box
+<p>
+</div>
+</div>
+<h2 id="interactivity-htmlsvg-javascript">Interactivity: HTML/SVG + JavaScript</h2>
+<p>To create interactive content you can directly embedd HTML tags and JavaScript code. An easy to use framework is under development.</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>Resistance R = <span class="kw">&lt;span</span> <span class="er">id</span><span class="ot">=</span><span class="st">&quot;R_val&quot;</span> <span class="er">onclick</span><span class="ot">=</span><span class="st">&quot;askValue(this.id)&quot;</span><span class="kw">&gt;</span>10k<span class="kw">&lt;/span&gt;</span>Ω</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;script</span><span class="ot"> type=</span><span class="st">&quot;text/javascript&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a> <span class="kw">var</span> R1 <span class="op">=</span> <span class="fu">getValue</span>( <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">&quot;R_val&quot;</span>)<span class="op">.</span><span class="at">textContent</span> )<span class="op">;</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/script&gt;</span></span></code></pre></div>
+<p>Please ensure that you only have one <code>&lt;script&gt;</code> section <em>at the end</em> of the article! Otherwise our generator scripts might destroy your code.</p>
+<h2 id="preview-your-article">Preview your article</h2>
+<p>When you are done editing, you can preview your article. Follow the instruction of the <a href="https://github.com/latex4ei/tex4tum/blob/master/README.md#contribution">README</a> to install all dependencies</p>
+<p>Run the local server and browse to http://localhost:4000/ with</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">make</span> run</span></code></pre></div>
+<h2 id="list-of-todos">List of TODOs</h2>
+<p>All lines starting with TODO will be added to the following TODO list.</p>
+<table class="table table-striped">
+<thead>
+<tr>
+<th>
+ToDo
+</th>
+<th>
+Source File
+</th>
+<th>
+Page Reference
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+table for selecting resistors.
+</td>
+<td>
+i2c.md
+</td>
+<td>
+<a href="/i2c.html">Inter-Integrated Circuit (I2C)</a>
+</td>
+</tr>
+<tr>
+<td>
+explain how values are read / written
+</td>
+<td>
+ram.md
+</td>
+<td>
+<a href="/ram.html">Random Access Memory (RAM)</a>
+</td>
+</tr>
+<tr>
+<td>
+typical values of RAM modules
+</td>
+<td>
+ram.md
+</td>
+<td>
+<a href="/ram.html">Random Access Memory (RAM)</a>
+</td>
+</tr>
+<tr>
+<td>
+color escape codes
+</td>
+<td>
+bash.md
+</td>
+<td>
+<a href="/bash.html">Bash</a>
+</td>
+</tr>
+<tr>
+<td>
+list all keywords
+</td>
+<td>
+c.md
+</td>
+<td>
+<a href="/c.html">C</a>
+</td>
+</tr>
+<tr>
+<td>
+diagram explaining the GNU tool chain: linker
+</td>
+<td>
+c.md
+</td>
+<td>
+<a href="/c.html">C</a>
+</td>
+</tr>
+<tr>
+<td>
+page 58 image
+</td>
+<td>
+ieee-802-15-04.md
+</td>
+<td>
+<a href="/ieee-802-15-04.html">IEEE 802.15.4</a>
+</td>
+</tr>
+<tr>
+<td>
+figure from p 51
+</td>
+<td>
+ieee-802-15-04.md
+</td>
+<td>
+<a href="/ieee-802-15-04.html">IEEE 802.15.4</a>
+</td>
+</tr>
+<tr>
+<td>
+adjust JS library for blake2b
+</td>
+<td>
+blake2.md
+</td>
+<td>
+<a href="/blake2.html">Blake 2</a>
+</td>
+</tr>
+<tr>
+<td>
+Float umwandlung mit precision fehler
+</td>
+<td>
+numbers.md
+</td>
+<td>
+<a href="/numbers.html">Number Converter</a>
+</td>
+</tr>
+<tr>
+<td>
+explanation
+</td>
+<td>
+matrix.md
+</td>
+<td>
+<a href="/matrix.html">Matrix</a>
+</td>
+</tr>
+<tr>
+<td>
+adjust svg like this: https://www.thinkcalculator.com/algebra/convolution-calculator.php
+</td>
+<td>
+convolution.md
+</td>
+<td>
+<a href="/convolution.html">Convolution</a>
+</td>
+</tr>
+<tr>
+<td>
+explain alpha, beta, and P
+</td>
+<td>
+testing.md
+</td>
+<td>
+<a href="/testing.html">Hypothesis Testing</a>
+</td>
+</tr>
+<tr>
+<td>
+precision, recall, sensitivity
+</td>
+<td>
+testing.md
+</td>
+<td>
+<a href="/testing.html">Hypothesis Testing</a>
+</td>
+</tr>
+<tr>
+<td>
+draw image of the process github .md –&gt; jekyll –&gt; scripts –&gt; pandoc –&gt; .html + head.html = webpage
+</td>
+<td>
+about.md
+</td>
+<td>
+<a href="/about.html">About TeX4TUM</a>
+</td>
+</tr>
+<tr>
+<td>
+should we use mermaid?
+</td>
+<td>
+contribution.md
+</td>
+<td>
+<a href="/contribution.html">Contribution</a>
+</td>
+</tr>
+<tr>
+<td>
+This will be written into the todo-list
+</td>
+<td>
+demo.md
+</td>
+<td>
+<a href="/demo.html">Demo of Interactive Features</a>
+</td>
+</tr>
+</tbody>
+</table>
+
+
+    </main>
+
+    <footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-auto">
+                <img class="img-fluid" style="width: 4em;" src="/res/img/Logo.png" alt="Logo">
+            </div>
+
+            <div class="col-sm-5 col-lg-3">
+                <h3>Tex4Tum</h3>
+                <ul class="contact-list">
+                    <li><a href="mailto:info@latex4ei.de"><i class="fa fa-envelope"></i> info@latex4ei.de</a></li>
+                    <li><a href="http://latex4ei.de"><i class="fa fa-globe"></i> latex4ei.de</a></li>
+                </ul>
+            </div>
+
+            <div class="col-sm-3 col-lg-2">
+                <ul class="social-media-list">
+                    
+                    <li>
+<!-- Dont put these Liquid statements into a new line to ensure the correct output format -->
+<a href="https://github.com/latex4ei">
+    <i class="fab fa-github"></i>
+    <span class="username">latex4ei</span>
+</a>
+</li>
+                    
+                    <li>
+<!-- Dont put these Liquid statements into a new line to ensure the correct output format -->
+<a href="https://gitter.im/LaTeX4Ei">
+    <i class="fab fa-gitter"></i>
+    <span class="username">LaTeX4Ei</span>
+</a>
+</li>
+                    
+                    <li>
+<!-- Dont put these Liquid statements into a new line to ensure the correct output format -->
+<a href="https://facebook.com/LaTeX4Ei">
+    <i class="fab fa-facebook-square"></i>
+    <span class="username">LaTeX4Ei</span>
+</a>
+</li>
+                    
+                </ul>
+            </div>
+
+            <div class="col-lg-5">
+                <p>Interactive Knowledge Base for Engineers
+</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<!-- Load Javascript at the end for faster page loading -->
+<!-- ================================================== -->
+
+<!-- Own javascript -->
+<script src="/assets/js/latex4ei.js"></script>
+<script src="/assets/js/options.js"></script>
+
+<!-- KaTeX JS -->
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"
+    integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz"
+    crossorigin="anonymous"></script>
+
+<!-- jQuery -->
+<!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
+
+<!-- Bootstrap 5-->
+<script src="/assets/js/bootstrap5/bootstrap.bundle.min.js"></script>
+
+
+
+<!-- Fuse + Own Adapter -->
+<script src="https://cdn.jsdelivr.net/fuse/2.6.1/fuse.min.js"></script>
+<script src="/assets/js/search_index.json"></script>
+<script src="/assets/js/t4t_search.js"></script>
+
+<script>
+    window.onload = function () {
+        // render KaTeX
+        renderMath();
+
+        // fix navbar hiding anchor jumps
+        window.addEventListener("hashchange", function () { scrollBy(0, -100) });
+
+
+        Options.loadOptions();
+
+        var opts = {
+            data: search_index,
+            numResults: 10,
+            searchPath: '/search?q=',
+            directPath: '.',
+            container: document.getElementsByClassName('search-container')
+        };
+        autocomplete(opts);
+    };
+</script>
+
+
+<!-- Mermaid -->
+<!--   <link rel="stylesheet" href="https://cdn.rawgit.com/knsv/mermaid/7.0.0/dist/mermaid.css">
+  <script type="text/javascript" src="https://cdn.rawgit.com/knsv/mermaid/7.0.0/dist/mermaid.min.js"></script> -->
+
+<!-- ================================================== -->
+
+
+</body>
+
+</html>

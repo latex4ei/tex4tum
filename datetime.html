@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- title, description, favicon -->
+    <title>Date and Time</title>
+    <meta name="description" content="Interactive Knowledge Base for Engineers
+" />
+    <link rel="shortcut icon" href="/res/img/Logo.png" />
+    <link rel="canonical" href="/datetime">
+
+    <!-- Brower bar color for mobile devices (TUM blue) -->
+    <meta name="theme-color" content="#005293">
+
+    <!-- Load CSS in head, JS after footer -->
+    <!-- Main/Bootstrap -->
+    <link rel="stylesheet" href="/assets/main.css">
+    <link rel="stylesheet" href="/assets/syntax-highlight.css">
+
+    <!-- Fontawesome CSS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+        integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+    <!-- KaTeX CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"
+        integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+</head>
+
+
+<body>
+
+    <!-- Bootstrap 4.0 Navigation Bar -->
+<nav class="navbar sticky-top navbar-dark bg-primary text-white navbar-expand-lg">
+
+    <!-- sticky left: Logo -->
+    <div class="navbar-brand">
+        <a href="/index.html">
+            <img src="/res/img/Logo-inv.png" height="30" alt="Logo">
+        </a>
+    </div>
+
+
+    <!-- sticky right: search bar  -->
+    
+    <form class="form-inline order-lg-3" role="search">
+        <div id="search" class="search-container">
+            <input class="form-control search-input w-100" type="search" placeholder="&#xf002; Search (fuzzy)"
+                tabindex="1">
+            <div class="ac-results-wrapper"></div>
+        </div>
+    </form>
+    
+
+
+    <!-- Toggle button for collapsed items  -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+
+    <!-- Collapsable Items: Links -->
+    <div class="collapse navbar-collapse justify-content-start order-6 order-lg-2" id="navbarResponsive">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="/calculator.html"><i class="fa fa-calculator"></i>
+                    Calc</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/sheets.html"><i class="fa fa-file"></i> Sheets</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    <i class="fa fa-info-circle"></i> Info
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="/about.html"><i class="fa fa-question"></i>
+                        About TeX4TUM</a>
+                    <a class="dropdown-item" href="/team.html"><i class="fa fa-users"></i>
+                        Team</a>
+                    <a class="dropdown-item" href="/demo.html"><i class="fa fa-play-circle"></i>
+                        Feature Demo</a>
+                    <div class="dropdown-divider"></div>
+                    <h6 class="dropdown-header"><i class="fa fa-handshake"></i> Contribute</h6>
+                    <a class="dropdown-item" href="/support.html"><i class="fa fa-life-ring"></i>
+                        Support</a>
+                    <a class="dropdown-item" href="/contribution.html"><i class="fa fa-edit"></i>
+                        Write Article</a>
+                    <a class="dropdown-item" href="/todo.html"><i class="fa fa-tasks"></i> ToDo
+                        List</a>
+                    <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum"><i class="fab fa-github"></i>
+                        Develop Features</a>
+                    <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum/issues"><i class="fa fa-bug"></i>
+                        Report a bug</a>
+                    <a class="dropdown-item" href="/contact.html"><i class="fas fa-user-edit"></i>
+                        Contact</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link btn-group dropdown-toggle" href="/index.html"
+                    id="navbarDropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false"><i class="fa fa-cog"></i> Options</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <h6 class="dropdown-header">Display Options</h6>
+                    <div class="form-check dropdown-item">
+                        <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox"
+                            onchange="Options.changeOption(this)">
+                        <label class="form-check-label" for="checkbox_definition">Definitions</label>
+                    </div>
+                    <div class="form-check dropdown-item">
+                        <input class="form-check-input" id="checkbox_example" name="disp_opt" type="checkbox"
+                            onchange="Options.changeOption(this)">
+                        <label class="form-check-label" for="checkbox_example">Examples</label>
+                    </div>
+                    <div class="form-check dropdown-item">
+                        <input class="form-check-input" id="checkbox_explanation" name="disp_opt" type="checkbox"
+                            onchange="Options.changeOption(this)">
+                        <label class="form-check-label" for="checkbox_explanation">Explanations</label>
+                    </div>
+                    <div class="form-check dropdown-item">
+                        <input class="form-check-input" id="checkbox_legend" name="disp_opt" type="checkbox"
+                            onchange="Options.changeOption(this)">
+                        <label class="form-check-label" for="checkbox_legend">Legends</label>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+
+
+</nav>
+
+
+    <main class="container" aria-label="Content">
+        
+
+
+
+<p style="font-family: sans-serif;">
+    
+    
+    / <a href="/informatics.html">informatics</a>
+    
+    
+    
+    
+    / <a href="/theory.html">theory</a>
+    
+    
+    
+    
+    
+     /
+</p>
+
+<h1><a data-bs-toggle="collapse" href="#title_def" aria-expanded="false" aria-controls="title_def">
+        
+        Date and Time
+    </a><a class="float-end small" style="font-size: small"
+        href="https://github.com/latex4ei/tex4tum/edit/master/_article/informatics/theory/datetime.md">[edit]</a></h1>
+
+<p>
+    
+</p>
+
+<!-- Basics -->
+<!--    -->
+<!-- \newcommand{\diff}{\mathop{}\!\mathrm{\vphantom( d}} -->
+<!-- SI Units -->
+<!--=============================================================== -->
+<!-- KaTeX Tweaks -->
+<h2 id="datetime-notation">Datetime Notation</h2>
+<p>The valid <abbr title="International Organization for Standardization" >ISO</abbr> format is</p>
+<pre><code>YYYY-MM-DD HH:MM +hh:mm</code></pre>
+<h3 id="other-date-notation">Other Date Notation</h3>
+<ul>
+<li>dd.mm.yyyy, dd/mm/yyyy, mm/dd/yyyy, yyyy-mm-dd</li>
+<li>Regex: <code>\d{4}-\d{2}-\d{2}(?:[T ][012]\d:[012345]\d)?</code></li>
+</ul>
+<h2 id="measuring-and-counting-time">Measuring and Counting Time</h2>
+<ul>
+<li><strong>Universal Time (UT1):</strong> UT1 is the principal form of Universal Time based on Earth’s rotation. A day is determined by the mean solar time at 0° longitude. UT1 is the same everywhere on Earth.</li>
+<li><strong>International Atomic Time (TAI):</strong> TAI is based on continuous counting of the SI second, which is determined as a weighted average of over 400 atomic clocks. The majority of the clocks involved are caesium clocks. It was initially set on 1958-01-01T00:00:00 of the UT2 time.</li>
+<li><strong>Coordinated Universal Time (UTC):</strong> <abbr title="Coordinated Universal Time" >UTC</abbr> is derived from TAI and UT1. It uses TAI for counting seconds but has added leap seconds to account for variations in the rotation of the Earth with respect to the solar time. The goal is to match <abbr title="Coordinated Universal Time" >UTC</abbr> with UT1. As soon as the difference reaches 0.9 second, a leap second is added to <abbr title="Coordinated Universal Time" >UTC</abbr>. As of 31 December 2016, when another leap second was added, TAI is exactly 37 seconds ahead of <abbr title="Coordinated Universal Time" >UTC</abbr>.</li>
+<li><strong>Geocentric Coordinate Time (TCG):</strong> is the proper time experienced by a distant clock comoving with the geocentre and is defined in the context of the general theory of relativity. It was defined that TCG instant 1977-01-01T00:00:32.184 exactly corresponds to TAI instant 1977-01-01T00:00:00.000.</li>
+</ul>
+<p><strong>SI Definition (2019):</strong> The second, symbol s, is the SI unit of time. It is defined by taking the fixed numerical value of the caesium frequency ΔνCs, the unperturbed ground-state hyperfine transition frequency of the caesium-133 atom, to be 9192631770 when expressed in the unit Hz, which is equal to s⁻¹.</p>
+<p>
+UTC: <span id="dt-utc">wait</span>
+</p>
+<p>
+TAI: <span id="dt-tai">wait</span>
+</p>
+<h2 id="time-zones">Time Zones</h2>
+<figure>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/World_Time_Zones_Map.png/990px-World_Time_Zones_Map.png" alt="Timezone Map" /><figcaption aria-hidden="true">Timezone Map</figcaption>
+</figure>
+<h3 id="important-time-zones">Important Time Zones</h3>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Zone</th>
+<th style="text-align: left;">Name (T=“Time”)</th>
+<th style="text-align: left;">Offset</th>
+<th style="text-align: left;">Countries</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">PST</td>
+<td style="text-align: left;">Pacific Standard</td>
+<td style="text-align: left;">UTC -8</td>
+<td style="text-align: left;">USA (Los Angeles), Canada</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">MST</td>
+<td style="text-align: left;">Mountain Standard</td>
+<td style="text-align: left;">UTC -7</td>
+<td style="text-align: left;">USA (Denver), Canada</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">CST</td>
+<td style="text-align: left;">Central Standard</td>
+<td style="text-align: left;">UTC -6</td>
+<td style="text-align: left;">USA (Chicago), Canada</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">EST</td>
+<td style="text-align: left;">Eastern Standard</td>
+<td style="text-align: left;">UTC -5</td>
+<td style="text-align: left;">USA (New York), Canada (Québec)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">GMT</td>
+<td style="text-align: left;">Greenwich Mean</td>
+<td style="text-align: left;">UTC +0</td>
+<td style="text-align: left;">England, Portugal</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">CET</td>
+<td style="text-align: left;">Central Europe</td>
+<td style="text-align: left;">UTC +1</td>
+<td style="text-align: left;">Germany, Italy</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">EET</td>
+<td style="text-align: left;">Eastern Europe</td>
+<td style="text-align: left;">UTC +2</td>
+<td style="text-align: left;">Greece, Egypt</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">CST</td>
+<td style="text-align: left;">China Standard</td>
+<td style="text-align: left;">UTC +8</td>
+<td style="text-align: left;">China</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Daylight Saving Time:</strong> Many countries have Daylight Saving Times (DST) – also called “Summer Time” – from spring to autum, which adds one hour to the <abbr title="Coordinated Universal Time" >UTC</abbr> offset. Most countries near the equator do not use DST since the seasonal difference in sunlight is minimal.</p>
+<p><strong>Date Border:</strong> Since there are UTC-12 and UTC+14 time zones, a 2 day offset in date is possible.</p>
+<h2 id="datetime-libraries">Datetime Libraries</h2>
+<p>Time is complicated, do not implement time classes or libraries on your own! You would need to account for</p>
+<ul>
+<li>different time zones (some are only 30 minutes ahead another)</li>
+<li>daylight saving times that start and stop on different days depending on timezone.</li>
+<li>calendar system transitions in the past</li>
+<li>leapdays or skipped days, introduced by various countries at various times</li>
+<li>leapseconds to counterbalance the deceleration of earth’s rotation</li>
+</ul>
+<table>
+<thead>
+<tr class="header">
+<th>Type</th>
+<th style="text-align: right;">Base Unit</th>
+<th style="text-align: right;">Limit Max</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>U8</td>
+<td style="text-align: right;">1 s</td>
+<td style="text-align: right;">4.25 min</td>
+</tr>
+<tr class="even">
+<td>U16</td>
+<td style="text-align: right;">1 s</td>
+<td style="text-align: right;">18.2 h</td>
+</tr>
+<tr class="odd">
+<td>U32</td>
+<td style="text-align: right;">1 s</td>
+<td style="text-align: right;">136.2 y</td>
+</tr>
+<tr class="even">
+<td>U64</td>
+<td style="text-align: right;">1 s</td>
+<td style="text-align: right;">18.2 h</td>
+</tr>
+<tr class="odd">
+<td>U32</td>
+<td style="text-align: right;">10ms</td>
+<td style="text-align: right;">18.2 h</td>
+</tr>
+</tbody>
+</table>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601:2019, “Date and time — Representations for information interchange”</a></li>
+<li><a href="https://www.iers.org/SharedDocs/News/EN/BulletinC.html">IERS Bulletin C (leap second announcements)</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Leap_second">Wikipedia: Leap second</a></li>
+</ul>
+<script type="text/javascript">
+<!--
+
+function updateClock() {
+  var dt = new Date();
+  document.getElementById( "dt-utc" ).textContent = dt.toTimeString();
+  dt.setSeconds( dt.getSeconds() + 38 ); 
+  document.getElementById( "dt-tai" ).textContent = dt.toTimeString();
+  setTimeout( updateClock, 100 );
+}
+
+
+document.addEventListener("DOMContentLoaded", function(){
+  setTimeout( updateClock, 100 );
+
+});
+
+//-->
+</script>
+
+
+    </main>
+
+    <footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-auto">
+                <img class="img-fluid" style="width: 4em;" src="/res/img/Logo.png" alt="Logo">
+            </div>
+
+            <div class="col-sm-5 col-lg-3">
+                <h3>Tex4Tum</h3>
+                <ul class="contact-list">
+                    <li><a href="mailto:info@latex4ei.de"><i class="fa fa-envelope"></i> info@latex4ei.de</a></li>
+                    <li><a href="http://latex4ei.de"><i class="fa fa-globe"></i> latex4ei.de</a></li>
+                </ul>
+            </div>
+
+            <div class="col-sm-3 col-lg-2">
+                <ul class="social-media-list">
+                    
+                    <li>
+<!-- Dont put these Liquid statements into a new line to ensure the correct output format -->
+<a href="https://github.com/latex4ei">
+    <i class="fab fa-github"></i>
+    <span class="username">latex4ei</span>
+</a>
+</li>
+                    
+                    <li>
+<!-- Dont put these Liquid statements into a new line to ensure the correct output format -->
+<a href="https://gitter.im/LaTeX4Ei">
+    <i class="fab fa-gitter"></i>
+    <span class="username">LaTeX4Ei</span>
+</a>
+</li>
+                    
+                    <li>
+<!-- Dont put these Liquid statements into a new line to ensure the correct output format -->
+<a href="https://facebook.com/LaTeX4Ei">
+    <i class="fab fa-facebook-square"></i>
+    <span class="username">LaTeX4Ei</span>
+</a>
+</li>
+                    
+                </ul>
+            </div>
+
+            <div class="col-lg-5">
+                <p>Interactive Knowledge Base for Engineers
+</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<!-- Load Javascript at the end for faster page loading -->
+<!-- ================================================== -->
+
+<!-- Own javascript -->
+<script src="/assets/js/latex4ei.js"></script>
+<script src="/assets/js/options.js"></script>
+
+<!-- KaTeX JS -->
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"
+    integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz"
+    crossorigin="anonymous"></script>
+
+<!-- jQuery -->
+<!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
+
+<!-- Bootstrap 5-->
+<script src="/assets/js/bootstrap5/bootstrap.bundle.min.js"></script>
+
+
+
+<!-- Fuse + Own Adapter -->
+<script src="https://cdn.jsdelivr.net/fuse/2.6.1/fuse.min.js"></script>
+<script src="/assets/js/search_index.json"></script>
+<script src="/assets/js/t4t_search.js"></script>
+
+<script>
+    window.onload = function () {
+        // render KaTeX
+        renderMath();
+
+        // fix navbar hiding anchor jumps
+        window.addEventListener("hashchange", function () { scrollBy(0, -100) });
+
+
+        Options.loadOptions();
+
+        var opts = {
+            data: search_index,
+            numResults: 10,
+            searchPath: '/search?q=',
+            directPath: '.',
+            container: document.getElementsByClassName('search-container')
+        };
+        autocomplete(opts);
+    };
+</script>
+
+
+<!-- Mermaid -->
+<!--   <link rel="stylesheet" href="https://cdn.rawgit.com/knsv/mermaid/7.0.0/dist/mermaid.css">
+  <script type="text/javascript" src="https://cdn.rawgit.com/knsv/mermaid/7.0.0/dist/mermaid.min.js"></script> -->
+
+<!-- ================================================== -->
+
+
+</body>
+
+</html>

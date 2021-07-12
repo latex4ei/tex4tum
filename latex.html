@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- title, description, favicon -->
+    <title>TeX and LaTeX</title>
+    <meta name="description" content="Interactive Knowledge Base for Engineers
+" />
+    <link rel="shortcut icon" href="/res/img/Logo.png" />
+    <link rel="canonical" href="/latex">
+
+    <!-- Brower bar color for mobile devices (TUM blue) -->
+    <meta name="theme-color" content="#005293">
+
+    <!-- Load CSS in head, JS after footer -->
+    <!-- Main/Bootstrap -->
+    <link rel="stylesheet" href="/assets/main.css">
+    <link rel="stylesheet" href="/assets/syntax-highlight.css">
+
+    <!-- Fontawesome CSS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+        integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+    <!-- KaTeX CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"
+        integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+</head>
+
+
+<body>
+
+    <!-- Bootstrap 4.0 Navigation Bar -->
+<nav class="navbar sticky-top navbar-dark bg-primary text-white navbar-expand-lg">
+
+    <!-- sticky left: Logo -->
+    <div class="navbar-brand">
+        <a href="/index.html">
+            <img src="/res/img/Logo-inv.png" height="30" alt="Logo">
+        </a>
+    </div>
+
+
+    <!-- sticky right: search bar  -->
+    
+    <form class="form-inline order-lg-3" role="search">
+        <div id="search" class="search-container">
+            <input class="form-control search-input w-100" type="search" placeholder="&#xf002; Search (fuzzy)"
+                tabindex="1">
+            <div class="ac-results-wrapper"></div>
+        </div>
+    </form>
+    
+
+
+    <!-- Toggle button for collapsed items  -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+
+    <!-- Collapsable Items: Links -->
+    <div class="collapse navbar-collapse justify-content-start order-6 order-lg-2" id="navbarResponsive">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="/calculator.html"><i class="fa fa-calculator"></i>
+                    Calc</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/sheets.html"><i class="fa fa-file"></i> Sheets</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    <i class="fa fa-info-circle"></i> Info
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="/about.html"><i class="fa fa-question"></i>
+                        About TeX4TUM</a>
+                    <a class="dropdown-item" href="/team.html"><i class="fa fa-users"></i>
+                        Team</a>
+                    <a class="dropdown-item" href="/demo.html"><i class="fa fa-play-circle"></i>
+                        Feature Demo</a>
+                    <div class="dropdown-divider"></div>
+                    <h6 class="dropdown-header"><i class="fa fa-handshake"></i> Contribute</h6>
+                    <a class="dropdown-item" href="/support.html"><i class="fa fa-life-ring"></i>
+                        Support</a>
+                    <a class="dropdown-item" href="/contribution.html"><i class="fa fa-edit"></i>
+                        Write Article</a>
+                    <a class="dropdown-item" href="/todo.html"><i class="fa fa-tasks"></i> ToDo
+                        List</a>
+                    <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum"><i class="fab fa-github"></i>
+                        Develop Features</a>
+                    <a class="dropdown-item" href="https://github.com/latex4ei/tex4tum/issues"><i class="fa fa-bug"></i>
+                        Report a bug</a>
+                    <a class="dropdown-item" href="/contact.html"><i class="fas fa-user-edit"></i>
+                        Contact</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link btn-group dropdown-toggle" href="/index.html"
+                    id="navbarDropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false"><i class="fa fa-cog"></i> Options</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <h6 class="dropdown-header">Display Options</h6>
+                    <div class="form-check dropdown-item">
+                        <input class="form-check-input" id="checkbox_definition" name="disp_opt" type="checkbox"
+                            onchange="Options.changeOption(this)">
+                        <label class="form-check-label" for="checkbox_definition">Definitions</label>
+                    </div>
+                    <div class="form-check dropdown-item">
+                        <input class="form-check-input" id="checkbox_example" name="disp_opt" type="checkbox"
+                            onchange="Options.changeOption(this)">
+                        <label class="form-check-label" for="checkbox_example">Examples</label>
+                    </div>
+                    <div class="form-check dropdown-item">
+                        <input class="form-check-input" id="checkbox_explanation" name="disp_opt" type="checkbox"
+                            onchange="Options.changeOption(this)">
+                        <label class="form-check-label" for="checkbox_explanation">Explanations</label>
+                    </div>
+                    <div class="form-check dropdown-item">
+                        <input class="form-check-input" id="checkbox_legend" name="disp_opt" type="checkbox"
+                            onchange="Options.changeOption(this)">
+                        <label class="form-check-label" for="checkbox_legend">Legends</label>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+
+
+</nav>
+
+
+    <main class="container" aria-label="Content">
+        
+
+
+
+<p style="font-family: sans-serif;">
+    
+    
+    / <a href="/informatics.html">informatics</a>
+    
+    
+    
+    
+    / <a href="/language.html">language</a>
+    
+    
+    
+    
+    
+     /
+</p>
+
+<h1><a data-bs-toggle="collapse" href="#title_def" aria-expanded="false" aria-controls="title_def">
+        
+        TeX and LaTeX
+    </a><a class="float-end small" style="font-size: small"
+        href="https://github.com/latex4ei/tex4tum/edit/master/_article/informatics/language/latex.md">[edit]</a></h1>
+
+<p>
+    
+</p>
+
+<!-- Basics -->
+<!--    -->
+<!-- \newcommand{\diff}{\mathop{}\!\mathrm{\vphantom( d}} -->
+<!-- SI Units -->
+<!--=============================================================== -->
+<!-- KaTeX Tweaks -->
+<div id="title_def" class="definition collapse">
+<div class="card border-primary mb-1">
+<div class="card-body">
+<h5 class="card-title text-primary">
+Definition
+</h5>
+<p class="card-text">
+TeX is a document typesetting system which was designed by Donald Knuth and later improved to LaTeX by Leslie Lamport. It allows the writer to define the general structure of a document (such as layout and sections), to stylise text (such as bold and italics), and to add citations and cross-references.
+</p>
+</div>
+</div>
+</div>
+<p>There exist several variants that are all based on the original TeX:</p>
+<ul>
+<li><strong>LaTeX</strong>: adds commands for easier typesetting of typical documents such as books, articles, and letters.</li>
+<li><strong>XeLaTeX</strong>: adds extended support for fonts and allows the use of system fonts.</li>
+<li><strong>LuaLaTeX</strong>: adds support for the scripting <a href="/language" >language</a> Lua.</li>
+</ul>
+<h2 id="table-of-contents"><i class="fa fa-list-ul"></i> Table of Contents</h2>
+<ul>
+<li><a href="#the-basics">The Basics</a></li>
+<li><a href="#basic-document-formatting">Basic Document Formatting</a></li>
+<li><a href="#environments">Environments</a></li>
+<li><a href="#references">References</a></li>
+</ul>
+<h2 id="the-basics">The Basics</h2>
+<p>LaTeX code is divided into two parts: <em>preamble</em> and <em>document</em>. In the preamble you can add packages and specify the page layout. The <em>document</em> part starts with <code>\begin{document}</code> and ends with <code>\end{document}</code>. It defines the visible part of your document where you put your content. Everything after <code>\end{document}</code> will be ignored.</p>
+<h5 class="clp_title text-success" data-bs-toggle="collapse" href="#example10">
+<i class='fa fa-chart-bar'></i> Example of a minimal .tex file
+</h5>
+<div id='example10' class='example collapse'>
+<div class='card border-success mb-1'>
+<div class='card-body'>
+<p class='card-text'>
+<div class="sourceCode" id="cb1"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">% Preamble</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">\title</span>{My first article}</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">% Document</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">\maketitle</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  This is the first paragraph.</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre></div>
+<p>
+</div>
+</div>
+</div>
+<h3 id="special-characters">Special Characters</h3>
+<p>Some characters are not part of normal text but have a reserved special meaning for the LaTeX compiler.</p>
+<ul>
+<li><code>\</code> introduces a command</li>
+<li><code>{</code>, <code>}</code> embraces arguments, creates logical parts</li>
+<li><code>[</code>, <code>]</code> embraces optional command parameters</li>
+<li><code>%</code> comments: code after % will be ignored.</li>
+<li><code>$</code> starts the inline <a href="/math" >math</a> mode.</li>
+<li><code>_</code>, <code>^</code> indizes and exponents in mathmode. e.g. a</li>
+<li><code>&amp;</code> separates columns in tables</li>
+<li><code>#</code> parameter for own command declarations</li>
+</ul>
+<p>If you want to use thes characters in your text you need to put a backslash in front of them. E.g. type <code>\%</code> in the <code>.tex</code> file to produce <code>%</code> in the PDF. An exception is the backslash itself, which is typed as <code>\textbackslash</code>.</p>
+<h2 id="basic-document-formatting">Basic Document Formatting</h2>
+<h3 id="headigs">Headigs</h3>
+<p>LaTeX supports several levels for headings:</p>
+<ol type="1">
+<li><code>\part{title}</code> (only for books)</li>
+<li><code>\chapter{title}</code> (only for books or reports)</li>
+<li><code>\section{title}</code></li>
+<li><code>\subsection{title}</code></li>
+<li><code>\subsubsection{title}</code></li>
+<li><code>\paragraph{title}</code></li>
+<li><code>\subparagraph{title}</code></li>
+</ol>
+<h3 id="font-styles">Font Styles</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Text Style</th>
+<th>Argument Syntax</th>
+<th>Switch Syntax</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><em>italic</em></td>
+<td><code>\textit{italic}</code></td>
+<td><code>\itshape italic</code></td>
+</tr>
+<tr class="even">
+<td><strong>bold</strong></td>
+<td><code>\textbf{italic}</code></td>
+<td><code>\bfseries italic</code></td>
+</tr>
+<tr class="odd">
+<td><a href="https://tex4tum.de">Link</a></td>
+<td><code>\href{Link}{https://tex4tum.de}</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="environments">Environments</h2>
+<p>Environments span several lines and are enclosed within <code>\begin{ENV} ... \end{ENV}</code>, where <code>ENV</code> is the name of the environment.</p>
+<h3 id="lists">Lists</h3>
+<p>There are three kinds of lists: 1. bullet points, 2. enumeration, and 3. descriptions.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">\paragraph</span>{Bullet Points (itemize)}</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">itemize</span>}</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\item</span> first item</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\item</span> second item with further points:</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">\begin</span>{<span class="ex">itemize</span>}</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>        <span class="fu">\item</span> first subitem</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>        <span class="fu">\item</span> second subitem</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">\end</span>{<span class="ex">itemize</span>}</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">itemize</span>}</span></code></pre></div>
+<h3 id="tables">Tables</h3>
+<p>To include tables properly in your document, you should add to your preamble:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\RequirePackage</span>{booktabs}     <span class="co">% better spacing and horizontal lines</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">\RequirePackage</span>{multirow}     <span class="co">% for columns spanning multiple rows</span></span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">table</span>}</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">\centering</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">\begin</span>{<span class="ex">tabular</span>}{ll} <span class="fu">\toprule</span>   <span class="co">% add more l&#39;s for more columns (or r/c)</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\thead</span>{Title Column 1} <span class="op">&amp;</span> <span class="fu">\thead</span>{Title Column 2} <span class="fu">\\</span> <span class="fu">\midrule</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    Cell 1                 <span class="op">&amp;</span> Cell 2                 <span class="fu">\\</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    Cell 3                 <span class="op">&amp;</span> Cell 4                 <span class="fu">\\</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\bottomrule</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  <span class="kw">\end</span>{<span class="ex">tabular</span>}</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">\caption</span>{This is the full caption of the table. It should explain which numbers are shown.}</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>  <span class="kw">\label</span>{<span class="ex">tab:example</span>}</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">table</span>}</span></code></pre></div>
+<pre><code>\begin{table*}\centering
+  \renewcommand{\arraystretch}{1.5}   % change vertical row spacing
+  \renewcommand{\tabcolsep}{0.8em}    % change horizontal column spacing
+  \begin{tabular}{@{}lrrcrr@{}}\toprule%
+    \multirow{2}{*}{\thead{Slices}}&amp;              % column heading
+    \multicolumn{2}{c}{\thead{error (\%)}} &amp;&amp;     % column heading
+    \multicolumn{2}{c}{\thead{error (slices)}} \\ % column heading
+               \cmidrule{2-3} \cmidrule{5-6}
+              &amp;  avg. &amp;   max. &amp;&amp;  avg. &amp;  max. \\ \midrule
+    \hfill $\lt 50$    &amp; $7.4$ &amp; $73.5$ &amp;&amp; $78$  &amp; $625$ \\
+    $50 ... 100$ &amp; $3.1$ &amp; $27.2$ &amp;&amp; $116$ &amp; $725$ \\
+    \hfill $\gt 100$   &amp; $1.8$ &amp;  $9.0$ &amp;&amp; $178$ &amp; $825$ \\ \bottomrule
+  \end{tabular}
+\caption{Professional looking table with random data.}
+\end{table*}</code></pre>
+<h4 id="some-notes-on-tables">Some Notes on Tables</h4>
+<ul>
+<li>Ommit vertical lines! This is how professional books and journals typeset tables.</li>
+<li>To add extra vertical spacing: <code>\renewcommand\arraystretch{1.5}</code></li>
+<li>To change horizontal spacing: <code>\renewcommand{\tabcolsep}{3pt}</code></li>
+</ul>
+<h3 id="figures">Figures</h3>
+<p>To include figures properly in your document, you should add to your preamble:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\RequirePackage</span>{graphicx}        <span class="co">% required to load images</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">\graphicspath</span>{ {img/} {gfx/} }   <span class="co">% set default image subfolders</span></span></code></pre></div>
+<p>Afterwards, you can create figures using</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">figure</span>}</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">\centering</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="bu">\includegraphics</span>[width=<span class="fu">\textwidth</span>]{<span class="ex">example-image-golden</span>}  <span class="co">% replace &quot;example-image-golden&quot; with filename</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">\caption</span>{This is the full caption of the figure. It should explain what is shown and should be longer than one line.}</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">\label</span>{<span class="ex">fig:example</span>} <span class="co">% used for referencing.</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">figure</span>}</span></code></pre></div>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/TeX">Wikipedia: TeX</a></li>
+<li><a href="https://en.wikipedia.org/wiki/LaTeX">Wikipedia: LaTeX</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Help:Displaying_a_formula">Wikipedia: LaTeX Math Expressions</a></li>
+<li><a href="https://tex.stackexchange.com/questions/12672/which-tabular-packages-do-which-tasks-and-which-packages-conflict">StackExchange: Overview of Table Packages</a></li>
+<li><a href="https://texblog.org/2017/02/06/proper-tables-with-latex/">texblog: Professional and clean tables with LaTeX</a></li>
+</ul>
+
+
+    </main>
+
+    <footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-auto">
+                <img class="img-fluid" style="width: 4em;" src="/res/img/Logo.png" alt="Logo">
+            </div>
+
+            <div class="col-sm-5 col-lg-3">
+                <h3>Tex4Tum</h3>
+                <ul class="contact-list">
+                    <li><a href="mailto:info@latex4ei.de"><i class="fa fa-envelope"></i> info@latex4ei.de</a></li>
+                    <li><a href="http://latex4ei.de"><i class="fa fa-globe"></i> latex4ei.de</a></li>
+                </ul>
+            </div>
+
+            <div class="col-sm-3 col-lg-2">
+                <ul class="social-media-list">
+                    
+                    <li>
+<!-- Dont put these Liquid statements into a new line to ensure the correct output format -->
+<a href="https://github.com/latex4ei">
+    <i class="fab fa-github"></i>
+    <span class="username">latex4ei</span>
+</a>
+</li>
+                    
+                    <li>
+<!-- Dont put these Liquid statements into a new line to ensure the correct output format -->
+<a href="https://gitter.im/LaTeX4Ei">
+    <i class="fab fa-gitter"></i>
+    <span class="username">LaTeX4Ei</span>
+</a>
+</li>
+                    
+                    <li>
+<!-- Dont put these Liquid statements into a new line to ensure the correct output format -->
+<a href="https://facebook.com/LaTeX4Ei">
+    <i class="fab fa-facebook-square"></i>
+    <span class="username">LaTeX4Ei</span>
+</a>
+</li>
+                    
+                </ul>
+            </div>
+
+            <div class="col-lg-5">
+                <p>Interactive Knowledge Base for Engineers
+</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<!-- Load Javascript at the end for faster page loading -->
+<!-- ================================================== -->
+
+<!-- Own javascript -->
+<script src="/assets/js/latex4ei.js"></script>
+<script src="/assets/js/options.js"></script>
+
+<!-- KaTeX JS -->
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"
+    integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz"
+    crossorigin="anonymous"></script>
+
+<!-- jQuery -->
+<!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
+
+<!-- Bootstrap 5-->
+<script src="/assets/js/bootstrap5/bootstrap.bundle.min.js"></script>
+
+
+
+<!-- Fuse + Own Adapter -->
+<script src="https://cdn.jsdelivr.net/fuse/2.6.1/fuse.min.js"></script>
+<script src="/assets/js/search_index.json"></script>
+<script src="/assets/js/t4t_search.js"></script>
+
+<script>
+    window.onload = function () {
+        // render KaTeX
+        renderMath();
+
+        // fix navbar hiding anchor jumps
+        window.addEventListener("hashchange", function () { scrollBy(0, -100) });
+
+
+        Options.loadOptions();
+
+        var opts = {
+            data: search_index,
+            numResults: 10,
+            searchPath: '/search?q=',
+            directPath: '.',
+            container: document.getElementsByClassName('search-container')
+        };
+        autocomplete(opts);
+    };
+</script>
+
+
+<!-- Mermaid -->
+<!--   <link rel="stylesheet" href="https://cdn.rawgit.com/knsv/mermaid/7.0.0/dist/mermaid.css">
+  <script type="text/javascript" src="https://cdn.rawgit.com/knsv/mermaid/7.0.0/dist/mermaid.min.js"></script> -->
+
+<!-- ================================================== -->
+
+
+</body>
+
+</html>

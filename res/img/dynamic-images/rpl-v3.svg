@@ -1,0 +1,4859 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   onload="t4t_init()"
+   width="200mm"
+   height="200mm"
+   viewBox="0 0 200 200"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.2 5c3e80d, 2017-08-06"
+   sodipodi:docname="drawing_final.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.70710678"
+     inkscape:cx="-110.16268"
+     inkscape:cy="386.32946"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     inkscape:window-width="2560"
+     inkscape:window-height="1440"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     fit-margin-top="1"
+     fit-margin-left="1"
+     fit-margin-bottom="1"
+     fit-margin-right="1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid3709"
+       originx="-15"
+       originy="-101.64581" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs>
+    <style type="text/css"><![CDATA[
+svg {
+   height: 90%;
+   width: 90%;
+}
+ 
+
+/* 
+Keyframes: 
+=========================================================================
+*/
+
+/* opacity */
+@keyframes kf-blink {
+   10% { opacity: 0; }
+   50% { opacity: 0; }
+   60% { opacity: 1; }
+  100% { opacity: 1; }
+}
+@keyframes kf-hide{ 
+    from { fill-opacity: 1;}
+    to{fill-opacity: 0} }
+@keyframes kf-show{ from { fill-opacity: 0; }
+to{fill-opacity: 1} }
+
+@keyframes kf-turnblue{ to{fill-opacity: 1; fill: blue;} }
+
+
+
+/* ---- translate ---- */
+
+@keyframes move {
+  0% {
+    offset-distance: 0%;
+  }
+  100% {
+    offset-distance: 100%;
+  }
+}
+
+
+/* left, right, down, up */
+@keyframes kf-move-r{   
+    from { -ms-transform: translateX(0px);
+    -webkit-transform: translateX(0px);
+    -moz-transform: translateX(0px);  
+    -o-transform: translateX(0px);
+    transform: translateX(0px);
+    }
+    to {     -ms-transform: translateX(33px);
+    -webkit-transform: translateX(33px);
+    -moz-transform: translateX(33px); 
+    -o-transform: translateX(33px);
+    transform: translateX(33px);
+ }}
+
+@keyframes kf-move-r2{ to{     -ms-transform: translateX(33px);
+    -webkit-transform: translateX(33px);
+    -moz-transform: translateX(33px); 
+    -o-transform: translateX(33px);
+    transform: translateX(33px);
+ }}
+
+@keyframes kf-move-l{   100% {     -ms-transform: translateX(-33px);
+    -webkit-transform: translateX(-33px);
+    -moz-transform: translateX(-33px);  
+    -o-transform: translateX(-33px);
+    transform: translateX(-33px);
+ }}
+@keyframes kf-move-u{ to{    -ms-transform: translateY(-35px);
+    -webkit-transform: translateY(-35px);
+    -moz-transform: translateY(-35px);  
+    -o-transform: translateY(-35px);
+    transform: translateY(-35px);
+    }}
+@keyframes kf-move-d{ to{     -ms-transform: translateY(35px);
+    -webkit-transform: translateY(35px);
+    -moz-transform: translateY(35px); 
+    -o-transform: translateY(35px);
+    transform: translateY(35px);
+ }}
+/* right down; right up; left down; left up */
+@keyframes kf-move-rd { to{ transform:translate( 100%, 100% ); }}
+@keyframes kf-move-ru { to{ transform:translate( 100%,-100% ); }}
+@keyframes kf-move-ld { to{ transform:translate(-100%, 100% ); }}
+@keyframes kf-move-ld { to{ transform:translate(-100%,-100% ); }}
+
+/* left, right, down, up */
+/*question: can this animation played two times to achieve 1 length?*/
+@keyframes kf-move-r-05{ to{ transform:translateX( 50%); }}
+@keyframes kf-move-l-05{ to{ transform:translateX(-50%); }}
+@keyframes kf-move-d-05{ to{ transform:translateY( 50%); }}
+@keyframes kf-move-u-05{ to{ transform:translateY(-50%); }}
+
+@keyframes kf-move-rd-05 { to{ transform:translate( 50%, 50% ); }}
+@keyframes kf-move-ru-05 { to{ transform:translate( 50%,-50% ); }}
+@keyframes kf-move-ld-05 { to{ transform:translate(-50%, 50% ); }}
+@keyframes kf-move-ld-05 { to{ transform:translate(-50%,-50% ); }}
+
+
+/* ---- rotate ---- */
+@keyframes kf-rot-90  { to{ transform:rotate(90deg); }}
+@keyframes kf-rot-180 { to{ transform:rotate(180deg); }}
+@keyframes kf-rot-270 { to{ transform:rotate(270deg); }}
+@keyframes kf-rot-360 { to{ transform:rotate(360deg); }}
+
+
+/* ---- scale ---- */
+@keyframes kf-scale-200 { to{ transform:scale(2.0); }}
+@keyframes kf-scale-100 { to{ transform:scale(1.0); }}
+@keyframes kf-scale-50  { to{ transform:scale(0.5); }}
+@keyframes kf-scale-0   { to{ transform:scale(0.0); }}
+
+
+
+/* 
+Animations: 
+Each Element can only hold one assigned animation 
+=========================================================================
+*/
+
+
+/* ---- opacity ---- */
+.ani.fade-in { animation: kf-show 1s linear 1 forwards; }
+
+.ani.fade-out { animation: kf-hide 1s linear 1 forwards; }
+.ani.blink { animation: kf-blink 0.5s linear infinite; }
+
+
+/* ---- turn blue ---- */
+
+.ani.turnblue { animation: kf-turnblue 1s linear 1 forwards; }
+.ani.turnblack { animation: kf-turnblue 1s linear 1 backwards; }
+
+
+/* ---- translate ---- */
+.move-r{ animation: kf-move-r 1s linear alternate;
+  animation-iteration-count:2;
+}
+.move-l{ animation: kf-move-l 1s linear alternate;
+  animation-iteration-count:2; }
+.move-d{ animation: kf-move-d 1s linear alternate;
+  animation-iteration-count:2;
+}
+.move-u{ animation: kf-move-u 1s linear alternate; 
+  animation-iteration-count:2;
+}
+
+.move-rd{ animation: kf-move-rd 1s linear 0s; }
+.move-ru{ animation: kf-move-ru 1s linear 0s; }
+.move-ld{ animation: kf-move-ld 1s linear 0s; }
+.move-lu{ animation: kf-move-lu 1s linear 0s; }
+
+.move-r-05{ animation: kf-move-r-05 1s linear 0s; }
+.move-l-05{ animation: kf-move-l-05 1s linear 0s; }
+.move-d-05{ animation: kf-move-d-05 1s linear 0s; }
+.move-u-05{ animation: kf-move-u-05 1s linear 0s; }
+
+/* ---- set origin (rotate and scale) ---- */
+.ani.ori-c { transform-origin: 50%, 50%; }
+.ani.ori-rt { transform-origin: 100%,    0%; }
+.ani.ori-rd { transform-origin: 100%,  100%; }
+.ani.ori-lt { transform-origin:   0%,    0%; }
+.ani.ori-ld { transform-origin:   0%,  100%; }
+
+/* ---- rotate ---- */
+.ani.rot-90  { animation: kf-rot-90  0.5s linear; }
+.ani.rot-180 { animation: kf-rot-180 1.0s linear; }
+.ani.rot-270 { animation: kf-rot-270 1.5s linear; }
+.ani.rot-360 { animation: kf-rot-360 2.0s linear; }
+
+.ani.cw { animation-direction: normal; }
+.ani.ccw{ animation-direction: reverse; }
+
+
+/* ---- scale ---- */
+.ani.scale-200 { animation: kf-scale-200 2.0s linear; }
+.ani.scale-100 { animation: kf-scale-100 2.0s linear; }
+.ani.scale-50  { animation: kf-scale-50  2.0s linear; }
+.ani.scale-0   { animation: kf-scale-0   2.0s linear; }
+
+
+
+/* ---- move along path ---- */
+.ani.move-along {
+  offset-path: path('m0,0 h23');
+  animation: move 30ms linear;
+}
+
+.ani.move-along2 {
+  offset-path: path('m0,0 h45');
+  animation: move 30ms linear;
+}
+
+.ani.move-along-v {
+  offset-path: path('m0,0 v45');
+  animation: move 30ms linear;
+}
+
+
+
+
+/* ---- path1 ---- */
+
+
+
+/* Animation modifiers
+=========================================================================
+ */
+/*duration timing-function delay iteration-count direction fill-mode play-state*/
+/*can also be apllied to the entire svg?*/
+.ani.dur-1s { animation-duration:   0.5s !important;}
+.ani.dur-2s { animation-duration:   1s !important;} 
+.ani.dur-3s { animation-duration:   1.5s !important;}
+.ani.dur-4s { animation-duration:   2s !important;}
+.ani.dur-5s { animation-duration:   2.5s !important;}
+.ani.dur-6s { animation-duration:   3s !important;}
+.ani.dur-7s { animation-duration:   3.5s !important;}
+.ani.dur-8s { animation-duration:   4s !important;}
+.ani.dur-9s { animation-duration:   4.5s !important;}
+.ani.dur-10s{ animation-duration:  5s !important;}
+
+.ani {animation-duration: --duration !important;}}
+
+
+.ani.linear  { animation-timing-function: linear !important;   }
+.ani.ease    { animation-timing-function: ease !important;     }
+.ani.ease-in { animation-timing-function: ease-in !important;  }
+.ani.ease-out{ animation-timing-function: ease-out !important; }
+
+
+
+
+.ani.del-1s { animation-delay:   0.5s !important;}
+.ani.del-2s { animation-delay:   1s !important;}
+.ani.del-3s { animation-delay:   1.5s !important;}
+.ani.del-4s { animation-delay:   2s !important;}
+.ani.del-5s { animation-delay:   2.5s !important;}
+.ani.del-6s { animation-delay:   3s !important;}
+.ani.del-7s { animation-delay:   3.5s !important;}
+.ani.del-8s { animation-delay:   4s !important;}
+.ani.del-9s { animation-delay:   4.5s !important;}
+.ani.del-10s{ animation-delay:  5s !important;}
+.ani.del-11s{ animation-delay:  5.5s !important;}
+.ani.del-12s{ animation-delay:  6s !important;}
+.ani.del-13s{ animation-delay:  6.5s !important;}
+.ani.del-14s{ animation-delay:  7s !important;}
+.ani.del-15s{ animation-delay:  7.5s !important;}
+.ani.del-16s{ animation-delay:  8s !important;}
+.ani.del-17s{ animation-delay:  8.5s !important;}
+.ani.del-18s{ animation-delay:  9s !important;}
+.ani.del-19s{ animation-delay:  9.5s !important;}
+.ani.del-20s{ animation-delay:  10s !important;}
+.ani.del-21s{ animation-delay:  10.5s !important;}
+.ani.del-22s{ animation-delay:  11s !important;}
+.ani.del-23s{ animation-delay:  11.5s !important;}
+.ani.del-24s{ animation-delay:  12s !important;}
+.ani.del-25s{ animation-delay:  12.5s !important;}
+.ani.del-26s{ animation-delay:  13s !important;}
+.ani.del-27s{ animation-delay:  13.5s !important;}
+.ani.del-28s{ animation-delay:  14s !important;}
+.ani.del-29s{ animation-delay:  14.5s !important;}
+.ani.del-30s{ animation-delay:  15s !important;}
+.ani.del-31s{ animation-delay:  15.5s !important;}
+.ani.del-32s{ animation-delay:  16s !important;}
+.ani.del-33s{ animation-delay:  16.5s !important;}
+.ani.del-34s{ animation-delay:  17s !important;}
+.ani.del-35s{ animation-delay:  17.5s !important;}
+.ani.del-36s{ animation-delay:  18s !important;}
+.ani.del-37s{ animation-delay:  18.5s !important;}
+.ani.del-38s{ animation-delay:  19s !important;}
+.ani.del-39s{ animation-delay:  19.5s !important;}
+.ani.del-40s{ animation-delay:  20s !important;}
+.ani.del-41s{ animation-delay:  20.5s !important;}
+.ani.del-42s{ animation-delay:  21s !important;}
+.ani.del-43s{ animation-delay:  21.5s !important;}
+.ani.del-44s{ animation-delay:  22s !important;}
+.ani.del-45s{ animation-delay:  22.5s !important;}
+.ani.del-46s{ animation-delay:  23s !important;}
+.ani.del-47s{ animation-delay:  23.5s !important;}
+.ani.del-48s{ animation-delay:  24s !important;}
+.ani.del-49s{ animation-delay:  24.5s !important;}
+.ani.del-50s{ animation-delay:  25s !important;}
+.ani.del-51s{ animation-delay:  25.5s !important;}
+.ani.del-52s{ animation-delay:  26s !important;}
+.ani.del-53s{ animation-delay:  26.5s !important;}
+.ani.del-54s{ animation-delay:  27s !important;}
+.ani.del-55s{ animation-delay:  27.5s !important;}
+.ani.del-56s{ animation-delay:  28s !important;}
+.ani.del-57s{ animation-delay:  28.5s !important;}
+.ani.del-58s{ animation-delay:  29s !important;}
+.ani.del-59s{ animation-delay:  29.5s !important;}
+.ani.del-60s{ animation-delay:  30s !important;}
+.ani.del-61s{ animation-delay:  30.5s !important;}
+.ani.del-62s{ animation-delay:  31s !important;}
+.ani.del-63s{ animation-delay:  31.5s !important;}
+.ani.del-64s{ animation-delay:  32s !important;}
+.ani.del-65s{ animation-delay:  32.5s !important;}
+.ani.del-66s{ animation-delay:  33s !important;}
+.ani.del-67s{ animation-delay:  33.5s !important;}
+.ani.del-68s{ animation-delay:  34s !important;}
+.ani.del-69s{ animation-delay:  34.5s !important;}
+.ani.del-70s{ animation-delay:  35s !important;}
+.ani.del-71s{ animation-delay:  35.5s !important;}
+.ani.del-72s{ animation-delay:  36s !important;}
+.ani.del-73s{ animation-delay:  36.5s !important;}
+.ani.del-74s{ animation-delay:  37s !important;}
+.ani.del-75s{ animation-delay:  37.5s !important;}
+.ani.del-76s{ animation-delay:  38s !important;}
+.ani.del-77s{ animation-delay:  38.5s !important;}
+.ani.del-78s{ animation-delay:  39s !important;}
+.ani.del-79s{ animation-delay:  39.5s !important;}
+.ani.del-80s{ animation-delay:  40s !important;}
+.ani.del-81s{ animation-delay:  40.5s !important;}
+.ani.del-82s{ animation-delay:  41s !important;}
+.ani.del-83s{ animation-delay:  41.5s !important;}
+.ani.del-84s{ animation-delay:  42s !important;}
+.ani.del-85s{ animation-delay:  42.5s !important;}
+.ani.del-86s{ animation-delay:  43s !important;}
+.ani.del-87s{ animation-delay:  43.5s !important;}
+.ani.del-88s{ animation-delay:  44s !important;}
+.ani.del-89s{ animation-delay:  44.5s !important;}
+.ani.del-90s{ animation-delay:  45s !important;}
+.ani.del-91s{ animation-delay:  45.5s !important;}
+.ani.del-92s{ animation-delay:  46s !important;}
+.ani.del-93s{ animation-delay:  46.5s !important;}
+.ani.del-94s{ animation-delay:  47s !important;}
+.ani.del-95s{ animation-delay:  47.5s !important;}
+.ani.del-96s{ animation-delay:  48s !important;}
+.ani.del-97s{ animation-delay:  48.5s !important;}
+.ani.del-98s{ animation-delay:  49s !important;}
+.ani.del-99s{ animation-delay:  49.5s !important;}
+.ani.del-100s{ animation-delay: 50s !important;}
+.ani.del-101s { animation-delay:   50.5s !important;}
+.ani.del-102s { animation-delay:   51s !important;}
+.ani.del-103s { animation-delay:   51.5s !important;}
+.ani.del-104s { animation-delay:   52s !important;}
+.ani.del-105s { animation-delay:   52.5s !important;}
+.ani.del-106s { animation-delay:   53s !important;}
+.ani.del-107s { animation-delay:   53.5s !important;}
+.ani.del-108s { animation-delay:   54s !important;}
+.ani.del-109s { animation-delay:   54.5s !important;}
+.ani.del-110s{ animation-delay:  55s !important;}
+.ani.del-111s{ animation-delay:  55.5s !important;}
+.ani.del-112s{ animation-delay:  56s !important;}
+.ani.del-113s{ animation-delay:  56.5s !important;}
+.ani.del-114s{ animation-delay:  57s !important;}
+.ani.del-115s{ animation-delay:  57.5s !important;}
+.ani.del-116s{ animation-delay:  58s !important;}
+.ani.del-117s{ animation-delay:  58.5s !important;}
+.ani.del-118s{ animation-delay:  59s !important;}
+.ani.del-119s{ animation-delay:  59.5s !important;}
+.ani.del-120s{ animation-delay:  60s !important;}
+.ani.del-121s{ animation-delay:  60.5s !important;}
+.ani.del-122s{ animation-delay:  61s !important;}
+.ani.del-123s{ animation-delay:  61.5s !important;}
+.ani.del-124s{ animation-delay:  62s !important;}
+.ani.del-125s{ animation-delay:  62.5s !important;}
+.ani.del-126s{ animation-delay:  63s !important;}
+.ani.del-127s{ animation-delay:  63.5s !important;}
+.ani.del-128s{ animation-delay:  64s !important;}
+.ani.del-129s{ animation-delay:  64.5s !important;}
+.ani.del-130s{ animation-delay:  65s !important;}
+.ani.del-131s{ animation-delay:  65.5s !important;}
+.ani.del-132s{ animation-delay:  66s !important;}
+.ani.del-133s{ animation-delay:  66.5s !important;}
+.ani.del-134s{ animation-delay:  67s !important;}
+.ani.del-135s{ animation-delay:  67.5s !important;}
+.ani.del-136s{ animation-delay:  68s !important;}
+.ani.del-137s{ animation-delay:  68.5s !important;}
+.ani.del-138s{ animation-delay:  69s !important;}
+.ani.del-139s{ animation-delay:  69.5s !important;}
+.ani.del-140s{ animation-delay:  70s !important;}
+.ani.del-141s{ animation-delay:  70.5s !important;}
+.ani.del-142s{ animation-delay:  71s !important;}
+.ani.del-143s{ animation-delay:  71.5s !important;}
+.ani.del-144s{ animation-delay:  72s !important;}
+.ani.del-145s{ animation-delay:  72.5s !important;}
+.ani.del-146s{ animation-delay:  73s !important;}
+.ani.del-147s{ animation-delay:  73.5s !important;}
+.ani.del-148s{ animation-delay:  74s !important;}
+.ani.del-149s{ animation-delay:  74.5s !important;}
+.ani.del-150s{ animation-delay:  75s !important;}
+.ani.del-151s{ animation-delay:  75.5s !important;}
+.ani.del-152s{ animation-delay:  76s !important;}
+.ani.del-153s{ animation-delay:  76.5s !important;}
+.ani.del-154s{ animation-delay:  77s !important;}
+.ani.del-155s{ animation-delay:  77.5s !important;}
+.ani.del-156s{ animation-delay:  78s !important;}
+.ani.del-157s{ animation-delay:  78.5s !important;}
+.ani.del-158s{ animation-delay:  79s !important;}
+.ani.del-159s{ animation-delay:  79.5s !important;}
+.ani.del-160s{ animation-delay:  80s !important;}
+.ani.del-161s{ animation-delay:  80.5s !important;}
+.ani.del-162s{ animation-delay:  81s !important;}
+.ani.del-163s{ animation-delay:  81.5s !important;}
+.ani.del-164s{ animation-delay:  82s !important;}
+.ani.del-165s{ animation-delay:  82.5s !important;}
+.ani.del-166s{ animation-delay:  83s !important;}
+.ani.del-167s{ animation-delay:  83.5s !important;}
+.ani.del-168s{ animation-delay:  84s !important;}
+.ani.del-169s{ animation-delay:  84.5s !important;}
+.ani.del-170s{ animation-delay:  85s !important;}
+
+
+
+
+.ani.loop{ animation-iteration-count: infinite !important; }
+.ani.c-1{ animation-iteration-count: 1 !important; }
+.ani.c-2{ animation-iteration-count: 2 !important; }
+.ani.c-3{ animation-iteration-count: 3 !important; }
+.ani.c-4{ animation-iteration-count: 4 !important; }
+.ani.c-5{ animation-iteration-count: 5 !important; }
+
+.ani.reverse  { animation-direction: reverse !important; }
+.ani.alternate{ animation-direction: alternate !important; }
+.ani.alternate-reverse{ animation-direction: alternate-reverse !important; }
+
+.ani.forwards { animation-fill-mode: forwards !important; }
+.ani.backwards{ animation-fill-mode: backwards !important; }
+.ani.both     { animation-fill-mode: both !important; }
+
+.ani.running{ animation-play-state: running; }
+.ani.paused { animation-play-state: paused; }
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---- animation events ---- */
+.ani.ev-0{ animation-play-state: paused; }
+.ani.ev-1{ animation-play-state: paused; }
+.ani.ev-2{ animation-play-state: paused; }
+.ani.ev-3{ animation-play-state: paused; }
+.ani.ev-4{ animation-play-state: paused; }
+.ani.ev-5{ animation-play-state: paused; }
+
+
+
+/* ---- animation direct trigger ---- */
+.ani.onhover-play:hover     { animation-play-state: running; }
+.ani.onhover-play:not(hover){ animation-play-state: paused;  }
+
+#ani-timeline .ani-indicator{
+  animation: kf-move-r 1s linear 1 forwards;
+  animation-play-state: paused;
+}
+
+
+.onclick {
+  cursor: pointer;
+}
+    ]]></style>
+  </defs>
+      <g
+     id="create" />
+
+    
+  <use
+     x="0"
+     y="0"
+     xlink:href="#use954"
+     id="use1009"
+     transform="translate(100)"
+     width="100%"
+     height="100%" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     style="display:inline">
+    <g
+       id="node1">
+      <ellipse
+         id="path3699"
+         cx="-32.709999"
+         cy="34.28978"
+         style="stroke-width:0.21706648"
+         transform="scale(-1,1)"
+         rx="12.71"
+         ry="12.71022" />
+    </g>
+    <g
+       id="node2">
+      <use
+         x="0"
+         y="0"
+         xlink:href="#path3699"
+         id="use4872"
+         transform="translate(50.000001)"
+         width="100%"
+         height="100%" />
+    </g>
+    <g
+       id="node3">
+      <use
+         x="0"
+         y="0"
+         xlink:href="#use4872"
+         id="use4882"
+         transform="translate(50,-4.4146271e-4)"
+         width="100%"
+         height="100%" />
+    </g>
+    <g
+       id="node4">
+      <use
+         x="0"
+         y="0"
+         xlink:href="#use4882"
+         id="use4892"
+         transform="translate(50)"
+         width="100%"
+         height="100%" />
+    </g>
+    <g
+       id="node5">
+      <use
+         x="0"
+         y="0"
+         xlink:href="#path3699"
+         id="use4902"
+         transform="translate(9.5367432e-7,50)"
+         width="100%"
+         height="100%" />
+    </g>
+    <g
+       id="node6">
+      <use
+         x="0"
+         y="0"
+         xlink:href="#use4872"
+         id="use4904"
+         transform="translate(9.5367432e-7,50)"
+         width="100%"
+         height="100%" />
+    </g>
+    <g
+       id="node7">
+      <use
+         x="0"
+         y="0"
+         xlink:href="#use4882"
+         id="use4906"
+         transform="translate(9.5367432e-7,50)"
+         width="100%"
+         height="100%" />
+    </g>
+    <g
+       id="node8">
+      <use
+         x="0"
+         y="0"
+         xlink:href="#use4892"
+         id="use4908"
+         transform="translate(9.5367432e-7,50)"
+         width="100%"
+         height="100%" />
+    </g>
+    <g
+       id="node9">
+      <use
+         x="0"
+         y="0"
+         xlink:href="#use4902"
+         id="use4942"
+         transform="translate(0,50)"
+         width="100%"
+         height="100%" />
+    </g>
+    <g
+       id="node10">
+      <use
+         x="0"
+         y="0"
+         xlink:href="#use4904"
+         id="use4944"
+         transform="translate(0,50)"
+         width="100%"
+         height="100%" />
+    </g>
+    <g
+       id="node11">
+      <use
+         x="0"
+         y="0"
+         xlink:href="#use4906"
+         id="use4946"
+         transform="translate(0,50)"
+         width="100%"
+         height="100%" />
+    </g>
+    <g
+       id="node12">
+      <use
+         x="0"
+         y="0"
+         xlink:href="#use4908"
+         id="use4948"
+         transform="translate(0,50)"
+         width="100%"
+         height="100%" />
+    </g>
+    <use
+       x="0"
+       y="0"
+       xlink:href="#path4982"
+       id="use5004"
+       transform="translate(50)"
+       width="100%"
+       height="100%" />
+    <path
+       style="fill:#000249;fill-opacity:1;stroke:#000000;stroke-width:0.94590533;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 46.302083,34.266052 h 22.489584 v 0 z"
+       id="path4982"
+       inkscape:connector-curvature="0" />
+    <!-- Play-Button -->
+    <g
+       id="ani-playAll"
+       class="trig-play onclick ev-0"
+       style="animation-play-state: running;">
+      <path
+         id="path5038"
+         style="fill:#ffffff;fill-opacity:1;stroke-width:0.73153466;stroke-miterlimit:4;stroke-dasharray:none"
+         d="m 79.375,173.96877 c -0.130694,-0.004 -0.233876,0.0177 -0.305409,0.0692 -1.144518,0.82319 -1.144518,14.14402 0,14.96721 1.144522,0.82319 10.404534,-5.83723 10.404534,-7.4836 0,-1.54348 -8.138713,-7.49336 -10.099125,-7.55283 z" />
+      <!-- Noch nicht sichbar -->
+      <use
+         x="0"
+         y="0"
+         xlink:href="#use4942"
+         id="use5036"
+         transform="translate(50,47.354187)"
+         width="100%"
+         height="100%" />
+      <use
+     x="0"
+     y="0"
+     xlink:href="#use4940"
+     id="use4980"
+     transform="translate(0,50)"
+     width="100%"
+     height="100%" />
+  <path
+     id="path126"
+     style="fill:#ffffff;fill-opacity:1;stroke-width:0.73153466;stroke-miterlimit:4;stroke-dasharray:none"
+     d="m 79.375,173.96877 c -0.130694,-0.004 -0.233876,0.0177 -0.305409,0.0692 -1.144518,0.82319 -1.144518,14.14402 0,14.96721 1.144522,0.82319 10.404534,-5.83723 10.404534,-7.4836 0,-1.54348 -8.138713,-7.49336 -10.099125,-7.55283 z" />
+    
+        
+        
+    </g>
+    <path
+       style="fill:#000249;fill-opacity:1;stroke:#000000;stroke-width:0.94590533;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 46.302083,34.266052 h 22.489584 v 0 z"
+       id="path4982-2"
+       inkscape:connector-curvature="0" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use5004"
+       id="use5006"
+       transform="translate(50)"
+       width="100%"
+       height="100%" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#path4982"
+       id="use5008"
+       transform="translate(0,50.000297)"
+       width="100%"
+       height="100%" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use5004"
+       id="use5010"
+       transform="translate(0,50.000297)"
+       width="100%"
+       height="100%" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use5006"
+       id="use5012"
+       transform="translate(0,50.000297)"
+       width="100%"
+       height="100%" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use5008"
+       id="use5014"
+       transform="translate(0,50)"
+       width="100%"
+       height="100%" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use5010"
+       id="use5016"
+       transform="translate(0,50)"
+       width="100%"
+       height="100%" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use5012"
+       id="use5018"
+       transform="translate(0,50)"
+       width="100%"
+       height="100%" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#path4982"
+       id="use5020"
+       transform="rotate(90,32.502977,34.471727)"
+       width="100%"
+       height="100%" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use5020"
+       id="use5022"
+       transform="translate(49.999999)"
+       width="100%"
+       height="100%" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use5022"
+       id="use5024"
+       transform="translate(50)"
+       width="100%"
+       height="100%" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use5024"
+       id="use5026"
+       transform="translate(50)"
+       width="100%"
+       height="100%" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use5020"
+       id="use5028"
+       transform="translate(0,50.00025)"
+       width="100%"
+       height="100%" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use5022"
+       id="use5030"
+       transform="translate(0,50.00025)"
+       width="100%"
+       height="100%" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use5024"
+       id="use5032"
+       transform="translate(0,50.00025)"
+       width="100%"
+       height="100%" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use5026"
+       id="use5034"
+       transform="translate(0,50.00025)"
+       width="100%"
+       height="100%" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use5016"
+       id="use5040"
+       transform="matrix(1.9411653,0,0,1,-89.042429,47.639901)"
+       width="100%"
+       height="100%"
+       style="stroke-width:2.08145356;stroke-miterlimit:4;stroke-dasharray:none" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="14.961304"
+       y="22"
+       id="text5055"><tspan
+         sodipodi:role="line"
+         id="tspan5053"
+         x="14.961304"
+         y="22"
+         style="stroke-width:0.26458332">R</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="15.917317"
+       y="72"
+       id="text5061"><tspan
+         sodipodi:role="line"
+         id="tspan5059"
+         x="15.917317"
+         y="72"
+         style="stroke-width:0.26458332">A</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="14.961304"
+       y="122"
+       id="text5065"><tspan
+         sodipodi:role="line"
+         id="tspan5063"
+         x="14.961304"
+         y="122"
+         style="stroke-width:0.26458332">B</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="65.405724"
+       y="21.850138"
+       id="text5069"><tspan
+         sodipodi:role="line"
+         id="tspan5067"
+         x="65.405724"
+         y="21.850138"
+         style="stroke-width:0.26458332">C</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="64.961304"
+       y="72"
+       id="text5073"><tspan
+         sodipodi:role="line"
+         id="tspan5071"
+         x="64.961304"
+         y="72"
+         style="stroke-width:0.26458332">D</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="64.961304"
+       y="122"
+       id="text5077"><tspan
+         sodipodi:role="line"
+         id="tspan5075"
+         x="64.961304"
+         y="122"
+         style="stroke-width:0.26458332">E</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="114.9613"
+       y="22"
+       id="text5081"><tspan
+         sodipodi:role="line"
+         id="tspan5079"
+         x="114.9613"
+         y="22"
+         style="stroke-width:0.26458332">F</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="115.40572"
+       y="71.850136"
+       id="text5085"><tspan
+         sodipodi:role="line"
+         id="tspan5083"
+         x="115.40572"
+         y="71.850136"
+         style="stroke-width:0.26458332">G</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="114.9613"
+       y="122"
+       id="text5089"><tspan
+         sodipodi:role="line"
+         id="tspan5087"
+         x="114.9613"
+         y="122"
+         style="stroke-width:0.26458332">H</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="164.9613"
+       y="22"
+       id="text5093"><tspan
+         sodipodi:role="line"
+         id="tspan5091"
+         x="164.9613"
+         y="22"
+         style="stroke-width:0.26458332">I</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="166.54778"
+       y="69.881264"
+       id="text5097"><tspan
+         sodipodi:role="line"
+         id="tspan5095"
+         x="166.54778"
+         y="69.881264"
+         style="stroke-width:0.26458332">J</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="164.9613"
+       y="122"
+       id="text5101"><tspan
+         sodipodi:role="line"
+         id="tspan5099"
+         x="164.9613"
+         y="122"
+         style="stroke-width:0.26458332">K</tspan></text>
+    <g
+       id="ani-timeline"
+       style="fill:#ffffff;fill-opacity:1">
+      <g
+         id="indicator"
+         class="ani ev-0 move-r dur-3s move-along2"
+         style="animation-play-state:paused;fill:#ffffff;fill-opacity:1">
+        <!--style="animation: kf-move-r 3s linear;"-->
+        <circle
+           style="fill:#ffffff;fill-opacity:1;stroke:#6dd217;stroke-width:1.77673328;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="path5051"
+           cx="100"
+           cy="181.66963"
+           r="2.6116333" />
+        <path
+           id="path995-3"
+           d="m 46.302083,34.266052 h 22.489584 v 0 z"
+           stroke-opacity=""
+           fill="none"
+           style="fill:#ffffff;fill-opacity:1" />
+      </g>
+    </g>
+    <g
+       class="trig-play onclick ev-0"
+       id="g997"
+       transform="translate(-35.4)">
+      <path
+         d="m 79.375,173.96877 c -0.130694,-0.004 -0.233876,0.0177 -0.305409,0.0692 -1.144518,0.82319 -1.144518,14.14402 0,14.96721 1.144522,0.82319 10.404534,-5.83723 10.404534,-7.4836 0,-1.54348 -8.138713,-7.49336 -10.099125,-7.55283 z"
+         style="fill:#ffffff;fill-opacity:1;stroke-width:0.73153466;stroke-miterlimit:4;stroke-dasharray:none"
+         id="path992"
+         inkscape:connector-curvature="0" />
+      <!-- Noch nicht sichbar -->
+    </g>
+   
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Layer 2"
+     style="display:inline">
+    <path
+       id="path4535-9"
+       style="display:inline;fill:#ffffff;fill-opacity:1;stroke-width:0.02946865"
+       d="m 47.5,23.999999 c 0.29943,0 3.144011,3.579084 2.994296,3.767455 -0.149715,0.188374 -5.838878,0.188374 -5.988592,0 C 44.355989,27.579082 47.20057,23.999999 47.5,23.999999 Z m 1.098521,7.756397 c -0.170681,0.324806 -2.023674,0.324806 -2.194355,0 -0.170681,-0.324808 -0.170681,-3.851062 0,-4.175867 0.170681,-0.324806 2.023674,-0.324806 2.194355,0 0.170681,0.324805 0.170681,3.851059 0,4.175867 z"
+       inkscape:connector-curvature="0" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer4"
+     inkscape:label="Layer 3"
+     style="display:inline">
+    <path
+       id="path4535-9-8-2"
+       style="display:inline;fill:#ffffff;fill-opacity:1;stroke-width:0.03023979"
+       d="m 30.600528,34.295147 c 0,0.317438 -3.558167,3.333085 -3.74358,3.174365 -0.185415,-0.158719 -0.185415,-6.190008 0,-6.348727 0.185413,-0.158719 3.74358,2.856928 3.74358,3.174362 z m -7.707892,1.164585 c -0.317851,-0.180946 -0.317851,-2.145374 0,-2.326319 0.326681,-0.180945 3.831873,-0.180945 4.149725,0 0.32668,0.180945 0.32668,2.145373 0,2.326319 -0.317852,0.180946 -3.823044,0.180946 -4.149725,0 z"
+       inkscape:connector-curvature="0" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#path4535-9-8-2"
+       id="use4874"
+       transform="translate(50.000001)"
+       width="100%"
+       height="100%" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use4874"
+       id="use4884"
+       transform="translate(50,-4.4146271e-4)"
+       width="100%"
+       height="100%" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use4884"
+       id="use4894"
+       transform="translate(50)"
+       width="100%"
+       height="100%" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#path4535-9-8-2"
+       id="use4910"
+       transform="translate(9.5367432e-7,50)"
+       width="100%"
+       height="100%" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use4874"
+       id="use4912"
+       transform="translate(9.5367432e-7,50)"
+       width="100%"
+       height="100%" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use4884"
+       id="use4914"
+       transform="translate(9.5367432e-7,50)"
+       width="100%"
+       height="100%" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use4894"
+       id="use4916"
+       transform="translate(9.5367432e-7,50)"
+       width="100%"
+       height="100%" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use4910"
+       id="use4950"
+       transform="translate(0,50)"
+       width="100%"
+       height="100%" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use4912"
+       id="use4952"
+       transform="translate(0,50)"
+       width="100%"
+       height="100%" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use4914"
+       id="use4954"
+       transform="translate(0,50)"
+       width="100%"
+       height="100%" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use4916"
+       id="use4956"
+       transform="translate(0,50)"
+       width="100%"
+       height="100%" />
+  </g>
+  <g
+     inkscape:label="Layer 3 copy"
+     id="g4760"
+     inkscape:groupmode="layer"
+     style="display:inline">
+    <path
+       inkscape:connector-curvature="0"
+       d="m 32.695185,24.240726 c 0.317858,0 3.337499,3.553461 3.178569,3.738629 -0.158929,0.185169 -6.198206,0.185169 -6.357136,0 -0.158929,-0.185168 2.860712,-3.738629 3.178567,-3.738629 z m 1.166127,7.697697 c -0.181185,0.317431 -2.148215,0.317431 -2.3294,0 -0.181185,-0.326249 -0.181185,-3.826805 0,-4.144236 0.181185,-0.326248 2.148215,-0.326248 2.3294,0 0.181186,0.317431 0.181186,3.817987 0,4.144236 z"
+       style="display:inline;fill:#ffffff;fill-opacity:1;stroke-width:0.03023979"
+       id="path4758" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#path4758"
+       id="use4876"
+       transform="translate(50.000001)"
+       width="100%"
+       height="100%" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use4876"
+       id="use4886"
+       transform="translate(50,-4.4146271e-4)"
+       width="100%"
+       height="100%" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use4886"
+       id="use4896"
+       transform="translate(50)"
+       width="100%"
+       height="100%" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#path4758"
+       id="use4918"
+       transform="translate(9.5367432e-7,50)"
+       width="100%"
+       height="100%" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use4876"
+       id="use4920"
+       transform="translate(9.5367432e-7,50)"
+       width="100%"
+       height="100%" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use4886"
+       id="use4922"
+       transform="translate(9.5367432e-7,50)"
+       width="100%"
+       height="100%" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use4896"
+       id="use4924"
+       transform="translate(9.5367432e-7,50)"
+       width="100%"
+       height="100%" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use4918"
+       id="use4958"
+       transform="translate(0,50)"
+       width="100%"
+       height="100%" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use4920"
+       id="use4960"
+       transform="translate(0,50)"
+       width="100%"
+       height="100%" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use4922"
+       id="use4962"
+       transform="translate(0,50)"
+       width="100%"
+       height="100%" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use4924"
+       id="use4964"
+       transform="translate(0,50)"
+       width="100%"
+       height="100%" />
+  </g>
+  <g
+     style="display:inline"
+     inkscape:groupmode="layer"
+     id="g4764"
+     inkscape:label="Layer 3 copy copy">
+    <path
+       id="path4762"
+       style="display:inline;fill:#ffffff;fill-opacity:1;stroke-width:0.03023979"
+       d="m 32.588793,36.386779 c 0.317858,0 3.337499,3.553461 3.178569,3.738629 -0.158929,0.185169 -6.198206,0.185169 -6.357135,0 -0.158929,-0.185168 2.860712,-3.738629 3.178566,-3.738629 z m 1.166127,7.697697 c -0.181185,0.317431 -2.148215,0.317431 -2.3294,0 -0.181184,-0.326249 -0.181184,-3.826805 0,-4.144236 0.181185,-0.326248 2.148215,-0.326248 2.3294,0 0.181186,0.317431 0.181186,3.817987 0,4.144236 z"
+       inkscape:connector-curvature="0" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#path4762"
+       id="use4878"
+       transform="translate(50.000001)"
+       width="100%"
+       height="100%" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use4878"
+       id="use4888"
+       transform="translate(50,-4.4146271e-4)"
+       width="100%"
+       height="100%" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use4888"
+       id="use4898"
+       transform="translate(50)"
+       width="100%"
+       height="100%" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#path4762"
+       id="use4926"
+       transform="translate(9.5367432e-7,50)"
+       width="100%"
+       height="100%" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use4878"
+       id="use4928"
+       transform="translate(9.5367432e-7,50)"
+       width="100%"
+       height="100%" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use4888"
+       id="use4930"
+       transform="translate(9.5367432e-7,50)"
+       width="100%"
+       height="100%" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use4898"
+       id="use4932"
+       transform="translate(9.5367432e-7,50)"
+       width="100%"
+       height="100%" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use4926"
+       id="use4966"
+       transform="translate(0,50)"
+       width="100%"
+       height="100%" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use4928"
+       id="use4968"
+       transform="translate(0,50)"
+       width="100%"
+       height="100%" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use4930"
+       id="use4970"
+       transform="translate(0,50)"
+       width="100%"
+       height="100%" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use4932"
+       id="use4972"
+       transform="translate(0,50)"
+       width="100%"
+       height="100%" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer7"
+     inkscape:label="Layer 3 copy copy 1" />
+  <g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="Layer 3 copy copy 2" />
+  <path
+     id="path4535-9-8"
+     style="display:inline;fill:#ffffff;fill-opacity:1;stroke-width:0.03023979"
+     d="m 42.762668,34.294892 c 0,0.317437 -3.558167,3.333084 -3.743581,3.174365 -0.185414,-0.158719 -0.185414,-6.190008 0,-6.348727 0.185414,-0.158719 3.743581,2.856927 3.743581,3.174362 z m -7.707892,1.164585 c -0.317852,-0.180947 -0.317852,-2.145374 0,-2.326319 0.326681,-0.180945 3.831873,-0.180945 4.149725,0 0.32668,0.180945 0.32668,2.145372 0,2.326319 -0.317852,0.180945 -3.823044,0.180945 -4.149725,0 z"
+     inkscape:connector-curvature="0" />
+  <use
+     x="0"
+     y="0"
+     xlink:href="#path4535-9-8"
+     id="use4880"
+     transform="translate(50.000001)"
+     width="100%"
+     height="100%" />
+  <use
+     x="0"
+     y="0"
+     xlink:href="#use4880"
+     id="use4890"
+     transform="translate(50,-4.4146271e-4)"
+     width="100%"
+     height="100%" />
+  <use
+     x="0"
+     y="0"
+     xlink:href="#use4890"
+     id="use4900"
+     transform="translate(50)"
+     width="100%"
+     height="100%" />
+  <use
+     x="0"
+     y="0"
+     xlink:href="#path4535-9-8"
+     id="use4934"
+     transform="translate(9.5367432e-7,50)"
+     width="100%"
+     height="100%" />
+  <use
+     x="0"
+     y="0"
+     xlink:href="#use4880"
+     id="use4936"
+     transform="translate(9.5367432e-7,50)"
+     width="100%"
+     height="100%" />
+  <use
+     x="0"
+     y="0"
+     xlink:href="#use4890"
+     id="use4938"
+     transform="translate(9.5367432e-7,50)"
+     width="100%"
+     height="100%" />
+  <use
+     x="0"
+     y="0"
+     xlink:href="#use4900"
+     id="use4940"
+     transform="translate(9.5367432e-7,50)"
+     width="100%"
+     height="100%" />
+  <use
+     x="0"
+     y="0"
+     xlink:href="#use4934"
+     id="use4974"
+     transform="translate(0,50)"
+     width="100%"
+     height="100%" />
+  <use
+     x="0"
+     y="0"
+     xlink:href="#use4936"
+     id="use4976"
+     transform="translate(0,50)"
+     width="100%"
+     height="100%" />
+  <use
+     x="0"
+     y="0"
+     xlink:href="#use4938"
+     id="use4978"
+     transform="translate(0,50)"
+     width="100%"
+     height="100%" />
+  <script
+     type="text/javascript"
+     id="script129">//<![CDATA[
+
+
+// reset
+function t4t_reset(el){
+  el.style.animation = 'none';
+  el.clientHeight; /* trigger reflow: https://gist.github.com/paulirish/5d52fb081b3570c81e3a */
+  el.style.animation = '';
+}
+function t4t_resetAll( selector ){
+  var els =document.querySelectorAll( selector )
+  for (var i = 0; i < els.length; i++) {
+    t4t_reset(els[i])
+  }
+}
+
+
+// Play or Pause:
+function t4t_playPause(el){
+    if (el.style.animationPlayState == 'paused') {
+      el.style.animationPlayState = 'running';
+    } else {
+      el.style.animationPlayState = 'paused';
+    }
+}
+function t4t_playPauseAll( selector ){
+  var els =document.querySelectorAll( selector )
+  for (var i = 0; i < els.length; i++) {
+    t4t_playPause(els[i]); 
+  }
+}
+
+
+// Play or Replay
+function t4t_play(el){
+  t4t_reset(el)
+  el.style.animationPlayState = 'running';
+}
+function t4t_playAll( selector ){
+  var els =document.querySelectorAll( selector )
+  for (var i = 0; i < els.length; i++) {
+    t4t_play(els[i])
+  }
+}
+
+
+
+
+function t4t_addTriggerListener( event_name ){
+    var els=document.querySelectorAll('.trig-play'+'.'+event_name)
+    for (var i=0; i<els.length; i++) {
+      for (var j=0; j<els[i].classList.length; j++){
+        if(els[i].classList[j].substring(0, 3) === "ev-"){
+          var evn = event_name.substring(2)
+          els[i].addEventListener(evn, function(){
+              var ev='ani'
+              for (var j=0; j<this.classList.length; j++){
+                if (this.classList[j].substring(0, 3) === "ev-"){
+                  ev=this.classList[j]
+                }
+              }
+              t4t_playAll('.'+ev)
+          }, false);    
+        }
+      }
+    }    
+}
+
+
+
+// make touch and hover the same
+function t4t_init(){ 
+  window.onload = function(){
+
+    var triggers = document.querySelectorAll('.hover');
+    for (var i=0; i<triggers.length; i++) {
+      triggers[i].onmouseover = 
+      triggers[i].ontouch = function () {
+        this.classList.add('toggle');
+      }
+      triggers[i].onmouseout = 
+      triggers[i].ontouchend = function () {
+        this.classList.remove('toggle');
+      }
+    }
+
+    // add animation end listeners
+    var els =document.querySelectorAll('.ani')
+    for (var i=0; i<els.length; i++) {
+      els[i].addEventListener('animationend', function(){
+          this.style.animationPlayState = 'paused';
+      }, false);
+    }
+    var els =document.querySelectorAll('.ani.appear')
+    for (var i=0; i<els.length; i++) {
+      els[i].classList.add('hide');     
+      els[i].addEventListener('animationstart', function(){
+          this.classList.remove('hide');
+          //this.style.opacity = 1;
+      }, false);
+      if (! els[i].classList.contains('forwards') ){
+        els[i].addEventListener('animationend', function(){
+            //this.style.opacity = 0;
+            this.classList.add('hide');
+        }, false);      
+      }
+    }
+
+    // add trigger
+    t4t_addTriggerListener("onmouseover")
+    t4t_addTriggerListener("onclick")
+
+
+
+
+  }
+}
+ //]]></script>
+  <rect
+     style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.87461817;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     id="rect140"
+     width="7.1437511"
+     height="10.318748"
+     x="28.839582"
+     y="54.377083" />
+  <use
+     x="0"
+     y="0"
+     xlink:href="#rect140"
+     id="use1025"
+     transform="translate(49.999727)"
+     width="100%"
+     height="100%" />
+  <use
+     x="0"
+     y="0"
+     xlink:href="#text134"
+     id="use1027"
+     transform="translate(49.999727)"
+     width="100%"
+     height="100%" />
+  <use
+     x="0"
+     y="0"
+     xlink:href="#use1025"
+     id="use1029"
+     transform="translate(50)"
+     width="100%"
+     height="100%" />
+  <use
+     x="0"
+     y="0"
+     xlink:href="#use1027"
+     id="use1031"
+     transform="translate(50)"
+     width="100%"
+     height="100%" />
+  <use
+     x="0"
+     y="0"
+     xlink:href="#use1029"
+     id="use1033"
+     transform="translate(50)"
+     width="100%"
+     height="100%" />
+  <use
+     x="0"
+     y="0"
+     xlink:href="#use1031"
+     id="use1035"
+     transform="translate(50)"
+     width="100%"
+     height="100%" />
+  <use
+     x="0"
+     y="0"
+     xlink:href="#use1033"
+     id="use1037"
+     transform="translate(0,49.99986)"
+     width="100%"
+     height="100%" />
+  <use
+     x="0"
+     y="0"
+     xlink:href="#use1035"
+     id="use1039"
+     transform="translate(0,49.99986)"
+     width="100%"
+     height="100%" />
+  <use
+     x="0"
+     y="0"
+     xlink:href="#use1037"
+     id="use1041"
+     transform="translate(-50)"
+     width="100%"
+     height="100%" />
+  <use
+     x="0"
+     y="0"
+     xlink:href="#use1039"
+     id="use1043"
+     transform="translate(-50)"
+     width="100%"
+     height="100%" />
+  <use
+     x="0"
+     y="0"
+     xlink:href="#use1041"
+     id="use1045"
+     transform="translate(-50)"
+     width="100%"
+     height="100%" />
+  <use
+     x="0"
+     y="0"
+     xlink:href="#use1043"
+     id="use1047"
+     transform="translate(-50)"
+     width="100%"
+     height="100%" />
+  <use
+     x="0"
+     y="0"
+     xlink:href="#use1045"
+     id="use1049"
+     transform="translate(-50)"
+     width="100%"
+     height="100%" />
+  <use
+     x="0"
+     y="0"
+     xlink:href="#use1047"
+     id="use1051"
+     transform="translate(-50)"
+     width="100%"
+     height="100%" />
+  <use
+     x="0"
+     y="0"
+     xlink:href="#text134"
+     id="use952" />
+  <use
+     x="0"
+     y="0"
+     xlink:href="#rect140"
+     id="use954"
+     transform="translate(24.999727,-25.00014)"
+     width="100%"
+     height="100%" />
+  <use
+     x="0"
+     y="0"
+     xlink:href="#text134"
+     id="use956"
+     transform="translate(24.999727,-25.00014)"
+     width="100%"
+     height="100%" />
+  <use
+     x="0"
+     y="0"
+     xlink:href="#use952"
+     id="use958"
+     transform="translate(24.999727,-25.00014)"
+     width="100%"
+     height="100%" />
+  <use
+     x="0"
+     y="0"
+     xlink:href="#use954"
+     id="use960"
+     transform="translate(50)"
+     width="100%"
+     height="100%" />
+  <use
+     x="0"
+     y="0"
+     xlink:href="#use956"
+     id="use962"
+     transform="translate(50)"
+     width="100%"
+     height="100%" />
+  <use
+     x="0"
+     y="0"
+     xlink:href="#use958"
+     id="use964"
+     transform="translate(50)"
+     width="100%"
+     height="100%" />
+  <use
+     x="0"
+     y="0"
+     xlink:href="#use960"
+     id="use966"
+     transform="translate(50)"
+     width="100%"
+     height="100%" />
+  <use
+     x="0"
+     y="0"
+     xlink:href="#use966"
+     id="use972"
+     transform="translate(0,50)"
+     width="100%"
+     height="100%" />
+  <use
+     x="0"
+     y="0"
+     xlink:href="#use972"
+     id="use978"
+     transform="translate(-50)"
+     width="100%"
+     height="100%" />
+  <use
+     x="0"
+     y="0"
+     xlink:href="#use974"
+     id="use980"
+     transform="translate(-50)"
+     width="100%"
+     height="100%" />
+  <use
+     x="0"
+     y="0"
+     xlink:href="#use976"
+     id="use982"
+     transform="translate(-50)"
+     width="100%"
+     height="100%" />
+  <use
+     x="0"
+     y="0"
+     xlink:href="#use978"
+     id="use984"
+     transform="translate(-50)"
+     width="100%"
+     height="100%" />
+  <use
+     x="0"
+     y="0"
+     xlink:href="#use980"
+     id="use986"
+     transform="translate(-50)"
+     width="100%"
+     height="100%" />
+  <use
+     x="0"
+     y="0"
+     xlink:href="#use982"
+     id="use988"
+     transform="translate(-50)"
+     width="100%"
+     height="100%" />
+  <use
+     x="0"
+     y="0"
+     xlink:href="#use984"
+     id="use990"
+     transform="translate(0,50)"
+     width="100%"
+     height="100%" />
+  <use
+     x="0"
+     y="0"
+     xlink:href="#use986"
+     id="use992"
+     transform="translate(0,50)"
+     width="100%"
+     height="100%" />
+  <use
+     x="0"
+     y="0"
+     xlink:href="#use988"
+     id="use994"
+     transform="translate(0,50)"
+     width="100%"
+     height="100%" />
+  <use
+     x="0"
+     y="0"
+     xlink:href="#use990"
+     id="use996"
+     transform="translate(50)"
+     width="100%"
+     height="100%" />
+  <use
+     x="0"
+     y="0"
+     xlink:href="#use992"
+     id="use998"
+     transform="translate(50)"
+     width="100%"
+     height="100%" />
+  <use
+     x="0"
+     y="0"
+     xlink:href="#use994"
+     id="use1000"
+     transform="translate(50)"
+     width="100%"
+     height="100%" />
+  <use
+     x="0"
+     y="0"
+     xlink:href="#use996"
+     id="use1002"
+     transform="translate(50)"
+     width="100%"
+     height="100%" />
+  <use
+     x="0"
+     y="0"
+     xlink:href="#use998"
+     id="use1004"
+     transform="translate(50)"
+     width="100%"
+     height="100%" />
+  <use
+     x="0"
+     y="0"
+     xlink:href="#use1000"
+     id="use1006"
+     transform="translate(50)"
+     width="100%"
+     height="100%" />
+  <script
+     type="text/javascript"
+     id="script176">
+    function getText() {
+    var text = document.getElementById(&quot;textareabox&quot;).value;
+    alert(text);
+}
+
+function setText() {
+    var text = document.getElementById(&quot;textareabox&quot;).value = 'Hello world';
+
+}
+    </script>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:10.79728413px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26993212"
+     x="151.22113"
+     y="39.35585"
+     id="text1"
+     transform="scale(1.0202159,0.98018469)"><tspan
+       class="onclick"
+       sodipodi:role="line"
+       id="edge13"
+       x="151.22113"
+       y="39.35585"
+       style="stroke-width:0.26993212">5
+     </tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:10.79728413px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26993212"
+     x="101.22113"
+     y="39.35585"
+     id="text2"
+     transform="scale(1.0202159,0.98018469)"><tspan
+       class="onclick"
+       sodipodi:role="line"
+       id="edge16"
+       x="101.22113"
+       y="39.35585"
+       style="stroke-width:0.26993212">1
+     </tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:10.79728413px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26993212"
+     x="52.22113"
+     y="39.35585"
+     id="text3"
+     transform="scale(1.0202159,0.98018469)"><tspan
+       class="onclick"
+       sodipodi:role="line"
+       id="edge17"
+       x="51.92113"
+       y="39.35585"
+       style="stroke-width:0.26993212">1
+     </tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:10.79728413px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26993212"
+     x="52.22113"
+     y="39.35585"
+     id="text4"
+     transform="scale(1.0202159,0.98018469)"><tspan
+       class="onclick"
+       sodipodi:role="line"
+       id="edge9"
+       x="51.92113"
+       y="89.35585"
+       style="stroke-width:0.26993212">1
+     </tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:10.79728413px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26993212"
+     x="52.22113"
+     y="39.35585"
+     id="text5"
+     transform="scale(1.0202159,0.98018469)"><tspan
+       class="onclick"
+       sodipodi:role="line"
+       id="edge10"
+       x="101.22113"
+       y="89.35585"
+       style="stroke-width:0.26993212">2
+     </tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:10.79728413px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26993212"
+     x="52.22113"
+     y="39.35585"
+     id="text6"
+     transform="scale(1.0202159,0.98018469)"><tspan
+       class="onclick"
+       sodipodi:role="line"
+       id="edge11"
+       x="151.22113"
+       y="89.35585"
+       style="stroke-width:0.26993212">1
+     </tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:10.79728413px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26993212"
+     x="52.22113"
+     y="39.35585"
+     id="text7"
+     transform="scale(1.0202159,0.98018469)"><tspan
+       class="onclick"
+       sodipodi:role="line"
+       id="edge12"
+       x="151.22113"
+       y="139.35585"
+       style="stroke-width:0.26993212">1
+     </tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:10.79728413px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26993212"
+     x="52.22113"
+     y="39.35585"
+     id="text8"
+     transform="scale(1.0202159,0.98018469)"><tspan
+       class="onclick"
+       sodipodi:role="line"
+       id="edge14"
+       x="101.22113"
+       y="139.35585"
+       style="stroke-width:0.26993212">7
+     </tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:10.79728413px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26993212"
+     x="52.22113"
+     y="39.35585"
+     id="text9"
+     transform="scale(1.0202159,0.98018469)"><tspan
+       class="onclick"
+       sodipodi:role="line"
+       id="edge15"
+       x="51.22113"
+       y="139.35585"
+       style="stroke-width:0.26993212">1
+     </tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:10.79728413px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26993212"
+     x="27.892574"
+     y="65.633148"
+     id="text11"
+     transform="scale(1.0202159,0.98018469)"><tspan
+       class="onclick"
+       sodipodi:role="line"
+       id="edge1"
+       x="27.892574"
+       y="65.633148"
+       style="stroke-width:0.26993212">1
+     </tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:10.79728413px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26993212"
+     x="27.892574"
+     y="65.633148"
+     id="text12"
+     transform="scale(1.0202159,0.98018469)"><tspan
+       class="onclick"
+       sodipodi:role="line"
+       id="edge2"
+       x="77.892574"
+       y="65.633148"
+       style="stroke-width:0.26993212">3
+     </tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:10.79728413px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26993212"
+     x="27.892574"
+     y="65.633148"
+     id="text13"
+     transform="scale(1.0202159,0.98018469)"><tspan
+       class="onclick"
+       sodipodi:role="line"
+       id="edge3"
+       x="126.892574"
+       y="65.633148"
+       style="stroke-width:0.26993212">1
+     </tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:10.79728413px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26993212"
+     x="27.892574"
+     y="65.633148"
+     id="text14"
+     transform="scale(1.0202159,0.98018469)"><tspan
+       class="onclick"
+       sodipodi:role="line"
+       id="edge4"
+       x="175.892574"
+       y="65.633148"
+       style="stroke-width:0.26993212">1
+     </tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:10.79728413px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26993212"
+     x="27.892574"
+     y="65.633148"
+     id="text15"
+     transform="scale(1.0202159,0.98018469)"><tspan
+       class="onclick"
+       sodipodi:role="line"
+       id="edge5"
+       x="175.892574"
+       y="115.633148"
+       style="stroke-width:0.26993212">1
+     </tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:10.79728413px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26993212"
+     x="27.892574"
+     y="65.633148"
+     id="text16"
+     transform="scale(1.0202159,0.98018469)"><tspan
+       class="onclick"
+       sodipodi:role="line"
+       id="edge6"
+       x="125.892574"
+       y="115.633148"
+       style="stroke-width:0.26993212">1
+     </tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:10.79728413px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26993212"
+     x="27.892574"
+     y="65.633148"
+     id="text17"
+     transform="scale(1.0202159,0.98018469)"><tspan
+       class="onclick"
+       sodipodi:role="line"
+       id="edge7"
+       x="76.892574"
+       y="115.633148"
+       style="stroke-width:0.26993212">1
+     </tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:10.79728413px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26993212"
+     x="27.892574"
+     y="65.633148"
+     id="text18"
+     transform="scale(1.0202159,0.98018469)"><tspan
+       class="onclick"
+       sodipodi:role="line"
+       id="edge8"
+       x="27.892574"
+       y="115.633148"
+       style="stroke-width:0.26993212">4
+     </tspan></text>
+  <script
+     type="text/javascript"
+     id="test1"> 
+                   
+
+ 
+      
+function FirstR() {  
+
+var firstnode = 'R';
+window.firstnode = firstnode;      
+
+// Vorherige pinkcircles entfernen
+try{
+var list = document.getElementById("create2");
+list.removeChild(list.childNodes[0]);           
+}
+catch(err){
+alert((firstnode)+" wurde als Startknoten gewählt");
+}
+      
+main(firstnode, 'K');  
+      
+      
+      
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;circle&quot;);
+    svgElem.setAttribute(&quot;cx&quot;, "18.487");
+    svgElem.setAttribute(&quot;cy&quot;, "18.372999");
+    svgElem.setAttribute(&quot;r&quot;, "6.6965461");
+    svgElem.setAttribute(&quot;style&quot;, "opacity:0.98000004;fill:#000000;fill-opacity:0.02525252;stroke:#ec3df8;stroke-width:2.60690761;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1");
+    svgElem.setAttribute(&quot;id&quot;, "pinkcircle");
+      
+  var svgdoc = document.getElementById(&quot;create2&quot;);      
+      
+  svgdoc.appendChild(svgElem);    
+      }           
+     
+      
+      
+function FirstC() {
+
+var firstnode = 'C';
+window.firstnode = firstnode;      
+
+// Vorherige pinkcircles entfernen
+try{
+var list = document.getElementById("create2");
+list.removeChild(list.childNodes[0]);           
+}
+catch(err){
+alert((firstnode)+" wurde als Startknoten gewählt");
+}
+      
+main(firstnode, 'K');  
+      
+      
+      
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;circle&quot;);
+    svgElem.setAttribute(&quot;cx&quot;, "68.487");
+    svgElem.setAttribute(&quot;cy&quot;, "18.372999");
+    svgElem.setAttribute(&quot;r&quot;, "6.6965461");
+    svgElem.setAttribute(&quot;style&quot;, "opacity:0.98000004;fill:#000000;fill-opacity:0.02525252;stroke:#ec3df8;stroke-width:2.60690761;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1");
+    svgElem.setAttribute(&quot;id&quot;, "pinkcircle");
+      
+  var svgdoc = document.getElementById(&quot;create2&quot;);      
+      
+  svgdoc.appendChild(svgElem);    
+      }           
+     
+
+function FirstC() {
+
+var firstnode = 'C';
+window.firstnode = firstnode;      
+
+// Vorherige pinkcircles entfernen
+try{
+var list = document.getElementById("create2");
+list.removeChild(list.childNodes[0]);           
+}
+catch(err){
+alert((firstnode)+" wurde als Startknoten gewählt");
+}
+      
+main(firstnode, 'K');  
+      
+      
+      
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;circle&quot;);
+    svgElem.setAttribute(&quot;cx&quot;, "68.487");
+    svgElem.setAttribute(&quot;cy&quot;, "18.372999");
+    svgElem.setAttribute(&quot;r&quot;, "6.6965461");
+    svgElem.setAttribute(&quot;style&quot;, "opacity:0.98000004;fill:#000000;fill-opacity:0.02525252;stroke:#ec3df8;stroke-width:2.60690761;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1");
+    svgElem.setAttribute(&quot;id&quot;, "pinkcircle");
+      
+  var svgdoc = document.getElementById(&quot;create2&quot;);      
+      
+  svgdoc.appendChild(svgElem);    
+      }           
+     
+      
+function FirstF() {
+var firstnode = 'F';
+window.firstnode = firstnode;      
+
+// Vorherige pinkcircles entfernen
+try{
+var list = document.getElementById("create2");
+list.removeChild(list.childNodes[0]);           
+}
+catch(err){
+alert((firstnode)+" wurde als Startknoten gewählt");
+}
+      
+main(firstnode, 'K');  
+      
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;circle&quot;);
+    svgElem.setAttribute(&quot;cx&quot;, "118.487");
+    svgElem.setAttribute(&quot;cy&quot;, "18.372999");
+    svgElem.setAttribute(&quot;r&quot;, "6.6965461");
+    svgElem.setAttribute(&quot;style&quot;, "opacity:0.98000004;fill:#000000;fill-opacity:0.02525252;stroke:#ec3df8;stroke-width:2.60690761;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1");
+    svgElem.setAttribute(&quot;id&quot;, "pinkcircle");
+      
+  var svgdoc = document.getElementById(&quot;create2&quot;);      
+      
+  svgdoc.appendChild(svgElem);    
+      } 
+      
+      
+function FirstI(){
+var firstnode = 'I';
+window.firstnode = firstnode;      
+// Vorherige pinkcircles entfernen
+      
+try{
+var list = document.getElementById("create2");
+list.removeChild(list.childNodes[0]);           
+}
+catch(err){
+alert((firstnode)+" wurde als Startknoten gewählt");
+}
+      
+main('I', 'K');  
+      
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;circle&quot;);
+    svgElem.setAttribute(&quot;cx&quot;, "168.487");
+    svgElem.setAttribute(&quot;cy&quot;, "18.372999");
+    svgElem.setAttribute(&quot;r&quot;, "6.6965461");
+    svgElem.setAttribute(&quot;style&quot;, "opacity:0.98000004;fill:#000000;fill-opacity:0.02525252;stroke:#ec3df8;stroke-width:2.60690761;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1");
+    svgElem.setAttribute(&quot;id&quot;, "pinkcircle");
+      
+  var svgdoc = document.getElementById(&quot;create2&quot;);      
+      
+  svgdoc.appendChild(svgElem);    
+      }  
+  
+      
+
+      
+function FirstJ() {
+var firstnode = 'J';
+window.firstnode = firstnode;      
+
+// Vorherige pinkcircles entfernen
+try{
+var list = document.getElementById("create2");
+list.removeChild(list.childNodes[0]);           
+}
+catch(err){
+alert((firstnode)+" wurde als Startknoten gewählt");
+}
+      
+main(firstnode, 'K');  
+      
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;circle&quot;);
+    svgElem.setAttribute(&quot;cx&quot;, "168.487");
+    svgElem.setAttribute(&quot;cy&quot;, "68.372999");
+    svgElem.setAttribute(&quot;r&quot;, "6.6965461");
+    svgElem.setAttribute(&quot;style&quot;, "opacity:0.98000004;fill:#000000;fill-opacity:0.02525252;stroke:#ec3df8;stroke-width:2.60690761;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1");
+    svgElem.setAttribute(&quot;id&quot;, "pinkcircle");
+      
+  var svgdoc = document.getElementById(&quot;create2&quot;);      
+      
+  svgdoc.appendChild(svgElem);    
+      }  
+      
+function FirstG() {
+var firstnode = 'G';
+window.firstnode = firstnode;      
+
+// Vorherige pinkcircles entfernen
+try{
+var list = document.getElementById("create2");
+list.removeChild(list.childNodes[0]);           
+}
+catch(err){
+alert((firstnode)+" wurde als Startknoten gewählt");
+}
+      
+main(firstnode, 'K');  
+      
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;circle&quot;);
+    svgElem.setAttribute(&quot;cx&quot;, "118.487");
+    svgElem.setAttribute(&quot;cy&quot;, "68.372999");
+    svgElem.setAttribute(&quot;r&quot;, "6.6965461");
+    svgElem.setAttribute(&quot;style&quot;, "opacity:0.98000004;fill:#000000;fill-opacity:0.02525252;stroke:#ec3df8;stroke-width:2.60690761;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1");
+    svgElem.setAttribute(&quot;id&quot;, "pinkcircle");
+      
+  var svgdoc = document.getElementById(&quot;create2&quot;);      
+      
+  svgdoc.appendChild(svgElem);    
+      }  
+      
+function FirstD() {
+var firstnode = 'D';
+window.firstnode = firstnode;      
+
+// Vorherige pinkcircles entfernen
+try{
+var list = document.getElementById("create2");
+list.removeChild(list.childNodes[0]);           
+}
+catch(err){
+alert((firstnode)+" wurde als Startknoten gewählt");
+}
+      
+main(firstnode, 'K');  
+      
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;circle&quot;);
+    svgElem.setAttribute(&quot;cx&quot;, "68.487");
+    svgElem.setAttribute(&quot;cy&quot;, "68.372999");
+    svgElem.setAttribute(&quot;r&quot;, "6.6965461");
+    svgElem.setAttribute(&quot;style&quot;, "opacity:0.98000004;fill:#000000;fill-opacity:0.02525252;stroke:#ec3df8;stroke-width:2.60690761;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1");
+    svgElem.setAttribute(&quot;id&quot;, "pinkcircle");
+      
+  var svgdoc = document.getElementById(&quot;create2&quot;);      
+      
+  svgdoc.appendChild(svgElem);    
+      }  
+      
+      
+function FirstA() {
+var firstnode = 'A';
+window.firstnode = firstnode;      
+
+// Vorherige pinkcircles entfernen
+try{
+var list = document.getElementById("create2");
+list.removeChild(list.childNodes[0]);           
+}
+catch(err){
+alert((firstnode)+" wurde als Startknoten gewählt");
+}
+      
+main(firstnode, 'K');  
+      
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;circle&quot;);
+    svgElem.setAttribute(&quot;cx&quot;, "18.487");
+    svgElem.setAttribute(&quot;cy&quot;, "68.372999");
+    svgElem.setAttribute(&quot;r&quot;, "6.6965461");
+    svgElem.setAttribute(&quot;style&quot;, "opacity:0.98000004;fill:#000000;fill-opacity:0.02525252;stroke:#ec3df8;stroke-width:2.60690761;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1");
+    svgElem.setAttribute(&quot;id&quot;, "pinkcircle");
+      
+  var svgdoc = document.getElementById(&quot;create2&quot;);      
+      
+  svgdoc.appendChild(svgElem);    
+      }            
+      
+
+function FirstB() {
+var firstnode = 'B';
+window.firstnode = firstnode;      
+
+// Vorherige pinkcircles entfernen
+try{
+var list = document.getElementById("create2");
+list.removeChild(list.childNodes[0]);           
+}
+catch(err){
+alert((firstnode)+" wurde als Startknoten gewählt");
+}
+      
+main(firstnode, 'K');  
+      
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;circle&quot;);
+    svgElem.setAttribute(&quot;cx&quot;, "18.487");
+    svgElem.setAttribute(&quot;cy&quot;, "118.372999");
+    svgElem.setAttribute(&quot;r&quot;, "6.6965461");
+    svgElem.setAttribute(&quot;style&quot;, "opacity:0.98000004;fill:#000000;fill-opacity:0.02525252;stroke:#ec3df8;stroke-width:2.60690761;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1");
+    svgElem.setAttribute(&quot;id&quot;, "pinkcircle");
+      
+  var svgdoc = document.getElementById(&quot;create2&quot;);      
+      
+  svgdoc.appendChild(svgElem);    
+      }  
+      
+function FirstE() {
+var firstnode = 'E';
+window.firstnode = firstnode;      
+
+// Vorherige pinkcircles entfernen
+try{
+var list = document.getElementById("create2");
+list.removeChild(list.childNodes[0]);           
+}
+catch(err){
+alert((firstnode)+" wurde als Startknoten gewählt");
+}
+      
+main(firstnode, 'K');  
+      
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;circle&quot;);
+    svgElem.setAttribute(&quot;cx&quot;, "68.487");
+    svgElem.setAttribute(&quot;cy&quot;, "118.372999");
+    svgElem.setAttribute(&quot;r&quot;, "6.6965461");
+    svgElem.setAttribute(&quot;style&quot;, "opacity:0.98000004;fill:#000000;fill-opacity:0.02525252;stroke:#ec3df8;stroke-width:2.60690761;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1");
+    svgElem.setAttribute(&quot;id&quot;, "pinkcircle");
+      
+  var svgdoc = document.getElementById(&quot;create2&quot;);      
+      
+  svgdoc.appendChild(svgElem);    
+      } 
+      
+
+function FirstH() {
+var firstnode = 'H';
+window.firstnode = firstnode;      
+
+// Vorherige pinkcircles entfernen
+try{
+var list = document.getElementById("create2");
+list.removeChild(list.childNodes[0]);           
+}
+catch(err){
+alert((firstnode)+" wurde als Startknoten gewählt");
+}
+      
+main(firstnode, 'K');  
+      
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;circle&quot;);
+    svgElem.setAttribute(&quot;cx&quot;, "118.487");
+    svgElem.setAttribute(&quot;cy&quot;, "118.372999");
+    svgElem.setAttribute(&quot;r&quot;, "6.6965461");
+    svgElem.setAttribute(&quot;style&quot;, "opacity:0.98000004;fill:#000000;fill-opacity:0.02525252;stroke:#ec3df8;stroke-width:2.60690761;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1");
+    svgElem.setAttribute(&quot;id&quot;, "pinkcircle");
+      
+  var svgdoc = document.getElementById(&quot;create2&quot;);      
+      
+  svgdoc.appendChild(svgElem);    
+      }  
+      
+
+function First() {
+
+try{
+var firstnode = window.firstnode      
+main(firstnode, 'K');
+      
+      
+      
+setTimeout(function() {
+var list = document.getElementById("create4");
+for (var child of list.childNodes){
+child.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:0;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);
+}
+
+      
+      }, window.variable);
+      
+      
+}
+catch(err){
+var firstnode = 'R';
+window.firstnode = 'R';
+alert((firstnode)+" wurde als Startknoten gewählt");
+
+main(firstnode, 'K');  
+      
+      
+setTimeout(function() {
+var list = document.getElementById("create4");
+for (var child of list.childNodes){
+child.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:0;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);
+}
+
+      
+      }, window.variable);      
+      
+
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;circle&quot;);
+    svgElem.setAttribute(&quot;cx&quot;, "18.487");
+    svgElem.setAttribute(&quot;cy&quot;, "18.372999");
+    svgElem.setAttribute(&quot;r&quot;, "6.6965461");
+    svgElem.setAttribute(&quot;style&quot;, "opacity:0.98000004;fill:#000000;fill-opacity:0.02525252;stroke:#ec3df8;stroke-width:2.60690761;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1");
+    svgElem.setAttribute(&quot;id&quot;, "pinkcircle");
+      
+  var svgdoc = document.getElementById(&quot;create2&quot;);      
+      
+  svgdoc.appendChild(svgElem);    
+      }
+      
+}
+      
+
+function Zahlen() {
+
+try{
+var firstnode = window.firstnode      
+main(firstnode, 'K');
+      
+}
+catch(err){
+var firstnode = 'R';
+window.firstnode = 'R';
+alert((firstnode)+" wurde als Startknoten gewählt");
+
+main(firstnode, 'K');  
+
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;circle&quot;);
+    svgElem.setAttribute(&quot;cx&quot;, "18.487");
+    svgElem.setAttribute(&quot;cy&quot;, "18.372999");
+    svgElem.setAttribute(&quot;r&quot;, "6.6965461");
+    svgElem.setAttribute(&quot;style&quot;, "opacity:0.98000004;fill:#000000;fill-opacity:0.02525252;stroke:#ec3df8;stroke-width:2.60690761;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1");
+    svgElem.setAttribute(&quot;id&quot;, "pinkcircle");
+      
+  var svgdoc = document.getElementById(&quot;create2&quot;);      
+      
+  svgdoc.appendChild(svgElem);    
+      }
+      
+}      
+                 
+            
+      
+      
+      
+    </script>    
+  <g
+     id="create2" />
+
+<g
+     id="create3" />
+    
+<g
+     id="create4" />
+
+    
+<g
+     id="create5" />
+    
+<g
+     id="create6" />
+    
+    
+<g
+     id="create7" />
+
+    
+
+    
+    
+  <script
+     type="text/javascript"
+     id="test2">
+
+document.getElementById('text5055').onclick = FirstR;
+document.getElementById('text5069').onclick = FirstC;
+document.getElementById('text5081').onclick = FirstF;
+document.getElementById('text5093').onclick = FirstI;
+document.getElementById('text5097').onclick = FirstJ;
+document.getElementById('text5085').onclick = FirstG;
+document.getElementById('text5073').onclick = FirstD;
+document.getElementById('text5061').onclick = FirstA;
+document.getElementById('text5065').onclick = FirstB;
+document.getElementById('text5077').onclick = FirstE;
+document.getElementById('text5089').onclick = FirstH;
+      
+      
+document.getElementById('path3699').onclick = First;
+document.getElementById('path126').onclick = First;
+     
+      
+
+      
+
+
+//Start- und Endknoten eingeben
+//später hinzufügen
+//Eventuell Kreise um Start- und Endknoten und durch Draufklicken wählen    
+
+function Value1(myid) {
+  zahl1 = parseInt(prompt(&quot;Zahl eingeben&quot;));
+	document.getElementById(this.id).textContent = zahl1;
+    
+//Pfade berechnen
+Zahlen();    
+}
+
+      
+function Value2(myid) {
+    zahl2 = parseInt(prompt(&quot;Zahl eingeben&quot;));
+	document.getElementById(this.id).textContent = zahl2;
+      
+//Pfade berechnen
+Zahlen();    
+
+}  
+      
+      
+function Value3(myid) {
+    zahl3 = parseInt(prompt(&quot;Zahl eingeben&quot;));
+	document.getElementById(this.id).textContent = zahl3;
+      
+    //Pfade berechnen
+Zahlen();    
+}     
+      
+      
+function Value4(myid) {
+    zahl4 = parseInt(prompt(&quot;Zahl eingeben&quot;));
+	document.getElementById(this.id).textContent = zahl4;
+      
+//Pfade berechnen
+Zahlen();    
+
+}     
+
+      
+function Value5(myid) {
+    zahl5 = parseInt(prompt(&quot;Zahl eingeben&quot;));
+	document.getElementById(this.id).textContent = zahl5;
+      
+      //Pfade berechnen
+Zahlen();    
+      
+}          
+      
+function Value6(myid) {
+    zahl6 = parseInt(prompt(&quot;Zahl eingeben&quot;));
+	document.getElementById(this.id).textContent = zahl6;
+      
+//Pfade berechnen
+Zahlen();    
+
+}     
+
+function Value7(myid) {
+    zahl7 = parseInt(prompt(&quot;Zahl eingeben&quot;));
+	document.getElementById(this.id).textContent = zahl7;
+      
+//Pfade berechnen
+main(firstnode);  
+
+}     
+     
+function Value8(myid) {
+    zahl8 = parseInt(prompt(&quot;Zahl eingeben&quot;));
+	document.getElementById(this.id).textContent = zahl8;
+      
+//Pfade berechnen
+Zahlen();    
+
+}     
+         
+ function Value9(myid) {
+    zahl9 = parseInt(prompt(&quot;Zahl eingeben&quot;));
+	document.getElementById(this.id).textContent = zahl9;
+      
+//Pfade berechnen
+Zahlen();    
+
+}     
+
+function Value10(myid) {
+    zahl10 = parseInt(prompt(&quot;Zahl eingeben&quot;));
+	document.getElementById(this.id).textContent = zahl10;
+      
+//Pfade berechnen
+Zahlen();    
+
+} 
+      
+function Value11(myid) {
+    zahl11 = parseInt(prompt(&quot;Zahl eingeben&quot;));
+	document.getElementById(this.id).textContent = zahl11;
+      
+//Pfade berechnen
+Zahlen();    
+} 
+      
+function Value12(myid) {
+    zahl12 = parseInt(prompt(&quot;Zahl eingeben&quot;));
+	document.getElementById(this.id).textContent = zahl12;
+      
+//Pfade berechnen
+Zahlen();    
+
+} 
+      
+function Value13(myid) {
+    zahl13 = parseInt(prompt(&quot;Zahl eingeben&quot;));
+	document.getElementById(this.id).textContent = zahl13;
+      
+//Pfade berechnen
+Zahlen();    
+}
+
+      
+function Value14(myid) {
+    zahl14 = parseInt(prompt(&quot;Zahl eingeben&quot;));
+	document.getElementById(this.id).textContent = zahl14;
+      
+    //Pfade berechnen
+Zahlen();    
+}
+
+function Value15(myid) {
+    zahl15 = parseInt(prompt(&quot;Zahl eingeben&quot;));
+	document.getElementById(this.id).textContent = zahl15;  
+      
+//Pfade berechnen
+Zahlen();    
+
+}
+
+function Value16(myid) {
+    zahl16 = parseInt(prompt(&quot;Zahl eingeben&quot;));
+	document.getElementById(this.id).textContent = zahl16;
+      
+//Pfade berechnen
+Zahlen();    
+}
+      
+function Value17(myid) {
+    zahl17 = parseInt(prompt(&quot;Zahl eingeben&quot;));
+	document.getElementById(this.id).textContent = zahl17;
+      
+//Pfade berechnen
+Zahlen();    
+      
+      
+
+}
+      
+
+document.getElementById('edge1').onclick = Value1;
+document.getElementById('edge2').onclick = Value2;
+document.getElementById('edge3').onclick = Value3;
+document.getElementById('edge4').onclick = Value4;
+document.getElementById('edge5').onclick = Value5;
+document.getElementById('edge6').onclick = Value6;
+document.getElementById('edge7').onclick = Value7;
+document.getElementById('edge8').onclick = Value8;
+document.getElementById('edge9').onclick = Value9;
+document.getElementById('edge10').onclick = Value10;
+document.getElementById('edge11').onclick = Value11;
+document.getElementById('edge12').onclick = Value12;
+document.getElementById('edge13').onclick = Value13;
+document.getElementById('edge14').onclick = Value14;
+document.getElementById('edge15').onclick = Value15;
+document.getElementById('edge16').onclick = Value16;
+document.getElementById('edge17').onclick = Value17;
+      
+
+
+function main(start, end){
+      
+var list = document.getElementById("create");
+for (var child of list.childNodes){
+child.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:0;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);
+}
+      
+
+var list = document.getElementById("create4");
+for (var child of list.childNodes){
+child.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:0;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);
+}      
+      
+var list = document.getElementById("create5");
+for (var child of list.childNodes){
+child.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:0;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);
+}
+
+      
+mypaths = [];
+      
+save = [];
+            
+allweights = [];
+      
+      
+class Graph {
+    constructor(vertices) {
+        this.v = vertices;
+        this.graph = new Map();
+        this.nodes2 = [];
+        this.adjacencyList2 = {};
+        this.collection = [];
+  
+  
+    }
+
+
+    addVertex(v) {
+        this.graph.set(v, []);
+    }
+
+    addEdge2(u, v, weight) {
+        this.graph.get(u).push([v, weight]);
+        this.graph.get(v).push([u, weight]);
+    }
+
+    findAllPaths(start, end = 'K', path = [], weights = [], weight) {
+      
+        path = path.concat(start);
+        if (typeof weight !== "undefined"){
+            weights = weights.concat(weight);
+        }
+
+
+        if (start == end) {
+        allweights.push(weights);
+            
+return [path];
+      
+            }
+      
+      
+        var paths = [];
+
+        for (var node of this.graph.get(start)) {                                    
+            if (path.includes(node[0]) == false) {
+      
+                var new_paths = this.findAllPaths(node[0], end, path, weights, node[1]);  
+      
+                for (var new_path of new_paths) {
+      
+                    paths.push(new_path);
+      
+    // Hier Elemente erzeugen (rects)
+
+    
+                }
+            
+
+            }
+        }
+      
+    
+mypaths = paths;
+      return paths;
+      
+      
+    }
+
+      
+
+          
+drawPackages(x, y){
+var Minimum = 200;
+
+for (var path of x){
+var variable = [];
+var index = x.indexOf(path);
+var mydelay = [];
+     
+var myweights = y[index];
+for (var hi = 0; hi &lt; myweights.length; hi++){
+var my_edge = path[hi] + path[hi+1];
+var duration = myweights[hi];
+mydelay[0] = 0;
+if (hi !== 0){
+var before = mydelay[hi-1]
+var before_weights = myweights[hi-1];
+      
+mydelay[hi] = before + before_weights
+}
+var delay = mydelay[hi];
+variable[hi] = delay;
+      
+// Hier werden für jede Kante dynamisch Packages (grün) erzeugt, sodass später Anfangs- und Startknoten festgelegt werden können
+      
+switch(my_edge) {
+  case 'RA':      
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
+    svgElem.setAttribute(&quot;x&quot;, &quot;26.52083&quot;);
+    svgElem.setAttribute(&quot;y&quot;, &quot;40.447916&quot;);
+    svgElem.setAttribute(&quot;width&quot;, 11.641669);
+    svgElem.setAttribute(&quot;height&quot;, 1.6536481);
+    svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:#00b609;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);
+    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 move-d dur-"+(duration)+"s del-"+(delay)+"s&quot;); 
+       
+      
+  var svgdoc = document.getElementById(&quot;create&quot;);
+   
+  svgdoc.appendChild(svgElem);
+            
+
+      break;
+      
+  case 'AB':      
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
+    svgElem.setAttribute(&quot;x&quot;, &quot;26.52083&quot;);
+    svgElem.setAttribute(&quot;y&quot;, &quot;90.447916&quot;);
+    svgElem.setAttribute(&quot;width&quot;, 11.641669);
+    svgElem.setAttribute(&quot;height&quot;, 1.6536481);
+    svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:#00b609;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);
+    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 move-d dur-"+(duration)+"s del-"+(delay)+"s"); 
+      
+  var svgdoc = document.getElementById(&quot;create&quot;);
+   
+  svgdoc.appendChild(svgElem);
+
+      break;
+      
+
+     
+  case 'BE':      
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
+    svgElem.setAttribute(&quot;x&quot;, &quot;40.52083&quot;);
+    svgElem.setAttribute(&quot;y&quot;, &quot;128.447916&quot;);
+    svgElem.setAttribute(&quot;width&quot;, 1.6536481);
+    svgElem.setAttribute(&quot;height&quot;, 11.641669);
+    svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:#00b609;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);
+    svgElem.setAttribute(&quot;id&quot;, &quot;Right&quot;);
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 move-r dur-"+(duration)+"s del-"+(delay)+"s"); 
+      
+  var svgdoc = document.getElementById(&quot;create&quot;);
+   
+  svgdoc.appendChild(svgElem);
+
+      break;
+      
+          
+      
+  case 'ED':      
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
+    svgElem.setAttribute(&quot;x&quot;, &quot;76.52083&quot;);
+    svgElem.setAttribute(&quot;y&quot;, &quot;125.447916&quot;);
+    svgElem.setAttribute(&quot;width&quot;, 11.641669);
+    svgElem.setAttribute(&quot;height&quot;, 1.6536481);
+    svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:#00b609;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);
+    svgElem.setAttribute(&quot;id&quot;, &quot;Up&quot;);
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 move-u dur-"+(duration)+"s del-"+(delay)+"s"); 
+      
+  var svgdoc = document.getElementById(&quot;create&quot;);
+   
+  svgdoc.appendChild(svgElem);
+
+      break;
+      
+      
+case 'BA':      
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
+    svgElem.setAttribute(&quot;x&quot;, &quot;26.52083&quot;);
+    svgElem.setAttribute(&quot;y&quot;, &quot;125.447916&quot;);
+    svgElem.setAttribute(&quot;width&quot;, 11.641669);
+    svgElem.setAttribute(&quot;height&quot;, 1.6536481);
+    svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:#00b609;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);
+    svgElem.setAttribute(&quot;id&quot;, &quot;Up&quot;);
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 move-u dur-"+(duration)+"s del-"+(delay)+"s"); 
+      
+  var svgdoc = document.getElementById(&quot;create&quot;);
+   
+  svgdoc.appendChild(svgElem);
+
+      break;  
+      
+      
+      
+case 'AR':      
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
+    svgElem.setAttribute(&quot;x&quot;, &quot;26.52083&quot;);
+    svgElem.setAttribute(&quot;y&quot;, &quot;75.447916&quot;);
+    svgElem.setAttribute(&quot;width&quot;, 11.641669);
+    svgElem.setAttribute(&quot;height&quot;, 1.6536481);
+    svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:#00b609;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);
+    svgElem.setAttribute(&quot;id&quot;, &quot;Up&quot;);
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 move-u dur-"+(duration)+"s del-"+(delay)+"s"); 
+      
+  var svgdoc = document.getElementById(&quot;create&quot;);
+   
+  svgdoc.appendChild(svgElem);
+
+      break;       
+      
+      
+      
+      
+      
+      
+    case 'DC':      
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
+    svgElem.setAttribute(&quot;x&quot;, &quot;76.52083&quot;);
+    svgElem.setAttribute(&quot;y&quot;, &quot;75.447916&quot;);
+    svgElem.setAttribute(&quot;width&quot;, 11.641669);
+    svgElem.setAttribute(&quot;height&quot;, 1.6536481);
+    svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:#00b609;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);
+    svgElem.setAttribute(&quot;id&quot;, &quot;Up&quot;);
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 move-u dur-"+(duration)+"s del-"+(delay)+"s"); 
+  var svgdoc = document.getElementById(&quot;create&quot;);
+   
+  svgdoc.appendChild(svgElem);
+
+      break;
+    
+          
+      
+  case 'CF':      
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
+    svgElem.setAttribute(&quot;x&quot;, &quot;90.52083&quot;);
+    svgElem.setAttribute(&quot;y&quot;, &quot;28.447916&quot;);
+    svgElem.setAttribute(&quot;width&quot;, 1.6536481);
+    svgElem.setAttribute(&quot;height&quot;, 11.641669);
+    svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:#00b609;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);
+    svgElem.setAttribute(&quot;id&quot;, &quot;Right&quot;);
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 move-r dur-"+(duration)+"s del-"+(delay)+"s"); 
+      
+  var svgdoc = document.getElementById(&quot;create&quot;);
+   
+  svgdoc.appendChild(svgElem);
+
+      break;
+  
+            
+      
+  case 'FG':      
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
+    svgElem.setAttribute(&quot;x&quot;, &quot;126.52083&quot;);
+    svgElem.setAttribute(&quot;y&quot;, &quot;40.447916&quot;);
+    svgElem.setAttribute(&quot;width&quot;, 11.641669);
+    svgElem.setAttribute(&quot;height&quot;, 1.6536481);
+    svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:#00b609;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);
+    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 move-d dur-"+(duration)+"s del-"+(delay)+"s"); 
+      
+  var svgdoc = document.getElementById(&quot;create&quot;);
+   
+  svgdoc.appendChild(svgElem);
+
+      break;
+      
+      
+
+      
+     case 'GH':      
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
+    svgElem.setAttribute(&quot;x&quot;, &quot;126.52083&quot;);
+    svgElem.setAttribute(&quot;y&quot;, &quot;90.447916&quot;);
+    svgElem.setAttribute(&quot;width&quot;, 11.641669);
+    svgElem.setAttribute(&quot;height&quot;, 1.6536481);
+    svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:#00b609;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);
+    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 move-d dur-"+(duration)+"s del-"+(delay)+"s"); 
+      
+  var svgdoc = document.getElementById(&quot;create&quot;);
+   
+  svgdoc.appendChild(svgElem);
+
+      break;
+   
+      
+      
+    case 'HK': 
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
+    svgElem.setAttribute(&quot;x&quot;, &quot;140.52083&quot;);
+    svgElem.setAttribute(&quot;y&quot;, &quot;128.447916&quot;);
+    svgElem.setAttribute(&quot;width&quot;, 1.6536481);
+    svgElem.setAttribute(&quot;height&quot;, 11.641669);
+    svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:#00b609;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);
+    svgElem.setAttribute(&quot;id&quot;, &quot;Right&quot;);
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 move-r dur-"+(duration)+"s del-"+(delay)+"s"); 
+      
+  var svgdoc = document.getElementById(&quot;create&quot;);
+   
+  svgdoc.appendChild(svgElem);
+      break;
+
+  
+         
+      
+    case 'GJ':      
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
+    svgElem.setAttribute(&quot;x&quot;, &quot;140.52083&quot;);
+    svgElem.setAttribute(&quot;y&quot;, &quot;78.447916&quot;);
+    svgElem.setAttribute(&quot;width&quot;, 1.6536481);
+    svgElem.setAttribute(&quot;height&quot;, 11.641669);
+    svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:#00b609;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);
+    svgElem.setAttribute(&quot;id&quot;, &quot;Right&quot;);
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 move-r dur-"+(duration)+"s del-"+(delay)+"s"); 
+      
+  var svgdoc = document.getElementById(&quot;create&quot;);
+   
+  svgdoc.appendChild(svgElem);
+
+      break;
+    
+      
+      
+      
+      case 'JK':      
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
+    svgElem.setAttribute(&quot;x&quot;, &quot;176.52083&quot;);
+    svgElem.setAttribute(&quot;y&quot;, &quot;90.447916&quot;);
+    svgElem.setAttribute(&quot;width&quot;, 11.641669);
+    svgElem.setAttribute(&quot;height&quot;, 1.6536481);
+    svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:#00b609;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);
+    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 move-d dur-"+(duration)+"s del-"+(delay)+"s"); 
+      
+  var svgdoc = document.getElementById(&quot;create&quot;);
+   
+  svgdoc.appendChild(svgElem);
+
+      break;
+
+            
+      
+      
+    case 'FI':      
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
+    svgElem.setAttribute(&quot;x&quot;, &quot;140.52083&quot;);
+    svgElem.setAttribute(&quot;y&quot;, &quot;28.447916&quot;);
+    svgElem.setAttribute(&quot;width&quot;, 1.6536481);
+    svgElem.setAttribute(&quot;height&quot;, 11.641669);
+    svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:#00b609;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);
+    svgElem.setAttribute(&quot;id&quot;, &quot;Right&quot;);
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 move-r dur-"+(duration)+"s del-"+(delay)+"s"); 
+      
+  var svgdoc = document.getElementById(&quot;create&quot;);
+   
+  svgdoc.appendChild(svgElem);
+
+      break;
+      
+            
+      
+         case 'IJ':      
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
+    svgElem.setAttribute(&quot;x&quot;, &quot;176.52083&quot;);
+    svgElem.setAttribute(&quot;y&quot;, &quot;40.447916&quot;);
+    svgElem.setAttribute(&quot;width&quot;, 11.641669);
+    svgElem.setAttribute(&quot;height&quot;, 1.6536481);
+    svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:#00b609;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);
+    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 move-d dur-"+(duration)+"s del-"+(delay)+"s"); 
+      
+  var svgdoc = document.getElementById(&quot;create&quot;);
+   
+  svgdoc.appendChild(svgElem);
+
+      break;
+
+  
+      
+    case 'JG':      
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
+    svgElem.setAttribute(&quot;x&quot;, &quot;173.52083&quot;);
+    svgElem.setAttribute(&quot;y&quot;, &quot;78.447916&quot;);
+    svgElem.setAttribute(&quot;width&quot;, 1.6536481);
+    svgElem.setAttribute(&quot;height&quot;, 11.641669);
+    svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:#00b609;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);
+    svgElem.setAttribute(&quot;id&quot;, &quot;Left&quot;);
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 move-l dur-"+(duration)+"s del-"+(delay)+"s"); 
+      
+  var svgdoc = document.getElementById(&quot;create&quot;);
+   
+  svgdoc.appendChild(svgElem);
+
+      break;
+  
+      
+      
+  case 'GF':      
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
+    svgElem.setAttribute(&quot;x&quot;, &quot;126.52083&quot;);
+    svgElem.setAttribute(&quot;y&quot;, &quot;75.447916&quot;);
+    svgElem.setAttribute(&quot;width&quot;, 11.641669);
+    svgElem.setAttribute(&quot;height&quot;, 1.6536481);
+    svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:#00b609;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);
+    svgElem.setAttribute(&quot;id&quot;, &quot;Up&quot;);
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 move-u dur-"+(duration)+"s del-"+(delay)+"s"); 
+      
+  var svgdoc = document.getElementById(&quot;create&quot;);
+   
+  svgdoc.appendChild(svgElem);
+
+      break;
+      
+
+      
+      
+      case 'JI':      
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
+    svgElem.setAttribute(&quot;x&quot;, &quot;176.52083&quot;);
+    svgElem.setAttribute(&quot;y&quot;, &quot;75.447916&quot;);
+    svgElem.setAttribute(&quot;width&quot;, 11.641669);
+    svgElem.setAttribute(&quot;height&quot;, 1.6536481);
+    svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:#00b609;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);
+    svgElem.setAttribute(&quot;id&quot;, &quot;Up&quot;);
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 move-u dur-"+(duration)+"s del-"+(delay)+"s"); 
+      
+  var svgdoc = document.getElementById(&quot;create&quot;);
+   
+  svgdoc.appendChild(svgElem);
+
+      break;  
+      
+          
+      
+   case 'EH':      
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
+    svgElem.setAttribute(&quot;x&quot;, &quot;90.52083&quot;);
+    svgElem.setAttribute(&quot;y&quot;, &quot;128.447916&quot;);
+    svgElem.setAttribute(&quot;width&quot;, 1.6536481);
+    svgElem.setAttribute(&quot;height&quot;, 11.641669);
+    svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:#00b609;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);
+    svgElem.setAttribute(&quot;id&quot;, &quot;Right&quot;);
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 move-r dur-"+(duration)+"s del-"+(delay)+"s"); 
+      
+  var svgdoc = document.getElementById(&quot;create&quot;);
+   
+  svgdoc.appendChild(svgElem);
+
+      break;
+      
+          
+      
+      case 'HG':      
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
+    svgElem.setAttribute(&quot;x&quot;, &quot;126.52083&quot;);
+    svgElem.setAttribute(&quot;y&quot;, &quot;125.447916&quot;);
+    svgElem.setAttribute(&quot;width&quot;, 11.641669);
+    svgElem.setAttribute(&quot;height&quot;, 1.6536481);
+    svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:#00b609;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);
+    svgElem.setAttribute(&quot;id&quot;, &quot;UP&quot;);
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 move-u dur-"+(duration)+"s del-"+(delay)+"s"); 
+      
+  var svgdoc = document.getElementById(&quot;create&quot;);
+   
+  svgdoc.appendChild(svgElem);
+
+      break;
+  
+      
+      
+    case 'GD':      
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
+    svgElem.setAttribute(&quot;x&quot;, &quot;123.52083&quot;);
+    svgElem.setAttribute(&quot;y&quot;, &quot;78.447916&quot;);
+    svgElem.setAttribute(&quot;width&quot;, 1.6536481);
+    svgElem.setAttribute(&quot;height&quot;, 11.641669);
+    svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:#00b609;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);
+    svgElem.setAttribute(&quot;id&quot;, &quot;Left&quot;);
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 move-l dur-"+(duration)+"s del-"+(delay)+"s"); 
+      
+  var svgdoc = document.getElementById(&quot;create&quot;);
+   
+  svgdoc.appendChild(svgElem);
+
+      break;
+      
+      
+      
+      case 'FC':      
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
+    svgElem.setAttribute(&quot;x&quot;, &quot;123.52083&quot;);
+    svgElem.setAttribute(&quot;y&quot;, &quot;28.447916&quot;);
+    svgElem.setAttribute(&quot;width&quot;, 1.6536481);
+    svgElem.setAttribute(&quot;height&quot;, 11.641669);
+    svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:#00b609;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);
+    svgElem.setAttribute(&quot;id&quot;, &quot;Left&quot;);
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 move-l dur-"+(duration)+"s del-"+(delay)+"s"); 
+      
+  var svgdoc = document.getElementById(&quot;create&quot;);
+   
+  svgdoc.appendChild(svgElem);
+
+      break;  
+      
+      
+      
+          case 'CR':      
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
+    svgElem.setAttribute(&quot;x&quot;, &quot;73.52083&quot;);
+    svgElem.setAttribute(&quot;y&quot;, &quot;28.447916&quot;);
+    svgElem.setAttribute(&quot;width&quot;, 1.6536481);
+    svgElem.setAttribute(&quot;height&quot;, 11.641669);
+    svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:#00b609;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);
+    svgElem.setAttribute(&quot;id&quot;, &quot;Left&quot;);
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 move-l dur-"+(duration)+"s del-"+(delay)+"s"); 
+      
+  var svgdoc = document.getElementById(&quot;create&quot;);
+   
+  svgdoc.appendChild(svgElem);
+
+      break; 
+      
+      
+           case 'DA':      
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
+    svgElem.setAttribute(&quot;x&quot;, &quot;73.52083&quot;);
+    svgElem.setAttribute(&quot;y&quot;, &quot;78.447916&quot;);
+    svgElem.setAttribute(&quot;width&quot;, 1.6536481);
+    svgElem.setAttribute(&quot;height&quot;, 11.641669);
+    svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:#00b609;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);
+    svgElem.setAttribute(&quot;id&quot;, &quot;Left&quot;);
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 move-l dur-"+(duration)+"s del-"+(delay)+"s"); 
+      
+  var svgdoc = document.getElementById(&quot;create&quot;);
+   
+  svgdoc.appendChild(svgElem);
+
+      break;    
+          
+      case 'EB':      
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
+    svgElem.setAttribute(&quot;x&quot;, &quot;73.52083&quot;);
+    svgElem.setAttribute(&quot;y&quot;, &quot;128.447916&quot;);
+    svgElem.setAttribute(&quot;width&quot;, 1.6536481);
+    svgElem.setAttribute(&quot;height&quot;, 11.641669);
+    svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:#00b609;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);
+    svgElem.setAttribute(&quot;id&quot;, &quot;Left&quot;);
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 move-l dur-"+(duration)+"s del-"+(delay)+"s"); 
+      
+  var svgdoc = document.getElementById(&quot;create&quot;);
+   
+  svgdoc.appendChild(svgElem);
+
+      break;    
+                
+            
+      case 'AD':      
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
+    svgElem.setAttribute(&quot;x&quot;, &quot;40.52083&quot;);
+    svgElem.setAttribute(&quot;y&quot;, &quot;78.447916&quot;);
+    svgElem.setAttribute(&quot;width&quot;, 1.6536481);
+    svgElem.setAttribute(&quot;height&quot;, 11.641669);
+    svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:#00b609;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);
+    svgElem.setAttribute(&quot;id&quot;, &quot;Right&quot;);
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 move-r dur-"+(duration)+"s del-"+(delay)+"s"); 
+      
+  var svgdoc = document.getElementById(&quot;create&quot;);
+   
+  svgdoc.appendChild(svgElem);
+
+      break;
+      
+      
+       case 'DG':      
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
+    svgElem.setAttribute(&quot;x&quot;, &quot;90.52083&quot;);
+    svgElem.setAttribute(&quot;y&quot;, &quot;78.447916&quot;);
+    svgElem.setAttribute(&quot;width&quot;, 1.6536481);
+    svgElem.setAttribute(&quot;height&quot;, 11.641669);
+    svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:#00b609;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);
+    svgElem.setAttribute(&quot;id&quot;, &quot;Right&quot;);
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 move-r dur-"+(duration)+"s del-"+(delay)+"s"); 
+      
+  var svgdoc = document.getElementById(&quot;create&quot;);
+   
+  svgdoc.appendChild(svgElem);
+
+      break;
+    
+  
+      
+      
+      
+      case 'RC':      
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
+    svgElem.setAttribute(&quot;x&quot;, &quot;40.52083&quot;);
+    svgElem.setAttribute(&quot;y&quot;, &quot;28.447916&quot;);
+    svgElem.setAttribute(&quot;width&quot;, 1.6536481);
+    svgElem.setAttribute(&quot;height&quot;, 11.641669);
+    svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:#00b609;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);
+    svgElem.setAttribute(&quot;id&quot;, &quot;Right&quot;);
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 move-r dur-"+(duration)+"s del-"+(delay)+"s"); 
+      
+  var svgdoc = document.getElementById(&quot;create&quot;);
+   
+  svgdoc.appendChild(svgElem);
+
+      break;
+      
+      
+      case 'DE':      
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
+    svgElem.setAttribute(&quot;x&quot;, &quot;76.52083&quot;);
+    svgElem.setAttribute(&quot;y&quot;, &quot;90.447916&quot;);
+    svgElem.setAttribute(&quot;width&quot;, 11.641669);
+    svgElem.setAttribute(&quot;height&quot;, 1.6536481);
+    svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:#00b609;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);
+    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 move-d dur-"+(duration)+"s del-"+(delay)+"s"); 
+      
+  var svgdoc = document.getElementById(&quot;create&quot;);
+   
+  svgdoc.appendChild(svgElem);
+
+      break;
+      
+      
+        case 'CD':
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
+    svgElem.setAttribute(&quot;x&quot;, &quot;76.52083&quot;);
+    svgElem.setAttribute(&quot;y&quot;, &quot;40.447916&quot;);
+    svgElem.setAttribute(&quot;width&quot;, 11.641669);
+    svgElem.setAttribute(&quot;height&quot;, 1.6536481);
+    svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:#00b609;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);
+    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 move-d dur-"+(duration)+"s del-"+(delay)+"s"); 
+      
+  var svgdoc = document.getElementById(&quot;create&quot;);
+   
+  svgdoc.appendChild(svgElem);
+
+      break;  
+    
+  
+      
+        default:
+    // code block
+
+      
+}
+      
+      
+      
+      
+      
+      
+}
+save.push(variable)
+      
+}
+            
+}      
+      
+      
+      
+
+
+
+
+
+    generateEdges() {
+        var edges = [];
+
+        for (var node of this.graph.keys()) {
+            for (var neighbour of this.graph.get(node)) {
+                edges.push([node, neighbour]);
+            }
+        }
+
+        return edges;
+    }
+
+  
+    addNode(mynode) {
+        this.nodes2.push(mynode); 
+        this.adjacencyList2[mynode] = [];
+      }
+    
+      addEdge(node1, node2, weight2) {
+        this.adjacencyList2[node1].push({mynode:node2, weight2: weight2});
+        this.adjacencyList2[node2].push({mynode:node1, weight2: weight2});
+      }
+  
+  
+    enqueue(element){
+      if (this.isEmpty()){ 
+        this.collection.push(element);
+      } else {
+        let added = false;
+        for (let i = 1; i &lt; this.collection.length+1; i++){
+          if (element[1] &lt; this.collection[i-1][1]){ 
+            this.collection.splice(i-1, 0, element);
+            added = true;
+            break;
+          }
+        }
+        if (!added){
+            this.collection.push(element);
+        }
+      }
+    };
+  
+  
+    dequeue() {
+      let value = this.collection.shift();
+      return value;
+    };
+    isEmpty() {
+      return (this.collection.length === 0) 
+    };      
+      
+      
+blue(x){
+ 
+      
+      
+// Save ohne ersten Eintrag betrachten
+    function transpose(arr) {  
+        var k = arr.length;
+        var l = 10; //Maximale Länge
+        var arr1 = [];  
+        var arr2 = [];  
+        for (var j = 0; j &lt; l; j++) {  
+            arr1 = [];  
+            for (var i = 0; i &lt; k; i++) { 
+        if (isNaN(arr[i][j])=== true){
+arr[i][j] = 1000;
+}
+         arr1.push(arr[i][j]);  
+            }  
+            arr2.push(arr1);  
+        }  
+        return arr2;  
+        }
+      
+var save_new = transpose(save)
+
+    
+      
+for (var i = 1; i &lt; save_new.length; i++){
+
+var vector = save_new[i]
+var min = Math.min.apply(null, vector)
+
+for (var j = 0; j &lt; vector.length; j++){
+if (vector[j] === min){
+var my_edge2 = x[j][i-1]+x[j][i]
+var delay = save[j][i-1];
+var last_nodes = x[j][i]+x[j][i+1]
+var delay3 = save[j][i];
+      
+if (zahl5 === zahl12){
+if (firstnode !== 'I'){   
+      
+switch(last_nodes){
+
+case 'JK':
+    var svgElem1 = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
+    svgElem.setAttribute(&quot;x&quot;, &quot;181.52083&quot;);
+    svgElem.setAttribute(&quot;y&quot;, &quot;96.447916&quot;);
+    svgElem.setAttribute(&quot;width&quot;, 1.641669);
+    svgElem.setAttribute(&quot;height&quot;, 24.6536481);
+svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay3)+"s"); 
+      
+  var svgdoc = document.getElementById(&quot;create4&quot;);
+   
+      
+  svgdoc.appendChild(svgElem1);
+
+      break;
+            
+
+case 'HK':
+    var svgElem2 = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
+    svgElem.setAttribute(&quot;x&quot;, &quot;145.52083&quot;);
+    svgElem.setAttribute(&quot;y&quot;, &quot;133.447916&quot;);
+    svgElem.setAttribute(&quot;width&quot;, 24.6536481);
+    svgElem.setAttribute(&quot;height&quot;, 1.641669);
+svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay3)+"s"); 
+      
+  var svgdoc = document.getElementById(&quot;create4&quot;);
+   
+  svgdoc.appendChild(svgElem2);
+
+      break;  
+            
+      
+}
+
+}
+}
+      
+switch(my_edge2){
+      
+    
+case 'RA':
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
+    svgElem.setAttribute(&quot;x&quot;, &quot;31.52083&quot;);
+    svgElem.setAttribute(&quot;y&quot;, &quot;46.447916&quot;);
+    svgElem.setAttribute(&quot;width&quot;, 1.641669);
+    svgElem.setAttribute(&quot;height&quot;, 24.6536481);
+svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);
+      svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in del-"+(delay)+"s"); 
+      
+  var svgdoc = document.getElementById(&quot;create4&quot;);
+   
+  svgdoc.appendChild(svgElem);
+
+      break;  
+      
+      
+case 'AR':
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
+    svgElem.setAttribute(&quot;x&quot;, &quot;31.52083&quot;);
+    svgElem.setAttribute(&quot;y&quot;, &quot;46.447916&quot;);
+    svgElem.setAttribute(&quot;width&quot;, 1.641669);
+    svgElem.setAttribute(&quot;height&quot;, 24.6536481);
+svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);
+      svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in del-"+(delay)+"s"); 
+      
+  var svgdoc = document.getElementById(&quot;create4&quot;);
+   
+  svgdoc.appendChild(svgElem);
+
+      break;  
+      
+      
+      
+case 'CD':
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
+    svgElem.setAttribute(&quot;x&quot;, &quot;81.52083&quot;);
+    svgElem.setAttribute(&quot;y&quot;, &quot;46.447916&quot;);
+    svgElem.setAttribute(&quot;width&quot;, 1.641669);
+    svgElem.setAttribute(&quot;height&quot;, 24.6536481);
+svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay)+"s"); 
+      
+  var svgdoc = document.getElementById(&quot;create4&quot;);
+   
+  svgdoc.appendChild(svgElem);
+
+      break;  
+      
+case 'DC':
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
+    svgElem.setAttribute(&quot;x&quot;, &quot;81.52083&quot;);
+    svgElem.setAttribute(&quot;y&quot;, &quot;46.447916&quot;);
+    svgElem.setAttribute(&quot;width&quot;, 1.641669);
+    svgElem.setAttribute(&quot;height&quot;, 24.6536481);
+svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay)+"s"); 
+      
+  var svgdoc = document.getElementById(&quot;create4&quot;);
+   
+  svgdoc.appendChild(svgElem);
+
+      break;  
+      
+      
+      
+case 'FG':
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
+    svgElem.setAttribute(&quot;x&quot;, &quot;131.52083&quot;);
+    svgElem.setAttribute(&quot;y&quot;, &quot;46.447916&quot;);
+    svgElem.setAttribute(&quot;width&quot;, 1.641669);
+    svgElem.setAttribute(&quot;height&quot;, 24.6536481);
+svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay)+"s"); 
+      
+  var svgdoc = document.getElementById(&quot;create4&quot;);
+   
+  svgdoc.appendChild(svgElem);
+
+      break;
+      
+      
+      
+case 'GF':
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
+    svgElem.setAttribute(&quot;x&quot;, &quot;131.52083&quot;);
+    svgElem.setAttribute(&quot;y&quot;, &quot;46.447916&quot;);
+    svgElem.setAttribute(&quot;width&quot;, 1.641669);
+    svgElem.setAttribute(&quot;height&quot;, 24.6536481);
+svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay)+"s"); 
+      
+  var svgdoc = document.getElementById(&quot;create4&quot;);
+   
+  svgdoc.appendChild(svgElem);
+
+      break;
+      
+      
+      
+case 'IJ':
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
+    svgElem.setAttribute(&quot;x&quot;, &quot;181.52083&quot;);
+    svgElem.setAttribute(&quot;y&quot;, &quot;46.447916&quot;);
+    svgElem.setAttribute(&quot;width&quot;, 1.641669);
+    svgElem.setAttribute(&quot;height&quot;, 24.6536481);
+svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay)+"s"); 
+      
+  var svgdoc = document.getElementById(&quot;create4&quot;);
+   
+  svgdoc.appendChild(svgElem);
+      break; 
+      
+      
+      
+case 'JI':
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
+    svgElem.setAttribute(&quot;x&quot;, &quot;181.52083&quot;);
+    svgElem.setAttribute(&quot;y&quot;, &quot;46.447916&quot;);
+    svgElem.setAttribute(&quot;width&quot;, 1.641669);
+    svgElem.setAttribute(&quot;height&quot;, 24.6536481);
+svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);
+      svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay)+"s"); 
+      
+  var svgdoc = document.getElementById(&quot;create4&quot;);
+   
+  svgdoc.appendChild(svgElem);
+
+
+      break;         
+      
+      
+case 'GH':
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
+    svgElem.setAttribute(&quot;x&quot;, &quot;131.52083&quot;);
+    svgElem.setAttribute(&quot;y&quot;, &quot;96.447916&quot;);
+    svgElem.setAttribute(&quot;width&quot;, 1.641669);
+    svgElem.setAttribute(&quot;height&quot;, 24.6536481);
+svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay)+"s"); 
+      
+  var svgdoc = document.getElementById(&quot;create4&quot;);
+   
+  svgdoc.appendChild(svgElem);
+
+      break; 
+      
+      
+case 'HG':
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
+    svgElem.setAttribute(&quot;x&quot;, &quot;131.52083&quot;);
+    svgElem.setAttribute(&quot;y&quot;, &quot;96.447916&quot;);
+    svgElem.setAttribute(&quot;width&quot;, 1.641669);
+    svgElem.setAttribute(&quot;height&quot;, 24.6536481);
+svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay)+"s"); 
+      
+  var svgdoc = document.getElementById(&quot;create4&quot;);
+   
+  svgdoc.appendChild(svgElem);
+
+      break; 
+      
+  
+      
+
+case 'DE':
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
+    svgElem.setAttribute(&quot;x&quot;, &quot;81.52083&quot;);
+    svgElem.setAttribute(&quot;y&quot;, &quot;96.447916&quot;);
+    svgElem.setAttribute(&quot;width&quot;, 1.641669);
+    svgElem.setAttribute(&quot;height&quot;, 24.6536481);
+svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay)+"s"); 
+      
+  var svgdoc = document.getElementById(&quot;create4&quot;);
+   
+  svgdoc.appendChild(svgElem);
+
+      break;
+      
+      
+case 'ED':
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
+    svgElem.setAttribute(&quot;x&quot;, &quot;81.52083&quot;);
+    svgElem.setAttribute(&quot;y&quot;, &quot;96.447916&quot;);
+    svgElem.setAttribute(&quot;width&quot;, 1.641669);
+    svgElem.setAttribute(&quot;height&quot;, 24.6536481);
+svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay)+"s"); 
+      
+  var svgdoc = document.getElementById(&quot;create4&quot;);
+   
+  svgdoc.appendChild(svgElem);
+
+      break;
+      
+      
+case 'AB':
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
+    svgElem.setAttribute(&quot;x&quot;, &quot;31.52083&quot;);
+    svgElem.setAttribute(&quot;y&quot;, &quot;96.447916&quot;);
+    svgElem.setAttribute(&quot;width&quot;, 1.641669);
+    svgElem.setAttribute(&quot;height&quot;, 24.6536481);
+svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay)+"s"); 
+      
+  var svgdoc = document.getElementById(&quot;create4&quot;);
+   
+  svgdoc.appendChild(svgElem);
+      
+      break; 
+      
+case 'BA':
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
+    svgElem.setAttribute(&quot;x&quot;, &quot;31.52083&quot;);
+    svgElem.setAttribute(&quot;y&quot;, &quot;96.447916&quot;);
+    svgElem.setAttribute(&quot;width&quot;, 1.641669);
+    svgElem.setAttribute(&quot;height&quot;, 24.6536481);
+svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay)+"s"); 
+      
+  var svgdoc = document.getElementById(&quot;create4&quot;);
+   
+  svgdoc.appendChild(svgElem);
+
+      break; 
+      
+      
+    
+case 'AD':
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
+    svgElem.setAttribute(&quot;x&quot;, &quot;45.52083&quot;);
+    svgElem.setAttribute(&quot;y&quot;, &quot;83.447916&quot;);
+    svgElem.setAttribute(&quot;width&quot;, 24.6536481);
+    svgElem.setAttribute(&quot;height&quot;, 1.641669);
+svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay)+"s"); 
+      
+  var svgdoc = document.getElementById(&quot;create4&quot;);
+   
+  svgdoc.appendChild(svgElem);
+
+      break;   
+      
+case 'DA':
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
+    svgElem.setAttribute(&quot;x&quot;, &quot;45.52083&quot;);
+    svgElem.setAttribute(&quot;y&quot;, &quot;83.447916&quot;);
+    svgElem.setAttribute(&quot;width&quot;, 24.6536481);
+    svgElem.setAttribute(&quot;height&quot;, 1.641669);
+svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay)+"s"); 
+      
+  var svgdoc = document.getElementById(&quot;create4&quot;);
+   
+  svgdoc.appendChild(svgElem);
+
+      break;      
+      
+     
+      
+      
+case 'RC':
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
+    svgElem.setAttribute(&quot;x&quot;, &quot;45.52083&quot;);
+    svgElem.setAttribute(&quot;y&quot;, &quot;33.447916&quot;);
+    svgElem.setAttribute(&quot;width&quot;, 24.6536481);
+    svgElem.setAttribute(&quot;height&quot;, 1.641669);
+svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay)+"s"); 
+      
+  var svgdoc = document.getElementById(&quot;create4&quot;);
+   
+  svgdoc.appendChild(svgElem);
+
+      break;   
+      
+case 'CR':
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
+    svgElem.setAttribute(&quot;x&quot;, &quot;45.52083&quot;);
+    svgElem.setAttribute(&quot;y&quot;, &quot;33.447916&quot;);
+    svgElem.setAttribute(&quot;width&quot;, 24.6536481);
+    svgElem.setAttribute(&quot;height&quot;, 1.641669);
+svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay)+"s"); 
+      
+  var svgdoc = document.getElementById(&quot;create4&quot;);
+   
+  svgdoc.appendChild(svgElem);
+
+      break;             
+      
+                
+          
+      
+case 'BE':
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
+    svgElem.setAttribute(&quot;x&quot;, &quot;45.52083&quot;);
+    svgElem.setAttribute(&quot;y&quot;, &quot;133.447916&quot;);
+    svgElem.setAttribute(&quot;width&quot;, 24.6536481);
+    svgElem.setAttribute(&quot;height&quot;, 1.641669);
+svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay)+"s"); 
+      
+  var svgdoc = document.getElementById(&quot;create4&quot;);
+   
+  svgdoc.appendChild(svgElem);
+
+      break;    
+      
+      
+case 'EB':
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
+    svgElem.setAttribute(&quot;x&quot;, &quot;45.52083&quot;);
+    svgElem.setAttribute(&quot;y&quot;, &quot;133.447916&quot;);
+    svgElem.setAttribute(&quot;width&quot;, 24.6536481);
+    svgElem.setAttribute(&quot;height&quot;, 1.641669);
+svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay)+"s"); 
+      
+  var svgdoc = document.getElementById(&quot;create4&quot;);
+   
+  svgdoc.appendChild(svgElem);
+
+      break;             
+      
+  
+case 'GD':
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
+    svgElem.setAttribute(&quot;x&quot;, &quot;95.52083&quot;);
+    svgElem.setAttribute(&quot;y&quot;, &quot;83.447916&quot;);
+    svgElem.setAttribute(&quot;width&quot;, 24.6536481);
+    svgElem.setAttribute(&quot;height&quot;, 1.641669);
+svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay)+"s"); 
+      
+  var svgdoc = document.getElementById(&quot;create4&quot;);
+   
+  svgdoc.appendChild(svgElem);
+
+      break;  
+      
+      
+case 'DG':
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
+    svgElem.setAttribute(&quot;x&quot;, &quot;95.52083&quot;);
+    svgElem.setAttribute(&quot;y&quot;, &quot;83.447916&quot;);
+    svgElem.setAttribute(&quot;width&quot;, 24.6536481);
+    svgElem.setAttribute(&quot;height&quot;, 1.641669);
+svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay)+"s"); 
+      
+  var svgdoc = document.getElementById(&quot;create4&quot;);
+   
+  svgdoc.appendChild(svgElem);
+
+      break;  
+      
+      
+      
+      
+case 'CF':
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
+    svgElem.setAttribute(&quot;x&quot;, &quot;95.52083&quot;);
+    svgElem.setAttribute(&quot;y&quot;, &quot;33.447916&quot;);
+    svgElem.setAttribute(&quot;width&quot;, 24.6536481);
+    svgElem.setAttribute(&quot;height&quot;, 1.641669);
+svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay)+"s"); 
+      
+  var svgdoc = document.getElementById(&quot;create4&quot;);
+   
+  svgdoc.appendChild(svgElem);
+
+      break;     
+      
+      
+case 'FC':
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
+    svgElem.setAttribute(&quot;x&quot;, &quot;95.52083&quot;);
+    svgElem.setAttribute(&quot;y&quot;, &quot;33.447916&quot;);
+    svgElem.setAttribute(&quot;width&quot;, 24.6536481);
+    svgElem.setAttribute(&quot;height&quot;, 1.641669);
+svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay)+"s"); 
+      
+  var svgdoc = document.getElementById(&quot;create4&quot;);
+   
+  svgdoc.appendChild(svgElem);
+
+      break;     
+      
+      
+      
+case 'EH':
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
+    svgElem.setAttribute(&quot;x&quot;, &quot;95.52083&quot;);
+    svgElem.setAttribute(&quot;y&quot;, &quot;133.447916&quot;);
+    svgElem.setAttribute(&quot;width&quot;, 24.6536481);
+    svgElem.setAttribute(&quot;height&quot;, 1.641669);
+svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay)+"s"); 
+      
+  var svgdoc = document.getElementById(&quot;create4&quot;);
+   
+  svgdoc.appendChild(svgElem);
+
+      break; 
+
+case 'HE':
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
+    svgElem.setAttribute(&quot;x&quot;, &quot;95.52083&quot;);
+    svgElem.setAttribute(&quot;y&quot;, &quot;133.447916&quot;);
+    svgElem.setAttribute(&quot;width&quot;, 24.6536481);
+    svgElem.setAttribute(&quot;height&quot;, 1.641669);
+svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay)+"s"); 
+      
+  var svgdoc = document.getElementById(&quot;create4&quot;);
+   
+  svgdoc.appendChild(svgElem);
+
+      break; 
+      
+      
+      
+      
+      
+case 'GJ':
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
+    svgElem.setAttribute(&quot;x&quot;, &quot;145.52083&quot;);
+    svgElem.setAttribute(&quot;y&quot;, &quot;83.447916&quot;);
+    svgElem.setAttribute(&quot;width&quot;, 24.6536481);
+    svgElem.setAttribute(&quot;height&quot;, 1.641669);
+svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay)+"s"); 
+      
+  var svgdoc = document.getElementById(&quot;create4&quot;);
+   
+  svgdoc.appendChild(svgElem);
+
+      break;   
+      
+      
+      
+case 'JG':
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
+    svgElem.setAttribute(&quot;x&quot;, &quot;145.52083&quot;);
+    svgElem.setAttribute(&quot;y&quot;, &quot;83.447916&quot;);
+    svgElem.setAttribute(&quot;width&quot;, 24.6536481);
+    svgElem.setAttribute(&quot;height&quot;, 1.641669);
+svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay)+"s"); 
+      
+  var svgdoc = document.getElementById(&quot;create4&quot;);
+   
+  svgdoc.appendChild(svgElem);
+
+      break;          
+      
+      
+      
+      
+      
+      
+      
+case 'FI':
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
+    svgElem.setAttribute(&quot;x&quot;, &quot;145.52083&quot;);
+    svgElem.setAttribute(&quot;y&quot;, &quot;33.447916&quot;);
+    svgElem.setAttribute(&quot;width&quot;, 24.6536481);
+    svgElem.setAttribute(&quot;height&quot;, 1.641669);
+svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay)+"s"); 
+      
+  var svgdoc = document.getElementById(&quot;create4&quot;);
+   
+  svgdoc.appendChild(svgElem);
+      
+            break;  
+      
+      
+      
+case 'IF':
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
+    svgElem.setAttribute(&quot;x&quot;, &quot;145.52083&quot;);
+    svgElem.setAttribute(&quot;y&quot;, &quot;33.447916&quot;);
+    svgElem.setAttribute(&quot;width&quot;, 24.6536481);
+    svgElem.setAttribute(&quot;height&quot;, 1.641669);
+svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay)+"s"); 
+      
+  var svgdoc = document.getElementById(&quot;create4&quot;);
+   
+  svgdoc.appendChild(svgElem);
+
+      break;         
+            
+    
+
+}
+
+}
+}
+ }
+}
+      
+      
+findPathWithDijkstra(startNode, endNode){ 
+      
+      
+// Jetzt überflüssiges enfternen
+
+      
+      
+      let times = {};
+      let backtrace = {};
+  
+      times[startNode] = 0;
+    
+      this.nodes2.forEach(mynode => {
+        if (mynode !== startNode) {
+          times[mynode] = Infinity
+        }
+      });
+  
+      g.enqueue([startNode, 0]);
+  
+  
+      while (!g.isEmpty()) {
+          let shortestStep = g.dequeue();
+          let currentNode = shortestStep[0];
+          this.adjacencyList2[currentNode].forEach(neighbor => {
+            let time = times[currentNode] + neighbor.weight2;
+      
+  
+            if (time &lt; times[neighbor.mynode]) {
+              times[neighbor.mynode] = time;
+              backtrace[neighbor.mynode] = currentNode;
+              g.enqueue([neighbor.mynode, time]);
+            }
+          });
+        }
+  
+        let path = [endNode];
+        let lastStep = endNode;
+        while(lastStep !== startNode) {
+          path.unshift(backtrace[lastStep])
+          lastStep = backtrace[lastStep]
+        }
+      
+      
+      
+window.variable = times[endNode]/2*1000;      
+var vector2 = [zahl5, zahl12]      
+var min4 = Math.min.apply(null, vector2)     
+
+      
+    for (var k = 0; k &lt; path.length-1; k++){
+    var my_edge4 = path[0]+path[1]
+    var delay5 =   times[endNode]-min4
+    
+      
+  switch(my_edge4){
+      
+case 'JK':
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
+    svgElem.setAttribute(&quot;x&quot;, &quot;181.52083&quot;);
+    svgElem.setAttribute(&quot;y&quot;, &quot;96.447916&quot;);
+    svgElem.setAttribute(&quot;width&quot;, 1.641669);
+    svgElem.setAttribute(&quot;height&quot;, 24.6536481);
+svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay5)+"s"); 
+      
+  var svgdoc = document.getElementById(&quot;create5&quot;);
+   
+      
+  svgdoc.appendChild(svgElem);
+   
+
+      break;
+      
+      
+      
+case 'KJ':
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
+    svgElem.setAttribute(&quot;x&quot;, &quot;181.52083&quot;);
+    svgElem.setAttribute(&quot;y&quot;, &quot;96.447916&quot;);
+    svgElem.setAttribute(&quot;width&quot;, 1.641669);
+    svgElem.setAttribute(&quot;height&quot;, 24.6536481);
+svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay5)+"s"); 
+      
+  var svgdoc = document.getElementById(&quot;create5&quot;);
+   
+      
+  svgdoc.appendChild(svgElem);
+
+ break;
+      
+            
+
+case 'HK':
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
+    svgElem.setAttribute(&quot;x&quot;, &quot;145.52083&quot;);
+    svgElem.setAttribute(&quot;y&quot;, &quot;133.447916&quot;);
+    svgElem.setAttribute(&quot;width&quot;, 24.6536481);
+    svgElem.setAttribute(&quot;height&quot;, 1.641669);
+svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay5)+"s"); 
+      
+  var svgdoc = document.getElementById(&quot;create5&quot;);
+   
+  svgdoc.appendChild(svgElem);
+
+      break;  
+      
+
+case 'KH':
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
+    svgElem.setAttribute(&quot;x&quot;, &quot;145.52083&quot;);
+    svgElem.setAttribute(&quot;y&quot;, &quot;133.447916&quot;);
+    svgElem.setAttribute(&quot;width&quot;, 24.6536481);
+    svgElem.setAttribute(&quot;height&quot;, 1.641669);
+svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay5)+"s"); 
+      
+  var svgdoc = document.getElementById(&quot;create5&quot;);
+   
+  svgdoc.appendChild(svgElem);
+
+      break;  
+      
+
+      
+    
+case 'RA':
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
+    svgElem.setAttribute(&quot;x&quot;, &quot;31.52083&quot;);
+    svgElem.setAttribute(&quot;y&quot;, &quot;46.447916&quot;);
+    svgElem.setAttribute(&quot;width&quot;, 1.641669);
+    svgElem.setAttribute(&quot;height&quot;, 24.6536481);
+svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);
+      svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in del-"+(delay5)+"s"); 
+      
+  var svgdoc = document.getElementById(&quot;create5&quot;);
+   
+  svgdoc.appendChild(svgElem);
+
+      break;  
+      
+      
+case 'AR':
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
+    svgElem.setAttribute(&quot;x&quot;, &quot;31.52083&quot;);
+    svgElem.setAttribute(&quot;y&quot;, &quot;46.447916&quot;);
+    svgElem.setAttribute(&quot;width&quot;, 1.641669);
+    svgElem.setAttribute(&quot;height&quot;, 24.6536481);
+svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);
+      svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in del-"+(delay5)+"s"); 
+      
+  var svgdoc = document.getElementById(&quot;create5&quot;);
+   
+  svgdoc.appendChild(svgElem);
+
+      break;  
+      
+      
+      
+case 'CD':
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
+    svgElem.setAttribute(&quot;x&quot;, &quot;81.52083&quot;);
+    svgElem.setAttribute(&quot;y&quot;, &quot;46.447916&quot;);
+    svgElem.setAttribute(&quot;width&quot;, 1.641669);
+    svgElem.setAttribute(&quot;height&quot;, 24.6536481);
+svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay5)+"s"); 
+      
+  var svgdoc = document.getElementById(&quot;create5&quot;);
+   
+  svgdoc.appendChild(svgElem);
+
+      break;  
+      
+case 'DC':
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
+    svgElem.setAttribute(&quot;x&quot;, &quot;81.52083&quot;);
+    svgElem.setAttribute(&quot;y&quot;, &quot;46.447916&quot;);
+    svgElem.setAttribute(&quot;width&quot;, 1.641669);
+    svgElem.setAttribute(&quot;height&quot;, 24.6536481);
+svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay5)+"s"); 
+      
+  var svgdoc = document.getElementById(&quot;create5&quot;);
+   
+  svgdoc.appendChild(svgElem);
+
+      break;  
+      
+      
+      
+case 'FG':
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
+    svgElem.setAttribute(&quot;x&quot;, &quot;131.52083&quot;);
+    svgElem.setAttribute(&quot;y&quot;, &quot;46.447916&quot;);
+    svgElem.setAttribute(&quot;width&quot;, 1.641669);
+    svgElem.setAttribute(&quot;height&quot;, 24.6536481);
+svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay5)+"s"); 
+      
+  var svgdoc = document.getElementById(&quot;create5&quot;);
+   
+  svgdoc.appendChild(svgElem);
+
+      break;
+      
+      
+      
+case 'GF':
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
+    svgElem.setAttribute(&quot;x&quot;, &quot;131.52083&quot;);
+    svgElem.setAttribute(&quot;y&quot;, &quot;46.447916&quot;);
+    svgElem.setAttribute(&quot;width&quot;, 1.641669);
+    svgElem.setAttribute(&quot;height&quot;, 24.6536481);
+svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay5)+"s"); 
+      
+  var svgdoc = document.getElementById(&quot;create5&quot;);
+   
+  svgdoc.appendChild(svgElem);
+
+      break;
+      
+      
+      
+case 'IJ':
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
+    svgElem.setAttribute(&quot;x&quot;, &quot;181.52083&quot;);
+    svgElem.setAttribute(&quot;y&quot;, &quot;46.447916&quot;);
+    svgElem.setAttribute(&quot;width&quot;, 1.641669);
+    svgElem.setAttribute(&quot;height&quot;, 24.6536481);
+svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay5)+"s"); 
+      
+  var svgdoc = document.getElementById(&quot;create5&quot;);
+   
+  svgdoc.appendChild(svgElem);
+      break; 
+      
+      
+      
+case 'JI':
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
+    svgElem.setAttribute(&quot;x&quot;, &quot;181.52083&quot;);
+    svgElem.setAttribute(&quot;y&quot;, &quot;46.447916&quot;);
+    svgElem.setAttribute(&quot;width&quot;, 1.641669);
+    svgElem.setAttribute(&quot;height&quot;, 24.6536481);
+svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);
+      svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay5)+"s"); 
+      
+  var svgdoc = document.getElementById(&quot;create5&quot;);
+   
+  svgdoc.appendChild(svgElem);
+
+
+      break;         
+      
+      
+case 'GH':
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
+    svgElem.setAttribute(&quot;x&quot;, &quot;131.52083&quot;);
+    svgElem.setAttribute(&quot;y&quot;, &quot;96.447916&quot;);
+    svgElem.setAttribute(&quot;width&quot;, 1.641669);
+    svgElem.setAttribute(&quot;height&quot;, 24.6536481);
+svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay5)+"s"); 
+      
+  var svgdoc = document.getElementById(&quot;create5&quot;);
+   
+  svgdoc.appendChild(svgElem);
+
+      break; 
+      
+      
+case 'HG':
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
+    svgElem.setAttribute(&quot;x&quot;, &quot;131.52083&quot;);
+    svgElem.setAttribute(&quot;y&quot;, &quot;96.447916&quot;);
+    svgElem.setAttribute(&quot;width&quot;, 1.641669);
+    svgElem.setAttribute(&quot;height&quot;, 24.6536481);
+svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay5)+"s"); 
+      
+  var svgdoc = document.getElementById(&quot;create5&quot;);
+   
+  svgdoc.appendChild(svgElem);
+
+      break; 
+      
+  
+      
+
+case 'DE':
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
+    svgElem.setAttribute(&quot;x&quot;, &quot;81.52083&quot;);
+    svgElem.setAttribute(&quot;y&quot;, &quot;96.447916&quot;);
+    svgElem.setAttribute(&quot;width&quot;, 1.641669);
+    svgElem.setAttribute(&quot;height&quot;, 24.6536481);
+svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay5)+"s"); 
+      
+  var svgdoc = document.getElementById(&quot;create5&quot;);
+   
+  svgdoc.appendChild(svgElem);
+
+      break;
+      
+      
+case 'ED':
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
+    svgElem.setAttribute(&quot;x&quot;, &quot;81.52083&quot;);
+    svgElem.setAttribute(&quot;y&quot;, &quot;96.447916&quot;);
+    svgElem.setAttribute(&quot;width&quot;, 1.641669);
+    svgElem.setAttribute(&quot;height&quot;, 24.6536481);
+svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay5)+"s"); 
+      
+  var svgdoc = document.getElementById(&quot;create5&quot;);
+   
+  svgdoc.appendChild(svgElem);
+
+      break;
+      
+      
+case 'AB':
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
+    svgElem.setAttribute(&quot;x&quot;, &quot;31.52083&quot;);
+    svgElem.setAttribute(&quot;y&quot;, &quot;96.447916&quot;);
+    svgElem.setAttribute(&quot;width&quot;, 1.641669);
+    svgElem.setAttribute(&quot;height&quot;, 24.6536481);
+svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay5)+"s"); 
+      
+  var svgdoc = document.getElementById(&quot;create5&quot;);
+   
+  svgdoc.appendChild(svgElem);
+      
+      break; 
+      
+case 'BA':
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
+    svgElem.setAttribute(&quot;x&quot;, &quot;31.52083&quot;);
+    svgElem.setAttribute(&quot;y&quot;, &quot;96.447916&quot;);
+    svgElem.setAttribute(&quot;width&quot;, 1.641669);
+    svgElem.setAttribute(&quot;height&quot;, 24.6536481);
+svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay5)+"s"); 
+      
+  var svgdoc = document.getElementById(&quot;create5&quot;);
+   
+  svgdoc.appendChild(svgElem);
+
+      break; 
+      
+      
+    
+case 'AD':
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
+    svgElem.setAttribute(&quot;x&quot;, &quot;45.52083&quot;);
+    svgElem.setAttribute(&quot;y&quot;, &quot;83.447916&quot;);
+    svgElem.setAttribute(&quot;width&quot;, 24.6536481);
+    svgElem.setAttribute(&quot;height&quot;, 1.641669);
+svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay5)+"s"); 
+      
+  var svgdoc = document.getElementById(&quot;create5&quot;);
+   
+  svgdoc.appendChild(svgElem);
+
+      break;   
+      
+case 'DA':
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
+    svgElem.setAttribute(&quot;x&quot;, &quot;45.52083&quot;);
+    svgElem.setAttribute(&quot;y&quot;, &quot;83.447916&quot;);
+    svgElem.setAttribute(&quot;width&quot;, 24.6536481);
+    svgElem.setAttribute(&quot;height&quot;, 1.641669);
+svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay5)+"s"); 
+      
+  var svgdoc = document.getElementById(&quot;create5&quot;);
+   
+  svgdoc.appendChild(svgElem);
+
+      break;      
+      
+     
+      
+      
+case 'RC':
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
+    svgElem.setAttribute(&quot;x&quot;, &quot;45.52083&quot;);
+    svgElem.setAttribute(&quot;y&quot;, &quot;33.447916&quot;);
+    svgElem.setAttribute(&quot;width&quot;, 24.6536481);
+    svgElem.setAttribute(&quot;height&quot;, 1.641669);
+svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay5)+"s"); 
+      
+  var svgdoc = document.getElementById(&quot;create5&quot;);
+   
+  svgdoc.appendChild(svgElem);
+
+      break;   
+      
+case 'CR':
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
+    svgElem.setAttribute(&quot;x&quot;, &quot;45.52083&quot;);
+    svgElem.setAttribute(&quot;y&quot;, &quot;33.447916&quot;);
+    svgElem.setAttribute(&quot;width&quot;, 24.6536481);
+    svgElem.setAttribute(&quot;height&quot;, 1.641669);
+svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay5)+"s"); 
+      
+  var svgdoc = document.getElementById(&quot;create5&quot;);
+   
+  svgdoc.appendChild(svgElem);
+
+      break;             
+      
+                
+          
+      
+case 'BE':
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
+    svgElem.setAttribute(&quot;x&quot;, &quot;45.52083&quot;);
+    svgElem.setAttribute(&quot;y&quot;, &quot;133.447916&quot;);
+    svgElem.setAttribute(&quot;width&quot;, 24.6536481);
+    svgElem.setAttribute(&quot;height&quot;, 1.641669);
+svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay5)+"s"); 
+      
+  var svgdoc = document.getElementById(&quot;create5&quot;);
+   
+  svgdoc.appendChild(svgElem);
+
+      break;    
+      
+      
+case 'EB':
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
+    svgElem.setAttribute(&quot;x&quot;, &quot;45.52083&quot;);
+    svgElem.setAttribute(&quot;y&quot;, &quot;133.447916&quot;);
+    svgElem.setAttribute(&quot;width&quot;, 24.6536481);
+    svgElem.setAttribute(&quot;height&quot;, 1.641669);
+svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay5)+"s"); 
+      
+  var svgdoc = document.getElementById(&quot;create5&quot;);
+   
+  svgdoc.appendChild(svgElem);
+
+      break;             
+      
+  
+case 'GD':
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
+    svgElem.setAttribute(&quot;x&quot;, &quot;95.52083&quot;);
+    svgElem.setAttribute(&quot;y&quot;, &quot;83.447916&quot;);
+    svgElem.setAttribute(&quot;width&quot;, 24.6536481);
+    svgElem.setAttribute(&quot;height&quot;, 1.641669);
+svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay5)+"s"); 
+      
+  var svgdoc = document.getElementById(&quot;create5&quot;);
+   
+  svgdoc.appendChild(svgElem);
+
+      break;  
+      
+      
+case 'DG':
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
+    svgElem.setAttribute(&quot;x&quot;, &quot;95.52083&quot;);
+    svgElem.setAttribute(&quot;y&quot;, &quot;83.447916&quot;);
+    svgElem.setAttribute(&quot;width&quot;, 24.6536481);
+    svgElem.setAttribute(&quot;height&quot;, 1.641669);
+svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay5)+"s"); 
+      
+  var svgdoc = document.getElementById(&quot;create5&quot;);
+   
+  svgdoc.appendChild(svgElem);
+
+      break;  
+      
+      
+      
+      
+case 'CF':
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
+    svgElem.setAttribute(&quot;x&quot;, &quot;95.52083&quot;);
+    svgElem.setAttribute(&quot;y&quot;, &quot;33.447916&quot;);
+    svgElem.setAttribute(&quot;width&quot;, 24.6536481);
+    svgElem.setAttribute(&quot;height&quot;, 1.641669);
+svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay5)+"s"); 
+      
+  var svgdoc = document.getElementById(&quot;create5&quot;);
+   
+  svgdoc.appendChild(svgElem);
+
+      break;     
+      
+      
+case 'FC':
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
+    svgElem.setAttribute(&quot;x&quot;, &quot;95.52083&quot;);
+    svgElem.setAttribute(&quot;y&quot;, &quot;33.447916&quot;);
+    svgElem.setAttribute(&quot;width&quot;, 24.6536481);
+    svgElem.setAttribute(&quot;height&quot;, 1.641669);
+svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay5)+"s"); 
+      
+  var svgdoc = document.getElementById(&quot;create5&quot;);
+   
+  svgdoc.appendChild(svgElem);
+
+      break;     
+      
+      
+      
+case 'EH':
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
+    svgElem.setAttribute(&quot;x&quot;, &quot;95.52083&quot;);
+    svgElem.setAttribute(&quot;y&quot;, &quot;133.447916&quot;);
+    svgElem.setAttribute(&quot;width&quot;, 24.6536481);
+    svgElem.setAttribute(&quot;height&quot;, 1.641669);
+svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay5)+"s"); 
+      
+  var svgdoc = document.getElementById(&quot;create5&quot;);
+   
+  svgdoc.appendChild(svgElem);
+
+      break; 
+
+case 'HE':
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
+    svgElem.setAttribute(&quot;x&quot;, &quot;95.52083&quot;);
+    svgElem.setAttribute(&quot;y&quot;, &quot;133.447916&quot;);
+    svgElem.setAttribute(&quot;width&quot;, 24.6536481);
+    svgElem.setAttribute(&quot;height&quot;, 1.641669);
+svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay5)+"s"); 
+      
+  var svgdoc = document.getElementById(&quot;create5&quot;);
+   
+  svgdoc.appendChild(svgElem);
+
+      break; 
+      
+      
+      
+      
+      
+case 'GJ':
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
+    svgElem.setAttribute(&quot;x&quot;, &quot;145.52083&quot;);
+    svgElem.setAttribute(&quot;y&quot;, &quot;83.447916&quot;);
+    svgElem.setAttribute(&quot;width&quot;, 24.6536481);
+    svgElem.setAttribute(&quot;height&quot;, 1.641669);
+svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay5)+"s"); 
+      
+  var svgdoc = document.getElementById(&quot;create5&quot;);
+   
+  svgdoc.appendChild(svgElem);
+
+      break;   
+      
+      
+      
+case 'JG':
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
+    svgElem.setAttribute(&quot;x&quot;, &quot;145.52083&quot;);
+    svgElem.setAttribute(&quot;y&quot;, &quot;83.447916&quot;);
+    svgElem.setAttribute(&quot;width&quot;, 24.6536481);
+    svgElem.setAttribute(&quot;height&quot;, 1.641669);
+svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay5)+"s"); 
+      
+  var svgdoc = document.getElementById(&quot;create5&quot;);
+   
+  svgdoc.appendChild(svgElem);
+
+      break;          
+      
+      
+      
+      
+      
+      
+      
+case 'FI':
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
+    svgElem.setAttribute(&quot;x&quot;, &quot;145.52083&quot;);
+    svgElem.setAttribute(&quot;y&quot;, &quot;33.447916&quot;);
+    svgElem.setAttribute(&quot;width&quot;, 24.6536481);
+    svgElem.setAttribute(&quot;height&quot;, 1.641669);
+svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay5)+"s"); 
+      
+  var svgdoc = document.getElementById(&quot;create5&quot;);
+   
+  svgdoc.appendChild(svgElem);
+      
+            break;  
+      
+      
+      
+case 'IF':
+    var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
+    svgElem.setAttribute(&quot;x&quot;, &quot;145.52083&quot;);
+    svgElem.setAttribute(&quot;y&quot;, &quot;33.447916&quot;);
+    svgElem.setAttribute(&quot;width&quot;, 24.6536481);
+    svgElem.setAttribute(&quot;height&quot;, 1.641669);
+svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay5)+"s"); 
+      
+  var svgdoc = document.getElementById(&quot;create5&quot;);
+   
+  svgdoc.appendChild(svgElem);
+
+      break;         
+            
+    
+
+}
+          
+      
+    }
+      
+            
+   
+      
+      
+      
+      
+      
+      
+}
+}
+
+
+
+
+g = new Graph(12);
+vertices = ['R', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K'];
+
+// adding vertices 
+for (i = 0; i &lt; vertices.length; i++) {
+    g.addVertex(vertices[i]);
+}
+
+
+g.addNode("R");
+g.addNode("A");
+g.addNode("C");
+g.addNode("F");
+g.addNode("I");
+g.addNode("D");
+g.addNode("G");
+g.addNode("J");
+g.addNode("B");
+g.addNode("E");
+g.addNode("H");
+g.addNode("K");
+
+g.addEdge('R', 'A', zahl1);
+g.addEdge('C', 'D', zahl2);
+g.addEdge('F', 'G', zahl3);
+g.addEdge('I', 'J', zahl4);
+g.addEdge('J', 'K', zahl5);
+g.addEdge('G', 'H', zahl6);
+g.addEdge('D', 'E', zahl7);
+g.addEdge('A', 'B', zahl8);
+g.addEdge('A', 'D', zahl9);
+g.addEdge('D', 'G', zahl10);
+g.addEdge('G', 'J', zahl11);
+g.addEdge('H', 'K', zahl12);
+g.addEdge('F', 'I', zahl13);
+g.addEdge('E', 'H', zahl14);
+g.addEdge('B', 'E', zahl15);
+g.addEdge('C', 'F', zahl16);
+g.addEdge('R', 'C', zahl17);
+
+
+g.addEdge2('R', 'A', zahl1);
+g.addEdge2('C', 'D', zahl2);
+g.addEdge2('F', 'G', zahl3);
+g.addEdge2('I', 'J', zahl4);
+g.addEdge2('J', 'K', zahl5);
+g.addEdge2('G', 'H', zahl6);
+g.addEdge2('D', 'E', zahl7);
+g.addEdge2('A', 'B', zahl8);
+g.addEdge2('A', 'D', zahl9);
+g.addEdge2('D', 'G', zahl10);
+g.addEdge2('G', 'J', zahl11);
+g.addEdge2('H', 'K', zahl12);
+g.addEdge2('F', 'I', zahl13);
+g.addEdge2('E', 'H', zahl14);
+g.addEdge2('B', 'E', zahl15);
+g.addEdge2('C', 'F', zahl16);
+g.addEdge2('R', 'C', zahl17);
+
+
+
+start = firstnode;
+end = 'K';
+
+g.graph;
+g.generateEdges();
+g.findAllPaths(start, end);
+var x = mypaths
+var y = allweights
+g.drawPackages(x, y)      
+      
+ for (i = 0; i &lt; vertices.length; i++) {
+g.findPathWithDijkstra(vertices[i], start)   
+}
+     
+      
+}
+      
+          
+     
+    </script>
+    
+    
+    
+
+
+  <script
+     type="text/javascript"
+     id="restarting">
+        
+var zahl1 = 1;
+var zahl2 = 3;
+var zahl3 = 1;
+var zahl4 = 1;
+var zahl5 = 1;
+var zahl6 = 1;
+var zahl7 = 1;
+var zahl8 = 4;
+var zahl9 = 1;
+var zahl10 = 2;
+var zahl11 = 1;
+var zahl12 = 1;
+var zahl13 = 5;
+var zahl14 = 7;
+var zahl15 = 1;
+var zahl16 = 1;
+var zahl17 = 1;
+
+    
+    
+</script>
+</svg>

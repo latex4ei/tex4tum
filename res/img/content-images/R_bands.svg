@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg id="svg2" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="120" width="200" version="1.0" xmlns:cc="http://creativecommons.org/ns#" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/">
+ <metadata id="metadata31">
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs id="defs4">
+  <linearGradient id="linearGradient9206" y2="45.5" gradientUnits="userSpaceOnUse" x2="130" gradientTransform="translate(.07702 .40489)" y1="45.5" x1="120">
+   <stop id="stop3940" style="stop-color:#d57c00" offset="0"/>
+   <stop id="stop3948" style="stop-color:#d57c00;stop-opacity:.74902" offset=".25"/>
+   <stop id="stop3946" style="stop-color:#d57c00;stop-opacity:.49804" offset="1"/>
+  </linearGradient>
+ </defs>
+ <path id="path10128" d="m60 90 5-5v-20" style="stroke:#000;stroke-width:2.25;fill:none"/>
+ <path id="path10130" d="m70 105h5l5-5v-25-10" style="stroke:#000;stroke-width:2.25;fill:none"/>
+ <path id="path10132" d="m120 105h-15l-10-10v-30" style="stroke:#000;stroke-width:2.25;fill:none"/>
+ <path id="path10134" d="m135 90.065h-5l-5-4.315v-17.258" style="stroke:#000;stroke-width:2.0901;fill:none"/>
+ <path id="band1" d="m60.077 20.405v50c3.594 0 6.537-.641 10-1.469v-47.062c-3.463-.828-6.406-1.469-10-1.469z" style="fill:#e50000;fill-rule:evenodd"/>
+ <path id="band2" d="m75.077 23.436v44.938c2.756-.61 5.98-1.228 10-1.688v-41.562c-4.02-.46-7.244-1.079-10-1.688z" style="fill:#a700e0;fill-rule:evenodd"/>
+ <path id="band3" d="m90.077 25.561v40.688c2.936-.204 6.232-.334 10.003-.344v-40c-3.771-.01-7.067-.14-10.003-.344z" style="fill:#008f00"/>
+ <path id="band4" d="m130.08 22.499c-2.79.669-5.92 1.423-10 2.062v42.688c4.08.638 7.21 1.393 10 2.062v-46.812z" style="fill:url(#linearGradient9206)"/>
+ <path id="path7450" d="m25.577 45.905c0-25 25-25 35-25s15 5 40.003 5c25 0 30-5 40-5s35 0 35 25-25 25-35 25-15-5-40-5c-25.003 0-30.003 5-40.003 5s-34.798.715-35-25z" style="stroke:#000;stroke-width:1px;fill:none"/>
+ <rect id="rect9208" style="fill-opacity:.2716;stroke:#000;stroke-linecap:square;stroke-dasharray:0.82305, 0.82305;stroke-width:.82305" height="10" width="20.323" y="40.905" x="5.4157"/>
+ <rect id="rect10083" style="fill-opacity:.2716;stroke:#000;stroke-linecap:square;stroke-dasharray:0.80978, 0.80978;stroke-width:.80978" height="10" width="19.672" y="40.405" x="175.4"/>
+ <text id="text10112" y="95" x="3.3710938" xml:space="preserve" style="font-size:12px;font-family:&apos;Bitstream Vera Sans&apos;;fill:#000000"><tspan id="tspan10114" y="95" x="3.3710938">1st Band</tspan></text>
+ <text id="text10116" y="109.11719" x="9.0566406" xml:space="preserve" style="font-size:12px;font-family:&apos;Bitstream Vera Sans&apos;;fill:#000000"><tspan id="tspan10118" y="109.11719" x="9.0566406">2nd Band</tspan></text>
+ <text id="text10120" y="109.11719" x="123.82813" xml:space="preserve" style="font-size:12px;font-family:&apos;Bitstream Vera Sans&apos;;fill:#000000"><tspan id="tspan10122" y="109.11719" x="123.82813">Multiplier</tspan></text>
+ <text id="text10124" y="94.117188" x="137.13281" xml:space="preserve" style="font-size:12px;font-family:&apos;Bitstream Vera Sans&apos;;fill:#000000"><tspan id="tspan10126" y="94.117188" x="137.13281">Tolerance</tspan></text>
+</svg>
