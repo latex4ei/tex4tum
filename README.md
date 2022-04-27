@@ -46,6 +46,12 @@ The articles are based on the cheat sheets from [www.latex4ei.de](http://www.lat
 
 ## Contribution
 
+```
+pip install mkdocs-material
+
+```
+
+
 ### Setup
 
 Setup and install dependencies locally

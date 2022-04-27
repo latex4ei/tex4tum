@@ -1,6 +1,6 @@
 ---
 title: Datastructures
-tags: 
+tags: [array, stack, queue, tree, map]
 ---
 
 ## Primitive Data Structures

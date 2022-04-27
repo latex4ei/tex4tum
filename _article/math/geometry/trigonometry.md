@@ -6,6 +6,7 @@ tags: [Sinus, Cosinus, Tangens, Arctan]
 Trigonometry studies relationships involving lengths and angles of triangles.
 
 
+
 ## Unit Circle
 {% include svg-object.html id="UC" filename="unit_circle.svg" %}
 
@@ -16,25 +17,28 @@ with angle $\alpha$
 
 Explanation: In the unit circle, the sinus and cosinus at a given angle form an orthogonal triangle with the edges $a,b,c$. The length of the hypotenuse $c$ corresponds to the radius $r$, which equals 1 (unit circle). Thus, we can apply the law of Pythagoras $a^2 + b^2 = c^2$ with $a = \sin(\alpha)$, $b = \cos(\alpha)$, and $c = 1$. 
 
-{% tabbox %}
-#### Sinus
-$$\sin(\alpha) = \frac{b}{r}$$
-with angle $\alpha$, radius $r$
 
-Symmetry: $\sin(\alpha) = - \sin(α)$
 
-#### Cosinus
+=== "Sinus"
 
-$$\cos(\alpha) = \frac{a}{r}$$
-with angle $\alpha$, radius $r$
+    $$\sin(\alpha) = \frac{b}{r}$$
+    with angle $\alpha$, radius $r$
 
-Symmetry: $\cos(\alpha) = \cos(-\alpha)$
+    Symmetry: $\sin(\alpha) = - \sin(α)$
 
-#### Tangens
-$$\tan(\alpha) = \frac{\cos(\alpha)}{\sin(\alpha)} = \frac{b}{a}$$
-with angle $\alpha$
+=== "Cosinus"
 
-{% endtabbox %}
+    $$\cos(\alpha) = \frac{a}{r}$$
+    with angle $\alpha$, radius $r$
+
+    Symmetry: $\cos(\alpha) = \cos(-\alpha)$
+
+=== "Tangens"
+    
+    $$\tan(\alpha) = \frac{\cos(\alpha)}{\sin(\alpha)} = \frac{b}{a}$$
+    with angle $\alpha$
+
+
 
 
 | Properties |    Equation  |
@@ -66,41 +70,49 @@ $\cosh (x) + \sinh (x) = e^{x}$</br>
 $\cosh^2 (x) - \sinh^2 (x) = 1$
 
 
-{% tabbox %}
-#### sinh
-$$\sinh(x) = \frac{1}{2}(e^x -e^{-x}) = - \i \, \sin(\i x)$$ 
+
+=== "sinh"
+
+    $$\sinh(x) = \frac{1}{2}(e^x -e^{-x}) = - \i \, \sin(\i x)$$ 
 
 
-#### cosh
-$$\cosh(x)  = \frac{1}{2}(e^x +e^{-x}) =  \cos(\i x)$$
+=== "cosh"
+
+    $$\cosh(x)  = \frac{1}{2}(e^x +e^{-x}) =  \cos(\i x)$$
 
 
-#### tanh
-$$\tanh(x) =\frac {\sinh x}{\cosh x} = {\frac {\mathrm {e} ^{x}-\mathrm {e} ^{-x}}{\mathrm {e} ^{x}+\mathrm {e} ^{-x}}}={\frac {\mathrm {e} ^{2x}-1}{\mathrm {e} ^{2x}+1}}=1-{\frac {2}{\mathrm {e} ^{2x}+1}}$$
+=== "tanh"
+
+    $$\tanh(x) =\frac {\sinh x}{\cosh x} = {\frac {\mathrm {e} ^{x}-\mathrm {e} ^{-x}}{\mathrm {e} ^{x}+\mathrm {e} ^{-x}}}={\frac {\mathrm {e} ^{2x}-1}{\mathrm {e} ^{2x}+1}}=1-{\frac {2}{\mathrm {e} ^{2x}+1}}$$
 
 
-#### coth
-$$\coth(x) ={\frac {\cosh x}{\sinh x}}={\frac {\mathrm {e} ^{x}+\mathrm {e} ^{-x}}{\mathrm {e} ^{x}-\mathrm {e} ^{-x}}}={\frac {\mathrm {e} ^{2x}+1}{\mathrm {e} ^{2x}-1}}=1+{\frac {2}{\mathrm {e} ^{2x}-1}}$$
+=== "coth"
 
-{% endtabbox %}
+    $$\coth(x) ={\frac {\cosh x}{\sinh x}}={\frac {\mathrm {e} ^{x}+\mathrm {e} ^{-x}}{\mathrm {e} ^{x}-\mathrm {e} ^{-x}}}={\frac {\mathrm {e} ^{2x}+1}{\mathrm {e} ^{2x}-1}}=1+{\frac {2}{\mathrm {e} ^{2x}-1}}$$
+
+
 
 
 ### Inverse
 
-{% tabbox %}
-#### arcsinh
+
+=== "arcsinh"
+
 $$\mathrm{arcsinh}(x) := \ln\left(x+\sqrt{x^2+1}\right)$$
 
-#### arccosh
+=== "arccosh"
+
 $$\mathrm{arccosh}(x) := \ln\left(x+\sqrt{x^2-1}\right)$$
 
-#### arctanh
+=== "arctanh"
+
 $$\mathrm{artanh}(x) = \frac{1}{2} \ln {\frac {1+x}{1-x}}$$
 
-#### arccoth
+=== "arccoth"
+
 $$\mathrm{arcoth}(x) = \frac{1}{2} \ln {\frac {x+1}{x-1}}$$
 
-{% endtabbox %}
+
 
 
 

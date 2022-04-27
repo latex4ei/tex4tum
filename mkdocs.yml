@@ -1,0 +1,47 @@
+site_name: Tex4TUM
+site_url: https://tex4tum.de/
+repo_url: https://github.com/latex4ei/tex4tum
+site_author: Emanuel Regnath
+docs_dir: _article
+site_dir: docs
+theme:
+  name: material
+  logo: /res/img/Logo.png
+  custom_dir: overrides
+  features:
+    - search.highlight
+
+markdown_extensions:
+  - abbr
+  - attr_list
+  - admonition
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: "#"
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.highlight:
+      use_pygments: true
+
+
+plugins:
+  - search:
+      separator: '[\s\-\.\(\)]+'
+      indexing: 'sections'
+  - tags
+
+
+extra_css:
+  - assets/stylesheets/mkdocs-extra.css
+
+extra_javascript:
+  - assets/javascripts/auto-katex.js
+  - assets/javascripts/auto-tablesort.js
+  # - res/js/katex.js

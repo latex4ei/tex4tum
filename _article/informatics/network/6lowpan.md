@@ -35,147 +35,150 @@ The 6LoWPAN protocol uses the first byte of the IEEE 802.15.4 encapsulation head
 
 {% tabbox %}
 
-### IPHC/NHC
-IPHC/NHC compression was defined in [RFC 6282](https://tools.ietf.org/html/rfc6282) in 2011 and updates the older HC1/HC2 compression.
+=== "IPHC/NHC"
+
+    IPHC/NHC compression was defined in [RFC 6282](https://tools.ietf.org/html/rfc6282) in 2011 and updates the older HC1/HC2 compression.
 
  
-Structure of a typical 6LoWPAN frame with IPv6+UDP:
-```diagram
-+--------+---  -  -  ---+----------+---  -  -  ---+--------
-|  IPHC  | Inline IPv6  | UDP NHC  | Inline UDP   | Payload
-|(2 byte)|  (variable)  | (1 Byte) |  (variable)  |
-+--------+---  -  -  ---+----------+---  -  -  ---+--------
-```
+    Structure of a typical 6LoWPAN frame with IPv6+UDP:
+    ```diagram
+    +--------+---  -  -  ---+----------+---  -  -  ---+--------
+    |  IPHC  | Inline IPv6  | UDP NHC  | Inline UDP   | Payload
+    |(2 byte)|  (variable)  | (1 Byte) |  (variable)  |
+    +--------+---  -  -  ---+----------+---  -  -  ---+--------
+    ```
 
 
-#### IPHC Format (2 Bytes)
-The frame starts with 2 IPHC bytes, where the first byte *is* the LoWPAN dispatch byte. Therefore the first byte starts with `011` to indicate IPHC compression. The remaining bits specify the IPv6 compression.
+    #### IPHC Format (2 Bytes)
+    The frame starts with 2 IPHC bytes, where the first byte *is* the LoWPAN dispatch byte. Therefore the first byte starts with `011` to indicate IPHC compression. The remaining bits specify the IPv6 compression.
 
-```diagram
-  0                                       1
-  0   1   2   3   4   5   6   7   8   9   0   1   2   3   4   5
-+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
-| 0 | 1 | 1 |  TF   |NH | HLIM  |CID|SAC|  SAM  | M |DAC|  DAM  |
-+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
-```
+    ```diagram
+      0                                       1
+      0   1   2   3   4   5   6   7   8   9   0   1   2   3   4   5
+    +---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+    | 0 | 1 | 1 |  TF   |NH | HLIM  |CID|SAC|  SAM  | M |DAC|  DAM  |
+    +---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+    ```
 
-##### Explanation of IPHC dispatch byte:
+    ??? info "Explanation of IPHC dispatch byte:"
 
-TF – 2 bit
-: Traffic Class and Flow Label (TF), 2 bit
+        TF – 2 bit
+        : Traffic Class and Flow Label (TF), 2 bit
 
-  - 00: Carried Inline (ECN+DSCP+Flow) 
-  - 01: ECN+Flow
-  - 10: ECN+DSCP
-  - 11: Traffic Class and Flow Label are elided.
+          - 00: Carried Inline (ECN+DSCP+Flow) 
+          - 01: ECN+Flow
+          - 10: ECN+DSCP
+          - 11: Traffic Class and Flow Label are elided.
 
-NH – 1 bit
-: Next Header compression (NH)
+        NH – 1 bit
+        : Next Header compression (NH)
 
-  - 0: Carried Inline
-  - 1: next header is compressed using LOWPAN_NHC
-
-
-HLIM – 2 bit
-: Hop Limit (HLIM)
-
-  - 00: Carried Inline. 
-  - 01: 1 and elided. 
-  - 10: 64 and elided.
-  - 11: 255 and elided.
+          - 0: Carried Inline
+          - 1: next header is compressed using LOWPAN_NHC
 
 
-CID – 1 bit
-: Context Identifier Extension (CID)
+        HLIM – 2 bit
+        : Hop Limit (HLIM)
 
-  - 0: No 1-byte CID identifier
-  - 1: 1-byte identifier follows
-
-
-SAC/DAC – 1 bit each
-: Source/Destination Address Compression
-
-  - 0: Stateless
-  - 1: Context-based
+          - 00: Carried Inline. 
+          - 01: 1 and elided. 
+          - 10: 64 and elided.
+          - 11: 255 and elided.
 
 
-SAM/DAM – 2 bit each
-: Source/Destination Address Mode</br>
- If SAC/DAC=0:
+        CID – 1 bit
+        : Context Identifier Extension (CID)
 
-  - 00: 128 b / 16 B. The full address is carried in-line. 
-  - 01: 64 bits. The first 64-bits of the address are are the first 64 bits
-      of the link-local prefix padded with zeros. The remaining 64 bits are carried in-line.
-  - 10: 16 bits. The first 112 bits of the address are the first 64 bits of 
-      the link-local prefix padded with zeros.  The following 64 bits are 0000:00ff:fe00:XXXX, where XXXX are the 16 bits carried in-line.
-  - 11: 0 bits.  The address is fully elided.
-
- If SAC/DAC=1:
-
-- 00:  The UNSPECIFIED address, ::
-- 01:  64 bits. The address is derived using context information
-            and the 64 bits carried in-line.
-- 10:  16 bits.  The address is derived using context information
-            and the 16 bits carried in-line.
-- 11:  0 bits.  The address is fully elided and is derived using
-            context information and the encapsulating header.
-
-M – 1 bit
-: Multicast Destination (M)
-
-  - 0: Destination  is not multicast 
-  - 1: Destination  is multicast
+          - 0: No 1-byte CID identifier
+          - 1: 1-byte identifier follows
 
 
-#### Context Identifier Extension (CIE)
-In case CID = 1 in the IPHC bytes, an additional CIE byte directly follows the two IPHC bytes. This CIE byte is used to identify previously exchanged IPv6 contexts by a 4 bit Source Context Identifier (SCI) and a 4 bit Destination Context Identifier (DCI) instead of 128 bit for each address. 
+        SAC/DAC – 1 bit each
+        : Source/Destination Address Compression
 
-```diagram
-  0   1   2   3   4   5   6   7
-+---+---+---+---+---+---+---+---+
-|      SCI      |      DCI      |
-+---+---+---+---+---+---+---+---+
-```
+          - 0: Stateless
+          - 1: Context-based
+
+
+        SAM/DAM – 2 bit each
+        : Source/Destination Address Mode</br>
+         If SAC/DAC=0:
+
+          - 00: 128 b / 16 B. The full address is carried in-line. 
+          - 01: 64 bits. The first 64-bits of the address are are the first 64 bits
+              of the link-local prefix padded with zeros. The remaining 64 bits are carried in-line.
+          - 10: 16 bits. The first 112 bits of the address are the first 64 bits of 
+              the link-local prefix padded with zeros.  The following 64 bits are 0000:00ff:fe00:XXXX, where XXXX are the 16 bits carried in-line.
+          - 11: 0 bits.  The address is fully elided.
+
+         If SAC/DAC=1:
+
+        - 00:  The UNSPECIFIED address, ::
+        - 01:  64 bits. The address is derived using context information
+                    and the 64 bits carried in-line.
+        - 10:  16 bits.  The address is derived using context information
+                    and the 16 bits carried in-line.
+        - 11:  0 bits.  The address is fully elided and is derived using
+                    context information and the encapsulating header.
+
+        M – 1 bit
+        : Multicast Destination (M)
+
+          - 0: Destination  is not multicast 
+          - 1: Destination  is multicast
 
 
 
-#### NHC Format
-Compression formats for different next headers are identified by a
-   variable-length bit-pattern (within one Byte) immediately following the IPHC compressed header.
+=== "Context Identifier Extension (CIE)""
+
+    In case CID = 1 in the IPHC bytes, an additional CIE byte directly follows the two IPHC bytes. This CIE byte is used to identify previously exchanged IPv6 contexts by a 4 bit Source Context Identifier (SCI) and a 4 bit Destination Context Identifier (DCI) instead of 128 bit for each address. 
+
+    ```diagram
+      0   1   2   3   4   5   6   7
+    +---+---+---+---+---+---+---+---+
+    |      SCI      |      DCI      |
+    +---+---+---+---+---+---+---+---+
+    ```
 
 
-#### UDP LOWPAN_NHC Format
-Bits 0 through 4 represent the NHC ID and '11110' indicates the specific
-UDP header compression ID.
+    #### NHC Format
+    Compression formats for different next headers are identified by a
+       variable-length bit-pattern (within one Byte) immediately following the IPHC compressed header.
 
-```diagram
-  0   1   2   3   4   5   6   7
-+---+---+---+---+---+---+---+---+
-| 1 | 1 | 1 | 1 | 0 | C |   P   |
-+---+---+---+---+---+---+---+---+
-```
 
-##### Explanation of UDP LOWPAN_NHC Byte
-C
-: Checksum:
+    #### UDP LOWPAN_NHC Format
+    Bits 0 through 4 represent the NHC ID and '11110' indicates the specific
+    UDP header compression ID.
 
-  - 0: All 16 bits of Checksum are carried in-line.
-  - 1: All 16 bits of Checksum are elided with higher-layer 
-       end-to-end integrity checks.
+    ```diagram
+      0   1   2   3   4   5   6   7
+    +---+---+---+---+---+---+---+---+
+    | 1 | 1 | 1 | 1 | 0 | C |   P   |
+    +---+---+---+---+---+---+---+---+
+    ```
 
-P
-: Ports:
+    ??? note "Explanation of UDP LOWPAN_NHC Byte"
 
-  - 00: 16 bits. Source Port and Destination Port are carried in-line.
-  - 01:  All 16 bits for Source Port are carried in-line.  First 8
-         bits of Destination Port is 0xf0 and elided.  The remaining 8
-         bits of Destination Port are carried in-line.
-  - 10:  First 8 bits of Source Port are 0xf0 and elided.  The
-         remaining 8 bits of Source Port are carried in-line.  All 16
-         bits for Destination Port are carried in-line.
-  - 11:  First 12 bits of both Source Port and Destination Port are
-         0xf0b and elided.  The remaining 4 bits for each are carried
-         in-line.
+        C
+        : Checksum:
+
+          - 0: All 16 bits of Checksum are carried in-line.
+          - 1: All 16 bits of Checksum are elided with higher-layer 
+               end-to-end integrity checks.
+
+        P
+        : Ports:
+
+          - 00: 16 bits. Source Port and Destination Port are carried in-line.
+          - 01:  All 16 bits for Source Port are carried in-line.  First 8
+                 bits of Destination Port is 0xf0 and elided.  The remaining 8
+                 bits of Destination Port are carried in-line.
+          - 10:  First 8 bits of Source Port are 0xf0 and elided.  The
+                 remaining 8 bits of Source Port are carried in-line.  All 16
+                 bits for Destination Port are carried in-line.
+          - 11:  First 12 bits of both Source Port and Destination Port are
+                 0xf0b and elided.  The remaining 4 bits for each are carried
+                 in-line.
 
 
 
@@ -204,7 +207,7 @@ The HC1 byte is used to compress the IPv6 header.
 +---+---+---+---+---+---+---+---+ 
 ```
 
-##### Explanation of HC1 Byte
+??? info "Explanation of HC1 Byte"
 
 IP-SA – 2 bit
 :   IPv6 source address (bits 0 and 1):

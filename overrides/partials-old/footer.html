@@ -1,0 +1,78 @@
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-auto">
+                <img class="img-fluid" style="width: 4em;" src="{{ "./res/img/Logo.png" }}" alt="Logo">
+            </div>
+
+            <div class="col-sm-5 col-lg-3">
+                <h3>{{ page.title | escape }}</h3>
+                <ul class="contact-list">
+                    <li><a href="mailto:{{ page.email }}">✉ {{ page.email }}</a></li>
+                    <li><a href="http://latex4ei.de">🌐 latex4ei.de</a></li>
+                </ul>
+            </div>
+
+
+
+            <div class="col-lg-5">
+                <p>{{ page.description | escape }}</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<!-- Load Javascript at the end for faster page loading -->
+<!-- ================================================== -->
+
+<!-- Own javascript -->
+<script src="{{ "./assets/js/latex4ei.js" }}"></script>
+<script src="{{ "./assets/js/options.js" }}"></script>
+
+<!-- KaTeX JS -->
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"
+    integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz"
+    crossorigin="anonymous"></script>
+
+<!-- jQuery -->
+<!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
+
+<!-- Bootstrap 5-->
+<script src="{{ "./assets/js/bootstrap5/bootstrap.bundle.min.js" }}"></script>
+
+
+
+<!-- Fuse + Own Adapter -->
+<script src="https://cdn.jsdelivr.net/fuse/2.6.1/fuse.min.js"></script>
+<script src="{{ "./assets/js/search_index.json" }}"></script>
+<script src="{{ "./assets/js/t4t_search.js" }}"></script>
+
+<script>
+    window.onload = function () {
+        // render KaTeX
+        renderMath();
+
+        // fix navbar hiding anchor jumps
+        window.addEventListener("hashchange", function () { scrollBy(0, -100) });
+
+
+        Options.loadOptions();
+
+        var opts = {
+            data: search_index,
+            numResults: 10,
+            searchPath: '/search?q=',
+            directPath: '.',
+            container: document.getElementsByClassName('search-container')
+        };
+        autocomplete(opts);
+    };
+</script>
+
+
+<!-- Mermaid -->
+<!--   <link rel="stylesheet" href="https://cdn.rawgit.com/knsv/mermaid/7.0.0/dist/mermaid.css">
+  <script type="text/javascript" src="https://cdn.rawgit.com/knsv/mermaid/7.0.0/dist/mermaid.min.js"></script> -->
+
+<!-- ================================================== -->
