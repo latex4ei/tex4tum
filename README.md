@@ -48,7 +48,11 @@ The articles are based on the cheat sheets from [www.latex4ei.de](http://www.lat
 
 ```
 pip install mkdocs-material
+```
 
+### Testing MkDocs
+```
+make mkdocs
 ```
 
 

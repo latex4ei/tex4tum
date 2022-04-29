@@ -1,4 +1,4 @@
-/* mcdocs classes */
+/* mkdocs classes */
 
 div.tabbed-set {
 	border: .05rem solid var(--md-typeset-table-color);
@@ -6,6 +6,17 @@ div.tabbed-set {
 }
 
 div.tabbed-set .tabbed-content { padding: 0 0.625em; }
+
+
+/* mkdocs colors */
+
+[data-md-color-scheme="tum"] {
+  --md-primary-fg-color:        #005293;
+  --md-primary-fg-color--light: #ccdce9;
+  --md-primary-fg-color--dark:  #003359;
+
+  --md-accent-fg-color: #a2ad00;
+}
 
 
 /* grid */

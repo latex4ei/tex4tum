@@ -2,14 +2,18 @@ site_name: Tex4TUM
 site_url: https://tex4tum.de/
 repo_url: https://github.com/latex4ei/tex4tum
 site_author: Emanuel Regnath
-docs_dir: _article
+docs_dir: tmp/post
 site_dir: docs
 theme:
   name: material
   logo: /res/img/Logo.png
+  palette:
+    scheme: tum
   custom_dir: overrides
   features:
     - search.highlight
+    - navigation.tabs
+    - navigation.indexes
 
 markdown_extensions:
   - abbr
@@ -17,6 +21,7 @@ markdown_extensions:
   - admonition
   - def_list
   - footnotes
+  - meta
   - md_in_html
   - toc:
       permalink: "#"
@@ -36,6 +41,9 @@ plugins:
       separator: '[\s\-\.\(\)]+'
       indexing: 'sections'
   - tags
+  # - mkdocs-simple-hooks:
+  #     hooks:
+  #       on_pre_build: "make.mkdocs-t4t-plugin:print_args"
 
 
 extra_css:
@@ -44,4 +52,19 @@ extra_css:
 extra_javascript:
   - assets/javascripts/auto-katex.js
   - assets/javascripts/auto-tablesort.js
-  # - res/js/katex.js
+
+
+# Page tree
+nav:
+  - Home: 
+    - index.md
+    - Math:
+      - math.md
+      - Algebra: algebra.md
+      - Analysis: analysis.md
+  - Sheets: sheets.md
+  - About: 
+    - about.md
+    - demo.md
+    - contribution.md
+    - team.md
