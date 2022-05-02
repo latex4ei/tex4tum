@@ -33,7 +33,7 @@ The 6LoWPAN protocol uses the first byte of the IEEE 802.15.4 encapsulation head
 ## Compression Schemes
 
 
-{% tabbox %}
+<div class="tabbox" markdown>
 
 === "IPHC/NHC"
 
@@ -284,7 +284,7 @@ Rest – bit 3 to 7
 
 
 
-{% endtabbox %}
+</div>
 
 
 

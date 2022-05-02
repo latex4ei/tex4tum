@@ -31,7 +31,7 @@ There are four types of control messages in RPL:
 * Destination Advertisement Object Acknowledgement (DAO-ACK)
 
 
-{% tabbox %}
+<div class="tabbox" markdown>
 
 ### DIS
 
@@ -107,7 +107,7 @@ There are four types of control messages in RPL:
 ```
 
 
-{% endtabbox %}
+</div>
 
 
 
@@ -122,7 +122,7 @@ There are three types of nodes in a RPL network:
 ### DODAG Formation
 The following interactive diagram visualizes the creation of the DODAG:
 
-{% include svg-object.html id="dodag" filename="rpl-v3.svg" %}
+![](rpl-v3.svg){#dodag}
 
 1. The root starts to periodically broadcast the information about the graph using the DIO message.
 2. All receiving nodes (=neighbor set) decide whether to join the DODAG.

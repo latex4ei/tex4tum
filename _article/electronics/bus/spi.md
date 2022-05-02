@@ -17,7 +17,7 @@ SPI is serial bus.
 | <font style="text-decoration: overline;">SS</font> | ¬Slave Select |
 
 
-{% include figure.html filename="SPI_single_slave.svg" description="Connection" %}
+![Connection](SPI_single_slave.svg){}
 
 
 

@@ -21,7 +21,7 @@ Maximum devices: 127.
 Cable length: $< \SI{5}{m}$
 
 
-{% include figure.html width="20em" filename="usb-connectors.svg" description="USB Connectors" %}
+![USB Connectors](usb-connectors.svg){ width="20em"}
 
 
 

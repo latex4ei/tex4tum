@@ -16,11 +16,11 @@ Used operations: `And`, `Xor`, `Rot`, `Not`.
 | SHA3-512  |  576 b | 1600 b |     24 |  512 b |
 
 
-<div class="row">
-<div class="col-md-auto pr-0">
+<div class="row" markdown>
+<div class="col-md-auto pr-0" markdown>
 SHA3-256 (\" <input id="number-input" style="width: 5em;" oninput="calcSHA3(this)" placeholder="Input" value=""> \") =	
 </div>
-<div class="col pl-0">
+<div class="col pl-0" markdown>
 <p><code id="SHA3_out">a7ffc6f8bf1ed76651c14756a061d662f580ff4de43b49fa82d80a4b80f8434a</code></p>	
 </div>
 </div>

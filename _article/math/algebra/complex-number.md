@@ -9,7 +9,7 @@ $$\cx z := a + b\i = r \cdot \exp(\i \varphi)$$
 with Imaginary Unit $\i = \sqrt{-1}$.
 
 
-{% include figure.html width="10em" filename="complex.svg" description="Complex Plane"%}
+![Complex Plane](complex.svg){ width="10em"}
 
 
 **Polarkoordinaten:** $\cx z = r \cdot (\cos(\varphi)+\mathbf{i}\sin(\varphi))=r\cdot e^{\varphi \mathbf{i}}$

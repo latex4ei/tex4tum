@@ -21,7 +21,7 @@ $$\frac{\sin(\alpha)}{\sin(\beta)}=\frac{n_2}{n_1}=\frac{c_1}{c_2}=\frac{\lambda
 with the angle of incidence $\alpha$, the angle of refraction $\beta$, the refractive indices $n_1$ and $n_2$.
 
 
-{% include svg-object.html id="fraction" filename="fraction.svg" %}
+![](fraction.svg){#fraction}
 
 
 Reflection angle $\alpha_2 = - \alpha_1 =$ <tspan id="Refl_val">-30</tspan> ${}^\circ$<br>

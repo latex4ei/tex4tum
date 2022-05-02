@@ -18,7 +18,7 @@ IP has the task of delivering packets from the source host to the destination ho
 
 ### Address Notation
 
-{% tabbox %}
+<div class="tabbox" markdown>
 
 #### IPv6 
 16 byte written as 8 groups of 4 hexadecimal characters.
@@ -39,7 +39,7 @@ Omitting consecutive groups of zeroes: `2001:db8::ff00:42:8329`
 
 `192.168.0.0`
 
-{% endtabbox %}
+</div>
 
 
 ### Subnets
@@ -54,7 +54,7 @@ Subnets share a certain number of identical most-significant bits in their IP ad
 ### Special Address Ranges
 Certain adress ranges are reserved for special use cases.
 
-{% tabbox %}
+<div class="tabbox" markdown>
 
 #### IPv6
 * `2000::/4` (global)
@@ -74,7 +74,7 @@ Certain adress ranges are reserved for special use cases.
 * `224.0.0.0` – `255.255.255.254` (future use)
 * `255.255.255.255` (limited broadcast)
 
-{% endtabbox %}
+</div>
 
 
 
@@ -86,7 +86,7 @@ Certain adress ranges are reserved for special use cases.
 
 ## Header Format
 
-{% tabbox %}
+<div class="tabbox" markdown>
 
 ### IPv6 
 The IPv6 header has a fixed size of 40 bytes.
@@ -250,7 +250,7 @@ Options – variable
 
 
 
-{% endtabbox %}
+</div>
 
 
 

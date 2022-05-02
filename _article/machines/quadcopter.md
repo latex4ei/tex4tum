@@ -23,25 +23,25 @@ Each rotor produces both lift and torque about its center of rotation, as well a
 Flight control is provided by independent variation of the speed and hence lift and torque of each rotor.
 
 
-{% include svg-object.html id="SVG_obj" width="30em" filename="quadrocopter.svg" description='Top view of a conceptual quadcopter model.' %}
+![Top view of a conceptual quadcopter model.](quadrocopter.svg){#SVG_obj width="30em"}
 
 
-<div class="row">
-  <div class="col">
+<div class="row" markdown>
+  <div class="col" markdown>
   <label>Thrust</label><br>
   <input type="range" id="s_thrust" min="0" max="5" value="1" list="tickmarks" oninput="update(this)"><br><br>
   </div>
-  <div class="col">
+  <div class="col" markdown>
   <label>Pitch</label><br>
   <input type="range" id="s_pitch" min="-3" max="3" value="0" step="1" list="tickmarks" oninput="update(this)">
   </div>
 </div>
-<div class="row">
-  <div class="col">
+<div class="row" markdown>
+  <div class="col" markdown>
   <label>Yaw</label><br>
   <input type="range" id="s_yaw" min="-3" max="3" value="0" list="tickmarks" oninput="update(this)"><br><br>
   </div>
-  <div class="col">
+  <div class="col" markdown>
   <label>Roll</label><br>
   <input type="range" id="s_roll" min="-3" max="3" value="0" step="1" list="tickmarks" oninput="update(this)">
   </div>

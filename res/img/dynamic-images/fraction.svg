@@ -12,7 +12,7 @@
    version="1.1"
    viewBox="0 55 300 300"
    onload="svgloaded()"
-   id="svg42"
+   id="t4t-svg-fraction"
    sodipodi:docname="fraction.svg"
    inkscape:version="0.92.2 (5c3e80d, 2017-08-06)">
   <metadata
@@ -85,16 +85,6 @@
          id="path8" />
     </marker>
   </defs>
-  <script
-     src="./MathJax/MathJax.js?config=TeX-AMS_HTML-full"
-     type="text/javascript"
-     id="script13" />
-  <script
-     type="text/x-mathjax-config"
-     id="script15">MathJax.Hub.Config({tex2jax: {inlineMath: [[&quot;$&quot;,&quot;$&quot;],[&quot;\\(&quot;,&quot;\\)&quot;]]}});</script>
-  <script
-     src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
-     id="script17" />
   <rect
      style="fill:#82d4ff"
      height="131.85"
@@ -161,7 +151,7 @@
      onmousedown="rotateLine(this.id)" />
   <script
      type="text/javascript"
-     id="script40">
+     id="script40">{
 var dragX, dragY;
 var pt;
 var svg_fraction;
@@ -192,7 +182,8 @@ function syncValues(id, value){
 }
 
 function svgloaded(){
-    svg_fraction = document.childNodes[0];
+    svg_fraction = document.getElementById(&quot;t4t-svg-fraction&quot;);
+    <!-- svg_fraction = document.childNodes[0]; -->
     pt = svg_fraction.createSVGPoint();
     hitpoint = svg_fraction.getElementById(&quot;anchor&quot;);
     ray_line = svg_fraction.getElementById(&quot;ray&quot;);
@@ -246,8 +237,8 @@ function rotateLine(id) {
 
 function getMouseAngleTo(x, y){
     //get the vector representing the mouse's position relative to the point...
-    var vx = event.pageX - x;
-    var vy = event.pageY - y;
+    var vx = event.clientX - x;
+    var vy = event.clientY - y;
 
     //use atan2 to get the angle; Atan2 returns radians
     var angleRadians=Math.atan2(vx, -vy);   // -vy because on screen y is inverted
@@ -296,6 +287,7 @@ function calcFraction(){
 
     // call sync
     parent.syncValues("alpha", 0)
+}
 }
 </script>
   <path

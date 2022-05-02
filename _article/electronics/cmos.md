@@ -36,7 +36,7 @@ propagation delay                 $t_{\ir pHL} \propto \frac{C_L t_{\ir ox} L_{\
 
 ## Inverter Power
 
-{% include figure.html width="25em" filename="inverter_switching_current.svg" description="Power Consumption of a CMOS Inverter"%}
+![Power Consumption of a CMOS Inverter](inverter_switching_current.svg){ width="25em"}
 
 
 ### Dynamic Power Consumption 

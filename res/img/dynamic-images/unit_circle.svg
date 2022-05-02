@@ -215,8 +215,8 @@ function SVG_getMouseAngleTo(id_anch){
   var matrix = anchor.getScreenCTM();
   pt = pt.matrixTransform(matrix);
 
-  var vx = event.pageX - pt.x
-  var vy = event.pageY - pt.y;
+  var vx = event.clientX - pt.x
+  var vy = event.clientY - pt.y;
 
   //use atan2 to get the angle; Atan2 returns radians
   var angleRadians=Math.atan2(vy, vx); // -vy because on screen y is inverted

@@ -17,7 +17,9 @@ A servo motor is normally connected using just 3 wires.
 
 ## Control
 
-{% include svg-object.html id="servo" filename="servo.svg" %}
+
+![Working principle of a servo motor.](servo.svg){#servo}
+
 
 The angle of the servo is determined by the width of the PWM signal that is applied to the control wire.
 Most servos expect to see a pulse every 20 ms. The angle is calculated as the fraction of the pulse width

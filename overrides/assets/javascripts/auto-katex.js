@@ -34,7 +34,18 @@ AM_DISPLAY='div.arithmatex'
 PD_INLINE='math inline'
 PD_DISPLAY='math display'
 
-macros = []
+var macros = {
+    "\\(": "",
+    "\\)": "",
+    "\\vec": "{\\boldsymbol #1}",
+    "\\ma": "\\boldsymbol{#1}",
+    "\\cx": "\\boldsymbol{#1}",
+    "\\cxc": "\\boldsymbol{#1}^{*}",
+    "\\diff": "\\mathrm{d}\\,",
+    "\\mat": "\\begin{bmatrix} #1 \\end{bmatrix}",
+    "\\vect": "\\begin{pmatrix} #1 \\end{pmatrix}",
+    "\\SI": "{#1\\,\\mathrm{#2}}",
+  };
 
 
 
@@ -61,9 +72,9 @@ function renderArithmatex() {
     for (var i = 0; i < maths.length; i++) {
       tex = maths[i].textContent || maths[i].innerText;
       if (tex.startsWith('\\(') && tex.endsWith('\\)')) {
-        katex.render(tex.slice(2, -2), maths[i], {'displayMode': false, throwOnError: false});
+        katex.render(tex.slice(2, -2), maths[i], {'displayMode': false, macros: macros, throwOnError: false});
       } else if (tex.startsWith('\\[') && tex.endsWith('\\]')) {
-        katex.render(tex.slice(2, -2), maths[i], {'displayMode': true, throwOnError: false});
+        katex.render(tex.slice(2, -2), maths[i], {'displayMode': true, macros: macros, throwOnError: false});
       }
     }
 };

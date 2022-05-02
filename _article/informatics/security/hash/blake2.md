@@ -12,11 +12,11 @@ BLAKE2 is a cryptographic hash function based on Dan Bernstein's ChaCha stream c
 
 
 
-<!-- <div class="row">
-<div class="col-md-auto pr-0">
+<!-- <div class="row" markdown>
+<div class="col-md-auto pr-0" markdown>
 BLAKE-2b (\" <input id="number-input" style="width: 5em;" oninput="calcHash(this)" placeholder="Input" value=""> \") =	
 </div>
-<div class="col pl-0">
+<div class="col pl-0" markdown>
 <p><code id="hash_out">e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855</code></p>	
 </div>
 </div>

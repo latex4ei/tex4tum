@@ -4,7 +4,7 @@ title: Binomial Distribution
 
 The Binomial Distribution is the discrete probability distribution of the number of successes in a sequence of repeated Bernoulli trials, such as repeated coin tosses.
 
-<div class="float-end">
+<div class="float-end" markdown>
 
 | Parameters  |                           |
 |-------------|---------------------------|
@@ -38,15 +38,17 @@ $$P(k=7, n=10, p=0.5) = \binom{10}{7} 0.5^7 (1-0.5)^{10-7} = 0.117$$
 
 
 
+![Binomial Distribution B(k, n, p) over k for n = <span id="bd_n">30</span> and p = <span id="bd_p">0.3</span>](binomial.svg){#SVG_obj}
 
-{% include svg-object.html id="SVG_obj" filename="binomial.svg" description='Binomial Distribution B(k, n, p) over k for n = <span id="bd_n">30</span> and p = <span id="bd_p">0.3</span>' %}
 
-<div class="row">
-  <div class="col">
+
+
+<div class="row" markdown>
+  <div class="col" markdown>
   <label>Input for p</label><br>
   <input type="range" id="p_range" min="0" max="10" value="3" list="tickmarks" oninput="update(this)"><br><br>
   </div>
-  <div class="col">
+  <div class="col" markdown>
   <label>Input for n</label><br>
   <input type="range" id="n_range" min="0" max="40" value="30" step="1" list="tickmarks" oninput="update(this)">
   </div>
@@ -90,7 +92,7 @@ $n \gt 9\left(\frac{1-p}{p}\right)\ \text{and}\ n \gt 9\left(\frac{p}{1-p}\right
 
 ## Implementations
 
-{% tabbox %}
+<div class="tabbox" markdown>
 
 #### Python
 
@@ -136,7 +138,7 @@ plot(x, y)
 ```
 
 
-{% endtabbox %}
+</div>
 
 
 
@@ -198,8 +200,10 @@ function binom(n, k) {
 function binompmf(k, n, p){ return ( binom(n, k) * Math.pow(p, k) * Math.pow(1.0 - p, n - k) ); }
 
 
+SVG_obj = document.querySelector("#SVG_obj svg");  // try inline 
+SVG_Scales = get_scale(SVG_obj);
 document.getElementById("SVG_obj").addEventListener("load",function(){
-    SVG_obj = document.getElementById("SVG_obj").contentDocument; // get inner DOM
+    SVG_obj = document.getElementById("SVG_obj").contentDocument  // get inner DOM
     SVG_Scales = get_scale(SVG_obj);
 }, false);
 </script>

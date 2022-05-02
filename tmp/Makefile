@@ -49,7 +49,7 @@ FROM_MD=--from markdown+raw_tex+gfm_auto_identifiers+citations+markdown_in_html_
 FROM_GFM=--from gfm-raw_html
 FROM_RST=--from rst+smart+auto_identifiers
 
-TO_MD=--to markdown-simple_tables-raw_attribute-fenced_divs-bracketed_spans
+TO_MD=--to markdown-simple_tables-multiline_tables-grid_tables-raw_attribute-fenced_divs-bracketed_spans
 # TO_MD=--to commonmark-smart
 
 MD_APPEND=${T4T_DIR}/tex/t4t-katex.tex
@@ -57,7 +57,7 @@ MD_APPEND=${T4T_DIR}/tex/t4t-katex.tex
 
 ## Pandoc CLI Options
 PD_PATH=--data-dir=${PD_DIR} --resource-path=.:src:res:res/img/dynamic-images:res/img/static-images
-PD_CONFIG=--defaults=${PD_DIR}/pandoc-config.yml
+PD_CONFIG=--defaults=./pandoc-mkdocs-config.yml
 PD_PLOT_CONFIG=-M plot-configuration=${PD_DIR}/plot-config.yml
 
 PD_FLAGS:=${PD_PATH} ${PD_CONFIG}

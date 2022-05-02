@@ -14,7 +14,7 @@ AES operates on block sizes of $32 \times 32$ bits.
 
 ## Algorithm
 
-{% include figure.html width="25em" filename="aes-128.svg" description="AES 128 High Level Overview"%}
+![AES 128 High Level Overview](aes-128.svg){ width="25em"}
 
 
 1. **Key Expansion:** Create individual 128bit round keys from the cipher key
@@ -43,7 +43,7 @@ with the columns $j \in \{0,1,2,3\}$
 
 ## Modes of Operation
 
-{% tabbox %}
+<div class="tabbox" markdown>
 
 ### ECB
 **Electronic Codebook (ECB)**
@@ -90,7 +90,7 @@ Counter mode turns a block cipher into a stream cipher. It generates the next ke
 {% include figure.html width="40em" filename="decmode_ctr.svg" %}
 
 
-{% endtabbox %}
+</div>
 
 
 ## Test Vectors

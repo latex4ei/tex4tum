@@ -59,7 +59,7 @@ $\int \cos(x)\sin(x) = -\frac12 \cos^2(x)$
 ## Line Integrals
 Given a curve $\vec \gamma:[a,b] \rightarrow \R^n, t \mapsto \vec \gamma(t)$.
 
-{% tabbox %}
+<div class="tabbox" markdown>
 ### Scalar field
 $$\int\limits_\gamma f \diff s := \int\limits^b_a f\bigl(\vec{\gamma(t)}\bigr) \cdot \norm{\vec{ {\dot{\gamma}} }(t)} \diff t$$
 with the scalar field $f(\vec x)$ along a curve $\vec \gamma(t)$ and the elementary arc length $\diff s$.
@@ -68,14 +68,14 @@ with the scalar field $f(\vec x)$ along a curve $\vec \gamma(t)$ and the element
 $$\int \vec v \bdot \diff \vec s := \int\limits^b_a \vec v \bigl(\vec \gamma(t)\bigr)^\top \boldsymbol \cdot \vec{ {\dot{\gamma}} }(t) \ \diff t$$
 with the vector field $\vec v(\vec x)$, the curve $\vec \gamma$, and $\vec x, \vec v, \vec \gamma \in \R^n$.
 
-{% endtabbox %}
+</div>
 
 
 
 ## Surface Integrals
 Given a surface $\vec \phi: B \subseteq \R^2 \rightarrow \R^3, (u,w) \mapsto \vec \phi(u,w)$.
 
-{% tabbox %}
+<div class="tabbox" markdown>
 ### Scalar field
 $$\iint_{\vec \phi} f \diff O := \iint_B f\bigl(\vec \phi(u,w)\bigr) \cdot \norm{ \vec \phi_u \times \vec \phi_w } \diff u \diff w $$
 with the scalar field $f:D\subseteq \R^3 \rightarrow \R, \vec x \mapsto f(\vec x)$, the surface $\vec \phi$.
@@ -84,7 +84,7 @@ with the scalar field $f:D\subseteq \R^3 \rightarrow \R, \vec x \mapsto f(\vec x
 $$\iint_{\vec \phi} \vec v \bdot \diff \vec O := \iint_B \vec v\Bigl(\vec \phi(u,w)\Bigr)^\top \bdot \Bigl( \vec \phi_u \times \vec \phi_w \Bigr) \diff u \diff w$$
 with the vector field $\vec v:D\subseteq \R^3 \rightarrow \R^3, \vec x \mapsto \vec v(\vec x)$, the curve $\vec \gamma$, and $\vec x, \vec v, \vec \gamma \in \R^n$.
 
-{% endtabbox %}
+</div>
 
 
 

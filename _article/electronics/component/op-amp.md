@@ -17,7 +17,7 @@ Provides current at the output without loading the input.
 
 
 ## Non-Inverting Amplifier
-{% include figure.html width="20em" filename="opamp_noninv.svg" description="Non-Inverting Amplifier" %}
+![Non-Inverting Amplifier](opamp_noninv.svg){ width="20em"}
 
 $$V_{\mathrm{out}} = \left(1 + \frac{R_2}{R_1} \right) V_{\mathrm{in}}$$
 with resistances $R_1, R_2 \in \R$ and the voltages $V_{\mathrm{in}}, V_{\mathrm{out}} \in \R$.

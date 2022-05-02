@@ -8,7 +8,7 @@ Trigonometry studies relationships involving lengths and angles of triangles.
 
 
 ## Unit Circle
-{% include svg-object.html id="UC" filename="unit_circle.svg" %}
+![](unit_circle.svg){#UC}
 
 ## Sin, Cos, Tan
 

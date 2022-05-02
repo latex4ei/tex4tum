@@ -22,7 +22,7 @@ The rules for a boolean, non-weighted petri net:
 * When a transition fires, it consumes a token from each connected input place and produces a token on each connected output place. The consumed and produced tokens do not need to sum up.
 
 In a weighted Petri Net, the transition consumes and produces tokens according to the weights of the edges.
-{% include figure.html filename="petri-example.svg" description="Petri Net Transition" %}
+![Petri Net Transition](petri-example.svg){}
 
 
 ## Properties
@@ -41,4 +41,4 @@ If a petri net is live with initial marking M0, then it is deadlock-free
 ## Context
 Petri nets are more general than state machines because they can model concurrency. A state machine is a special petri net where each transition is only connected to one input and one output place (no concurrency).
 
-{% include figure.html filename="petrinet-classes.svg" description="Petri Net Classes" %}
+![Petri Net Classes](petrinet-classes.svg){}

@@ -25,7 +25,7 @@ Dynamic: $I_C = C \cdot \dot U_C$
 </select>
 
 
-{% include svg-object.html id="RC_graph" filename="rc_graph3.svg" %}
+![](rc_graph3.svg){#RC_graph}
 
 
 

@@ -12,12 +12,12 @@ with the number of failures $r$, the number of successes $k$, and the success pr
 
 {% include svg-object.html id="SVG_obj" filename="dist_negative_binomial.svg" description='Negative Binomial Distribution NB(k, r, p) over k for r = <span id="nbd_r">10</span> and p = <span id="nbd_p">0.3</span>' %}
 
-<div class="row">
-  <div class="col">
+<div class="row" markdown>
+  <div class="col" markdown>
   <label>Input for r</label><br>
   <input type="range" id="r_range" min="0" max="20" value="10" step="1" list="tickmarks" oninput="nb_update(this)">
   </div>
-  <div class="col">
+  <div class="col" markdown>
   <label>Input for p</label><br>
   <input type="range" id="p_range" min="0" max="10" value="3" list="tickmarks" oninput="nb_update(this)"><br><br>
   </div>

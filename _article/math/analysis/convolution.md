@@ -17,12 +17,12 @@ with signals $x(t)$, $h(t)$.
 $$(f*g)[n] = \sum\limits_{k = -\infty}^{\infty} {f[k] g[n-k]}$$
 
 
-{% include figure.html width="25em" filename="convolution.svg" description="Comparison of convolution, cross-correlation, and auto-correlation. [From Wikimedia](https://de.wikipedia.org/wiki/Datei:Comparison_convolution_correlation_de.svg)"%}
+![Comparison of convolution, cross-correlation, and auto-correlation. [From Wikimedia](https://de.wikipedia.org/wiki/Datei:Comparison_convolution_correlation_de.svg)](convolution.svg){ width="25em"}
 
 TODO adjust svg like this: https://www.thinkcalculator.com/algebra/convolution-calculator.php
 
 
-{% include figure.html width="25em" filename="convolution_rect_spiky" description="Convolution of $f(t) * g(t)$ showing $f(\tau)$ and $g(t - \tau)$"%}
+![Convolution of $f(t) * g(t)$ showing $f(\tau)$ and $g(t - \tau)$](convolution_rect_spiky){ width="25em"}
 
 
 

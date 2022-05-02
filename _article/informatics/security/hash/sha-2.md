@@ -13,11 +13,11 @@ The Secure Hash Algorithm 2 (SHA2) is a set of 6 cryptographic hash functions wi
 Applications: TLS/SSL, PGP, SSH, S/MIME, and IPsec.
 
 
-<div class="row">
-<div class="col-md-auto pr-0">
+<div class="row" markdown>
+<div class="col-md-auto pr-0" markdown>
 SHA2-256 (\" <input id="number-input" style="width: 5em;" oninput="calcSHA(this)" placeholder="Input" value=""> \") =	
 </div>
-<div class="col pl-0">
+<div class="col pl-0" markdown>
 <p><code id="SHA2_out">e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855</code></p>	
 </div>
 </div>
@@ -28,7 +28,7 @@ SHA2-256 (\" <input id="number-input" style="width: 5em;" oninput="calcSHA(this)
 A message is processed by blocks of 512 = 16 × 32 bits, each block requiring 64 rounds. For SHA-256 each round calculates 8 intermediate 32bit hash values.
 
 
-{% include figure.html width="25em" filename="hash_sha2.svg" description="One round of the SHA2 compression"%}
+![One round of the SHA2 compression](hash_sha2.svg){ width="25em"}
 
 
 

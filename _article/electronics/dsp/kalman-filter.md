@@ -65,7 +65,7 @@ which are the real measurements minus predicted measurements
 
 * Innovation Covariance: $\ma S = \ma H_{n} \ma P_{\vec x_{n|n-1}} \ma H_{n}^\top + \ma R_n$
 
-2.2 calculate optimal Kalman-gain: 
+2.2 calculate optimal Kalman-gain:
 
 $$\ma K_n = \frac{\ma P_{\vec x_{n|n-1}} \ma H_{n}^\top}{\ma H_{n} \ma P_{\vec x_{n|n-1}} \ma H_{n}^\top + \ma R_n} = \ma P_{\vec x_{n|n-1}} \ma H_{n}^\top {\ma S}^{-1}$$
 

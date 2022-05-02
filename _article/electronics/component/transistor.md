@@ -7,7 +7,7 @@ Is a current amplifier.
 
 
 ## Bipolar Transistor (BJT)
-{% include figure.html filename="bjt.png" description="PNP: E->B--C; NPN: C--B->E" %}
+![PNP: E->B--C; NPN: C--B->E](bjt.png){}
 
 ### Cut-Off Voltage
 The voltage, where ...

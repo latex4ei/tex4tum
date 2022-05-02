@@ -32,15 +32,15 @@ td{width: 15em; padding-top: 1em!important;}
 
 | Time $f(t)$                     | Frequency $X(f)$                |
 |---------------------------------|---------------------------------|
-| {% cellimg time_constant.svg %} | {% cellimg freq_constant.svg %} |
-| {% cellimg time_impulse.svg %}  | {% cellimg freq_impulse.svg %}  |
-| {% cellimg time_comb.svg %}     | {% cellimg freq_comb.svg %}     |
-| {% cellimg time_impulse_shift.svg %} | {% cellimg freq_impulse_shift.svg %} |
-| {% cellimg time_step.svg %}     | {% cellimg freq_step.svg %}     |
-| {% cellimg time_sinus.svg %}    | {% cellimg freq_sinus.svg %}    |
-| {% cellimg time_cosinus.svg %}  | {% cellimg freq_cosinus.svg %}  |
-| {% cellimg time_rect.svg %}     | {% cellimg freq_rect.svg %}     |
-| {% cellimg time_tri.svg %}      | {% cellimg freq_tri.svg %}      |
+| ![](time_constant.svg) | ![](freq_constant.svg) |
+| ![](time_impulse.svg)  | ![](freq_impulse.svg)  |
+| ![](time_comb.svg)     | ![](freq_comb.svg)     |
+| ![](time_impulse_shift.svg) | ![](freq_impulse_shift.svg) |
+| ![](time_step.svg)     | ![](freq_step.svg)     |
+| ![](time_sinus.svg)    | ![](freq_sinus.svg)    |
+| ![](time_cosinus.svg)  | ![](freq_cosinus.svg)  |
+| ![](time_rect.svg)     | ![](freq_rect.svg)     |
+| ![](time_tri.svg)      | ![](freq_tri.svg)      |
 
 
 

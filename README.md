@@ -48,12 +48,32 @@ The articles are based on the cheat sheets from [www.latex4ei.de](http://www.lat
 
 ```
 pip install mkdocs-material
+pip install mkdocs-plugin-inline-svg
 ```
 
 ### Testing MkDocs
 ```
 make mkdocs
 ```
+
+
+
+#### Creating Lists
+
+Navigation list
+
+```bash
+cd _article
+find . | sed -e "s/[^-][^\/]*\//  /g" -e "s/  \([^ ]\)/  - \1/" -e "s/- \(\w\+[^.][^m][^d]\$\)/- \u\1: /g"
+```
+
+Sheet List
+```bash
+find res/sheets | 
+- name: ([^\n]+)\s*description: "([^"]*)"\n\s*github: '?([^']*?)'?\n
+<tr><td></td><td><a href="https://github.com/latex4ei/\3"> </a>\2</a> <a href="\1">\2</a></td></tr>
+```
+
 
 
 ### Setup
