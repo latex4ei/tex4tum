@@ -9,7 +9,7 @@ SRC_DIR := pre
 # space separated list
 SRC_SUBDIRS := g
 
-BUILD_DIR := ./post
+BUILD_DIR := ./build
 TMP_DIR := ./tmp
 
 
@@ -49,7 +49,7 @@ FROM_MD=--from markdown+raw_tex+gfm_auto_identifiers+citations+markdown_in_html_
 FROM_GFM=--from gfm-raw_html
 FROM_RST=--from rst+smart+auto_identifiers
 
-TO_MD=--to markdown-simple_tables-raw_attribute-fenced_divs
+TO_MD=--to markdown-simple_tables-raw_attribute-fenced_divs-bracketed_spans
 # TO_MD=--to commonmark-smart
 
 MD_APPEND=${T4T_DIR}/tex/t4t-katex.tex

@@ -12,8 +12,8 @@ mkdocs:
 	@mkdir -p tmp/pre tmp/post
 	find _article/ -type f -print0 | xargs -0 cp -ut tmp/pre || true
 	cd tmp && make md 
-	cd tmp/post && sed -i 's/\\</</g' *.md
-	cd tmp/post && sed -i 's/markdown=""/markdown/g' *.md
+	cd tmp/build && sed -i 's/\\</</g' *.md
+	cd tmp/build && sed -i 's/markdown=""/markdown/g' *.md
 	mkdocs serve
 
 

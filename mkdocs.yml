@@ -2,7 +2,7 @@ site_name: Tex4TUM
 site_url: https://tex4tum.de/
 repo_url: https://github.com/latex4ei/tex4tum
 site_author: Emanuel Regnath
-docs_dir: tmp/post
+docs_dir: tmp/build
 site_dir: docs
 theme:
   name: material
