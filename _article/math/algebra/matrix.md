@@ -57,7 +57,7 @@ Eigenvectors: $\ker(\ma A - \lambda_i \ma 1) = \vec v_i$
 
 TODO explanation
 
-$$\ma A \vec v = \lambda \vec v$ \qquad $\det \ma A = \prod \lambda_i$ \qquad\ $\Sp \ma A = \sum a_{ii} = \sum \lambda_i$$
+$$\ma A \vec v = \lambda \vec v \qquad \det \ma A = \prod \lambda_i \qquad\ \Sp \ma A = \sum a_{ii} = \sum \lambda_i$$
 with the Eigenvalue $\lambda$ and the Eigenvector $\vec v$.
 
 

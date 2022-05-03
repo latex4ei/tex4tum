@@ -1,6 +1,6 @@
 ---
 title: Random Access Memory (RAM)
-tags: RAM
+tags: [RAM]
 ---
 
 

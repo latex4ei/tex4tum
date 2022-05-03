@@ -112,9 +112,9 @@ nav:
       - ram.md
       - psu.md
       - computer.md
-    - index.md
+    - electronics.md
     - Actuator: 
-      - index.md
+      - actuator.md
       - servo.md
     - Component: 
       - op-amp.md

@@ -22,8 +22,6 @@ The dynamic model for the physical process is
 <!-- $$\begin{array}{ll} \vec{x}_{n} & = \ma G_n \vec{x}_{n-1} + \ma B \vec{u}_n + \vec{w}_{n-1} \\[0.5em] \vec{y}_{n} & = \ma H_{n} \vec{x}_{n} + \vec{v}_{n} \end{array}$$ -->
 
 $$\begin{array}{ll} \vec{x}_{n+1} & = \ma G_n \vec{x}_{n} + \ma B \vec{u}_n + \vec{w}_n \\ \vec{y}_{n} & = \ma H_{n} \vec{x}_{n} + \vec{v}_{n} \end{array}$$
-
-
 with the $k$ states $\vec x$, transition matrix $\ma G$, gaussian process noise $\vec w_n$, input $\vec u$,
 $l$ measurements $\vec y$, measurement model $\ma H$, gaussian measurement noise $\vec v_n$,
 time point $n$.

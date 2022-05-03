@@ -1,12 +1,24 @@
 /* mkdocs classes */
 
+
+/* fix tabs */
 div.tabbed-set {
 	border: .05rem solid var(--md-typeset-table-color);
 	border-radius: 0.1rem;
 }
-
 div.tabbed-set .tabbed-content { padding: 0 0.625em; }
 
+
+/* fix math details */
+.md-typeset details.math-legend {
+	font-size: .8em;
+	border-color: #005293;
+	/*border: none;*/
+}
+.md-typeset details.math-legend summary {
+	font-size: 1.2em; padding: 0 !important;
+}
+.md-typeset details.math-legend summary:before { display: none; }
 
 p input { 
 	outline: .05rem solid var(--md-typeset-table-color); 
@@ -26,6 +38,11 @@ p input {
   --md-accent-fg-color: #a2ad00;
 }
 
+
+
+
+/* extra: clickable spans */
+span[onclick] { color: var(--md-typeset-a-color); cursor: pointer; }
 
 
 @font-face {

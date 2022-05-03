@@ -2,19 +2,146 @@
 title: Demo of Interactive Features
 ---
 
-# Demo of Interactive Features
 
 This page is a showcase of the features that TeX4TUM provides and demonstrates how learning materials could be made interactive, fast accessible, and neat.
 
 <!-- TODO This will be written into the todo-list -->
 
-Click on the heading to unfold the definition box.
+
+## Math with KaTeX
+We use [KaTeX](https://khan.github.io/KaTeX/) as TeX interpreter, such that you can typeset math equations simply using `$`.
+For example to display $\sqrt{x^2 + \alpha}$ as inline you write `$\sqrt{x^2 + \alpha}$`. Please note that there must *not* be a space between the `$` and your tex code!
+For display style equations, leave a blank line and surround your tex code by double `$$`s. You may optionally explain used symbols by a line starting with `with` or `where` that directly follows the equation.
+
+The equation (you can click on it)
+
+$$\oint_{\partial A} \vec E \cdot \diff \vec s$$
+with electric field $\vec E$, surface $A$ and direction $\vec s$
+
+is simply written as one paragraph
+
+```
+$$\oint_{\partial A} \vec E \cdot \diff \vec s$$
+with electric field $\vec E$, surface $A$ and direction $\vec s$
+```
 
 
-## Interactive Features
+### Interactive Equations
+Inline equations can be made interactive using JS. Click on the values of R and C in the text to change them!
 
-### Content Categories
-Read only the content you really need. Use the options in the top right corner to change the visibility of the following content:<br>
+For a low-pass filter, the Cut-Off Frequency is 
+
+$$f_c = \frac{1}{2\pi R C}$$
+with the resistance $R$ and capacity $C$
+
+For resistance $R$ = <span id="R_val" onclick="askValue(this.id)">10k</span>Ω and capacity $C$ = <span id="C_val" onclick="askValue(this.id)">100n</span>F the Cut-Off Frequency is $f_c$ = <tspan id="F_val">159 Hz</tspan>.
+
+
+Q: How is this implemented?
+A: For the first value we write `$R$ = <span id="R_val" onclick="askValue(this.id)">10k</span>Ω`. The function `askValue()` will take care of the rest. The JS code is added at the end of the document within a `<script>` tag.
+
+<!-- Even more complex equations such as $\int \sqrt{x^2} \diff x = \frac{1}{3} x^3$ are rendered beautifully with [KaTex](https://khan.github.io/KaTeX/)). -->
+
+
+
+
+## Creating Interactive Boxes
+Boxes are special content that separates from normal text.
+
+### Hidden Details
+Read only content you really need. We provide two easy methods to provide foldable content that unfolds when you click on it.
+
+1. Paragraphs: start a paragraph with `Details: ` or `Q: ... \n A: ...`
+2. Headings: start a heading with `Example`, `Explanation`, or `Details`
+
+
+**Using Paragraphs**
+
+Q: A simple question?
+A: Maybe not.
+
+To create Q&A, start a paragraph with `Q:` and have `A:` on the second line.
+```
+Q: A simple question?
+A: Maybe not. 
+```
+
+
+
+
+
+**Using Headings**
+
+
+#### Explanation of Details
+This is an explanation to demonstrate the auto detection of an explanation. All you need to do is to start a heading with the term `Explanation` like in this example. It was created using the code
+
+```
+### Explanation of Details
+This is an explanation to demonstrate ...
+```
+
+The advantage of this method is that it allows to include multiple paragraphs.
+
+##### Nested Headings
+Furthermore, any heading with a higher level will be included as well. The box will stop at the next heading with an equal or lower level than the heading which has started the explanation box.
+
+
+#### Example Subsection
+
+This is an example to demonstrate the auto detection of an example
+even over several lines.
+
+#### Info on more details
+
+At this section, the example should stop.
+
+
+
+
+
+### Special Content Boxes
+Similar to the details, you can also create boxes that show the content by default.
+
+
+#### Tex4TUM Markdown
+Our syntax for creating special colored boxes (“Admonitions”) is very simple. Just start a paragraph with `Note:`, `Example:`, or `Warning:`
+
+<div class="row" markdown>
+<div class="col" markdown>
+
+Note: This is an attempt with syntax from tex4tum
+ 
+
+</div><div class="col-4" markdown>
+
+Example: The Example heading.
+And some details.
+
+</div><div class="col-4" markdown>
+
+
+Warning: 
+If you directly start the next line, the first term will be used as heading.
+
+</div><div class="col-4" markdown>
+
+
+</div></div>
+
+```
+Note: This is an attempt with syntax from tex4tum
+ 
+Example: The Example heading.
+And some details.
+
+Warning: 
+If you directly start the next line, the first term will be used as heading.
+```
+
+<!-- #### MkDocs Markdown
+The [syntax from MkDocs](https://squidfunk.github.io/mkdocs-material/reference/admonitions/#usage) uses `???` and `!!!`. This syntax is discouraged as it is not compatible with any other system and will look confusing when not parsed correctly.
+
 
 ??? abstract 
     
@@ -26,30 +153,21 @@ Read only the content you really need. Use the options in the top right corner t
 
 ??? info "Explanation"
 
-    This is an explanation.
+    This is an explanation. -->
+
+
+#### HTML in Markdown
+The third option is to directly use the `<blockquote>` or `<details>` tag.
+
+<details class="hint" markdown>
+  <summary>The summary heading</summary>
+
+The details of this example.
+
+</details>
 
 
 
-Note: this is an attempt with syntax from tex4tum
-
- 
-Example: does this work?
-
-
-
-### Interactive Equations
-
-For a low-pass filter, the Cut-Off Frequency is 
-
-$$f_c = \frac{1}{2\pi R C}$$
-
-with the resistance $R$ and capacity $C$
-
-Click on the equation to expand the legend.
-For resistance $R$ = <span id="R_val" onclick="askValue(this.id)">10k</span>Ω and capacity $C$ = <span id="C_val" onclick="askValue(this.id)">100n</span>F the Cut-Off Frequency is $f_c$ = <tspan id="F_val">159 Hz</tspan>.
-Click on the values of R and C in the text to change them!
-
-<!-- Even more complex equations such as $\int \sqrt{x^2} \diff x = \frac{1}{3} x^3$ are rendered beautifully with [KaTex](https://khan.github.io/KaTeX/)). -->
 
 
 ### Interactive Diagrams
@@ -61,9 +179,6 @@ Play with diagrams for better understanding. Click and drag the black ray with t
 <!-- <figure>
 <object data="/res/img/dynamic-images/fraction.svg" type="image/svg+xml"></object>
 </figure> -->
-
-
-A new paragraph
 
 
 
@@ -192,51 +307,6 @@ Also content after the tabbox is displayed normally.
 
 
 
-
-
-
-## Feature Tests
-
-### Content Categories
-
-**Using Liquid Tags:**
-
-{% definition %}The square root is the math function $\sqrt{\cdot}$.{% enddefinition %}
-{% example %} Example $\sqrt{ x^4 } = x^2$ {% endexample %}
-{% explanation %} $x^4 = x^{2+2} = x^2 \cdot x^2$  {% endexplanation %}
-{% legend %} where $x$ is an arbitrary number {% endlegend %}
-
-
-
-**Using Own Parser:**
-
-Definition: The square root is the math function
-
-
-Example: $\sqrt{ x^4 } = x^2$
-
-
-Explanation: The answer is $x^2$ because $x^4 = x^{2+2} = x^2 \cdot x^2$
-
-
-Legend: where $x$ is an arbitrary number
-
-
-
-
-**Using Headings**
-
-
-### Explanation of This
-This is an explanation to demonstrate the auto detection of an explanation 
-
-
-even over several lines
-
-
-### Example Subsection
-This is an example to demonstrate the auto detection of an example
-even over several lines
 
 
 

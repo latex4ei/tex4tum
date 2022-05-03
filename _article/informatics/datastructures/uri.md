@@ -1,6 +1,6 @@
 ---
 title: Uniform Resource Identifier (URI)
-tags: URI URL URN
+tags: [URI, URL, URN]
 ---
 A Uniform Resource Identifier (URI) is a string of characters used to identify a resource. Web-URLs, for example, are a common type of URIs.
 

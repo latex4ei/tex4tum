@@ -50,16 +50,16 @@ with the columns $j \in \{0,1,2,3\}$
 
 The message is divided into blocks, and each block is encrypted separately.
 
-{% include figure.html width="40em" filename="encmode_ecb.svg" %}
-{% include figure.html width="40em" filename="decmode_ecb.svg" %}
+![Electronic Codebook (ECB) Encryption](encmode_ecb.svg){ width="40em"}
+![Electronic Codebook (ECB) Decryption](decmode_ecb.svg){ width="40em"}
 
 ### CBC
 **Cipher Block Chaining (CBC)**
 
 Each block of plaintext is XORed with the previous ciphertext block before being encrypted.
 
-{% include figure.html width="40em" filename="encmode_cbc.svg" %}
-{% include figure.html width="40em" filename="decmode_cbc.svg" %}
+![](encmode_cbc.svg){ width="40em"}
+![](decmode_cbc.svg){ width="40em"}
 
 
 ### CFB
@@ -67,9 +67,9 @@ Each block of plaintext is XORed with the previous ciphertext block before being
 
 A close relative of CBC. Transforms a block cipher into a self-synchronizing stream cipher.
 
-{% include figure.html width="40em" filename="encmode_cfb.svg" %}
+![](encmode_cfb.svg){ width="40em"}
 
-{% include figure.html width="40em" filename="decmode_cfb.svg" %}
+![](decmode_cfb.svg){ width="40em"}
 
 
 ### OFB
@@ -77,8 +77,8 @@ A close relative of CBC. Transforms a block cipher into a self-synchronizing str
 
 Transforms a block cipher into a synchronous stream cipher. It generates keystream blocks, which are then XORed with the plaintext blocks to get the ciphertext.
 
-{% include figure.html width="40em" filename="encmode_ofb.svg" %}
-{% include figure.html width="40em" filename="decmode_ofb.svg" %}
+![](encmode_ofb.svg){ width="40em"}
+![](decmode_ofb.svg){ width="40em"}
 
 
 ### CTR
@@ -86,8 +86,8 @@ Transforms a block cipher into a synchronous stream cipher. It generates keystre
 
 Counter mode turns a block cipher into a stream cipher. It generates the next keystream block by encrypting successive values of a "counter".
 
-{% include figure.html width="40em" filename="encmode_ctr.svg" %}
-{% include figure.html width="40em" filename="decmode_ctr.svg" %}
+![](encmode_ctr.svg){ width="40em"}
+![](decmode_ctr.svg){ width="40em"}
 
 
 </div>

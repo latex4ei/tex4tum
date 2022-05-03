@@ -14,6 +14,7 @@ mkdocs:
 	cd tmp/build && sed -i 's/\\</</g' *.md
 	cd tmp/build && sed -i 's/markdown=""/markdown/g' *.md
 	mkdocs serve
+# 	cd tmp/build && sed -i 's/\(<div[^>]*[^n]\)>/\1 markdown>/g' *.md
 
 
 test: build

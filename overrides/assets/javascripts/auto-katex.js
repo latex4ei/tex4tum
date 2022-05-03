@@ -45,6 +45,10 @@ var macros = {
     "\\mat": "\\begin{bmatrix} #1 \\end{bmatrix}",
     "\\vect": "\\begin{pmatrix} #1 \\end{pmatrix}",
     "\\SI": "{#1\\,\\mathrm{#2}}",
+    "\\ra": "\\rightarrow",
+    "\\Sp": "\\mathrm{Sp}",
+    "\\e": "\\mathrm{e}",
+    "\\i": "\\boldsymbol{\\mathrm{i}}",
   };
 
 

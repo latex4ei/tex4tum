@@ -24,6 +24,21 @@ $$f(k, n, p) = \P( X = k ) = \binom{n}{k} p^k (1-p)^{n-k}$$
 with the number of trials $n$, the number of successes $k$, and the success probability $p$.
 
 
+![Binomial Distribution B(k, n, p) over k for n = <span id="bd_n">30</span> and p = <span id="bd_p">0.3</span>](binomial.svg){#SVG_obj}
+
+
+<div class="row" markdown>
+  <div class="col" markdown>
+  <label>Input for p</label><br>
+  <input type="range" id="p_range" min="0" max="10" value="3" list="tickmarks" oninput="update(this)"><br><br>
+  </div>
+  <div class="col" markdown>
+  <label>Input for n</label><br>
+  <input type="range" id="n_range" min="0" max="40" value="30" step="1" list="tickmarks" oninput="update(this)">
+  </div>
+</div>
+
+
 ### Explanation of the Terms
 The term $p^k$ gives us the probability to get exactly $k$ successes in a row of $k$ trials. Since we have $n$ trials and not $k$, the term $(1-p)^{n-k}$ gives us the probability to get only misses (or failures) for the remaining $n-k$ trials. Since the successes can appear anywhere among the $n$ trials, we multiply by the term $\binom{n}{k}$, which corresponds to the number of possible permutations of $k$ successes within the $n$ trials.
 
@@ -38,21 +53,7 @@ $$P(k=7, n=10, p=0.5) = \binom{10}{7} 0.5^7 (1-0.5)^{10-7} = 0.117$$
 
 
 
-![Binomial Distribution B(k, n, p) over k for n = <span id="bd_n">30</span> and p = <span id="bd_p">0.3</span>](binomial.svg){#SVG_obj}
 
-
-
-
-<div class="row" markdown>
-  <div class="col" markdown>
-  <label>Input for p</label><br>
-  <input type="range" id="p_range" min="0" max="10" value="3" list="tickmarks" oninput="update(this)"><br><br>
-  </div>
-  <div class="col" markdown>
-  <label>Input for n</label><br>
-  <input type="range" id="n_range" min="0" max="40" value="30" step="1" list="tickmarks" oninput="update(this)">
-  </div>
-</div>
 
 
 
