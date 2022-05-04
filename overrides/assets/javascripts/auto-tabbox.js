@@ -4,15 +4,12 @@
 
 
 var tabstyle = `
-:root {
+.tabs {
   --border: 1px solid var(--cmed);
   --cfg:   #433;    --cbg:    #fff;
   --cdark: #888;    --clight: #f5f6f7;
   --cmed:  #d1d1d1;
   --clink: #07c;  
-}
-
-.tabs {
   display: flex;
   flex-wrap: wrap; 
   background: linear-gradient(0deg, var(--cbg) 1rem, var(--clight) 0%);
@@ -97,7 +94,7 @@ function makeTabboxes(){
       label=hs[i].innerText.replace(/\W/g,'');
       id=`tab-${numBoxes}${label}`
       hs[i].parentElement.classList.add("tab")
-      hs[i].parentElement.insertAdjacentHTML( 'beforebegin', `<input type="radio" name="tabs${numBoxes}" id="${id}"><label for="${id}">${hs[i].innerText.slice(0, -1)}</label>` );
+      hs[i].parentElement.insertAdjacentHTML( 'beforebegin', `<input type="radio" name="tabs${numBoxes}" id="${id}"><label for="${id}">${hs[i].innerText.replace(/#$/, '')}</label>` );
       hs[i].outerHTML = '';// remove heading
     }
     box.firstElementChild.setAttribute("checked", "checked");

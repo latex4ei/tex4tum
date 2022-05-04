@@ -98,19 +98,19 @@ $\cosh^2 (x) - \sinh^2 (x) = 1$
 
 === "arcsinh"
 
-$$\mathrm{arcsinh}(x) := \ln\left(x+\sqrt{x^2+1}\right)$$
+    $$\mathrm{arcsinh}(x) := \ln\left(x+\sqrt{x^2+1}\right)$$
 
 === "arccosh"
 
-$$\mathrm{arccosh}(x) := \ln\left(x+\sqrt{x^2-1}\right)$$
+    $$\mathrm{arccosh}(x) := \ln\left(x+\sqrt{x^2-1}\right)$$
 
 === "arctanh"
 
-$$\mathrm{artanh}(x) = \frac{1}{2} \ln {\frac {1+x}{1-x}}$$
+    $$\mathrm{artanh}(x) = \frac{1}{2} \ln {\frac {1+x}{1-x}}$$
 
 === "arccoth"
 
-$$\mathrm{arcoth}(x) = \frac{1}{2} \ln {\frac {x+1}{x-1}}$$
+    $$\mathrm{arcoth}(x) = \frac{1}{2} \ln {\frac {x+1}{x-1}}$$
 
 
 

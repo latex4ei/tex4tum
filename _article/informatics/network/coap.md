@@ -36,16 +36,16 @@ Based on Representational State Transfer (REST).
 
 ### Options
 
-    0 1 2 3 4 5 6 7
-   +-+-+-+-+-+-+-+-+
-   | delta |length |   1 byte
-   +---------------+
-   \ delta ext.    \   0-2 byte
-   +---------------+
-   \ length ext.   \   0-2 byte
-   +---------------+
-   \    value      \   0 or more bytes
-   +---------------+
+     0 1 2 3 4 5 6 7
+    +-+-+-+-+-+-+-+-+
+    | delta |length |   1 byte
+    +---------------+
+    \ delta ext.    \   0-2 byte
+    +---------------+
+    \ length ext.   \   0-2 byte
+    +---------------+
+    \    value      \   0 or more bytes
+    +---------------+
 
 
 

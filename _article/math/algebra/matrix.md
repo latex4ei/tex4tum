@@ -13,8 +13,8 @@ A matrix $\ma A \in \mathbb K^{2\times 3}$ could be $\ma A = \mat{ a & b & c \\ 
 
 | Dimension |
 |-----------|
-| $\dim \mathbb K = n = \rang\ma A + \dim\ker\ma A$ |
-| $\rang\ma A = \rang\ma A^{\top}$ |
+| $\dim \mathbb K = n = \rank\ma A + \dim\ker\ma A$ |
+| $\rank\ma A = \rank\ma A^{\top}$ |
 
 
 ## Calculations
@@ -66,8 +66,8 @@ with the Eigenvalue $\lambda$ and the Eigenvector $\vec v$.
 
 | Properties | |
 |------------|----|
-| regular  | $\Leftrightarrow \det (\ma A) \ne 0 \Leftrightarrow \rang\ma A = n$ |
-| singular | $\Leftrightarrow \det (\ma A) = 0 \Leftrightarrow \rang\ma A \ne n$ |
+| regular  | $\Leftrightarrow \det (\ma A) \ne 0 \Leftrightarrow \rank\ma A = n$ |
+| singular | $\Leftrightarrow \det (\ma A) = 0 \Leftrightarrow \rank\ma A \ne n$ |
 | orthogonal | $\Leftrightarrow \ma A^\top=\ma A^{-1} \Ra \det(\ma A) = \pm 1$ |
 | symmetric | $\ma A=\ma A^\top$ \qquad schiefsymmetrisch: $\ma A=-\ma A^\top$ |
 
