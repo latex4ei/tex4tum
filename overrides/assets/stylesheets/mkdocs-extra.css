@@ -44,6 +44,9 @@ p input {
 /* extra: clickable spans */
 span[onclick] { color: var(--md-typeset-a-color); cursor: pointer; }
 
+.md-typeset dt { font-weight: bold; }
+
+
 
 @font-face {
   font-family: 'QFontAwesome';

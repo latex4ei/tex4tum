@@ -7,8 +7,8 @@
 */
 
 
-KATEX_JS='https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.js'
-KATEX_CSS='https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css'
+KATEX_JS='https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.0/katex.min.js'
+KATEX_CSS='https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.0/katex.min.css'
 
 
 function loadKaTeX(renderCall=renderArithmatex) {

@@ -10,7 +10,7 @@ Complementary Metal (Poly-Si) Oxide (SiO2) Semiconductor (CMOS).
 
 | **NOT**      | **NAND**    | **NOR**     |
 |--------------|-------------|-------------|
-|{% inlineimage cmos_not.svg %}  | {% inlineimage cmos_nand.svg %}  | {% inlineimage cmos_nor.svg %}  |
+|![cmos_not](circuits/cmos_not.svg){#cmos_not}  | ![cmos_nand](circuits/cmos_nand.svg){#cmos_nand}  | ![cmos_nor](circuits/cmos_nor.svg){#cmos_nor}  |
 
 
 

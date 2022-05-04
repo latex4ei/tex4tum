@@ -11,7 +11,8 @@ In general, a light wave is partially refracted and partially reflected when it 
 
 
 
-**Reflection**: The angle at which the wave is incident on the surface equals the angle at which it is reflected. 	
+**Reflection**: The angle at which the wave is incident on the surface equals the angle at which it is reflected.
+
 $$\alpha_1 = - \alpha_2$$
 with the angle of incidence $\alpha_1$ and the angle of reflection $\alpha_2$.
 
@@ -51,12 +52,11 @@ $$\alpha_C = \arcsin\left( \frac{n_2}{n_1} \right)$$
 where $\alpha_C$ is the critical angle, $n_1$ and $n_2$ are the refractive index.
 
 
-{% explanation %}
+#### Explanation
 
 - If $\alpha \le \alpha_C$, the ray will split; some of the ray will reflect
 - If $\alpha \gt \alpha_C$, the entire ray reflects from the boundary.
 
-{% endexplanation %}
 
 
 

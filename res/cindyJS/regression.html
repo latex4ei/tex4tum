@@ -1,0 +1,59 @@
+<script src="https://cindyjs.org/dist/v0.8/Cindy.js" integrity="sha256-GVFcxFrj3m64JQPL5NZv9MPbCGHnxWWPhKLsnHvaK+Q=" crossorigin="anonymous"></script>
+<script id='csmove' type='text/x-cindyscript'>
+    pts=apply(allpoints(),#.xy);
+
+    m=apply(pts,(1,#_1));
+    y=apply(pts,#_2);
+    ma=transpose(m)*m;
+    mb=transpose(m)*y;
+    mainv=inverse(ma);
+    v=mainv*mb;
+    f(x):=v_2*x+v_1;
+
+    sq(x,y1,y2):=(
+                  d=y2-y1;
+                  p=((x,y1),(x,y2),(x+d,y2),(x+d,y1));
+                  fillpoly(p,color->(1,0.5,0.5),alpha->0.4);
+                  drawpoly(p,color->(1,0.5,0.5),alpha->0.9);
+                  );
+
+    forall(pts,sq(#_1,#_2,(f(#_1))));
+
+    draw(join((1,f(1)),(2,f(2))));
+
+</script>
+<figure>
+	<div id="CSCanvas" style="width:640px; height:320px; border: 1px solid gray;"></div>
+	<figcaption>CindyJS Test</figcaption>
+</figure>
+<script type="text/javascript">
+	// Standard Coordinate are between -10 and 10
+	var gslp=[
+          {name:"A", kind:"P", type:"Free", pos:[Math.random()*2-8,Math.random()*4-4,1]},
+          {name:"B", kind:"P", type:"Free", pos:[Math.random()*2-6,Math.random()*4-3,1]},
+          {name:"C", kind:"P", type:"Free", pos:[Math.random()*2-4,Math.random()*4-2,1]},
+          {name:"D", kind:"P", type:"Free", pos:[Math.random()*2-2,Math.random()*4-1,1]},
+          {name:"E", kind:"P", type:"Free", pos:[Math.random()*2-0,Math.random()*4-0,1]},
+          {name:"F", kind:"P", type:"Free", pos:[Math.random()*2+2,Math.random()*4+1,1]},
+          {name:"G", kind:"P", type:"Free", pos:[Math.random()*2+4,Math.random()*4+2,1]},
+          {name:"H", kind:"P", type:"Free", pos:[Math.random()*2+6,Math.random()*4+3,1]},
+          {name:"I", kind:"P", type:"Free", pos:[Math.random()*2+8,Math.random()*4+4,1]},
+          // {name:"Center", kind:"P", type:"Free", pos:[0,0]},
+          // {name:"TL", kind:"P", type:"Free", pos:[-10,-10]},
+          // {name:"BR", kind:"P", type:"Free", pos:[10,10]},
+          ];
+
+CindyJS({
+	// canvasname: "CSCanvas",
+    defaultAppearance: {pointSize: 4, pointColor: [1,0.7,0]},
+    movescript:"csmove",
+    geometry:gslp,
+    ports: [{
+    	id: "CSCanvas",
+    	// width: 920,
+    	// height: 526,
+    	transform: [{visibleRect: [-8, 8, 12, -10]}],
+  	}],
+  	use:["katex"],
+});
+</script>

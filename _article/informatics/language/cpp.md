@@ -1,6 +1,6 @@
 ---
 title: C++
-tags: cpp
+tags: [cpp]
 ---
 
 C++ is a general-purpose programming language with imperative, object-oriented and generic programming features.

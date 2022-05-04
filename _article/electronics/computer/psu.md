@@ -1,6 +1,6 @@
 ---
 title: Power Supply Unit (PSU)
-tags: Netzteil
+tags: [Netzteil]
 ---
 A Power Supply Unit (PSU) converts mains AC to low-voltage regulated DC power for the internal components of a computer.
 

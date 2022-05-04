@@ -3,7 +3,7 @@ title: Bash
 ---
 The “Bourne-again shell” (Bash) is a command language and interpreter on Unix systems.
 
-{% highlight bash %}
+```bash
 #!/usr/bin/env bash
 # hello beer: drink 0.5 liter in 4 rounds
 
@@ -32,7 +32,7 @@ do
     fi
 done
 exit 0
-{% endhighlight %}
+```
 
 
 
@@ -70,7 +70,7 @@ fi
 
 ## Input / Output
 
-{% highlight bash %}
+```bash
 read -p "Do you want to continue? (y|n)" -n 1 -r
 if [[ $REPLY =~ ^[Yy]$ ]]; then
     # do dangerous stuff
@@ -81,7 +81,7 @@ while read f; do
 	echo "Line is $f" 
 done < $path 
 }
-{% endhighlight %}
+```
 
 
 

@@ -92,12 +92,11 @@ $$\ma G = \frac{\partial g}{\partial x} \Big\vert_{\hat{\vec x}_{n-1}, \vec u_n}
 If $i$ sensors measure the same state $x_j$, this can be expressed in the measurement matrix $\ma H$. The column $j$ will have $i$ rows with entries.
 
 
-## Example
-{% example %}
-Kalman Filter for Gyroscope and Accelerometer:
+## Example for Gyroscope and Accelerometer
 
+Kalman Filter for Gyroscope and Accelerometer:
 state $\vec x$ are the orientation angles roll and pitch and the bias angle
-{% endexample %}
+
 
 
 

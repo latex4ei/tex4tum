@@ -3,11 +3,12 @@
 
 
 
-data-dir: ${.}/make/t4t/pd  # set data dir
+data-dir: ${.}/t4t/pd  # set data dir
 
 
 reader: markdown+raw_tex+gfm_auto_identifiers+citations+markdown_in_html_blocks
-
+# reader: gfm-raw_html
+writer: markdown-simple_tables-multiline_tables-grid_tables-raw_attribute-fenced_divs-bracketed_spans
 
 
 
@@ -45,7 +46,17 @@ filters:
 
 
   
-resource-path: ['.','res', 'res/img', 'res/img/dynamic-images', 'res/img/static-images']
+resource-path: [
+  '.',
+  'res', 
+  'res/img', 
+  'res/img/dynamic-images', 
+  'res/img/content-images',
+  'res/img/content-images/electrical',
+  'res/img/content-images/informatics',
+  'res/img/content-images/math',
+  'res/cindyJS',
+]
 
 
 # metadata values specified here are parsed as literal
@@ -98,3 +109,5 @@ citeproc: true
 cite-method: biblatex
 
 
+html-math-method:
+  method: katex

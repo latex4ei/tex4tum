@@ -63,7 +63,7 @@ for sips in sips_per_round:
 Use `@property`
 
 
-{% highlight python linenos %}
+```python
 class Car:
 	__init__(self, ownval):
 		self._myvar = ownval
@@ -71,7 +71,7 @@ class Car:
 	@property
 	def myvar(self):
 		return self._myvar
-{% endhighlight %}
+```
 
 
 

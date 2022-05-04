@@ -14,13 +14,13 @@ C is specified by the following standards:
 
 
 ## Example: Hello World
-{% highlight c linenos %}
+```c
 int main() {
 	if (a < 3){
 		printf("Hello World");
 	}
 }
-{% endhighlight %}
+```
 
 TODO list all keywords
 

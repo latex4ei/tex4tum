@@ -31,7 +31,7 @@ Our file structure requires a YAML header (surrounded by `---`) that states a ti
 ```
  ---
  title: Inter-Integrated Circuit I²C
- tags: i2c, bus, SDA, SCK
+ tags: [i2c, bus, SDA, SCK]
  ---
 
  The first paragraph is the definition (hidden by default).
@@ -101,77 +101,74 @@ To include Images use the following commands
 
 **Figures**
 ```bash
-{% raw %}{% include figure.html filename="complex.svg" description="Description goes here" width="50%" %}
-{% endraw %}
+{% include figure.html filename="complex.svg" description="Description goes here" width="50%" %}
 ```
 Output: Image in figure environment with image description
 {% include figure.html filename="complex.svg" description="Description goes here" width="50%" %}
 
 **Inline Image**
 ```bash
-{% raw %}{% inlineimage capacitor_symbol.svg %}
-{% endraw %}
+{% inlineimage capacitor_symbol.svg %}
 ```
 Output: Inline Image {% inlineimage capacitor_symbol.svg %}
 
 **SVG Objects**
 ```bash
-{% raw %}{% include svg-object.html width="18em" id="RC_obj" filename="rc.svg" description="Circuit of low-pass filter" %}
-{% endraw %}
+{% include svg-object.html width="18em" id="RC_obj" filename="rc.svg" description="Circuit of low-pass filter" %}
 ```
 Output: SVG Object
 {% include svg-object.html width="18em" id="RC_obj" filename="rc.svg" description="Circuit of low-pass filter" %}
 
 
 @todo: should we use mermaid?
-{%comment%}
+
+
 ### Diagramms
 We use [mermaid](https://knsv.github.io/mermaid) for drawing diagramms. For this we created a liquid tag
 ```bash
-{% raw %}{% mermaid %}
-graph TD;
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
-{% endmermaid %}
-{% endraw %}
-```
-Check some [demos](https://knsv.github.io/mermaid/#demos9) and the online editor of mermaid: [Live Editor](knsv.github.io/mermaid/live_editor)
-
-Output:
 {% mermaid %}
 graph TD;
     A-->B;
     A-->C;
     B-->D;
     C-->D;
-{% endmermaid %} 
-{%endcomment%}
+{% endmermaid %}
+
+```
+Check some [demos](https://knsv.github.io/mermaid/#demos9) and the online editor of mermaid: [Live Editor](knsv.github.io/mermaid/live_editor)
+
+Output:
+```mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+```
+
 
 
 ### Code Listings
 Verbatime code can be placed inside backticks, e.g. \`code\` is displayed as
 `code`.
 If you want to highlight code put it in a block of three backticks. Directly after the backticks you can specify the language.
-{% highlight c linenos %}
+
+````
 ```c
 int main() {
 	printf("Hello World");
 }
 ```
-{% endhighlight %}
+````
 
-As an alternative we also support advanced syntax highlighting using the following liquid tag
-```  
-{% raw %}{% highlight c linenos %}
+This procudes 
+
+```c 
 int main() {
 	if (a < 3){
 		printf("Hello World");
 	}
 }
-{% endhighlight %}
-{% endraw %}
 ```
 
 
@@ -179,25 +176,25 @@ int main() {
 ### Acronyms
 Acronyms, such as AES, are parsed and linked automatically. If you want to add a new abbreviation just add it to `res/parser_util/abbreviations.md`. The structure should look like this
 ```bash
-{% raw %}*[AES]: Advanced Encryption Standard
-{% endraw %}
+*[AES]: Advanced Encryption Standard
+
 ```
 
 
 ### Content Categories
 We currently support four special categories of content, which visibility is influenced via interactions or the options (see [Demo Page](demo.html))
 ```bash
-{% raw %}{% definition %}text{% enddefinition %}
+{% definition %}text{% enddefinition %}
 {% example %}text{% endexample %}
 {% explanation %}text{% endexplanation %}
 {% legend %}text{% endlegend %}
-{% endraw %}
+
 ```
 
 ### Emphbox
 ```bash
-{% raw %}{% emphbox %}Content in box{% endemphbox %}
-{% endraw %}
+{% emphbox %}Content in box{% endemphbox %}
+
 ```
 Output:
 {% emphbox %}Content in box{% endemphbox %}

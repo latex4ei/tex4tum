@@ -4,11 +4,14 @@ repo_url: https://github.com/latex4ei/tex4tum
 site_author: Emanuel Regnath
 docs_dir: tmp/build
 site_dir: docs
+use_directory_urls: false
 watch:
   - _article
+
+
 theme:
   name: material
-  logo: /res/img/Logo.png
+  logo: assets/img/Logo.png
   palette:
     scheme: tum
   custom_dir: overrides
@@ -16,6 +19,7 @@ theme:
     - search.highlight
     - navigation.tabs
     - navigation.indexes
+
 
 markdown_extensions:
   - abbr
@@ -43,10 +47,6 @@ plugins:
       separator: '[\s\-\.\(\)]+'
       indexing: 'sections'
   - tags
-  # - inline-svg
-  # - mkdocs-simple-hooks:
-  #     hooks:
-  #       on_pre_build: "make.mkdocs-t4t-plugin:print_args"
 
 
 extra_css:
@@ -107,12 +107,12 @@ nav:
     - machines.md
     - quadcopter.md
   - Electronics: 
+    - electronics.md
     - Computer: 
       - processor.md
       - ram.md
       - psu.md
       - computer.md
-    - electronics.md
     - Actuator: 
       - actuator.md
       - servo.md

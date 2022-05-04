@@ -1,6 +1,6 @@
 ---
 title: TCP
-tags: port
+tags: [port, ACK, SYN, FIN]
 ---
 
 The Transmission Control Protocol (TCP) is one of the main protocols of the Internet protocol suite.

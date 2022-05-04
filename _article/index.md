@@ -94,4 +94,4 @@ title: Tex4TUM
 </div>
 </div>
 
-{{ FOLDER_TOC }}
+{nav}

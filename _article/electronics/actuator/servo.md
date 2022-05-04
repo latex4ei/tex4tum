@@ -1,9 +1,10 @@
 ---
 title: Servo Motor
-tags: motor pwm
+tags: [motor, pwm]
 ---
-A Servo Motor is a cheap rotary actuator used for radio control and small-scale robotics.
 
+A Servo Motor is a cheap rotary actuator used for radio control and small-scale robotics.
+ 
 
 ## Colored Wires
 A servo motor is normally connected using just 3 wires.

@@ -7,10 +7,10 @@ tite: Electrical Component
 
 | Type | Symbol | Function | Linearized |
 |--------|--------|--------|--------|
-| Resistivity | {% inlineimage symbol_resistivity.svg %} | $f_R(u,i)$  | $u = U_0 + R \cdot i$|
-| Capacity | {% inlineimage symbol_capacity.svg %} | $f_C(u,q)$ | $q = Q_0 + C \cdot u$|
-| Inductivity | {% inlineimage symbol_inductivity.svg %} | $f_L(i,\Phi)$ | $\Phi = \Phi_0 + L \cdot i$|
-| Memristivity | {% inlineimage symbol_memristivity.svg %} | $f_M(q,\Phi)$ | $\Phi = \Phi_0 + M \cdot q$ |
+| Resistivity | ![resistivity](symb/symbol_resistivity.svg){#resistivity} | $f_R(u,i)$  | $u = U_0 + R \cdot i$|
+| Capacity | ![capacity](symb/symbol_capacity.svg){#capacity} | $f_C(u,q)$ | $q = Q_0 + C \cdot u$|
+| Inductivity | ![inductivity](symb/symbol_inductivity.svg){#inductivity} | $f_L(i,\Phi)$ | $\Phi = \Phi_0 + L \cdot i$|
+| Memristivity | ![memristivity](symb/symbol_memristivity.svg){#memristivity} | $f_M(q,\Phi)$ | $\Phi = \Phi_0 + M \cdot q$ |
 
 
 
@@ -18,18 +18,18 @@ tite: Electrical Component
 
 | Component  |  Function  |  Chart  |
 | -------------| -------- |--------|
-| Open Circuit </br> {% inlineimage  symbol_opencircuit.svg %}  | $u \in \R$ </br> $i = 0$    | {% inlineimage char_opencircuit.svg %}  |
-| Short Circuit </br> {% inlineimage symbol_shortcircuit.svg %} | $u = 0$ </br>  $i \in \R$   | {% inlineimage char_shortcircuit.svg %}  |
-| Voltage Source </br> {% inlineimage symbol_voltage_source.svg %} | $u = U_0$ </br> $i \in \R$ | {% inlineimage char_source_voltage.svg %} |
-| Current Source </br> {% inlineimage symbol_current_source.svg %} | $u \in \R$ </br> $i = I_0$  | {% inlineimage char_source_current.svg %}  |
-| Nullator  </br> {% inlineimage symbol_nullator.svg %}  | $u = 0$ <br> $i = 0$                            |  {% inlineimage char_nullator.svg %} |
-| Norrator  </br> {% inlineimage symbol_norrator.svg %}  | $u \in \R$ <br> $i \in \R$ |  {% inlineimage char_norrator.svg %} |
-| Resistor </br> {% inlineimage symbol_resistor.svg %} | $u = R \cdot i$ </br> $i = \frac{1}{R} \cdot u$ | {% inlineimage char_resistor.svg %} |
-| Capacitor </br> {% inlineimage symbol_capacitor.svg %} | $I = C \cdot\dot U$ <br> $C = \frac{\diff Q}{\diff U}$ |   |
-| Inductor </br> {% inlineimage symbol_inductor.svg %} | $U = L \cdot\dot I$ <br> $L = \frac{\diff \Phi}{\diff U}$ |   |
-| ideal Diode </br> {% inlineimage symbol_diode.svg %} | $\begin{array}{ll} u = 0 \text{ if } i > 0 \\ i = 0 \text{ if } u < 0\end{array}$ | {% inlineimage char_diode_ideal.svg %} |
-| reale Diode </br> {% inlineimage symbol_diode_real.svg %} | $\begin{array}{ll} u_D = u_T \cdot \ln \left(\frac{i_D}{I_S} + 1 \right) \\ i_D = I_S \cdot \left( \exp \left(\frac{u_D}{U_T}\right) -1 \right) \end{array}$ |  |
-| LED </br> {% inlineimage symbol_led.svg %}| $i = I_S \cdot \left( \exp \left(\frac{u_D}{U_T}\right) -1 \right) - i_L$ |   |
+| Open Circuit </br> ![opencircuit](symb/symbol_opencircuit.svg){#opencircuit} | $u \in \R$ </br> $i = 0$    | ![opencircuit](chart/char_opencircuit.svg){#opencircuit}  |
+| Short Circuit </br> ![shortcircuit](symb/symbol_shortcircuit.svg){#shortcircuit} | $u = 0$ </br>  $i \in \R$   | ![shortcircuit](chart/char_shortcircuit.svg){#shortcircuit}  |
+| Voltage Source </br> ![voltage_source](symb/symbol_voltage_source.svg){#voltage_source} | $u = U_0$ </br> $i \in \R$ | ![source_voltage](chart/char_source_voltage.svg){#source_voltage} |
+| Current Source </br> ![current_source](symb/symbol_current_source.svg){#current_source} | $u \in \R$ </br> $i = I_0$  | ![source_current](chart/char_source_current.svg){#source_current}  |
+| Nullator  </br> ![nullator](symb/symbol_nullator.svg){#nullator}  | $u = 0$ <br> $i = 0$                            |  ![nullator](chart/char_nullator.svg){#nullator} |
+| Norrator  </br> ![norrator](symb/symbol_norrator.svg){#norrator}  | $u \in \R$ <br> $i \in \R$ |  ![norrator](chart/char_norrator.svg){#norrator} |
+| Resistor </br> ![resistor](symb/symbol_resistor.svg){#resistor} | $u = R \cdot i$ </br> $i = \frac{1}{R} \cdot u$ | ![resistor](chart/char_resistor.svg){#resistor} |
+| Capacitor </br> ![capacitor](symb/symbol_capacitor.svg){#capacitor} | $I = C \cdot\dot U$ <br> $C = \frac{\diff Q}{\diff U}$ |   |
+| Inductor </br> ![inductor](symb/symbol_inductor.svg){#inductor} | $U = L \cdot\dot I$ <br> $L = \frac{\diff \Phi}{\diff U}$ |   |
+| ideal Diode </br> ![diode](symb/symbol_diode.svg){#diode} | $\begin{array}{ll} u = 0 \text{ if } i > 0 \\ i = 0 \text{ if } u < 0\end{array}$ | ![diode_ideal](chart/char_diode_ideal.svg){#diode_ideal} |
+| reale Diode </br> ![diode_real](symb/symbol_diode_real.svg){#diode_real} | $\begin{array}{ll} u_D = u_T \cdot \ln \left(\frac{i_D}{I_S} + 1 \right) \\ i_D = I_S \cdot \left( \exp \left(\frac{u_D}{U_T}\right) -1 \right) \end{array}$ |  |
+| LED </br> ![led](symb/symbol_led.svg){#led}| $i = I_S \cdot \left( \exp \left(\frac{u_D}{U_T}\right) -1 \right) - i_L$ |   |
 
 
 

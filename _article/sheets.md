@@ -10,9 +10,6 @@ table { font-family: 'QFontAwesome', "Roboto", sans-serif; }
 </style>
 
 
-
-# LaTeX4Ei
-
 Our Cheat Sheets are densly packed PDFs with important equations and diagrams for studying or exams where cheat sheets are allowed.
 
 

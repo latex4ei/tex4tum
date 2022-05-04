@@ -9,7 +9,7 @@ Linear regression attempts to model the relationship between two variables by fi
 The most common method for fitting a regression line is the method of least-squares. This method calculates the best-fitting line for the observed data by minimizing the sum of the squares of the vertical deviations from each data point to the line (if a point lies on the fitted line exactly, then its vertical deviation is 0). Because the deviations are first squared, then summed, there are no cancellations between positive and negative values.
 
 
-![Regression Applet](res/cindyJS/regression.html)
+![Regression Applet](regression.html)
 
 
 

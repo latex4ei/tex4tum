@@ -1,6 +1,6 @@
 ---
 title: Central Processing Unit (CPU)
-tags: CPU, ALU
+tags: [CPU, ALU]
 ---
 
 

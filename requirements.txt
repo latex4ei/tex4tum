@@ -1,0 +1,14 @@
+mkdocs-material
+
+
+# Pandoc Plugins
+pandoc-fignos
+pandoc-eqnos
+pandoc-tablenos
+pandoc-secnos
+
+
+# Plotting Plugins
+bokeh 
+
+

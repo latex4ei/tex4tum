@@ -87,7 +87,8 @@ switch score {
 ```
 
 ## Example: Hello World
-{% highlight go %}
+
+```go
 package main
 
 import "fmt"
@@ -95,8 +96,7 @@ import "fmt"
 func main() {
     fmt.Println("Hello, World")
 }
-{% endhighlight %}
-
+```
 
 
 ## References

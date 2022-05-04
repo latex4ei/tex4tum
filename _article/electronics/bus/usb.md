@@ -1,6 +1,6 @@
 ---
 title: Universal Serial Bus (USB)
-tags: USB Type-C
+tags: [USB, Type-C]
 ---
 
 The USB is serial bus commonly used in computers.

@@ -9,8 +9,8 @@ $$f(k, r, p) = \P( X = k ) = \binom{k+r-1}{k} p^k (1-p)^{r}$$
 with the number of failures $r$, the number of successes $k$, and the success probability $p$.
 
 
+![Negative Binomial Distribution NB(k, r, p) over k for r = <span id="nbd_r">10</span> and p = <span id="nbd_p">0.3</span>](dist_negative_binomial.svg){#SVG_obj}
 
-{% include svg-object.html id="SVG_obj" filename="dist_negative_binomial.svg" description='Negative Binomial Distribution NB(k, r, p) over k for r = <span id="nbd_r">10</span> and p = <span id="nbd_p">0.3</span>' %}
 
 <div class="row" markdown>
   <div class="col" markdown>
