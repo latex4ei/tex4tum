@@ -280,7 +280,7 @@ You can use boxes with tabs for content that exists in similiar variations.
 ### Tab Boxes with JavaScript
 You can use boxes with tabs for content that exists in similiar variations.
 
-<div class="tabbbox" markdown>
+<div class="tabbox" markdown>
 
 #### Tab 1
 This should by displayed in tab 1

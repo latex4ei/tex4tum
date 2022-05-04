@@ -79,17 +79,11 @@ sync-res:
 
 
 init-draft:
-	find $(SRC_DIR)/ -type f -print0 | xargs -0 cp -ut $(TMP_DIR)/pre || true
+	find _drafts/ -type f -print0 | xargs -0 cp -ut $(TMP_DIR)/pre || true
 
 
 # Initial md to md conversion. Sync pandoc Makefile and execute
 preprocess: sync-res
 	rsync -a make/pd-make/Makefile $(TMP_DIR)/
 	cd $(TMP_DIR) && make
-
-
-
-finish:
-	@mkdir -p "${BUILD_DIR}/res"
-# 	rsync -a "$(TMP_DIR)/res" "${BUILD_DIR}/res"
 
