@@ -53,13 +53,14 @@ span[onclick] { color: var(--md-typeset-a-color); cursor: pointer; }
 .md-typeset dt { font-weight: bold; }
 
 
-
+/* extra font */
 @font-face {
   font-family: 'QFontAwesome';
   font-style: normal;
   src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/webfonts/fa-solid-900.ttf');
   unicode-range: U+2000-2FFF, U+F000-F200, U+1F000-1FFFF;
 }
+body { font-family: var(--md-text-font-family), 'QFontAwesome'; }
 
 
 /* grid */
