@@ -49,7 +49,7 @@ make setup
 or use our [Dockerfile](docker/) container
 
 ```shell
-docker-compose up       # Now you can access the website at localhost:4000
+docker-compose up       # Now you can access the website at localhost:8000
 ```
 
 ### Build and Test
@@ -58,10 +58,10 @@ docker-compose up       # Now you can access the website at localhost:4000
 # Build
 make
 
-# Serve with hot reload at localhost:4000
+# Serve with hot reload at localhost:8000
 make run
 
-# Serve with hot reload at localhost:4000 including _draft articles
+# Serve with hot reload at localhost:8000 including _draft articles
 # No acronyms replacement to improve build time
 make draft
 ```

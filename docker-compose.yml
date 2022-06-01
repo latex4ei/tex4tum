@@ -7,5 +7,5 @@ services:
     volumes:
       - .:/home
     ports:
-      - '4000:4000'
-    command: bash -c "make run"
+      - '8000:8000'
+    command: bash -c "mkdocs serve --dev-addr 0.0.0.0:8000"

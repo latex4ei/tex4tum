@@ -3,7 +3,9 @@
 .vscode
 
 # Workspaces
+docs
 tmp
+res/pd-media
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
