@@ -236,7 +236,7 @@ svg * {
 
 
 
-/* 
+/*
 Hover Effects
 ---------------------------------------------------------------
 */
@@ -253,8 +253,8 @@ Hover Effects
 
 
 
-/* 
-Keyframes: 
+/*
+Keyframes:
 ---------------------------------------------------------------
 */
 
@@ -324,9 +324,9 @@ Keyframes:
   to { transform: rotate(360deg); }
 }
 
-/* 
-Animations: 
-Each Element can only hold one assigned animation 
+/*
+Animations:
+Each Element can only hold one assigned animation
 ---------------------------------------------------------------
 */
 
@@ -423,7 +423,7 @@ Each Element can only hold one assigned animation
     }
     function toggle_animation() {
       var el = document.querySelectorAll('[class*="kf-"]');
-      if (anim_running){ 
+      if (anim_running){
         el[i].style.animationPlayState = 'running';
       }
     }

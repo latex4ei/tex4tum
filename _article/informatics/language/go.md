@@ -58,7 +58,7 @@ Run your own program at the [Go Playground](https://play.golang.org/)!
 ## Data Types
 In Go you can define distinct new types such as `type ipv4addr uint32`
 
-* Integers: `int`,`uint`, `int8`, `int16`, `int32`, `int64`, `uint8`, `uint16`, `uint32`, `uint64` 
+* Integers: `int`,`uint`, `int8`, `int16`, `int32`, `int64`, `uint8`, `uint16`, `uint32`, `uint64`
 * Floats: `float32`, `float64`, `complex64`, `complex128`
 * Others: `byte, bool, string`
 
@@ -87,7 +87,8 @@ switch score {
 ```
 
 ## Example: Hello World
-{% highlight go %}
+
+```go
 package main
 
 import "fmt"
@@ -95,12 +96,9 @@ import "fmt"
 func main() {
     fmt.Println("Hello, World")
 }
-{% endhighlight %}
-
+```
 
 
 ## References
 
 * [Go-lang](https://golang.org/)
-
-

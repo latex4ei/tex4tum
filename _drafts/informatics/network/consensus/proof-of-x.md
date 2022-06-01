@@ -8,6 +8,6 @@ Proof of X are a set of mechanisms to prevent sybill attacks.
   * Proof of Activity
   * Proof of Importance
   * Proof of Stake-Time
-* Proof of Elapsed Time 
+* Proof of Elapsed Time
 * Proof of Capacity
 * Proof of Luck

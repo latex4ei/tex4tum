@@ -1,0 +1,3163 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="3150"
+   height="930"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.46"
+   version="1.0"
+   sodipodi:docbase="E:\Wiki\Code\korrigieren unten grün"
+   sodipodi:docname="Kopie von Hamming_code_parity_bit_position_6.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape">
+  <defs
+     id="defs4">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 465 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="3150 : 465 : 1"
+       inkscape:persp3d-origin="1575 : 310 : 1"
+       id="perspective496" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="1611.4338"
+     inkscape:cy="560.14402"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     width="3150px"
+     height="930px"
+     inkscape:window-width="1600"
+     inkscape:window-height="1063"
+     inkscape:window-x="44"
+     inkscape:window-y="0"
+     borderlayer="true"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     showgrid="false">
+    <sodipodi:guide
+       orientation="vertical"
+       position="1640"
+       id="guide18477" />
+    <sodipodi:guide
+       orientation="vertical"
+       position="3137.1429"
+       id="guide18481" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="2931.4286,714.28571"
+       id="guide2871" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="3074.2857,997.14286"
+       id="guide2873" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Ebene 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-19.0299, -16.0696)">
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect4854"
+       width="99.740486"
+       height="153.26405"
+       x="46.64991"
+       y="777.48816" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect4856"
+       width="99.740486"
+       height="153.26405"
+       x="146.74538"
+       y="777.48816" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect4858"
+       width="99.740486"
+       height="153.26405"
+       x="246.84076"
+       y="777.48816" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect4860"
+       width="99.740486"
+       height="153.26405"
+       x="346.93616"
+       y="777.48816" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect10578"
+       width="99.740486"
+       height="153.26405"
+       x="447.04834"
+       y="777.41022" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect23326"
+       width="99.740486"
+       height="153.26405"
+       x="546.79498"
+       y="777.44922" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect23348"
+       width="99.740486"
+       height="153.26405"
+       x="646.90723"
+       y="777.37128" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect8576"
+       width="99.740486"
+       height="153.26405"
+       x="46.735603"
+       y="623.5813" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect8578"
+       width="99.740486"
+       height="153.26405"
+       x="146.83104"
+       y="623.5813" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect8580"
+       width="99.740486"
+       height="153.26405"
+       x="246.92648"
+       y="623.5813" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect8582"
+       width="99.740486"
+       height="153.26405"
+       x="347.02191"
+       y="623.5813" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect8584"
+       width="99.740486"
+       height="153.26405"
+       x="447.13403"
+       y="623.50342" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect8586"
+       width="99.740486"
+       height="153.26405"
+       x="546.88068"
+       y="623.54236" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect8588"
+       width="99.740486"
+       height="153.26405"
+       x="646.99292"
+       y="623.46448" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect51578"
+       width="99.740486"
+       height="153.26405"
+       x="746.47949"
+       y="777.35352" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect51580"
+       width="99.740486"
+       height="153.26405"
+       x="846.57495"
+       y="777.35352" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect51582"
+       width="99.740486"
+       height="153.26405"
+       x="946.67041"
+       y="777.35352" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect51584"
+       width="99.740486"
+       height="153.26405"
+       x="1046.7656"
+       y="777.35352" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect51606"
+       width="99.740486"
+       height="153.26405"
+       x="1146.8778"
+       y="777.27557" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect51628"
+       width="99.740486"
+       height="153.26405"
+       x="1246.6244"
+       y="777.31458" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect51650"
+       width="99.740486"
+       height="153.26405"
+       x="1346.7367"
+       y="777.23663" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect51652"
+       width="99.740486"
+       height="153.26405"
+       x="746.56519"
+       y="623.44666" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect51654"
+       width="99.740486"
+       height="153.26405"
+       x="846.66064"
+       y="623.44666" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect51656"
+       width="99.740486"
+       height="153.26405"
+       x="946.7561"
+       y="623.44666" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect51658"
+       width="99.740486"
+       height="153.26405"
+       x="1046.8514"
+       y="623.44666" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect51660"
+       width="99.740486"
+       height="153.26405"
+       x="1146.9635"
+       y="623.36877" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect51662"
+       width="99.740486"
+       height="153.26405"
+       x="1246.7101"
+       y="623.40771" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect51664"
+       width="99.740486"
+       height="153.26405"
+       x="1346.8224"
+       y="623.32983" />
+    <text
+       xml:space="preserve"
+       style="font-size: 100px; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 0, 200); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="745.294"
+       y="901.249"
+       id="text51758"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan51760"
+         x="745.294"
+         y="901.249">p</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size: 50px; font-style: normal; font-variant: normal; font-weight: bold; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 0, 200); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="807.675"
+       y="916.377"
+       id="text51770"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan51772"
+         x="807.675"
+         y="916.377">4</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size: 100px; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="750.924"
+       y="715.221"
+       id="text51776"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan51778"
+         x="750.924"
+         y="715.221">c</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size: 50px; font-style: normal; font-variant: normal; font-weight: bold; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="805.517"
+       y="757.136"
+       id="text51780"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan51782"
+         x="805.517"
+         y="757.136">8</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size: 100px; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="849.648"
+       y="715.221"
+       id="text51786"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan51788"
+         x="849.648"
+         y="715.221">c</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size: 50px; font-style: normal; font-variant: normal; font-weight: bold; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="904.241"
+       y="757.136"
+       id="text51790"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan51792"
+         x="904.241"
+         y="757.136">9</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size: 100px; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="949.995"
+       y="714.464"
+       id="text51796"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan51798"
+         x="949.995"
+         y="714.464">c</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size: 50px; font-style: normal; font-variant: normal; font-weight: bold; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="974.589"
+       y="756.379"
+       id="text51800"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan51802"
+         x="974.589"
+         y="756.379">10</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size: 100px; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="1049.13"
+       y="715.123"
+       id="text51806"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan51808"
+         x="1049.13"
+         y="715.123">c</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size: 50px; font-style: normal; font-variant: normal; font-weight: bold; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="1073.73"
+       y="757.039"
+       id="text51810"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan51812"
+         x="1073.73"
+         y="757.039">11</tspan></text>
+    <g
+       id="g51814"
+       transform="translate(1.24522, -561.361)">
+      <text
+         sodipodi:linespacing="125%"
+         id="text51816"
+         y="1466.38"
+         x="952.45"
+         style="font-size: 100px; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 150, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+         xml:space="preserve"><tspan
+           y="1466.38"
+           x="952.45"
+           id="tspan51818"
+           sodipodi:role="line">d</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text51820"
+         y="1484.29"
+         x="1011.04"
+         style="font-size: 50px; font-style: normal; font-variant: normal; font-weight: bold; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 150, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+         xml:space="preserve"><tspan
+           sodipodi:role="line"
+           id="tspan52010"
+           x="1011.04"
+           y="1484.29">6</tspan></text>
+    </g>
+    <g
+       id="g51824"
+       transform="translate(-168.755, -523.954)">
+      <text
+         sodipodi:linespacing="125%"
+         id="text51826"
+         y="1428.97"
+         x="1316.04"
+         style="font-size: 100px; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 150, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+         xml:space="preserve"><tspan
+           y="1428.97"
+           x="1316.04"
+           id="tspan51828"
+           sodipodi:role="line">d</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text51830"
+         y="1446.88"
+         x="1374.63"
+         style="font-size: 50px; font-style: normal; font-variant: normal; font-weight: bold; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 150, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+         xml:space="preserve"><tspan
+           sodipodi:role="line"
+           id="tspan52014"
+           x="1374.63"
+           y="1446.88">8</tspan></text>
+    </g>
+    <g
+       id="g51834"
+       transform="translate(-456.755, -678.254)">
+      <text
+         sodipodi:linespacing="125%"
+         id="text51836"
+         y="1582.51"
+         x="1705.96"
+         style="font-size: 100px; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 150, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+         xml:space="preserve"><tspan
+           y="1582.51"
+           x="1705.96"
+           id="tspan51838"
+           sodipodi:role="line">d</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text51840"
+         y="1600.43"
+         x="1764.55"
+         style="font-size: 50px; font-style: normal; font-variant: normal; font-weight: bold; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 150, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+         xml:space="preserve"><tspan
+           sodipodi:role="line"
+           id="tspan52016"
+           x="1764.55"
+           y="1600.43">9</tspan></text>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size: 93.4733px; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 150, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="1440.84"
+       y="845.857"
+       id="text51846"
+       sodipodi:linespacing="125%"
+       transform="scale(0.934733, 1.06982)"><tspan
+         sodipodi:role="line"
+         id="tspan51848"
+         x="1440.84"
+         y="845.857">d</tspan></text>
+    <text
+       transform="scale(0.849953, 1.17654)"
+       xml:space="preserve"
+       style="font-size: 42.4976px; font-style: normal; font-variant: normal; font-weight: bold; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 150, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="1638.36"
+       y="784.364"
+       id="text51850"
+       sodipodi:linespacing="125%"><tspan
+         y="784.364"
+         x="1638.36"
+         id="tspan52018"
+         sodipodi:role="line">10</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size: 100px; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="1149.65"
+       y="714.464"
+       id="text51856"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan51858"
+         x="1149.65"
+         y="714.464">c</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size: 50px; font-style: normal; font-variant: normal; font-weight: bold; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="1174.25"
+       y="756.379"
+       id="text51860"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan51862"
+         x="1174.25"
+         y="756.379">12</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size: 100px; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="1249.16"
+       y="714.464"
+       id="text51866"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan51868"
+         x="1249.16"
+         y="714.464">c</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size: 50px; font-style: normal; font-variant: normal; font-weight: bold; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="1273.75"
+       y="756.379"
+       id="text51870"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan51872"
+         x="1273.75"
+         y="756.379">13</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size: 100px; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="1349.38"
+       y="715.221"
+       id="text51876"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan51878"
+         x="1349.38"
+         y="715.221">c</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size: 50px; font-style: normal; font-variant: normal; font-weight: bold; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="1373.98"
+       y="757.136"
+       id="text51880"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan51882"
+         x="1373.98"
+         y="757.136">14</tspan></text>
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect51884"
+       width="99.740486"
+       height="153.26405"
+       x="746.23145"
+       y="469.7821" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect51886"
+       width="99.740486"
+       height="153.26405"
+       x="846.3269"
+       y="469.7821" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect51888"
+       width="99.740486"
+       height="153.26405"
+       x="946.42224"
+       y="469.7821" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect51890"
+       width="99.740486"
+       height="153.26405"
+       x="1046.5176"
+       y="469.7821" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect51892"
+       width="99.740486"
+       height="153.26405"
+       x="1146.6298"
+       y="469.70422" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect51894"
+       width="99.740486"
+       height="153.26405"
+       x="1246.3763"
+       y="469.74316" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect51896"
+       width="99.740486"
+       height="153.26405"
+       x="1346.4885"
+       y="469.66528" />
+    <g
+       id="g51898"
+       transform="translate(716.514, 620.614)">
+      <text
+         sodipodi:linespacing="125%"
+         id="text51900"
+         y="-24.2366"
+         x="35.4384"
+         style="font-size: 100px; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+         xml:space="preserve"><tspan
+           y="-24.2366"
+           x="35.4384"
+           id="tspan51902"
+           sodipodi:role="line">2</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text51904"
+         y="-89.0141"
+         x="87.2824"
+         style="font-size: 50px; font-style: normal; font-variant: normal; font-weight: bold; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+         xml:space="preserve"><tspan
+           sodipodi:role="line"
+           id="tspan51984"
+           x="87.2824"
+           y="-89.0141">3</tspan></text>
+    </g>
+    <g
+       id="g51986"
+       transform="translate(-100.348, -561.07)">
+      <text
+         sodipodi:linespacing="125%"
+         id="text51988"
+         y="1466.38"
+         x="952.45"
+         style="font-size: 100px; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 150, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+         xml:space="preserve"><tspan
+           y="1466.38"
+           x="952.45"
+           id="tspan51990"
+           sodipodi:role="line">d</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text51992"
+         y="1484.29"
+         x="1011.04"
+         style="font-size: 50px; font-style: normal; font-variant: normal; font-weight: bold; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 150, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+         xml:space="preserve"><tspan
+           sodipodi:role="line"
+           id="tspan52008"
+           x="1011.04"
+           y="1484.29">5</tspan></text>
+    </g>
+    <g
+       id="g51996"
+       transform="translate(97.5402, -563.07)">
+      <text
+         sodipodi:linespacing="125%"
+         id="text51998"
+         y="1466.38"
+         x="952.45"
+         style="font-size: 100px; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 150, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+         xml:space="preserve"><tspan
+           y="1466.38"
+           x="952.45"
+           id="tspan52000"
+           sodipodi:role="line">d</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text52002"
+         y="1484.29"
+         x="1011.04"
+         style="font-size: 50px; font-style: normal; font-variant: normal; font-weight: bold; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 150, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+         xml:space="preserve"><tspan
+           sodipodi:role="line"
+           id="tspan52012"
+           x="1011.04"
+           y="1484.29">7</tspan></text>
+    </g>
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect52044"
+       width="99.740486"
+       height="153.26405"
+       x="1446.6909"
+       y="777.09503" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect52046"
+       width="99.740486"
+       height="153.26405"
+       x="1446.7766"
+       y="623.18817" />
+    <text
+       xml:space="preserve"
+       style="font-size: 93.4733px; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 150, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="1547.77"
+       y="845.724"
+       id="text52060"
+       sodipodi:linespacing="125%"
+       transform="scale(0.934733, 1.06982)"><tspan
+         sodipodi:role="line"
+         id="tspan52062"
+         x="1547.77"
+         y="845.724">d</tspan></text>
+    <text
+       transform="scale(0.849953, 1.17654)"
+       xml:space="preserve"
+       style="font-size: 42.4976px; font-style: normal; font-variant: normal; font-weight: bold; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 150, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="1755.96"
+       y="784.244"
+       id="text52064"
+       sodipodi:linespacing="125%"><tspan
+         y="784.244"
+         x="1755.96"
+         id="tspan52066"
+         sodipodi:role="line">11</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size: 100px; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="1449.34"
+       y="715.079"
+       id="text52068"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan52070"
+         x="1449.34"
+         y="715.079">c</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size: 50px; font-style: normal; font-variant: normal; font-weight: bold; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="1473.93"
+       y="756.995"
+       id="text52072"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan52074"
+         x="1473.93"
+         y="756.995">15</tspan></text>
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect52076"
+       width="99.740486"
+       height="153.26405"
+       x="1446.4427"
+       y="469.52362" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect68820"
+       width="99.513908"
+       height="428.52042"
+       x="47.299591"
+       y="40.81612" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect68822"
+       width="99.513908"
+       height="428.52042"
+       x="147.16753"
+       y="40.81612" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect68824"
+       width="99.513908"
+       height="428.52042"
+       x="247.03558"
+       y="40.81612" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect68826"
+       width="99.513908"
+       height="428.52042"
+       x="346.90366"
+       y="40.81612" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect68828"
+       width="99.513908"
+       height="428.52042"
+       x="446.78836"
+       y="40.598316" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect68830"
+       width="99.513908"
+       height="428.52042"
+       x="546.30847"
+       y="40.707203" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect68832"
+       width="99.513908"
+       height="428.52042"
+       x="646.19336"
+       y="40.489353" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect68843"
+       width="99.513908"
+       height="428.52042"
+       x="745.69415"
+       y="40.446568" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect68845"
+       width="99.513908"
+       height="428.52042"
+       x="845.56213"
+       y="40.446568" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect68847"
+       width="99.513908"
+       height="428.52042"
+       x="945.4303"
+       y="40.446568" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect68849"
+       width="99.513908"
+       height="428.52042"
+       x="1045.2982"
+       y="40.446568" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect68851"
+       width="99.513908"
+       height="428.52042"
+       x="1145.183"
+       y="40.228771" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect68853"
+       width="99.513908"
+       height="428.52042"
+       x="1244.7031"
+       y="40.33765" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect68855"
+       width="99.513908"
+       height="428.52042"
+       x="1344.588"
+       y="40.119801" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect68869"
+       width="99.513908"
+       height="428.52042"
+       x="1444.1102"
+       y="40.03207" />
+    <text
+       xml:space="preserve"
+       style="font-size: 100px; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 0, 200); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="349.143"
+       y="903.044"
+       id="text12882"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan12222"
+         x="349.143"
+         y="903.044">p</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size: 100px; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 0, 200); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="143.716"
+       y="903.044"
+       id="text12890"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan12220"
+         x="143.716"
+         y="903.044">p</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size: 100px; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 0, 200); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="43.4649"
+       y="901.383"
+       id="text12894"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan12218"
+         x="43.4649"
+         y="901.383">p</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size: 50px; font-style: normal; font-variant: normal; font-weight: bold; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 0, 200); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="407.736"
+       y="920.959"
+       id="text12274"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan12276"
+         x="407.736"
+         y="920.959">3</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size: 50px; font-style: normal; font-variant: normal; font-weight: bold; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 0, 200); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="208.087"
+       y="916.532"
+       id="text12282"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan12284"
+         x="208.087"
+         y="916.532">2</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size: 50px; font-style: normal; font-variant: normal; font-weight: bold; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 0, 200); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="107.845"
+       y="916.511"
+       id="text12286"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan12288"
+         x="107.845"
+         y="916.511">1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size: 100px; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="51.0947"
+       y="715.356"
+       id="text17593"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan17595"
+         x="51.0947"
+         y="715.356">c</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size: 50px; font-style: normal; font-variant: normal; font-weight: bold; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="105.688"
+       y="757.271"
+       id="text17597"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan17599"
+         x="105.688"
+         y="757.271">1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size: 100px; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="149.819"
+       y="715.356"
+       id="text17625"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan17627"
+         x="149.819"
+         y="715.356">c</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size: 50px; font-style: normal; font-variant: normal; font-weight: bold; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="204.412"
+       y="757.271"
+       id="text17629"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan17631"
+         x="204.412"
+         y="757.271">2</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size: 100px; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="250.166"
+       y="714.599"
+       id="text17633"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan17635"
+         x="250.166"
+         y="714.599">c</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size: 50px; font-style: normal; font-variant: normal; font-weight: bold; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="304.759"
+       y="756.514"
+       id="text17637"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan17639"
+         x="304.759"
+         y="756.514">3</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size: 100px; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="349.305"
+       y="715.258"
+       id="text17641"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan17643"
+         x="349.305"
+         y="715.258">c</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size: 50px; font-style: normal; font-variant: normal; font-weight: bold; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="403.898"
+       y="757.173"
+       id="text17645"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan17647"
+         x="403.898"
+         y="757.173">4</tspan></text>
+    <g
+       id="g17705"
+       transform="translate(-698.584, -561.226)">
+      <text
+         sodipodi:linespacing="125%"
+         id="text17649"
+         y="1466.38"
+         x="952.45"
+         style="font-size: 100px; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 150, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+         xml:space="preserve"><tspan
+           y="1466.38"
+           x="952.45"
+           id="tspan17651"
+           sodipodi:role="line">d</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text17653"
+         y="1484.29"
+         x="1011.04"
+         style="font-size: 50px; font-style: normal; font-variant: normal; font-weight: bold; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 150, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+         xml:space="preserve"><tspan
+           y="1484.29"
+           x="1011.04"
+           id="tspan17655"
+           sodipodi:role="line">1</tspan></text>
+    </g>
+    <g
+       id="g17711"
+       transform="translate(-868.584, -523.819)">
+      <text
+         sodipodi:linespacing="125%"
+         id="text17657"
+         y="1428.97"
+         x="1316.04"
+         style="font-size: 100px; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 150, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+         xml:space="preserve"><tspan
+           y="1428.97"
+           x="1316.04"
+           id="tspan17659"
+           sodipodi:role="line">d</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text17661"
+         y="1446.88"
+         x="1374.63"
+         style="font-size: 50px; font-style: normal; font-variant: normal; font-weight: bold; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 150, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+         xml:space="preserve"><tspan
+           y="1446.88"
+           x="1374.63"
+           id="tspan17663"
+           sodipodi:role="line">2</tspan></text>
+    </g>
+    <g
+       id="g17717"
+       transform="translate(-1156.58, -678.119)">
+      <text
+         sodipodi:linespacing="125%"
+         id="text17665"
+         y="1582.51"
+         x="1705.96"
+         style="font-size: 100px; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 150, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+         xml:space="preserve"><tspan
+           y="1582.51"
+           x="1705.96"
+           id="tspan17667"
+           sodipodi:role="line">d</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text17669"
+         y="1600.43"
+         x="1764.55"
+         style="font-size: 50px; font-style: normal; font-variant: normal; font-weight: bold; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 150, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+         xml:space="preserve"><tspan
+           y="1600.43"
+           x="1764.55"
+           id="tspan17671"
+           sodipodi:role="line">3</tspan></text>
+    </g>
+    <g
+       id="g17723"
+       transform="translate(-1150.58, -1081.52)">
+      <text
+         sodipodi:linespacing="125%"
+         id="text17673"
+         y="1986.57"
+         x="1798.89"
+         style="font-size: 100px; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 150, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+         xml:space="preserve"><tspan
+           y="1986.57"
+           x="1798.89"
+           id="tspan17675"
+           sodipodi:role="line">d</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text17677"
+         y="2004.49"
+         x="1857.48"
+         style="font-size: 50px; font-style: normal; font-variant: normal; font-weight: bold; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 150, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+         xml:space="preserve"><tspan
+           y="2004.49"
+           x="1857.48"
+           id="tspan17679"
+           sodipodi:role="line">4</tspan></text>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size: 100px; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="449.823"
+       y="714.599"
+       id="text18750"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan18752"
+         x="449.823"
+         y="714.599">c</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size: 50px; font-style: normal; font-variant: normal; font-weight: bold; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="504.416"
+       y="756.514"
+       id="text18754"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan18756"
+         x="504.416"
+         y="756.514">5</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size: 100px; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="549.328"
+       y="714.599"
+       id="text18758"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan18760"
+         x="549.328"
+         y="714.599">c</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size: 50px; font-style: normal; font-variant: normal; font-weight: bold; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="603.921"
+       y="756.514"
+       id="text18762"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan18764"
+         x="603.921"
+         y="756.514">6</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size: 100px; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="649.553"
+       y="715.356"
+       id="text18766"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan18768"
+         x="649.553"
+         y="715.356">c</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size: 50px; font-style: normal; font-variant: normal; font-weight: bold; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="704.146"
+       y="757.271"
+       id="text18770"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan18772"
+         x="704.146"
+         y="757.271">7</tspan></text>
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect18816"
+       width="99.740486"
+       height="153.26405"
+       x="46.401817"
+       y="469.91675" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect18818"
+       width="99.740486"
+       height="153.26405"
+       x="146.49725"
+       y="469.91675" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect18820"
+       width="99.740486"
+       height="153.26405"
+       x="246.5927"
+       y="469.91675" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect18822"
+       width="99.740486"
+       height="153.26405"
+       x="346.68814"
+       y="469.91675" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect18824"
+       width="99.740486"
+       height="153.26405"
+       x="446.80026"
+       y="469.83884" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect18826"
+       width="99.740486"
+       height="153.26405"
+       x="546.54688"
+       y="469.87781" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect18828"
+       width="99.740486"
+       height="153.26405"
+       x="646.65912"
+       y="469.7999" />
+    <g
+       id="g17567"
+       transform="translate(16.6849, 620.749)">
+      <text
+         sodipodi:linespacing="125%"
+         id="text16558"
+         y="-24.2366"
+         x="35.4384"
+         style="font-size: 100px; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+         xml:space="preserve"><tspan
+           y="-24.2366"
+           x="35.4384"
+           id="tspan16560"
+           sodipodi:role="line">2</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text16562"
+         y="-89.0141"
+         x="87.2824"
+         style="font-size: 50px; font-style: normal; font-variant: normal; font-weight: bold; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+         xml:space="preserve"><tspan
+           y="-89.0141"
+           x="87.2824"
+           id="tspan16564"
+           sodipodi:role="line">0</tspan></text>
+    </g>
+    <g
+       id="g17573"
+       transform="translate(-361.112, 830.546)">
+      <text
+         sodipodi:linespacing="125%"
+         id="text17535"
+         y="-234.034"
+         x="513.366"
+         style="font-size: 100px; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+         xml:space="preserve"><tspan
+           y="-234.034"
+           x="513.366"
+           id="tspan17537"
+           sodipodi:role="line">2</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text17539"
+         y="-298.811"
+         x="565.21"
+         style="font-size: 50px; font-style: normal; font-variant: normal; font-weight: bold; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+         xml:space="preserve"><tspan
+           y="-298.811"
+           x="565.21"
+           id="tspan17541"
+           sodipodi:role="line">1</tspan></text>
+    </g>
+    <g
+       id="g17579"
+       transform="translate(-811.64, 748.031)">
+      <text
+         sodipodi:linespacing="125%"
+         id="text17543"
+         y="-151.519"
+         x="1164.93"
+         style="font-size: 100px; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+         xml:space="preserve"><tspan
+           y="-151.519"
+           x="1164.93"
+           id="tspan17545"
+           sodipodi:role="line">2</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text17547"
+         y="-216.296"
+         x="1216.77"
+         style="font-size: 50px; font-style: normal; font-variant: normal; font-weight: bold; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+         xml:space="preserve"><tspan
+           y="-216.296"
+           x="1216.77"
+           id="tspan17549"
+           sodipodi:role="line">2</tspan></text>
+    </g>
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect97464"
+       width="99.740486"
+       height="153.26405"
+       x="1546.5333"
+       y="777.14648" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect97466"
+       width="99.740486"
+       height="153.26405"
+       x="1646.6284"
+       y="777.14648" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect97480"
+       width="99.740486"
+       height="153.26405"
+       x="1746.7407"
+       y="777.06854" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect97494"
+       width="99.740486"
+       height="153.26405"
+       x="1846.4873"
+       y="777.10754" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect97508"
+       width="99.740486"
+       height="153.26405"
+       x="1946.5996"
+       y="777.0296" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect97510"
+       width="99.740486"
+       height="153.26405"
+       x="1546.619"
+       y="623.23962" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect97512"
+       width="99.740486"
+       height="153.26405"
+       x="1646.7144"
+       y="623.23962" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect97514"
+       width="99.740486"
+       height="153.26405"
+       x="1746.8264"
+       y="623.16174" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect97516"
+       width="99.740486"
+       height="153.26405"
+       x="1846.573"
+       y="623.20068" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect97518"
+       width="99.740486"
+       height="153.26405"
+       x="1946.6853"
+       y="623.1228" />
+    <text
+       xml:space="preserve"
+       style="font-size: 100px; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="1549.86"
+       y="714.257"
+       id="text97520"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan97522"
+         x="1549.86"
+         y="714.257">c</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size: 50px; font-style: normal; font-variant: normal; font-weight: bold; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="1574.45"
+       y="756.172"
+       id="text97524"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan97526"
+         x="1574.45"
+         y="756.172">16</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size: 100px; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="1649"
+       y="714.916"
+       id="text97528"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan97530"
+         x="1649"
+         y="714.916">c</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size: 50px; font-style: normal; font-variant: normal; font-weight: bold; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="1673.59"
+       y="756.831"
+       id="text97532"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan97534"
+         x="1673.59"
+         y="756.831">17</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size: 93.4733px; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 150, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="2082.59"
+       y="845.663"
+       id="text97566"
+       sodipodi:linespacing="125%"
+       transform="scale(0.934733, 1.06982)"><tspan
+         sodipodi:role="line"
+         id="tspan97568"
+         x="2082.59"
+         y="845.663">d</tspan></text>
+    <text
+       transform="scale(0.849953, 1.17654)"
+       xml:space="preserve"
+       style="font-size: 42.4976px; font-style: normal; font-variant: normal; font-weight: bold; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 150, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="2344.12"
+       y="784.188"
+       id="text97570"
+       sodipodi:linespacing="125%"><tspan
+         y="784.188"
+         x="2344.12"
+         id="tspan97572"
+         sodipodi:role="line">15</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size: 100px; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="1749.52"
+       y="714.257"
+       id="text97574"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan97576"
+         x="1749.52"
+         y="714.257">c</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size: 50px; font-style: normal; font-variant: normal; font-weight: bold; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="1774.11"
+       y="756.172"
+       id="text97578"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan97580"
+         x="1774.11"
+         y="756.172">18</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size: 100px; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="1849.02"
+       y="714.257"
+       id="text97582"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan97584"
+         x="1849.02"
+         y="714.257">c</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size: 50px; font-style: normal; font-variant: normal; font-weight: bold; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="1873.61"
+       y="756.172"
+       id="text97586"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan97588"
+         x="1873.61"
+         y="756.172">19</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size: 100px; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="1949.25"
+       y="715.014"
+       id="text97590"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan97592"
+         x="1949.25"
+         y="715.014">c</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size: 50px; font-style: normal; font-variant: normal; font-weight: bold; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="1973.84"
+       y="756.929"
+       id="text97594"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan97596"
+         x="1973.84"
+         y="756.929">20</tspan></text>
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect97598"
+       width="99.740486"
+       height="153.26405"
+       x="1546.2852"
+       y="469.57507" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect97600"
+       width="99.740486"
+       height="153.26405"
+       x="1646.3804"
+       y="469.57507" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect97602"
+       width="99.740486"
+       height="153.26405"
+       x="1746.4927"
+       y="469.49719" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect97604"
+       width="99.740486"
+       height="153.26405"
+       x="1846.2393"
+       y="469.53613" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect97606"
+       width="99.740486"
+       height="153.26405"
+       x="1946.3513"
+       y="469.45825" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect97630"
+       width="99.740486"
+       height="153.26405"
+       x="2046.5537"
+       y="776.888" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect97632"
+       width="99.740486"
+       height="153.26405"
+       x="2046.6394"
+       y="622.9812" />
+    <text
+       xml:space="preserve"
+       style="font-size: 93.4733px; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 150, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="2189.52"
+       y="845.531"
+       id="text97634"
+       sodipodi:linespacing="125%"
+       transform="scale(0.934733, 1.06982)"><tspan
+         sodipodi:role="line"
+         id="tspan97636"
+         x="2189.52"
+         y="845.531">d</tspan></text>
+    <text
+       transform="scale(0.849953, 1.17654)"
+       xml:space="preserve"
+       style="font-size: 42.4976px; font-style: normal; font-variant: normal; font-weight: bold; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 150, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="2461.72"
+       y="784.068"
+       id="text97638"
+       sodipodi:linespacing="125%"><tspan
+         y="784.068"
+         x="2461.72"
+         id="tspan97640"
+         sodipodi:role="line">16</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size: 100px; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="2049.2"
+       y="714.872"
+       id="text97642"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan97644"
+         x="2049.2"
+         y="714.872">c</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size: 50px; font-style: normal; font-variant: normal; font-weight: bold; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="2073.79"
+       y="756.787"
+       id="text97646"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan97648"
+         x="2073.79"
+         y="756.787">21</tspan></text>
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect97650"
+       width="99.740486"
+       height="153.26405"
+       x="2046.3057"
+       y="469.31659" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect97652"
+       width="99.513908"
+       height="428.52042"
+       x="1545.1309"
+       y="40.143612" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect97654"
+       width="99.513908"
+       height="428.52042"
+       x="1644.9989"
+       y="40.143612" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect97656"
+       width="99.513908"
+       height="428.52042"
+       x="1744.8834"
+       y="39.925823" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect97658"
+       width="99.513908"
+       height="428.52042"
+       x="1844.4037"
+       y="40.034687" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect97660"
+       width="99.513908"
+       height="428.52042"
+       x="1944.2885"
+       y="39.816853" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect97662"
+       width="99.513908"
+       height="428.52042"
+       x="2043.8108"
+       y="39.729107" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect97722"
+       width="99.740486"
+       height="153.26405"
+       x="2146.4351"
+       y="776.68213" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect97724"
+       width="99.740486"
+       height="153.26405"
+       x="2246.5303"
+       y="776.68213" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect97738"
+       width="99.740486"
+       height="153.26405"
+       x="2346.6426"
+       y="776.60419" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect97752"
+       width="99.740486"
+       height="153.26405"
+       x="2446.3892"
+       y="776.64319" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect97766"
+       width="99.740486"
+       height="153.26405"
+       x="2546.5015"
+       y="776.56525" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect97768"
+       width="99.740486"
+       height="153.26405"
+       x="2146.5208"
+       y="622.77527" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect97770"
+       width="99.740486"
+       height="153.26405"
+       x="2246.6162"
+       y="622.77527" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect97772"
+       width="99.740486"
+       height="153.26405"
+       x="2346.7283"
+       y="622.69739" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect97774"
+       width="99.740486"
+       height="153.26405"
+       x="2446.4749"
+       y="622.73633" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect97776"
+       width="99.740486"
+       height="153.26405"
+       x="2546.5872"
+       y="622.65845" />
+    <text
+       xml:space="preserve"
+       style="font-size: 100px; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="2149.76"
+       y="713.793"
+       id="text97778"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan97780"
+         x="2149.76"
+         y="713.793">c</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size: 50px; font-style: normal; font-variant: normal; font-weight: bold; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="2174.35"
+       y="755.708"
+       id="text97782"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan97784"
+         x="2174.35"
+         y="755.708">22</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size: 100px; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="2248.9"
+       y="714.452"
+       id="text97786"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan97788"
+         x="2248.9"
+         y="714.452">c</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size: 50px; font-style: normal; font-variant: normal; font-weight: bold; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="2273.49"
+       y="756.367"
+       id="text97790"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan97792"
+         x="2273.49"
+         y="756.367">23</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size: 93.4733px; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 150, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="2724.38"
+       y="845.229"
+       id="text97824"
+       sodipodi:linespacing="125%"
+       transform="scale(0.934733, 1.06982)"><tspan
+         sodipodi:role="line"
+         id="tspan97826"
+         x="2724.38"
+         y="845.229">d</tspan></text>
+    <text
+       transform="scale(0.849953, 1.17654)"
+       xml:space="preserve"
+       style="font-size: 42.4976px; font-style: normal; font-variant: normal; font-weight: bold; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 150, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="3049.93"
+       y="783.794"
+       id="text97828"
+       sodipodi:linespacing="125%"><tspan
+         y="783.794"
+         x="3049.93"
+         id="tspan97830"
+         sodipodi:role="line">21</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size: 100px; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="2349.42"
+       y="713.793"
+       id="text97832"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan97834"
+         x="2349.42"
+         y="713.793">c</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size: 50px; font-style: normal; font-variant: normal; font-weight: bold; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="2374.01"
+       y="755.708"
+       id="text97836"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan97838"
+         x="2374.01"
+         y="755.708">24</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size: 100px; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="2448.92"
+       y="713.793"
+       id="text97840"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan97842"
+         x="2448.92"
+         y="713.793">c</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size: 50px; font-style: normal; font-variant: normal; font-weight: bold; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="2473.52"
+       y="755.708"
+       id="text97844"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan97846"
+         x="2473.52"
+         y="755.708">25</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size: 100px; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="2549.15"
+       y="714.55"
+       id="text97848"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan97850"
+         x="2549.15"
+         y="714.55">c</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size: 50px; font-style: normal; font-variant: normal; font-weight: bold; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="2573.74"
+       y="756.465"
+       id="text97852"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan97854"
+         x="2573.74"
+         y="756.465">26</tspan></text>
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect97856"
+       width="99.740486"
+       height="153.26405"
+       x="2146.187"
+       y="469.11075" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect97858"
+       width="99.740486"
+       height="153.26405"
+       x="2246.2822"
+       y="469.11075" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect97860"
+       width="99.740486"
+       height="153.26405"
+       x="2346.3945"
+       y="469.03287" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect97862"
+       width="99.740486"
+       height="153.26405"
+       x="2446.1411"
+       y="469.07181" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect97864"
+       width="99.740486"
+       height="153.26405"
+       x="2546.2532"
+       y="468.99393" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect97888"
+       width="99.740486"
+       height="153.26405"
+       x="2646.4556"
+       y="776.42365" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect97890"
+       width="99.740486"
+       height="153.26405"
+       x="2646.5413"
+       y="622.51685" />
+    <text
+       xml:space="preserve"
+       style="font-size: 93.4733px; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 150, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="2831.31"
+       y="845.097"
+       id="text97892"
+       sodipodi:linespacing="125%"
+       transform="scale(0.934733, 1.06982)"><tspan
+         sodipodi:role="line"
+         id="tspan97894"
+         x="2831.31"
+         y="845.097">d</tspan></text>
+    <text
+       transform="scale(0.849953, 1.17654)"
+       xml:space="preserve"
+       style="font-size: 42.4976px; font-style: normal; font-variant: normal; font-weight: bold; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 150, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="3167.53"
+       y="783.673"
+       id="text97896"
+       sodipodi:linespacing="125%"><tspan
+         y="783.673"
+         x="3167.53"
+         id="tspan97898"
+         sodipodi:role="line">22</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size: 100px; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="2649.1"
+       y="714.408"
+       id="text97900"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan97902"
+         x="2649.1"
+         y="714.408">c</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size: 50px; font-style: normal; font-variant: normal; font-weight: bold; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="2673.69"
+       y="756.323"
+       id="text97904"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan97906"
+         x="2673.69"
+         y="756.323">27</tspan></text>
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect97908"
+       width="99.740486"
+       height="153.26405"
+       x="2646.2075"
+       y="468.85226" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect97910"
+       width="99.513908"
+       height="428.52042"
+       x="2144.8704"
+       y="39.464108" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect97912"
+       width="99.513908"
+       height="428.52042"
+       x="2244.7385"
+       y="39.464108" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect97914"
+       width="99.513908"
+       height="428.52042"
+       x="2344.623"
+       y="39.246304" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect97916"
+       width="99.513908"
+       height="428.52042"
+       x="2444.1431"
+       y="39.355183" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect97918"
+       width="99.513908"
+       height="428.52042"
+       x="2544.0281"
+       y="39.137341" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect97920"
+       width="99.513908"
+       height="428.52042"
+       x="2643.5503"
+       y="39.04961" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect97980"
+       width="99.740486"
+       height="153.26405"
+       x="2747.0688"
+       y="776.43213" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect97982"
+       width="99.740486"
+       height="153.26405"
+       x="2847.1641"
+       y="776.43213" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect97996"
+       width="99.740486"
+       height="153.26405"
+       x="2947.2764"
+       y="776.35419" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect98010"
+       width="99.740486"
+       height="153.26405"
+       x="3047.0229"
+       y="776.39319" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect98026"
+       width="99.740486"
+       height="153.26405"
+       x="2747.1545"
+       y="622.52533" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect98028"
+       width="99.740486"
+       height="153.26405"
+       x="2847.25"
+       y="622.52533" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect98030"
+       width="99.740486"
+       height="153.26405"
+       x="2947.3621"
+       y="622.44745" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect98032"
+       width="99.740486"
+       height="153.26405"
+       x="3047.1086"
+       y="622.48639" />
+    <text
+       xml:space="preserve"
+       style="font-size: 100px; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="2750.39"
+       y="713.543"
+       id="text98036"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan98038"
+         x="2750.39"
+         y="713.543">c</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size: 50px; font-style: normal; font-variant: normal; font-weight: bold; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="2774.99"
+       y="755.458"
+       id="text98040"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan98042"
+         x="2774.99"
+         y="755.458">28</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size: 100px; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="2849.53"
+       y="714.202"
+       id="text98044"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan98046"
+         x="2849.53"
+         y="714.202">c</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size: 50px; font-style: normal; font-variant: normal; font-weight: bold; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="2874.13"
+       y="756.117"
+       id="text98048"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan98050"
+         x="2874.13"
+         y="756.117">29</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size: 100px; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="2950.05"
+       y="713.543"
+       id="text98090"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan98092"
+         x="2950.05"
+         y="713.543">c</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size: 50px; font-style: normal; font-variant: normal; font-weight: bold; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="2974.64"
+       y="755.458"
+       id="text98094"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan98096"
+         x="2974.64"
+         y="755.458">30</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size: 100px; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="3049.56"
+       y="713.543"
+       id="text98098"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan98100"
+         x="3049.56"
+         y="713.543">c</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size: 50px; font-style: normal; font-variant: normal; font-weight: bold; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="3074.15"
+       y="755.458"
+       id="text98102"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan98104"
+         x="3074.15"
+         y="755.458">31</tspan></text>
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect98114"
+       width="99.740486"
+       height="153.26405"
+       x="2746.8208"
+       y="468.86078" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect98116"
+       width="99.740486"
+       height="153.26405"
+       x="2846.916"
+       y="468.86078" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect98118"
+       width="99.740486"
+       height="153.26405"
+       x="2947.0283"
+       y="468.7829" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect98120"
+       width="99.740486"
+       height="153.26405"
+       x="3046.7749"
+       y="468.82184" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect98168"
+       width="99.513908"
+       height="428.52042"
+       x="2745.3418"
+       y="39.098316" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect98170"
+       width="99.513908"
+       height="428.52042"
+       x="2845.2097"
+       y="39.098316" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect98172"
+       width="99.513908"
+       height="428.52042"
+       x="2945.0942"
+       y="38.88052" />
+    <rect
+       style="fill: rgb(255, 255, 255); fill-opacity: 1; fill-rule: evenodd; stroke: rgb(0, 0, 0); stroke-width: 4; stroke-miterlimit: 4; stroke-dasharray: none; stroke-opacity: 1;"
+       id="rect98174"
+       width="99.513908"
+       height="428.52042"
+       x="3044.6145"
+       y="38.989376" />
+    <g
+       id="g98218"
+       transform="translate(1517.4, 626.392)">
+      <text
+         sodipodi:linespacing="125%"
+         id="text98220"
+         y="-24.2366"
+         x="35.4384"
+         style="font-size: 100px; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+         xml:space="preserve"><tspan
+           y="-24.2366"
+           x="35.4384"
+           id="tspan98222"
+           sodipodi:role="line">2</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text98224"
+         y="-89.0141"
+         x="87.2824"
+         style="font-size: 50px; font-style: normal; font-variant: normal; font-weight: bold; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+         xml:space="preserve"><tspan
+           sodipodi:role="line"
+           id="tspan98226"
+           x="87.2824"
+           y="-89.0141">4</tspan></text>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size: 100px; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 0, 200); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="1547.11"
+       y="897.467"
+       id="text98228"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan98230"
+         x="1547.11"
+         y="897.467">p</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size: 50px; font-style: normal; font-variant: normal; font-weight: bold; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 0, 200); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="1603.49"
+       y="912.595"
+       id="text98232"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan98234"
+         x="1603.49"
+         y="912.595">5</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size: 93.4733px; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 150, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="1762.4"
+       y="846.135"
+       id="text98258"
+       sodipodi:linespacing="125%"
+       transform="scale(0.934733, 1.06982)"><tspan
+         sodipodi:role="line"
+         id="tspan98260"
+         x="1762.4"
+         y="846.135">d</tspan></text>
+    <text
+       transform="scale(0.849953, 1.17654)"
+       xml:space="preserve"
+       style="font-size: 42.4976px; font-style: normal; font-variant: normal; font-weight: bold; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 150, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="1991.99"
+       y="784.617"
+       id="text98262"
+       sodipodi:linespacing="125%"><tspan
+         y="784.617"
+         x="1991.99"
+         id="tspan98264"
+         sodipodi:role="line">12</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size: 93.4733px; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 150, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="1868.3"
+       y="846.382"
+       id="text98266"
+       sodipodi:linespacing="125%"
+       transform="scale(0.934733, 1.06982)"><tspan
+         sodipodi:role="line"
+         id="tspan98268"
+         x="1868.3"
+         y="846.382">d</tspan></text>
+    <text
+       transform="scale(0.849953, 1.17654)"
+       xml:space="preserve"
+       style="font-size: 42.4976px; font-style: normal; font-variant: normal; font-weight: bold; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 150, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="2108.46"
+       y="784.842"
+       id="text98270"
+       sodipodi:linespacing="125%"><tspan
+         y="784.842"
+         x="2108.46"
+         id="tspan98272"
+         sodipodi:role="line">13</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size: 93.4733px; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 150, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="1975.25"
+       y="845.362"
+       id="text98274"
+       sodipodi:linespacing="125%"
+       transform="scale(0.934733, 1.06982)"><tspan
+         sodipodi:role="line"
+         id="tspan98276"
+         x="1975.25"
+         y="845.362">d</tspan></text>
+    <text
+       transform="scale(0.849953, 1.17654)"
+       xml:space="preserve"
+       style="font-size: 42.4976px; font-style: normal; font-variant: normal; font-weight: bold; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 150, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="2226.08"
+       y="783.914"
+       id="text98278"
+       sodipodi:linespacing="125%"><tspan
+         y="783.914"
+         x="2226.08"
+         id="tspan98280"
+         sodipodi:role="line">14</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size: 93.4733px; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 150, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="2616.76"
+       y="846.928"
+       id="text2863"
+       sodipodi:linespacing="125%"
+       transform="scale(0.934733, 1.06982)"><tspan
+         sodipodi:role="line"
+         id="tspan2865"
+         x="2616.76"
+         y="846.928">d</tspan></text>
+    <text
+       transform="scale(0.849953, 1.17654)"
+       xml:space="preserve"
+       style="font-size: 42.4976px; font-style: normal; font-variant: normal; font-weight: bold; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 150, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="2931.58"
+       y="785.338"
+       id="text2867"
+       sodipodi:linespacing="125%"><tspan
+         y="785.338"
+         x="2931.58"
+         id="tspan2869"
+         sodipodi:role="line">20</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size: 93.4733px; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 150, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="2296.57"
+       y="847.4"
+       id="text2879"
+       sodipodi:linespacing="125%"
+       transform="scale(0.934733, 1.06982)"><tspan
+         sodipodi:role="line"
+         id="tspan2881"
+         x="2296.57"
+         y="847.4">d</tspan></text>
+    <text
+       transform="scale(0.849953, 1.17654)"
+       xml:space="preserve"
+       style="font-size: 42.4976px; font-style: normal; font-variant: normal; font-weight: bold; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 150, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="2579.45"
+       y="785.767"
+       id="text2883"
+       sodipodi:linespacing="125%"><tspan
+         y="785.767"
+         x="2579.45"
+         id="tspan2885"
+         sodipodi:role="line">17</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size: 93.4733px; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 150, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="2402.48"
+       y="847.647"
+       id="text2887"
+       sodipodi:linespacing="125%"
+       transform="scale(0.934733, 1.06982)"><tspan
+         sodipodi:role="line"
+         id="tspan2889"
+         x="2402.48"
+         y="847.647">d</tspan></text>
+    <text
+       transform="scale(0.849953, 1.17654)"
+       xml:space="preserve"
+       style="font-size: 42.4976px; font-style: normal; font-variant: normal; font-weight: bold; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 150, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="2695.92"
+       y="785.992"
+       id="text2891"
+       sodipodi:linespacing="125%"><tspan
+         y="785.992"
+         x="2695.92"
+         id="tspan2893"
+         sodipodi:role="line">18</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size: 93.4733px; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 150, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="2509.42"
+       y="846.626"
+       id="text2895"
+       sodipodi:linespacing="125%"
+       transform="scale(0.934733, 1.06982)"><tspan
+         sodipodi:role="line"
+         id="tspan2897"
+         x="2509.42"
+         y="846.626">d</tspan></text>
+    <text
+       transform="scale(0.849953, 1.17654)"
+       xml:space="preserve"
+       style="font-size: 42.4976px; font-style: normal; font-variant: normal; font-weight: bold; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 150, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="2813.53"
+       y="785.064"
+       id="text2899"
+       sodipodi:linespacing="125%"><tspan
+         y="785.064"
+         x="2813.53"
+         id="tspan2901"
+         sodipodi:role="line">19</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size: 93.4733px; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 150, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="3154.18"
+       y="843.521"
+       id="text2903"
+       sodipodi:linespacing="125%"
+       transform="scale(0.934733, 1.06982)"><tspan
+         sodipodi:role="line"
+         id="tspan2905"
+         x="3154.18"
+         y="843.521">d</tspan></text>
+    <text
+       transform="scale(0.849953, 1.17654)"
+       xml:space="preserve"
+       style="font-size: 42.4976px; font-style: normal; font-variant: normal; font-weight: bold; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 150, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="3522.6"
+       y="782.24"
+       id="text2907"
+       sodipodi:linespacing="125%"><tspan
+         y="782.24"
+         x="3522.6"
+         id="tspan2909"
+         sodipodi:role="line">25</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size: 93.4733px; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 150, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="3261.11"
+       y="843.388"
+       id="text2911"
+       sodipodi:linespacing="125%"
+       transform="scale(0.934733, 1.06982)"><tspan
+         sodipodi:role="line"
+         id="tspan2913"
+         x="3261.11"
+         y="843.388">d</tspan></text>
+    <text
+       transform="scale(0.849953, 1.17654)"
+       xml:space="preserve"
+       style="font-size: 42.4976px; font-style: normal; font-variant: normal; font-weight: bold; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 150, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="3640.2"
+       y="782.12"
+       id="text2915"
+       sodipodi:linespacing="125%"><tspan
+         y="782.12"
+         x="3640.2"
+         id="tspan2917"
+         sodipodi:role="line">26</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size: 93.4733px; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 150, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="3046.56"
+       y="845.219"
+       id="text2919"
+       sodipodi:linespacing="125%"
+       transform="scale(0.934733, 1.06982)"><tspan
+         sodipodi:role="line"
+         id="tspan2921"
+         x="3046.56"
+         y="845.219">d</tspan></text>
+    <text
+       transform="scale(0.849953, 1.17654)"
+       xml:space="preserve"
+       style="font-size: 42.4976px; font-style: normal; font-variant: normal; font-weight: bold; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 150, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="3404.25"
+       y="783.784"
+       id="text2923"
+       sodipodi:linespacing="125%"><tspan
+         y="783.784"
+         x="3404.25"
+         id="tspan2925"
+         sodipodi:role="line">24</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size: 93.4733px; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 150, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="2939.22"
+       y="844.918"
+       id="text2927"
+       sodipodi:linespacing="125%"
+       transform="scale(0.934733, 1.06982)"><tspan
+         sodipodi:role="line"
+         id="tspan2929"
+         x="2939.22"
+         y="844.918">d</tspan></text>
+    <text
+       transform="scale(0.849953, 1.17654)"
+       xml:space="preserve"
+       style="font-size: 42.4976px; font-style: normal; font-variant: normal; font-weight: bold; font-stretch: normal; text-align: start; line-height: 125%; text-anchor: start; fill: rgb(0, 150, 0); fill-opacity: 1; stroke: none; stroke-width: 1px; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; font-family: Verdana;"
+       x="3286.21"
+       y="783.51"
+       id="text2931"
+       sodipodi:linespacing="125%"><tspan
+         y="783.51"
+         x="3286.21"
+         id="tspan2933"
+         sodipodi:role="line">23</tspan></text>
+    <rect
+       style="fill: rgb(0, 255, 255); fill-opacity: 1; stroke: rgb(0, 0, 0); stroke-width: 6; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0pt; stroke-opacity: 1;"
+       id="rect6815"
+       width="57.142857"
+       height="57.142857"
+       x="1564.7441"
+       y="71.069565"
+       ry="28.571428" />
+    <rect
+       style="fill: rgb(0, 255, 255); fill-opacity: 1; stroke: none; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0pt; stroke-opacity: 1;"
+       id="rect7786"
+       width="57.142857"
+       height="57.142857"
+       x="1664.4203"
+       y="74.069565"
+       ry="28.571428" />
+    <rect
+       style="fill: rgb(200, 0, 0); fill-opacity: 1; stroke: rgb(0, 0, 0); stroke-width: 6; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0pt; stroke-opacity: 1;"
+       id="rect68880"
+       width="57.142857"
+       height="57.142857"
+       x="67.846733"
+       y="367.50912"
+       ry="28.571428" />
+    <rect
+       style="fill: rgb(0, 0, 200); fill-opacity: 1; stroke: rgb(150, 150, 150); stroke-width: 6; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0pt; stroke-opacity: 1;"
+       id="rect68882"
+       width="57.142857"
+       height="57.142857"
+       x="368.70395"
+       y="227.87871"
+       ry="28.571428" />
+    <rect
+       style="fill: rgb(0, 200, 0); fill-opacity: 1; stroke: rgb(0, 0, 0); stroke-width: 6; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0pt; stroke-opacity: 1;"
+       id="rect68884"
+       width="57.142857"
+       height="57.142857"
+       x="169.27544"
+       y="296.80722"
+       ry="28.571428" />
+    <rect
+       style="fill: rgb(255, 0, 255); fill-opacity: 1; stroke: rgb(0, 0, 0); stroke-width: 6; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0pt; stroke-opacity: 1;"
+       id="rect68886"
+       width="57.142857"
+       height="57.142857"
+       x="769.41479"
+       y="154.88756"
+       ry="28.571428" />
+    <rect
+       style="fill: rgb(200, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0pt; stroke-opacity: 1;"
+       id="rect68888"
+       width="57.142857"
+       height="57.142857"
+       x="267.26334"
+       y="367.50912"
+       ry="28.571428" />
+    <rect
+       style="fill: rgb(200, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0pt; stroke-opacity: 1;"
+       id="rect68890"
+       width="57.142857"
+       height="57.142857"
+       x="466.6799"
+       y="367.50912"
+       ry="28.571428" />
+    <rect
+       style="fill: rgb(200, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0pt; stroke-opacity: 1;"
+       id="rect68892"
+       width="57.142857"
+       height="57.142857"
+       x="664.73834"
+       y="367.50912"
+       ry="28.571428" />
+    <rect
+       style="fill: rgb(200, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0pt; stroke-opacity: 1;"
+       id="rect68894"
+       width="57.142857"
+       height="57.142857"
+       x="865.51312"
+       y="367.50912"
+       ry="28.571428" />
+    <rect
+       style="fill: rgb(200, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0pt; stroke-opacity: 1;"
+       id="rect68896"
+       width="57.142857"
+       height="57.142857"
+       x="1068.9297"
+       y="367.50912"
+       ry="28.571428" />
+    <rect
+       style="fill: rgb(200, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0pt; stroke-opacity: 1;"
+       id="rect68898"
+       width="57.142857"
+       height="57.142857"
+       x="1264.3463"
+       y="367.50912"
+       ry="28.571428" />
+    <rect
+       style="fill: rgb(200, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0pt; stroke-opacity: 1;"
+       id="rect68900"
+       width="57.142857"
+       height="57.142857"
+       x="1462.8036"
+       y="367.50912"
+       ry="28.571428" />
+    <rect
+       style="fill: rgb(0, 0, 200); fill-opacity: 1; stroke: none; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0pt; stroke-opacity: 1;"
+       id="rect46001"
+       width="57.142857"
+       height="57.142857"
+       x="564.09436"
+       y="230.87871"
+       ry="28.571428" />
+    <rect
+       style="fill: rgb(0, 0, 200); fill-opacity: 1; stroke: none; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0pt; stroke-opacity: 1;"
+       id="rect46007"
+       width="57.142857"
+       height="57.142857"
+       x="664.73834"
+       y="230.87871"
+       ry="28.571428" />
+    <rect
+       style="fill: rgb(0, 0, 200); fill-opacity: 1; stroke: none; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0pt; stroke-opacity: 1;"
+       id="rect46013"
+       width="57.142857"
+       height="57.142857"
+       x="466.23715"
+       y="230.87871"
+       ry="28.571428" />
+    <rect
+       style="fill: rgb(0, 200, 0); fill-opacity: 1; stroke: none; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0pt; stroke-opacity: 1;"
+       id="rect46015"
+       width="57.142857"
+       height="57.142857"
+       x="267.78311"
+       y="296.80722"
+       ry="28.571428" />
+    <rect
+       style="fill: rgb(255, 0, 255); fill-opacity: 1; stroke: none; stroke-width: 6; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0pt; stroke-opacity: 1;"
+       id="rect66880"
+       width="57.142857"
+       height="57.142857"
+       x="867.07129"
+       y="157.88756"
+       ry="28.571428" />
+    <rect
+       style="fill: rgb(0, 200, 0); fill-opacity: 1; stroke: none; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0pt; stroke-opacity: 1;"
+       id="rect68902"
+       width="57.142857"
+       height="57.142857"
+       x="566.74756"
+       y="296.80722"
+       ry="28.571428" />
+    <rect
+       style="fill: rgb(0, 200, 0); fill-opacity: 1; stroke: none; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0pt; stroke-opacity: 1;"
+       id="rect68904"
+       width="57.142857"
+       height="57.142857"
+       x="664.73834"
+       y="296.80722"
+       ry="28.571428" />
+    <rect
+       style="fill: rgb(0, 200, 0); fill-opacity: 1; stroke: none; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0pt; stroke-opacity: 1;"
+       id="rect68906"
+       width="57.142857"
+       height="57.142857"
+       x="964.68677"
+       y="296.80722"
+       ry="28.571428" />
+    <rect
+       style="fill: rgb(0, 200, 0); fill-opacity: 1; stroke: none; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0pt; stroke-opacity: 1;"
+       id="rect68908"
+       width="57.142857"
+       height="57.142857"
+       x="1067.7223"
+       y="296.80722"
+       ry="28.571428" />
+    <rect
+       style="fill: rgb(0, 200, 0); fill-opacity: 1; stroke: none; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0pt; stroke-opacity: 1;"
+       id="rect68910"
+       width="57.142857"
+       height="57.142857"
+       x="1462.8036"
+       y="296.80722"
+       ry="28.571428" />
+    <rect
+       style="fill: rgb(0, 200, 0); fill-opacity: 1; stroke: none; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0pt; stroke-opacity: 1;"
+       id="rect68912"
+       width="57.142857"
+       height="57.142857"
+       x="1364.829"
+       y="296.80722"
+       ry="28.571428" />
+    <rect
+       style="fill: rgb(0, 0, 200); fill-opacity: 1; stroke: none; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0pt; stroke-opacity: 1;"
+       id="rect68914"
+       width="57.142857"
+       height="57.142857"
+       x="1258.9978"
+       y="230.87871"
+       ry="28.571428" />
+    <rect
+       style="fill: rgb(0, 0, 200); fill-opacity: 1; stroke: none; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0pt; stroke-opacity: 1;"
+       id="rect68916"
+       width="57.142857"
+       height="57.142857"
+       x="1364.829"
+       y="230.87871"
+       ry="28.571428" />
+    <rect
+       style="fill: rgb(0, 0, 200); fill-opacity: 1; stroke: none; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0pt; stroke-opacity: 1;"
+       id="rect68918"
+       width="57.142857"
+       height="57.142857"
+       x="1161.1406"
+       y="230.87871"
+       ry="28.571428" />
+    <rect
+       style="fill: rgb(0, 0, 200); fill-opacity: 1; stroke: none; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0pt; stroke-opacity: 1;"
+       id="rect68920"
+       width="57.142857"
+       height="57.142857"
+       x="1462.8036"
+       y="230.87871"
+       ry="28.571428" />
+    <rect
+       style="fill: rgb(255, 0, 255); fill-opacity: 1; stroke: none; stroke-width: 6; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0pt; stroke-opacity: 1;"
+       id="rect68922"
+       width="57.142857"
+       height="57.142857"
+       x="1065.356"
+       y="157.88756"
+       ry="28.571428" />
+    <rect
+       style="fill: rgb(255, 0, 255); fill-opacity: 1; stroke: none; stroke-width: 6; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0pt; stroke-opacity: 1;"
+       id="rect68924"
+       width="57.142857"
+       height="57.142857"
+       x="1164.4984"
+       y="157.88756"
+       ry="28.571428" />
+    <rect
+       style="fill: rgb(255, 0, 255); fill-opacity: 1; stroke: none; stroke-width: 6; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0pt; stroke-opacity: 1;"
+       id="rect68926"
+       width="57.142857"
+       height="57.142857"
+       x="1263.6407"
+       y="157.88756"
+       ry="28.571428" />
+    <rect
+       style="fill: rgb(255, 0, 255); fill-opacity: 1; stroke: none; stroke-width: 6; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0pt; stroke-opacity: 1;"
+       id="rect68930"
+       width="57.142857"
+       height="57.142857"
+       x="1362.7831"
+       y="157.88756"
+       ry="28.571428" />
+    <rect
+       style="fill: rgb(255, 0, 255); fill-opacity: 1; stroke: none; stroke-width: 6; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0pt; stroke-opacity: 1;"
+       id="rect68932"
+       width="57.142857"
+       height="57.142857"
+       x="1461.9254"
+       y="157.88756"
+       ry="28.571428" />
+    <rect
+       style="fill: rgb(255, 0, 255); fill-opacity: 1; stroke: none; stroke-width: 6; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0pt; stroke-opacity: 1;"
+       id="rect68934"
+       width="57.142857"
+       height="57.142857"
+       x="966.21362"
+       y="157.88756"
+       ry="28.571428" />
+    <rect
+       style="fill: rgb(200, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0pt; stroke-opacity: 1;"
+       id="rect97664"
+       width="57.142857"
+       height="57.142857"
+       x="1668.7925"
+       y="367.30209"
+       ry="28.571428" />
+    <rect
+       style="fill: rgb(200, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0pt; stroke-opacity: 1;"
+       id="rect97666"
+       width="57.142857"
+       height="57.142857"
+       x="1864.2092"
+       y="367.30209"
+       ry="28.571428" />
+    <rect
+       style="fill: rgb(200, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0pt; stroke-opacity: 1;"
+       id="rect97668"
+       width="57.142857"
+       height="57.142857"
+       x="2062.6665"
+       y="367.30209"
+       ry="28.571428" />
+    <rect
+       style="fill: rgb(0, 200, 0); fill-opacity: 1; stroke: none; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0pt; stroke-opacity: 1;"
+       id="rect97670"
+       width="57.142857"
+       height="57.142857"
+       x="1764.5497"
+       y="296.60019"
+       ry="28.571428" />
+    <rect
+       style="fill: rgb(0, 200, 0); fill-opacity: 1; stroke: none; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0pt; stroke-opacity: 1;"
+       id="rect97672"
+       width="57.142857"
+       height="57.142857"
+       x="1867.5852"
+       y="296.60019"
+       ry="28.571428" />
+    <rect
+       style="fill: rgb(200, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0pt; stroke-opacity: 1;"
+       id="rect97922"
+       width="57.142857"
+       height="57.142857"
+       x="2268.6943"
+       y="366.83774"
+       ry="28.571428" />
+    <rect
+       style="fill: rgb(200, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0pt; stroke-opacity: 1;"
+       id="rect97924"
+       width="57.142857"
+       height="57.142857"
+       x="2464.1111"
+       y="366.83774"
+       ry="28.571428" />
+    <rect
+       style="fill: rgb(200, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0pt; stroke-opacity: 1;"
+       id="rect97926"
+       width="57.142857"
+       height="57.142857"
+       x="2664.5684"
+       y="366.83774"
+       ry="28.571428" />
+    <rect
+       style="fill: rgb(0, 200, 0); fill-opacity: 1; stroke: none; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0pt; stroke-opacity: 1;"
+       id="rect97928"
+       width="57.142857"
+       height="57.142857"
+       x="2166.4514"
+       y="296.13583"
+       ry="28.571428" />
+    <rect
+       style="fill: rgb(0, 200, 0); fill-opacity: 1; stroke: none; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0pt; stroke-opacity: 1;"
+       id="rect97930"
+       width="57.142857"
+       height="57.142857"
+       x="2267.4871"
+       y="296.13583"
+       ry="28.571428" />
+    <rect
+       style="fill: rgb(0, 200, 0); fill-opacity: 1; stroke: none; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0pt; stroke-opacity: 1;"
+       id="rect97932"
+       width="57.142857"
+       height="57.142857"
+       x="2664.5684"
+       y="296.13583"
+       ry="28.571428" />
+    <rect
+       style="fill: rgb(0, 200, 0); fill-opacity: 1; stroke: none; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0pt; stroke-opacity: 1;"
+       id="rect97934"
+       width="57.142857"
+       height="57.142857"
+       x="2568.5938"
+       y="296.13583"
+       ry="28.571428" />
+    <rect
+       style="fill: rgb(255, 0, 255); fill-opacity: 1; stroke: none; stroke-width: 6; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0pt; stroke-opacity: 1;"
+       id="rect97946"
+       width="57.142857"
+       height="57.142857"
+       x="2364.2632"
+       y="157.21617"
+       ry="28.571428" />
+    <rect
+       style="fill: rgb(255, 0, 255); fill-opacity: 1; stroke: none; stroke-width: 6; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0pt; stroke-opacity: 1;"
+       id="rect97948"
+       width="57.142857"
+       height="57.142857"
+       x="2463.4055"
+       y="157.21617"
+       ry="28.571428" />
+    <rect
+       style="fill: rgb(255, 0, 255); fill-opacity: 1; stroke: none; stroke-width: 6; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0pt; stroke-opacity: 1;"
+       id="rect97950"
+       width="57.142857"
+       height="57.142857"
+       x="2562.5479"
+       y="157.21617"
+       ry="28.571428" />
+    <rect
+       style="fill: rgb(255, 0, 255); fill-opacity: 1; stroke: none; stroke-width: 6; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0pt; stroke-opacity: 1;"
+       id="rect97952"
+       width="57.142857"
+       height="57.142857"
+       x="2661.6902"
+       y="157.21617"
+       ry="28.571428" />
+    <rect
+       style="fill: rgb(200, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0pt; stroke-opacity: 1;"
+       id="rect98180"
+       width="57.142857"
+       height="57.142857"
+       x="2869.3281"
+       y="366.5878"
+       ry="28.571428" />
+    <rect
+       style="fill: rgb(200, 0, 0); fill-opacity: 1; stroke: none; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0pt; stroke-opacity: 1;"
+       id="rect98182"
+       width="57.142857"
+       height="57.142857"
+       x="3068.7449"
+       y="366.5878"
+       ry="28.571428" />
+    <rect
+       style="fill: rgb(0, 200, 0); fill-opacity: 1; stroke: none; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0pt; stroke-opacity: 1;"
+       id="rect98186"
+       width="57.142857"
+       height="57.142857"
+       x="2969.0852"
+       y="295.88589"
+       ry="28.571428" />
+    <rect
+       style="fill: rgb(0, 200, 0); fill-opacity: 1; stroke: none; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0pt; stroke-opacity: 1;"
+       id="rect98188"
+       width="57.142857"
+       height="57.142857"
+       x="3068.1208"
+       y="295.88589"
+       ry="28.571428" />
+    <rect
+       style="fill: rgb(255, 0, 255); fill-opacity: 1; stroke: none; stroke-width: 6; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0pt; stroke-opacity: 1;"
+       id="rect98202"
+       width="57.142857"
+       height="57.142857"
+       x="2865.7544"
+       y="156.96623"
+       ry="28.571428" />
+    <rect
+       style="fill: rgb(255, 0, 255); fill-opacity: 1; stroke: none; stroke-width: 6; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0pt; stroke-opacity: 1;"
+       id="rect98204"
+       width="57.142857"
+       height="57.142857"
+       x="2964.897"
+       y="156.96623"
+       ry="28.571428" />
+    <rect
+       style="fill: rgb(255, 0, 255); fill-opacity: 1; stroke: none; stroke-width: 6; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0pt; stroke-opacity: 1;"
+       id="rect98206"
+       width="57.142857"
+       height="57.142857"
+       x="3064.0393"
+       y="156.96623"
+       ry="28.571428" />
+    <rect
+       style="fill: rgb(255, 0, 255); fill-opacity: 1; stroke: none; stroke-width: 6; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0pt; stroke-opacity: 1;"
+       id="rect98212"
+       width="57.142857"
+       height="57.142857"
+       x="2766.6121"
+       y="156.96623"
+       ry="28.571428" />
+    <rect
+       style="fill: rgb(0, 0, 200); fill-opacity: 1; stroke: none; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0pt; stroke-opacity: 1;"
+       id="rect97678"
+       width="57.142857"
+       height="57.142857"
+       x="2068.8606"
+       y="230.67168"
+       ry="28.571428" />
+    <rect
+       style="fill: rgb(0, 0, 200); fill-opacity: 1; stroke: none; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0pt; stroke-opacity: 1;"
+       id="rect97680"
+       width="57.142857"
+       height="57.142857"
+       x="2168.6917"
+       y="230.67168"
+       ry="28.571428" />
+    <rect
+       style="fill: rgb(0, 0, 200); fill-opacity: 1; stroke: none; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0pt; stroke-opacity: 1;"
+       id="rect97682"
+       width="57.142857"
+       height="57.142857"
+       x="1971.0034"
+       y="230.67168"
+       ry="28.571428" />
+    <rect
+       style="fill: rgb(0, 0, 200); fill-opacity: 1; stroke: none; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0pt; stroke-opacity: 1;"
+       id="rect97684"
+       width="57.142857"
+       height="57.142857"
+       x="2266.6665"
+       y="230.67168"
+       ry="28.571428" />
+    <rect
+       style="fill:#0000c8;fill-opacity:1;stroke:none;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect97936"
+       width="57.142857"
+       height="57.142857"
+       x="2966.1909"
+       y="230.20735"
+       ry="28.571428" />
+    <rect
+       style="fill: rgb(0, 0, 200); fill-opacity: 1; stroke: none; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0pt; stroke-opacity: 1;"
+       id="rect97938"
+       width="57.142857"
+       height="57.142857"
+       x="2774.5938"
+       y="230.20735"
+       ry="28.571428" />
+    <rect
+       style="fill: rgb(0, 0, 200); fill-opacity: 1; stroke: none; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0pt; stroke-opacity: 1;"
+       id="rect97942"
+       width="57.142857"
+       height="57.142857"
+       x="2868.5684"
+       y="230.20735"
+       ry="28.571428" />
+    <rect
+       style="fill: rgb(0, 255, 255); fill-opacity: 1; stroke: none; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0pt; stroke-opacity: 1;"
+       id="rect9726"
+       width="57.142857"
+       height="57.142857"
+       x="1764.0966"
+       y="74.069565"
+       ry="28.571428" />
+    <rect
+       style="fill: rgb(0, 255, 255); fill-opacity: 1; stroke: none; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0pt; stroke-opacity: 1;"
+       id="rect9728"
+       width="57.142857"
+       height="57.142857"
+       x="1863.7727"
+       y="74.069565"
+       ry="28.571428" />
+    <rect
+       style="fill: rgb(0, 255, 255); fill-opacity: 1; stroke: none; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0pt; stroke-opacity: 1;"
+       id="rect9730"
+       width="57.142857"
+       height="57.142857"
+       x="1963.4489"
+       y="74.069565"
+       ry="28.571428" />
+    <rect
+       style="fill: rgb(0, 255, 255); fill-opacity: 1; stroke: none; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0pt; stroke-opacity: 1;"
+       id="rect9732"
+       width="57.142857"
+       height="57.142857"
+       x="2063.125"
+       y="74.069565"
+       ry="28.571428" />
+    <rect
+       style="fill: rgb(0, 255, 255); fill-opacity: 1; stroke: none; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0pt; stroke-opacity: 1;"
+       id="rect9734"
+       width="57.142857"
+       height="57.142857"
+       x="2162.8013"
+       y="74.069565"
+       ry="28.571428" />
+    <rect
+       style="fill: rgb(0, 255, 255); fill-opacity: 1; stroke: none; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0pt; stroke-opacity: 1;"
+       id="rect9736"
+       width="57.142857"
+       height="57.142857"
+       x="2262.4773"
+       y="74.069565"
+       ry="28.571428" />
+    <rect
+       style="fill: rgb(0, 255, 255); fill-opacity: 1; stroke: none; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0pt; stroke-opacity: 1;"
+       id="rect9738"
+       width="57.142857"
+       height="57.142857"
+       x="2362.1536"
+       y="74.069565"
+       ry="28.571428" />
+    <rect
+       style="fill: rgb(0, 255, 255); fill-opacity: 1; stroke: none; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0pt; stroke-opacity: 1;"
+       id="rect9740"
+       width="57.142857"
+       height="57.142857"
+       x="2461.8298"
+       y="74.069565"
+       ry="28.571428" />
+    <rect
+       style="fill: rgb(0, 255, 255); fill-opacity: 1; stroke: none; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0pt; stroke-opacity: 1;"
+       id="rect9742"
+       width="57.142857"
+       height="57.142857"
+       x="2561.5059"
+       y="74.069565"
+       ry="28.571428" />
+    <rect
+       style="fill: rgb(0, 255, 255); fill-opacity: 1; stroke: none; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0pt; stroke-opacity: 1;"
+       id="rect9744"
+       width="57.142857"
+       height="57.142857"
+       x="2661.1821"
+       y="74.069565"
+       ry="28.571428" />
+    <rect
+       style="fill: rgb(0, 255, 255); fill-opacity: 1; stroke: none; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0pt; stroke-opacity: 1;"
+       id="rect9746"
+       width="57.142857"
+       height="57.142857"
+       x="2760.8584"
+       y="74.069565"
+       ry="28.571428" />
+    <rect
+       style="fill: rgb(0, 255, 255); fill-opacity: 1; stroke: none; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0pt; stroke-opacity: 1;"
+       id="rect9748"
+       width="57.142857"
+       height="57.142857"
+       x="2860.5344"
+       y="74.069565"
+       ry="28.571428" />
+    <rect
+       style="fill: rgb(0, 255, 255); fill-opacity: 1; stroke: none; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0pt; stroke-opacity: 1;"
+       id="rect9750"
+       width="57.142857"
+       height="57.142857"
+       x="2960.2107"
+       y="74.069565"
+       ry="28.571428" />
+    <rect
+       style="fill: rgb(0, 255, 255); fill-opacity: 1; stroke: none; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 4; stroke-dasharray: none; stroke-dashoffset: 0pt; stroke-opacity: 1;"
+       id="rect9752"
+       width="57.142857"
+       height="57.142857"
+       x="3059.887"
+       y="74.069565"
+       ry="28.571428" />
+    <rect
+       ry="28.571428"
+       y="230.20735"
+       x="3063.6909"
+       height="57.142857"
+       width="57.142857"
+       id="rect2875"
+       style="fill:#0000c8;fill-opacity:1;stroke:none;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="Zahlen links und oben"
+     transform="translate(-19.0299, -16.0696)" />
+</svg>

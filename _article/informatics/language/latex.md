@@ -8,7 +8,7 @@ There exist several variants that are all based on the original TeX:
 
 * **LaTeX**: adds commands for easier typesetting of typical documents such as books, articles, and letters.
 * **XeLaTeX**: adds extended support for fonts and allows the use of system fonts.
-* **LuaLaTeX**: adds support for the scripting language Lua. 
+* **LuaLaTeX**: adds support for the scripting language Lua.
 
 
 
@@ -34,7 +34,7 @@ LaTeX code is divided into two parts: *preamble* and *document*. In the preamble
 ### Special Characters
 Some characters are not part of normal text but have a reserved special meaning for the LaTeX compiler.
 
-* `\` introduces a command 
+* `\` introduces a command
 * `{`, `}` embraces arguments, creates logical parts
 * `[`, `]` embraces optional command parameters
 * `%` comments: code after % will be ignored.
@@ -56,7 +56,7 @@ LaTeX supports several levels for headings:
 
 1. `\part{title}`   (only for books)
 1. `\chapter{title}`  (only for books or reports)
-1. `\section{title}` 
+1. `\section{title}`
 1. `\subsection{title}`
 1. `\subsubsection{title}`
 1. `\paragraph{title}`
@@ -173,5 +173,3 @@ Afterwards, you can create figures using
 * [Wikipedia: LaTeX Math Expressions](https://en.wikipedia.org/wiki/Help:Displaying_a_formula)
 * [StackExchange: Overview of Table Packages](https://tex.stackexchange.com/questions/12672/which-tabular-packages-do-which-tasks-and-which-packages-conflict)
 * [texblog: Professional and clean tables with LaTeX](https://texblog.org/2017/02/06/proper-tables-with-latex/)
-
-

@@ -16,4 +16,3 @@ The directed sum of the electrical potential differences (voltage) around any cl
 
 $$\sum_{k=1}^n V_k = 0$$
 with the $n$ voltages $V_k$ for each closed loop.
-

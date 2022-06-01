@@ -8,4 +8,3 @@ A commitment scheme is a cryptographic primitive used to commit to a chosen valu
 ## Properties
 * Computational binding
 * Computational hiding
-

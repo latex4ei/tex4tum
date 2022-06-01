@@ -11,14 +11,14 @@ Syntax: `SELECTOR { PROPERTY: VALUE; }`
 ```css
 html { font-family: sans-serif; }
 
-body { 
-	margin: 0; 
+body {
+	margin: 0;
 	padding: 1rem 0.5rem 0 0.5rem;  /* t, r, b, l */
 }
 
-.container{ 
-	margin: auto; 
-	max-width: 960px; 
+.container{
+	margin: auto;
+	max-width: 960px;
 }
 ```
 
@@ -44,15 +44,15 @@ All HTML elements can be considered as boxes with:
 +------------------------+
 ```
 
-<!-- 
+<!--
 ┌───────────────────────┐
 │       Margin  ↕       │
 │ ┏━━━━━━━━━━━━━━━━━━┓  │
-│ ┃     Padding ↕    ┃  │ 
-│ ┃   ┌──────────┐   ┃  │  
-│ ┃   │ Content ↕│   ┃  │  
-│ ┃   └──────────┘   ┃  │  
-│ ┗━━━━━Border━━━━━━━┛  │ 
+│ ┃     Padding ↕    ┃  │
+│ ┃   ┌──────────┐   ┃  │
+│ ┃   │ Content ↕│   ┃  │
+│ ┃   └──────────┘   ┃  │
+│ ┗━━━━━Border━━━━━━━┛  │
 └───────────────────────┘
  -->
 
@@ -145,4 +145,3 @@ The Dots per Inch (DPI) refers to the `pt` per `in`. The default is DPI=96.
 
 ## References
 * [CSS Units](https://www.w3.org/Style/Examples/007/units.en.html)
-

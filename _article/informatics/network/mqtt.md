@@ -22,13 +22,13 @@ The publish-subscribe messaging pattern requires a message broker. The broker is
 * `UnSubscribe`: Requests the server unsubscribe the client from one or more topics.
 * `Publish`: Returns immediately to the application thread after passing the request to the MQTT client.
 * Last-Will-Message: sent to clients if hard-disconnect detected
-* Keepalive: if no interaction has happened with the broker for a certain amount of time, the client 
+* Keepalive: if no interaction has happened with the broker for a certain amount of time, the client
 ”pings” the broker (PINGREQ), which “pings it back” (PINGREP).
 
 
 ## Publish/Subscribe
 Sensor publish to topic e.g. `deib/antlab/room5/temperature` to MQTT broker.
-Clients subscribe on topic. 
+Clients subscribe on topic.
 
 ### Topic Notation
 
@@ -39,8 +39,8 @@ Wildcards (+) are allowed for subscription on single topic level.
 
 ### Fixed Header (2 bytes):
 ```diagram
- 0                   1           
- 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 
+ 0                   1
+ 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 |  CPT  | Flags |RemainingLength|
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+

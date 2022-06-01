@@ -13,5 +13,3 @@ A successive-approximation ADC uses a comparator to successively narrow a range 
 
 
 ## Sigma-delta ADC
-
-

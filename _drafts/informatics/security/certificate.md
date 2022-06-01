@@ -28,13 +28,9 @@ Used to authenticate the client connecting to a TLS service.
 ## Root certificate
 A self-signed certificate used to sign other certificates. It identifies a root certificate authority (CA).
 
-	* A CA issues digital certificates. 
+	* A CA issues digital certificates.
 		- It first verifies the true identity of the subject, e.g. that a hostname belongs to the correct organization, and then assigns a public key to the hostname which is made public available.
 	* A CA publishes digital certificates
 	* A CA is trusted by the subject (owner) and each party that wants to verify the identity of the subject
 
-Some major software (e.g. webbrowser) contains a list of certificate authorities that are trusted by default. 
-
-
-
-
+Some major software (e.g. webbrowser) contains a list of certificate authorities that are trusted by default.

@@ -16,5 +16,3 @@ POSIX is the Portable Operating System standard.
 
 ## References
 * http://unix.stackexchange.com/questions/11983/what-exactly-is-posix
-
-

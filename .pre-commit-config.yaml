@@ -1,0 +1,20 @@
+
+default_stages: [commit]
+
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.2.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+  - repo: https://github.com/psf/black
+    rev: 22.3.0
+    hooks:
+      - id: black
+        language_version: python3
+
+# More interesting hooks
+# https://github.com/jackdewinter/pymarkdown
+# https://github.com/executablebooks/mdformat
+# https://github.com/igorshubovych/markdownlint-cli

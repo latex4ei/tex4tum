@@ -9,7 +9,7 @@ All nodes are connected to each other through two wires, which are a twisted pai
 
 
 | Property | Value |
-|----------|-------| 
+|----------|-------|
 | Wires    | 2     |
 | Speed    | 125 kb/s .. 1 Mbps |
 
@@ -24,6 +24,3 @@ All nodes are connected to each other through two wires, which are a twisted pai
 
 ## High Speed CAN (ISO 11898-2)
 High speed CAN signaling drives the CAN high wire towards 5 V and the CAN low wire towards 0 V when transmitting a dominant (0), and does not drive either wire when transmitting a recessive (1).
-
-
-

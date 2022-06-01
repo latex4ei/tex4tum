@@ -56,7 +56,7 @@ A regular expression is a character sequence that specifies a pattern of a strin
 
 ## Examples
 
-| Match | Pattern | Regex | 
+| Match | Pattern | Regex |
 |-------|---------|-------|
 | Date  | YYYY-MM-DD | `\d{4}-\d{2}-\d{2}` |
 | Email | xx@xx.xx | `\S{1,}@\S{2,}\.\S{2,}` |

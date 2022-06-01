@@ -1,6 +1,6 @@
 ---
 title: Universal Serial Bus (USB)
-tags: USB Type-C
+tags: [USB, Type-C]
 ---
 
 The USB is serial bus commonly used in computers.
@@ -21,7 +21,7 @@ Maximum devices: 127.
 Cable length: $< \SI{5}{m}$
 
 
-{% include figure.html width="20em" filename="usb-connectors.svg" description="USB Connectors" %}
+![USB Connectors](usb-connectors.svg){ width="20em"}
 
 
 
@@ -187,4 +187,3 @@ The practical speed is 280 Mbit/s due to bus access constraints.
 ## References
 
 * USB-C
-

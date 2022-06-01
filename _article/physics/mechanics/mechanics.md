@@ -19,9 +19,3 @@ Mechanics describe the behavior of physical bodies when they are subject to forc
 
 <!-- Zentripetalkraft: & \vec F_{Z}=-m\frac{v^2}{r}\frac{\vec r}{|r|}=-m\omega^2r\frac{\vec r}{|r|}   \
  -->
-
-
-
-
-
-

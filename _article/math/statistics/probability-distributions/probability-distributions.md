@@ -71,7 +71,7 @@ Repeated Bernoulli trials, such as repeated coin tosses.
 
 
 ### Hypergeometric
-Models repeated Bernoulli trials with changing success probabilities. 
+Models repeated Bernoulli trials with changing success probabilities.
 
 Models 1 urn with $N$ balls where balls are *not* put back after each trial.
 
@@ -113,5 +113,3 @@ Corresponds to a Geometric for infinite trials of infinitesimal small time slice
 
 ## References
 * [Common Probability Distributions: The Data Scientist’s Crib Sheet](https://blog.cloudera.com/blog/2015/12/common-probability-distributions-the-data-scientists-crib-sheet/)
-
-

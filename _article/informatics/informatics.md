@@ -7,4 +7,3 @@ Information Theory (IT) is a science.
 
 
 {{ FOLDER_TOC }}
-

@@ -18,7 +18,7 @@ In digital modulation, an analog carrier signal is modulated by a discrete digit
 * Phase-Shift Keying (PSK): a finite number of phases are used.
 * Frequency-Shift Keying (FSK): a finite number of frequencies are used.
 * Amplitude-Shift Keying (ASK): a finite number of amplitudes are used.
-* Quadrature Amplitude Modulation (QAM): 
+* Quadrature Amplitude Modulation (QAM):
 
 
 ## References

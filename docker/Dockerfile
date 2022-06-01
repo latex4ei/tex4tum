@@ -1,35 +1,19 @@
-FROM ruby:2.7
-
-ENV JEKYLL_VAR_DIR=/var/jekyll
-ENV JEKYLL_DATA_DIR=/srv/jekyll
-ENV JEKYLL_ENV=development
+FROM ubuntu:22.04
 
 RUN apt-get update && \
-    curl -sL https://deb.nodesource.com/setup_14.x | bash - && \
     apt-get install -y --no-install-recommends \
-    nodejs pandoc cmake locales && \
+    wget rsync make python3-pip && \
     rm -rf /var/lib/apt/lists/*
 
-RUN echo "gem: --no-ri --no-rdoc" >~/.gemrc && \
-    unset GEM_HOME && unset GEM_BIN && yes | gem update --system && \
-    unset GEM_HOME && unset GEM_BIN && yes | gem install --force bundler && \
-    gem install jekyll rspec html-proofer pygments.rb jekyll-pandoc rubocop && \
-    npm install -g standard
-
-ENV PANDOC_VERSION="2.14.0.2"
+ENV PANDOC_VERSION="2.18"
 RUN TEMP_DEB="$(mktemp)" && \
     wget -O "$TEMP_DEB" "https://github.com/jgm/pandoc/releases/download/$PANDOC_VERSION/pandoc-$PANDOC_VERSION-1-amd64.deb" && \
     dpkg -i "$TEMP_DEB" && \
     rm -f "$TEMP_DEB"
 
-RUN mkdir -p $JEKYLL_VAR_DIR $JEKYLL_DATA_DIR && \
-    rm -rf /root/.gem /home/jekyll/.gem $BUNDLE_HOME/cache $GEM_HOME/cache
+COPY requirements.txt .
+RUN pip3 install -r requirements.txt
 
-ENV LANG C.UTF-8
+WORKDIR /home
 
-WORKDIR /srv/jekyll
-VOLUME /srv/jekyll
-EXPOSE 35729
-EXPOSE 4000
-
-CMD [ "bundle", "install" ]
+CMD [ "bash" ]

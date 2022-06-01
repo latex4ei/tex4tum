@@ -9,7 +9,7 @@ Encryption converts a plaintext $m$ (input) to a ciphertext $c$ (output)
 
 
 
-## Cryptanalysis 
+## Cryptanalysis
 Cryptanalysis is the study of methods for obtaining the meaning of encrypted information.
 
 
@@ -45,5 +45,3 @@ Cryptographic primitives are based on mathematical problems where most of the in
 * Factorization
 * Discrete Logarithm
 * Lattices
-
-

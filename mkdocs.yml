@@ -1,0 +1,209 @@
+site_name: Tex4TUM
+site_url: https://tex4tum.de/
+repo_url: https://github.com/latex4ei/tex4tum
+site_author: Emanuel Regnath, Markus Hofbauer
+docs_dir: tmp/build
+site_dir: docs
+use_directory_urls: false
+watch:
+  - _article
+
+
+theme:
+  name: material
+  logo: assets/img/Logo.png
+  palette:
+    scheme: tum
+  custom_dir: overrides
+  features:
+    - search.highlight
+    - navigation.tabs
+    - navigation.indexes
+
+
+markdown_extensions:
+  - abbr
+  - attr_list
+  - admonition
+  - def_list
+  - footnotes
+  - meta
+  - md_in_html
+  - toc:
+      permalink: "#"
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.highlight:
+      use_pygments: true
+
+
+plugins:
+  - search:
+      separator: '[\s\-\.\(\)]+'
+      indexing: 'sections'
+  - tags
+
+
+extra_css:
+  - assets/stylesheets/mkdocs-extra.css
+
+extra_javascript:
+  - assets/javascripts/auto-katex.js
+  - assets/javascripts/auto-tabbox.js
+  - assets/javascripts/auto-tablesort.js
+
+
+# Page tree
+nav:
+  - Home:
+    - index.md
+  - Sheets: sheets.md
+  - About:
+    - about.md
+    - demo.md
+    - contribution.md
+    - team.md
+  - Math:
+    - math.md
+    - Statistics:
+      - statistics.md
+      - moment.md
+      - linear-regression.md
+      - combinatoric.md
+      - testing.md
+      - probability.md
+      - 'Probability Distributions':
+        - binomial-distribution.md
+        - student-t-distribution.md
+        - exponential-distribution.md
+        - probability-distributions.md
+        - negative-binomial-distribution.md
+        - normal-distribution.md
+    - Algebra:
+      - vector.md
+      - exp-log.md
+      - complex-number.md
+      - bool.md
+      - algebra.md
+      - matrix.md
+    - Analysis:
+      - series.md
+      - differential-equation.md
+      - convolution.md
+      - analysis.md
+      - curve.md
+      - integral.md
+      - frequency-analysis.md
+      - differential-operators.md
+    - Geometry:
+      - trigonometry.md
+      - geometry.md
+  - Machines:
+    - machines.md
+    - quadcopter.md
+  - Electronics:
+    - electronics.md
+    - Computer:
+      - processor.md
+      - ram.md
+      - psu.md
+      - computer.md
+    - Actuator:
+      - actuator.md
+      - servo.md
+    - Component:
+      - op-amp.md
+      - component.md
+      - transistor.md
+    - Signal:
+      - channel-coding.md
+      - harmonic-oscillation.md
+    - DSP:
+      - dsp.md
+      - low-pass.md
+      - kalman-filter.md
+      - filter.md
+      - signal.md
+      - modulation.md
+    - Bus:
+      - bus.md
+      - usb.md
+      - i2c.md
+      - spi.md
+      - usart.md
+    - cmos.md
+  - Physics:
+    - physics.md
+    - rounding.md
+    - Optic:
+      - optic.md
+      - reflection.md
+    - si-units.md
+    - constants.md
+    - thermodynamics.md
+    - Mechanics:
+      - mechanics.md
+      - motion.md
+    - Electromagnetism:
+      - maxwell.md
+      - electric-field.md
+      - kirchhoff.md
+      - electromagnetism.md
+  - Informatics:
+    - informatics.md
+    - Theory:
+      - oop.md
+      - numbers.md
+      - float.md
+      - datetime.md
+      - petri-net.md
+    - Security:
+      - aes.md
+      - security.md
+      - Hash:
+        - sha-2.md
+        - sha-3.md
+        - hash.md
+        - blake2.md
+    - Datastructures:
+      - uri.md
+      - datastructures.md
+    - Tools:
+      - git.md
+      - gdb.md
+      - tools.md
+    - Network:
+      - ip.md
+      - udp.md
+      - rpl.md
+      - coap.md
+      - network.md
+      - mqtt.md
+      - dns.md
+      - 6lowpan.md
+      - tcp.md
+      - ieee-802-15-04.md
+    - Language:
+      - matlab.md
+      - python.md
+      - rust.md
+      - latex.md
+      - natural-language.md
+      - bash.md
+      - markdown.md
+      - doxygen.md
+      - css.md
+      - ada.md
+      - regular-expressions.md
+      - go.md
+      - cpp.md
+      - haskell.md
+      - lua.md
+      - language.md
+      - c.md
+      - ruby.md

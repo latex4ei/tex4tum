@@ -22,7 +22,7 @@ Markdown is a simple markup language with the aim that the markup elements do no
 Markdown supports several levels for headings:
 ```
 # Level 1 Heading (e.g. Title)
-## Level 2 Heading 
+## Level 2 Heading
 ### Level 3 Heading
 #### Level 4 Heading
 ```
@@ -58,4 +58,3 @@ There exist several variants (flawors) of the original markdown that extend the 
 ## References
 
 * [RFC 7763](https://tools.ietf.org/html/rfc7763), *The text/markdown Media Type*
-

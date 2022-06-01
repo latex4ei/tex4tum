@@ -14,9 +14,5 @@ Content in Jekyll is either a post or a page. These content "objects" get insert
 |------|-------------|
 | Site | the whole website with all pages |
 | Page | a single webpage |
-| Post | the text content part of a webpage | 
+| Post | the text content part of a webpage |
 | Collection | A category of content. Page and Post are collections |
-
-
-
-

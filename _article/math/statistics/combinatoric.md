@@ -13,5 +13,3 @@ tags: [permutation, combination, variation]
 |-------------|:-------------:|:------------------------:|
 | repeat      | $\displaystyle n^k$      |  $\displaystyle \binom{n+k-1}{k}$    |
 | distinct    | $\displaystyle \frac{n!}{(n-k)!}$ | $\displaystyle  \binom{n}{k}$ |
-
-

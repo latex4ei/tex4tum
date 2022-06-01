@@ -1,6 +1,6 @@
 ---
 title: TCP
-tags: port
+tags: [port, ACK, SYN, FIN]
 ---
 
 The Transmission Control Protocol (TCP) is one of the main protocols of the Internet protocol suite.
@@ -31,16 +31,16 @@ The Transmission Control Protocol (TCP) is one of the main protocols of the Inte
 
 ### Explanation of Header Fields
 Source Port
-: 16 bit source port number. 
+: 16 bit source port number.
 
-Destination Port 
+Destination Port
 : 16 bit destination port number.
 
-Sequence Number 
+Sequence Number
 : The 32 bit sequence number of the first data octet in this segment
 
 Acknowledgment Number
-:   32 bits. 
+:   32 bits.
     If the ACK control bit is set this field contains the value of the
     next sequence number the sender of the segment is expecting to
     receive.  Once a connection is established this is always sent.
@@ -71,7 +71,7 @@ Window
     accept.
 
 Checksum
-:  16 bits. 
+:  16 bits.
    The checksum field is the 16 bit one's complement of the one's
    complement sum of all 16 bit words in the header and text.
 
@@ -106,7 +106,7 @@ Padding
 | 53   | DNS                        |
 | 80   | HTTP                       |
 | 123  | Network Time Protocol      |
-| 220  | IMAP (incoming mail)       | 
+| 220  | IMAP (incoming mail)       |
 | 443  | HTTPS                      |
 | 546  | DHCPv6 Client                |
 | 547  | DHCPv6 Server                |

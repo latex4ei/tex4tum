@@ -56,4 +56,3 @@ Explanation:
 
 ## References
 * [“media oriented systems transport” protocol](http://yadda.icm.edu.pl/yadda/element/bwmeta1.element.agro-92501c5c-51b7-4c45-b15b-15d6fb69ff2d/c/24.pdf)
-

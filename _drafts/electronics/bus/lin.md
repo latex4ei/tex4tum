@@ -7,7 +7,7 @@ for sensors, cheap
 
 
 | Property | Value |
-|----------|-------| 
+|----------|-------|
 | Wires    | N/A     |
 | Speed    | 20 kbit/s |
 | Devices  | 16 |
@@ -15,8 +15,3 @@ for sensors, cheap
 
 
 ## Message Format
-
-
-
-
-

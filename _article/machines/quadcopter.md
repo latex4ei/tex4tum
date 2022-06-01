@@ -2,13 +2,13 @@
 title: Quadcopter
 ---
 
-A quadcopter is a type of helicopter with four rotors. 
+A quadcopter is a type of helicopter with four rotors.
 
 
 ## Motors
 Low-cost commercial quadcopters generally use electric DC motors such as
 
-* **Brushed Motors:** simple and cheap and thus a popular choice for micro quadcopters. 
+* **Brushed Motors:** simple and cheap and thus a popular choice for micro quadcopters.
 However, the friction of the brush results in lower efficiency and life span.
 * **Brushless Motors:** require 3-phase electronic speed controllers (ESC). The output of the ESC controls the speed of the motor.
 
@@ -18,30 +18,30 @@ However, the friction of the brush results in lower efficiency and life span.
 
 
 ## Flight Control
-Two rotors are spinning clockwise (CW) and two counterclockwise (CCW) to balance the angular momentum. 
+Two rotors are spinning clockwise (CW) and two counterclockwise (CCW) to balance the angular momentum.
 Each rotor produces both lift and torque about its center of rotation, as well as drag opposite to the vehicle's direction of flight.
 Flight control is provided by independent variation of the speed and hence lift and torque of each rotor.
 
 
-{% include svg-object.html id="SVG_obj" width="30em" filename="quadrocopter.svg" description='Top view of a conceptual quadcopter model.' %}
+![Top view of a conceptual quadcopter model.](quadrocopter.svg){#SVG_obj width="30em"}
 
 
-<div class="row">
-  <div class="col">
+<div class="row" markdown>
+  <div class="col" markdown>
   <label>Thrust</label><br>
   <input type="range" id="s_thrust" min="0" max="5" value="1" list="tickmarks" oninput="update(this)"><br><br>
   </div>
-  <div class="col">
+  <div class="col" markdown>
   <label>Pitch</label><br>
   <input type="range" id="s_pitch" min="-3" max="3" value="0" step="1" list="tickmarks" oninput="update(this)">
   </div>
 </div>
-<div class="row">
-  <div class="col">
+<div class="row" markdown>
+  <div class="col" markdown>
   <label>Yaw</label><br>
   <input type="range" id="s_yaw" min="-3" max="3" value="0" list="tickmarks" oninput="update(this)"><br><br>
   </div>
-  <div class="col">
+  <div class="col" markdown>
   <label>Roll</label><br>
   <input type="range" id="s_roll" min="-3" max="3" value="0" step="1" list="tickmarks" oninput="update(this)">
   </div>

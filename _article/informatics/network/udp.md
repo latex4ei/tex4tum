@@ -27,4 +27,3 @@ In contrast to TCP, UDP does not provide sequence numbers to detect the order of
 
 ## References
 * [RFC 768](https://tools.ietf.org/html/rfc768)
-

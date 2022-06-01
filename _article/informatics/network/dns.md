@@ -71,5 +71,3 @@ Linux:  `dig DOMAIN`, `host DOMAIN`, `nslookup DOMAIN`
 [^RFCDNS]: [RFC 1035](https://tools.ietf.org/html/rfc1035), *Domain Names - Implementation and Specification* , 1987
 
 [^RFCDNAME]: [RFC 6672](https://tools.ietf.org/html/rfc6672), *DNAME Redirection in the DNS*, 2012
-
-

@@ -17,10 +17,11 @@ $$f(x;\lambda) = \lambda e^{-\lambda x} \qquad x \gt 0$$
 with the rate parameter $\lambda$.
 
 
-{% include svg-object.html id="SVG_exp" filename="dist_exponential.svg" description='Exponential Distribution Exp(λ) with λ = <span id="par_lam">1.0</span>' %}
+![Exponential Distribution Exp(λ) with λ = <span id="par_lam">1.0</span>](dist_exponential.svg){#SVG_exp}
 
-<div class="row">
-  <div class="col">
+
+<div class="row" markdown>
+  <div class="col" markdown>
   <label>Input for λ</label><br>
   <input type="range" id="lamda_range" min="1" max="10" value="10" list="tickmarks" oninput="exp_update(this)"><br><br>
   </div>
