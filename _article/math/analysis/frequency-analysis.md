@@ -26,7 +26,7 @@ Info: timefunctions $f,g$, frequency functions $X,F,G$, complex number $\cx s$, 
 
 ## Example Spectrums
 <style>
-table{table-layout: fixed;} 
+table{table-layout: fixed;}
 td{width: 15em; padding-top: 1em!important;}
 </style>
 
@@ -72,6 +72,3 @@ $$\displaystyle \underset{\text{Zeitbereich}}{ f(t)} \LT \underset{\text{Frequen
 
 
 ## Z-Transform (ZT)
-
-
-

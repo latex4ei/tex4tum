@@ -17,7 +17,7 @@ tags: [authentication, encryption, integrity]
 ## Security Threats
 - **Reverse Engineering:** Debugger observes execution
 - **Side-Channel Attacks:** Analyze timing/energy
-- **Steal User Data:**  
+- **Steal User Data:**
 	- Key Logging: Read keyboard input in background
 	- Overlay: User interacts with the wrong window
 	- Screen Scraping: screenshot of screen
@@ -28,7 +28,7 @@ tags: [authentication, encryption, integrity]
 	- Rootkit: gain admin rights (root)
 	- Logic/Time Bombs: silent code that executes on condition
 	- SQL Injection: inject SQL statements into executed strings
-- **Denial-of-Service (DoS):** 
+- **Denial-of-Service (DoS):**
 	- flooding: send more requests to a node than it can process
 	- fork bomb: exhaust system resources through recursion
 - **Man-in-the-Middle:** eavesdropping and spoofing of messages
@@ -57,7 +57,7 @@ Goal: Avoid, Detect, Mitigate **Intrusion/Attacks**
 * **Account Locking:** “Always count.”
 	- count number of failed authentications
 	- limit number of connections (DDOS prevention)
-	- overflowable message buffers 
+	- overflowable message buffers
 
 * **Certification:**
 	- verify source (e.g. domains)
@@ -90,4 +90,3 @@ Goal: Avoid, Detect, Mitigate **Intrusion/Attacks**
 
 
 {{ FOLDER_TOC }}
-

@@ -46,7 +46,7 @@ RX ---    \___/___X___X___X___X___X___X___X___X___/    ---
 S: start bit,  b0-7: data,  pr: parity bit,  P: stop bit
 ```
 
-Explanation: 
+Explanation:
 All operations of the UART hardware are controlled by an internal clock signal which runs at a multiple of the data rate, typically 8 or 16 times the bit rate. The receiver tests the state of the incoming signal on each clock pulse, looking for the beginning of the start bit. If the apparent start bit lasts at least one-half of the bit time, it is valid and signals the start of a new character. If not, it is considered a spurious pulse and is ignored.
 
 
@@ -62,6 +62,3 @@ Parity: odd, even, none
 * **Framing error:** receiver does not see a "stop" bit at the expected "stop" bit time.
 * **Parity error:** the calculated parity of the received data bits disagrees with the received parity bit.
 * **Break condition:** receiver continuously reads 0 for longer than the full character time
-
-
-

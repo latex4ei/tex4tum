@@ -34,5 +34,3 @@ name :: <type>
 ## References
 
 * [Haskell Website](https://www.haskell.org/)
-
-

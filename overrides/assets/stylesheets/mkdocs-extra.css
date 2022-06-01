@@ -23,8 +23,8 @@ div.tabbed-set .tabbed-content { padding: 0 0.625em; }
 .md-typeset details.math-legend summary:before { display: none; }
 
 /* extra: style input fields */
-.md-typeset p input:not([type*='ra']) { 
-	outline: .05rem solid var(--md-typeset-table-color); 
+.md-typeset p input:not([type*='ra']) {
+	outline: .05rem solid var(--md-typeset-table-color);
 	border-radius: 0.1rem;
 }
 p input:only-child { padding: 0.4em 0.8em; width: 100%; }
@@ -76,9 +76,9 @@ body { font-family: var(--md-text-font-family), 'QFontAwesome'; }
 
 
 /* be print-friendly */
-@media print { 
-	@page { margin: 1.5cm 2cm; } 
-	html {font-size: 9pt!important; } 
+@media print {
+	@page { margin: 1.5cm 2cm; }
+	html {font-size: 9pt!important; }
 	body { max-width: 27cm; }
 	p { orphans: 2; widows: 2; }
 	caption, figcaption { page-break-before: avoid; }
@@ -86,4 +86,3 @@ body { font-family: var(--md-text-font-family), 'QFontAwesome'; }
 	.noprint, body>nav, section:after { display: none; }
 	.row { flex-direction: row; }
 }
-

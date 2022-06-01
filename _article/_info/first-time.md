@@ -11,7 +11,7 @@ We are happy to announce that we expand our scope. If you just looking for cheat
 ## What is new?
 * Interactive web-articles for direct access of often used [equations](/trigonometry), [diagrams](/op-amp), definitions, explanations and more!
 * Powerfull, Matlab-styled, <a href="./calculator.html">Calculator</a> in your browser.
-* English as main language. 
+* English as main language.
 * Fast fuzzy searching: hit `tab` and type
 
 
@@ -27,7 +27,7 @@ We are happy to announce that we expand our scope. If you just looking for cheat
 
 
 
-<!-- 
+<!--
 ### Interactive Math
 Directly calculate an equation while reading. Click on the values of R and C in the text to change them!
 

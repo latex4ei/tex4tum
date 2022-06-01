@@ -92,4 +92,3 @@ RC_graph_el.addEventListener("load",function(){
     RC_graph = RC_graph_el.contentDocument;  // get inner DOM
 }, false);
 </script>
-

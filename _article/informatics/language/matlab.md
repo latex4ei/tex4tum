@@ -8,7 +8,7 @@ Matlab is a powerful computer algebra system.
  sq = sqrt(2)
 
  % vectors
- v = [1 2 3]  
+ v = [1 2 3]
  v'              % transpose
 
 
@@ -17,8 +17,3 @@ Matlab is a powerful computer algebra system.
  B = ones(3)
  C = eye(3)      % unit matrix 3x3
 ```
-
-
-
-
-

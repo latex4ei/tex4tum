@@ -17,6 +17,3 @@ Arduino code just needs to provide two routines:
 ## Tips
 
 * Store Strings in Flash: Wrapping the string in `F( ... )` tells the system that this is a “flash” string rather than a “normal” one
-
-
-

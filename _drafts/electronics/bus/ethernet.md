@@ -6,7 +6,7 @@ tags: bus, automotive, vehicle
 Two wire unshielded twisted pair cable,
 
 | Property | Value |
-|----------|-------| 
+|----------|-------|
 | Wires    | 2, twisted, unshielded     |
 | Speed    | 100 Mbps |
 | Topologies    | P2P, star, ring |
@@ -27,6 +27,3 @@ Scalable service-oriented middleware (SOME/IP):
 
 
 ## Standard IEEE 802.3
-
-
-

@@ -15,5 +15,3 @@ ECCs should have a small overhead, contain many valid code words and can correct
 
 1. Linear block codes: input is divided into blocks
 2. Convolutional codes: codewords are weighted sums of the various input symbols
-
-

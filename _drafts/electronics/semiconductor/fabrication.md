@@ -24,5 +24,3 @@ title: Semiconductor Fabrication
 | 22 nm | 2012 |
 | 14 nm | 2014 |
 | 10 nm | 2017 |
-
-

@@ -83,7 +83,7 @@ Note that in the urn model, $n$ is not the number of balls in the urn but the nu
 
 * **Sum of Binomials:** The sum of two binomial distributions is again a binomial distribution. If $X ~ B(n, p)$ and $Y ~ B(m, p)$ are independent binomial variables with the same probability $p$, then $X + Y ~ B(n+m, p)$
 
-* **Normal Approximation:** If $n$ is large enough, $B(n, p)$ can be approximated as normal distribution $\mathcal{N}(np,\; np(1-p))$. As a rule of thumb, $n$ is large enough if 
+* **Normal Approximation:** If $n$ is large enough, $B(n, p)$ can be approximated as normal distribution $\mathcal{N}(np,\; np(1-p))$. As a rule of thumb, $n$ is large enough if
 $n \gt 9\left(\frac{1-p}{p}\right)\ \text{and}\ n \gt 9\left(\frac{p}{1-p}\right)$
 
 * The binomial distribution is the generalization of the Bernoulli trial, which can be expressed as a binomial distribution with $n = 1$.
@@ -114,7 +114,7 @@ plt.show()
 #### Matlab
 
 ```matlab
-N = 10; 
+N = 10;
 p = 0.5;
 
 x = 0:N;
@@ -133,7 +133,7 @@ N <- 20
 p <- 0.5
 
 x <- 0:N
-y <- dbinom(x, size=N, prob=0.2) 
+y <- dbinom(x, size=N, prob=0.2)
 
 plot(x, y)
 ```
@@ -172,7 +172,7 @@ function update(slider){
     Dist_values[0] = slider.value;
   }
   var n = Dist_values[0];
-  var p = Dist_values[1];  
+  var p = Dist_values[1];
   document.getElementById('bd_p').innerText = p
   document.getElementById('bd_n').innerText = n
   SVG_obj.getElementById('legend_1').querySelector("text").innerHTML='n= '+n+', p= '+p
@@ -201,7 +201,7 @@ function binom(n, k) {
 function binompmf(k, n, p){ return ( binom(n, k) * Math.pow(p, k) * Math.pow(1.0 - p, n - k) ); }
 
 
-SVG_obj = document.querySelector("#SVG_obj svg");  // try inline 
+SVG_obj = document.querySelector("#SVG_obj svg");  // try inline
 SVG_Scales = get_scale(SVG_obj);
 document.getElementById("SVG_obj").addEventListener("load",function(){
     SVG_obj = document.getElementById("SVG_obj").contentDocument  // get inner DOM

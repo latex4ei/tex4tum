@@ -17,10 +17,10 @@ int main(int argc, char *argv[]){
     printf("I drink %.2f l in %d rounds:", beer_l, rounds)
     for (int idx = 0; idx < ROUNDS; idx++){
         int sips = sips_per_round[idx];
-        printf("I drink %d sips.", sips); 
+        printf("I drink %d sips.", sips);
         sleep( sips );
         beer_l -= sips2liter( sips );
-        
+
         if(beer_l <= 0.0){
             beer_l = 0.0;
             printf("My beer is empty!");
@@ -31,4 +31,3 @@ int main(int argc, char *argv[]){
     }
 
 }
-

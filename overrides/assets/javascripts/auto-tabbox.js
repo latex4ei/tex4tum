@@ -9,9 +9,9 @@ var tabstyle = `
   --cfg:   #433;    --cbg:    #fff;
   --cdark: #888;    --clight: #f5f6f7;
   --cmed:  #d1d1d1;
-  --clink: #07c;  
+  --clink: #07c;
   display: flex;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
   background: linear-gradient(0deg, var(--cbg) 1rem, var(--clight) 0%);
   border: var(--border); border-radius: 5px;
 }
@@ -22,7 +22,7 @@ var tabstyle = `
   padding: .5rem .8rem;
   margin: .5rem 0 -1px;
   border-radius: 5px 5px 0 0;
-  color: var(--clink); 
+  color: var(--clink);
   background: var(--clight);
 }
 .tabs label:first-of-type{ margin-left: 1rem; }
@@ -38,9 +38,9 @@ var tabstyle = `
 }
 .tabs input[type="radio"]:not(:checked) + label:hover { filter: brightness(90%); }
 .tabs input[type="radio"] { display: none; }
-.tabs input[type="radio"]:checked + label {   
-  border: var(--border); border-bottom: 0px;  
-  background: var(--cbg); z-index: 3; 
+.tabs input[type="radio"]:checked + label {
+  border: var(--border); border-bottom: 0px;
+  background: var(--cbg); z-index: 3;
 }
 .tabs input[type="radio"]:checked + label + .tab { display: block; }
 
@@ -48,7 +48,7 @@ var tabstyle = `
   .tabs .tab, .tabs label { order: initial; }
   .tabs label { width: 100%; margin: 0 0 -1px !important; }
 }
-@media print { .tabs label + .tab { display: block; } .tabs label { display: none; } } 
+@media print { .tabs label + .tab { display: block; } .tabs label { display: none; } }
 `
 
 function addTabStyle(){

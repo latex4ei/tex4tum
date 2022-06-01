@@ -10,7 +10,7 @@ In most cases, the 6LoWPAN network is connected to the IPv6 network using an edg
 
 Support for 64-bit/16-bit 802.15.4 addressing
  -->
- 
+
 
 ## Header Format
 The 6LoWPAN protocol uses the first byte of the IEEE 802.15.4 encapsulation header stack as a special *Dispatch Byte*. This Dispatch Byte indicates that the following bytes are a LoWPAN header instead of an IPv6 header.
@@ -39,7 +39,7 @@ The 6LoWPAN protocol uses the first byte of the IEEE 802.15.4 encapsulation head
 ### IPHC/NHC
 IPHC/NHC compression was defined in [RFC 6282](https://tools.ietf.org/html/rfc6282) in 2011 and updates the older HC1/HC2 compression.
 
- 
+
 Structure of a typical 6LoWPAN frame with IPv6+UDP:
 ```diagram
 +--------+---  -  -  ---+----------+---  -  -  ---+--------
@@ -65,7 +65,7 @@ The frame starts with 2 IPHC bytes, where the first byte *is* the LoWPAN dispatc
 TF – 2 bit
 : Traffic Class and Flow Label (TF), 2 bit
 
-  - 00: Carried Inline (ECN+DSCP+Flow) 
+  - 00: Carried Inline (ECN+DSCP+Flow)
   - 01: ECN+Flow
   - 10: ECN+DSCP
   - 11: Traffic Class and Flow Label are elided.
@@ -80,8 +80,8 @@ NH – 1 bit
 HLIM – 2 bit
 : Hop Limit (HLIM)
 
-  - 00: Carried Inline. 
-  - 01: 1 and elided. 
+  - 00: Carried Inline.
+  - 01: 1 and elided.
   - 10: 64 and elided.
   - 11: 255 and elided.
 
@@ -104,10 +104,10 @@ SAM/DAM – 2 bit each
 : Source/Destination Address Mode</br>
  If SAC/DAC=0:
 
-  - 00: 128 b / 16 B. The full address is carried in-line. 
+  - 00: 128 b / 16 B. The full address is carried in-line.
   - 01: 64 bits. The first 64-bits of the address are are the first 64 bits
       of the link-local prefix padded with zeros. The remaining 64 bits are carried in-line.
-  - 10: 16 bits. The first 112 bits of the address are the first 64 bits of 
+  - 10: 16 bits. The first 112 bits of the address are the first 64 bits of
       the link-local prefix padded with zeros.  The following 64 bits are 0000:00ff:fe00:XXXX, where XXXX are the 16 bits carried in-line.
   - 11: 0 bits.  The address is fully elided.
 
@@ -124,12 +124,12 @@ SAM/DAM – 2 bit each
 M – 1 bit
 : Multicast Destination (M)
 
-  - 0: Destination  is not multicast 
+  - 0: Destination  is not multicast
   - 1: Destination  is multicast
 
 
 #### Context Identifier Extension (CIE)
-In case CID = 1 in the IPHC bytes, an additional CIE byte directly follows the two IPHC bytes. This CIE byte is used to identify previously exchanged IPv6 contexts by a 4 bit Source Context Identifier (SCI) and a 4 bit Destination Context Identifier (DCI) instead of 128 bit for each address. 
+In case CID = 1 in the IPHC bytes, an additional CIE byte directly follows the two IPHC bytes. This CIE byte is used to identify previously exchanged IPv6 contexts by a 4 bit Source Context Identifier (SCI) and a 4 bit Destination Context Identifier (DCI) instead of 128 bit for each address.
 
 ```diagram
   0   1   2   3   4   5   6   7
@@ -161,7 +161,7 @@ C
 : Checksum:
 
   - 0: All 16 bits of Checksum are carried in-line.
-  - 1: All 16 bits of Checksum are elided with higher-layer 
+  - 1: All 16 bits of Checksum are elided with higher-layer
        end-to-end integrity checks.
 
 P
@@ -198,11 +198,11 @@ With this compression it is possible to achieve a very small 7 byte frame for IP
 #### HC1 Compression Byte
 The HC1 byte is used to compress the IPv6 header.
 
-```                            
-  0   1   2   3   4   5   6   7    
-+---+---+---+---+---+---+---+---+ 
-| IP-SA | IP-DA |TF |  NH   |HC2| 
-+---+---+---+---+---+---+---+---+ 
+```
+  0   1   2   3   4   5   6   7
++---+---+---+---+---+---+---+---+
+| IP-SA | IP-DA |TF |  NH   |HC2|
++---+---+---+---+---+---+---+---+
 ```
 
 ##### Explanation of HC1 Byte
@@ -241,7 +241,7 @@ NH – 2 bit
   - 11: TCP
 
 
-HC2 – 1 bit 
+HC2 – 1 bit
 : HC2 encoding(bit 7):
 
   - 0: no more header compression bits
@@ -250,12 +250,12 @@ HC2 – 1 bit
 
 #### HC2 compression byte
 The HC2 byte is used to compress the UDP header.
-``` 
-  0   1   2   3   4   5   6   7  
+```
+  0   1   2   3   4   5   6   7
 +---+---+---+---+---+---+---+---+
 |SP |DP |LC | - | - | - | - | - |
 +---+---+---+---+---+---+---+---+
-``` 
+```
 
 ##### Explanation of HC2 Byte
 

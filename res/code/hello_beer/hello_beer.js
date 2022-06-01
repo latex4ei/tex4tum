@@ -2,8 +2,8 @@
 
 const LITER_PER_SIP = 37e-3;
 
-function sips2liter( num_sips ) {    
-    return num_sips * LITER_PER_SIP;   
+function sips2liter( num_sips ) {
+    return num_sips * LITER_PER_SIP;
 }
 
 function sleep(delay) {
@@ -24,6 +24,6 @@ for (var sips in sips_per_round) {
         console.log("My beer is empty!");
         break;
     } else {
-        console.log("I have {:.3f} l beer left.".format(beer_l));      
+        console.log("I have {:.3f} l beer left.".format(beer_l));
     }
 }

@@ -29,7 +29,7 @@ with electric field $\vec E$, surface $A$ and direction $\vec s$
 ### Interactive Equations
 Inline equations can be made interactive using JS. Click on the values of R and C in the text to change them!
 
-For a low-pass filter, the Cut-Off Frequency is 
+For a low-pass filter, the Cut-Off Frequency is
 
 $$f_c = \frac{1}{2\pi R C}$$
 with the resistance $R$ and capacity $C$
@@ -63,7 +63,7 @@ A: Maybe not.
 To create Q&A, start a paragraph with `Q:` and have `A:` on the second line.
 ```
 Q: A simple question?
-A: Maybe not. 
+A: Maybe not.
 ```
 
 
@@ -111,7 +111,7 @@ Our syntax for creating special colored boxes (“Admonitions”) is very simple
 <div class="col" markdown>
 
 Note: This is an attempt with syntax from tex4tum
- 
+
 
 </div><div class="col-4" markdown>
 
@@ -121,7 +121,7 @@ And some details.
 </div><div class="col-4" markdown>
 
 
-Warning: 
+Warning:
 If you directly start the next line, the first term will be used as heading.
 
 </div><div class="col-4" markdown>
@@ -131,11 +131,11 @@ If you directly start the next line, the first term will be used as heading.
 
 ```
 Note: This is an attempt with syntax from tex4tum
- 
+
 Example: The Example heading.
 And some details.
 
-Warning: 
+Warning:
 If you directly start the next line, the first term will be used as heading.
 ```
 
@@ -143,11 +143,11 @@ If you directly start the next line, the first term will be used as heading.
 The [syntax from MkDocs](https://squidfunk.github.io/mkdocs-material/reference/admonitions/#usage) uses `???` and `!!!`. This syntax is discouraged as it is not compatible with any other system and will look confusing when not parsed correctly.
 
 
-??? abstract 
-    
+??? abstract
+
     The square root is the math function $\sqrt{\cdot}$.
 
-??? example 
+??? example
 
     Example $\sqrt{ x^4 } = x^2$
 
@@ -216,7 +216,7 @@ ax.fill_between(xfill, yfill, 0, alpha=0.2)
 plt.legend()
 ```
 
- 
+
 
 
 ```{.tikz}

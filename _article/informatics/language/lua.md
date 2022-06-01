@@ -31,7 +31,7 @@ end
 Tables are the most important data structures and, by design, the only collection type. It can contain any type.
 
 ```lua
-my_table = {1, 'hi', 3.14, 1, 2, {4, 5} } 
+my_table = {1, 'hi', 3.14, 1, 2, {4, 5} }
 ```
 
 * length of the table: `len = #my_table`  (is 6)
@@ -72,7 +72,7 @@ local function starts_with(text, start)
     end
   elseif (type(start) == "string") then
     return text:sub(1, #start) == start
-  end 
+  end
 end
 ```
 
@@ -109,7 +109,7 @@ local Vector = {}
 Vector.__index = Vector
 
 function Vector:new(x, y, z)    -- The constructor
-  -- Since the function definition uses a colon, 
+  -- Since the function definition uses a colon,
   -- its first argument is "self" which refers
   -- to "Vector"
   return setmetatable({x = x, y = y, z = z}, self)

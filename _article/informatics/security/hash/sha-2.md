@@ -15,10 +15,10 @@ Applications: TLS/SSL, PGP, SSH, S/MIME, and IPsec.
 
 <div class="row" markdown>
 <div class="col-md-auto pr-0" markdown>
-SHA2-256 (\" <input id="number-input" style="width: 5em;" oninput="calcSHA(this)" placeholder="Input" value=""> \") =	
+SHA2-256 (\" <input id="number-input" style="width: 5em;" oninput="calcSHA(this)" placeholder="Input" value=""> \") =
 </div>
 <div class="col pl-0" markdown>
-<p><code id="SHA2_out">e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855</code></p>	
+<p><code id="SHA2_out">e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855</code></p>
 </div>
 </div>
 
@@ -56,7 +56,7 @@ A message is processed by blocks of 512 = 16 × 32 bits, each block requiring 64
 
 Initial hash values:
 ```
-h[0..7] := 0x6a09e667, 0xbb67ae85, 0x3c6ef372, 0xa54ff53a, 
+h[0..7] := 0x6a09e667, 0xbb67ae85, 0x3c6ef372, 0xa54ff53a,
            0x510e527f, 0x9b05688c, 0x1f83d9ab, 0x5be0cd19
 
 ```
@@ -85,4 +85,3 @@ function calcSHA( text ){
 	document.getElementById('SHA2_out').textContent = sha256( text.value );
 }
 </script>
-

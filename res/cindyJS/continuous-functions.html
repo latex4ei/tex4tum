@@ -1,4 +1,4 @@
-<script src="https://cindyjs.org/dist/v0.8/Cindy.js" integrity="sha256-GVFcxFrj3m64JQPL5NZv9MPbCGHnxWWPhKLsnHvaK+Q=" crossorigin="anonymous"></script>  
+<script src="https://cindyjs.org/dist/v0.8/Cindy.js" integrity="sha256-GVFcxFrj3m64JQPL5NZv9MPbCGHnxWWPhKLsnHvaK+Q=" crossorigin="anonymous"></script>
 
 
 <p>Eine Funktion $f$ ist stetig im Punkt $x_0$ wenn die Folgende Bedingung erfüllt ist:</p>
@@ -14,8 +14,8 @@ $\varepsilon$ (Schieberegler) einstellen. Sodann kann man testen ob es ein geeig
 
 <html>
 
-    
-    
+
+
 <script id="csinit" type="text/x-cindyscript">
 f(x):=parse(Text0.val);
 
@@ -81,8 +81,8 @@ par2=|N,Q|/|N,O|;
 del=par1;
 F.xy=(-.5,0);
 eps=par2;
-drawtext(L+(0,-.3),"$\varepsilon = "+format(del,2)+"$",size->12); 
-drawtext(N+(0,-.3),"$\delta = "+format(eps,2)+"$",size->12); 
+drawtext(L+(0,-.3),"$\varepsilon = "+format(del,2)+"$",size->12);
+drawtext(N+(0,-.3),"$\delta = "+format(eps,2)+"$",size->12);
 
 drawtext((-2.5,-1.5),
 "Stetigkeit in $x_0$:
@@ -185,7 +185,7 @@ mydraw(p,q):=(
       draw((xi,y+del),(xo,y-del),color->(0,0.6,0),size->2);
       draw((xi,y-del),(xo,yo),color->(0.6,0,0),size->2)
     );
-   ))); 
+   )));
 
 
 );

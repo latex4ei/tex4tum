@@ -49,7 +49,7 @@ Reason: C does not support native namespaces and including header files could le
 **Constants**: for constants prefer `const` over preprocessor `#define`
 
 
-**Top-level static**: If a function or global variable isn't exported in the header, declare it as static in the source file to give it internal linkage. 
+**Top-level static**: If a function or global variable isn't exported in the header, declare it as static in the source file to give it internal linkage.
 
 **Const-Correctness**: use `const` everywhere you can
 
@@ -65,9 +65,3 @@ Reason: C does not support native namespaces and including header files could le
 **Assert**: Use assert everywhere your program would fail otherwise
 
 **Naming**: Never begin names with `_` or end them with `_t`: they're reserved by future C standards
-
-
-
-
-
-

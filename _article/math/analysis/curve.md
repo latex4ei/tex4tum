@@ -28,11 +28,9 @@ $$\vec \gamma:[a,b] \rightarrow \R^n, t \mapsto \vect{ \gamma_1(t) \\ \vdots \\ 
 
 
 ## Bogenlänge
-Die Bogenlänge einer Kurve $L(\gamma)$ ist 
+Die Bogenlänge einer Kurve $L(\gamma)$ ist
 
-$$L(\gamma) = \int_{a}^{b} \norm{\dot \gamma(t)} \diff t$$ 
+$$L(\gamma) = \int_{a}^{b} \norm{\dot \gamma(t)} \diff t$$
 
 
 If $n = 2$ (2D): $L(\gamma) = \int_a^b \sqrt{\dot x^2 + \dot y^2}\diff t$
-
-

@@ -1,4 +1,4 @@
-/* loads KaTeX and checks for math elements. 
+/* loads KaTeX and checks for math elements.
 
 1. arithmatex from python-markdown
 2. pandoc math

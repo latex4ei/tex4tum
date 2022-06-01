@@ -19,7 +19,7 @@ There are several ISO-Standards (ISO/IEC 14882) of the lanaguage referred as C++
 C++ is mostly compatible to C. However C constructs are often unsafe and should not be used in C++.
 If you are used to C-programming, here is a list of the most important best practices compared to C.
 
-**Allocation**: use `new TYPE()` and `delete` instead of `malloc` and `free` 
+**Allocation**: use `new TYPE()` and `delete` instead of `malloc` and `free`
 
 **Typecast**: use `static_cast<TYPE>(x)` instead of C-Style `(TYPE)x`
 
@@ -49,17 +49,11 @@ The C++ standard consists of two parts: the core language and the standard libra
 
 see http://en.cppreference.com/w/cpp/header
 
-headers begining with "c" are the cpp variant of the standard library of the C language. 
-See http://en.cppreference.com/w/c/header for a comparison. The C++ Standard Library also defines headers with identical names to the C library for compatibility. 
+headers begining with "c" are the cpp variant of the standard library of the C language.
+See http://en.cppreference.com/w/c/header for a comparison. The C++ Standard Library also defines headers with identical names to the C library for compatibility.
 
 
 ## Popular 3rd Party Libraries
 * Qt
 * Boost
 * Standard Template Library (STL)
-
-
-
-
-
-

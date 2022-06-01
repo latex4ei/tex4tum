@@ -65,7 +65,7 @@ fi
 
 * Integer: `-eq`, `-ne`, `-lt`, `-gt`, `-le`, `-ge`
 * Strings: `==`, `!=`, `\<`, `\>`
-* Files: `-f`, `-d`, `-r`, `-w`, `-x` 
+* Files: `-f`, `-d`, `-r`, `-w`, `-x`
 
 
 ## Input / Output
@@ -78,11 +78,7 @@ fi
 
 # read file line by line
 while read f; do
-	echo "Line is $f" 
-done < $path 
+	echo "Line is $f"
+done < $path
 }
 ```
-
-
-
-

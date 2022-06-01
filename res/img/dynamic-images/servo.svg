@@ -562,7 +562,7 @@ function SVG_rotateId(id_rot, id_anch, angle){
 
   tf = rotor.getAttribute('transform');
   match = tf.match(/rotate\(.*?\)/);
-  if (match != null){ 
+  if (match != null){
     tf = tf.replace(match[0], rotstring)
   } else {
     tf = rotstring + '' + tf
@@ -595,18 +595,18 @@ function SVG_getMouseAngleTo(id_anch){
 
 
 function servo_anim(){
-  
+
   angle = SVG_getMouseAngleTo('anchor');
 
   // limit angle
   if( 90 < angle && angle < 180 ){ angle = 180 - angle }
   if( 180 < angle && angle < 270 ){ angle = 360 + 180 - angle }
   SVG_rotateId('rotor', 'anchor', angle);
-  
+
   // transform to servo frame
   if( angle <= 90 ){ angle = 90 - angle }
   if( angle >= 270 ){ angle = 90 + 360 - angle }
-  angle = 180.0 - angle; 
+  angle = 180.0 - angle;
 
   // draw lines
 

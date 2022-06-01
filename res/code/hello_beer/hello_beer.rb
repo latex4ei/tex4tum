@@ -13,7 +13,7 @@ sips_per_round = [3, 7, 4, 2]
 puts "I drink #{beer_l} l in #{rounds} rounds:"
 sips_per_round.each do |sips|
     puts "I drink #{sips} sips."
-    sleep sips 
+    sleep sips
     beer_l -= sips2liter( sips )
     if beer_l <= 0.0
         puts "My beer is empty!"
@@ -22,4 +22,3 @@ sips_per_round.each do |sips|
         puts "I have #{beer_l} l beer left."
     end
 end
-

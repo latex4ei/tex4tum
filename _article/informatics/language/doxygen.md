@@ -30,14 +30,14 @@ If you use a version control system, `@author, @version` are also redundant.
 | @todo DESC | description DESC of what is still to do  |
 
 Dont use `@name` its 100% redundant.
-Shorts: @p = @param 
+Shorts: @p = @param
 
 
 ```
 /*! Short Description on the first line
 
     Detailed description...
-    
+
 */
 float integral(float x, float dt);
 
@@ -48,9 +48,3 @@ float integral(float x, float dt);
 ´´´
 //!< Brief description after the member
 ´´´
-
-
-
-
-
-

@@ -56,7 +56,3 @@ Cryptographic hashes often divide the input in fixed length blocks $m_i$ and ite
 * Preimage Attack: find any input that has a specific hash value.
 * Collision Attack: find any two inputs producing the same hash value
 * Length extension attack: find a new hash that corresponds to the original input with some arbitrary appended data.
-
-
-
-

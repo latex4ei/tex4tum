@@ -8,7 +8,7 @@ with $b \in \R$ and $n \in \N$.
 
 
 ### Rules
-For $n, m \in \Z$ 
+For $n, m \in \Z$
 
 ------------    ----------------------------------------------------
 Sum             $\displaystyle b^{m+n} = b^{m} \cdot b^{n}$
@@ -57,4 +57,3 @@ Other notations: $\log_2 \equiv \lb$, $\log_{\e} \equiv \ln$, , $\log_{10} \equi
 
 ### Taylor Series
 $$\ln(z)={\frac {(z-1)^{1}}{1}}-{\frac {(z-1)^{2}}{2}}+{\frac {(z-1)^{3}}{3}}-{\frac {(z-1)^{4}}{4}}+\cdots$$
-

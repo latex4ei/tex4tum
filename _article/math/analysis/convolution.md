@@ -44,4 +44,3 @@ $h[n - l] = 0$ für $l > n$
 
 
 ## Refrences
-

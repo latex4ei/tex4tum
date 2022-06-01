@@ -91,11 +91,11 @@ function RC_calcReflection() {
  // calc
  Degree = 1.0/360.0 * 2.0 * Math.PI;
  var alpha2 = (-angle)
- 
+
  var beta
 
 
-	if( Math.abs(angle) > 90 ){ 
+	if( Math.abs(angle) > 90 ){
 	    beta = 180 - (Math.asin( n2_val/n1_val * Math.sin(angle * Degree) ) / Degree);
 	    console.log(beta)
 	} else {
@@ -103,7 +103,7 @@ function RC_calcReflection() {
 	}
 	// total reflection?
     if (isNaN(beta) ){ beta = 180 - angle; }
- 
+
 
  // write
 refl_text.textContent=alpha2+"";

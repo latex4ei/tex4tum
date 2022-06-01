@@ -15,7 +15,7 @@ GDB is a tool for debugging programs. It consists of a server and a client. The 
 
 ## Commands
 
-| Usage                | Description                             | 
+| Usage                | Description                             |
 |----------------------|-----------------------------------------|
 | `b` *file:line*      | set breakpoint in file at line          |
 | `run [`*arglist*`]`  | start your program [with arglist]       |
@@ -33,7 +33,7 @@ GDB is a tool for debugging programs. It consists of a server and a client. The 
 
 
 
-| Stack     | Description            | 
+| Stack     | Description            |
 |-----------|------------------------|
 | `bt`      | print backtrace        |
 | `frame`   | display current frame  |
@@ -45,4 +45,3 @@ GDB is a tool for debugging programs. It consists of a server and a client. The 
 ## References
 
 * [GDB QUICK REFERENCE](http://users.ece.utexas.edu/~adnan/gdb-refcard.pdf)
-

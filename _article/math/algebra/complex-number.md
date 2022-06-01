@@ -5,7 +5,7 @@ tags: [Imaginary Unit]
 
 Complex numbers extend the concept of the one-dimensional number line to the two-dimensional complex plane by using the horizontal axis for the real part and the vertical axis for the imaginary part.
 
-$$\cx z := a + b\i = r \cdot \exp(\i \varphi)$$ 
+$$\cx z := a + b\i = r \cdot \exp(\i \varphi)$$
 with Imaginary Unit $\i = \sqrt{-1}$.
 
 
@@ -35,4 +35,3 @@ Inverse: $\displaystyle \cx z^{-1} = \frac{\cxc z}{\cxc z} \cx z=\frac{a - b\i}{
 **n-te Potenz:** $\cx z^n=r^n\cdot e^{n\varphi \mathbf{i}}= r^n (\cos (n \varphi) + \mathbf{i} \sin (n \varphi))$
 
 **Logarithmus:** $\ln(\cx z)=\ln(r) + \mathbf{i}(\varphi + 2k\pi)$  (Nicht eindeutig!)
-

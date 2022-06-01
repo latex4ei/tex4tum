@@ -4,13 +4,13 @@ tags: [motor, pwm]
 ---
 
 A Servo Motor is a cheap rotary actuator used for radio control and small-scale robotics.
- 
+
 
 ## Colored Wires
 A servo motor is normally connected using just 3 wires.
 
 | Color  | Purpose     |
-|--------|-------------|   
+|--------|-------------|
 | Yellow | PWM Signal  |
 | Red    | VDD         |
 | Black  | GND         |
@@ -37,6 +37,3 @@ A pulsewidth of $pw = \SI{1.5}{ms}$ will turn a servo with a maximum angle $\alp
 
 ## References
 * Jameco Electronics, [How do Servo Motors Work](https://www.jameco.com/jameco/workshop/howitworks/how-servo-motors-work.html)
-
-
-

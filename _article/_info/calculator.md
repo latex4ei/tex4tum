@@ -25,7 +25,7 @@ Explanation:
 **Data Types:** Bool `true`/`false` , Num `7, 1.5e-9`, Complex `2+3i`, Units `3.0 cm, 2.7 kg`</br>
 **Vector / Matrix:** `v = [1, 2, 3]`, `M = [11, 12; 21, 22]`</br>
 **Predefined Functions:** `abs()`, `sqrt()`, `sin()`, `log()` </br>
-**Own Functions:** `f(x) = x^2 - 5`, then call `f(3)`, 
+**Own Functions:** `f(x) = x^2 - 5`, then call `f(3)`,
 
 Example:
 `f(x) = x^2 + 3x -1`</br>
@@ -825,6 +825,3 @@ function createA (text, href, target) {
   return a;
 }
 </script>
-
-
-

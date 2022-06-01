@@ -12,17 +12,17 @@ If you want to contribute or edit an article do the following:
 3. once finished, push the changes to GitHub and create a pull request.
 
 ## What content is suitable for Tex4TUM?
-Before you start writing, think twice. 
+Before you start writing, think twice.
 
-1. A TeX4TUM article should mostly consist of diagrams, tables, and equations. Text paragraphs should only be used as a last method to explain details and these details should be hidden by default. 
+1. A TeX4TUM article should mostly consist of diagrams, tables, and equations. Text paragraphs should only be used as a last method to explain details and these details should be hidden by default.
 1. The content should be timeless. Anything that out-dates or updates more frequent than 5 years is *not* suitable.
 1. The article should be an overview of knowledge that many engineers frequently need but often forget. The article should not focus on teaching or explaining something to the reader. These contribution guidelines are a good counter example of what should not be a normal TeX4TUM article.
-1. The content should stick to or inherit a pattern. For example, protocols always illustrate the header format and then explain the fields. 
+1. The content should stick to or inherit a pattern. For example, protocols always illustrate the header format and then explain the fields.
 
 
 ## Our Format Syntax
 The good news first: If you write text, it will be displayed as text. If you want to apply some text formatting you can use [Markdown](/markdown.html).
-Equations can be typset in TeX surrounded by `$` without spaces. 
+Equations can be typset in TeX surrounded by `$` without spaces.
 
 ### File structure
 Our file structure requires a YAML header (surrounded by `---`) that states a title and some keywords (tags) that can be used to find the article.
@@ -161,9 +161,9 @@ int main() {
 ```
 ````
 
-This procudes 
+This procudes
 
-```c 
+```c
 int main() {
 	if (a < 3){
 		printf("Hello World");

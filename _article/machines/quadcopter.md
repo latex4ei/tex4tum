@@ -2,13 +2,13 @@
 title: Quadcopter
 ---
 
-A quadcopter is a type of helicopter with four rotors. 
+A quadcopter is a type of helicopter with four rotors.
 
 
 ## Motors
 Low-cost commercial quadcopters generally use electric DC motors such as
 
-* **Brushed Motors:** simple and cheap and thus a popular choice for micro quadcopters. 
+* **Brushed Motors:** simple and cheap and thus a popular choice for micro quadcopters.
 However, the friction of the brush results in lower efficiency and life span.
 * **Brushless Motors:** require 3-phase electronic speed controllers (ESC). The output of the ESC controls the speed of the motor.
 
@@ -18,7 +18,7 @@ However, the friction of the brush results in lower efficiency and life span.
 
 
 ## Flight Control
-Two rotors are spinning clockwise (CW) and two counterclockwise (CCW) to balance the angular momentum. 
+Two rotors are spinning clockwise (CW) and two counterclockwise (CCW) to balance the angular momentum.
 Each rotor produces both lift and torque about its center of rotation, as well as drag opposite to the vehicle's direction of flight.
 Flight control is provided by independent variation of the speed and hence lift and torque of each rotor.
 

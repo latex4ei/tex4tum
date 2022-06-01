@@ -18,9 +18,9 @@ scheme:[//[user[:password]@]host[:port]][/path][?query][#fragment]
 **Example**
 ```
          user    host    port
-         ┌┴─┐ ┌───┴───┐  ┌┴┐ 
+         ┌┴─┐ ┌───┴───┐  ┌┴┐
  https://john@github.com:123/repo/master/?color=true&mode=raw#L123
- └─┬─┘ └───────┬───────────┘└───┬───────┘└──────────┬───────┘└─┬─┘  
+ └─┬─┘ └───────┬───────────┘└───┬───────┘└──────────┬───────┘└─┬─┘
  scheme     authority          path               query      fragment
 ```
 
@@ -105,7 +105,7 @@ function parseURI( text ){
 	var parser = document.createElement('a');
 	parser.href = text.value;
 	var authority = ""
-	if(parser.username != ""){ 
+	if(parser.username != ""){
 		authority = parser.username;
 		if(parser.password != ""){ authority += ":" + parser.password}
 		authority += "@";

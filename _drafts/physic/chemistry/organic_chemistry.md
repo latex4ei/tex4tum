@@ -10,5 +10,3 @@ Most important molecules:
 | Oxygene    |   O    |   2   |
 | Nitrogene  |   N    |   3   |
 | Carbon     |   C    |   4   |
-
-

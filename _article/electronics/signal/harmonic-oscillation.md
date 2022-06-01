@@ -18,4 +18,3 @@ with the amplitude $A$, the frequency $f_0$ and the phase shift $\varphi$.
 
 ```{.python .bokeh include="res/code/bokeh/sine-wave.py"}
 ```
-

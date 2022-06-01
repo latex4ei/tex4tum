@@ -22,7 +22,7 @@ For two general matrices $\ma A$ and $\ma B$:
 
 * $(\ma A + \ma B)^\top = \ma A^\top + \ma B^\top$
 * $(\ma A \cdot \ma B)^\top = \ma B^\top \cdot \ma A^\top$
-* ${(\ma A^\top)}^{-1} = {(\ma A^{-1})}^\top$ 
+* ${(\ma A^\top)}^{-1} = {(\ma A^{-1})}^\top$
 * $(\ma A \cdot \ma B)^{-1} = \ma B^{-1}\ma A^{-1}$
 
 
@@ -31,7 +31,7 @@ For two general matrices $\ma A$ and $\ma B$:
 
 
 
-### Norms 
+### Norms
 
 $\ma A \in \K^{m \times n}, i\in[1,m], j\in[1,n]$
 
@@ -73,20 +73,20 @@ with the Eigenvalue $\lambda$ and the Eigenvector $\vec v$.
 
 
 ### Determinant
-The determinant of a square matrix $\ma A$ is denoted $\det(\ma A)$, $\det \ma A$, or $|A|$. Geometrically, it can be viewed as the volume scaling factor of the linear transformation described by the matrix. 
+The determinant of a square matrix $\ma A$ is denoted $\det(\ma A)$, $\det \ma A$, or $|A|$. Geometrically, it can be viewed as the volume scaling factor of the linear transformation described by the matrix.
 
-If $\ma A$ has $\ge 2$ lin. dependent rows/columns $\Rightarrow |A|=0$. 
+If $\ma A$ has $\ge 2$ lin. dependent rows/columns $\Rightarrow |A|=0$.
 
 $$\det\begin{pmatrix}A&0\\C&D\end{pmatrix}=\det\begin{pmatrix}A&B\\0&D\end{pmatrix}=\det(A)\cdot\det(D)$$
 
-$|A|=\sum\limits_{i=1}^n (-1)^{i+j} \cdot a_{ij} \cdot |A_{ij}|$ 
+$|A|=\sum\limits_{i=1}^n (-1)^{i+j} \cdot a_{ij} \cdot |A_{ij}|$
 
 
 
 ### Inverse Matrix
 An $n \times n$ square matrix $\ma A$ is called invertible (nonsingular) if there exists an $n \times n$ square matrix $\ma B$ such that
 
-$$\ma A \cdot \ma B = \ma B \cdot \ma A = \ma 1_n$$ 
+$$\ma A \cdot \ma B = \ma B \cdot \ma A = \ma 1_n$$
 
 Explanation: Eine Matrix heißt singulär, wenn ihre Spaltenvektoren linear abhängig voneinander sind. Daraus folgt, dass der Bildraum mindestens eine Dimension weniger hat als der Abbildungsraum, da die Spaltenvektoren den $\R^n$ nicht mehr erzeugen können und keine Basis mehr zum $\R^n$ darstellen.
 Hat man nun einen Bildpunkt im $\R^{n-1}$ gegeben, so lässt sich nicht mehr sagen, von wo aus dem $\R^n$ dieser Punkt auf den Bildraum $\R^{n-1}$ abgebildet worden ist, da er ja durch unendlich verschiedene Linearkombination der Spaltenvektoren erreicht werden kann.
@@ -102,7 +102,7 @@ Die Abbildung lässt sich deshalb nicht mehr umkehren, die Matrix ist nicht inve
 ### Rotation Matrix of $\R^3$
 for rotations in a right-handed coordinate system $XYZ$.
 
-$$\begin{matrix} 
+$$\begin{matrix}
 \begin{bmatrix}
 1 &   0         & 0           \\
 0 & \cos \alpha & -\sin \alpha \\
@@ -127,7 +127,7 @@ $$
 
 
 Explanation: Bei einer Rotationsmatrix stehen die Spaltenvektoren senkrecht aufeinander (orthogonal).
-Deshalb ist der Bildraum nicht verzerrt da nur die Richtung der Einheitsvektoren verändert wird, allerdings nicht ihre Stellung zueinander. 
+Deshalb ist der Bildraum nicht verzerrt da nur die Richtung der Einheitsvektoren verändert wird, allerdings nicht ihre Stellung zueinander.
 Somit entspricht eine orthogonale Abbildungsmatrix einer Drehung des Koordinatensystems in eine andere Richtung (bezüglich $n$ Freiheitsgraden).
 
 
@@ -148,4 +148,3 @@ Inverse: $\displaystyle\mat{a & b \\ c & d}^{-1} = \frac{1}{\det \ma A} \mat{d &
 
 $$\lambda_{1/2} = \frac{\Sp \ma A}{2} \pm \sqrt{ \left( \frac{\Sp \ma A}{2} \right)^2 - \det \ma A }$$
 with $\ma A = \mat{a & b \\ c & d}$, and $\Sp(\ma A) = a+d$.
-

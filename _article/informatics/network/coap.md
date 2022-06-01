@@ -1,7 +1,7 @@
 ---
 title: Constrained Application Protocol (COAP)
 ---
-The Constrained Application Protocol (CoAP) is a specialized web transfer protocol for use with constrained nodes and constrained networks in the Internet of Things. 
+The Constrained Application Protocol (CoAP) is a specialized web transfer protocol for use with constrained nodes and constrained networks in the Internet of Things.
 The protocol is designed for machine-to-machine (M2M) applications such as smart energy and building automation.
 
 
@@ -31,7 +31,7 @@ Based on Representational State Transfer (REST).
 * Code: Upper 3 MSBs: Class, 5 LSBs: Class details
 * Message ID: used to prevent duplicates, same for the ACK
 * Token: used to correlate request and response
-* Payload Marker: 
+* Payload Marker:
 
 
 ### Options
@@ -70,4 +70,3 @@ Fragmentation at application layer to avoid fragmentation at IPv6 layer.
 [RFC 7252](https://tools.ietf.org/html/rfc7252)
 
 [CoAP Specs](http://coap.technology/spec.html)
-

@@ -15,7 +15,7 @@ Trigonometry studies relationships involving lengths and angles of triangles.
 $$\sin^2(\alpha) + \cos^2(\alpha) = 1$$
 with angle $\alpha$
 
-Explanation: In the unit circle, the sinus and cosinus at a given angle form an orthogonal triangle with the edges $a,b,c$. The length of the hypotenuse $c$ corresponds to the radius $r$, which equals 1 (unit circle). Thus, we can apply the law of Pythagoras $a^2 + b^2 = c^2$ with $a = \sin(\alpha)$, $b = \cos(\alpha)$, and $c = 1$. 
+Explanation: In the unit circle, the sinus and cosinus at a given angle form an orthogonal triangle with the edges $a,b,c$. The length of the hypotenuse $c$ corresponds to the radius $r$, which equals 1 (unit circle). Thus, we can apply the law of Pythagoras $a^2 + b^2 = c^2$ with $a = \sin(\alpha)$, $b = \cos(\alpha)$, and $c = 1$.
 
 
 
@@ -34,7 +34,7 @@ Explanation: In the unit circle, the sinus and cosinus at a given angle form an 
     Symmetry: $\cos(\alpha) = \cos(-\alpha)$
 
 === "Tangens"
-    
+
     $$\tan(\alpha) = \frac{\cos(\alpha)}{\sin(\alpha)} = \frac{b}{a}$$
     with angle $\alpha$
 
@@ -73,7 +73,7 @@ $\cosh^2 (x) - \sinh^2 (x) = 1$
 
 === "sinh"
 
-    $$\sinh(x) = \frac{1}{2}(e^x -e^{-x}) = - \i \, \sin(\i x)$$ 
+    $$\sinh(x) = \frac{1}{2}(e^x -e^{-x}) = - \i \, \sin(\i x)$$
 
 
 === "cosh"
@@ -121,9 +121,5 @@ $\cosh^2 (x) - \sinh^2 (x) = 1$
 ## Cardinal Sinus
 $$\mathrm{si}(x) = \frac{\sin(x)}{x}$$
 
-normalized: 
+normalized:
 $$\sinc(x) = \frac{\sin(\pi x)}{\pi x}$$
-
-
-
-

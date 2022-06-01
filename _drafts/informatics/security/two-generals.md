@@ -12,7 +12,7 @@ Mapping: computers are the generals and their digital communication links are th
 
 ## Two General's Problem
 
-Two alayed generals, each leading an army, want to coordinate a simultanuous attack. 
+Two alayed generals, each leading an army, want to coordinate a simultanuous attack.
 The only way for the two generals to communicate is by sending messengers through a valley which is occupied by enemies.
 There's a chance that any given messenger sent through the valley will be captured and the message will be lost.
 
@@ -32,9 +32,3 @@ The problem is complicated by the presence of traitorous generals who may not on
 
 
 ### Approaches
-
-
-
-
-
-

@@ -35,7 +35,7 @@ AES operates on block sizes of $32 \times 32$ bits.
 
 <!--
 ### MixColumns
-$$\vect{ b_{0,j} \\ b_{1,j} \\ b_{2,j} \\ b_{3,j} } = \mat{2&3&1&1 \\ 1&2&3&1 \\ 1&1&2&3 \\ 3&1&1&2} \cdot \vect{ a_{0,j} \\ a_{1,j} \\ a_{2,j} \\ a_{3,j} }$$ 
+$$\vect{ b_{0,j} \\ b_{1,j} \\ b_{2,j} \\ b_{3,j} } = \mat{2&3&1&1 \\ 1&2&3&1 \\ 1&1&2&3 \\ 3&1&1&2} \cdot \vect{ a_{0,j} \\ a_{1,j} \\ a_{2,j} \\ a_{3,j} }$$
 with the columns $j \in \{0,1,2,3\}$
 -->
 
@@ -96,12 +96,12 @@ Counter mode turns a block cipher into a stream cipher. It generates the next ke
 ## Test Vectors
 
 ```
-mode = ECB-AES128.Encrypt 
+mode = ECB-AES128.Encrypt
 in   = 6bc1bee22e409f96e93d7e117393172a
 key  = 2b7e151628aed2a6abf7158809cf4f3c
-out  = 3ad77bb40d7a3660a89ecaf32466ef97 
+out  = 3ad77bb40d7a3660a89ecaf32466ef97
 
-mode = CBC-AES128.Encrypt 
+mode = CBC-AES128.Encrypt
 in   = 6bc1bee22e409f96e93d7e117393172a
 key  = 2b7e151628aed2a6abf7158809cf4f3c
 iv   = 000102030405060708090a0b0c0d0e0f
@@ -115,4 +115,3 @@ out  = 7649abac8119b246cee98e9b12e9197d
 * [NIST Special Publication 800-38A: AES Test Vectors](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-38a.pdf)
 
 * [Wikipedia: Block Cipher Modes](https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation)
-

@@ -6,7 +6,7 @@ tags: [gradient, rotation, divergence, laplace]
 A differential operator is an operator.
 
 ---------------------------     ----------------------------------------------
-**Gradient** $\grad f$          **Rotation** $\rot \vec f$ 
+**Gradient** $\grad f$          **Rotation** $\rot \vec f$
 **Divergenz** $\div \vec f$     **Laplace** $\Delta\, f = \Sp \ma H_f(\vec x)$
 ---------------------------     ----------------------------------------------
 
@@ -47,5 +47,3 @@ Explanation: Der Laplace-Operator zeigt an, wie stark die Krümmung des Skalarfe
 
 ## References
 * [Khan Academy: Divergence](https://www.khanacademy.org/math/multivariable-calculus/multivariable-derivatives/divergence-and-curl-articles/a/divergence)
-
-

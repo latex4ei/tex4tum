@@ -22,4 +22,3 @@ with the mean $\mu$, the standard deviation $\sigma$.
 ## Properties
 * It is symmetric around the point $x=\mu$ which is at the same time the mode, the median and the mean of the distribution.
 * The area under the curve and over the x-axis is equal to one.
-

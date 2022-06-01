@@ -60,5 +60,3 @@ Weitere, gute Formelsammlungen zu EI an der TUM findet ihr auch auf <a href="htt
 ## Veraltete Formelsammlungen
 
 Achtung: Diese Formelsammlungen werden nicht mehr verwendet und nicht mehr verbessert!
-
-

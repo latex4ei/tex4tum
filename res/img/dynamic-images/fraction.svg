@@ -164,7 +164,7 @@ function getValue(str){
 }
 
 function askValue(clicked_id){
-	var el = document.getElementById(clicked_id); 
+	var el = document.getElementById(clicked_id);
 	var newval = prompt(&quot;Please enter new Value&quot;, el.textContent);
 	if( isNaN( Number(newval) ) || newval == null || newval == '' ){
 		el.textContent = &quot;NaN&quot;;
@@ -197,12 +197,12 @@ function rotateToMouse(rotor, anchor){
     // coordinates within svg
     pt.x = anchor.x.animVal.value;
     pt.y = anchor.y.animVal.value;
-    
+
     // transform to screen corrdinates
     var matrix = anchor.getScreenCTM();
     pt = pt.matrixTransform(matrix);
     var angle = getMouseAngleTo(pt.x, pt.y);
-    
+
 	// update angle:
 	alpha = angle;
     alpha_text.textContent = Math.round(-angle);
@@ -212,7 +212,7 @@ function rotateToMouse(rotor, anchor){
 }
 
 
-function dragLine(){    
+function dragLine(){
     rotateToMouse(ray_line, hitpoint);
 }
 
@@ -257,7 +257,7 @@ function SVG_setCircleArc(id_obj, ox, oy, radius, angle){
    cos = Math.cos(angle*Degree);
 
     newx = (-cos*radius)
-    newy = (sin*radius+radius)  
+    newy = (sin*radius+radius)
     value = 'm '+(ox)+' '+(oy-radius)+' a '+(radius)+' '+(radius)+' 0 '+large_arc+' 0 '+newx+' '+newy
 
 
@@ -271,12 +271,12 @@ function calcFraction(){
 
     // in or outside of density?
     var frac_angle = 0;
-    if( Math.abs(alpha) &gt; 90 ){ 
+    if( Math.abs(alpha) &gt; 90 ){
         frac_angle = -Math.asin(Math.sin(alpha*Math.PI/180) * n2 / n1)*180/Math.PI;
     } else {
         frac_angle = Math.asin(Math.sin(alpha*Math.PI/180) * n1 / n2)*180/Math.PI+180;
     }
-    
+
     // total reflection?
     if (isNaN(frac_angle) ){ frac_angle = -alpha}
 

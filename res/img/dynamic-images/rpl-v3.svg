@@ -64,10 +64,10 @@ svg {
    height: 90%;
    width: 90%;
 }
- 
 
-/* 
-Keyframes: 
+
+/*
+Keyframes:
 =========================================================================
 */
 
@@ -78,7 +78,7 @@ Keyframes:
    60% { opacity: 1; }
   100% { opacity: 1; }
 }
-@keyframes kf-hide{ 
+@keyframes kf-hide{
     from { fill-opacity: 1;}
     to{fill-opacity: 0} }
 @keyframes kf-show{ from { fill-opacity: 0; }
@@ -101,42 +101,42 @@ to{fill-opacity: 1} }
 
 
 /* left, right, down, up */
-@keyframes kf-move-r{   
+@keyframes kf-move-r{
     from { -ms-transform: translateX(0px);
     -webkit-transform: translateX(0px);
-    -moz-transform: translateX(0px);  
+    -moz-transform: translateX(0px);
     -o-transform: translateX(0px);
     transform: translateX(0px);
     }
     to {     -ms-transform: translateX(33px);
     -webkit-transform: translateX(33px);
-    -moz-transform: translateX(33px); 
+    -moz-transform: translateX(33px);
     -o-transform: translateX(33px);
     transform: translateX(33px);
  }}
 
 @keyframes kf-move-r2{ to{     -ms-transform: translateX(33px);
     -webkit-transform: translateX(33px);
-    -moz-transform: translateX(33px); 
+    -moz-transform: translateX(33px);
     -o-transform: translateX(33px);
     transform: translateX(33px);
  }}
 
 @keyframes kf-move-l{   100% {     -ms-transform: translateX(-33px);
     -webkit-transform: translateX(-33px);
-    -moz-transform: translateX(-33px);  
+    -moz-transform: translateX(-33px);
     -o-transform: translateX(-33px);
     transform: translateX(-33px);
  }}
 @keyframes kf-move-u{ to{    -ms-transform: translateY(-35px);
     -webkit-transform: translateY(-35px);
-    -moz-transform: translateY(-35px);  
+    -moz-transform: translateY(-35px);
     -o-transform: translateY(-35px);
     transform: translateY(-35px);
     }}
 @keyframes kf-move-d{ to{     -ms-transform: translateY(35px);
     -webkit-transform: translateY(35px);
-    -moz-transform: translateY(35px); 
+    -moz-transform: translateY(35px);
     -o-transform: translateY(35px);
     transform: translateY(35px);
  }}
@@ -174,9 +174,9 @@ to{fill-opacity: 1} }
 
 
 
-/* 
-Animations: 
-Each Element can only hold one assigned animation 
+/*
+Animations:
+Each Element can only hold one assigned animation
 =========================================================================
 */
 
@@ -203,7 +203,7 @@ Each Element can only hold one assigned animation
 .move-d{ animation: kf-move-d 1s linear alternate;
   animation-iteration-count:2;
 }
-.move-u{ animation: kf-move-u 1s linear alternate; 
+.move-u{ animation: kf-move-u 1s linear alternate;
   animation-iteration-count:2;
 }
 
@@ -271,7 +271,7 @@ Each Element can only hold one assigned animation
 /*duration timing-function delay iteration-count direction fill-mode play-state*/
 /*can also be apllied to the entire svg?*/
 .ani.dur-1s { animation-duration:   0.5s !important;}
-.ani.dur-2s { animation-duration:   1s !important;} 
+.ani.dur-2s { animation-duration:   1s !important;}
 .ani.dur-3s { animation-duration:   1.5s !important;}
 .ani.dur-4s { animation-duration:   2s !important;}
 .ani.dur-5s { animation-duration:   2.5s !important;}
@@ -523,7 +523,7 @@ Each Element can only hold one assigned animation
       <g
      id="create" />
 
-    
+
   <use
      x="0"
      y="0"
@@ -712,9 +712,9 @@ Each Element can only hold one assigned animation
      id="path126"
      style="fill:#ffffff;fill-opacity:1;stroke-width:0.73153466;stroke-miterlimit:4;stroke-dasharray:none"
      d="m 79.375,173.96877 c -0.130694,-0.004 -0.233876,0.0177 -0.305409,0.0692 -1.144518,0.82319 -1.144518,14.14402 0,14.96721 1.144522,0.82319 10.404534,-5.83723 10.404534,-7.4836 0,-1.54348 -8.138713,-7.49336 -10.099125,-7.55283 z" />
-    
-        
-        
+
+
+
     </g>
     <path
        style="fill:#000249;fill-opacity:1;stroke:#000000;stroke-width:0.94590533;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -1015,7 +1015,7 @@ Each Element can only hold one assigned animation
          inkscape:connector-curvature="0" />
       <!-- Noch nicht sichbar -->
     </g>
-   
+
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1448,7 +1448,7 @@ function t4t_playPause(el){
 function t4t_playPauseAll( selector ){
   var els =document.querySelectorAll( selector )
   for (var i = 0; i < els.length; i++) {
-    t4t_playPause(els[i]); 
+    t4t_playPause(els[i]);
   }
 }
 
@@ -1482,25 +1482,25 @@ function t4t_addTriggerListener( event_name ){
                 }
               }
               t4t_playAll('.'+ev)
-          }, false);    
+          }, false);
         }
       }
-    }    
+    }
 }
 
 
 
 // make touch and hover the same
-function t4t_init(){ 
+function t4t_init(){
   window.onload = function(){
 
     var triggers = document.querySelectorAll('.hover');
     for (var i=0; i<triggers.length; i++) {
-      triggers[i].onmouseover = 
+      triggers[i].onmouseover =
       triggers[i].ontouch = function () {
         this.classList.add('toggle');
       }
-      triggers[i].onmouseout = 
+      triggers[i].onmouseout =
       triggers[i].ontouchend = function () {
         this.classList.remove('toggle');
       }
@@ -1515,7 +1515,7 @@ function t4t_init(){
     }
     var els =document.querySelectorAll('.ani.appear')
     for (var i=0; i<els.length; i++) {
-      els[i].classList.add('hide');     
+      els[i].classList.add('hide');
       els[i].addEventListener('animationstart', function(){
           this.classList.remove('hide');
           //this.style.opacity = 1;
@@ -1524,7 +1524,7 @@ function t4t_init(){
         els[i].addEventListener('animationend', function(){
             //this.style.opacity = 0;
             this.classList.add('hide');
-        }, false);      
+        }, false);
       }
     }
 
@@ -2099,392 +2099,392 @@ function setText() {
      </tspan></text>
   <script
      type="text/javascript"
-     id="test1"> 
-                   
+     id="test1">
 
- 
-      
-function FirstR() {  
+
+
+
+function FirstR() {
 
 var firstnode = 'R';
-window.firstnode = firstnode;      
+window.firstnode = firstnode;
 
 // Vorherige pinkcircles entfernen
 try{
 var list = document.getElementById("create2");
-list.removeChild(list.childNodes[0]);           
+list.removeChild(list.childNodes[0]);
 }
 catch(err){
 alert((firstnode)+" wurde als Startknoten gewählt");
 }
-      
-main(firstnode, 'K');  
-      
-      
-      
+
+main(firstnode, 'K');
+
+
+
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;circle&quot;);
     svgElem.setAttribute(&quot;cx&quot;, "18.487");
     svgElem.setAttribute(&quot;cy&quot;, "18.372999");
     svgElem.setAttribute(&quot;r&quot;, "6.6965461");
     svgElem.setAttribute(&quot;style&quot;, "opacity:0.98000004;fill:#000000;fill-opacity:0.02525252;stroke:#ec3df8;stroke-width:2.60690761;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1");
     svgElem.setAttribute(&quot;id&quot;, "pinkcircle");
-      
-  var svgdoc = document.getElementById(&quot;create2&quot;);      
-      
-  svgdoc.appendChild(svgElem);    
-      }           
-     
-      
-      
+
+  var svgdoc = document.getElementById(&quot;create2&quot;);
+
+  svgdoc.appendChild(svgElem);
+      }
+
+
+
 function FirstC() {
 
 var firstnode = 'C';
-window.firstnode = firstnode;      
+window.firstnode = firstnode;
 
 // Vorherige pinkcircles entfernen
 try{
 var list = document.getElementById("create2");
-list.removeChild(list.childNodes[0]);           
+list.removeChild(list.childNodes[0]);
 }
 catch(err){
 alert((firstnode)+" wurde als Startknoten gewählt");
 }
-      
-main(firstnode, 'K');  
-      
-      
-      
+
+main(firstnode, 'K');
+
+
+
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;circle&quot;);
     svgElem.setAttribute(&quot;cx&quot;, "68.487");
     svgElem.setAttribute(&quot;cy&quot;, "18.372999");
     svgElem.setAttribute(&quot;r&quot;, "6.6965461");
     svgElem.setAttribute(&quot;style&quot;, "opacity:0.98000004;fill:#000000;fill-opacity:0.02525252;stroke:#ec3df8;stroke-width:2.60690761;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1");
     svgElem.setAttribute(&quot;id&quot;, "pinkcircle");
-      
-  var svgdoc = document.getElementById(&quot;create2&quot;);      
-      
-  svgdoc.appendChild(svgElem);    
-      }           
-     
+
+  var svgdoc = document.getElementById(&quot;create2&quot;);
+
+  svgdoc.appendChild(svgElem);
+      }
+
 
 function FirstC() {
 
 var firstnode = 'C';
-window.firstnode = firstnode;      
+window.firstnode = firstnode;
 
 // Vorherige pinkcircles entfernen
 try{
 var list = document.getElementById("create2");
-list.removeChild(list.childNodes[0]);           
+list.removeChild(list.childNodes[0]);
 }
 catch(err){
 alert((firstnode)+" wurde als Startknoten gewählt");
 }
-      
-main(firstnode, 'K');  
-      
-      
-      
+
+main(firstnode, 'K');
+
+
+
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;circle&quot;);
     svgElem.setAttribute(&quot;cx&quot;, "68.487");
     svgElem.setAttribute(&quot;cy&quot;, "18.372999");
     svgElem.setAttribute(&quot;r&quot;, "6.6965461");
     svgElem.setAttribute(&quot;style&quot;, "opacity:0.98000004;fill:#000000;fill-opacity:0.02525252;stroke:#ec3df8;stroke-width:2.60690761;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1");
     svgElem.setAttribute(&quot;id&quot;, "pinkcircle");
-      
-  var svgdoc = document.getElementById(&quot;create2&quot;);      
-      
-  svgdoc.appendChild(svgElem);    
-      }           
-     
-      
+
+  var svgdoc = document.getElementById(&quot;create2&quot;);
+
+  svgdoc.appendChild(svgElem);
+      }
+
+
 function FirstF() {
 var firstnode = 'F';
-window.firstnode = firstnode;      
+window.firstnode = firstnode;
 
 // Vorherige pinkcircles entfernen
 try{
 var list = document.getElementById("create2");
-list.removeChild(list.childNodes[0]);           
+list.removeChild(list.childNodes[0]);
 }
 catch(err){
 alert((firstnode)+" wurde als Startknoten gewählt");
 }
-      
-main(firstnode, 'K');  
-      
+
+main(firstnode, 'K');
+
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;circle&quot;);
     svgElem.setAttribute(&quot;cx&quot;, "118.487");
     svgElem.setAttribute(&quot;cy&quot;, "18.372999");
     svgElem.setAttribute(&quot;r&quot;, "6.6965461");
     svgElem.setAttribute(&quot;style&quot;, "opacity:0.98000004;fill:#000000;fill-opacity:0.02525252;stroke:#ec3df8;stroke-width:2.60690761;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1");
     svgElem.setAttribute(&quot;id&quot;, "pinkcircle");
-      
-  var svgdoc = document.getElementById(&quot;create2&quot;);      
-      
-  svgdoc.appendChild(svgElem);    
-      } 
-      
-      
+
+  var svgdoc = document.getElementById(&quot;create2&quot;);
+
+  svgdoc.appendChild(svgElem);
+      }
+
+
 function FirstI(){
 var firstnode = 'I';
-window.firstnode = firstnode;      
+window.firstnode = firstnode;
 // Vorherige pinkcircles entfernen
-      
+
 try{
 var list = document.getElementById("create2");
-list.removeChild(list.childNodes[0]);           
+list.removeChild(list.childNodes[0]);
 }
 catch(err){
 alert((firstnode)+" wurde als Startknoten gewählt");
 }
-      
-main('I', 'K');  
-      
+
+main('I', 'K');
+
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;circle&quot;);
     svgElem.setAttribute(&quot;cx&quot;, "168.487");
     svgElem.setAttribute(&quot;cy&quot;, "18.372999");
     svgElem.setAttribute(&quot;r&quot;, "6.6965461");
     svgElem.setAttribute(&quot;style&quot;, "opacity:0.98000004;fill:#000000;fill-opacity:0.02525252;stroke:#ec3df8;stroke-width:2.60690761;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1");
     svgElem.setAttribute(&quot;id&quot;, "pinkcircle");
-      
-  var svgdoc = document.getElementById(&quot;create2&quot;);      
-      
-  svgdoc.appendChild(svgElem);    
-      }  
-  
-      
 
-      
+  var svgdoc = document.getElementById(&quot;create2&quot;);
+
+  svgdoc.appendChild(svgElem);
+      }
+
+
+
+
 function FirstJ() {
 var firstnode = 'J';
-window.firstnode = firstnode;      
+window.firstnode = firstnode;
 
 // Vorherige pinkcircles entfernen
 try{
 var list = document.getElementById("create2");
-list.removeChild(list.childNodes[0]);           
+list.removeChild(list.childNodes[0]);
 }
 catch(err){
 alert((firstnode)+" wurde als Startknoten gewählt");
 }
-      
-main(firstnode, 'K');  
-      
+
+main(firstnode, 'K');
+
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;circle&quot;);
     svgElem.setAttribute(&quot;cx&quot;, "168.487");
     svgElem.setAttribute(&quot;cy&quot;, "68.372999");
     svgElem.setAttribute(&quot;r&quot;, "6.6965461");
     svgElem.setAttribute(&quot;style&quot;, "opacity:0.98000004;fill:#000000;fill-opacity:0.02525252;stroke:#ec3df8;stroke-width:2.60690761;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1");
     svgElem.setAttribute(&quot;id&quot;, "pinkcircle");
-      
-  var svgdoc = document.getElementById(&quot;create2&quot;);      
-      
-  svgdoc.appendChild(svgElem);    
-      }  
-      
+
+  var svgdoc = document.getElementById(&quot;create2&quot;);
+
+  svgdoc.appendChild(svgElem);
+      }
+
 function FirstG() {
 var firstnode = 'G';
-window.firstnode = firstnode;      
+window.firstnode = firstnode;
 
 // Vorherige pinkcircles entfernen
 try{
 var list = document.getElementById("create2");
-list.removeChild(list.childNodes[0]);           
+list.removeChild(list.childNodes[0]);
 }
 catch(err){
 alert((firstnode)+" wurde als Startknoten gewählt");
 }
-      
-main(firstnode, 'K');  
-      
+
+main(firstnode, 'K');
+
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;circle&quot;);
     svgElem.setAttribute(&quot;cx&quot;, "118.487");
     svgElem.setAttribute(&quot;cy&quot;, "68.372999");
     svgElem.setAttribute(&quot;r&quot;, "6.6965461");
     svgElem.setAttribute(&quot;style&quot;, "opacity:0.98000004;fill:#000000;fill-opacity:0.02525252;stroke:#ec3df8;stroke-width:2.60690761;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1");
     svgElem.setAttribute(&quot;id&quot;, "pinkcircle");
-      
-  var svgdoc = document.getElementById(&quot;create2&quot;);      
-      
-  svgdoc.appendChild(svgElem);    
-      }  
-      
+
+  var svgdoc = document.getElementById(&quot;create2&quot;);
+
+  svgdoc.appendChild(svgElem);
+      }
+
 function FirstD() {
 var firstnode = 'D';
-window.firstnode = firstnode;      
+window.firstnode = firstnode;
 
 // Vorherige pinkcircles entfernen
 try{
 var list = document.getElementById("create2");
-list.removeChild(list.childNodes[0]);           
+list.removeChild(list.childNodes[0]);
 }
 catch(err){
 alert((firstnode)+" wurde als Startknoten gewählt");
 }
-      
-main(firstnode, 'K');  
-      
+
+main(firstnode, 'K');
+
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;circle&quot;);
     svgElem.setAttribute(&quot;cx&quot;, "68.487");
     svgElem.setAttribute(&quot;cy&quot;, "68.372999");
     svgElem.setAttribute(&quot;r&quot;, "6.6965461");
     svgElem.setAttribute(&quot;style&quot;, "opacity:0.98000004;fill:#000000;fill-opacity:0.02525252;stroke:#ec3df8;stroke-width:2.60690761;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1");
     svgElem.setAttribute(&quot;id&quot;, "pinkcircle");
-      
-  var svgdoc = document.getElementById(&quot;create2&quot;);      
-      
-  svgdoc.appendChild(svgElem);    
-      }  
-      
-      
+
+  var svgdoc = document.getElementById(&quot;create2&quot;);
+
+  svgdoc.appendChild(svgElem);
+      }
+
+
 function FirstA() {
 var firstnode = 'A';
-window.firstnode = firstnode;      
+window.firstnode = firstnode;
 
 // Vorherige pinkcircles entfernen
 try{
 var list = document.getElementById("create2");
-list.removeChild(list.childNodes[0]);           
+list.removeChild(list.childNodes[0]);
 }
 catch(err){
 alert((firstnode)+" wurde als Startknoten gewählt");
 }
-      
-main(firstnode, 'K');  
-      
+
+main(firstnode, 'K');
+
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;circle&quot;);
     svgElem.setAttribute(&quot;cx&quot;, "18.487");
     svgElem.setAttribute(&quot;cy&quot;, "68.372999");
     svgElem.setAttribute(&quot;r&quot;, "6.6965461");
     svgElem.setAttribute(&quot;style&quot;, "opacity:0.98000004;fill:#000000;fill-opacity:0.02525252;stroke:#ec3df8;stroke-width:2.60690761;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1");
     svgElem.setAttribute(&quot;id&quot;, "pinkcircle");
-      
-  var svgdoc = document.getElementById(&quot;create2&quot;);      
-      
-  svgdoc.appendChild(svgElem);    
-      }            
-      
+
+  var svgdoc = document.getElementById(&quot;create2&quot;);
+
+  svgdoc.appendChild(svgElem);
+      }
+
 
 function FirstB() {
 var firstnode = 'B';
-window.firstnode = firstnode;      
+window.firstnode = firstnode;
 
 // Vorherige pinkcircles entfernen
 try{
 var list = document.getElementById("create2");
-list.removeChild(list.childNodes[0]);           
+list.removeChild(list.childNodes[0]);
 }
 catch(err){
 alert((firstnode)+" wurde als Startknoten gewählt");
 }
-      
-main(firstnode, 'K');  
-      
+
+main(firstnode, 'K');
+
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;circle&quot;);
     svgElem.setAttribute(&quot;cx&quot;, "18.487");
     svgElem.setAttribute(&quot;cy&quot;, "118.372999");
     svgElem.setAttribute(&quot;r&quot;, "6.6965461");
     svgElem.setAttribute(&quot;style&quot;, "opacity:0.98000004;fill:#000000;fill-opacity:0.02525252;stroke:#ec3df8;stroke-width:2.60690761;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1");
     svgElem.setAttribute(&quot;id&quot;, "pinkcircle");
-      
-  var svgdoc = document.getElementById(&quot;create2&quot;);      
-      
-  svgdoc.appendChild(svgElem);    
-      }  
-      
+
+  var svgdoc = document.getElementById(&quot;create2&quot;);
+
+  svgdoc.appendChild(svgElem);
+      }
+
 function FirstE() {
 var firstnode = 'E';
-window.firstnode = firstnode;      
+window.firstnode = firstnode;
 
 // Vorherige pinkcircles entfernen
 try{
 var list = document.getElementById("create2");
-list.removeChild(list.childNodes[0]);           
+list.removeChild(list.childNodes[0]);
 }
 catch(err){
 alert((firstnode)+" wurde als Startknoten gewählt");
 }
-      
-main(firstnode, 'K');  
-      
+
+main(firstnode, 'K');
+
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;circle&quot;);
     svgElem.setAttribute(&quot;cx&quot;, "68.487");
     svgElem.setAttribute(&quot;cy&quot;, "118.372999");
     svgElem.setAttribute(&quot;r&quot;, "6.6965461");
     svgElem.setAttribute(&quot;style&quot;, "opacity:0.98000004;fill:#000000;fill-opacity:0.02525252;stroke:#ec3df8;stroke-width:2.60690761;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1");
     svgElem.setAttribute(&quot;id&quot;, "pinkcircle");
-      
-  var svgdoc = document.getElementById(&quot;create2&quot;);      
-      
-  svgdoc.appendChild(svgElem);    
-      } 
-      
+
+  var svgdoc = document.getElementById(&quot;create2&quot;);
+
+  svgdoc.appendChild(svgElem);
+      }
+
 
 function FirstH() {
 var firstnode = 'H';
-window.firstnode = firstnode;      
+window.firstnode = firstnode;
 
 // Vorherige pinkcircles entfernen
 try{
 var list = document.getElementById("create2");
-list.removeChild(list.childNodes[0]);           
+list.removeChild(list.childNodes[0]);
 }
 catch(err){
 alert((firstnode)+" wurde als Startknoten gewählt");
 }
-      
-main(firstnode, 'K');  
-      
+
+main(firstnode, 'K');
+
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;circle&quot;);
     svgElem.setAttribute(&quot;cx&quot;, "118.487");
     svgElem.setAttribute(&quot;cy&quot;, "118.372999");
     svgElem.setAttribute(&quot;r&quot;, "6.6965461");
     svgElem.setAttribute(&quot;style&quot;, "opacity:0.98000004;fill:#000000;fill-opacity:0.02525252;stroke:#ec3df8;stroke-width:2.60690761;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1");
     svgElem.setAttribute(&quot;id&quot;, "pinkcircle");
-      
-  var svgdoc = document.getElementById(&quot;create2&quot;);      
-      
-  svgdoc.appendChild(svgElem);    
-      }  
-      
+
+  var svgdoc = document.getElementById(&quot;create2&quot;);
+
+  svgdoc.appendChild(svgElem);
+      }
+
 
 function First() {
 
 try{
-var firstnode = window.firstnode      
+var firstnode = window.firstnode
 main(firstnode, 'K');
-      
-      
-      
+
+
+
 setTimeout(function() {
 var list = document.getElementById("create4");
 for (var child of list.childNodes){
 child.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:0;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);
 }
 
-      
+
       }, window.variable);
-      
-      
+
+
 }
 catch(err){
 var firstnode = 'R';
 window.firstnode = 'R';
 alert((firstnode)+" wurde als Startknoten gewählt");
 
-main(firstnode, 'K');  
-      
-      
+main(firstnode, 'K');
+
+
 setTimeout(function() {
 var list = document.getElementById("create4");
 for (var child of list.childNodes){
 child.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:0;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);
 }
 
-      
-      }, window.variable);      
-      
+
+      }, window.variable);
+
 
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;circle&quot;);
     svgElem.setAttribute(&quot;cx&quot;, "18.487");
@@ -2492,28 +2492,28 @@ child.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity
     svgElem.setAttribute(&quot;r&quot;, "6.6965461");
     svgElem.setAttribute(&quot;style&quot;, "opacity:0.98000004;fill:#000000;fill-opacity:0.02525252;stroke:#ec3df8;stroke-width:2.60690761;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1");
     svgElem.setAttribute(&quot;id&quot;, "pinkcircle");
-      
-  var svgdoc = document.getElementById(&quot;create2&quot;);      
-      
-  svgdoc.appendChild(svgElem);    
+
+  var svgdoc = document.getElementById(&quot;create2&quot;);
+
+  svgdoc.appendChild(svgElem);
       }
-      
+
 }
-      
+
 
 function Zahlen() {
 
 try{
-var firstnode = window.firstnode      
+var firstnode = window.firstnode
 main(firstnode, 'K');
-      
+
 }
 catch(err){
 var firstnode = 'R';
 window.firstnode = 'R';
 alert((firstnode)+" wurde als Startknoten gewählt");
 
-main(firstnode, 'K');  
+main(firstnode, 'K');
 
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;circle&quot;);
     svgElem.setAttribute(&quot;cx&quot;, "18.487");
@@ -2521,43 +2521,43 @@ main(firstnode, 'K');
     svgElem.setAttribute(&quot;r&quot;, "6.6965461");
     svgElem.setAttribute(&quot;style&quot;, "opacity:0.98000004;fill:#000000;fill-opacity:0.02525252;stroke:#ec3df8;stroke-width:2.60690761;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1");
     svgElem.setAttribute(&quot;id&quot;, "pinkcircle");
-      
-  var svgdoc = document.getElementById(&quot;create2&quot;);      
-      
-  svgdoc.appendChild(svgElem);    
+
+  var svgdoc = document.getElementById(&quot;create2&quot;);
+
+  svgdoc.appendChild(svgElem);
       }
-      
-}      
-                 
-            
-      
-      
-      
-    </script>    
+
+}
+
+
+
+
+
+    </script>
   <g
      id="create2" />
 
 <g
      id="create3" />
-    
+
 <g
      id="create4" />
 
-    
+
 <g
      id="create5" />
-    
+
 <g
      id="create6" />
-    
-    
+
+
 <g
      id="create7" />
 
-    
 
-    
-    
+
+
+
   <script
      type="text/javascript"
      id="test2">
@@ -2573,174 +2573,174 @@ document.getElementById('text5061').onclick = FirstA;
 document.getElementById('text5065').onclick = FirstB;
 document.getElementById('text5077').onclick = FirstE;
 document.getElementById('text5089').onclick = FirstH;
-      
-      
+
+
 document.getElementById('path3699').onclick = First;
 document.getElementById('path126').onclick = First;
-     
-      
 
-      
+
+
+
 
 
 //Start- und Endknoten eingeben
 //später hinzufügen
-//Eventuell Kreise um Start- und Endknoten und durch Draufklicken wählen    
+//Eventuell Kreise um Start- und Endknoten und durch Draufklicken wählen
 
 function Value1(myid) {
   zahl1 = parseInt(prompt(&quot;Zahl eingeben&quot;));
 	document.getElementById(this.id).textContent = zahl1;
-    
+
 //Pfade berechnen
-Zahlen();    
+Zahlen();
 }
 
-      
+
 function Value2(myid) {
     zahl2 = parseInt(prompt(&quot;Zahl eingeben&quot;));
 	document.getElementById(this.id).textContent = zahl2;
-      
-//Pfade berechnen
-Zahlen();    
 
-}  
-      
-      
+//Pfade berechnen
+Zahlen();
+
+}
+
+
 function Value3(myid) {
     zahl3 = parseInt(prompt(&quot;Zahl eingeben&quot;));
 	document.getElementById(this.id).textContent = zahl3;
-      
+
     //Pfade berechnen
-Zahlen();    
-}     
-      
-      
+Zahlen();
+}
+
+
 function Value4(myid) {
     zahl4 = parseInt(prompt(&quot;Zahl eingeben&quot;));
 	document.getElementById(this.id).textContent = zahl4;
-      
+
 //Pfade berechnen
-Zahlen();    
+Zahlen();
 
-}     
+}
 
-      
+
 function Value5(myid) {
     zahl5 = parseInt(prompt(&quot;Zahl eingeben&quot;));
 	document.getElementById(this.id).textContent = zahl5;
-      
+
       //Pfade berechnen
-Zahlen();    
-      
-}          
-      
+Zahlen();
+
+}
+
 function Value6(myid) {
     zahl6 = parseInt(prompt(&quot;Zahl eingeben&quot;));
 	document.getElementById(this.id).textContent = zahl6;
-      
-//Pfade berechnen
-Zahlen();    
 
-}     
+//Pfade berechnen
+Zahlen();
+
+}
 
 function Value7(myid) {
     zahl7 = parseInt(prompt(&quot;Zahl eingeben&quot;));
 	document.getElementById(this.id).textContent = zahl7;
-      
-//Pfade berechnen
-main(firstnode);  
 
-}     
-     
+//Pfade berechnen
+main(firstnode);
+
+}
+
 function Value8(myid) {
     zahl8 = parseInt(prompt(&quot;Zahl eingeben&quot;));
 	document.getElementById(this.id).textContent = zahl8;
-      
-//Pfade berechnen
-Zahlen();    
 
-}     
-         
+//Pfade berechnen
+Zahlen();
+
+}
+
  function Value9(myid) {
     zahl9 = parseInt(prompt(&quot;Zahl eingeben&quot;));
 	document.getElementById(this.id).textContent = zahl9;
-      
-//Pfade berechnen
-Zahlen();    
 
-}     
+//Pfade berechnen
+Zahlen();
+
+}
 
 function Value10(myid) {
     zahl10 = parseInt(prompt(&quot;Zahl eingeben&quot;));
 	document.getElementById(this.id).textContent = zahl10;
-      
-//Pfade berechnen
-Zahlen();    
 
-} 
-      
+//Pfade berechnen
+Zahlen();
+
+}
+
 function Value11(myid) {
     zahl11 = parseInt(prompt(&quot;Zahl eingeben&quot;));
 	document.getElementById(this.id).textContent = zahl11;
-      
+
 //Pfade berechnen
-Zahlen();    
-} 
-      
+Zahlen();
+}
+
 function Value12(myid) {
     zahl12 = parseInt(prompt(&quot;Zahl eingeben&quot;));
 	document.getElementById(this.id).textContent = zahl12;
-      
-//Pfade berechnen
-Zahlen();    
 
-} 
-      
+//Pfade berechnen
+Zahlen();
+
+}
+
 function Value13(myid) {
     zahl13 = parseInt(prompt(&quot;Zahl eingeben&quot;));
 	document.getElementById(this.id).textContent = zahl13;
-      
+
 //Pfade berechnen
-Zahlen();    
+Zahlen();
 }
 
-      
+
 function Value14(myid) {
     zahl14 = parseInt(prompt(&quot;Zahl eingeben&quot;));
 	document.getElementById(this.id).textContent = zahl14;
-      
+
     //Pfade berechnen
-Zahlen();    
+Zahlen();
 }
 
 function Value15(myid) {
     zahl15 = parseInt(prompt(&quot;Zahl eingeben&quot;));
-	document.getElementById(this.id).textContent = zahl15;  
-      
+	document.getElementById(this.id).textContent = zahl15;
+
 //Pfade berechnen
-Zahlen();    
+Zahlen();
 
 }
 
 function Value16(myid) {
     zahl16 = parseInt(prompt(&quot;Zahl eingeben&quot;));
 	document.getElementById(this.id).textContent = zahl16;
-      
+
 //Pfade berechnen
-Zahlen();    
+Zahlen();
 }
-      
+
 function Value17(myid) {
     zahl17 = parseInt(prompt(&quot;Zahl eingeben&quot;));
 	document.getElementById(this.id).textContent = zahl17;
-      
+
 //Pfade berechnen
-Zahlen();    
-      
-      
+Zahlen();
+
+
 
 }
-      
+
 
 document.getElementById('edge1').onclick = Value1;
 document.getElementById('edge2').onclick = Value2;
@@ -2759,35 +2759,35 @@ document.getElementById('edge14').onclick = Value14;
 document.getElementById('edge15').onclick = Value15;
 document.getElementById('edge16').onclick = Value16;
 document.getElementById('edge17').onclick = Value17;
-      
+
 
 
 function main(start, end){
-      
+
 var list = document.getElementById("create");
 for (var child of list.childNodes){
 child.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:0;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);
 }
-      
+
 
 var list = document.getElementById("create4");
 for (var child of list.childNodes){
 child.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:0;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);
-}      
-      
+}
+
 var list = document.getElementById("create5");
 for (var child of list.childNodes){
 child.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:0;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);
 }
 
-      
+
 mypaths = [];
-      
+
 save = [];
-            
+
 allweights = [];
-      
-      
+
+
 class Graph {
     constructor(vertices) {
         this.v = vertices;
@@ -2795,8 +2795,8 @@ class Graph {
         this.nodes2 = [];
         this.adjacencyList2 = {};
         this.collection = [];
-  
-  
+
+
     }
 
 
@@ -2810,7 +2810,7 @@ class Graph {
     }
 
     findAllPaths(start, end = 'K', path = [], weights = [], weight) {
-      
+
         path = path.concat(start);
         if (typeof weight !== "undefined"){
             weights = weights.concat(weight);
@@ -2819,42 +2819,42 @@ class Graph {
 
         if (start == end) {
         allweights.push(weights);
-            
+
 return [path];
-      
+
             }
-      
-      
+
+
         var paths = [];
 
-        for (var node of this.graph.get(start)) {                                    
+        for (var node of this.graph.get(start)) {
             if (path.includes(node[0]) == false) {
-      
-                var new_paths = this.findAllPaths(node[0], end, path, weights, node[1]);  
-      
+
+                var new_paths = this.findAllPaths(node[0], end, path, weights, node[1]);
+
                 for (var new_path of new_paths) {
-      
+
                     paths.push(new_path);
-      
+
     // Hier Elemente erzeugen (rects)
 
-    
+
                 }
-            
+
 
             }
         }
-      
-    
+
+
 mypaths = paths;
       return paths;
-      
-      
+
+
     }
 
-      
 
-          
+
+
 drawPackages(x, y){
 var Minimum = 200;
 
@@ -2862,7 +2862,7 @@ for (var path of x){
 var variable = [];
 var index = x.indexOf(path);
 var mydelay = [];
-     
+
 var myweights = y[index];
 for (var hi = 0; hi &lt; myweights.length; hi++){
 var my_edge = path[hi] + path[hi+1];
@@ -2871,16 +2871,16 @@ mydelay[0] = 0;
 if (hi !== 0){
 var before = mydelay[hi-1]
 var before_weights = myweights[hi-1];
-      
+
 mydelay[hi] = before + before_weights
 }
 var delay = mydelay[hi];
 variable[hi] = delay;
-      
+
 // Hier werden für jede Kante dynamisch Packages (grün) erzeugt, sodass später Anfangs- und Startknoten festgelegt werden können
-      
+
 switch(my_edge) {
-  case 'RA':      
+  case 'RA':
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
     svgElem.setAttribute(&quot;x&quot;, &quot;26.52083&quot;);
     svgElem.setAttribute(&quot;y&quot;, &quot;40.447916&quot;);
@@ -2888,17 +2888,17 @@ switch(my_edge) {
     svgElem.setAttribute(&quot;height&quot;, 1.6536481);
     svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:#00b609;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);
     svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
-    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 move-d dur-"+(duration)+"s del-"+(delay)+"s&quot;); 
-       
-      
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 move-d dur-"+(duration)+"s del-"+(delay)+"s&quot;);
+
+
   var svgdoc = document.getElementById(&quot;create&quot;);
-   
+
   svgdoc.appendChild(svgElem);
-            
+
 
       break;
-      
-  case 'AB':      
+
+  case 'AB':
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
     svgElem.setAttribute(&quot;x&quot;, &quot;26.52083&quot;);
     svgElem.setAttribute(&quot;y&quot;, &quot;90.447916&quot;);
@@ -2906,17 +2906,17 @@ switch(my_edge) {
     svgElem.setAttribute(&quot;height&quot;, 1.6536481);
     svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:#00b609;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);
     svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
-    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 move-d dur-"+(duration)+"s del-"+(delay)+"s"); 
-      
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 move-d dur-"+(duration)+"s del-"+(delay)+"s");
+
   var svgdoc = document.getElementById(&quot;create&quot;);
-   
+
   svgdoc.appendChild(svgElem);
 
       break;
-      
 
-     
-  case 'BE':      
+
+
+  case 'BE':
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
     svgElem.setAttribute(&quot;x&quot;, &quot;40.52083&quot;);
     svgElem.setAttribute(&quot;y&quot;, &quot;128.447916&quot;);
@@ -2924,17 +2924,17 @@ switch(my_edge) {
     svgElem.setAttribute(&quot;height&quot;, 11.641669);
     svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:#00b609;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);
     svgElem.setAttribute(&quot;id&quot;, &quot;Right&quot;);
-    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 move-r dur-"+(duration)+"s del-"+(delay)+"s"); 
-      
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 move-r dur-"+(duration)+"s del-"+(delay)+"s");
+
   var svgdoc = document.getElementById(&quot;create&quot;);
-   
+
   svgdoc.appendChild(svgElem);
 
       break;
-      
-          
-      
-  case 'ED':      
+
+
+
+  case 'ED':
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
     svgElem.setAttribute(&quot;x&quot;, &quot;76.52083&quot;);
     svgElem.setAttribute(&quot;y&quot;, &quot;125.447916&quot;);
@@ -2942,16 +2942,16 @@ switch(my_edge) {
     svgElem.setAttribute(&quot;height&quot;, 1.6536481);
     svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:#00b609;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);
     svgElem.setAttribute(&quot;id&quot;, &quot;Up&quot;);
-    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 move-u dur-"+(duration)+"s del-"+(delay)+"s"); 
-      
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 move-u dur-"+(duration)+"s del-"+(delay)+"s");
+
   var svgdoc = document.getElementById(&quot;create&quot;);
-   
+
   svgdoc.appendChild(svgElem);
 
       break;
-      
-      
-case 'BA':      
+
+
+case 'BA':
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
     svgElem.setAttribute(&quot;x&quot;, &quot;26.52083&quot;);
     svgElem.setAttribute(&quot;y&quot;, &quot;125.447916&quot;);
@@ -2959,17 +2959,17 @@ case 'BA':
     svgElem.setAttribute(&quot;height&quot;, 1.6536481);
     svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:#00b609;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);
     svgElem.setAttribute(&quot;id&quot;, &quot;Up&quot;);
-    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 move-u dur-"+(duration)+"s del-"+(delay)+"s"); 
-      
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 move-u dur-"+(duration)+"s del-"+(delay)+"s");
+
   var svgdoc = document.getElementById(&quot;create&quot;);
-   
+
   svgdoc.appendChild(svgElem);
 
-      break;  
-      
-      
-      
-case 'AR':      
+      break;
+
+
+
+case 'AR':
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
     svgElem.setAttribute(&quot;x&quot;, &quot;26.52083&quot;);
     svgElem.setAttribute(&quot;y&quot;, &quot;75.447916&quot;);
@@ -2977,20 +2977,20 @@ case 'AR':
     svgElem.setAttribute(&quot;height&quot;, 1.6536481);
     svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:#00b609;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);
     svgElem.setAttribute(&quot;id&quot;, &quot;Up&quot;);
-    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 move-u dur-"+(duration)+"s del-"+(delay)+"s"); 
-      
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 move-u dur-"+(duration)+"s del-"+(delay)+"s");
+
   var svgdoc = document.getElementById(&quot;create&quot;);
-   
+
   svgdoc.appendChild(svgElem);
 
-      break;       
-      
-      
-      
-      
-      
-      
-    case 'DC':      
+      break;
+
+
+
+
+
+
+    case 'DC':
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
     svgElem.setAttribute(&quot;x&quot;, &quot;76.52083&quot;);
     svgElem.setAttribute(&quot;y&quot;, &quot;75.447916&quot;);
@@ -2998,16 +2998,16 @@ case 'AR':
     svgElem.setAttribute(&quot;height&quot;, 1.6536481);
     svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:#00b609;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);
     svgElem.setAttribute(&quot;id&quot;, &quot;Up&quot;);
-    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 move-u dur-"+(duration)+"s del-"+(delay)+"s"); 
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 move-u dur-"+(duration)+"s del-"+(delay)+"s");
   var svgdoc = document.getElementById(&quot;create&quot;);
-   
+
   svgdoc.appendChild(svgElem);
 
       break;
-    
-          
-      
-  case 'CF':      
+
+
+
+  case 'CF':
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
     svgElem.setAttribute(&quot;x&quot;, &quot;90.52083&quot;);
     svgElem.setAttribute(&quot;y&quot;, &quot;28.447916&quot;);
@@ -3015,17 +3015,17 @@ case 'AR':
     svgElem.setAttribute(&quot;height&quot;, 11.641669);
     svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:#00b609;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);
     svgElem.setAttribute(&quot;id&quot;, &quot;Right&quot;);
-    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 move-r dur-"+(duration)+"s del-"+(delay)+"s"); 
-      
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 move-r dur-"+(duration)+"s del-"+(delay)+"s");
+
   var svgdoc = document.getElementById(&quot;create&quot;);
-   
+
   svgdoc.appendChild(svgElem);
 
       break;
-  
-            
-      
-  case 'FG':      
+
+
+
+  case 'FG':
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
     svgElem.setAttribute(&quot;x&quot;, &quot;126.52083&quot;);
     svgElem.setAttribute(&quot;y&quot;, &quot;40.447916&quot;);
@@ -3033,18 +3033,18 @@ case 'AR':
     svgElem.setAttribute(&quot;height&quot;, 1.6536481);
     svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:#00b609;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);
     svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
-    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 move-d dur-"+(duration)+"s del-"+(delay)+"s"); 
-      
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 move-d dur-"+(duration)+"s del-"+(delay)+"s");
+
   var svgdoc = document.getElementById(&quot;create&quot;);
-   
+
   svgdoc.appendChild(svgElem);
 
       break;
-      
-      
 
-      
-     case 'GH':      
+
+
+
+     case 'GH':
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
     svgElem.setAttribute(&quot;x&quot;, &quot;126.52083&quot;);
     svgElem.setAttribute(&quot;y&quot;, &quot;90.447916&quot;);
@@ -3052,17 +3052,17 @@ case 'AR':
     svgElem.setAttribute(&quot;height&quot;, 1.6536481);
     svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:#00b609;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);
     svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
-    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 move-d dur-"+(duration)+"s del-"+(delay)+"s"); 
-      
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 move-d dur-"+(duration)+"s del-"+(delay)+"s");
+
   var svgdoc = document.getElementById(&quot;create&quot;);
-   
+
   svgdoc.appendChild(svgElem);
 
       break;
-   
-      
-      
-    case 'HK': 
+
+
+
+    case 'HK':
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
     svgElem.setAttribute(&quot;x&quot;, &quot;140.52083&quot;);
     svgElem.setAttribute(&quot;y&quot;, &quot;128.447916&quot;);
@@ -3070,17 +3070,17 @@ case 'AR':
     svgElem.setAttribute(&quot;height&quot;, 11.641669);
     svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:#00b609;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);
     svgElem.setAttribute(&quot;id&quot;, &quot;Right&quot;);
-    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 move-r dur-"+(duration)+"s del-"+(delay)+"s"); 
-      
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 move-r dur-"+(duration)+"s del-"+(delay)+"s");
+
   var svgdoc = document.getElementById(&quot;create&quot;);
-   
+
   svgdoc.appendChild(svgElem);
       break;
 
-  
-         
-      
-    case 'GJ':      
+
+
+
+    case 'GJ':
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
     svgElem.setAttribute(&quot;x&quot;, &quot;140.52083&quot;);
     svgElem.setAttribute(&quot;y&quot;, &quot;78.447916&quot;);
@@ -3088,18 +3088,18 @@ case 'AR':
     svgElem.setAttribute(&quot;height&quot;, 11.641669);
     svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:#00b609;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);
     svgElem.setAttribute(&quot;id&quot;, &quot;Right&quot;);
-    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 move-r dur-"+(duration)+"s del-"+(delay)+"s"); 
-      
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 move-r dur-"+(duration)+"s del-"+(delay)+"s");
+
   var svgdoc = document.getElementById(&quot;create&quot;);
-   
+
   svgdoc.appendChild(svgElem);
 
       break;
-    
-      
-      
-      
-      case 'JK':      
+
+
+
+
+      case 'JK':
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
     svgElem.setAttribute(&quot;x&quot;, &quot;176.52083&quot;);
     svgElem.setAttribute(&quot;y&quot;, &quot;90.447916&quot;);
@@ -3107,18 +3107,18 @@ case 'AR':
     svgElem.setAttribute(&quot;height&quot;, 1.6536481);
     svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:#00b609;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);
     svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
-    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 move-d dur-"+(duration)+"s del-"+(delay)+"s"); 
-      
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 move-d dur-"+(duration)+"s del-"+(delay)+"s");
+
   var svgdoc = document.getElementById(&quot;create&quot;);
-   
+
   svgdoc.appendChild(svgElem);
 
       break;
 
-            
-      
-      
-    case 'FI':      
+
+
+
+    case 'FI':
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
     svgElem.setAttribute(&quot;x&quot;, &quot;140.52083&quot;);
     svgElem.setAttribute(&quot;y&quot;, &quot;28.447916&quot;);
@@ -3126,17 +3126,17 @@ case 'AR':
     svgElem.setAttribute(&quot;height&quot;, 11.641669);
     svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:#00b609;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);
     svgElem.setAttribute(&quot;id&quot;, &quot;Right&quot;);
-    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 move-r dur-"+(duration)+"s del-"+(delay)+"s"); 
-      
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 move-r dur-"+(duration)+"s del-"+(delay)+"s");
+
   var svgdoc = document.getElementById(&quot;create&quot;);
-   
+
   svgdoc.appendChild(svgElem);
 
       break;
-      
-            
-      
-         case 'IJ':      
+
+
+
+         case 'IJ':
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
     svgElem.setAttribute(&quot;x&quot;, &quot;176.52083&quot;);
     svgElem.setAttribute(&quot;y&quot;, &quot;40.447916&quot;);
@@ -3144,17 +3144,17 @@ case 'AR':
     svgElem.setAttribute(&quot;height&quot;, 1.6536481);
     svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:#00b609;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);
     svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
-    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 move-d dur-"+(duration)+"s del-"+(delay)+"s"); 
-      
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 move-d dur-"+(duration)+"s del-"+(delay)+"s");
+
   var svgdoc = document.getElementById(&quot;create&quot;);
-   
+
   svgdoc.appendChild(svgElem);
 
       break;
 
-  
-      
-    case 'JG':      
+
+
+    case 'JG':
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
     svgElem.setAttribute(&quot;x&quot;, &quot;173.52083&quot;);
     svgElem.setAttribute(&quot;y&quot;, &quot;78.447916&quot;);
@@ -3162,17 +3162,17 @@ case 'AR':
     svgElem.setAttribute(&quot;height&quot;, 11.641669);
     svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:#00b609;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);
     svgElem.setAttribute(&quot;id&quot;, &quot;Left&quot;);
-    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 move-l dur-"+(duration)+"s del-"+(delay)+"s"); 
-      
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 move-l dur-"+(duration)+"s del-"+(delay)+"s");
+
   var svgdoc = document.getElementById(&quot;create&quot;);
-   
+
   svgdoc.appendChild(svgElem);
 
       break;
-  
-      
-      
-  case 'GF':      
+
+
+
+  case 'GF':
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
     svgElem.setAttribute(&quot;x&quot;, &quot;126.52083&quot;);
     svgElem.setAttribute(&quot;y&quot;, &quot;75.447916&quot;);
@@ -3180,18 +3180,18 @@ case 'AR':
     svgElem.setAttribute(&quot;height&quot;, 1.6536481);
     svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:#00b609;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);
     svgElem.setAttribute(&quot;id&quot;, &quot;Up&quot;);
-    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 move-u dur-"+(duration)+"s del-"+(delay)+"s"); 
-      
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 move-u dur-"+(duration)+"s del-"+(delay)+"s");
+
   var svgdoc = document.getElementById(&quot;create&quot;);
-   
+
   svgdoc.appendChild(svgElem);
 
       break;
-      
 
-      
-      
-      case 'JI':      
+
+
+
+      case 'JI':
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
     svgElem.setAttribute(&quot;x&quot;, &quot;176.52083&quot;);
     svgElem.setAttribute(&quot;y&quot;, &quot;75.447916&quot;);
@@ -3199,17 +3199,17 @@ case 'AR':
     svgElem.setAttribute(&quot;height&quot;, 1.6536481);
     svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:#00b609;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);
     svgElem.setAttribute(&quot;id&quot;, &quot;Up&quot;);
-    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 move-u dur-"+(duration)+"s del-"+(delay)+"s"); 
-      
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 move-u dur-"+(duration)+"s del-"+(delay)+"s");
+
   var svgdoc = document.getElementById(&quot;create&quot;);
-   
+
   svgdoc.appendChild(svgElem);
 
-      break;  
-      
-          
-      
-   case 'EH':      
+      break;
+
+
+
+   case 'EH':
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
     svgElem.setAttribute(&quot;x&quot;, &quot;90.52083&quot;);
     svgElem.setAttribute(&quot;y&quot;, &quot;128.447916&quot;);
@@ -3217,17 +3217,17 @@ case 'AR':
     svgElem.setAttribute(&quot;height&quot;, 11.641669);
     svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:#00b609;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);
     svgElem.setAttribute(&quot;id&quot;, &quot;Right&quot;);
-    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 move-r dur-"+(duration)+"s del-"+(delay)+"s"); 
-      
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 move-r dur-"+(duration)+"s del-"+(delay)+"s");
+
   var svgdoc = document.getElementById(&quot;create&quot;);
-   
+
   svgdoc.appendChild(svgElem);
 
       break;
-      
-          
-      
-      case 'HG':      
+
+
+
+      case 'HG':
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
     svgElem.setAttribute(&quot;x&quot;, &quot;126.52083&quot;);
     svgElem.setAttribute(&quot;y&quot;, &quot;125.447916&quot;);
@@ -3235,17 +3235,17 @@ case 'AR':
     svgElem.setAttribute(&quot;height&quot;, 1.6536481);
     svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:#00b609;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);
     svgElem.setAttribute(&quot;id&quot;, &quot;UP&quot;);
-    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 move-u dur-"+(duration)+"s del-"+(delay)+"s"); 
-      
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 move-u dur-"+(duration)+"s del-"+(delay)+"s");
+
   var svgdoc = document.getElementById(&quot;create&quot;);
-   
+
   svgdoc.appendChild(svgElem);
 
       break;
-  
-      
-      
-    case 'GD':      
+
+
+
+    case 'GD':
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
     svgElem.setAttribute(&quot;x&quot;, &quot;123.52083&quot;);
     svgElem.setAttribute(&quot;y&quot;, &quot;78.447916&quot;);
@@ -3253,17 +3253,17 @@ case 'AR':
     svgElem.setAttribute(&quot;height&quot;, 11.641669);
     svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:#00b609;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);
     svgElem.setAttribute(&quot;id&quot;, &quot;Left&quot;);
-    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 move-l dur-"+(duration)+"s del-"+(delay)+"s"); 
-      
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 move-l dur-"+(duration)+"s del-"+(delay)+"s");
+
   var svgdoc = document.getElementById(&quot;create&quot;);
-   
+
   svgdoc.appendChild(svgElem);
 
       break;
-      
-      
-      
-      case 'FC':      
+
+
+
+      case 'FC':
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
     svgElem.setAttribute(&quot;x&quot;, &quot;123.52083&quot;);
     svgElem.setAttribute(&quot;y&quot;, &quot;28.447916&quot;);
@@ -3271,17 +3271,17 @@ case 'AR':
     svgElem.setAttribute(&quot;height&quot;, 11.641669);
     svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:#00b609;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);
     svgElem.setAttribute(&quot;id&quot;, &quot;Left&quot;);
-    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 move-l dur-"+(duration)+"s del-"+(delay)+"s"); 
-      
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 move-l dur-"+(duration)+"s del-"+(delay)+"s");
+
   var svgdoc = document.getElementById(&quot;create&quot;);
-   
+
   svgdoc.appendChild(svgElem);
 
-      break;  
-      
-      
-      
-          case 'CR':      
+      break;
+
+
+
+          case 'CR':
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
     svgElem.setAttribute(&quot;x&quot;, &quot;73.52083&quot;);
     svgElem.setAttribute(&quot;y&quot;, &quot;28.447916&quot;);
@@ -3289,16 +3289,16 @@ case 'AR':
     svgElem.setAttribute(&quot;height&quot;, 11.641669);
     svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:#00b609;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);
     svgElem.setAttribute(&quot;id&quot;, &quot;Left&quot;);
-    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 move-l dur-"+(duration)+"s del-"+(delay)+"s"); 
-      
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 move-l dur-"+(duration)+"s del-"+(delay)+"s");
+
   var svgdoc = document.getElementById(&quot;create&quot;);
-   
+
   svgdoc.appendChild(svgElem);
 
-      break; 
-      
-      
-           case 'DA':      
+      break;
+
+
+           case 'DA':
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
     svgElem.setAttribute(&quot;x&quot;, &quot;73.52083&quot;);
     svgElem.setAttribute(&quot;y&quot;, &quot;78.447916&quot;);
@@ -3306,15 +3306,15 @@ case 'AR':
     svgElem.setAttribute(&quot;height&quot;, 11.641669);
     svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:#00b609;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);
     svgElem.setAttribute(&quot;id&quot;, &quot;Left&quot;);
-    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 move-l dur-"+(duration)+"s del-"+(delay)+"s"); 
-      
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 move-l dur-"+(duration)+"s del-"+(delay)+"s");
+
   var svgdoc = document.getElementById(&quot;create&quot;);
-   
+
   svgdoc.appendChild(svgElem);
 
-      break;    
-          
-      case 'EB':      
+      break;
+
+      case 'EB':
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
     svgElem.setAttribute(&quot;x&quot;, &quot;73.52083&quot;);
     svgElem.setAttribute(&quot;y&quot;, &quot;128.447916&quot;);
@@ -3322,16 +3322,16 @@ case 'AR':
     svgElem.setAttribute(&quot;height&quot;, 11.641669);
     svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:#00b609;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);
     svgElem.setAttribute(&quot;id&quot;, &quot;Left&quot;);
-    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 move-l dur-"+(duration)+"s del-"+(delay)+"s"); 
-      
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 move-l dur-"+(duration)+"s del-"+(delay)+"s");
+
   var svgdoc = document.getElementById(&quot;create&quot;);
-   
+
   svgdoc.appendChild(svgElem);
 
-      break;    
-                
-            
-      case 'AD':      
+      break;
+
+
+      case 'AD':
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
     svgElem.setAttribute(&quot;x&quot;, &quot;40.52083&quot;);
     svgElem.setAttribute(&quot;y&quot;, &quot;78.447916&quot;);
@@ -3339,16 +3339,16 @@ case 'AR':
     svgElem.setAttribute(&quot;height&quot;, 11.641669);
     svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:#00b609;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);
     svgElem.setAttribute(&quot;id&quot;, &quot;Right&quot;);
-    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 move-r dur-"+(duration)+"s del-"+(delay)+"s"); 
-      
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 move-r dur-"+(duration)+"s del-"+(delay)+"s");
+
   var svgdoc = document.getElementById(&quot;create&quot;);
-   
+
   svgdoc.appendChild(svgElem);
 
       break;
-      
-      
-       case 'DG':      
+
+
+       case 'DG':
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
     svgElem.setAttribute(&quot;x&quot;, &quot;90.52083&quot;);
     svgElem.setAttribute(&quot;y&quot;, &quot;78.447916&quot;);
@@ -3356,19 +3356,19 @@ case 'AR':
     svgElem.setAttribute(&quot;height&quot;, 11.641669);
     svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:#00b609;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);
     svgElem.setAttribute(&quot;id&quot;, &quot;Right&quot;);
-    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 move-r dur-"+(duration)+"s del-"+(delay)+"s"); 
-      
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 move-r dur-"+(duration)+"s del-"+(delay)+"s");
+
   var svgdoc = document.getElementById(&quot;create&quot;);
-   
+
   svgdoc.appendChild(svgElem);
 
       break;
-    
-  
-      
-      
-      
-      case 'RC':      
+
+
+
+
+
+      case 'RC':
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
     svgElem.setAttribute(&quot;x&quot;, &quot;40.52083&quot;);
     svgElem.setAttribute(&quot;y&quot;, &quot;28.447916&quot;);
@@ -3376,16 +3376,16 @@ case 'AR':
     svgElem.setAttribute(&quot;height&quot;, 11.641669);
     svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:#00b609;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);
     svgElem.setAttribute(&quot;id&quot;, &quot;Right&quot;);
-    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 move-r dur-"+(duration)+"s del-"+(delay)+"s"); 
-      
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 move-r dur-"+(duration)+"s del-"+(delay)+"s");
+
   var svgdoc = document.getElementById(&quot;create&quot;);
-   
+
   svgdoc.appendChild(svgElem);
 
       break;
-      
-      
-      case 'DE':      
+
+
+      case 'DE':
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
     svgElem.setAttribute(&quot;x&quot;, &quot;76.52083&quot;);
     svgElem.setAttribute(&quot;y&quot;, &quot;90.447916&quot;);
@@ -3393,15 +3393,15 @@ case 'AR':
     svgElem.setAttribute(&quot;height&quot;, 1.6536481);
     svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:#00b609;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);
     svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
-    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 move-d dur-"+(duration)+"s del-"+(delay)+"s"); 
-      
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 move-d dur-"+(duration)+"s del-"+(delay)+"s");
+
   var svgdoc = document.getElementById(&quot;create&quot;);
-   
+
   svgdoc.appendChild(svgElem);
 
       break;
-      
-      
+
+
         case 'CD':
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
     svgElem.setAttribute(&quot;x&quot;, &quot;76.52083&quot;);
@@ -3410,36 +3410,36 @@ case 'AR':
     svgElem.setAttribute(&quot;height&quot;, 1.6536481);
     svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:#00b609;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);
     svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
-    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 move-d dur-"+(duration)+"s del-"+(delay)+"s"); 
-      
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 move-d dur-"+(duration)+"s del-"+(delay)+"s");
+
   var svgdoc = document.getElementById(&quot;create&quot;);
-   
+
   svgdoc.appendChild(svgElem);
 
-      break;  
-    
-  
-      
+      break;
+
+
+
         default:
     // code block
 
-      
+
 }
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
 }
 save.push(variable)
-      
+
 }
-            
-}      
-      
-      
-      
+
+}
+
+
+
 
 
 
@@ -3457,25 +3457,25 @@ save.push(variable)
         return edges;
     }
 
-  
+
     addNode(mynode) {
-        this.nodes2.push(mynode); 
+        this.nodes2.push(mynode);
         this.adjacencyList2[mynode] = [];
       }
-    
+
       addEdge(node1, node2, weight2) {
         this.adjacencyList2[node1].push({mynode:node2, weight2: weight2});
         this.adjacencyList2[node2].push({mynode:node1, weight2: weight2});
       }
-  
-  
+
+
     enqueue(element){
-      if (this.isEmpty()){ 
+      if (this.isEmpty()){
         this.collection.push(element);
       } else {
         let added = false;
         for (let i = 1; i &lt; this.collection.length+1; i++){
-          if (element[1] &lt; this.collection[i-1][1]){ 
+          if (element[1] &lt; this.collection[i-1][1]){
             this.collection.splice(i-1, 0, element);
             added = true;
             break;
@@ -3486,44 +3486,44 @@ save.push(variable)
         }
       }
     };
-  
-  
+
+
     dequeue() {
       let value = this.collection.shift();
       return value;
     };
     isEmpty() {
-      return (this.collection.length === 0) 
-    };      
-      
-      
+      return (this.collection.length === 0)
+    };
+
+
 blue(x){
- 
-      
-      
+
+
+
 // Save ohne ersten Eintrag betrachten
-    function transpose(arr) {  
+    function transpose(arr) {
         var k = arr.length;
         var l = 10; //Maximale Länge
-        var arr1 = [];  
-        var arr2 = [];  
-        for (var j = 0; j &lt; l; j++) {  
-            arr1 = [];  
-            for (var i = 0; i &lt; k; i++) { 
+        var arr1 = [];
+        var arr2 = [];
+        for (var j = 0; j &lt; l; j++) {
+            arr1 = [];
+            for (var i = 0; i &lt; k; i++) {
         if (isNaN(arr[i][j])=== true){
 arr[i][j] = 1000;
 }
-         arr1.push(arr[i][j]);  
-            }  
-            arr2.push(arr1);  
-        }  
-        return arr2;  
+         arr1.push(arr[i][j]);
+            }
+            arr2.push(arr1);
         }
-      
+        return arr2;
+        }
+
 var save_new = transpose(save)
 
-    
-      
+
+
 for (var i = 1; i &lt; save_new.length; i++){
 
 var vector = save_new[i]
@@ -3535,10 +3535,10 @@ var my_edge2 = x[j][i-1]+x[j][i]
 var delay = save[j][i-1];
 var last_nodes = x[j][i]+x[j][i+1]
 var delay3 = save[j][i];
-      
+
 if (zahl5 === zahl12){
-if (firstnode !== 'I'){   
-      
+if (firstnode !== 'I'){
+
 switch(last_nodes){
 
 case 'JK':
@@ -3548,15 +3548,15 @@ case 'JK':
     svgElem.setAttribute(&quot;width&quot;, 1.641669);
     svgElem.setAttribute(&quot;height&quot;, 24.6536481);
 svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
-    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay3)+"s"); 
-      
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay3)+"s");
+
   var svgdoc = document.getElementById(&quot;create4&quot;);
-   
-      
+
+
   svgdoc.appendChild(svgElem1);
 
       break;
-            
+
 
 case 'HK':
     var svgElem2 = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
@@ -3565,23 +3565,23 @@ case 'HK':
     svgElem.setAttribute(&quot;width&quot;, 24.6536481);
     svgElem.setAttribute(&quot;height&quot;, 1.641669);
 svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
-    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay3)+"s"); 
-      
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay3)+"s");
+
   var svgdoc = document.getElementById(&quot;create4&quot;);
-   
+
   svgdoc.appendChild(svgElem2);
 
-      break;  
-            
-      
+      break;
+
+
 }
 
 }
 }
-      
+
 switch(my_edge2){
-      
-    
+
+
 case 'RA':
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
     svgElem.setAttribute(&quot;x&quot;, &quot;31.52083&quot;);
@@ -3590,15 +3590,15 @@ case 'RA':
     svgElem.setAttribute(&quot;height&quot;, 24.6536481);
 svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);
       svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
-    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in del-"+(delay)+"s"); 
-      
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in del-"+(delay)+"s");
+
   var svgdoc = document.getElementById(&quot;create4&quot;);
-   
+
   svgdoc.appendChild(svgElem);
 
-      break;  
-      
-      
+      break;
+
+
 case 'AR':
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
     svgElem.setAttribute(&quot;x&quot;, &quot;31.52083&quot;);
@@ -3607,16 +3607,16 @@ case 'AR':
     svgElem.setAttribute(&quot;height&quot;, 24.6536481);
 svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);
       svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
-    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in del-"+(delay)+"s"); 
-      
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in del-"+(delay)+"s");
+
   var svgdoc = document.getElementById(&quot;create4&quot;);
-   
+
   svgdoc.appendChild(svgElem);
 
-      break;  
-      
-      
-      
+      break;
+
+
+
 case 'CD':
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
     svgElem.setAttribute(&quot;x&quot;, &quot;81.52083&quot;);
@@ -3624,14 +3624,14 @@ case 'CD':
     svgElem.setAttribute(&quot;width&quot;, 1.641669);
     svgElem.setAttribute(&quot;height&quot;, 24.6536481);
 svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
-    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay)+"s"); 
-      
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay)+"s");
+
   var svgdoc = document.getElementById(&quot;create4&quot;);
-   
+
   svgdoc.appendChild(svgElem);
 
-      break;  
-      
+      break;
+
 case 'DC':
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
     svgElem.setAttribute(&quot;x&quot;, &quot;81.52083&quot;);
@@ -3639,16 +3639,16 @@ case 'DC':
     svgElem.setAttribute(&quot;width&quot;, 1.641669);
     svgElem.setAttribute(&quot;height&quot;, 24.6536481);
 svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
-    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay)+"s"); 
-      
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay)+"s");
+
   var svgdoc = document.getElementById(&quot;create4&quot;);
-   
+
   svgdoc.appendChild(svgElem);
 
-      break;  
-      
-      
-      
+      break;
+
+
+
 case 'FG':
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
     svgElem.setAttribute(&quot;x&quot;, &quot;131.52083&quot;);
@@ -3656,16 +3656,16 @@ case 'FG':
     svgElem.setAttribute(&quot;width&quot;, 1.641669);
     svgElem.setAttribute(&quot;height&quot;, 24.6536481);
 svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
-    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay)+"s"); 
-      
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay)+"s");
+
   var svgdoc = document.getElementById(&quot;create4&quot;);
-   
+
   svgdoc.appendChild(svgElem);
 
       break;
-      
-      
-      
+
+
+
 case 'GF':
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
     svgElem.setAttribute(&quot;x&quot;, &quot;131.52083&quot;);
@@ -3673,16 +3673,16 @@ case 'GF':
     svgElem.setAttribute(&quot;width&quot;, 1.641669);
     svgElem.setAttribute(&quot;height&quot;, 24.6536481);
 svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
-    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay)+"s"); 
-      
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay)+"s");
+
   var svgdoc = document.getElementById(&quot;create4&quot;);
-   
+
   svgdoc.appendChild(svgElem);
 
       break;
-      
-      
-      
+
+
+
 case 'IJ':
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
     svgElem.setAttribute(&quot;x&quot;, &quot;181.52083&quot;);
@@ -3690,15 +3690,15 @@ case 'IJ':
     svgElem.setAttribute(&quot;width&quot;, 1.641669);
     svgElem.setAttribute(&quot;height&quot;, 24.6536481);
 svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
-    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay)+"s"); 
-      
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay)+"s");
+
   var svgdoc = document.getElementById(&quot;create4&quot;);
-   
+
   svgdoc.appendChild(svgElem);
-      break; 
-      
-      
-      
+      break;
+
+
+
 case 'JI':
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
     svgElem.setAttribute(&quot;x&quot;, &quot;181.52083&quot;);
@@ -3707,16 +3707,16 @@ case 'JI':
     svgElem.setAttribute(&quot;height&quot;, 24.6536481);
 svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);
       svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
-    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay)+"s"); 
-      
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay)+"s");
+
   var svgdoc = document.getElementById(&quot;create4&quot;);
-   
+
   svgdoc.appendChild(svgElem);
 
 
-      break;         
-      
-      
+      break;
+
+
 case 'GH':
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
     svgElem.setAttribute(&quot;x&quot;, &quot;131.52083&quot;);
@@ -3724,15 +3724,15 @@ case 'GH':
     svgElem.setAttribute(&quot;width&quot;, 1.641669);
     svgElem.setAttribute(&quot;height&quot;, 24.6536481);
 svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
-    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay)+"s"); 
-      
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay)+"s");
+
   var svgdoc = document.getElementById(&quot;create4&quot;);
-   
+
   svgdoc.appendChild(svgElem);
 
-      break; 
-      
-      
+      break;
+
+
 case 'HG':
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
     svgElem.setAttribute(&quot;x&quot;, &quot;131.52083&quot;);
@@ -3740,16 +3740,16 @@ case 'HG':
     svgElem.setAttribute(&quot;width&quot;, 1.641669);
     svgElem.setAttribute(&quot;height&quot;, 24.6536481);
 svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
-    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay)+"s"); 
-      
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay)+"s");
+
   var svgdoc = document.getElementById(&quot;create4&quot;);
-   
+
   svgdoc.appendChild(svgElem);
 
-      break; 
-      
-  
-      
+      break;
+
+
+
 
 case 'DE':
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
@@ -3758,15 +3758,15 @@ case 'DE':
     svgElem.setAttribute(&quot;width&quot;, 1.641669);
     svgElem.setAttribute(&quot;height&quot;, 24.6536481);
 svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
-    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay)+"s"); 
-      
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay)+"s");
+
   var svgdoc = document.getElementById(&quot;create4&quot;);
-   
+
   svgdoc.appendChild(svgElem);
 
       break;
-      
-      
+
+
 case 'ED':
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
     svgElem.setAttribute(&quot;x&quot;, &quot;81.52083&quot;);
@@ -3774,15 +3774,15 @@ case 'ED':
     svgElem.setAttribute(&quot;width&quot;, 1.641669);
     svgElem.setAttribute(&quot;height&quot;, 24.6536481);
 svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
-    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay)+"s"); 
-      
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay)+"s");
+
   var svgdoc = document.getElementById(&quot;create4&quot;);
-   
+
   svgdoc.appendChild(svgElem);
 
       break;
-      
-      
+
+
 case 'AB':
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
     svgElem.setAttribute(&quot;x&quot;, &quot;31.52083&quot;);
@@ -3790,14 +3790,14 @@ case 'AB':
     svgElem.setAttribute(&quot;width&quot;, 1.641669);
     svgElem.setAttribute(&quot;height&quot;, 24.6536481);
 svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
-    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay)+"s"); 
-      
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay)+"s");
+
   var svgdoc = document.getElementById(&quot;create4&quot;);
-   
+
   svgdoc.appendChild(svgElem);
-      
-      break; 
-      
+
+      break;
+
 case 'BA':
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
     svgElem.setAttribute(&quot;x&quot;, &quot;31.52083&quot;);
@@ -3805,16 +3805,16 @@ case 'BA':
     svgElem.setAttribute(&quot;width&quot;, 1.641669);
     svgElem.setAttribute(&quot;height&quot;, 24.6536481);
 svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
-    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay)+"s"); 
-      
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay)+"s");
+
   var svgdoc = document.getElementById(&quot;create4&quot;);
-   
+
   svgdoc.appendChild(svgElem);
 
-      break; 
-      
-      
-    
+      break;
+
+
+
 case 'AD':
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
     svgElem.setAttribute(&quot;x&quot;, &quot;45.52083&quot;);
@@ -3822,14 +3822,14 @@ case 'AD':
     svgElem.setAttribute(&quot;width&quot;, 24.6536481);
     svgElem.setAttribute(&quot;height&quot;, 1.641669);
 svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
-    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay)+"s"); 
-      
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay)+"s");
+
   var svgdoc = document.getElementById(&quot;create4&quot;);
-   
+
   svgdoc.appendChild(svgElem);
 
-      break;   
-      
+      break;
+
 case 'DA':
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
     svgElem.setAttribute(&quot;x&quot;, &quot;45.52083&quot;);
@@ -3837,17 +3837,17 @@ case 'DA':
     svgElem.setAttribute(&quot;width&quot;, 24.6536481);
     svgElem.setAttribute(&quot;height&quot;, 1.641669);
 svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
-    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay)+"s"); 
-      
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay)+"s");
+
   var svgdoc = document.getElementById(&quot;create4&quot;);
-   
+
   svgdoc.appendChild(svgElem);
 
-      break;      
-      
-     
-      
-      
+      break;
+
+
+
+
 case 'RC':
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
     svgElem.setAttribute(&quot;x&quot;, &quot;45.52083&quot;);
@@ -3855,14 +3855,14 @@ case 'RC':
     svgElem.setAttribute(&quot;width&quot;, 24.6536481);
     svgElem.setAttribute(&quot;height&quot;, 1.641669);
 svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
-    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay)+"s"); 
-      
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay)+"s");
+
   var svgdoc = document.getElementById(&quot;create4&quot;);
-   
+
   svgdoc.appendChild(svgElem);
 
-      break;   
-      
+      break;
+
 case 'CR':
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
     svgElem.setAttribute(&quot;x&quot;, &quot;45.52083&quot;);
@@ -3870,17 +3870,17 @@ case 'CR':
     svgElem.setAttribute(&quot;width&quot;, 24.6536481);
     svgElem.setAttribute(&quot;height&quot;, 1.641669);
 svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
-    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay)+"s"); 
-      
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay)+"s");
+
   var svgdoc = document.getElementById(&quot;create4&quot;);
-   
+
   svgdoc.appendChild(svgElem);
 
-      break;             
-      
-                
-          
-      
+      break;
+
+
+
+
 case 'BE':
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
     svgElem.setAttribute(&quot;x&quot;, &quot;45.52083&quot;);
@@ -3888,15 +3888,15 @@ case 'BE':
     svgElem.setAttribute(&quot;width&quot;, 24.6536481);
     svgElem.setAttribute(&quot;height&quot;, 1.641669);
 svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
-    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay)+"s"); 
-      
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay)+"s");
+
   var svgdoc = document.getElementById(&quot;create4&quot;);
-   
+
   svgdoc.appendChild(svgElem);
 
-      break;    
-      
-      
+      break;
+
+
 case 'EB':
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
     svgElem.setAttribute(&quot;x&quot;, &quot;45.52083&quot;);
@@ -3904,15 +3904,15 @@ case 'EB':
     svgElem.setAttribute(&quot;width&quot;, 24.6536481);
     svgElem.setAttribute(&quot;height&quot;, 1.641669);
 svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
-    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay)+"s"); 
-      
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay)+"s");
+
   var svgdoc = document.getElementById(&quot;create4&quot;);
-   
+
   svgdoc.appendChild(svgElem);
 
-      break;             
-      
-  
+      break;
+
+
 case 'GD':
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
     svgElem.setAttribute(&quot;x&quot;, &quot;95.52083&quot;);
@@ -3920,15 +3920,15 @@ case 'GD':
     svgElem.setAttribute(&quot;width&quot;, 24.6536481);
     svgElem.setAttribute(&quot;height&quot;, 1.641669);
 svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
-    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay)+"s"); 
-      
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay)+"s");
+
   var svgdoc = document.getElementById(&quot;create4&quot;);
-   
+
   svgdoc.appendChild(svgElem);
 
-      break;  
-      
-      
+      break;
+
+
 case 'DG':
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
     svgElem.setAttribute(&quot;x&quot;, &quot;95.52083&quot;);
@@ -3936,17 +3936,17 @@ case 'DG':
     svgElem.setAttribute(&quot;width&quot;, 24.6536481);
     svgElem.setAttribute(&quot;height&quot;, 1.641669);
 svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
-    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay)+"s"); 
-      
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay)+"s");
+
   var svgdoc = document.getElementById(&quot;create4&quot;);
-   
+
   svgdoc.appendChild(svgElem);
 
-      break;  
-      
-      
-      
-      
+      break;
+
+
+
+
 case 'CF':
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
     svgElem.setAttribute(&quot;x&quot;, &quot;95.52083&quot;);
@@ -3954,15 +3954,15 @@ case 'CF':
     svgElem.setAttribute(&quot;width&quot;, 24.6536481);
     svgElem.setAttribute(&quot;height&quot;, 1.641669);
 svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
-    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay)+"s"); 
-      
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay)+"s");
+
   var svgdoc = document.getElementById(&quot;create4&quot;);
-   
+
   svgdoc.appendChild(svgElem);
 
-      break;     
-      
-      
+      break;
+
+
 case 'FC':
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
     svgElem.setAttribute(&quot;x&quot;, &quot;95.52083&quot;);
@@ -3970,16 +3970,16 @@ case 'FC':
     svgElem.setAttribute(&quot;width&quot;, 24.6536481);
     svgElem.setAttribute(&quot;height&quot;, 1.641669);
 svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
-    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay)+"s"); 
-      
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay)+"s");
+
   var svgdoc = document.getElementById(&quot;create4&quot;);
-   
+
   svgdoc.appendChild(svgElem);
 
-      break;     
-      
-      
-      
+      break;
+
+
+
 case 'EH':
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
     svgElem.setAttribute(&quot;x&quot;, &quot;95.52083&quot;);
@@ -3987,13 +3987,13 @@ case 'EH':
     svgElem.setAttribute(&quot;width&quot;, 24.6536481);
     svgElem.setAttribute(&quot;height&quot;, 1.641669);
 svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
-    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay)+"s"); 
-      
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay)+"s");
+
   var svgdoc = document.getElementById(&quot;create4&quot;);
-   
+
   svgdoc.appendChild(svgElem);
 
-      break; 
+      break;
 
 case 'HE':
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
@@ -4002,18 +4002,18 @@ case 'HE':
     svgElem.setAttribute(&quot;width&quot;, 24.6536481);
     svgElem.setAttribute(&quot;height&quot;, 1.641669);
 svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
-    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay)+"s"); 
-      
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay)+"s");
+
   var svgdoc = document.getElementById(&quot;create4&quot;);
-   
+
   svgdoc.appendChild(svgElem);
 
-      break; 
-      
-      
-      
-      
-      
+      break;
+
+
+
+
+
 case 'GJ':
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
     svgElem.setAttribute(&quot;x&quot;, &quot;145.52083&quot;);
@@ -4021,16 +4021,16 @@ case 'GJ':
     svgElem.setAttribute(&quot;width&quot;, 24.6536481);
     svgElem.setAttribute(&quot;height&quot;, 1.641669);
 svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
-    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay)+"s"); 
-      
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay)+"s");
+
   var svgdoc = document.getElementById(&quot;create4&quot;);
-   
+
   svgdoc.appendChild(svgElem);
 
-      break;   
-      
-      
-      
+      break;
+
+
+
 case 'JG':
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
     svgElem.setAttribute(&quot;x&quot;, &quot;145.52083&quot;);
@@ -4038,20 +4038,20 @@ case 'JG':
     svgElem.setAttribute(&quot;width&quot;, 24.6536481);
     svgElem.setAttribute(&quot;height&quot;, 1.641669);
 svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
-    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay)+"s"); 
-      
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay)+"s");
+
   var svgdoc = document.getElementById(&quot;create4&quot;);
-   
+
   svgdoc.appendChild(svgElem);
 
-      break;          
-      
-      
-      
-      
-      
-      
-      
+      break;
+
+
+
+
+
+
+
 case 'FI':
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
     svgElem.setAttribute(&quot;x&quot;, &quot;145.52083&quot;);
@@ -4059,16 +4059,16 @@ case 'FI':
     svgElem.setAttribute(&quot;width&quot;, 24.6536481);
     svgElem.setAttribute(&quot;height&quot;, 1.641669);
 svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
-    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay)+"s"); 
-      
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay)+"s");
+
   var svgdoc = document.getElementById(&quot;create4&quot;);
-   
+
   svgdoc.appendChild(svgElem);
-      
-            break;  
-      
-      
-      
+
+            break;
+
+
+
 case 'IF':
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
     svgElem.setAttribute(&quot;x&quot;, &quot;145.52083&quot;);
@@ -4076,15 +4076,15 @@ case 'IF':
     svgElem.setAttribute(&quot;width&quot;, 24.6536481);
     svgElem.setAttribute(&quot;height&quot;, 1.641669);
 svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
-    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay)+"s"); 
-      
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay)+"s");
+
   var svgdoc = document.getElementById(&quot;create4&quot;);
-   
+
   svgdoc.appendChild(svgElem);
 
-      break;         
-            
-    
+      break;
+
+
 
 }
 
@@ -4092,36 +4092,36 @@ svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opaci
 }
  }
 }
-      
-      
-findPathWithDijkstra(startNode, endNode){ 
-      
-      
+
+
+findPathWithDijkstra(startNode, endNode){
+
+
 // Jetzt überflüssiges enfternen
 
-      
-      
+
+
       let times = {};
       let backtrace = {};
-  
+
       times[startNode] = 0;
-    
+
       this.nodes2.forEach(mynode => {
         if (mynode !== startNode) {
           times[mynode] = Infinity
         }
       });
-  
+
       g.enqueue([startNode, 0]);
-  
-  
+
+
       while (!g.isEmpty()) {
           let shortestStep = g.dequeue();
           let currentNode = shortestStep[0];
           this.adjacencyList2[currentNode].forEach(neighbor => {
             let time = times[currentNode] + neighbor.weight2;
-      
-  
+
+
             if (time &lt; times[neighbor.mynode]) {
               times[neighbor.mynode] = time;
               backtrace[neighbor.mynode] = currentNode;
@@ -4129,28 +4129,28 @@ findPathWithDijkstra(startNode, endNode){
             }
           });
         }
-  
+
         let path = [endNode];
         let lastStep = endNode;
         while(lastStep !== startNode) {
           path.unshift(backtrace[lastStep])
           lastStep = backtrace[lastStep]
         }
-      
-      
-      
-window.variable = times[endNode]/2*1000;      
-var vector2 = [zahl5, zahl12]      
-var min4 = Math.min.apply(null, vector2)     
 
-      
+
+
+window.variable = times[endNode]/2*1000;
+var vector2 = [zahl5, zahl12]
+var min4 = Math.min.apply(null, vector2)
+
+
     for (var k = 0; k &lt; path.length-1; k++){
     var my_edge4 = path[0]+path[1]
     var delay5 =   times[endNode]-min4
-    
-      
+
+
   switch(my_edge4){
-      
+
 case 'JK':
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
     svgElem.setAttribute(&quot;x&quot;, &quot;181.52083&quot;);
@@ -4158,18 +4158,18 @@ case 'JK':
     svgElem.setAttribute(&quot;width&quot;, 1.641669);
     svgElem.setAttribute(&quot;height&quot;, 24.6536481);
 svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
-    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay5)+"s"); 
-      
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay5)+"s");
+
   var svgdoc = document.getElementById(&quot;create5&quot;);
-   
-      
+
+
   svgdoc.appendChild(svgElem);
-   
+
 
       break;
-      
-      
-      
+
+
+
 case 'KJ':
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
     svgElem.setAttribute(&quot;x&quot;, &quot;181.52083&quot;);
@@ -4177,16 +4177,16 @@ case 'KJ':
     svgElem.setAttribute(&quot;width&quot;, 1.641669);
     svgElem.setAttribute(&quot;height&quot;, 24.6536481);
 svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
-    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay5)+"s"); 
-      
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay5)+"s");
+
   var svgdoc = document.getElementById(&quot;create5&quot;);
-   
-      
+
+
   svgdoc.appendChild(svgElem);
 
  break;
-      
-            
+
+
 
 case 'HK':
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
@@ -4195,14 +4195,14 @@ case 'HK':
     svgElem.setAttribute(&quot;width&quot;, 24.6536481);
     svgElem.setAttribute(&quot;height&quot;, 1.641669);
 svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
-    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay5)+"s"); 
-      
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay5)+"s");
+
   var svgdoc = document.getElementById(&quot;create5&quot;);
-   
+
   svgdoc.appendChild(svgElem);
 
-      break;  
-      
+      break;
+
 
 case 'KH':
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
@@ -4211,17 +4211,17 @@ case 'KH':
     svgElem.setAttribute(&quot;width&quot;, 24.6536481);
     svgElem.setAttribute(&quot;height&quot;, 1.641669);
 svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
-    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay5)+"s"); 
-      
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay5)+"s");
+
   var svgdoc = document.getElementById(&quot;create5&quot;);
-   
+
   svgdoc.appendChild(svgElem);
 
-      break;  
-      
+      break;
 
-      
-    
+
+
+
 case 'RA':
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
     svgElem.setAttribute(&quot;x&quot;, &quot;31.52083&quot;);
@@ -4230,15 +4230,15 @@ case 'RA':
     svgElem.setAttribute(&quot;height&quot;, 24.6536481);
 svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);
       svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
-    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in del-"+(delay5)+"s"); 
-      
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in del-"+(delay5)+"s");
+
   var svgdoc = document.getElementById(&quot;create5&quot;);
-   
+
   svgdoc.appendChild(svgElem);
 
-      break;  
-      
-      
+      break;
+
+
 case 'AR':
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
     svgElem.setAttribute(&quot;x&quot;, &quot;31.52083&quot;);
@@ -4247,16 +4247,16 @@ case 'AR':
     svgElem.setAttribute(&quot;height&quot;, 24.6536481);
 svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);
       svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
-    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in del-"+(delay5)+"s"); 
-      
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in del-"+(delay5)+"s");
+
   var svgdoc = document.getElementById(&quot;create5&quot;);
-   
+
   svgdoc.appendChild(svgElem);
 
-      break;  
-      
-      
-      
+      break;
+
+
+
 case 'CD':
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
     svgElem.setAttribute(&quot;x&quot;, &quot;81.52083&quot;);
@@ -4264,14 +4264,14 @@ case 'CD':
     svgElem.setAttribute(&quot;width&quot;, 1.641669);
     svgElem.setAttribute(&quot;height&quot;, 24.6536481);
 svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
-    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay5)+"s"); 
-      
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay5)+"s");
+
   var svgdoc = document.getElementById(&quot;create5&quot;);
-   
+
   svgdoc.appendChild(svgElem);
 
-      break;  
-      
+      break;
+
 case 'DC':
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
     svgElem.setAttribute(&quot;x&quot;, &quot;81.52083&quot;);
@@ -4279,16 +4279,16 @@ case 'DC':
     svgElem.setAttribute(&quot;width&quot;, 1.641669);
     svgElem.setAttribute(&quot;height&quot;, 24.6536481);
 svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
-    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay5)+"s"); 
-      
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay5)+"s");
+
   var svgdoc = document.getElementById(&quot;create5&quot;);
-   
+
   svgdoc.appendChild(svgElem);
 
-      break;  
-      
-      
-      
+      break;
+
+
+
 case 'FG':
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
     svgElem.setAttribute(&quot;x&quot;, &quot;131.52083&quot;);
@@ -4296,16 +4296,16 @@ case 'FG':
     svgElem.setAttribute(&quot;width&quot;, 1.641669);
     svgElem.setAttribute(&quot;height&quot;, 24.6536481);
 svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
-    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay5)+"s"); 
-      
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay5)+"s");
+
   var svgdoc = document.getElementById(&quot;create5&quot;);
-   
+
   svgdoc.appendChild(svgElem);
 
       break;
-      
-      
-      
+
+
+
 case 'GF':
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
     svgElem.setAttribute(&quot;x&quot;, &quot;131.52083&quot;);
@@ -4313,16 +4313,16 @@ case 'GF':
     svgElem.setAttribute(&quot;width&quot;, 1.641669);
     svgElem.setAttribute(&quot;height&quot;, 24.6536481);
 svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
-    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay5)+"s"); 
-      
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay5)+"s");
+
   var svgdoc = document.getElementById(&quot;create5&quot;);
-   
+
   svgdoc.appendChild(svgElem);
 
       break;
-      
-      
-      
+
+
+
 case 'IJ':
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
     svgElem.setAttribute(&quot;x&quot;, &quot;181.52083&quot;);
@@ -4330,15 +4330,15 @@ case 'IJ':
     svgElem.setAttribute(&quot;width&quot;, 1.641669);
     svgElem.setAttribute(&quot;height&quot;, 24.6536481);
 svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
-    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay5)+"s"); 
-      
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay5)+"s");
+
   var svgdoc = document.getElementById(&quot;create5&quot;);
-   
+
   svgdoc.appendChild(svgElem);
-      break; 
-      
-      
-      
+      break;
+
+
+
 case 'JI':
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
     svgElem.setAttribute(&quot;x&quot;, &quot;181.52083&quot;);
@@ -4347,16 +4347,16 @@ case 'JI':
     svgElem.setAttribute(&quot;height&quot;, 24.6536481);
 svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);
       svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
-    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay5)+"s"); 
-      
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay5)+"s");
+
   var svgdoc = document.getElementById(&quot;create5&quot;);
-   
+
   svgdoc.appendChild(svgElem);
 
 
-      break;         
-      
-      
+      break;
+
+
 case 'GH':
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
     svgElem.setAttribute(&quot;x&quot;, &quot;131.52083&quot;);
@@ -4364,15 +4364,15 @@ case 'GH':
     svgElem.setAttribute(&quot;width&quot;, 1.641669);
     svgElem.setAttribute(&quot;height&quot;, 24.6536481);
 svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
-    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay5)+"s"); 
-      
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay5)+"s");
+
   var svgdoc = document.getElementById(&quot;create5&quot;);
-   
+
   svgdoc.appendChild(svgElem);
 
-      break; 
-      
-      
+      break;
+
+
 case 'HG':
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
     svgElem.setAttribute(&quot;x&quot;, &quot;131.52083&quot;);
@@ -4380,16 +4380,16 @@ case 'HG':
     svgElem.setAttribute(&quot;width&quot;, 1.641669);
     svgElem.setAttribute(&quot;height&quot;, 24.6536481);
 svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
-    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay5)+"s"); 
-      
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay5)+"s");
+
   var svgdoc = document.getElementById(&quot;create5&quot;);
-   
+
   svgdoc.appendChild(svgElem);
 
-      break; 
-      
-  
-      
+      break;
+
+
+
 
 case 'DE':
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
@@ -4398,15 +4398,15 @@ case 'DE':
     svgElem.setAttribute(&quot;width&quot;, 1.641669);
     svgElem.setAttribute(&quot;height&quot;, 24.6536481);
 svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
-    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay5)+"s"); 
-      
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay5)+"s");
+
   var svgdoc = document.getElementById(&quot;create5&quot;);
-   
+
   svgdoc.appendChild(svgElem);
 
       break;
-      
-      
+
+
 case 'ED':
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
     svgElem.setAttribute(&quot;x&quot;, &quot;81.52083&quot;);
@@ -4414,15 +4414,15 @@ case 'ED':
     svgElem.setAttribute(&quot;width&quot;, 1.641669);
     svgElem.setAttribute(&quot;height&quot;, 24.6536481);
 svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
-    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay5)+"s"); 
-      
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay5)+"s");
+
   var svgdoc = document.getElementById(&quot;create5&quot;);
-   
+
   svgdoc.appendChild(svgElem);
 
       break;
-      
-      
+
+
 case 'AB':
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
     svgElem.setAttribute(&quot;x&quot;, &quot;31.52083&quot;);
@@ -4430,14 +4430,14 @@ case 'AB':
     svgElem.setAttribute(&quot;width&quot;, 1.641669);
     svgElem.setAttribute(&quot;height&quot;, 24.6536481);
 svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
-    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay5)+"s"); 
-      
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay5)+"s");
+
   var svgdoc = document.getElementById(&quot;create5&quot;);
-   
+
   svgdoc.appendChild(svgElem);
-      
-      break; 
-      
+
+      break;
+
 case 'BA':
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
     svgElem.setAttribute(&quot;x&quot;, &quot;31.52083&quot;);
@@ -4445,16 +4445,16 @@ case 'BA':
     svgElem.setAttribute(&quot;width&quot;, 1.641669);
     svgElem.setAttribute(&quot;height&quot;, 24.6536481);
 svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
-    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay5)+"s"); 
-      
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay5)+"s");
+
   var svgdoc = document.getElementById(&quot;create5&quot;);
-   
+
   svgdoc.appendChild(svgElem);
 
-      break; 
-      
-      
-    
+      break;
+
+
+
 case 'AD':
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
     svgElem.setAttribute(&quot;x&quot;, &quot;45.52083&quot;);
@@ -4462,14 +4462,14 @@ case 'AD':
     svgElem.setAttribute(&quot;width&quot;, 24.6536481);
     svgElem.setAttribute(&quot;height&quot;, 1.641669);
 svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
-    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay5)+"s"); 
-      
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay5)+"s");
+
   var svgdoc = document.getElementById(&quot;create5&quot;);
-   
+
   svgdoc.appendChild(svgElem);
 
-      break;   
-      
+      break;
+
 case 'DA':
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
     svgElem.setAttribute(&quot;x&quot;, &quot;45.52083&quot;);
@@ -4477,17 +4477,17 @@ case 'DA':
     svgElem.setAttribute(&quot;width&quot;, 24.6536481);
     svgElem.setAttribute(&quot;height&quot;, 1.641669);
 svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
-    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay5)+"s"); 
-      
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay5)+"s");
+
   var svgdoc = document.getElementById(&quot;create5&quot;);
-   
+
   svgdoc.appendChild(svgElem);
 
-      break;      
-      
-     
-      
-      
+      break;
+
+
+
+
 case 'RC':
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
     svgElem.setAttribute(&quot;x&quot;, &quot;45.52083&quot;);
@@ -4495,14 +4495,14 @@ case 'RC':
     svgElem.setAttribute(&quot;width&quot;, 24.6536481);
     svgElem.setAttribute(&quot;height&quot;, 1.641669);
 svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
-    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay5)+"s"); 
-      
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay5)+"s");
+
   var svgdoc = document.getElementById(&quot;create5&quot;);
-   
+
   svgdoc.appendChild(svgElem);
 
-      break;   
-      
+      break;
+
 case 'CR':
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
     svgElem.setAttribute(&quot;x&quot;, &quot;45.52083&quot;);
@@ -4510,17 +4510,17 @@ case 'CR':
     svgElem.setAttribute(&quot;width&quot;, 24.6536481);
     svgElem.setAttribute(&quot;height&quot;, 1.641669);
 svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
-    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay5)+"s"); 
-      
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay5)+"s");
+
   var svgdoc = document.getElementById(&quot;create5&quot;);
-   
+
   svgdoc.appendChild(svgElem);
 
-      break;             
-      
-                
-          
-      
+      break;
+
+
+
+
 case 'BE':
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
     svgElem.setAttribute(&quot;x&quot;, &quot;45.52083&quot;);
@@ -4528,15 +4528,15 @@ case 'BE':
     svgElem.setAttribute(&quot;width&quot;, 24.6536481);
     svgElem.setAttribute(&quot;height&quot;, 1.641669);
 svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
-    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay5)+"s"); 
-      
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay5)+"s");
+
   var svgdoc = document.getElementById(&quot;create5&quot;);
-   
+
   svgdoc.appendChild(svgElem);
 
-      break;    
-      
-      
+      break;
+
+
 case 'EB':
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
     svgElem.setAttribute(&quot;x&quot;, &quot;45.52083&quot;);
@@ -4544,15 +4544,15 @@ case 'EB':
     svgElem.setAttribute(&quot;width&quot;, 24.6536481);
     svgElem.setAttribute(&quot;height&quot;, 1.641669);
 svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
-    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay5)+"s"); 
-      
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay5)+"s");
+
   var svgdoc = document.getElementById(&quot;create5&quot;);
-   
+
   svgdoc.appendChild(svgElem);
 
-      break;             
-      
-  
+      break;
+
+
 case 'GD':
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
     svgElem.setAttribute(&quot;x&quot;, &quot;95.52083&quot;);
@@ -4560,15 +4560,15 @@ case 'GD':
     svgElem.setAttribute(&quot;width&quot;, 24.6536481);
     svgElem.setAttribute(&quot;height&quot;, 1.641669);
 svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
-    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay5)+"s"); 
-      
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay5)+"s");
+
   var svgdoc = document.getElementById(&quot;create5&quot;);
-   
+
   svgdoc.appendChild(svgElem);
 
-      break;  
-      
-      
+      break;
+
+
 case 'DG':
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
     svgElem.setAttribute(&quot;x&quot;, &quot;95.52083&quot;);
@@ -4576,17 +4576,17 @@ case 'DG':
     svgElem.setAttribute(&quot;width&quot;, 24.6536481);
     svgElem.setAttribute(&quot;height&quot;, 1.641669);
 svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
-    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay5)+"s"); 
-      
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay5)+"s");
+
   var svgdoc = document.getElementById(&quot;create5&quot;);
-   
+
   svgdoc.appendChild(svgElem);
 
-      break;  
-      
-      
-      
-      
+      break;
+
+
+
+
 case 'CF':
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
     svgElem.setAttribute(&quot;x&quot;, &quot;95.52083&quot;);
@@ -4594,15 +4594,15 @@ case 'CF':
     svgElem.setAttribute(&quot;width&quot;, 24.6536481);
     svgElem.setAttribute(&quot;height&quot;, 1.641669);
 svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
-    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay5)+"s"); 
-      
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay5)+"s");
+
   var svgdoc = document.getElementById(&quot;create5&quot;);
-   
+
   svgdoc.appendChild(svgElem);
 
-      break;     
-      
-      
+      break;
+
+
 case 'FC':
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
     svgElem.setAttribute(&quot;x&quot;, &quot;95.52083&quot;);
@@ -4610,16 +4610,16 @@ case 'FC':
     svgElem.setAttribute(&quot;width&quot;, 24.6536481);
     svgElem.setAttribute(&quot;height&quot;, 1.641669);
 svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
-    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay5)+"s"); 
-      
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay5)+"s");
+
   var svgdoc = document.getElementById(&quot;create5&quot;);
-   
+
   svgdoc.appendChild(svgElem);
 
-      break;     
-      
-      
-      
+      break;
+
+
+
 case 'EH':
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
     svgElem.setAttribute(&quot;x&quot;, &quot;95.52083&quot;);
@@ -4627,13 +4627,13 @@ case 'EH':
     svgElem.setAttribute(&quot;width&quot;, 24.6536481);
     svgElem.setAttribute(&quot;height&quot;, 1.641669);
 svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
-    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay5)+"s"); 
-      
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay5)+"s");
+
   var svgdoc = document.getElementById(&quot;create5&quot;);
-   
+
   svgdoc.appendChild(svgElem);
 
-      break; 
+      break;
 
 case 'HE':
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
@@ -4642,18 +4642,18 @@ case 'HE':
     svgElem.setAttribute(&quot;width&quot;, 24.6536481);
     svgElem.setAttribute(&quot;height&quot;, 1.641669);
 svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
-    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay5)+"s"); 
-      
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay5)+"s");
+
   var svgdoc = document.getElementById(&quot;create5&quot;);
-   
+
   svgdoc.appendChild(svgElem);
 
-      break; 
-      
-      
-      
-      
-      
+      break;
+
+
+
+
+
 case 'GJ':
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
     svgElem.setAttribute(&quot;x&quot;, &quot;145.52083&quot;);
@@ -4661,16 +4661,16 @@ case 'GJ':
     svgElem.setAttribute(&quot;width&quot;, 24.6536481);
     svgElem.setAttribute(&quot;height&quot;, 1.641669);
 svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
-    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay5)+"s"); 
-      
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay5)+"s");
+
   var svgdoc = document.getElementById(&quot;create5&quot;);
-   
+
   svgdoc.appendChild(svgElem);
 
-      break;   
-      
-      
-      
+      break;
+
+
+
 case 'JG':
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
     svgElem.setAttribute(&quot;x&quot;, &quot;145.52083&quot;);
@@ -4678,20 +4678,20 @@ case 'JG':
     svgElem.setAttribute(&quot;width&quot;, 24.6536481);
     svgElem.setAttribute(&quot;height&quot;, 1.641669);
 svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
-    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay5)+"s"); 
-      
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay5)+"s");
+
   var svgdoc = document.getElementById(&quot;create5&quot;);
-   
+
   svgdoc.appendChild(svgElem);
 
-      break;          
-      
-      
-      
-      
-      
-      
-      
+      break;
+
+
+
+
+
+
+
 case 'FI':
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
     svgElem.setAttribute(&quot;x&quot;, &quot;145.52083&quot;);
@@ -4699,16 +4699,16 @@ case 'FI':
     svgElem.setAttribute(&quot;width&quot;, 24.6536481);
     svgElem.setAttribute(&quot;height&quot;, 1.641669);
 svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
-    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay5)+"s"); 
-      
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay5)+"s");
+
   var svgdoc = document.getElementById(&quot;create5&quot;);
-   
+
   svgdoc.appendChild(svgElem);
-      
-            break;  
-      
-      
-      
+
+            break;
+
+
+
 case 'IF':
     var svgElem = document.createElementNS(&quot;http://www.w3.org/2000/svg&quot;, &quot;rect&quot;);
     svgElem.setAttribute(&quot;x&quot;, &quot;145.52083&quot;);
@@ -4716,29 +4716,29 @@ case 'IF':
     svgElem.setAttribute(&quot;width&quot;, 24.6536481);
     svgElem.setAttribute(&quot;height&quot;, 1.641669);
 svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opacity:1;fill:blue;fill-opacity:0;stroke:#ffffff;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1&quot;);    svgElem.setAttribute(&quot;id&quot;, &quot;Down&quot;);
-    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay5)+"s"); 
-      
+    svgElem.setAttribute(&quot;class&quot;, &quot;ani ev-0 fade-in dur-1s del-"+(delay5)+"s");
+
   var svgdoc = document.getElementById(&quot;create5&quot;);
-   
+
   svgdoc.appendChild(svgElem);
 
-      break;         
-            
-    
+      break;
+
+
 
 }
-          
-      
+
+
     }
-      
-            
-   
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
 }
 }
 
@@ -4748,7 +4748,7 @@ svgElem.setAttribute(&quot;style&quot;, &quot;animation-play-state:paused; opaci
 g = new Graph(12);
 vertices = ['R', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K'];
 
-// adding vertices 
+// adding vertices
 for (i = 0; i &lt; vertices.length; i++) {
     g.addVertex(vertices[i]);
 }
@@ -4814,27 +4814,27 @@ g.generateEdges();
 g.findAllPaths(start, end);
 var x = mypaths
 var y = allweights
-g.drawPackages(x, y)      
-      
+g.drawPackages(x, y)
+
  for (i = 0; i &lt; vertices.length; i++) {
-g.findPathWithDijkstra(vertices[i], start)   
+g.findPathWithDijkstra(vertices[i], start)
 }
-     
-      
+
+
 }
-      
-          
-     
+
+
+
     </script>
-    
-    
-    
+
+
+
 
 
   <script
      type="text/javascript"
      id="restarting">
-        
+
 var zahl1 = 1;
 var zahl2 = 3;
 var zahl3 = 1;
@@ -4853,7 +4853,7 @@ var zahl15 = 1;
 var zahl16 = 1;
 var zahl17 = 1;
 
-    
-    
+
+
 </script>
 </svg>

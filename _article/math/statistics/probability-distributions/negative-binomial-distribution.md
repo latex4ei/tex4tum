@@ -67,7 +67,7 @@ function nb_update(slider){
     Dist_nb[0] = slider.value / 1.0;
   }
   var r = Dist_nb[0];
-  var p = Dist_nb[1];  
+  var p = Dist_nb[1];
   document.getElementById('nbd_p').innerText = p
   document.getElementById('nbd_r').innerText = r
   SVG_obj.getElementById('legend_1').querySelector("text").innerHTML='r = '+r+', p = '+p

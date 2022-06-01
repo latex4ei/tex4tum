@@ -37,9 +37,9 @@ Given $f(x) = x^2$, then $\int_1^2 x^2 \diff x = \left[ \frac{1}{3}x^3 \right]_1
 |$x\arcsin (x)+\sqrt{1-x^2}$   | $\arcsin(x)$| $\frac{1}{\sqrt{1-x^2}}$ |
 |$x\arccos (x)-\sqrt{1-x^2}$   | $\arccos(x)$| $-\frac{1}{\sqrt{1-x^2}}$|
 |$x\arctan (x)-\frac{1}{2} \ln \abs{1+ x^2}$ | $\arctan(x)$ | $\frac{1}{1+x^2}$ |
-|$x\arctan (x)+\frac{1}{2} \ln \abs{1+ x^2}$ | $\arccot(x)$ | $-\frac{1}{1+x^2}$ | 
+|$x\arctan (x)+\frac{1}{2} \ln \abs{1+ x^2}$ | $\arccot(x)$ | $-\frac{1}{1+x^2}$ |
 | $\cosh(x)$ | $\sinh(x)$ | $\cosh (x)$ |
-| $\sinh(x)$ | $\cosh(x)$ | $\sinh (x)$ | 
+| $\sinh(x)$ | $\cosh(x)$ | $\sinh (x)$ |
 
 
 
@@ -94,13 +94,8 @@ with the vector field $\vec v:D\subseteq \R^3 \rightarrow \R^3, \vec x \mapsto \
 
 
 ## Integral Rules
-###  Integral Gauß 
+###  Integral Gauß
 $$\iiint\limits_V \div\; \vec v \diff V = \iint\limits_{\partial V}\!\!\!\!\!\!\!\!\!\bigcirc \ \vec v \bdot \diff A$$
 
-### Integral Stokes 
+### Integral Stokes
 $$\iint\limits_{A} \rot\; \vec v \diff A = \oint\limits_{\partial A} \vec v \diff \vec s$$
-
-
-
-
-

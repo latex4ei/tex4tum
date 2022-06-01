@@ -3,7 +3,7 @@ title: Signal
 ---
 
 <style>
-.svgtab table{table-layout: fixed;} 
+.svgtab table{table-layout: fixed;}
 .svgtab td{width: 15em; padding-top: 1em!important;}
 </style>
 
@@ -85,6 +85,3 @@ with $T_M$ is the assumed measurement duration during which the signal is observ
 
 ## References
 * [LNTwww: “Signal classification”](https://en.lntwww.de/Signal_Representation/Signal_classification)
-
-
-

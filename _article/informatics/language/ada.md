@@ -55,4 +55,3 @@ end record;
 * [Ada 2012 Reference Manual](http://www.ada-auth.org/standards/12rm/html/RM-TOC.html)
 
 * [Adacore: GNAT Reference Manual 20.0](http://docs.adacore.com/live/wave/gnat_rm/html/gnat_rm/gnat_rm.html)
-

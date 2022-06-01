@@ -16,6 +16,3 @@ TODO typical values of RAM modules
 
 ## SRAM
 ![SRAM working principle](sram_diagram.svg){ width="15em"}
-
-
-

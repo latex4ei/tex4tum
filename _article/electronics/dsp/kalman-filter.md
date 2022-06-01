@@ -35,7 +35,7 @@ If there are no known inputs to the process, then $\ma B \vec{u}_n = 0$ and this
 The overall uncertainty of the estimation is expressed with the covariance matrix $\ma P_n$. This matrix is influenced by the process noise $\vec w_n$ and the measurement noise $\vec v_n$.
 During prediction, the process noise increases the uncertainty, whereas combining it with the measurement during the update phase decreases the uncertainty.
 
-$$\begin{array}{ll} 
+$$\begin{array}{ll}
 \vec{w}_n &  \sim \mathcal{N}(\ma 0, \ma Q_n) \\
 \vec{v}_n &  \sim \mathcal{N}(\ma 0, \ma R_n)
 \end{array}$$
@@ -46,7 +46,7 @@ If values of $\ma Q$ are larger than values of $\ma R$, the filter trusts more t
 
 ## Calculations
 
-### 1. Step: Prediction 
+### 1. Step: Prediction
 1.1 calculate the new (a priori) state estimate based on the old state and the dynamic model (e.g. physical laws)
 
 $$\hat {\vec x}_{n|n-1} = \ma G_n \hat{\vec x}_{n-1|n-1}$$
@@ -55,8 +55,8 @@ $$\hat {\vec x}_{n|n-1} = \ma G_n \hat{\vec x}_{n-1|n-1}$$
 
 $$\ma P_{\vec x_{n|n-1}} = \ma G_n \ma P_{\vec x_{n-1|n-1}} \ma G_n^\top + \ma Q_n$$
 
-### 2. Step: Update 
-2.1 calculate intermediate values (optional): 
+### 2. Step: Update
+2.1 calculate intermediate values (optional):
 
 * Innovation: $\Delta \vec y_n = \vec y_n - \hat{\vec y}_{n|n-1} =\vec y_n - \ma H_{n} \hat{\vec x}_{n|n-1}$ </br>
 which are the real measurements minus predicted measurements
@@ -81,7 +81,7 @@ $$\ma P_{\vec x_{n|n}} = \ma P_{\vec x_{n|n-1}} + \ma K_n \ma H_{n} \ma P_{\vec 
 ## Extended Kalman Filter
 The Extended Kalman Filter (EKF) uses non-linear dynamic models.
 
-$$\begin{array}{ll} \vec{x}_{n} & = g(\vec{x}_{n-1}, \vec{u}_n) + \vec{w}_n \\[0.5em] 
+$$\begin{array}{ll} \vec{x}_{n} & = g(\vec{x}_{n-1}, \vec{u}_n) + \vec{w}_n \\[0.5em]
 \vec{y}_{n} & = h(\vec{x}_{n-1}) + \vec{v}_{n} \end{array}$$
 where $g()$ and $h()$ are non-linear functions. For covariance the Jacobi-Matrix of the model is used:
 
