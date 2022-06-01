@@ -1,7 +1,7 @@
 site_name: Tex4TUM
 site_url: https://tex4tum.de/
 repo_url: https://github.com/latex4ei/tex4tum
-site_author: Emanuel Regnath
+site_author: Emanuel Regnath, Markus Hofbauer
 docs_dir: tmp/build
 site_dir: docs
 use_directory_urls: false
@@ -60,17 +60,17 @@ extra_javascript:
 
 # Page tree
 nav:
-  - Home: 
+  - Home:
     - index.md
   - Sheets: sheets.md
-  - About: 
+  - About:
     - about.md
     - demo.md
     - contribution.md
     - team.md
-  - Math: 
+  - Math:
     - math.md
-    - Statistics: 
+    - Statistics:
       - statistics.md
       - moment.md
       - linear-regression.md
@@ -84,14 +84,14 @@ nav:
         - probability-distributions.md
         - negative-binomial-distribution.md
         - normal-distribution.md
-    - Algebra: 
+    - Algebra:
       - vector.md
       - exp-log.md
       - complex-number.md
       - bool.md
       - algebra.md
       - matrix.md
-    - Analysis: 
+    - Analysis:
       - series.md
       - differential-equation.md
       - convolution.md
@@ -100,27 +100,27 @@ nav:
       - integral.md
       - frequency-analysis.md
       - differential-operators.md
-    - Geometry: 
+    - Geometry:
       - trigonometry.md
       - geometry.md
-  - Machines: 
+  - Machines:
     - machines.md
     - quadcopter.md
-  - Electronics: 
+  - Electronics:
     - electronics.md
-    - Computer: 
+    - Computer:
       - processor.md
       - ram.md
       - psu.md
       - computer.md
-    - Actuator: 
+    - Actuator:
       - actuator.md
       - servo.md
-    - Component: 
+    - Component:
       - op-amp.md
       - component.md
       - transistor.md
-    - Signal: 
+    - Signal:
       - channel-coding.md
       - harmonic-oscillation.md
     - DSP:
@@ -137,47 +137,47 @@ nav:
       - spi.md
       - usart.md
     - cmos.md
-  - Physics: 
+  - Physics:
     - physics.md
     - rounding.md
-    - Optic: 
+    - Optic:
       - optic.md
       - reflection.md
     - si-units.md
     - constants.md
     - thermodynamics.md
-    - Mechanics: 
+    - Mechanics:
       - mechanics.md
       - motion.md
-    - Electromagnetism: 
+    - Electromagnetism:
       - maxwell.md
       - electric-field.md
       - kirchhoff.md
       - electromagnetism.md
-  - Informatics: 
+  - Informatics:
     - informatics.md
-    - Theory: 
+    - Theory:
       - oop.md
       - numbers.md
       - float.md
       - datetime.md
       - petri-net.md
-    - Security: 
+    - Security:
       - aes.md
       - security.md
-      - Hash: 
+      - Hash:
         - sha-2.md
         - sha-3.md
         - hash.md
         - blake2.md
-    - Datastructures: 
+    - Datastructures:
       - uri.md
       - datastructures.md
-    - Tools: 
+    - Tools:
       - git.md
       - gdb.md
       - tools.md
-    - Network: 
+    - Network:
       - ip.md
       - udp.md
       - rpl.md
@@ -188,7 +188,7 @@ nav:
       - 6lowpan.md
       - tcp.md
       - ieee-802-15-04.md
-    - Language: 
+    - Language:
       - matlab.md
       - python.md
       - rust.md
@@ -207,5 +207,3 @@ nav:
       - language.md
       - c.md
       - ruby.md
-
-

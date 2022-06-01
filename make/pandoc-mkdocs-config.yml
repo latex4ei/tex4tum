@@ -34,7 +34,7 @@ extract-media: 'res/pd-media'  # test this
 
 
 ## Filter
-filters: 
+filters:
   - "pd-info-cards.lua"
   - "pd-acronyms.lua"
   - "pd-dia.lua"
@@ -45,19 +45,17 @@ filters:
   - "mkdocs-fixes.lua"
 
 
-  
-resource-path: [
-  '.',
-  'res', 
-  'res/img', 
-  'res/img/dynamic-images', 
-  'res/img/content-images',
-  'res/img/content-images/electrical',
-  'res/img/content-images/informatics',
-  'res/img/content-images/math',
-  'res/cindyJS',
-]
 
+resource-path:
+  - '.'
+  - 'res'
+  - 'res/img'
+  - 'res/img/dynamic-images'
+  - 'res/img/content-images'
+  - 'res/img/content-images/electrical'
+  - 'res/img/content-images/informatics'
+  - 'res/img/content-images/math'
+  - 'res/cindyJS'
 
 # metadata values specified here are parsed as literal
 # string text, not markdown:

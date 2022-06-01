@@ -26,27 +26,24 @@ The articles are based on the cheat sheets from [www.latex4ei.de](http://www.lat
 * Lunar JS Search: Find articles really fast
 * Abbreviations: Hover your mouse over an abbreviation to see the full name
 
-
 ## Internal Working
 
 Markdown (MD) files are converted in three steps
 
 1. Preprocess MD to MD with [Pandoc](https://pandoc.org/)
-2. Cleanup MD with SED 
-2. Converting MD to HTML using [Matieral mkDocs](https://squidfunk.github.io/mkdocs-material/)
-
+2. Cleanup MD with SED
+3. Converting MD to HTML using [Matieral mkDocs](https://squidfunk.github.io/mkdocs-material/)
 
 ## Contribution
+
 If you want to contribute articles, clone the repo and test the build process locally.
-
-
 
 ### Setup
 
 Setup and install dependencies locally
 
 ```bash
-make install
+make setup
 ```
 
 or use our [Dockerfile](docker/) container
@@ -54,8 +51,6 @@ or use our [Dockerfile](docker/) container
 ```shell
 docker-compose up       # Now you can access the website at localhost:4000
 ```
-
-
 
 ### Build and Test
 
@@ -69,15 +64,6 @@ make run
 # Serve with hot reload at localhost:4000 including _draft articles
 # No acronyms replacement to improve build time
 make draft
-
-# Run formatters
-make format
-
-# Run checks and formatters
-make check
-
-# Run all tests
-make test
 ```
 
 ### Folder Overview
@@ -90,7 +76,6 @@ make test
 * `res`: static files such as images and code
 * `tmp`: temporary build files
 
-
 ## Future Plans
 
 * Auto generated TOC for folders
@@ -101,4 +86,3 @@ make test
 * consistent JS framework for interactive content
 * Improved search: Sorting results, reaction to no results (forward to wolfram alpha)
 * More content
-
