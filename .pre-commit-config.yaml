@@ -13,8 +13,14 @@ repos:
     hooks:
       - id: black
         language_version: python3
-
-# More interesting hooks
-# https://github.com/jackdewinter/pymarkdown
-# https://github.com/executablebooks/mdformat
-# https://github.com/igorshubovych/markdownlint-cli
+  # - repo: https://github.com/executablebooks/mdformat
+  #   rev: 0.7.14
+  #   hooks:
+  #     - id: mdformat
+  #       additional_dependencies:
+  #         - mdformat-gfm
+  #         - mdformat-black
+  # - repo: https://github.com/jackdewinter/pymarkdown
+  #   rev: v0.9.6
+  #   hooks:
+  #     - id: pymarkdown

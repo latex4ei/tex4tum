@@ -23,6 +23,9 @@ run: .init .preprocess
 draft: .init .init-draft .preprocess
 	mkdocs serve
 
+docker_build:
+	docker compose run make build
+
 clean:
 	rm -rf tmp
 
