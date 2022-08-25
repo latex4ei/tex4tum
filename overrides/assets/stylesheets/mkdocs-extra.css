@@ -37,10 +37,11 @@ p input:focus{box-shadow: 0 0 5px var(--md-primary-fg-color); }
 /* mkdocs colors */
 
 [data-md-color-scheme="tum"] {
+	/* #005293 */
   --md-primary-fg-color:        #005293;
   --md-primary-fg-color--light: #ccdce9;
   --md-primary-fg-color--dark:  #003359;
-
+  --clink: #005293;
   --md-accent-fg-color: #a2ad00;
 }
 
@@ -52,15 +53,34 @@ span[onclick] { color: var(--md-typeset-a-color); cursor: pointer; }
 
 .md-typeset dt { font-weight: bold; }
 
+/* buttons */
+.md-typeset .button {
+	display: inline-block;
+	font-weight: bold;
+	padding: 0.4em 1em;
+	border: 0.1rem solid var(--clink);
+    border-radius: 0.1rem;
+}
+.md-typeset .button:not([disabled]):hover{
+	background-color: var(--md-accent-fg-color);
+    border-color: var(--md-accent-fg-color);
+    color: var(--md-accent-bg-color);
+}
+
 
 /* extra font */
 @font-face {
   font-family: 'QFontAwesome';
   font-style: normal;
-  src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/webfonts/fa-solid-900.ttf');
+  src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/webfonts/fa-solid-900.ttf');
   unicode-range: U+2000-2FFF, U+F000-F200, U+1F000-1FFFF;
 }
 body { font-family: var(--md-text-font-family), 'QFontAwesome'; }
+
+.large{ font-size: 1.2em; }
+/*.big{ font-size: 2em; }*/
+.huge{ font-size: 3em; }
+
 
 
 /* grid */

@@ -50,7 +50,18 @@ Bash only supports Integers! Float expressions need to be parsed by an external 
 
 
 
-TODO color escape codes
+
+## String Manipulations
+
+* Slicing `new=${old:12:5}` where 12 is the offset (zero-based) and 5 is the length
+* 
+
+```bash
+mystr="what_is_this"
+tmp=${mystr#*_}   # remove prefix ending in "_"
+final=${tmp%_*}   # remove suffix starting with "_"
+echo ${final}     # output "is"
+```
 
 
 ## Control Flow

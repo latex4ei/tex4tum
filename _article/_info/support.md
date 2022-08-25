@@ -27,8 +27,8 @@ You want to create a new cheat sheet or provide them on our website? Then you sh
 
 ## Online Articles
 
-If you want to improve our existing or write new onlince articles read our [{% icon fa-edit %} Contribution Page](contribution.html)
+If you want to improve our existing or write new onlince articles read our [{% icon fa-edit %} Contribution Page](contribution)
 
 ## Others
 
-If you want to support us but don't know where to start, you should have a look to our [{% icon fa-tasks %} ToDo List](todo.html) or check our open issues at [{% icon fa-bug %} GitHub](https://github.com/latex4ei/tex4tum/issues)
+If you want to support us but don't know where to start, you should have a look to our [{% icon fa-tasks %} ToDo List](todo) or check our open issues at [{% icon fa-bug %} GitHub](https://github.com/latex4ei/tex4tum/issues)

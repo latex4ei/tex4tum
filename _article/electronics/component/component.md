@@ -34,10 +34,10 @@ tite: Electrical Component
 
 
 ## Three Terminal
-* [Transistor](transistor.html)
+* [Transistor](transistor)
 
 ## More Terminal
-* [Op-Amp](op-amp.html)
+* [Op-Amp](op-amp)
 
 
 

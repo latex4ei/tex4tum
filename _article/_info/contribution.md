@@ -21,13 +21,13 @@ Before you start writing, think twice.
 
 
 ## Our Format Syntax
-The good news first: If you write text, it will be displayed as text. If you want to apply some text formatting you can use [Markdown](/markdown.html).
+The good news first: If you write text, it will be displayed as text. If you want to apply some text formatting you can use [Markdown](/markdown).
 Equations can be typset in TeX surrounded by `$` without spaces.
 
 ### File structure
 Our file structure requires a YAML header (surrounded by `---`) that states a title and some keywords (tags) that can be used to find the article.
 
-{% example File example %}
+
 ```
  ---
  title: Inter-Integrated Circuit I²C
@@ -41,7 +41,7 @@ Our file structure requires a YAML header (surrounded by `---`) that states a ti
  {{ "" }}## First Heading
  text
 ```
-{% endexample %}
+
 
 The first paragraph will become the definition, which you should always provide. If you really want to omit a definition, indent the first paragraph by two spaces.
 
@@ -90,37 +90,12 @@ Note: To define new LaTeX commands add them to `res/parser_util/tex_definition.m
 
 
 
-## Jekyll and Liquid Tags
-Our site is generated using [Jekyll](https://jekyllrb.com/) that manages every step of the conversion to the final HTML files. Thus, Jekyll collects and converts the Markdown files by piping them through Pandoc. However, **before** the conversion, Jekyll allows to substitute dynamic content using Liquid Tags `{{ "{% include mycontent.md " }}%}` and Liquid variables `{{ "{{ date " }}}}`. These tags allow sophisticated generation of content using backend Ruby scripts.
-
-We created some custom templates, liquid tags and plugins to simplify the development process. The following sections describe how to use these during contribution. Also check our [Demo Pages](demo.html) for some features.
 
 
 ### Images
 To include Images use the following commands
 
-**Figures**
-```bash
-{% include figure.html filename="complex.svg" description="Description goes here" width="50%" %}
-```
-Output: Image in figure environment with image description
-{% include figure.html filename="complex.svg" description="Description goes here" width="50%" %}
 
-**Inline Image**
-```bash
-{% inlineimage capacitor_symbol.svg %}
-```
-Output: Inline Image {% inlineimage capacitor_symbol.svg %}
-
-**SVG Objects**
-```bash
-{% include svg-object.html width="18em" id="RC_obj" filename="rc.svg" description="Circuit of low-pass filter" %}
-```
-Output: SVG Object
-{% include svg-object.html width="18em" id="RC_obj" filename="rc.svg" description="Circuit of low-pass filter" %}
-
-
-@todo: should we use mermaid?
 
 
 ### Diagramms
@@ -232,4 +207,6 @@ make run
 ## List of TODOs
 All lines starting with TODO will be added to the following TODO list.
 
-{% include todo_table.html %}
+
+---8<--- "todo_table.html"
+

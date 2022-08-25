@@ -4,7 +4,7 @@ repo_url: https://github.com/latex4ei/tex4tum
 site_author: Emanuel Regnath, Markus Hofbauer
 docs_dir: tmp/build
 site_dir: docs
-use_directory_urls: false
+use_directory_urls: true
 watch:
   - _article
 
@@ -18,6 +18,7 @@ theme:
   features:
     - search.highlight
     - navigation.tabs
+    - navigation.top
     - navigation.indexes
 
 
@@ -60,8 +61,7 @@ extra_javascript:
 
 # Page tree
 nav:
-  - Home:
-    - index.md
+  - index.md
   - Sheets: sheets.md
   - About:
     - about.md
@@ -103,40 +103,6 @@ nav:
     - Geometry:
       - trigonometry.md
       - geometry.md
-  - Machines:
-    - machines.md
-    - quadcopter.md
-  - Electronics:
-    - electronics.md
-    - Computer:
-      - processor.md
-      - ram.md
-      - psu.md
-      - computer.md
-    - Actuator:
-      - actuator.md
-      - servo.md
-    - Component:
-      - op-amp.md
-      - component.md
-      - transistor.md
-    - Signal:
-      - channel-coding.md
-      - harmonic-oscillation.md
-    - DSP:
-      - dsp.md
-      - low-pass.md
-      - kalman-filter.md
-      - filter.md
-      - signal.md
-      - modulation.md
-    - Bus:
-      - bus.md
-      - usb.md
-      - i2c.md
-      - spi.md
-      - usart.md
-    - cmos.md
   - Physics:
     - physics.md
     - rounding.md
@@ -207,3 +173,37 @@ nav:
       - language.md
       - c.md
       - ruby.md
+  - Electronics: 
+    - electronics.md
+    - Computer: 
+      - processor.md
+      - ram.md
+      - psu.md
+      - computer.md
+    - Actuator: 
+      - actuator.md
+      - servo.md
+    - Component: 
+      - op-amp.md
+      - component.md
+      - transistor.md
+    - Signal: 
+      - channel-coding.md
+      - harmonic-oscillation.md
+    - DSP:
+      - dsp.md
+      - low-pass.md
+      - kalman-filter.md
+      - filter.md
+      - signal.md
+      - modulation.md
+    - Bus:
+      - bus.md
+      - usb.md
+      - i2c.md
+      - spi.md
+      - usart.md
+    - cmos.md
+  - Machines: 
+    - machines.md
+    - quadcopter.md

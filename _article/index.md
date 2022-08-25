@@ -4,94 +4,123 @@ title: Tex4TUM
 ---
 
 <style>
-.feature-item{
-	text-align: center;
-    margin-bottom: 2em;
+.col { text-align: center; }
+.col h3 { margin-top: -.5em; }
+.feat-icon { font-size: 3em; line-height: 1.2em; }
+
+
+.col .button {
+    min-width: 80%;
+    /*height: 4em;*/
 }
-.feature-item h2{
-	margin-top: 0.2em;
-}
+
 </style>
 
+
+
+TeX4TUM is an Interactive Knowledge Platform for engineers covering the following topics:
+
+
+::::{.row markdown=""}
+
+:::{.col markdown=""}
+[🎲 Math](math){.button}
+:::
+
+:::{.col markdown=""}
+[🧪 Physics](physics){.button}
+:::
+::::
+
+::::{.row markdown=""}
+
+:::{.col markdown=""}
+[⏻ Informatics](informatics){.button}
+:::
+
+:::{.col markdown=""}
+[⚡ Electriconics](electronics){.button}
+:::
+
+:::{.col markdown=""}
+[🔧 Mechanics](mechanics){.button}
+:::
+
+::::
+
+
+<!-- ![code](fa-code) -->
+
+
+
 ## Features
-<div class="row" markdown markdown>
-<div class="col" markdown markdown>
-<div class="feature-item" data-toggle="collapse" href="#col_item_1" markdown markdown>
- <i class="fa fa-eye fa-4x"></i>
- <h2>Focused</h2>
- Short is default, details on demand. <a class="small">(click)</a>
- <div id="col_item_1" class="collapse" markdown markdown>
- <div class="card border-secondary small">If you click on items, some will show additional information.</div>
- </div>
+
+
+<div class="row" markdown>
+<div class="col" markdown> 
+
+[👁]{.feat-icon}<br>
+[Focused]{.large}
+
+Abstract: Short is default, details on demand.
+If you click on certain items, e.g. equations, they will show additional information.
+
+$$e^{\i \cdot \pi} = -1$$
+with Euler's number $e$, the imaginary unit $\i$, and the mathematical constant $\pi := 3.1415...$.
+
+
+Details: 
+Most diagrams should be interactive so that you can see how the output changes if you move your cursor into the image or change the input.
+
+
+ 
 </div>
-</div>
-<div class="col" markdown markdown>
-<div class="feature-item" data-toggle="collapse" href="#col_item_2" markdown markdown>
- <i class="fa fa-sliders-h fa-4x"></i>
- <h2>Interactive</h2>
- Manipulate diagrams, learn from the response.
- <div id="col_item_2" class="collapse" markdown markdown>
- <div class="card border-secondary small" markdown markdown>
- Most diagrams should be interactive so that you can see how the output changes if you change the input.</div>
- </div>
-</div>
-</div>
-<div class="col" markdown markdown>
-<div class="feature-item" data-toggle="collapse" href="#col_item_3" markdown markdown>
- <i class="fa fa-child fa-4x"></i>
- <h2>Intuitive</h2>
- Consistent notation, structure, and style.
- <div id="col_item_3" class="collapse" markdown markdown>
- <div class="card border-secondary small">Consistency will aid your understanding and eliminate confusion.</div>
- </div>
-</div>
+
+
+<div class="col card" markdown>
+
+[🎲]{.feat-icon}<br>
+[Interactive]{.large}
+
+![Play with diagrams, learn from the response.](servo.svg){#servo}
+
+
+
+
 </div>
 </div>
 
-<div class="row" markdown markdown>
-<div class="col" markdown markdown>
-<div class="feature-item" data-toggle="collapse" href="#col_item_4" markdown markdown>
- <i class="far fa-clock fa-4x"></i>
- <h2>Instant</h2>
- Search fuzzy, find answers immediately.<a class="small">(<code>tab</code>)</a>
- <div id="col_item_4" class="collapse" markdown markdown>
- <div class="card border-secondary small">Hit `tab` and you will already see results while you type.</div>
- </div>
+<div class="row" markdown>
+<div class="col" markdown>
+
+[⏱]{.feat-icon}<br>
+[Fast & Intuitive]{.large}
+
+
+Hit `f` to search with JS lightspeed. 
+
+The consistent notation, structure, and style of our articles ease understanding.
+
 </div>
-</div>
-<div class="col" markdown markdown>
-<div class="feature-item" data-toggle="collapse" href="#col_item_5" markdown markdown>
- <i class="fa fa-users fa-4x"></i>
- <h2>Community driven</h2>
- Free. Open Source. For everyone.
- <!--From students, for students.-->
- <div id="col_item_5" class="collapse" markdown markdown>
- <div class="card border-secondary small">Powered by GitHub. Everyone can contribute to our articles.</div>
- </div>
-</div>
-</div>
-<div class="col" markdown markdown>
-<div class="feature-item" data-toggle="collapse" href="#col_item_6" markdown markdown>
-<i class="fab fa-wikipedia-w fa-4x"></i>
- <h2>References</h2>
- Links to Wikipedia and other useful sources.
- <div id="col_item_6" class="collapse" markdown markdown>
- <div class="card border-secondary small">References help you to find the origin of the information.</div>
- </div>
-</div>
+<div class="col" markdown>
+
+[👥]{.feat-icon}<br>
+[Community driven]{.large}
+
+Hint: **Free. Open Source. For everyone.**
+Powered by GitHub. Everyone can contribute to our articles. Additional links to Wikipedia and other useful sources.
+
 </div>
 </div>
 
-<div class="card bg-info mb-3" markdown markdown>
-<div class="card-body" markdown markdown>
-<h5 class="card-title">Nice interactive demos</h5>
-<p class="card-text">Checkout these pages for some nice interactive demos</p>
-<a href="./reflection.html" class="card-link">Reflection</a>
-<a href="./trigonometry.html" class="card-link">Trigonometry</a>
-<a href="./quadcopter.html" class="card-link">Quadcopter</a>
-<a href="./uri.html" class="card-link">URI</a>
-<a href="./binomial-distribution.html" class="card-link">Binomial Distribution</a>
-</div>
-</div>
 
-{nav}
+### Nice interactive demos
+If you are new to TeX4TUM, checkout these pages for some nice interactive demos:
+
+[Reflection](reflection){ .button }&nbsp;
+[Trigonometry](trigonometry){ .button }&nbsp;
+[Quadcopter](quadcopter){.button}&nbsp;
+[URI](uri){.button}&nbsp;
+[Binomial Distribution](binomial-distribution){.button}&nbsp;
+
+
