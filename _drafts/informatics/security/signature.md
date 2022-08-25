@@ -10,7 +10,7 @@ A digital signature is a mathematical scheme for demonstrating the authenticity 
 * Prime Factorization: RSA
 * Elliptic Curves: Secp256k1
 * Hash based Signatures: SPHINCS
-* Multivariate:  
+* Multivariate:
 * Code-based:  (one-time, large keys)
 
 
@@ -19,7 +19,7 @@ A digital signature is a mathematical scheme for demonstrating the authenticity 
 Given a modulus $N = pq$, where p and q a prime.
 Further a public key $e$ and a private key $d$.
 
-To sign a message, m, the signer computes a signature, σ, such that $σ ≡ m^d (mod N)$. 
+To sign a message, m, the signer computes a signature, σ, such that $σ ≡ m^d (mod N)$.
 
 To verify a message, the receiver checks that $σ^e ≡ m (mod N)$.
 
@@ -38,13 +38,3 @@ Alice wants to send a document to Bob. Bob wants proof (signature) that the docu
 1. Bob decrypts the signature of document with the public key of Alice
 1. Bob calculates the hash of the document
 1. Bob checks if the hash matches the decrypted signature
-
-
-
-
-
-
-
-
-
-

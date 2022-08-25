@@ -10,7 +10,8 @@ Click on the values to change them! E.g. change "10k" to "20k". All equations an
 <option value="LR">LR</option>
 </select>
 
-{% include svg-object.html id="RC_obj" filename="rc.svg" description="Circuit of low-pass filter" %}
+
+![Circuit of low-pass filter](rc.svg){#RC_obj}
 
 
 Cut-Off Frequency: $f_c = \frac{1}{2\pi R C} =$ <tspan id="F1_val">159 Hz</tspan><br>
@@ -25,7 +26,7 @@ Dynamic: $I_C = C \cdot \dot U_C$
 </select>
 
 
-{% include svg-object.html id="RC_graph" filename="rc_graph3.svg" %}
+![](rc_graph3.svg){#RC_graph}
 
 
 
@@ -91,4 +92,3 @@ RC_graph_el.addEventListener("load",function(){
     RC_graph = RC_graph_el.contentDocument;  // get inner DOM
 }, false);
 </script>
-

@@ -1,7 +1,8 @@
 ---
 title: Servo Motor
-tags: motor pwm
+tags: [motor, pwm]
 ---
+
 A Servo Motor is a cheap rotary actuator used for radio control and small-scale robotics.
 
 
@@ -9,7 +10,7 @@ A Servo Motor is a cheap rotary actuator used for radio control and small-scale 
 A servo motor is normally connected using just 3 wires.
 
 | Color  | Purpose     |
-|--------|-------------|   
+|--------|-------------|
 | Yellow | PWM Signal  |
 | Red    | VDD         |
 | Black  | GND         |
@@ -17,7 +18,9 @@ A servo motor is normally connected using just 3 wires.
 
 ## Control
 
-{% include svg-object.html id="servo" filename="servo.svg" %}
+
+![Working principle of a servo motor.](servo.svg){#servo}
+
 
 The angle of the servo is determined by the width of the PWM signal that is applied to the control wire.
 Most servos expect to see a pulse every 20 ms. The angle is calculated as the fraction of the pulse width
@@ -34,6 +37,3 @@ A pulsewidth of $pw = \SI{1.5}{ms}$ will turn a servo with a maximum angle $\alp
 
 ## References
 * Jameco Electronics, [How do Servo Motors Work](https://www.jameco.com/jameco/workshop/howitworks/how-servo-motors-work.html)
-
-
-

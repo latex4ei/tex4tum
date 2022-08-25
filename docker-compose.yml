@@ -1,0 +1,11 @@
+version: '3'
+services:
+  tex4tum:
+    build:
+      context: ./
+      dockerfile: docker/Dockerfile
+    volumes:
+      - .:/home
+    ports:
+      - '8000:8000'
+    command: bash -c "mkdocs serve --dev-addr 0.0.0.0:8000"

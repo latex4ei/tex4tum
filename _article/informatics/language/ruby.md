@@ -21,7 +21,7 @@ sips_per_round = [3, 7, 4, 2]
 puts "I drink #{beer_l} l in #{rounds} rounds:"
 sips_per_round.each do |sips|
     puts "I drink #{sips} sips."
-    sleep sips 
+    sleep sips
     beer_l -= sips2liter( sips )
     if beer_l <= 0.0
         puts "My beer is empty!"
@@ -63,7 +63,7 @@ var = 3.14159
 There are two collection types: `Array` and `Hash`
 
 ```ruby
-array = [1, 'hi', 3.14, 1, 2, [4, 5]] 
+array = [1, 'hi', 3.14, 1, 2, [4, 5]]
 array.each {|item| puts item }   # iterate and print
 
 hash = { :water => 'wet', :fire => 'hot' }
@@ -118,5 +118,3 @@ end
 ## References
 
 * [Ruby Documentation](http://ruby-doc.org/core-2.6.1/Class.html)
-
-

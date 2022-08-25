@@ -1,6 +1,6 @@
 ---
 title: Universal Serial Bus (USB)
-tags: USB Type-C
+tags: [USB, Type-C]
 ---
 
 The USB is serial bus commonly used in computers.
@@ -21,7 +21,7 @@ Maximum devices: 127.
 Cable length: $< \SI{5}{m}$
 
 
-{% include figure.html width="20em" filename="usb-connectors.svg" description="USB Connectors" %}
+![USB Connectors](usb-connectors.svg){ width="20em"}
 
 
 
@@ -201,3 +201,4 @@ All further communication is initiated by the host.
 
 * USB-C
 * [YouTube: “How does a USB keyboard work?”, 2021](https://www.youtube.com/watch?v=wdgULBpRoXk)
+

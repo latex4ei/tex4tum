@@ -1,6 +1,6 @@
 ---
 title: Central Processing Unit (CPU)
-tags: CPU, ALU
+tags: [CPU, ALU]
 ---
 
 
@@ -19,6 +19,3 @@ Hazards are problems due to pipelining.
 * **Structural Hazard:** same resource is needed multiple times in the same cycle.
 * **Data Hazard:** data dependencies (read-after write, write-after-write, write-after-read).
 * **Control Hazard:** next executed instruction is not the next specified instruction due to jump, branch, exception.
-
-
-

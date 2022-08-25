@@ -30,7 +30,7 @@ with events $A,B$.
 
 Multiplication: $\P(A \cap B) = \P(A|B)\P(B) = \P(B|A)\P(A)$
 
-Bayes' law: 
+Bayes' law:
 $$\P(B_k | A) = \frac{\P(A | B_k)\P(B_k)}{\sum\limits_{i \in I} \P(A|B_i) \P(B_i)}$$
 
 Total probabilty: $\P(A) = \sum\limits_{i \in I} \P(A|B_i)\P(B_i)$
@@ -45,4 +45,3 @@ $\X : \Omega \mapsto \Omega'$ is a random variable if for all events $A' \in \ma
 ## Distribution
 **PDF:** $f_{\X}(x) = \frac{\diff F_{\X}(x)}{\diff x}$
 **CDF:** $F_{\X}(x) = \int\limits_{-\infty}^{x}{f_{\X}(\xi)\diff\xi}$
-

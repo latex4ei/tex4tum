@@ -57,7 +57,7 @@ Run your own program at the <a href="https://play.rust-lang.org/?version=stable&
 
 ```rust
 let tuple = ("hello", 5, 'c');
-assert_eq!(tuple.0, "hello");   // tuples are accessed with . 
+assert_eq!(tuple.0, "hello");   // tuples are accessed with .
 ```
 
 
@@ -74,7 +74,7 @@ assert_eq!(tuple.0, "hello");   // tuples are accessed with .
 ### `match` instead of `switch`
 
 ```rust
- match number {        
+ match number {
     1 => println!("One!"),                // Match a single value
     3 | 5 | 7 | 9 => println!("Odd"),     // Match several values
     13...19 => println!("A teen"),        // Match an inclusive range
@@ -129,5 +129,3 @@ impl Show for f64 {
 
 * Steve Donovan: [A Gentle Introduction To Rust](https://stevedonovan.github.io/rust-gentle-intro/readme.html), 2018
 * [Rust Documentation](https://doc.rust-lang.org/)
-
-

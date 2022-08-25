@@ -13,6 +13,3 @@ SNR depends on: $P_R$, $N_A$, $N_R$
 
 
 Receiver Sensitivity: $P_{min} = P_r \cdot (N_A + N_R)$
-
-
-

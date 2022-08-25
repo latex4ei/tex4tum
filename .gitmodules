@@ -1,0 +1,3 @@
+[submodule "make/t4t"]
+	path = make/t4t
+	url = https://github.com/emareg/t4tlib

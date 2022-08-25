@@ -9,15 +9,15 @@ $$f(k, r, p) = \P( X = k ) = \binom{k+r-1}{k} p^k (1-p)^{r}$$
 with the number of failures $r$, the number of successes $k$, and the success probability $p$.
 
 
+![Negative Binomial Distribution NB(k, r, p) over k for r = <span id="nbd_r">10</span> and p = <span id="nbd_p">0.3</span>](dist_negative_binomial.svg){#SVG_obj}
 
-{% include svg-object.html id="SVG_obj" filename="dist_negative_binomial.svg" description='Negative Binomial Distribution NB(k, r, p) over k for r = <span id="nbd_r">10</span> and p = <span id="nbd_p">0.3</span>' %}
 
-<div class="row">
-  <div class="col">
+<div class="row" markdown>
+  <div class="col" markdown>
   <label>Input for r</label><br>
   <input type="range" id="r_range" min="0" max="20" value="10" step="1" list="tickmarks" oninput="nb_update(this)">
   </div>
-  <div class="col">
+  <div class="col" markdown>
   <label>Input for p</label><br>
   <input type="range" id="p_range" min="0" max="10" value="3" list="tickmarks" oninput="nb_update(this)"><br><br>
   </div>
@@ -67,7 +67,7 @@ function nb_update(slider){
     Dist_nb[0] = slider.value / 1.0;
   }
   var r = Dist_nb[0];
-  var p = Dist_nb[1];  
+  var p = Dist_nb[1];
   document.getElementById('nbd_p').innerText = p
   document.getElementById('nbd_r').innerText = r
   SVG_obj.getElementById('legend_1').querySelector("text").innerHTML='r = '+r+', p = '+p

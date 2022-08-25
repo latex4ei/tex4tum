@@ -14,6 +14,6 @@ The Maxwell Equations are 4 fundamental equations that describe the relation bet
 
 
 ## Gauss's law
-Explanation: 
+Explanation:
 The differential form states that if there exists electric charge somewhere, then the divergence of $D$ at that point is nonzero, otherwise it is equal to zero.
 The integral form states that the amount of charge inside a volume $V$ of enclosed charge is equal to the total amount of Electric Flux $D$ exiting the surface $S$.

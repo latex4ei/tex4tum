@@ -11,7 +11,4 @@ UNIX shells assign file descriptor 0 to the standard input of a process, file de
 
 
 
-The kernel uses descriptor reference counts to decide whether to close a file or not. 
-
-
-
+The kernel uses descriptor reference counts to decide whether to close a file or not.

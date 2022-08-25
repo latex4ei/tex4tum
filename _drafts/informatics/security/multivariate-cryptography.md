@@ -14,7 +14,7 @@ Given $m$ quadratic polynomials
   $$p_1(x_1,..., x_n), ..., p_m(x_1,..., x_n)$$
   with polynomial $p$ of $n$ variables $x$
 
-in $n$ variables $x = x_1,..., x_n$ over a finite field $\mathbb F_q$, find a vector $\vec x$ such that 
+in $n$ variables $x = x_1,..., x_n$ over a finite field $\mathbb F_q$, find a vector $\vec x$ such that
 
   $$p_1(x_0) = ... = p_m(x_0) = 0$$
 
@@ -45,4 +45,3 @@ Crypto-Systems based on multivariate cryptography:
 * [SFLASHv3](https://eprint.iacr.org/2003/211.pdf)
 * [QUARTZ](http://www.goubin.fr/papers/rsa2001b.pdf)
 * [MI-T-HFE](https://eprint.iacr.org/2015/890.pdf)
-

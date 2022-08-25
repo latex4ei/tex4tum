@@ -9,4 +9,3 @@ title: Ethernet
 * 2 bytes type
 * 46 - 1500 bytes payload
 * 4 bytes CRC
-

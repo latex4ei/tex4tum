@@ -48,7 +48,7 @@ The private key is $(n = 3233, d = 413)$. Decryption function is $m(c)=c^{413}{\
 **Encrypt message $m = 65$:**</br>
 $c=65^{17}{\mod {3}}233=2790$
 
-**Decrypt cipher $c = 2790$:**</br> 
+**Decrypt cipher $c = 2790$:**</br>
 $m=2790^{413}{\mod {3}}233=65$
 
 
@@ -66,7 +66,7 @@ $m=2790^{413}{\mod {3}}233=65$
 
 
 ## homomorphic multiplication
-RSA is multiplicatively homomorphic. That means you can exchange the order of operations without affecting the result. The product of the encryption of two messages is equal to the encryption of the product of the messages. 
+RSA is multiplicatively homomorphic. That means you can exchange the order of operations without affecting the result. The product of the encryption of two messages is equal to the encryption of the product of the messages.
 
 $$E(x)E(y) \equiv x^ey^e \equiv (xy)^e \equiv E(xy) (\pmod n)$$
 
@@ -75,5 +75,3 @@ Thus, you can perform calculations on encrypted data, without knowing the data, 
 
 ## References
 * [Wikipedia: RSA](https://en.wikipedia.org/wiki/RSA_(cryptosystem))
-
-

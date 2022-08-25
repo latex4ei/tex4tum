@@ -2,7 +2,7 @@
 title: Trapdoor Function
 ---
 
-A trapdoor function is a function that is easy to perform one way, but has a secret that is required to perform the inverse calculation efficiently. 
+A trapdoor function is a function that is easy to perform one way, but has a secret that is required to perform the inverse calculation efficiently.
 A hash function is a one-way function and *not* a trapdoor function because it is not reversible.
 
 
@@ -22,5 +22,3 @@ A hash function is not a trapdoor function because it is not reversible. Instead
 
 ## References
 * https://crypto.stackexchange.com/questions/10087/what-is-the-meaning-of-trapdoor-in-cryptography
-
-

@@ -10,6 +10,3 @@ A compiler translates a source language to an executable file with processor ins
 * frontend: source to AST
 * optimization: AST to AST
 * backend: AST to instruction set
-
-
-

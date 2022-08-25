@@ -1,7 +1,7 @@
 ---
 title: Secure Hash Algorithm 3 (SHA-3)
 ---
-The Secure Hash Algorithm 3 (SHA-3) is a set of 6 cryptographic hash functions as a subset of the Keccak algorithm. 
+The Secure Hash Algorithm 3 (SHA-3) is a set of 6 cryptographic hash functions as a subset of the Keccak algorithm.
 
 
 
@@ -16,12 +16,12 @@ Used operations: `And`, `Xor`, `Rot`, `Not`.
 | SHA3-512  |  576 b | 1600 b |     24 |  512 b |
 
 
-<div class="row">
-<div class="col-md-auto pr-0">
-SHA3-256 (\" <input id="number-input" style="width: 5em;" oninput="calcSHA3(this)" placeholder="Input" value=""> \") =	
+<div class="row" markdown>
+<div class="col-md-auto pr-0" markdown>
+SHA3-256 (\" <input id="number-input" style="width: 5em;" oninput="calcSHA3(this)" placeholder="Input" value=""> \") =
 </div>
-<div class="col pl-0">
-<p><code id="SHA3_out">a7ffc6f8bf1ed76651c14756a061d662f580ff4de43b49fa82d80a4b80f8434a</code></p>	
+<div class="col pl-0" markdown>
+<p><code id="SHA3_out">a7ffc6f8bf1ed76651c14756a061d662f580ff4de43b49fa82d80a4b80f8434a</code></p>
 </div>
 </div>
 
@@ -43,4 +43,3 @@ function calcSHA3( text ){
 	document.getElementById('SHA3_out').textContent = sha3_256( text.value );
 }
 </script>
-

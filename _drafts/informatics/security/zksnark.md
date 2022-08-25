@@ -10,7 +10,7 @@ zkSNARK can be used to verify the solution of NP-complete statements in constant
 ## Scenario
 There is a **prover** which wants to convince a **verifier** that cetain mathematical statement is true.
 The proof must be sound, complete, and must not reveal any information to the verifier (zero-knowledge).
-	
+
 	Details: A protocol is used to exchange information about the solution and can be proven zero knowledge if for every possible Verifier, you can demonstrate the existence of an algorithm called a ‘Simulator’, that can demonstrate parts of the real solution (without effort) or simulate (fake) parts of the solution (with effort or simply by luck) without knowing the real solution. The verifier can then not distinguish between real and fake solutions and thus does not learn something about the real solution but gets confident about the correctness if the effort or luck required is high enough.
 
 
@@ -40,6 +40,3 @@ $(ab)%n ≡ c%n$ and the only thing the verifier learns is the encrypted version
 
 ## From interactive to non-interactive
 You can convert an interactive protocol into a non-interactive one by simply using a strong hash function to pick the challenge. The hash will convert any publicly choosen, changing input into a pseudo-random output.
-
-
-

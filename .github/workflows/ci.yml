@@ -10,22 +10,16 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: Setup Environment
-      run: |
-        cd docker
-        docker-compose build
-        docker-compose run -d --name tex4tum tex4tum bash
-        docker ps -a
+    - uses: actions/checkout@v3
+      with:
+        submodules: true
     - name: Build
-      run : |
-        docker exec tex4tum bash -c "bundle install && make build"
-        docker exec tex4tum bash -c "echo '# This branch is for deployment only' >> _site/README.md"
+      run: docker compose run tex4tum make build
     - name: Deploy
       if: github.ref == 'refs/heads/master'
-      uses: JamesIves/github-pages-deploy-action@4.1.0
+      uses: JamesIves/github-pages-deploy-action@v4.3.3
       with:
         branch: gh-pages
-        folder: _site
+        folder: docs
         single-commit: true
         silent: true

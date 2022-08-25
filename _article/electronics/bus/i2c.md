@@ -34,20 +34,20 @@ There is one master and several slaves (max 127). The MSB is transmitted first.
 SDA ··  \__/___X___X___X___X___X___X___X___\______/  ··
       ____   _   _   _   _   _   _   _   _   _   ____
 SCL ··    \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/    ··
-        S    0   1   2   3   4   5   6   7  ACK   P  
+        S    0   1   2   3   4   5   6   7  ACK   P
 
 Full request: Address, Command, Data:
-      __    __   __ ___     __   __     __   __        _ 
-SDA ··  \__/__···__X___\___/__···__\___/__···__\______/ 
+      __    __   __ ___     __   __     __   __        _
+SDA ··  \__/__···__X___\___/__···__\___/__···__\______/
       ____   _ _ _   _   _   _ _ _   _   _ _ _   _   ___
-SCL ··    \_/ 0-6 \_/7\_/8\_/ 0-7 \_/8\_/ 0-7 \_/8\_/   
-        S     Addr  RW  ACK   Cmd   ACK   Data  ACK   P 
+SCL ··    \_/ 0-6 \_/7\_/8\_/ 0-7 \_/8\_/ 0-7 \_/8\_/
+        S     Addr  RW  ACK   Cmd   ACK   Data  ACK   P
 ```
 
 ### Timing
 * Start (S): master pulls SDA low while SCL stays high.
 * Data Bits (0-7): Sampling starts when SCL rises. For a bit to be valid, SDA must not change between a rising and falling edge of SCL.
-* ACK: Each byte of data is followed by a 9th ACK bit. This bit is controlled by the slave! The master releases SDA (pulled high). The byte is acknowledged iff the slaves pulls SDA bit low. 0 = ACK, 1 = NAK. 
+* ACK: Each byte of data is followed by a 9th ACK bit. This bit is controlled by the slave! The master releases SDA (pulled high). The byte is acknowledged iff the slaves pulls SDA bit low. 0 = ACK, 1 = NAK.
 * Stop (P): signaled when SCL rises, followed by SDA rising.
 
 
@@ -71,4 +71,3 @@ SCL ··    \_/ 0-6 \_/7\_/8\_/ 0-7 \_/8\_/ 0-7 \_/8\_/
 ## References
 
 * [Texas Instruments: Understanding the I2C Bus](http://www.ti.com/lit/an/slva704/slva704.pdf)
-

@@ -25,5 +25,3 @@ The boolean algebra $({0,1};\cdot , +, \overline{x})$
 |               | $\overline{\overline{x}} = x$               |
 | De Morgan     | $\overline{x \cdot y} = \overline{x} + \overline{y}$ |
 |               | $\overline{x + y} = \overline{x} \cdot \overline{y}$ |
-
-

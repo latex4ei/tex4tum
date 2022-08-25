@@ -1,6 +1,6 @@
 ---
 title: Internet Protocol
-tags: address IPv4 IPv6
+tags: [address, IPv4, IPv6]
 ---
 
 The Internet Protocol (IP) is the basic communication protocol in the Internet layer.
@@ -18,28 +18,28 @@ IP has the task of delivering packets from the source host to the destination ho
 
 ### Address Notation
 
-{% tabbox %}
+<div class="tabbox" markdown>
 
-#### IPv6 
+#### IPv6
 16 byte written as 8 groups of 4 hexadecimal characters.
 
 * leading zeros within a group may be omitted
 * consecutive groups of only zeros may be replace by `::`. This replacement is only allowed once within an address.
 
 
-Example: 
+Example:
 Initial address: `2001:0db8:0000:0000:0000:ff00:0042:8329`</br>
 Removing leading zeroes: `2001:db8:0:0:0:ff00:42:8329`</br>
 Omitting consecutive groups of zeroes: `2001:db8::ff00:42:8329`
 
 
-#### IPv4 
+#### IPv4
 
 4 byte written as 4 groups of integers between 0 and 255.
 
 `192.168.0.0`
 
-{% endtabbox %}
+</div>
 
 
 ### Subnets
@@ -54,7 +54,7 @@ Subnets share a certain number of identical most-significant bits in their IP ad
 ### Special Address Ranges
 Certain adress ranges are reserved for special use cases.
 
-{% tabbox %}
+<div class="tabbox" markdown>
 
 #### IPv6
 * `2000::/4` (global)
@@ -63,7 +63,7 @@ Certain adress ranges are reserved for special use cases.
 * `fe80::/10`: Link Local Addresses. Created by interfaces for status communication
 
 
-#### IPv4 
+#### IPv4
 
 * `0.0.0.0/8` (broadcast)
 * `10.0.0.0/8` (private network)
@@ -74,7 +74,7 @@ Certain adress ranges are reserved for special use cases.
 * `224.0.0.0` – `255.255.255.254` (future use)
 * `255.255.255.255` (limited broadcast)
 
-{% endtabbox %}
+</div>
 
 
 
@@ -86,9 +86,9 @@ Certain adress ranges are reserved for special use cases.
 
 ## Header Format
 
-{% tabbox %}
+<div class="tabbox" markdown>
 
-### IPv6 
+### IPv6
 The IPv6 header has a fixed size of 40 bytes.
 
 ```diagram
@@ -120,15 +120,15 @@ The IPv6 header has a fixed size of 40 bytes.
 
 #### Explanation of the Header Fields
 
-Version – 4 bit         
+Version – 4 bit
 :   Internet Protocol version number = 6 (`0b1010`).
 
-Traffic Class – 8 bit     
+Traffic Class – 8 bit
 :   Set different priorities of IPv6 packets.
     The default value must be zero for all 8 bits.
 
-Flow Label – 20 bit        
-:  May be used by a  source to label sequences of packets for which 
+Flow Label – 20 bit
+:  May be used by a  source to label sequences of packets for which
    it requests special handling by the IPv6 routers, such as non-default quality of service or "real-time" service. Hosts or routers
    that do not support the functions of the Flow Label field are
    required to set the field to zero when originating a packet, pass the
@@ -139,11 +139,11 @@ Payload Length – 16-bit unsigned integer
 :   Length of the IPv6 payload, i.e., the rest of the packet
     following this IPv6 header, in octets.
 
-Next Header – 8 bit  
-:    Identifies the type of header immediately following 
+Next Header – 8 bit
+:    Identifies the type of header immediately following
     the IPv6 header. Uses the same values as the IPv4 Protocol field.
 
-Hop Limit – 8 bit unsigned integer       
+Hop Limit – 8 bit unsigned integer
 :    Decremented by 1 by
      each node that forwards the packet.  When
      forwarding, the packet is discarded if Hop
@@ -162,7 +162,7 @@ Destination Address – 128 bit
 
 
 
-### IPv4 
+### IPv4
 The IPv4 header has a size of 20 bytes if options are not used.
 
 
@@ -187,7 +187,7 @@ The IPv4 header has a size of 20 bytes if options are not used.
 ## Explanation of the Header Fields
 
 Version – 4 bit
-:  The version of the internet header. (4 = `0b0100`) 
+:  The version of the internet header. (4 = `0b0100`)
 
 IHL – 4 bit
 :  The Internet Header Length (IHL) is the length of the internet header in 32 bit words, and thus points to the beginning of the data. The minimum value for a correct header is 5.
@@ -250,7 +250,7 @@ Options – variable
 
 
 
-{% endtabbox %}
+</div>
 
 
 
@@ -288,4 +288,3 @@ A full list of all numbers can be found on [IANA](https://www.iana.org/assignmen
 * [IETF: RFC 791 - Internet Protocol](https://tools.ietf.org/html/rfc791)
 * [IETF: RFC 2460 - Internet Protocol, Version 6 (IPv6)](https://tools.ietf.org/html/rfc2460)
 * [Wikipedia: “List of IP protocol numbers”](https://en.wikipedia.org/wiki/List_of_IP_protocol_numbers)
-

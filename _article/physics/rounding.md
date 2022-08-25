@@ -6,7 +6,7 @@ No measurement of a physical quantity is infinite accurate and it is important t
 
 
 ## Exact and Approximate Numbers
-Only numbers, which are obtained by a measurement process subject to errors need to be rounded. Numbers obtained by a counting process or given by definition are exact. 
+Only numbers, which are obtained by a measurement process subject to errors need to be rounded. Numbers obtained by a counting process or given by definition are exact.
 
 
 ## Resolution, Accuracy, Precision
@@ -46,7 +46,7 @@ Exact numbers have an infinite number of significant figures. The accuracy of th
 Multiplication/Division: round to the lowest amount of significant figures
 Addition/Subtraction: round to the lowest amount of decimal places
 Square root: round to the significant figures of the input
-Logarithm: round the result 
+Logarithm: round the result
 
 
 
@@ -67,9 +67,9 @@ Rules:
 
 
 If an equations contains multiplication and addition:
-1. Calculate the equation without any rounding, this is your correct result 
+1. Calculate the equation without any rounding, this is your correct result
 2. Calculate the equation with rounding after each operation, this is your wrong but correctly rounded result.
-	You can also just calculate the number of significant digits for each operation by appling the rounding rules after each operation without calculating the resulting value. 
+	You can also just calculate the number of significant digits for each operation by appling the rounding rules after each operation without calculating the resulting value.
 3. Round the result from 1. to the significant figures obtained from 2.
 
 
@@ -80,7 +80,7 @@ $167 = 1.67 \times 10^2 = 1.67\mathrm{E}2$
 
 Rules:
 1. Determine the maginitude in $1000 = 10^3$
-2. Round the number to significant figures 
+2. Round the number to significant figures
 
 Example: For the number 0.012345, which shall be rounded to 4 significant figures. 1. $0.012345 = 12.345 \cdot 10^{-3}$ 2. $12.345 \cdot 10^{-3} \approx 12.35 \cdot 10^{-3}$
 

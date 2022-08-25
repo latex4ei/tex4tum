@@ -72,7 +72,7 @@ YYYY-MM-DD HH:MM +hh:mm
 
 
 ## Datetime Libraries
-Time is complicated, do not implement time classes or libraries on your own! You would need to account for 
+Time is complicated, do not implement time classes or libraries on your own! You would need to account for
 
 * different time zones (some are only 30 minutes ahead another)
 * daylight saving times that start and stop on different days depending on timezone.
@@ -103,7 +103,7 @@ Time is complicated, do not implement time classes or libraries on your own! You
 function updateClock() {
   var dt = new Date();
   document.getElementById( "dt-utc" ).textContent = dt.toTimeString();
-  dt.setSeconds( dt.getSeconds() + 38 ); 
+  dt.setSeconds( dt.getSeconds() + 38 );
   document.getElementById( "dt-tai" ).textContent = dt.toTimeString();
   setTimeout( updateClock, 100 );
 }

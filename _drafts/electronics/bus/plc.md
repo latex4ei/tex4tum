@@ -29,4 +29,3 @@ noise level and multipath at that frequency.
 
 ## Application
 Used in 1950 for remote ignition and lighting of street lights.
-

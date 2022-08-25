@@ -5,7 +5,7 @@ title: Differential Equation
 A differential equation is a mathematical equation that relates some function with its derivatives. In applications, the functions usually represent physical quantities, the derivatives represent their rates of change, and the equation defines a relationship between the two.
 
 
-## Differential Equation of n-th Order 
+## Differential Equation of n-th Order
 
 $$a_n y^{(n)} + ... + a_1 y' + a_0 y = b_m x^{(m)} + ... + b_1 x' + b_0 x$$
 with the unknown function $y$ and its $n$ derivates $y',y'',...$, the known function $x$ and the coefficients $a_i, b_j$
@@ -21,7 +21,7 @@ Jede DGL lässt sich reduzieren auf ein DGL-System 1. Ordnung:
 
 2. $\vec x_{\ir hom} = \vec c \cdot e^{(x-x_0)\ma A} = \sum\limits_{i = 0}^n c_i \cdot e^{\lambda_i x} \cdot \vec b_i$
 
-3. Bestimmung der Konstanten durch einsetzen der Anfangsbedingungen!	
+3. Bestimmung der Konstanten durch einsetzen der Anfangsbedingungen!
 
 
 
@@ -43,11 +43,11 @@ $$\vec x(t) = x_{0,1} \cdot \exp(\lambda_1 t) \cdot \vec q_1 + x_{0,2} \cdot \ex
 
 | Matrix $\Lambda$ | Eigenwerte | $\vec x = 0$ | Name | Portrait |
 |------------|--------|--------|--------|-----------------|
-|$\mat{\lambda_1 & 0 \\ 0 & \lambda_2}$ | $\lambda_1 < 0 < \lambda_2$     | instable | Sattelpunkt | {% inlineimage PP_Sadle.svg %}        |
-|                                       | $\lambda_2 < 0, \lambda_1 < 0$  | stable   | Knoten 2    | {% inlineimage PP_stableNode.svg %}   |
-|                                       | $0 < \lambda_1, 0 < \lambda_2$  | instable | Knoten 2    | {% inlineimage PP_unstableNode.svg %} |
-| $\mat{0  & 0 \\ 0 & \lambda_2}$       | $\lambda_1 = 0,\ \lambda_2 < 0$ | stabil   | Kamm        | {% inlineimage PP_stableLine.svg %}   |
-|                                       | $\lambda_1 = 0,\ \lambda_2 > 0$ | instable | Kamm        | {% inlineimage PP_unstableLine.svg %} |
+|$\mat{\lambda_1 & 0 \\ 0 & \lambda_2}$ | $\lambda_1 < 0 < \lambda_2$     | instable | Sattelpunkt | ![](dgl/PP_Sadle.svg){#PP_Sadle}        |
+|                                       | $\lambda_2 < 0, \lambda_1 < 0$  | stable   | Knoten 2    | ![](dgl/PP_stableNode.svg){#PP_stableNode}   |
+|                                       | $0 < \lambda_1, 0 < \lambda_2$  | instable | Knoten 2    | ![](dgl/PP_unstableNode.svg){#PP_unstableNode} |
+| $\mat{0  & 0 \\ 0 & \lambda_2}$       | $\lambda_1 = 0,\ \lambda_2 < 0$ | stabil   | Kamm        | ![](dgl/PP_stableLine.svg){#PP_stableLine}   |
+|                                       | $\lambda_1 = 0,\ \lambda_2 > 0$ | instable | Kamm        | ![](dgl/PP_unstableLine.svg){#PP_unstableLine} |
 
 
 
@@ -62,17 +62,18 @@ $$\vec x(t) = \left[ \ma 1 + (\ma A - \lambda \ma 1) \cdot t \right] \cdot \exp(
 
 | Matrix $\Lambda$ | Eigenwerte | $\vec x = 0$ | Name | Portrait|
 |------------|--------|--------|--------|-----------------|
-| $\mat{\lambda  & 0  \\  0  & \lambda}$ | $\lambda < 0$ | stabil   | Knoten 1   |  {% inlineimage PP_stableStarNode.svg %}    |
-|                                        | $\lambda > 0$ | instable | Knoten 1   |  {% inlineimage PP_unstableStarNode.svg %}  |
-| $\mat{\lambda  & 1  \\  0  & \lambda}$ | $\lambda < 0$ | stabil   | Knoten 3   |  {% inlineimage PP_stableWhirlNode.svg %}   |
-|                                        | $\lambda > 0$ | instable | Knoten 3   |  {% inlineimage PP_unstableWhirlNode.svg %} |
-| $\mat{0  & 0  \\  0  & 0 }$            | $\lambda = 0$ | stabil   | Ruheebene  |  {% inlineimage PP_stableZero.svg %}        |
-| $\mat{0  & 1  \\  0  & 0 }$            | $\lambda = 0$ | instable | Ruhegerade |  {% inlineimage PP_unstableZero.svg %} }    |
+| $\mat{\lambda  & 0  \\  0  & \lambda}$ | $\lambda < 0$ | stabil   | Knoten 1   |  ![](dgl/PP_stableStarNode.svg){#PP_stableStarNode}    |
+|                                        | $\lambda > 0$ | instable | Knoten 1   |  ![](dgl/PP_unstableStarNode.svg){#PP_unstableStarNode}  |
+| $\mat{\lambda  & 1  \\  0  & \lambda}$ | $\lambda < 0$ | stabil   | Knoten 3   |  ![](dgl/PP_stableWhirlNode.svg){#PP_stableWhirlNode}   |
+|                                        | $\lambda > 0$ | instable | Knoten 3   |  ![](dgl/PP_unstableWhirlNode.svg){#PP_unstableWhirlNode} |
+| $\mat{0  & 0  \\  0  & 0 }$            | $\lambda = 0$ | stabil   | Ruheebene  |  ![](dgl/PP_stableZero.svg){#PP_stableZero}        |
+| $\mat{0  & 1  \\  0  & 0 }$            | $\lambda = 0$ | instable | Ruhegerade |  ![](dgl/PP_unstableZero.svg){#PP_unstableZero} }    |
 
 
 
 ### 3. If Eigenvalues are complex and equal: $\Large \cx \lambda_1 = \cx \lambda^*_2$
-$$\cx \lambda_1 = \cx \lambda^*_2 = \alpha + \beta j \in \C$$ 
+
+$$\cx \lambda_1 = \cx \lambda^*_2 = \alpha + \beta j \in \C$$
 
 $$\ma Q' = \mat{\Re{\vec q_1} & \Im{\vec q_1}} = \mat{ \vec q_r & \vec q_j}$$
 
@@ -81,21 +82,18 @@ $$\begin{array}{rl} \vec x(t) & = x_{0,1} \cdot e^{\alpha t} \cdot \left[ \cos (
 
 | Matrix $\Lambda$ | Eigenwerte | $\vec x = 0$ | Name | Portrait|
 |------------|--------|--------|--------|-----------------|
-|$\mat{\alpha  & -\beta  \\  \beta  & \alpha}$ | $\alpha < 0,\ \beta \ne 0$ | stabil   | Strudel |  {% inlineimage PP_stableFocus.svg %} |
-|                                              | $\alpha > 0,\ \beta \ne 0$ | instable | Strudel |  {% inlineimage PP_unstableFocus.svg %} |
-|$\mat{0  & -\beta  \\  \beta  & 0}$           | $\alpha = 0,\ \beta \ne 0$ | stabil   | Wirbel  |  {% inlineimage PP_Whirl.svg %}  |
+|$\mat{\alpha  & -\beta  \\  \beta  & \alpha}$ | $\alpha < 0,\ \beta \ne 0$ | stabil   | Strudel |  ![](dgl/PP_stableFocus.svg){#PP_stableFocus} |
+|                                              | $\alpha > 0,\ \beta \ne 0$ | instable | Strudel |  ![](dgl/PP_unstableFocus.svg){#PP_unstableFocus} |
+|$\mat{0  & -\beta  \\  \beta  & 0}$           | $\alpha = 0,\ \beta \ne 0$ | stabil   | Wirbel  |  ![](dgl/PP_Whirl.svg){#PP_Whirl}  |
 
- 
+
 
 Zeitverlauf immer von $\vec q_j$ nach $\vec q_r$ bzw. von $\vec q_r$ nach $-\vec q_j$
 
-## Lösung für inhomogene DGL 
+## Lösung für inhomogene DGL
 Inhomogene DGL ($\vec v \ne 0$) mit singulärer Matrix $\ma A$ (nicht entkoppelbar):
 
 | Matrix $\Lambda$ | Eigenwerte | $\vec x = 0$ | Name | Portrait|
 |------------------|--------|--------|--------|--------|
-| $\mat{0  & 0  \\  0  & \lambda_2}$ | $\lambda_1 = 0, \lambda_2 < 0$ | instable | Kamm   |  {% inlineimage PP_unstableLine2.svg %}  |
-| $\mat{0  & 1  \\  0  & 0 }$        | $\lambda = 0$                  | instable | Knoten |  {% inlineimage PP_unstableZero2.svg %}  |
-
-
-
+| $\mat{0  & 0  \\  0  & \lambda_2}$ | $\lambda_1 = 0, \lambda_2 < 0$ | instable | Kamm   |  ![](dgl/PP_unstableLine2.svg){#PP_unstableLine2}  |
+| $\mat{0  & 1  \\  0  & 0 }$        | $\lambda = 0$                  | instable | Knoten |  ![](dgl/PP_unstableZero2.svg){#PP_unstableZero2}  |

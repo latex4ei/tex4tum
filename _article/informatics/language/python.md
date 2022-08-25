@@ -18,7 +18,7 @@ beer_l = 0.5
 sips_per_round = [3, 7, 4, 2]
 
 for sips in sips_per_round:
-	print("I drink {} sips.".format(sips)) 
+	print("I drink {} sips.".format(sips))
 	time.sleep( sips )
 	beer_l -= sips2liter( sips )
 	if beer_l <= 0:
@@ -39,7 +39,7 @@ for sips in sips_per_round:
 
 
 ## Operators
-* relations: `>`,  `<`,  `<=`,  `>=`,  `!=`, `==` 
+* relations: `>`,  `<`,  `<=`,  `>=`,  `!=`, `==`
 * boolean: `not`, `and`, `or`
 
 
@@ -63,7 +63,7 @@ for sips in sips_per_round:
 Use `@property`
 
 
-{% highlight python linenos %}
+```python
 class Car:
 	__init__(self, ownval):
 		self._myvar = ownval
@@ -71,9 +71,4 @@ class Car:
 	@property
 	def myvar(self):
 		return self._myvar
-{% endhighlight %}
-
-
-
-
-
+```

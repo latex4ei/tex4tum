@@ -1,6 +1,6 @@
 ---
 title: Uniform Resource Identifier (URI)
-tags: URI URL URN
+tags: [URI, URL, URN]
 ---
 A Uniform Resource Identifier (URI) is a string of characters used to identify a resource. Web-URLs, for example, are a common type of URIs.
 
@@ -18,9 +18,9 @@ scheme:[//[user[:password]@]host[:port]][/path][?query][#fragment]
 **Example**
 ```
          user    host    port
-         ┌┴─┐ ┌───┴───┐  ┌┴┐ 
+         ┌┴─┐ ┌───┴───┐  ┌┴┐
  https://john@github.com:123/repo/master/?color=true&mode=raw#L123
- └─┬─┘ └───────┬───────────┘└───┬───────┘└──────────┬───────┘└─┬─┘  
+ └─┬─┘ └───────┬───────────┘└───┬───────┘└──────────┬───────┘└─┬─┘
  scheme     authority          path               query      fragment
 ```
 
@@ -29,7 +29,7 @@ scheme:[//[user[:password]@]host[:port]][/path][?query][#fragment]
 ## URI Parser
 <input id="uri-input" type="text" oninput="parseURI(this)" placeholder="scheme:[//[user[:password]@]host[:port]][/path][?query][#fragment]" value="">
 
-<div id="uri-divout">
+<div id="uri-divout" markdown>
 <ul>
 <li>scheme: <code id="uri-scheme"></code></li>
 <li>authority: <code id="uri-authority"></code></br>
@@ -44,12 +44,12 @@ scheme:[//[user[:password]@]host[:port]][/path][?query][#fragment]
 
 
 ## Escape Characters
-<div class="row align-items-center">
-<div class="col-5">
+<div class="row align-items-center" markdown>
+<div class="col-5" markdown>
 <input id="uri-decoded" type="text" oninput="encChar(this)" placeholder="why encode?">
 </div>
-<div class="col-2"><span> ⇦ enc/dec ⇨ </span></div>
-<div class="col-5">
+<div class="col-2" markdown><span> ⇦ enc/dec ⇨ </span></div>
+<div class="col-5" markdown>
 <input id="uri-encoded" type="text" oninput="decChar(this)" placeholder="Why%20encode%3F">
 </div>
 </div>
@@ -105,7 +105,7 @@ function parseURI( text ){
 	var parser = document.createElement('a');
 	parser.href = text.value;
 	var authority = ""
-	if(parser.username != ""){ 
+	if(parser.username != ""){
 		authority = parser.username;
 		if(parser.password != ""){ authority += ":" + parser.password}
 		authority += "@";

@@ -186,7 +186,7 @@ function SVG_getOriginById(id_obj){
 
   switch(obj.tagName) {
     case 'circle':
-      ox = obj.cx.animVal.value; 
+      ox = obj.cx.animVal.value;
       oy = obj.cy.animVal.value;
       break;
     case 'rect':
@@ -196,7 +196,7 @@ function SVG_getOriginById(id_obj){
     default:
       box = obj.getBBox();
       ox = (box.x + box.width) / 2;
-      oy = (box.y + box.height) / 2;      
+      oy = (box.y + box.height) / 2;
   }
 
   return {x: ox, y: oy};
@@ -215,8 +215,8 @@ function SVG_getMouseAngleTo(id_anch){
   var matrix = anchor.getScreenCTM();
   pt = pt.matrixTransform(matrix);
 
-  var vx = event.pageX - pt.x
-  var vy = event.pageY - pt.y;
+  var vx = event.clientX - pt.x
+  var vy = event.clientY - pt.y;
 
   //use atan2 to get the angle; Atan2 returns radians
   var angleRadians=Math.atan2(vy, vx); // -vy because on screen y is inverted
@@ -235,13 +235,13 @@ function SVG_setLine(id_obj, x_s, y_s, x_t, y_t){
 function DSP_snap(val, snap_points, radius){
   result = val;
 
-  
+
   for( i = 0; i < snap_points.length; i++){
     if( Math.abs(val - snap_points[i]) < radius ){
       result = snap_points[i];
     }
   }
-  
+
   return result;
 }
 
@@ -261,7 +261,7 @@ function SVG_setCircleArc(id_obj, ox, oy, radius, angle){
 var snaps = [0, 90, 180, 270, 360];
 
 function unit_anim(){
-  
+
   angle = SVG_getMouseAngleTo('anchor');
   angle = DSP_snap(angle, snaps, 2);
 
@@ -289,10 +289,10 @@ function unit_anim(){
   // display... needs conversion
 
 
-  document.getElementById('text_alpha').innerHTML = 'α = '+(360 - angle).toFixed(0)+'°'; 
-  document.getElementById('text_sin').innerHTML = 'sin(α) = '+(-sin).toFixed(3); 
-  document.getElementById('text_cos').innerHTML = 'cos(α) = '+cos.toFixed(3); 
-  document.getElementById('text_tan').innerHTML = 'tan(α) = '+(-tan).toFixed(3); 
+  document.getElementById('text_alpha').innerHTML = 'α = '+(360 - angle).toFixed(0)+'°';
+  document.getElementById('text_sin').innerHTML = 'sin(α) = '+(-sin).toFixed(3);
+  document.getElementById('text_cos').innerHTML = 'cos(α) = '+cos.toFixed(3);
+  document.getElementById('text_tan').innerHTML = 'tan(α) = '+(-tan).toFixed(3);
 
 }
 

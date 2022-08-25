@@ -12,7 +12,7 @@ In Low-Power and Lossy Networks (LLN) we have additional routing requirements co
 * Adaptive routing: support for dynamic recreation of paths based on changing availability
 * Constraint-based routing: efficient use of limited resources (power, bandwidth)
 * Data Collection: for Sensor networks, the protocol needs to support efficient multipoint-to-point routing.
-* Scalability: LLNs are composed of a very large number of nodes (up to 1000) 
+* Scalability: LLNs are composed of a very large number of nodes (up to 1000)
 * Automatic Configuration: The protocol needs to autoconfigure without user interaction
 * Security: Physical control signals should always be authenticated and encrypted.
 
@@ -31,7 +31,7 @@ There are four types of control messages in RPL:
 * Destination Advertisement Object Acknowledgement (DAO-ACK)
 
 
-{% tabbox %}
+<div class="tabbox" markdown>
 
 ### DIS
 
@@ -107,7 +107,7 @@ There are four types of control messages in RPL:
 ```
 
 
-{% endtabbox %}
+</div>
 
 
 
@@ -122,14 +122,14 @@ There are three types of nodes in a RPL network:
 ### DODAG Formation
 The following interactive diagram visualizes the creation of the DODAG:
 
-{% include svg-object.html id="dodag" filename="rpl-v3.svg" %}
+![](rpl-v3.svg){#dodag}
 
 1. The root starts to periodically broadcast the information about the graph using the DIO message.
 2. All receiving nodes (=neighbor set) decide whether to join the DODAG.
-3. In case a node wants to join, it calculates its own rank based on the received DIO messages and an objective function. 
-	- When the rank is known, a node sends a DAO message to its determined parent. 
+3. In case a node wants to join, it calculates its own rank based on the received DIO messages and an objective function.
+	- When the rank is known, a node sends a DAO message to its determined parent.
 3. If the node is configured as a router, it will also start broadcasting DIO messages, with the updated information about the graph.
-4. A node that has selected a parant will also broadcast DIO messages including its own rank. 
+4. A node that has selected a parant will also broadcast DIO messages including its own rank.
 
 Estimating and broadcasting ranks ensures that loops are detected and avoided.
 
@@ -149,7 +149,7 @@ There are two types of repair procedures in case a link or node fails.
 
 
 * **Local repair**
-When a link or neighboring node failure is detected and the node has no other router in the ‘up’ direction, 
+When a link or neighboring node failure is detected and the node has no other router in the ‘up’ direction,
 
 In this case the graph may start to diverge from its optimal structure.
 

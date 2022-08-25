@@ -14,7 +14,7 @@ AES operates on block sizes of $32 \times 32$ bits.
 
 ## Algorithm
 
-{% include figure.html width="25em" filename="aes-128.svg" description="AES 128 High Level Overview"%}
+![AES 128 High Level Overview](aes-128.svg){ width="25em"}
 
 
 1. **Key Expansion:** Create individual 128bit round keys from the cipher key
@@ -35,7 +35,7 @@ AES operates on block sizes of $32 \times 32$ bits.
 
 <!--
 ### MixColumns
-$$\vect{ b_{0,j} \\ b_{1,j} \\ b_{2,j} \\ b_{3,j} } = \mat{2&3&1&1 \\ 1&2&3&1 \\ 1&1&2&3 \\ 3&1&1&2} \cdot \vect{ a_{0,j} \\ a_{1,j} \\ a_{2,j} \\ a_{3,j} }$$ 
+$$\vect{ b_{0,j} \\ b_{1,j} \\ b_{2,j} \\ b_{3,j} } = \mat{2&3&1&1 \\ 1&2&3&1 \\ 1&1&2&3 \\ 3&1&1&2} \cdot \vect{ a_{0,j} \\ a_{1,j} \\ a_{2,j} \\ a_{3,j} }$$
 with the columns $j \in \{0,1,2,3\}$
 -->
 
@@ -43,23 +43,23 @@ with the columns $j \in \{0,1,2,3\}$
 
 ## Modes of Operation
 
-{% tabbox %}
+<div class="tabbox" markdown>
 
 ### ECB
 **Electronic Codebook (ECB)**
 
 The message is divided into blocks, and each block is encrypted separately.
 
-{% include figure.html width="40em" filename="encmode_ecb.svg" %}
-{% include figure.html width="40em" filename="decmode_ecb.svg" %}
+![Electronic Codebook (ECB) Encryption](encmode_ecb.svg){ width="40em"}
+![Electronic Codebook (ECB) Decryption](decmode_ecb.svg){ width="40em"}
 
 ### CBC
 **Cipher Block Chaining (CBC)**
 
 Each block of plaintext is XORed with the previous ciphertext block before being encrypted.
 
-{% include figure.html width="40em" filename="encmode_cbc.svg" %}
-{% include figure.html width="40em" filename="decmode_cbc.svg" %}
+![](encmode_cbc.svg){ width="40em"}
+![](decmode_cbc.svg){ width="40em"}
 
 
 ### CFB
@@ -67,9 +67,9 @@ Each block of plaintext is XORed with the previous ciphertext block before being
 
 A close relative of CBC. Transforms a block cipher into a self-synchronizing stream cipher.
 
-{% include figure.html width="40em" filename="encmode_cfb.svg" %}
+![](encmode_cfb.svg){ width="40em"}
 
-{% include figure.html width="40em" filename="decmode_cfb.svg" %}
+![](decmode_cfb.svg){ width="40em"}
 
 
 ### OFB
@@ -77,8 +77,8 @@ A close relative of CBC. Transforms a block cipher into a self-synchronizing str
 
 Transforms a block cipher into a synchronous stream cipher. It generates keystream blocks, which are then XORed with the plaintext blocks to get the ciphertext.
 
-{% include figure.html width="40em" filename="encmode_ofb.svg" %}
-{% include figure.html width="40em" filename="decmode_ofb.svg" %}
+![](encmode_ofb.svg){ width="40em"}
+![](decmode_ofb.svg){ width="40em"}
 
 
 ### CTR
@@ -86,22 +86,22 @@ Transforms a block cipher into a synchronous stream cipher. It generates keystre
 
 Counter mode turns a block cipher into a stream cipher. It generates the next keystream block by encrypting successive values of a "counter".
 
-{% include figure.html width="40em" filename="encmode_ctr.svg" %}
-{% include figure.html width="40em" filename="decmode_ctr.svg" %}
+![](encmode_ctr.svg){ width="40em"}
+![](decmode_ctr.svg){ width="40em"}
 
 
-{% endtabbox %}
+</div>
 
 
 ## Test Vectors
 
 ```
-mode = ECB-AES128.Encrypt 
+mode = ECB-AES128.Encrypt
 in   = 6bc1bee22e409f96e93d7e117393172a
 key  = 2b7e151628aed2a6abf7158809cf4f3c
-out  = 3ad77bb40d7a3660a89ecaf32466ef97 
+out  = 3ad77bb40d7a3660a89ecaf32466ef97
 
-mode = CBC-AES128.Encrypt 
+mode = CBC-AES128.Encrypt
 in   = 6bc1bee22e409f96e93d7e117393172a
 key  = 2b7e151628aed2a6abf7158809cf4f3c
 iv   = 000102030405060708090a0b0c0d0e0f
@@ -115,4 +115,3 @@ out  = 7649abac8119b246cee98e9b12e9197d
 * [NIST Special Publication 800-38A: AES Test Vectors](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-38a.pdf)
 
 * [Wikipedia: Block Cipher Modes](https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation)
-

@@ -24,7 +24,7 @@ Popular curves:
 
 
 ## Security
-The elliptic curve discrete logarithm is the hard problem in ECC. 
+The elliptic curve discrete logarithm is the hard problem in ECC.
 
 
 Breaking a 228-bit RSA key requires less energy than it takes to boil a teaspoon of water. Comparatively, breaking a 228-bit elliptic curve key requires enough energy to boil all the water on earth.
@@ -36,11 +36,3 @@ Breaking a 228-bit RSA key requires less energy than it takes to boil a teaspoon
 
 
 * [SafeCurves: choosing safe curves for elliptic-curve cryptography](https://safecurves.cr.yp.to/)
-
-
-
-
-
-
-
-

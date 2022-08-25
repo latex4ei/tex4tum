@@ -30,4 +30,3 @@ A hash function that can be computed by a human completely mentally.
 
 ## References
 * Manuel Blum, Towards Human Computable Passwords
-

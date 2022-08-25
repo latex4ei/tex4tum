@@ -4,7 +4,7 @@ tags: byzantine
 ---
 
 
-A Byzantine fault is any fault that presents different symptoms to different observers. 
+A Byzantine fault is any fault that presents different symptoms to different observers.
 Byzantine faults imply no restrictions, which means that a failed node can stop sending data or generate arbitrary data.
 As a result, a node can also pretend to send correct data, while in fact it is sending incorrect data.
 
@@ -29,6 +29,3 @@ traditional BFT algorithms use multiple rounds of explicit votes to achieve cons
 * bitcoin is a peer-to-peer digital currency system with BFT
 * SAFEbus can achieve Byzantine fault tolerance
 * UpRight
-
-
-

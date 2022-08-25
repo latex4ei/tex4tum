@@ -1,6 +1,6 @@
 ---
 title: Datastructures
-tags: 
+tags: [array, stack, queue, tree, map]
 ---
 
 ## Primitive Data Structures
@@ -45,7 +45,7 @@ A stack is a LIFO storage. Elements are added (push) and the latest added elemen
 A stack is a FIFO storage. Elements are added (push) and the oldest added element is removed first (po)
 
 ### Hash Tables
-A hash table can grow dynamically put performs better than a list. Elements are stored as key-value pair. 
+A hash table can grow dynamically put performs better than a list. Elements are stored as key-value pair.
 
 ### Associative array = Map = Dictionary
 An associative array is an abstract data type composed of (key, value) pairs, such that each possible key appears at most once in the collection.
@@ -55,11 +55,3 @@ A tree is a hierarchical data structure. It consists of nodes and each node can 
 
 ### Graph
 A graph is an abstract data type that is meant to implement the undirected graph and directed graph concepts from mathematics.
-
-
-
-
-
-
-
-

@@ -5,7 +5,7 @@ tags: ["strahlensatz"]
 
 ## Intercept Theorem
 
-{% include figure.html width="25em" filename="intercept_theorem.svg" description="Strahlensatz" %}
+![Strahlensatz](intercept_theorem.svg){ width="25em"}
 
 Edges with same letter are equal, angles with the same color are equal.
 

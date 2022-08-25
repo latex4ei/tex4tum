@@ -35,8 +35,7 @@ Methods of a base type must be applicable and behave the same for derived types 
 
 The LSP is important to avoid problems with polymorphism.
 
-{% example %}
+### Example of LSP
 For example, if a type wombat is derived from a type animal, then every behavior that applies class-wide to an animal must also apply in the same way to a wombat.
 
 A typical example of a violation of the principle is a square type derived from a rectangle type. A possible precondition of a rectangle type would be that width and height must be positive, however, for a square type the precondition is strengthened because width and height must be the same.
-{% endexample %}

@@ -4,7 +4,7 @@ title: Binomial Distribution
 
 The Binomial Distribution is the discrete probability distribution of the number of successes in a sequence of repeated Bernoulli trials, such as repeated coin tosses.
 
-<div class="float-end">
+<div class="float-end" markdown>
 
 | Parameters  |                           |
 |-------------|---------------------------|
@@ -24,6 +24,21 @@ $$f(k, n, p) = \P( X = k ) = \binom{n}{k} p^k (1-p)^{n-k}$$
 with the number of trials $n$, the number of successes $k$, and the success probability $p$.
 
 
+![Binomial Distribution B(k, n, p) over k for n = <span id="bd_n">30</span> and p = <span id="bd_p">0.3</span>](binomial.svg){#SVG_obj}
+
+
+<div class="row" markdown>
+  <div class="col" markdown>
+  <label>Input for p</label><br>
+  <input type="range" id="p_range" min="0" max="10" value="3" list="tickmarks" oninput="update(this)"><br><br>
+  </div>
+  <div class="col" markdown>
+  <label>Input for n</label><br>
+  <input type="range" id="n_range" min="0" max="40" value="30" step="1" list="tickmarks" oninput="update(this)">
+  </div>
+</div>
+
+
 ### Explanation of the Terms
 The term $p^k$ gives us the probability to get exactly $k$ successes in a row of $k$ trials. Since we have $n$ trials and not $k$, the term $(1-p)^{n-k}$ gives us the probability to get only misses (or failures) for the remaining $n-k$ trials. Since the successes can appear anywhere among the $n$ trials, we multiply by the term $\binom{n}{k}$, which corresponds to the number of possible permutations of $k$ successes within the $n$ trials.
 
@@ -39,18 +54,6 @@ $$P(k=7, n=10, p=0.5) = \binom{10}{7} 0.5^7 (1-0.5)^{10-7} = 0.117$$
 
 
 
-{% include svg-object.html id="SVG_obj" filename="binomial.svg" description='Binomial Distribution B(k, n, p) over k for n = <span id="bd_n">30</span> and p = <span id="bd_p">0.3</span>' %}
-
-<div class="row">
-  <div class="col">
-  <label>Input for p</label><br>
-  <input type="range" id="p_range" min="0" max="10" value="3" list="tickmarks" oninput="update(this)"><br><br>
-  </div>
-  <div class="col">
-  <label>Input for n</label><br>
-  <input type="range" id="n_range" min="0" max="40" value="30" step="1" list="tickmarks" oninput="update(this)">
-  </div>
-</div>
 
 
 
@@ -80,7 +83,7 @@ Note that in the urn model, $n$ is not the number of balls in the urn but the nu
 
 * **Sum of Binomials:** The sum of two binomial distributions is again a binomial distribution. If $X ~ B(n, p)$ and $Y ~ B(m, p)$ are independent binomial variables with the same probability $p$, then $X + Y ~ B(n+m, p)$
 
-* **Normal Approximation:** If $n$ is large enough, $B(n, p)$ can be approximated as normal distribution $\mathcal{N}(np,\; np(1-p))$. As a rule of thumb, $n$ is large enough if 
+* **Normal Approximation:** If $n$ is large enough, $B(n, p)$ can be approximated as normal distribution $\mathcal{N}(np,\; np(1-p))$. As a rule of thumb, $n$ is large enough if
 $n \gt 9\left(\frac{1-p}{p}\right)\ \text{and}\ n \gt 9\left(\frac{p}{1-p}\right)$
 
 * The binomial distribution is the generalization of the Bernoulli trial, which can be expressed as a binomial distribution with $n = 1$.
@@ -90,7 +93,7 @@ $n \gt 9\left(\frac{1-p}{p}\right)\ \text{and}\ n \gt 9\left(\frac{p}{1-p}\right
 
 ## Implementations
 
-{% tabbox %}
+<div class="tabbox" markdown>
 
 #### Python
 
@@ -111,7 +114,7 @@ plt.show()
 #### Matlab
 
 ```matlab
-N = 10; 
+N = 10;
 p = 0.5;
 
 x = 0:N;
@@ -130,13 +133,13 @@ N <- 20
 p <- 0.5
 
 x <- 0:N
-y <- dbinom(x, size=N, prob=0.2) 
+y <- dbinom(x, size=N, prob=0.2)
 
 plot(x, y)
 ```
 
 
-{% endtabbox %}
+</div>
 
 
 
@@ -169,7 +172,7 @@ function update(slider){
     Dist_values[0] = slider.value;
   }
   var n = Dist_values[0];
-  var p = Dist_values[1];  
+  var p = Dist_values[1];
   document.getElementById('bd_p').innerText = p
   document.getElementById('bd_n').innerText = n
   SVG_obj.getElementById('legend_1').querySelector("text").innerHTML='n= '+n+', p= '+p
@@ -198,8 +201,10 @@ function binom(n, k) {
 function binompmf(k, n, p){ return ( binom(n, k) * Math.pow(p, k) * Math.pow(1.0 - p, n - k) ); }
 
 
+SVG_obj = document.querySelector("#SVG_obj svg");  // try inline
+SVG_Scales = get_scale(SVG_obj);
 document.getElementById("SVG_obj").addEventListener("load",function(){
-    SVG_obj = document.getElementById("SVG_obj").contentDocument; // get inner DOM
+    SVG_obj = document.getElementById("SVG_obj").contentDocument  // get inner DOM
     SVG_Scales = get_scale(SVG_obj);
 }, false);
 </script>

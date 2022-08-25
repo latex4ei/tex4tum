@@ -18,15 +18,16 @@ C/Ada Notation: `0x..` / `16#..` (hex), `0b..` / `2#..` (bin)
 
 Number stored as unsigned 32bit Integer at address 0x1000:
 
-| Endian | 0x1000 | 0x1001 | 0x1002 | 0x1003 |
-|----|----:|----:|----:|----:|
+
+| Endian | `0x1000` | `0x1001` | `0x1002` | `0x1003` |
+|--------|---------:|---------:|---------:|---------:|
 | Little (bin) | <span id="le_b1_b">11111111</span> |  <span id="le_b2_b">00000000</span> | <span id="le_b3_b">00000000</span> | <span id="le_b4_b">00000000</span> |
 | Little (hex) | <span id="le_b1_h">FF</span> |  <span id="le_b2_h">00</span> | <span id="le_b3_h">00</span> | <span id="le_b4_h">00</span> |
 | Big (bin) | <span id="be_b1_b">00000000</span> | <span id="be_b2_b">00000000</span> | <span id="be_b3_b">00000000</span> | <span id="be_b4_b">11111111</span> |
 | Big (hex) | <span id="be_b1_h">00</span> | <span id="be_b2_h">00</span> | <span id="be_b3_h">00</span> | <span id="be_b4_h">FF</span> |
 
 
-TODO Float umwandlung mit precision fehler
+<!-- TODO Float umwandlung mit precision fehler -->
 
 
 
@@ -42,7 +43,7 @@ TODO Float umwandlung mit precision fehler
 | U$x$ | 0 | .. | $2^x - 1$ |
 | I8 | -128 | .. | 127 |
 | I16 | −32768	| .. | 32767 |
-| I32 | -2 147 483 648 | .. | 2.147.483.647 |
+| I32 | -2 147 483 648 | .. | 2.147.483.647 |
 | I$x$ | $-2^{(x-1)}$ | .. | $2^{(x-1)} - 1$ |
 
 Useful approximations:

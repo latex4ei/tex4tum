@@ -1,0 +1,111 @@
+# Pandoc Config File for MkDocs
+# See: https://pandoc.org/MANUAL.html#defaults-files
+
+
+
+data-dir: ${.}/t4t/pd  # set data dir
+
+
+reader: markdown+raw_tex+gfm_auto_identifiers+citations+markdown_in_html_blocks
+# reader: gfm-raw_html
+writer: markdown-simple_tables-multiline_tables-grid_tables-raw_attribute-fenced_divs-bracketed_spans
+
+
+
+# Output options
+
+
+## Debugging  verbosity = ERROR, WARNING, or INFO
+verbosity: WARNING
+fail-if-warnings: false
+dump-args: false
+ignore-args: false
+trace: false
+
+
+
+
+# Reader Options
+default-image-extension: '.svg'
+
+
+## All media in one folder
+extract-media: 'res/pd-media'  # test this
+
+
+## Filter
+filters:
+  - "pd-info-cards.lua"
+  - "pd-acronyms.lua"
+  - "pd-dia.lua"
+  - "pd-auto-links.lua"
+  - "pd-math-legends.lua"
+  - pandoc-xnos
+  - "pd-include-img.lua"  # use plugin mkdocs-plugin-inline-svg? → not working
+  - "mkdocs-fixes.lua"
+
+
+
+resource-path:
+  - '.'
+  - 'res'
+  - 'res/img'
+  - 'res/img/dynamic-images'
+  - 'res/img/content-images'
+  - 'res/img/content-images/electrical'
+  - 'res/img/content-images/informatics'
+  - 'res/img/content-images/math'
+  - 'res/cindyJS'
+
+# metadata values specified here are parsed as literal
+# string text, not markdown:
+metadata:
+
+  # pandoc-plot config file in the same dir
+  #plot-configuration: ${.}/plot-config.yml
+
+  # xnos-filter options
+  xnos-warning-level: 1
+  fignos-plus-name: "Figure "
+  fignos-caption-name: ""
+  tablenos-caption-name: ""
+
+  # pd-code-dia options
+  tmpdir: "./tmp"
+  builddir: "./build"
+  reldiadir: "res/dia"
+
+
+
+
+# Gneral Writer Options
+
+
+## Comments
+strip-comments: true
+
+
+## Table of Contents
+# table-of-contents: true
+toc-depth: 2
+number-sections: false
+
+## Listings
+highlight-style: pygments
+
+
+## Includes
+# Note that these take files, not their contents:
+# include-before-body: []
+# include-after-body: []
+# include-in-header: []
+
+
+## Citations (call --citeproc at the end of CLI)
+csl: ieee
+citeproc: true
+cite-method: biblatex
+
+
+html-math-method:
+  method: katex

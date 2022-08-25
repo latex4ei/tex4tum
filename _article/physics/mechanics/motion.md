@@ -27,4 +27,3 @@ Motion is a change in position of an object over time.
 |Kraft/Moment |  $\vec F = \dot{\vec p} = m \vec a$ |   $\vec M = \dot{\vec L} = \ma \Theta \vec \alpha = \vec r \times \vec F$ |
 |Energie |  $E_{\ir kin}=\frac12mv^2$ |  $E_{\ir rot}=\frac12 \Theta \omega ^2$|
 |Leistung |  $P = \vec F \bdot \vec v$ |  $P = \vec M \bdot \vec \omega$|
-

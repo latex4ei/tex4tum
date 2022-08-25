@@ -40,6 +40,3 @@ Tests whether the means of independent sample sets are significantly different.
 
 * **Student’s t-test:** Useful for two sample sets.
 * **Analysis of Variance Test (ANOVA):** Useful for two *or more* sample sets.
-
-
-

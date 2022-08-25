@@ -150,5 +150,3 @@
 *[WLAN]: Wireless Local Area Network
 
 *[YAML]: YAML Ain't Markup Language
-
-

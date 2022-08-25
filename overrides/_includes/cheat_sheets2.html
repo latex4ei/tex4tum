@@ -1,0 +1,43 @@
+
+<!-- <p><a href="./res/sheets/(.*?)"[^>]+>(.*?)</a>(?: ?<a href="(.*?)")? -->
+<!-- {% include sheet.html filename="extern/(.*?)" description="]+>(.*?)" ghlink="" %}(?: ?<a href="(.*?)")? -->
+<!-- {% include sheet.html filename="\1" description="\2" ghlink="\3" %} -->
+
+
+<div class="row">
+    <div class="col-3">
+        Allgemein
+    </div>
+    <div class="col-9">
+
+
+{% for sheet in site.static_files %}
+{% if sheet.path contains 'res/sheets/' %}
+    {% assign ghfull = 'https://github.com/latex4ei/' | append: sheet.name %}
+        <p>
+        <a href="{{ ghfull }}" target="_blank"> <i class="fab fa-github"></i></a>
+        <a href="{{ sheet.path }}" >{{ sheet.name }}</a><span class="float-end ms--3">{{ sheet.modified_time | date: "%Y-%m-%d" }}</span>
+        </p>
+{% endif %}
+{% endfor %}
+
+
+    </div>
+
+    <div class="col-md-3">
+        Extern
+    </div>
+    <div class="col-md-9">
+{% for sheet in site.static_files %}
+{% if sheet.path contains 'res/sheets/extern/' %}
+    {% assign ghfull = 'https://github.com/latex4ei/' | append: sheet.name %}
+        <p>
+        <a href="{{ ghfull }}" target="_blank"> <i class="fab fa-github"></i></a>
+        <a href="{{ sheet.path }}" >{{ sheet.name }}</a><span class="float-end ms--3">{{ sheet.modified_time | date: "%Y-%m-%d" }}</span>
+        </p>
+{% endif %}
+{% endfor %}
+
+    </div>
+
+</div>

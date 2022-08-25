@@ -10,15 +10,15 @@ the layer pattern is an architectural software pattern.
    +--+----hrl-----------hql----+--+
       |     ^             ^     |
       |     |             |     |
-      v     |             |     v  
+      v     |             |     v
    +-hqu----+-------------+----hru-+
    |  v     |    Layer    |     v  |
-   | pqd   pru           pqu   prl | 
+   | pqd   pru           pqu   prl |
    |  |     ^             ^     |  |
    +--+----hrl-----------hql----+--+
-      |     ^             ^     | 
+      |     ^             ^     |
       |     |             |     |
-      v     |             |     v 
+      v     |             |     v
    +-hqu----+-------------+----hru-+
    |              Lower            |
 
@@ -29,4 +29,3 @@ Legend:
 
         Figure 1: Layer Model
 ```
-

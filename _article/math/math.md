@@ -4,4 +4,3 @@ icon: calculator
 ---
 
 {{ FOLDER_TOC }}
-
