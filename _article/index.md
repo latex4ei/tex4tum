@@ -39,7 +39,7 @@ TeX4TUM is an Interactive Knowledge Platform for engineers covering the followin
 :::
 
 :::{.col markdown=""}
-[⚡ Electriconics](electronics){.button}
+[⚡ Electronics](electronics){.button}
 :::
 
 :::{.col markdown=""}

@@ -34,15 +34,11 @@ tite: Electrical Component
 
 
 ## Three Terminal
-* [Transistor](transistor)
+* [Transistor](/transistor)
 
 ## More Terminal
-* [Op-Amp](op-amp)
+* [Op-Amp](/op-amp)
 
 
 
 
-
-
-
-{{ FOLDER_TOC }}
