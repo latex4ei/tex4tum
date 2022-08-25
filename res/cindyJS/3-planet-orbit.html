@@ -1,0 +1,109 @@
+
+<html>
+
+<script src="https://cindyjs.org/dist/v0.8/Cindy.js" integrity="sha256-GVFcxFrj3m64JQPL5NZv9MPbCGHnxWWPhKLsnHvaK+Q=" crossorigin="anonymous"></script>
+
+
+<script id="csdraw" type="text/x-cindyscript">
+a=simulation().pe;
+b=A.ke;
+c=E.ke;
+d=C.ke;
+gsave();
+translate((0,-0.5));
+drawtext((-1.7,0),a);
+drawtext((-1.7,0.1),b);
+drawtext((-1.7,0.2),c);
+drawtext((-1.7,0.3),d);
+drawtext((-1.7,0.4),a+b+c+d);
+s=0.4;
+z=0;
+pb=b*s;
+pc=(b+c)*s;
+pd=(b+c+d)*s;
+o=0;
+r=-1.3;
+
+linesize(2);
+draw((r,0),(r-a*s,0),color->(1,1,1));
+draw((r,0.1),(r+b*s,0.1),color->(1,0.5,0.5));
+draw((r,0.2),(r+c*s,0.2),color->(0.5,0.5,1));
+draw((r,0.3),(r+d*s,0.3),color->(0.5,1,0.5));
+
+translate((0,0.6));
+draw((-2,z),(-2,pb),color->(1,0.5,0.5));
+draw((-2,pb),(-2,pc),color->(0.5,0.5,1));
+draw((-2,pc),(-2,pd),color->(0.5,1,0.5));
+draw((-2,pd),(-1.9,pd),color->(0.5,0.5,0.5),size->1);
+draw((-1.9,pd),(-1.9,pd+a*s),color->(1,1,1));
+pointcolor((0.5,0.5,0.5));
+draw((-2,z));
+draw((-2,pb));
+draw((-2,pc));
+draw((-2,pd));
+draw((-1.9,pd));
+draw((-1.9,pd+a*s));
+
+
+grestore();
+</script>
+    <script type="text/javascript">
+var cdy = CindyJS({
+  scripts: "cs*",
+  defaultAppearance: {
+    dimDependent: 0.7,
+    fontFamily: "sans-serif",
+    lineSize: 1,
+    pointSize: 5.0,
+    textsize: 12.0
+  },
+  angleUnit: "°",
+  geometry: [
+    {name: "A", type: "Free", pos: [-0.995492, -0.0, 1.0], color: [1.0, 0.0, 0.0], alpha: 0.8999999761581421, drawtrace: true},
+    {name: "B", type: "Free", pos: [4.0, -1.5897989414838583, -2.9775418902924695], color: [1.0, 0.0, 0.0], alpha: 0.8999999761581421, size: 0.0},
+    {name: "a", type: "Segment", color: [0.0, 0.0, 0.0], args: ["A", "B"], alpha: 0.8999999761581421, arrowshape: "jet", arrowsides: "==>", arrowsize: 1.0, arrowposition: 1.0},
+    {name: "C", type: "Free", pos: [0.995492, -0.0, 1.0], color: [0.0, 1.0, 0.0], alpha: 0.8999999761581421, drawtrace: true},
+    {name: "D", type: "Free", pos: [0.6415623347014248, 0.5283249587311792, 1.0122671442766231], color: [1.0, 0.0, 0.0], alpha: 0.8999999761581421, size: 0.0},
+    {name: "b", type: "Segment", color: [0.0, 0.0, 0.0], args: ["C", "D"], alpha: 0.8999999761581421, arrowshape: "jet", arrowsides: "==>", arrowsize: 1.0, arrowposition: 1.0},
+    {name: "E", type: "Free", pos: [-0.004245833523907869, 0.0030525618274289167, 0.998324598887816], color: [0.0, 0.0, 1.0], alpha: 0.8999999761581421, drawtrace: true},
+    {name: "F", type: "Free", pos: [2.5542983617633466, -4.0, 3.6648824436869316], color: [1.0, 0.0, 0.0], alpha: 0.8999999761581421, size: 0.0},
+    {name: "c", type: "Segment", color: [0.0, 0.0, 0.0], args: ["E", "F"], alpha: 0.8999999761581421, arrowshape: "jet", arrowsides: "==>", arrowsize: 1.0, arrowposition: 1.0},
+    {name: "Text0", type: "Text", color: [0.0, 0.0, 0.0], args: ["A"], alpha: 0.8999999761581421, visible: false, text: "@$\"A\"", dock: {to: "A", offset: [10.0, 10.0]}},
+    {name: "Text1", type: "Text", color: [0.0, 0.0, 0.0], args: ["C"], alpha: 0.8999999761581421, visible: false, text: "@$\"C\"", dock: {to: "C", offset: [10.0, 10.0]}},
+    {name: "Text2", type: "Text", color: [0.0, 0.0, 0.0], args: ["E"], alpha: 0.8999999761581421, visible: false, text: "@$\"E\"", dock: {to: "E", offset: [10.0, 10.0]}}
+  ],
+  behavior: [
+    {type: "Environment", springstrength: 0.2, newton: true},
+    {type: "Motor", speed: 0.02},
+    {geo: ["A"], type: "Mass"},
+    {geo: ["a", "A", "B"], type: "Velocity"},
+    {geo: ["C"], type: "Mass"},
+    {geo: ["b", "C", "D"], type: "Velocity"},
+    {geo: ["E"], type: "Mass"},
+    {geo: ["c", "E", "F"], type: "Velocity"}
+  ],
+  animation: {
+    autoplay: false,
+    controls: true,
+    speed: 0.03125,
+    speedRange: [0.0, 0.0625],
+    accuracy: 1
+  },
+  autoplay: false,
+  animcontrols: true,
+  ports: [{
+    id: "CSCanvas",
+    width: 765,
+    height: 445,
+    transform: [{visibleRect: [-2.275265306122449, 1.3714285714285714, 1.721469387755102, -0.953469387755102]}],
+    background: "#fafafa"
+  }],
+  csconsole: false,
+  cinderella: {build: 1901, version: [2, 9, 1901]}
+});
+    </script>
+
+
+    <div id="CSCanvas"></div>
+
+</html>

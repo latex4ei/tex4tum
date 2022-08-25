@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   id="svg2040"
+   version="1.1"
+   viewBox="0 0 9.5625 3.186039"
+   height="3.186039mm"
+   width="9.5625mm">
+  <defs
+     id="defs2034" />
+  <metadata
+     id="metadata2037">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(-113.42793,-159.09469)"
+     id="layer1">
+    <g
+       transform="matrix(0.26458333,0,0,0.26458333,160.39668,134.43845)"
+       id="g5584">
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.70866144;stroke-miterlimit:11.19999981;stroke-dasharray:none;stroke-opacity:1"
+         d="m -164.76378,104.52758 8.85827,-5.315004 -8.85827,-5.31493 z"
+         id="path17003-5-1-3-6-80" />
+      <path
+         id="path1450-1-5-3-4-1-0-5-832"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.70866144;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:7.69999981;stroke-dasharray:none;stroke-opacity:1"
+         d="m -141.73228,99.212576 h -14.17323" />
+      <path
+         id="path1450-1-5-3-4-1-0-5-5-7"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.70866144;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:7.69999981;stroke-dasharray:none;stroke-opacity:1"
+         d="m -164.76378,99.212576 h -12.40157" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:1.41732287;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m -155.90551,105.23067 1e-5,-11.33306 h -3.54331"
+         id="path5713" />
+    </g>
+  </g>
+</svg>

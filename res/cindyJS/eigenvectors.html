@@ -1,0 +1,171 @@
+<script src="https://cindyjs.org/dist/v0.8/Cindy.js" integrity="sha256-GVFcxFrj3m64JQPL5NZv9MPbCGHnxWWPhKLsnHvaK+Q=" crossorigin="anonymous"></script>
+<script id="csinit" type="text/x-cindyscript">
+niceguess(a):=(
+  a="{"+a+"}";
+  a=replace(a,"*sqrt(1)","");
+  a=replace(a,"sqrt","\sqrt");
+  a=replace(a,"*","}\cdot{");
+  a=replace(a,"(","{");
+  a=replace(a,")","}");
+  a=replace(a,"-","}-{");
+  a=replace(a,"+","}+{");
+  a=replace(a,"/","\over ");
+);
+
+
+;
+</script>
+<script id="csdraw" type="text/x-cindyscript">
+
+eps=0.0000000001;
+
+m=transpose((D.xy,E.xy));
+v=F.xy;
+
+G.xy=(m*v);
+
+ev=eigenvectors(m);
+evt=transpose(ev);
+ew=eigenvalues(m);
+
+if(|im(ew_1)|<eps,
+  if(|ew_1-ew_2|>eps,
+    draw(100*evt_1,-100*evt_1,color->(0,.6,0),alpha->0.5);
+    draw(100*evt_2,-100*evt_2,color->(0,.6,0),alpha->0.5),
+
+    if(|evt_1*evt_2|<eps,
+
+       fillpoly(((-100,-100),(-100,100),(100,100),(100,-100)),color->(0,0.6,0),alpha->0.2),
+
+       draw(100*evt_2,-100*evt_2,color->(0,.6,0),alpha->0.5,size->4)
+    )
+
+  )
+);
+
+
+fillpoly(((4.5,-4.5),(10.5,-4.5),(10.5,4.5),(4.5,4.5)),color->(1,1,1));
+drawall(cycle(((4.5,-4.5),(10.5,-4.5),(10.5,4.5),(4.5,4.5))),color->(0,0,0));
+
+draw((4.5,2.5),(10.5,2.5));
+draw((4.5,-.5),(10.5,-.5));
+draw((4.5,-3.5),(10.5,-3.5));
+
+drawtext((5,4),"Matrix:  $f_A(e_1)=v_1\quad f_A(e_2)=v_2$",size->18);
+
+drawtext((5,3.1),
+  "$A=\begin{pmatrix}"+
+  format(D.x,2)+"&"+format(E.x,2)+"\\"+
+  format(D.y,2)+"&"+format(E.y,2)+
+  "\end{pmatrix}$"
+,size->16);
+
+
+drawtext((5,2),"1. Eigenvector/Eigenvalue:",size->18);
+drawtext((5,1),
+  "$ev_1=\begin{pmatrix}"+
+  format(ev_1_1,2)+"\\"+format(ev_2_1,2)+
+  "\end{pmatrix}$"
+,size->16);
+
+drawtext((5,0),
+  "$\lambda_1="+niceguess(ew_1)+"$"
+,size->16);
+
+drawtext((5,-1),"2. Eigenvector/Eigenvalue:",size->18);
+drawtext((5,-2),
+  "$ev_2=\begin{pmatrix}"+
+  format(ev_1_2,2)+"\\"+format(ev_2_2,2)+
+  "\end{pmatrix}$"
+,size->16);
+
+drawtext((5,-3),
+  "$\lambda_2="+niceguess(ew_2)+"$"
+,size->16);
+
+
+if(|im(ew_1)|<eps,
+  if(|ew_1-ew_2|>eps,
+    drawtext((5,-4.1),"Two real Eigenvalues") ,
+    if(|evt_1*evt_2|<eps,
+
+       drawtext((5,-4.1),"2-dimensional Eigenspace") ,
+
+       drawtext((5,-4.1),"Double Eigenvalues")
+    )
+
+  ), drawtext((5,-4.1),"Complex Eigenvalues",color->(0.8,0,0))
+);
+
+;
+</script>
+    <script type="text/javascript">
+var cdy = CindyJS({
+  scripts: "cs*",
+  defaultAppearance: {
+    dimDependent: 0.7,
+    fontFamily: "sans-serif",
+    lineSize: 1,
+    pointSize: 5.0,
+    textsize: 12.0
+  },
+  angleUnit: "°",
+  geometry: [
+    {name: "A", type: "Free", pos: [0.0, -0.0, 4.0], color: [0.0, 0.0, 0.0], pinned: true, labeled: true, textsize: 17.0, size: 2.0, printname: "O"},
+    {name: "B", type: "Free", pos: [4.0, -0.0, 4.0], color: [1.0, 0.0, 0.0], pinned: true, labeled: true, textsize: 17.0, size: 0.0, printname: "$e_1$"},
+    {name: "a", type: "Segment", color: [0.0, 0.0, 0.0], args: ["A", "B"], alpha: 0.8999999761581421, size: 3, arrowshape: "jet", arrowsides: "==>", arrowsize: 1.2000000000000002, arrowposition: 1.0},
+    {name: "C", type: "Free", pos: [0.0, -4.0, -4.0], color: [1.0, 0.0, 0.0], pinned: true, labeled: true, textsize: 17.0, size: 0.0, printname: "$e_2$"},
+    {name: "b", type: "Segment", color: [0.0, 0.0, 0.0], args: ["A", "C"], alpha: 0.8999999761581421, size: 3, arrowshape: "jet", arrowsides: "==>", arrowsize: 1.2000000000000002, arrowposition: 1.0},
+    {name: "D", type: "Free", pos: [4.0, 2.0, 2.0], color: [1.0, 0.0, 0.0], labeled: true, textsize: 17.0, size: 0.0, printname: "$v_1$"},
+    {name: "c", type: "Segment", color: [0.757, 0.0, 0.0], args: ["A", "D"], alpha: 0.8999999761581421, arrowshape: "jet", arrowsides: "==>", arrowsize: 1.2000000000000002, arrowposition: 1.0},
+    {name: "E", type: "Free", pos: [-2.0, -4.0, -2.0], color: [1.0, 0.0, 0.0], labeled: true, textsize: 17.0, size: 0.0, printname: "$v_2$"},
+    {name: "d", type: "Segment", color: [0.757, 0.0, 0.0], args: ["A", "E"], alpha: 0.8999999761581421, arrowshape: "jet", arrowsides: "==>", arrowsize: 1.2000000000000002, arrowposition: 1.0},
+    {name: "F", type: "Free", pos: [0.0, -4.0, 4.0], color: [1.0, 0.0, 0.0], alpha: 0.8999999761581421, labeled: true, textsize: 17.0, size: 0.0, printname: "w"},
+    {name: "e", type: "Segment", color: [0.0, 0.0, 1.0], args: ["A", "F"], alpha: 0.8999999761581421, size: 3, arrowshape: "full", arrowsides: "==>", arrowsize: 1.4000000000000001, arrowposition: 1.0},
+    {name: "G", type: "Free", pos: [-2.0, -4.0, 2.0], color: [1.0, 0.0, 0.0], alpha: 0.8999999761581421, labeled: true, textsize: 17.0, size: 0.0, printname: "f(w)"},
+    {name: "f", type: "Segment", color: [0.0, 0.0, 1.0], args: ["A", "G"], alpha: 0.8999999761581421, arrowshape: "full", arrowsides: "==>", arrowsize: 1.4000000000000001, arrowposition: 1.0}
+  ],
+  ports: [{
+    id: "CSCanvas",
+    width: 834,
+    height: 526,
+    virtualwidth: 834,
+    virtualheight: 526,
+    transform: [{visibleRect: [-5.908163265306122, 5.295918367346939, 11.112244897959183, -5.438775510204081]}],
+    axes: true,
+    grid: 1.0,
+    snap: true,
+    background: "rgb(168,176,192)"
+  }],
+  csconsole: false,
+  cinderella: {build: 1901, version: [2, 9, 1901]}
+});
+    </script>
+
+
+    <div id="CSCanvas"></div>
+
+
+
+<p>Depending on the matrix, different effects can occur. Here some examples.</p>
+
+<p><input type="button" value="Zwei reelle Eigenräume" style="width: 250px; " onclick="doScript(statement[0])" /><br />
+<input type="button" value="Doppelter Eigenraum" style="width: 250px; " onclick="doScript(statement[1])" /><br />
+<input type="button" value="Zweidimensionaler Eigenraum" style="width: 250px; " onclick="doScript(statement[2])" /><br />
+<input type="button" value="Zwei komplexe Eigenräume" style="width: 250px; " onclick="doScript(statement[3])" /></p>
+
+<script language="JavaScript" type="text/javascript">
+		function doScript(c)
+		{
+			cdy.evokeCS(c);
+		};
+               cc='"';
+</script>
+
+<script type="text/javascript">
+var statement=new Array()
+statement[0]='(a=D.xy;b=E.xy;repeat(30, l=#/30;m=1-l; D.xy=m*a+l*(2,1); E.xy=m*b+l*(1,2); repaint()  );)'
+statement[1]='(a=D.xy;b=E.xy;repeat(30, l=#/30;m=1-l; D.xy=m*a+l*(2,0); E.xy=m*b+l*(1,2); repaint()  );)'
+statement[2]='(a=D.xy;b=E.xy;repeat(30, l=#/30;m=1-l; D.xy=m*a+l*(2,0); E.xy=m*b+l*(0,2); repaint()  );)'
+statement[3]='(a=D.xy;b=E.xy;repeat(30, l=#/30;m=1-l; D.xy=m*a+l*(1,1); E.xy=m*b+l*(-1,1); repaint()  );)'
+</script>

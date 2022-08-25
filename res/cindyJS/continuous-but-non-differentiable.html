@@ -1,0 +1,190 @@
+<script src="https://cindyjs.org/dist/v0.8/Cindy.js" integrity="sha256-GVFcxFrj3m64JQPL5NZv9MPbCGHnxWWPhKLsnHvaK+Q=" crossorigin="anonymous"></script>
+
+<p>Stetigkeit impliziert nicht notwendig Differenzierbarkeit. Das folgende kleine <em>Bestiarium</em> an Konstruktionen  soll dies vermitteln.
+An den Knöpfen kann man sieben verschiedene Funktionenstypen auswählen. Zur Eingewöhnung zeigt Funktion 1 ($\sin(x)$) eine überall stetige und überall differenzierbare Funktion. Funktion 2 ($\sin(1/x)$) ist an der Stelle $x=0$ weder differenzierbar noch stetig. Funktion 3 ist im Nullpunkt zwar stetig, aber nicht differenzierbar.</p>
+
+<p>Interesant wird es bei den folgenden Funktionen (diese beruhen jeweils auf einer unendlichen Summe und werden hier nur
+approximativ gezeigt). Funktionen 4-6 sind Variationen einer Konstruktion von Weierstraß aus dem Jahre 1872. Diese sind
+<em>überall stetig aber nirgends differenzierbar</em>. Die Weierstraß’schen   Funktionen waren die ersten bekannten Funktionen mit dieser Eigenschaft.
+Mit dem Regler für $k$ kann man die Summationstiefe beeinflussen.</p>
+
+<p>Die letzte Funktion 7 geht auf Riemann zurück und wurde bereits 1861 entdeckt. Diese ist ‘fast’ überall nicht differenzierbar. Sie hat eine endliche Ableitung nur an stellen der Form $\pi{2p+1\over 2q+1}$ mit ganzen Zahlen $p$ und $q$.</p>
+
+<html>
+
+
+
+<script id="csinit" type="text/x-cindyscript">
+maxchoice=7;
+choice=1;
+
+
+;
+</script>
+<script id="csmouseclick" type="text/x-cindyscript">
+repeat(maxchoice,i,
+  if(|mouse().xy-(i/2-4+1/4,1+3/4)|<.2,choice=i);
+);
+
+
+;
+</script>
+<script id="csdraw" type="text/x-cindyscript">
+kmax=[0,0,0,13,13,13,60];
+col2=(0,0,1);
+col1=(0,1,0);
+//aa=|K,N|/|K,H|;
+//bb=5*|M,O|/|M,L|+1;
+//drawtext(O+(.1,.1),bb);
+//drawtext(N+(.1,.1),aa);
+//drawtext(N+(.1,.1-1),aa*bb);
+
+box(i,p):=(
+  w=0.2;
+  fillpoly((
+    p+(w,w),
+    p+(w,-w),
+    p+(-w,-w),
+    p+(-w,w)
+  ),color->if(choice==i,col1,col2),alpha->0.2);
+  connect((
+    p+(w,w),
+    p+(w,-w),
+    p+(-w,-w),
+    p+(-w,w),
+    p+(w,w)
+  ),color->(1,1,1)*.2,alpha->0.7,size->2);
+);
+repeat(maxchoice,i,
+  box(i,(i/2-4+1/4,1+3/4));
+  drawtext((i/2-4,1.5)+(.25,.15),align->"center",i,size->20)
+
+);
+
+
+text=[
+"$\sin(x)$",
+"$sin\left({1\over x}\right)$",
+"$x\cdot sin\left({1\over x}\right)$",
+"$\lim_{k->\infty}\left( \sum_{i=1}^k \left({cos(3^i \cdot x)\over 2^i}\right)\right)$",
+"$\lim_{k->\infty}\left( \sum_{i=1}^k \left({2^i sin(2^i\cdot x)\over 3^i}\right)\right)$",
+"$\lim_{k->\infty}\left( \sum_{i=1}^k \left({sin(6^i \cdot x)\over 5^i}\right)\right)$",
+"$\lim_{k->\infty}\left( \sum_{i=0}^k \left({sin(i^2 \cdot x)\over i^2}\right)\right)$",
+];
+
+text2=[
+"Eine ganz normale
+überall stetige und
+differenzierbare Funktion",
+"An der Stelle x=0
+weder stetig noch
+differenzierbar",
+"An der Stelle x=0
+zwar stetig aber nicht
+differenzierbar",
+"Die Weierstraß Funktion:
+überall stetig, nirgends
+differnzierbar",
+"Variante der Weierstraß Funktion:
+überall stetig, nirgends
+differnzierbar",
+"Variante der Weierstraß Funktion:
+überall stetig, nirgends
+differnzierbar",
+"Riemanns Funktion:
+überall stetig, aber nur an
+wenigen Stellen differenzierbar"
+];
+
+
+
+n=round(kmax_choice*|C,A|/|C,D|+1);
+if(choice==1,f(x):=sin(x));
+if(choice==2,f(x):=sin(1/x));
+if(choice==3,f(x):=sin(1/x)*x);
+if(choice==4,f(x):=sum(1..n,k,cos(3^k*x)/2^k));
+if(choice==5,f(x):=sum(1..n,k,2^k*sin(2^k*x)/3^k));
+if(choice==6,f(x):=sum(1..n,k,sin(6^k*x)/5^k));
+//if(choice==7,f(x):=sum(1..n,k,sin(101^k*x)/100^k));
+if(choice==7,f(x):=sum(1..n,k,sin(k^2*x)/k^2));
+//if(choice==9,f(x):=sum(0..n,k,aa^k*cos(bb^k*pi*x)));
+drawtext((-3.5,-2),text_choice,size->18);
+drawtext((-1.5,-1.8),text2_choice,size->12);
+
+drawtext(A+(0.1,-0.2),"k="+n,size->16);
+
+
+
+
+w=|E,G|*(.2)+.05;
+
+
+drawtext(G+(0.1,-.2),"zoom="+format(1/w,1),size->16);
+
+fillcircle(B,w,color->(1,1,1),alpha->0.4);
+drawcircle(B,w,color->(0,0,0),alpha->1);
+
+plot(f(x));
+
+
+fillcircle((2,-2.5),1,color->(1,1,1),alpha->0.4);
+up(x):=sqrt(1-x^2);
+dow(x):=-sqrt(1-x^2);
+plot(
+
+min(up(x-2),
+  max(dow(x-2),
+    (f((x-2)*w+B.x)-B.y)/w))-2.5
+
+,start->1,stop->3,alpha->1);
+
+drawcircle((2,-2.5),1,color->(0,0,0),alpha->1);
+
+
+
+
+
+;
+</script>
+    <script type="text/javascript">
+var cdy = CindyJS({
+  scripts: "cs*",
+  defaultAppearance: {
+    dimDependent: 0.7,
+    fontFamily: "sans-serif",
+    lineSize: 1,
+    pointSize: 5.0,
+    textsize: 12.0
+  },
+  angleUnit: "°",
+  geometry: [
+    {name: "B", type: "Free", pos: [2.791314285714286, 2.319542857142857, 4.0], color: [1.0, 1.0, 1.0], size: 2.0},
+    {name: "C", type: "Free", pos: [4.0, 2.857142857142857, -1.1428571428571428], color: [0.0, 0.0, 0.0], pinned: true, size: 1.0},
+    {name: "D", type: "Free", pos: [-2.4, -4.0, 1.6], color: [0.0, 0.0, 0.0], pinned: true, size: 1.0},
+    {name: "a", type: "Segment", color: [0.0, 0.0, 0.0], args: ["C", "D"]},
+    {name: "A", type: "PointOnSegment", pos: [4.0, 3.9899680711583017, -1.5959872284633212], color: [1.0, 1.0, 1.0], args: ["a"], size: 4.0},
+    {name: "E", type: "Free", pos: [4.0, 3.4285714285714284, -1.1428571428571428], color: [0.0, 0.0, 0.0], pinned: true, size: 1.0},
+    {name: "F", type: "Free", pos: [-2.0, -4.0, 1.3333333333333333], color: [0.0, 0.0, 0.0], pinned: true, size: 1.0},
+    {name: "b", type: "Segment", color: [0.0, 0.0, 0.0], args: ["E", "F"]},
+    {name: "G", type: "PointOnSegment", pos: [-3.31550472, -4.0, 1.3333333333333335], color: [1.0, 1.0, 1.0], args: ["b"], size: 4.0}
+  ],
+  ports: [{
+    id: "CSCanvas",
+    width: 787,
+    height: 553,
+    transform: [{visibleRect: [-3.9461714285714287, 2.147542857142857, 3.7889142857142857, -3.287657142857143]}],
+    axes: true,
+    grid: 0.5,
+    background: "rgb(168,176,192)"
+  }],
+  csconsole: false,
+  cinderella: {build: 1901, version: [2, 9, 1901]}
+});
+    </script>
+
+
+    <div id="CSCanvas"></div>
+
+</html>
+
+<p>Der keine helle Kreis kann als Lupenfunktion verwendet werden.</p>

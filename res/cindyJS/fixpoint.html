@@ -1,0 +1,153 @@
+<script src="https://cindyjs.org/dist/v0.8/Cindy.js" integrity="sha256-GVFcxFrj3m64JQPL5NZv9MPbCGHnxWWPhKLsnHvaK+Q=" crossorigin="anonymous"></script>
+
+<p>Jede stetige reelle Funktion $f:[0,1]\to[0,1]$ hat mindestens einen Fixpunkt.
+das heißt es existiert ein Punkt mit $f(x)=x$. Dies ist eine direkte Konsequenz aus dem Zwischenwertsatz
+angewandt auf die Funktion $f(x)-x$.</p>
+
+<p>Grafisch erkennt man fixpunkte dadurch, dass dir Funktionsgraph von $f$ einen Schnittpunkt mit der
+Winkelhalbierenden $x=y$ hat.</p>
+
+<p>Am Applet unten kann man an den grünen Punkten eine solche Funktion variieren und die Fixpunkte (weiss) beobachten.</p>
+
+<html>
+
+
+
+<script id="csdraw" type="text/x-cindyscript">
+//layer(4);
+//clrscr();
+pts=[A,B,C,D,E];
+restrict(p):=(
+  p.y=max(min(p.y,5),1)
+);
+
+restrict(A);
+restrict(B);
+restrict(C);
+restrict(D);
+restrict(E);
+
+n=length(pts);
+
+forall(1..n,(pts_#).x=#);
+
+p1(x):=(1-x)^2*(1+2*x);
+p2(x):=(3-2*x)*x^2;
+
+q1(x):=x*(1-x)^2;
+q2(x):=-x^2*(1-x);
+
+f(y1,y2,h1,h2,x):=y1*p1(x)+y2*p2(x)+h1*q1(x)+h2*q2(x);
+
+
+
+r(t):=(1,t,t^2,t^3);
+mat=[
+r(0),
+r(1),
+r(2),
+r(3)
+];
+
+
+
+mark(B,C,x):=(
+ t0=f(B.y,C.y,0,0,0-x);
+ t1=f(B.y,C.y,0,0,1-x);
+ t2=f(B.y,C.y,0,0,2-x);
+ t3=f(B.y,C.y,0,0,3-x);
+ ww=inverse(mat)*(t0,t1,t2,t3);
+ erg=roots(ww-(0,1,0,0));
+
+
+ apply(erg,
+  if(|im(#)|<0.01&re(#)~>=x-0.001&re(#)~<=x+1+0.001,
+    draw((#,#),color->(1,1,1),size->8);
+  )
+ );
+
+);
+
+mark(A,B,1);
+mark(B,C,2);
+mark(C,D,3);
+mark(D,E,4);
+
+
+plot(f(A.y,B.y,a.slope,b.slope,x-1),start->1,stop->2,size->2);
+plot(f(B.y,C.y,b.slope,c.slope,x-2),start->2,stop->3,size->2);
+plot(f(C.y,D.y,c.slope,d.slope,x-3),start->3,stop->4,size->2);
+plot(f(D.y,E.y,d.slope,e.slope,x-4),start->4,stop->5,size->2);
+
+</script>
+    <script type="text/javascript">
+var cdy = CindyJS({
+  scripts: "cs*",
+  defaultAppearance: {
+    dimDependent: 0.7,
+    fontFamily: "sans-serif",
+    lineSize: 1,
+    pointSize: 5.0,
+    textsize: 12.0
+  },
+  angleUnit: "°",
+  geometry: [
+    {name: "A", type: "Free", pos: [-1.2820797853813262, -4.0, -1.2820797853813262], color: [0.0, 1.0, 0.0], plane: 6},
+    {name: "B", type: "Free", pos: [-2.713217320552041, -4.0, -1.3566086602760206], color: [0.0, 1.0, 0.0], plane: 6},
+    {name: "C", type: "Free", pos: [-2.9036823391662105, -4.0, -0.9678941130554035], color: [0.0, 1.0, 0.0], plane: 6},
+    {name: "D", type: "Free", pos: [4.0, 2.6438150289017335, 1.0], color: [0.0, 1.0, 0.0], plane: 6},
+    {name: "E", type: "Free", pos: [4.0, 2.6483015028901717, 0.8], color: [0.0, 1.0, 0.0], plane: 6},
+    {name: "C0", type: "CircleByFixedRadius", radius:0.2, color: [0.0, 0.0, 1.0], args: ["A"], alpha: 0.0},
+    {name: "C1", type: "CircleByFixedRadius", radius:0.2, color: [0.0, 0.0, 1.0], args: ["B"], alpha: 0.0},
+    {name: "C2", type: "CircleByFixedRadius", radius:0.2, color: [0.0, 0.0, 1.0], args: ["C"], alpha: 0.0},
+    {name: "C3", type: "CircleByFixedRadius", radius:0.2, color: [0.0, 0.0, 1.0], args: ["D"], alpha: 0.0},
+    {name: "C4", type: "CircleByFixedRadius", radius:0.2, color: [0.0, 0.0, 1.0], args: ["E"], alpha: 0.0},
+    {name: "F", type: "PointOnCircle", pos: [{r: -1.0256638283050612, i: -6.035547347638214E-17}, -4.0, {r: -1.2820797853813264, i: -7.54443418454783E-17}], color: [1.0, 0.0, 0.0], args: ["C0"], alpha: 0.8999999761581421, visible: false, size: 3.0},
+    {name: "sdfsdf", type: "OtherPointOnCircle", pos: [{r: -1.5384957424575911, i: -5.104921812623687E-20}, -4.0, {r: -1.2820797853813262, i: -4.254101510433201E-20}], color: [1.0, 1.0, 1.0], args: ["F"], pinned: true, size: 0.0},
+    {name: "G", type: "PointOnCircle", pos: [{r: -2.984539052607235, i: 1.1012894534490581E-15}, -4.0, {r: -1.3566086602760206, i: 5.005861152041035E-16}], color: [1.0, 0.0, 0.0], args: ["C1"], alpha: 0.8999999761581421, visible: false, size: 3.0},
+    {name: "H", type: "PointOnCircle", pos: [{r: -3.0972611617772823, i: -4.627907425431872E-17}, -4.0, {r: -0.9678941130554035, i: -1.4462210704475238E-17}], color: [1.0, 0.0, 0.0], args: ["C2"], alpha: 0.8999999761581421, visible: false, size: 3.0},
+    {name: "K", type: "PointOnCircle", pos: [4.0, {r: 2.517919075144505, i: -3.3919853337735595E-16}, {r: 0.9523809523809514, i: -4.358160450547669E-30}], color: [1.0, 0.0, 0.0], args: ["C3"], alpha: 0.8999999761581421, visible: false, size: 3.0},
+    {name: "L", type: "PointOnCircle", pos: [4.0, {r: 2.546443752779031, i: -1.2445355301314431E-16}, {r: 0.7692307692307748, i: -3.3527240227081435E-30}], color: [1.0, 0.0, 0.0], args: ["C4"], alpha: 0.8999999761581421, visible: false, size: 3.0},
+    {name: "a", type: "Segment", color: [0.0, 0.0, 0.0], args: ["F", "A"], alpha: 0.8999999761581421, visible: false},
+    {name: "b", type: "Segment", color: [0.0, 0.0, 0.0], args: ["G", "B"], alpha: 0.8999999761581421, visible: false},
+    {name: "c", type: "Segment", color: [0.0, 0.0, 0.0], args: ["H", "C"], alpha: 0.8999999761581421, visible: false},
+    {name: "d", type: "Segment", color: [0.0, 0.0, 0.0], args: ["K", "D"], alpha: 0.8999999761581421, visible: false},
+    {name: "e", type: "Segment", color: [0.0, 0.0, 0.0], args: ["L", "E"], alpha: 0.8999999761581421, visible: false},
+    {name: "M", type: "Free", pos: [-0.8, -4.0, -0.8], color: [0.0, 0.0, 0.0], visible: false, size: 2.0},
+    {name: "N", type: "Free", pos: [4.0, 4.0, 0.8000000000000003], color: [0.0, 0.0, 0.0], visible: false, size: 2.0},
+    {name: "f", type: "Segment", color: [0.0, 0.0, 0.0], args: ["M", "N"], size: 3},
+    {name: "O", type: "Free", pos: [4.0, 0.8000000000000003, 0.8000000000000003], color: [0.0, 0.0, 0.0], visible: false, size: 2.0},
+    {name: "g", type: "Segment", color: [0.0, 0.0, 0.0], args: ["N", "O"], size: 3},
+    {name: "P", type: "Free", pos: [4.0, 4.0, 4.0], color: [0.0, 0.0, 0.0], visible: false, size: 2.0},
+    {name: "h", type: "Segment", color: [0.0, 0.0, 0.0], args: ["O", "P"], size: 3},
+    {name: "k", type: "Segment", color: [0.0, 0.0, 0.0], args: ["P", "M"], size: 3},
+    {name: "l", type: "Segment", color: [0.718, 0.333, 0.0], args: ["P", "N"], size: 3},
+    {name: "Poly0", type: "Poly", color: [0.0, 0.0, 0.0], fillcolor: [0.0, 0.0, 1.0], fillalpha: 0.18803418803418803, args: ["M", "P", "O", "N"]},
+    {name: "Q", type: "Free", pos: [4.0, 0.7272727272727273, 0.7272727272727273], color: [1.0, 0.0, 0.0], visible: false, labeled: true},
+    {name: "m", type: "Segment", color: [0.0, 0.0, 0.0], args: ["P", "Q"], size: 3, arrowshape: "jet", arrowsides: "==>", arrowsize: 1.2000000000000002, arrowposition: 1.0},
+    {name: "R", type: "Free", pos: [-0.7272727272727273, -4.0, -0.7272727272727273], color: [1.0, 0.0, 0.0], visible: false, labeled: true},
+    {name: "n", type: "Segment", color: [0.0, 0.0, 0.0], args: ["P", "R"], size: 3, arrowshape: "jet", arrowsides: "==>", arrowsize: 1.2000000000000002, arrowposition: 1.0},
+    {name: "S", type: "Free", pos: [-3.0, -4.0, -4.0], color: [1.0, 0.0, 0.0], visible: false, labeled: true},
+    {name: "o", type: "Segment", color: [0.0, 0.0, 0.0], args: ["S", "P"], size: 3},
+    {name: "T", type: "Free", pos: [4.0, 3.0, 4.0], color: [1.0, 0.0, 0.0], visible: false, labeled: true},
+    {name: "p", type: "Segment", color: [0.0, 0.0, 0.0], args: ["P", "T"], size: 3},
+    {name: "Text0", type: "Text", color: [0.0, 0.0, 0.0], text: "0", textsize: 16.0, dock: {corner: "LL", offset: [51.0, 43.0]}},
+    {name: "Text1", type: "Text", color: [0.0, 0.0, 0.0], text: "1", textsize: 16.0, dock: {corner: "LL", offset: [485.0, 43.0]}},
+    {name: "Text2", type: "Text", color: [0.0, 0.0, 0.0], args: ["M"], text: "1", textsize: 16.0, dock: {to: "M", offset: [-17.507430069929427, -6.438325563325634]}}
+  ],
+  ports: [{
+    id: "CSCanvas",
+    width: 604,
+    height: 523,
+    transform: [{visibleRect: [0.3475643930635837, 5.746715375722542, 6.09904092485549, 0.7665461271676299]}],
+    background: "rgb(168,176,192)"
+  }],
+  csconsole: false,
+  cinderella: {build: 1901, version: [2, 9, 1901]}
+});
+    </script>
+
+
+    <div id="CSCanvas"></div>
+
+</html>
