@@ -1,7 +1,7 @@
 export PLANTUMLJAR:=$(shell locate plantuml.jar)
 
 # global settings
-ROOT_DIR:=$(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
+ROOT_DIR:="$(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))"
 SRC_DIR := _article
 BUILD_DIR := $(ROOT_DIR)/docs
 TMP_DIR := $(ROOT_DIR)/tmp
