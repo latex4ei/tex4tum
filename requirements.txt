@@ -1,6 +1,5 @@
 pre-commit
 mkdocs-material
-mkdocs-redirects
 
 # Pandoc Plugins
 pandoc-fignos
