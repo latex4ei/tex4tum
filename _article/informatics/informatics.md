@@ -1,6 +1,5 @@
 ---
 title: Informatics
-icon: code
 ---
 
 Informatics is the study of computation, automation, and information. 

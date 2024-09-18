@@ -1,6 +1,5 @@
 ---
 title: Contribution
-icon: edit
 ---
 
 This article describes how you can contribute or edit articles.

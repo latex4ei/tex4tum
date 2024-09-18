@@ -1,6 +1,5 @@
 ---
 title: TODO
-icon: tasks
 ---
 
 This pages displays articles that needs improvement.
