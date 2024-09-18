@@ -1,6 +1,5 @@
 ---
 title: Contact
-icon: user-edit
 ---
 
 # Contact Form
