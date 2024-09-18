@@ -1,0 +1,38 @@
+<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="84.345mm" width="108.8mm" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 385.5 298.86" xmlns:dc="http://purl.org/dc/elements/1.1/">
+	<script xlink:href="../../../assets/js/latex4ei.js"/>
+	<path style="fill-rule:evenodd;stroke:#000;stroke-linecap:square;stroke-miterlimit:7.7;stroke-width:2.8346;fill:#fff" d="m256.51 149.6v-99.202"/>
+	<path style="fill-rule:evenodd;stroke:#000;stroke-linecap:square;stroke-miterlimit:7.7;stroke-width:3.2503;fill:#fff" d="m256.51 290.18v-111.81"/>
+	<rect style="color:#000000;stroke:#000;stroke-width:2.8346;stroke-miterlimit:7.7;stroke-linecap:square" transform="rotate(90)" height="56.692" width="5.6692" y="-284.85" x="172.24"/>
+	<rect style="color:#000000;stroke:#000;stroke-width:2.8346;stroke-miterlimit:7.7;stroke-linecap:square" transform="rotate(90)" height="56.692" width="5.6692" y="-284.85" x="149.6"/>
+	<g transform="matrix(4,0,0,4,128.93,-402.7)">
+		<rect style="color:#000000;stroke:#000;stroke-width:.70866;stroke-miterlimit:7.7;stroke-linecap:square" transform="rotate(90)" height="14.173" width="1.4173" y="-38.976" x="173.62"/>
+	</g>
+	<g transform="translate(-.00715 -1.9723)">
+		<g transform="matrix(-4,0,0,-4,766.74,293.17)">
+			<rect style="color:#000000;stroke-dashoffset:1.76;stroke:#000;stroke-linecap:square;stroke-miterlimit:10;stroke-width:.70866;fill:none" height="7.0866" width="21.26" y="56.699" x="148.82"/>
+			<path style="fill-rule:evenodd;stroke:#000;stroke-linecap:square;stroke-miterlimit:7.7;stroke-width:.70866;fill:#fff" d="m148.82 60.236h-49.606"/>
+			<path style="fill-rule:evenodd;stroke:#000;stroke-linecap:square;stroke-miterlimit:7.7;stroke-width:.70866;fill:#fff" d="m187.8 60.242h-17.72"/>
+		</g>
+		<path style="fill-rule:evenodd" d="m263.59 52.33c0 3.92-3.17 7.08-7.09 7.08-3.91 0-7.08-3.16-7.08-7.08s3.17-7.08 7.08-7.08c3.92 0 7.09 3.16 7.09 7.08"/>
+		<g style="stroke:#000;stroke-width:11.802;stroke-miterlimit:7.7;stroke-linecap:square;fill:none" transform="matrix(.2402 0 0 .2402 -446.48 1730.4)">
+			<path style="stroke:#000;stroke-width:11.802;stroke-miterlimit:7.7;stroke-linecap:square;fill:none" d="m1923.7-6986.6c0 16.3-13.2 29.5-29.5 29.5s-29.5-13.2-29.5-29.5 13.2-29.5 29.5-29.5 29.5 13.2 29.5 29.5z"/>
+		</g>
+		<g style="stroke:#000;stroke-width:11.802;stroke-miterlimit:7.7;stroke-linecap:square;fill:none" transform="matrix(.2402 0 0 .2402 -77.979 1730.4)">
+			<path style="stroke:#000;stroke-width:11.802;stroke-miterlimit:7.7;stroke-linecap:square;fill:none" d="m1923.7-6986.6c0 16.3-13.2 29.5-29.5 29.5s-29.5-13.2-29.5-29.5 13.2-29.5 29.5-29.5 29.5 13.2 29.5 29.5z"/>
+		</g>
+	</g>
+	<text id="R1_val" style="font-size:30px" space="preserve" onclick="askValue(this.id)" y="22.792969" x="92.063171">10k</text>
+	<text id="X1_val" style="font-size:30px" space="preserve" onclick="askValue(this.id)" y="183.37146" x="300.83673">100n</text>
+	<text y="141.83507" x="304.50848" style="font-size:30px" space="preserve">C</text>
+	<path style="fill-rule:evenodd;stroke:#000;stroke-linecap:square;stroke-miterlimit:7.7;stroke-width:3.772;fill:#fff" d="m17.44 258.56h351.34"/>
+	<path d="m263.58 258.66c0 3.92-3.17 7.08-7.09 7.08-3.91 0-7.08-3.16-7.08-7.08s3.17-7.08 7.08-7.08c3.92 0 7.09 3.16 7.09 7.08" style="fill-rule:evenodd"/>
+	<g style="stroke:#000;stroke-width:11.802;stroke-miterlimit:7.7;stroke-linecap:square;fill:none" transform="matrix(.2402 0 0 .2402 -446.49 1936.7)">
+		<path d="m1923.7-6986.6c0 16.3-13.2 29.5-29.5 29.5s-29.5-13.2-29.5-29.5 13.2-29.5 29.5-29.5 29.5 13.2 29.5 29.5z" style="stroke:#000;stroke-width:11.802;stroke-miterlimit:7.7;stroke-linecap:square;fill:none"/>
+	</g>
+	<g style="stroke:#000;stroke-width:11.802;stroke-miterlimit:7.7;stroke-linecap:square;fill:none" transform="matrix(.2402 0 0 .2402 -77.986 1936.7)">
+		<path d="m1923.7-6986.6c0 16.3-13.2 29.5-29.5 29.5s-29.5-13.2-29.5-29.5 13.2-29.5 29.5-29.5 29.5 13.2 29.5 29.5z" style="stroke:#000;stroke-width:11.802;stroke-miterlimit:7.7;stroke-linecap:square;fill:none"/>
+	</g>
+	<text y="102.31102" x="92.069946" style="font-size:30px" space="preserve">R</text>
+	<text y="164.55286" x="20.607069" style="font-size:30px" space="preserve">U(0)</text>
+	<text id="U1_val" style="font-size:30px" space="preserve" onclick="askValue(this.id)" y="198.24272" x="19.007046">5</text>
+</svg>

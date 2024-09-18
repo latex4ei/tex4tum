@@ -1,0 +1,57 @@
+<svg id="svg4861" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="99.076" viewBox="0 0 207.14 99.076" width="207.14" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/">
+	<style id="style3" type="text/css"><![CDATA[
+			text {
+				font-size: 1em;
+			}
+		]]></style>
+	<script id="script5" xlink:href="../res/latex4ei.js"/>
+	<g id="g5798" transform="translate(-619.49,-801.09)">
+		<g id="Resistor-0-0" transform="matrix(1,0,0,-1,670,1222.4)">
+			<rect id="rect10224-9-8-2-43-72-6-2-6-3-9-5-66-1-29-5-99" style="stroke-linejoin:round;color:#000000;stroke-dashoffset:1.76;stroke:#000;stroke-linecap:round;fill:none" height="10" width="30" y="397.4" x="55"/>
+			<path id="path1450-1-5-3-4-1-0-3-3-6-5-90-3-0-17-1" style="stroke-linejoin:round;stroke:#000;stroke-linecap:round;fill:#fff;fill-rule:evenodd" d="m85.01 402.4h4.98"/>
+			<path id="path1450-1-5-3-4-1-0-3-8-8-0-2-2-8-3-0-0" style="stroke-linejoin:round;stroke:#000;stroke-linecap:round;fill:#fff;fill-rule:evenodd" d="m55 402.4h-5-35"/>
+		</g>
+		<g id="g7422-6-3" transform="translate(580,480)">
+			<path id="path5375-73-1" style="stroke:#000;stroke-width:1px;stroke-linecap:round;fill:none" d="m40 355h20"/>
+			<path id="path5375-1-14-1" style="stroke:#000;stroke-width:1px;stroke-linecap:round;fill:none" d="m45 360h10"/>
+			<path id="path5375-7-1-4" style="stroke:#000;stroke-width:1px;stroke-linecap:round;fill:none" d="m48 365h4"/>
+			<path id="path5375-1-1-27-1" style="stroke:#000;stroke-width:1px;stroke-linecap:round;fill:none" d="m50 355v-15"/>
+		</g>
+		<g id="g8231-3-8-3" transform="matrix(1,0,0,-1,-20,1020.1)">
+			<path id="path6710-4-3-1-3" style="stroke:#000;stroke-width:1px;fill:none" d="m740 130v40.12l40-20.14z"/>
+			<path id="path6744-7-1-2" style="stroke:#000;stroke-width:1px;stroke-linecap:round;fill:none" d="m740 140.1h-10"/>
+			<path id="path6746-6-0-6" style="stroke:#000;stroke-width:1px;stroke-linecap:round;fill:none" d="m740 160.1h-10"/>
+			<path id="path6746-8-13-9-3" style="stroke:#000;stroke-width:1px;stroke-linecap:round;fill:none" d="m790 150.1h-10"/>
+			<path id="path6744-5-0-8-6" style="stroke:#000;stroke-width:1px;stroke-linecap:round;fill:none" d="m750 140h-6"/>
+			<path id="path6744-5-7-8-0-2" style="stroke:#000;stroke-width:1px;stroke-linecap:round;fill:none" d="m750 160h-6"/>
+			<path id="path6744-5-75-0-1-1" style="stroke:#000;stroke-width:1px;stroke-linecap:round;fill:none" d="m747 143v-6"/>
+		</g>
+		<g id="g7962-0-1-0-6" transform="matrix(1,0,0,-1,160,970)">
+			<circle id="path8029-9-0-2-6" style="stroke-linejoin:round;stroke:#000;stroke-linecap:round;fill:none" transform="scale(-1,1)" cy="90" cx="-465" r="3"/>
+			<path id="path8033-1-9-6-3" style="stroke:#000;stroke-width:1px;stroke-linecap:round;fill:none" d="m470 90h-2"/>
+		</g>
+		<path id="path5067-8-5" style="stroke:#000;stroke-width:1px;stroke-linecap:round;fill:none" d="m770 870h30"/>
+		<g id="Resistor-0-6-7" transform="matrix(1,0,0,-1,595.01,1222.4)">
+			<rect id="rect10224-9-8-2-43-72-6-2-6-3-9-5-66-1-29-5-9-3" style="stroke-linejoin:round;color:#000000;stroke-dashoffset:1.76;stroke:#000;stroke-linecap:round;fill:none" height="10" width="30" y="397.4" x="55"/>
+			<path id="path1450-1-5-3-4-1-0-3-3-6-5-90-3-0-17-7-3" style="stroke-linejoin:round;stroke:#000;stroke-linecap:round;fill:#fff;fill-rule:evenodd" d="m85.01 402.4h4.98"/>
+			<path id="path1450-1-5-3-4-1-0-3-8-8-0-2-2-8-3-0-8-4" style="stroke-linejoin:round;stroke:#000;stroke-linecap:round;fill:#fff;fill-rule:evenodd" d="m35.01 402.4h19.99"/>
+		</g>
+		<path id="path5169-8" style="stroke:#000;stroke-width:1px;stroke-linecap:round;fill:none" d="m710 860h-10v-40"/>
+		<path id="path5171-9" style="stroke:#000;stroke-width:1px;stroke-linecap:round;fill:none" d="m760 820h20v50"/>
+		<path id="path5173-2" style="stroke:#000;stroke-width:1px;stroke-linecap:round;fill:none" d="m710 880h-80"/>
+		<circle id="path7434-4-0-2-5-97" style="stroke-linejoin:round;stroke:#000;stroke-linecap:round" transform="scale(1,-1)" cy="-870" cx="780" r="2"/>
+		<g id="g7962-0-1-0-5-2" transform="matrix(-1,0,0,-1,1270,960)">
+			<circle id="path8029-9-0-2-4-8" style="stroke-linejoin:round;stroke:#000;stroke-linecap:round;fill:none" transform="scale(-1,1)" cy="90" cx="-465" r="3"/>
+			<path id="path8033-1-9-6-8-6" style="stroke:#000;stroke-width:1px;stroke-linecap:round;fill:none" d="m470 90h-2"/>
+		</g>
+		<circle id="path7434-4-0-2-5-9-5" style="stroke-linejoin:round;stroke:#000;stroke-linecap:round" transform="scale(1,-1)" cy="-820" cx="700" r="2"/>
+	</g>
+	<text id="text54" y="8.9044704" x="35.498386" style="font-size:12px" space="preserve">R1</text>
+	<text id="text54-3" y="8.9044704" x="110.49837" style="font-size:12px" space="preserve">R2</text>
+	<text id="R1_val" style="font-size:12px" space="preserve" onclick="askValue(this.id)" y="38.904469" x="35.498386">1k</text>
+	<text id="R2_val" style="font-size:12px" space="preserve" onclick="askValue(this.id)" y="38.904469" x="110.49837">1k</text>
+	<text id="text54-7" y="68.904533" x="0.50065118" style="font-size:12px" space="preserve">Vin</text>
+	<text id="text54-7-4" y="58.904469" x="180.49838" style="font-size:12px" space="preserve">Vout</text>
+	<text id="Vin_val" style="font-size:12px" space="preserve" onclick="askValue(this.id)" y="98.904472" x="0.49839285">5V</text>
+	<text id="Vout_val" style="font-size:12px" space="preserve" onclick="askValue(this.id)" y="88.904472" x="180.49838">10V</text>
+</svg>

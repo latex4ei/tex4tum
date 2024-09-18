@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="svg15" width="800" height="800" version="1.1" viewBox="-120 -120 240 240" xmlns="http://www.w3.org/2000/svg">
+  <style>
+  .ani{ transform-origin: unset; transform-box: fill-box;}
+  @keyframes kf-rot-360 { to{ transform:rotate(360deg); }}
+  .ani.rot-360 { animation: kf-rot-360 2.0s linear; }
+  .ani.cw { animation-direction: normal; }
+  .ani.ccw{ animation-direction: reverse; }
+  .ani.loop{ animation-iteration-count: infinite !important; }
+  </style>
+  <g id="frame" fill="none" stroke="black">
+   <path id="xarms" d="m-60 60 60-45 60 45-45-60 45-60-60 45-60-45 45 60z" fill="#003344" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"/>
+   <circle id="protect2" cx="-60" cy="-60" r="50"/>
+   <circle id="protect4" cx="-60" cy="60" r="50"/>
+   <circle id="protect6" cx="60" cy="-60" r="50"/>
+   <circle id="protect8" cx="60" cy="60" r="50"/>
+   <line id="line10" x1="-60" x2="60" y1="-60" y2="60"/>
+   <line id="line12" x1="60" x2="-60" y1="-60" y2="60"/>
+   <path id="heading" d="m-10 12 10-24 10 24-10-8z" fill="#f9fffd" stroke="#000000" stroke-width=".5px"/>
+  </g>
+ <line id="qc-rotor-1" class="ani rot-360 cw loop" x1="20" x2="100" y1="-60" y2="-60"   stroke="#005293" stroke-linecap="round" stroke-width="5"/>
+ <line id="qc-rotor-2" class="ani rot-360 ccw loop" x1="-60" x2="-60" y1="-20" y2="-100" stroke="#a2ad00" stroke-linecap="round" stroke-width="5"/>
+ <line id="qc-rotor-3" class="ani rot-360 cw loop" x1="-20" x2="-100" y1="60" y2="60" stroke="#005293" stroke-linecap="round" stroke-width="5"/>
+ <line id="qc-rotor-4" class="ani rot-360 ccw loop" x1="60" x2="60" y1="20" y2="100" stroke="#a2ad00" stroke-linecap="round" stroke-width="5"/>
+ <g fill="white" stroke="black">
+  <circle id="axis1" cx="60" cy="60" r="5"/>
+  <circle id="axis2" cx="-60" cy="60" r="5"/>
+  <circle id="axis3" cx="-60" cy="-60" r="5"/>
+  <circle id="axis4" cx="60" cy="-60" r="5"/>
+ </g>
+ <g id="rotation-rt" stroke-width="1">
+  <path id="path836" d="m60-90c15 0 30 15 30 30" fill="none" stroke="#000000"/>
+  <path id="path838" d="m86-60 4 8 4-8z" fill="#000000" stroke="#000000"/>
+ </g>
+</svg>
