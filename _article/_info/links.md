@@ -1,6 +1,5 @@
 ---
 title: Links
-icon: file-alt
 ---
 
 ## Other Websites
