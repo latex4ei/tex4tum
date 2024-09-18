@@ -1,6 +1,5 @@
 ---
 title: Team
-icon: users
 ---
 
 # Our Team
