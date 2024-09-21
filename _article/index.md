@@ -30,9 +30,9 @@ title: Tex4TUM
     text-decoration: none;
 }
 </style>
-Looking for our cheat sheets? Head over to LaTeX4EI.
+Looking for cheat sheets? Head over to LaTeX4EI for our electrical engineering resources.
 <!-- Call-to-action for Cheat Sheets -->
-<div style="text-align: center; margin-top: 2em; margin-bottom: 2em;">
+<div style="text-align: center; margin-top: 1em; margin-bottom: 2em;">
   <a href="https://latex4ei.de" class="cta-button">🚀 Cheat Sheets at LaTeX4EI.de</a>
 </div>
 
