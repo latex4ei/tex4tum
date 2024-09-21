@@ -2,7 +2,7 @@
 layout: home
 title: Tex4TUM
 ---
-TeX4TUM is an Interactive Knowledge Platform for engineers
+TeX4TUM is an Interactive Knowledge Platform for engineers covering the following topics:
 
 <style>
 .col { text-align: center; }
@@ -31,13 +31,10 @@ TeX4TUM is an Interactive Knowledge Platform for engineers
     text-decoration: none;
 }
 </style>
-Looking for cheat sheets? Head over to LaTeX4EI for our electrical engineering resources.
 <!-- Call-to-action for Cheat Sheets -->
-<div style="text-align: center; margin-top: 1em; margin-bottom: 2em;">
+<div style="text-align: center; margin-top: 1em; margin-bottom: 1em;">
   <a href="https://latex4ei.de" class="cta-button">🚀 Cheat Sheets at LaTeX4EI.de</a>
 </div>
-
-TeX4TUM is covering the following topics:
 
 ::::{.row markdown=""}
 
