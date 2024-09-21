@@ -8,18 +8,36 @@ title: Tex4TUM
 .col h3 { margin-top: -.5em; }
 .feat-icon { font-size: 3em; line-height: 1.2em; }
 
-
 .col .button {
     min-width: 80%;
-    /*height: 4em;*/
 }
 
+.cta-button {
+    display: inline-block;
+    background-color: #ff7f50;
+    color: white;
+    padding: 1em 2em;
+    border-radius: 0.5em;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button:hover {
+    background-color: #ff6347;
+    text-decoration: none;
+}
 </style>
 
+TeX4TUM is an Interactive Knowledge Platform for engineers covering a variety of topics.
 
-
-TeX4TUM is an Interactive Knowledge Platform for engineers covering the following topics:
-
+<!-- Call-to-action for Cheat Sheets -->
+<div style="text-align: center; margin-top: 2em;">
+  <a href="https://latex4ei.de" class="cta-button">🚀 Get Cheat Sheets at LaTeX4EI.de</a>
+  <p style="margin-top: 1em;">Looking for cheat sheets? Head over to LaTeX4EI for the best collection of engineering and science resources.</p>
+</div>
 
 ::::{.row markdown=""}
 
@@ -48,13 +66,7 @@ TeX4TUM is an Interactive Knowledge Platform for engineers covering the followin
 
 ::::
 
-
-<!-- ![code](fa-code) -->
-
-
-
 ## Features
-
 
 <div class="row" markdown>
 <div class="col" markdown> 
@@ -68,14 +80,10 @@ If you click on certain items, e.g. equations, they will show additional informa
 $$e^{\i \cdot \pi} = -1$$
 with Euler's number $e$, the imaginary unit $\i$, and the mathematical constant $\pi := 3.1415...$.
 
-
 Details: 
 Most diagrams should be interactive so that you can see how the output changes if you move your cursor into the image or change the input.
 
-
- 
 </div>
-
 
 <div class="col card" markdown>
 
@@ -83,9 +91,6 @@ Most diagrams should be interactive so that you can see how the output changes i
 [Interactive]{.large}
 
 ![Play with diagrams, learn from the response.](servo.svg){#servo}
-
-
-
 
 </div>
 </div>
@@ -95,7 +100,6 @@ Most diagrams should be interactive so that you can see how the output changes i
 
 [⏱]{.feat-icon}<br>
 [Fast & Intuitive]{.large}
-
 
 Hit `f` to search with JS lightspeed. 
 
@@ -113,7 +117,6 @@ Powered by GitHub. Everyone can contribute to our articles. Additional links to 
 </div>
 </div>
 
-
 ### Nice interactive demos
 If you are new to TeX4TUM, checkout these pages for some nice interactive demos:
 
@@ -122,5 +125,3 @@ If you are new to TeX4TUM, checkout these pages for some nice interactive demos:
 [Quadcopter](quadcopter){.button}&nbsp;
 [URI](uri){.button}&nbsp;
 [Binomial Distribution](binomial-distribution){.button}&nbsp;
-
-
