@@ -8,7 +8,6 @@ use_directory_urls: true
 watch:
   - _article
 
-markdown: kramdown
 
 theme:
   name: material

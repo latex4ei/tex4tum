@@ -2,7 +2,7 @@
 title: Machines
 ---
 
-Machines are devices that use mechanical power to perform tasks.
+This branch will cover mechanical engineering and its applications. The theory on motion and materials are coverd in physics.
 
 Currently, we have articles for the following subfields:
 

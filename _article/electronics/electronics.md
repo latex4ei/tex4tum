@@ -2,7 +2,7 @@
 title: Electronics
 ---
 
-Electronics involves the study and application of electrical systems, components, and devices.
+This cateogory covers topics for practical use. The theory of [electromagnetism](electromagnetism) is covered by the physics category.
 
 Currently, we have articles for the following subfields:
 
