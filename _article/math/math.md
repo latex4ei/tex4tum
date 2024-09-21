@@ -2,4 +2,5 @@
 title: Math
 ---
 
-{{ FOLDER_TOC }}
+{% include folder_toc.html folder='/math/' %}
+

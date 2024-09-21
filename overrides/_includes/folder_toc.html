@@ -1,0 +1,13 @@
+<!-- _includes/folder_toc.html -->
+{% if include.folder %}
+<ul>
+  {% assign folder_pages = site.pages | where_exp: "page", "page.url contains include.folder" %}
+  {% for page in folder_pages %}
+    <li>
+      <a href="{{ page.url }}">{{ page.title | escape }}</a>
+    </li>
+  {% endfor %}
+</ul>
+{% else %}
+  <p>No folder specified for TOC.</p>
+{% endif %}
