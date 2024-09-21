@@ -30,11 +30,10 @@ title: Tex4TUM
     text-decoration: none;
 }
 </style>
-
+Looking for our cheat sheets? Head over to LaTeX4EI.
 <!-- Call-to-action for Cheat Sheets -->
-<div style="text-align: center; margin-top: 2em;">
-  <p style="margin-top: 1em;">Looking for cheat sheets? Head over to LaTeX4EI for the best collection of engineering and science resources.</p>
-  <a href="https://latex4ei.de" class="cta-button">🚀 Get Cheat Sheets at LaTeX4EI.de</a>
+<div style="text-align: center; margin-top: 2em; margin-bottom: 2em;">
+  <a href="https://latex4ei.de" class="cta-button">🚀 Cheat Sheets at LaTeX4EI.de</a>
 </div>
 
 TeX4TUM is an Interactive Knowledge Platform for engineers covering the following topics:
