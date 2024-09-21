@@ -4,13 +4,13 @@ title: Informatics
 
 Informatics is the study of computation, automation, and information. 
 
-Currently, we have articles for the following subfields.
+Currently, we have articles for the following subfields:
 
+* [**Datastructures**](/datastructures)
 
-* [**Datastructures**](/datastructures): 
 * [**Programming Languages**](/languages): 
-	* Compiled Languages: [Ada](/ada) •  [C](/c)/[C++](/cpp) •  [Go](/go) •  [Rust](/rust)
-	* Script Languages: [Bash](/bash) • [Lua](/lua) • [JavaScript](/javascript) • [Python](/python) • [Ruby](/ruby) 
+	* Compiled Languages: [Ada](/ada) • [C](/c)/[C++](/cpp) • [Go](/go) • [Rust](/rust)
+	* Script Languages: [Bash](/bash) • [Lua](/lua) • [Python](/python) • [Ruby](/ruby)
 	* Markup Languages: [LaTeX](/latex) • [Markdown](/markdown)
 
 * [**Computer Networks**](/network): How does the Internet work?
@@ -18,5 +18,6 @@ Currently, we have articles for the following subfields.
 	* Services: [DNS](/dns) • [NTP](/ntp)
 
 * [**Security**](/security)
-* **Dev Tools:**  [Git](/git) • [GDB](/gdb)
+* **Dev Tools**:  [Git](/git) • [GDB](/gdb)
+
 
